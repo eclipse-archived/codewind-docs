@@ -1,0 +1,36 @@
+html {
+    height:100%; padding: 0; margin: 0;
+}
+
+body {
+    height:100%; padding: 0; margin: 0;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    background-color: #007BAF
+}
+
+a {
+    color: #ffffff;
+}
+
+.logo {
+    width: 248px;
+    height: 69px;
+}
+
+#header-container {
+    padding: 40px;
+    background-color: #ffffff;
+    border-bottom: 10px solid #005D89;
+}
+
+#header-content {
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+#header-logo {
+    padding-left: 50px;
+}
