@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{% include tracking.html %}
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{% if site.baseurl | size > 1 %}{{site.baseurl | append: '--@@' | remove: '/--@@' | remove: '--@@' }}{% endif %}/css/sticky.css">
+	
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="main">
+        {% include topbar-fixedtop.html %}
