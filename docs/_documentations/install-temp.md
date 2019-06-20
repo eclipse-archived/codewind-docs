@@ -1,6 +1,6 @@
 ---
 layout: docs-temp
-title: Codewind technical preview install insctuction
+title: Codewind technical preview install instruction
 description: Codewind technical preview
 keywords: Codewind technical preview, Codewind, introduction, about, getting started, install, setup, use, uninstall
 duration: 1 minute
@@ -18,7 +18,7 @@ Our first Microclimate release was over a year ago now, and we've talked to cust
 
 Two of the major decisions we've made are to switch to the powerful [Eclipse Che](https://www.eclipse.org/che/) for our cloud-hosted IDE and evolve our CI/CD pipeline to be based on [Tekton Pipelines](https://tekton.dev). However, today is special for another reason - an initial preview of how we expect our support for local IDEs to evolve.
 
-![Microclimate evolution](dist/images/evolution.png "Microclimate evolution")
+![Microclimate evolution](/images/evolution.png "Microclimate evolution")
 
 Developers expect high-quality open source tools to be available in their IDE of choice. To deliver on this, we've started putting the local Microclimate installation on a diet and contributed it to a new Eclipse project that we've helped to form: Eclipse Codewind. Today we're happy to announce a first glimpse of what Codewind will look like. This preview shows the state of the codebase as it begins the move to Eclipse.
 

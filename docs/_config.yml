@@ -1,7 +1,7 @@
 title: Codewind
-email: tiaoyuw@ca.ibm.com
+email: codewind-dev@eclipse.org
 description: Eclipse Codewind
-keywords: Eclipse, docker, container, devops, applications, development, iteration, microservices, cloud, ICP, services, rapid, integrated
+keywords: Eclipse, docker, container, devops, applications, development, iteration, microservices, cloud, services, rapid, integrated
 baseurl: ""
 twitter_username: jekyllrb
 github_username:  jekyll
