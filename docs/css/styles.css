@@ -63,7 +63,6 @@ body {
 
 .cw-download-button {
     background: #0083CA;
-    font-family: IBMPlexSans-Bold;
     color: #fff;
     text-align: center;
     width: 135px;
@@ -229,7 +228,9 @@ body {
     width: 100%;
 
 }
-
+.cw-logo {
+    max-height: 50px;
+}
 .cw-logo-32 {
     height: 32px;
     margin-top: 32px;
