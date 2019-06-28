@@ -25,9 +25,9 @@ $(function() {
     
     $("a").each( function() {
     		var url = $(this).attr("href");
-    		if ( !url.startsWith("#") && !url.startsWith("mailto:") && -1 == url.indexOf("://") &&
-    				!url.endsWith(".html")  ) {
+    		if ( url  && !url.startsWith("#") && !url.startsWith("mailto:") && -1 == url.indexOf("://") &&
+    				!url.endsWith(".html")  && !url.endsWith("/") ) {
     			$(this).attr("href", url + ".html");
-    		} 
+    		}
     })
 });
