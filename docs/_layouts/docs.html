@@ -1,0 +1,324 @@
+{% include header-fixedtop.html %}
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light">
+        <!-- Bootstrap List Group -->
+        <ul class="list-group sticky-top bg-light cw-sticky-offset">
+            <!-- Separator with title -->
+            <li class="list-group-item cw-sidebar-separator-title cw-text-gray d-flex bg-light align-items-center menu-collapsed">
+                <small class="badge badge-success cw-margin-auto">DOCUMENTS</small>
+            </li>
+            <!-- /END Separator -->
+            <!-- Hard coded TOC -->
+
+            <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Installing and Using Codewind on Cloud</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id="install_on_cloud" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="installoncloud" 
+			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				    {% if "/installoncloud" == page.url %}
+					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				    {% endif %}
+				    class="{{cls}}">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Installing and Using Codewind on Kubernetes</span>
+                    </div>
+                </a>
+                <a href="supportingmultipleusers" 
+			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				    {% if "/supportingmultipleusers" == page.url %}
+					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				    {% endif %}
+				    class="{{cls}}">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Support for multiple users</span>
+                    </div>
+                </a>
+                <a href="viewkibanalogs" 
+			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				    {% if "/viewkibanalogs" == page.url %}
+					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				    {% endif %}
+				    class="{{cls}}">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Viewing logs using Kibana in IBM Cloud Private</span>
+                    </div>
+                </a>
+            </div>            
+
+			<a href="installlocally" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				{% if "/installlocally" == page.url %}
+					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				{% endif %}
+				class="{{cls}}">
+				<div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Installing Codewind locally</span>
+                </div>
+            </a>
+
+            <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Codewind for Eclipse</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="mdteclipseoverview" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipseoverview" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Overview</span>
+                    </div>
+                </a>
+                <a href="mdteclipsegettingstarted" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipsegettingstarted" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Installation and Getting Started</span>
+                    </div>
+                </a>
+                <a href="mdteclipsemanagingprojects" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipsemanagingprojects" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Managing Codewind projects</span>
+                    </div>
+                </a>
+                <a href="mdteclipsebuildproject" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipsebuildproject" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Building Codewind projects</span>
+                    </div>
+                </a>
+                <a href="mdteclipsedebugproject" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipsedebugproject" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Debugging Codewind projects</span>
+                    </div>
+                </a>
+                <a href="mdteclipsetroubleshooting" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipsetroubleshooting" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Troubleshooting</span>
+                    </div>
+                </a>
+                <a href="mdteclipseuninstall" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdteclipseuninstall" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Uninstalling</span>
+                    </div>
+                </a>
+            </div>
+            
+            <a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Codewind for VS Code</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="mdt-vsc-overview" 
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-overview" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Overview</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-getting-started"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-getting-started" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Getting started</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-tutorial"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-tutorial" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Tutorial</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-commands-overview"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-commands-overview" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Commands overview</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-commands-project"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-commands-project" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Project commands</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-commands-restart-and-debug"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-commands-restart-and-debug" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Restart and debug commands</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-troubleshooting"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-troubleshooting" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Troubleshooting</span>
+                    </div>
+                </a>
+                <a href="mdt-vsc-uninstall"
+                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                    {% if "/mdt-vsc-uninstall" == page.url %}
+                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                    {% endif %}
+                    class="{{cls}}">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Uninstalling</span>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#configuring_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Configuring Codewind</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id="configuring_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="usingadifferenttemplate" 
+			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				    {% if "/usingadifferenttemplate" == page.url %}
+					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				    {% endif %}
+				    class="{{cls}}">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Using a template repository of your own</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <a href="guide_performance" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				{% if "/guide_performance" == page.url %}
+					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				{% endif %}
+				class="{{cls}}">
+				<div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Guide: Monitoring applications with the performance dashboard</span>
+                </div>
+            </a>
+
+            <a href="uninstall"
+                {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                {% if "/uninstall" == page.url %}
+                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                {% endif %}
+                class="{{cls}}">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Uninstalling Codewind</span>
+                </div>
+            </a>
+
+            <a href="troubleshooting"
+                {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                {% if "/troubleshooting" == page.url %}
+                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                {% endif %}
+                class="{{cls}}">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Troubleshooting</span>
+                </div>
+            </a>
+
+            <a href="limitations"
+                {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                {% if "/limitations" == page.url %}
+                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                {% endif %}
+                class="{{cls}}">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Limitations</span>
+                </div>
+            </a>
+
+            <!-- END hard coded TOC -->
+
+            <!-- Separator without title -->
+            <li class="list-group-item cw-sidebar-separator-title bg-light  cw-text-gray d-flex align-items-center menu-collapsed">
+                <small class="badge badge-success cw-margin-auto">HELPFUL
+        LINKS</small>
+            </li>
+            <!-- /END Separator -->
+            <a href="https://projects.eclipse.org/proposals/eclipse-codewind" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Eclipse Codewind project page</span>
+                </div>
+            </a>
+            <!-- Logo -->
+            <li class="list-group-item cw-logo-separator  bg-light d-flex justify-content-center">
+                <img src="images/header-logo.svg">
+            </li>
+        </ul>
+        <!-- List Group END-->
+    </div>
+    <!-- sidebar-container END -->
+    <!-- MAIN -->
+    <div id="content-container" class="py-5 px-5">
+        <div role="main">{{ content }}</div>
+    </div>
+</div>
+<!-- Main Col END -->
+{% include footer.html %} {% include body-end.html %}

@@ -2,7 +2,7 @@ title: Codewind
 email: codewind-dev@eclipse.org
 description: Eclipse Codewind
 keywords: Eclipse, docker, container, devops, applications, development, iteration, microservices, cloud, services, rapid, integrated
-baseurl: ""
+baseurl: "/codewind"
 twitter_username: jekyllrb
 github_username:  jekyll
 

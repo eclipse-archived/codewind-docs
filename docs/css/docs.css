@@ -1,0 +1,118 @@
+#body-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    padding: 0;
+    width: 350px;
+    padding-top: 131px;
+}
+
+#sidebar-container .list-group a {
+    color: #333;
+}
+
+#sidebar-container .list-group .cw-sidebar-submenu a {
+    padding-left: 30px;
+}
+
+#sidebar-container .list-group .cw-sidebar-submenu .cw-sidebar-submenu-submenu a {
+    padding-left: 40px;
+}
+
+#sidebar-container .list-group .cw-sidebar-submenu .cw-sidebar-submenu-submenu .cw-sidebar-submenu-submenu-submenu a {
+    padding-left: 50px;
+}
+
+.cw-sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+/* Separators */
+.cw-sidebar-separator-title {
+    
+    height: 35px;
+}
+
+.cw-sidebar-separator {
+    
+    height: 25px;
+}
+
+.cw-logo-separator {
+    
+    height: 60px;
+}
+
+.cw-logo-mm {
+    max-height: 90px;
+}
+.cw-current-page {
+    color: #fff !important;
+    background-color: #0083ca !important;
+    border-radius: 0 !important;
+    /*border-bottom: 5px #0083ca !important;
+    border-style: solid !important;
+    border-right: 0px !important;
+    border-left: 0px !important;
+    border-top: 0px !important;*/
+}
+.cw-current-page:hover {
+    color: #333 !important;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+    content: " \f0da";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 10px;
+}
+
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+    content: " \f0d7";
+    font-family: FontAwesome;
+    display: inline;
+    text-align: right;
+    padding-left: 10px;
+}
+
+#content-container {
+    width: calc(100% - 350px);
+}
+
+#content-container > div {
+    padding-top: 131px;
+}
+
+
+.cw-text-gray {
+    color: #222 !important;
+}
+
+.cw-margin-auto {
+    margin: auto !important;
+}
+
+.cw-bg-sidebar-menu-item {
+    background-color: #f8f9fa;
+}
+
+.list-group-item {
+    border: none;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 768px) {
+    #content-container {
+        width: 100vw;
+    }
+
+    #sidebar-container {
+        width: 100vw;
+    }
+}
