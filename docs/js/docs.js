@@ -22,4 +22,12 @@ $(function() {
         // animated top scrolling
         $('body, html').animate({scrollTop: pos});
     });  
+    
+    $("a").each( function() {
+    		var url = $(this).attr("href");
+    		if ( !url.startsWith("#") && !url.startsWith("mailto:") && -1 == url.indexOf("://") &&
+    				!url.endsWith(".html")  ) {
+    			$(this).attr("href", url + ".html");
+    		} 
+    })
 });
