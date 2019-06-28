@@ -1,0 +1,263 @@
+{% include header-fixedtop.html %}
+
+
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+	<!-- Sidebar -->
+	<div id="sidebar-container" class="bg-light">
+		<!-- Bootstrap List Group -->
+		<ul class="list-group sticky-top bg-light cw-sticky-offset">
+			<!-- Separator with title -->
+			<li
+				class="list-group-item cw-sidebar-separator-title cw-text-gray d-flex bg-light align-items-center menu-collapsed">
+				<small class="badge badge-success cw-margin-auto">DOCUMENTS</small>
+			</li>
+			<!-- /END Separator -->
+			{% assign rootCollection = site.documentations | group_by: 'parent' %}
+			<!-- level 1 -->
+			{% for rootItems in rootCollection %}
+				{% assign rootcounter = 100 %}
+  				{% assign roots = rootItems.items | where: 'parent', 'root' | sort: 'order' %}
+				{% for root in roots %}
+					
+					{% if root.parent == 'root' %}
+						{% assign rootcounter = rootcounter | plus:1 %}
+						{% assign rootid = 'one_' | append: rootcounter %}
+        			    {% if root.extlink != nil %}
+	      				  <a href="#{{ root.extlink}}">1111111111111{{ root.title }}</a>
+						{% else %}
+							<!-- check if this level has hildren -->
+							{% for docsInCatCollection in rootCollection %}
+								{% assign docs = docsInCatCollection.items | where: 'parent', root.permalink | sort: 'order' %}
+								{% assign hasChildren = false %}
+								{% for doc in docs %}
+									{% if doc.parent == root.permalink %}
+										{% assign hasChildren = true %}
+										{% break %}
+									{% endif %}
+								{% endfor %}
+								{% if hasChildren == true %}
+									{% break %}
+								{% endif %}
+							{% endfor %}
+							<!-- check if this level has hildren -->
+							{% if hasChildren == true %}
+								<a href="#{{ rootid }}" data-toggle="collapse" aria-expanded="false"
+									class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+									<div class="d-flex w-100 justify-content-start align-items-center">
+										<span class="menu-collapsed">{{ root.title }}</span>
+										<span class="submenu-icon ml-auto"></span>	
+									</div>
+								</a>
+							{% else %}
+								<a href="{{ site.baseurl | append:  root.url }}" 
+									{% assign cls = "bg-light list-group-item list-group-item-action flex-column align-items-start" %}
+									{% if root.url == page.url %}
+										{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action flex-column align-items-start" %}
+									{% endif %}
+									class="{{cls}}">
+									<div class="d-flex w-100 justify-content-start align-items-center">
+										<span class="menu-collapsed">{{ root.title }}</span>
+									</div>
+								</a>
+							{% endif %}
+					    {% endif %}
+
+						<!-- Level 2 -->
+						{% for docsInCatCollection in rootCollection %}
+							{% assign counter2 = 100 %}
+							
+							{% assign docs = docsInCatCollection.items | where: 'parent', root.permalink | sort: 'order' %}
+							{% assign ulPrinted1 = false %}
+							{% for doc in docs %}
+							
+								{% if doc.parent == root.permalink %}
+									{% assign counter2 = counter2 | plus:1 %}
+									{% assign level2id = 'two_' | append: counter2 %}
+									{% if ulPrinted1 == false %}
+										<!-- ul class="level1" style="display:none;" -->
+										<div id="{{rootid}}" class="cw-sidebar-div collapse cw-sidebar-submenu">
+									{% endif %}
+									{% assign ulPrinted1 = true %}
+									{% if doc.extlink != nil %}
+										<a href="{{ site.baseurl | append: doc.extlink}}">222222222{{ doc.title }}</a>
+									{% else %}
+									    <!-- check if this level has hildren -->
+										{% for docsInCatCollection in rootCollection %}
+											{% assign docs = docsInCatCollection.items | where: 'parent', doc.permalink | sort: 'order' %}
+											{% assign hasChildren = false %}
+											{% for doc2 in docs %}
+												{% if doc2.parent == doc.permalink %}
+													{% assign hasChildren = true %}
+													{% break %}
+												{% endif %}
+											{% endfor %}
+											{% if hasChildren == true %}
+												{% break %}
+											{% endif %}
+										{% endfor %}
+										<!-- check if this level has hildren -->
+
+										<!-- li><span class="up-down-container"><a {% if doc.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc.url | replace : '/' | append: '#doc' }}">{{ doc.title }}</a></span -->
+										{% if hasChildren == true %}
+											<a href="#{{ level2id }}" data-toggle="collapse" aria-expanded="false"
+												class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+												<div class="d-flex w-100 justify-content-start align-items-center">
+													<span class="menu-collapsed">{{ doc.title }}</span>
+													<span class="submenu-icon ml-auto"></span>	
+												</div>
+											</a>
+										{% else %}
+											<a href="{{ site.baseurl | append:  doc.url }}" 
+											{% assign cls = "bg-light list-group-item list-group-item-action bg-light" %}
+											{% if doc.url == page.url %}
+												{% assign cls = "cw-current-page list-group-item list-group-item-action bg-light" %}
+											{% endif %}
+											class="{{cls}}">
+												<span class="menu-collapsed">{{ doc.title }}</span>
+											</a>
+										{% endif %}
+
+											
+									{% endif %}
+									<!-- level 3-->
+									{% for docsInCatCollection2 in rootCollection %}
+										{% assign counter3 = 100 %}
+										
+										{% assign docs2 = docsInCatCollection2.items | where: 'parent', doc.permalink | sort: 'order' %}
+										{% assign ulPrinted2 = false %}
+										{% for doc2 in docs2 %}
+											{% if doc2.parent == doc.permalink %}
+												{% assign counter3 = counter3 | plus:1 %}
+												{% assign level3id = 'three_' | append: counter3 %}
+												{% if ulPrinted2 == false %}
+													<!-- <ul class="level2" style="display:none;" -->
+													<div id="{{level2id}}" class="cw-sidebar-div collapse cw-sidebar-submenu-submenu">
+												{% endif %}
+												{% assign ulPrinted2 = true %}
+
+												<!-- check if this level has hildren -->
+												{% for docsInCatCollection in rootCollection %}
+													{% assign docs = docsInCatCollection.items | where: 'parent', doc2.permalink | sort: 'order' %}
+													{% assign hasChildren = false %}
+													{% for doc3 in docs %}
+														{% if doc3.parent == doc2.permalink %}
+															{% assign hasChildren = true %}
+															{% break %}
+														{% endif %}
+													{% endfor %}
+													{% if hasChildren == true %}
+														{% break %}
+													{% endif %}
+												{% endfor %}
+												<!-- check if this level has hildren -->
+											
+												<!--li><span class="up-down-container"><a {% if doc2.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc2.url | replace : '/' | append: '#doc' }}">{{ doc2.title }}</a></span -->
+												{% if hasChildren == true %}
+													<a href="#{{ level3id }}" data-toggle="collapse" aria-expanded="false"
+														class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+														<div class="d-flex w-100 justify-content-start align-items-center">
+															<span class="menu-collapsed">{{ doc2.title }}</span>
+															<span class="submenu-icon ml-auto"></span>	
+														</div>
+													</a>
+												{% else %}
+													<a href="{{ site.baseurl | append:  doc2.url }}" 
+													{% assign cls = "bg-light list-group-item list-group-item-action bg-light" %}
+													{% if doc2.url == page.url %}
+														{% assign cls = "cw-current-page list-group-item list-group-item-action bg-light" %}
+													{% endif %}
+													class="{{cls}}">
+														<span class="menu-collapsed">{{ doc2.title }}</span>
+													</a>
+												{% endif %}
+													
+											{% endif %}
+											<!-- 4h level --> 
+											{% for docsInCatCollection3 in rootCollection %}
+												{% assign docs3 = docsInCatCollection3.items | where: 'parent', doc2.permalink | sort: 'order' %}
+												{% assign ulPrinted3 = false %}
+												{% for doc3 in docs3 %}
+											  		{% if doc3.parent == doc2.permalink %}
+														{% if ulPrinted3 == false %}
+															<!--ul class="level3" style="display:none;" -->
+															<div id="{{level3id}}"  class="cw-sidebar-div collapse cw-sidebar-submenu-submenu-submenu">
+														{% endif %}
+														{% assign ulPrinted3 = true %}
+														<!-- <a {% if doc3.url == page.url %}class="current-page" {% else %} class="default-link" {% endif %} href="{{ doc3.url | replace : '/' | append: '#doc' }}">{{ doc3.title }}</a></li -->
+														<a href="{{ site.baseurl | append:  doc3.url }}" 
+														{% assign cls = "bg-light list-group-item list-group-item-action bg-light" %}
+														{% if doc3.url == page.url %}
+															{% assign cls = "cw-current-page list-group-item list-group-item-action bg-light" %}
+														{% endif %}
+														class="{{cls}}">
+																<span class="menu-collapsed">{{ doc3.title }}</span>
+														</a>
+													{% endif %}
+												{% endfor %}
+												{% if ulPrinted3 == true %}
+													</div>
+												{% endif %}
+											{% endfor %}
+										
+											<!-- end level 4-->
+										{% endfor %}
+										{% if ulPrinted2 == true %}
+											</div>
+										{% endif %}
+									{% endfor %}
+									<!-- end level 3 -->
+								{% endif %}
+							{% endfor %}
+							{% if ulPrinted1 == true %}
+								</div>
+							{% endif %}
+						{% endfor %}
+						<!-- end level 2-->
+					{% endif %}
+				  
+				{% endfor %}
+			{% endfor %}
+			<!-- end level 1 -->
+
+
+
+
+
+			
+			
+			<!-- Separator without title -->
+			<li
+				class="list-group-item cw-sidebar-separator-title bg-light  cw-text-gray d-flex align-items-center menu-collapsed">
+				<small class="badge badge-success cw-margin-auto">HELPFUL LINKS</small>
+			</li>
+			<!-- /END Separator -->
+			<a href="https://projects.eclipse.org/proposals/eclipse-codewind" class="bg-light list-group-item list-group-item-action">
+				<div class="d-flex w-100 justify-content-start align-items-center">
+					<span class="menu-collapsed">Eclipse Codewind project page</span>
+				</div>
+			</a>
+			
+			<!-- Logo -->
+			<li class="list-group-item cw-logo-separator  bg-light d-flex justify-content-center">
+				<img src="images/header-logo.svg">
+			</li>
+		</ul>
+		<!-- List Group END-->
+	</div>
+	<!-- sidebar-container END -->
+
+	<!-- MAIN -->
+	<div id="content-container" class="py-5 px-5">
+
+		<div role="main">
+			{{ content }}
+		</div>
+
+
+	</div>
+
+</div>
+<!-- Main Col END -->
+{% include footer.html %}
+{% include body-end.html %}
