@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Importing projects and supported project types
+title: Adding projects
 description: Documents
 keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, import, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
 duration: 1 minute
@@ -10,13 +10,13 @@ parent: importingaproject
 order: 0
 ---
 
-# Importing projects and supported project types
+# Adding projects
 
-Microclimate projects can be imported from GitHub, a local directory, or an archive. Modifications are usually required to import and deploy projects that have never been run in Microclimate before. The import process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Microclimate.
+Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. The add process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Codewind.
 
-## What can I import?
+## What kind of projects can I add?
 
-Microclimate is designed to develop cloud native microservices, therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to import projects for each of the supported application types are outlined in the following sections.
+Codewind is designed to develop cloud native microservices. Therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
 
 * [Eclipse MicroProfile projects](#eclipse-microprofile-projects)
 * [Java Spring projects](#java-spring-projects)
@@ -26,17 +26,17 @@ Microclimate is designed to develop cloud native microservices, therefore, each 
 
 ## Eclipse MicroProfile projects
 
-MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Microclimate with a few changes to your `pom.xml` file.
+MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Codewind with a few changes to your `pom.xml` file.
 
 ### Instructions
 
-Avoid copying files from the project’s Maven target folder as part of any Dockerfile instructions because Microclimate builds your project within the container. The application builds against the same runtime that is used in production in order to avoid inconsistencies between development and production environments.
+Avoid copying files from the project’s Maven target folder as part of any Dockerfile instructions because Codewind builds your project within the container. The application builds against the same runtime that is used in production to avoid inconsistencies between development and production environments.
 
 ### Pre-import instructions
 
 MicroProfile projects must be configured to build by using Maven.
 
-Tip: For an example of a working MicroProfile application, simply create a new MicroProfile project in Microclimate. You can see the `pom.xml` file contents and use it as a template when you configure your project's `pom.xml` file.
+Tip: For an example of a working MicroProfile application, create a new MicroProfile project in Codewind. You can see the `pom.xml` file contents and use the file as a template when you configure your project's `pom.xml` file.
 
 Configure your `pom.xml` file as follows:
 
@@ -50,7 +50,7 @@ Configure your `pom.xml` file as follows:
 </parent>
 ```
 
-  2a. Add a Maven profile for Microclimate that configures the Liberty Maven plugin
+  2a. Add a Maven profile for Codewind that configures the Liberty Maven plug-in.
 
   ```sh
   <profile>
@@ -64,7 +64,7 @@ Configure your `pom.xml` file as follows:
       <build>
           <directory>${microclimateOutputDir}</directory>
           <plugins>
-              <!-- Enablement of liberty-maven plugin in microclimate -->
+              <!-- Enablement of liberty-maven plugin in Codewind -->
               <plugin>
                   <groupId>net.wasdev.wlp.maven.plugins</groupId>
                   <artifactId>liberty-maven-plugin</artifactId>
@@ -126,7 +126,7 @@ The following files are generated during the import process. If your project req
 
 The `Dockerfile-lang` file is an optional project file and a development version of the Dockerfile. It contains any Docker instructions that are required only for the development image, including copying application resources from source. For example, if your application requires configuration files, you can use a `COPY` instruction to copy those files into your application's Docker container.
 
-This file is used for building only the projects in the Microclimate workspace. The pipeline build is not affected. The pipeline build uses only the `Dockerfile` file, which is a required project file. If `Dockerfile-lang` doesn't exist, the Dockerfile is used for the development image instead.
+This file is used for building only the projects in the Codewind workspace. The pipeline build is not affected. The pipeline build uses only the `Dockerfile` file, which is a required project file. If `Dockerfile-lang` doesn't exist, the Dockerfile is used for the development image instead.
 
 Maven is included in a generated `Dockerfile-build` file, so you do not need to include instructions to set up a Maven download in `Dockerfile-lang`.
 
@@ -163,10 +163,10 @@ Your `package.json` must meet the following requirements. For an example of a go
 
 - Ensure the project provides a `start` npm script in `package.json` so it can be started by `npm start`.
     - For example: `start: "node server/server.js"`
-- In local installations of Microclimate, you can restart the project in Debug mode. To use this feature, the project must also provide a `debug` npm script, which accepts connections from all hosts on port 9229. For help configuring this script, see [the Node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
+- In local installations of Codewind, you can restart the project in Debug mode. To use this feature, the project must also provide a `debug` npm script, which accepts connections from all hosts on port 9229. For help configuring this script, see [the Node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
     - For example: `debug: "node --inspect=0.0.0.0:9229 server/server.js"`
 - If auto-build is enabled, `nodemon` is used to restart your project automatically. `nodemon` calls either the `start` or `debug` script on a code change, depending on whether or not the project is debugging. Consequently, neither of these scripts should invoke `nodemon`.
-    - If a problem occurs with either script, the error appears in the Application Logs view in Microclimate.
+    - If a problem occurs with either script, the error appears in the Application Logs view in Codewind.
 
 If you have a `Dockerfile`, it must meet the following requirements:
 - A `Dockerfile` is generated if it does not exist. Ensure the `Dockerfile` exposes your application port.
@@ -178,7 +178,7 @@ If you have a `Dockerfile`, it must meet the following requirements:
 
 ## Swift projects
 
-Microclimate works with Swift projects that use the Kitura web framework.
+Codewind works with Swift projects that use the Kitura web framework.
 
 Requirements:
 
@@ -189,4 +189,4 @@ For example, you should be able to build the project by using the command
 
 ## Generic Docker projects
 
-If you have a Dockerized application that doesn't fit an existing template, you can still import the project into Microclimate by selecting the **Docker** import option. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
+If you have a Dockerized application that doesn't fit an existing template, you can still import the project into Codewind by selecting the **Docker** import option. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
