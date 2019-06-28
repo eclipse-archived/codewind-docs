@@ -21,8 +21,10 @@ You will learn how to add and enable monitoring to your application. Then, you c
 - A Codewind installation
 
 ## Accessing the performance dashboard
-- From your IDE, go to the Codewind plug-in and right-click a project.
-- Then, select **Open Performance Dashboard**. A window appears that displays the performance dashboard.<br>
+1. From your IDE, go to the Codewind plug-in and right-click a project.
+2. Then, select **Open Performance Dashboard**. A window appears that displays the performance dashboard.<br>
+
+![performance dashboard](dist/images/performanceguide/performancedash_window.png){:height="345px" width="691px"}. <br>
 
 ## Running a load test
 1. Click **Run Load Test**. A **Load test configuration** window appears.
