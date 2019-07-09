@@ -103,7 +103,7 @@ Issue link:
 0.2.0: Issue still present
 -->
 ## Codewind Che extension loses connectivity to the Codewind pod
-The Codewind Che extension might lose connectivity to the Codewind pod during a Lagom or Swift project build if you have multiple projects in the workspace for each runtime type. When this issue occurs, the project tree says **Disconnected** and loses the projects tree.
+The Codewind Che extension might lose connectivity to the Codewind pod during a Lagom or Swift project build if you have multiple projects in the workspace for each runtime type. When this issue occurs, the project tree says **Disconnected**.
 
 **Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
 
