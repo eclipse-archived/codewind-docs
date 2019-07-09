@@ -96,6 +96,17 @@ Intermittently, after installing Codewind on Windows, projects can be created, b
 
 **Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
 
+<!--
+Action/Topic: Creating a new project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link:
+0.2.0: Issue still present
+-->
+## Codewind Che extension loses connectivity to the Codewind pod
+The Codewind Che extension might lose connectivity to the Codewind pod during a Lagom or Swift project build if you have multiple projects in the workspace for each runtime type. When this issue occurs, the project tree says **Disconnected** and loses the projects tree.
+
+**Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
+
 # Importing a project
 
 <!--
