@@ -40,7 +40,6 @@ Quickly build and deploy microservices.
     - [Commands: Restart and Debug](mdt-vsc-commands-restart-and-debug)
     - [Troubleshooting: Codewind for VS Code](mdt-vsc-troubleshooting)
     - [Uninstalling Codewind for VS Code](mdt-vsc-uninstall)
-- [Extensions](extensions)
 
 - [Guide: Monitoring applications with the performance dashboard](guide_performance)
 
