@@ -17,40 +17,40 @@ Quickly build and deploy microservices.
 
 ## Installing Codewind
 
-- [Installing Codewind locally](installlocally)
-- [Installing Codewind on Kubernetes](installoncloud)
-    - [Docker Registry Guidance](dockerregistry)
-    - [Support for multiple users](supportingmultipleusers)
-    - [Installing Kibana and filtering logs in IBM Cloud Private](viewkibanalogs)
+- [Installing Codewind locally](installlocally.html)
+- [Installing Codewind on Kubernetes](installoncloud.html)
+    - [Docker Registry Guidance](dockerregistry.html)
+    - [Support for multiple users](supportingmultipleusers.html)
+    - [Installing Kibana and filtering logs in IBM Cloud Private](viewkibanalogs.html)
 
 ## Using Codewind
 
-- [Codewind for Eclipse](mdteclipseoverview)
-    - [Getting started with Codewind for Eclipse](mdteclipsegettingstarted)
-    - [Managing Codewind projects](mdteclipsemanagingprojects)
-    - [Building Codewind projects](mdteclipsebuildproject)
-    - [Debugging Codewind projects](mdteclipsedebugproject)
-    - [Troubleshooting Codewind for Eclipse](mdteclipsetroubleshooting)
-    - [Uninstalling Codewind for Eclipse](mdteclipseuninstall)
-- [Codewind for VS Code](mdt-vsc-overview)
-    - [Getting started: Codewind for VS Code](mdt-vsc-getting-started)
-    - [Tutorial: Codewind for VS Code](mdt-vsc-tutorial)
-    - [Commands overview: Codewind for VS Code](mdt-vsc-commands-overview)
-    - [Project commands: Codewind for VS Code](mdt-vsc-commands-project)
-    - [Commands: Restart and Debug](mdt-vsc-commands-restart-and-debug)
-    - [Troubleshooting: Codewind for VS Code](mdt-vsc-troubleshooting)
-    - [Uninstalling Codewind for VS Code](mdt-vsc-uninstall)
+- [Codewind for Eclipse](mdteclipseoverview.html)
+    - [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html)
+    - [Managing Codewind projects](mdteclipsemanagingprojects.html)
+    - [Building Codewind projects](mdteclipsebuildproject.html)
+    - [Debugging Codewind projects](mdteclipsedebugproject.html)
+    - [Troubleshooting Codewind for Eclipse](mdteclipsetroubleshooting.html)
+    - [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
+- [Codewind for VS Code](mdt-vsc-overview.html)
+    - [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html)
+    - [Tutorial: Codewind for VS Code](mdt-vsc-tutorial.html)
+    - [Commands overview: Codewind for VS Code](mdt-vsc-commands-overview.html)
+    - [Project commands: Codewind for VS Code](mdt-vsc-commands-project.html)
+    - [Commands: Restart and Debug](mdt-vsc-commands-restart-and-debug.html)
+    - [Troubleshooting: Codewind for VS Code](mdt-vsc-troubleshooting.html)
+    - [Uninstalling Codewind for VS Code](mdt-vsc-uninstall.html)
 
-- [Guide: Monitoring applications with the performance dashboard](guide_performance)
+- [Guide: Monitoring applications with the performance dashboard](guide_performance.html)
 
 ## Configuring Codewind
 
-- [Using a template repository of your own](usingadifferenttemplate)
+- [Using a template repository of your own](usingadifferenttemplate.html)
 
 ## Limitations
 
-- [Limitations](limitations)
+- [Limitations](limitations.html)
 
 ## Uninstalling Codewind
 
-- [Uninstalling Codewind](uninstall)
+- [Uninstalling Codewind](uninstall.html)

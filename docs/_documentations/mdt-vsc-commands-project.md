@@ -13,8 +13,8 @@ parent: mdt-vsc-commands-overview
 # Project commands: Codewind for VS Code
 
 ### **See also:**
-- [Commands overview](mdt-vsc-commands-overview)
-- [Restart and debug](mdt-vsc-commands-restart-and-debug)
+- [Commands overview](mdt-vsc-commands-overview.html)
+- [Restart and debug](mdt-vsc-commands-restart-and-debug.html)
 
 ***
 
@@ -68,10 +68,10 @@ Edit the internal app and debug ports as well as the **application endpoint**, s
 
 ***
 
-[Next: Restart and debug](mdt-vsc-commands-restart-and-debug)
+[Next: Restart and debug](mdt-vsc-commands-restart-and-debug.html)
 
-[Back to the commands overview](mdt-vsc-commands-overview)
+[Back to the commands overview](mdt-vsc-commands-overview.html)
 
-[Back to the VS Code tools overview](mdt-vsc-overview)
+[Back to the VS Code tools overview](mdt-vsc-overview.html)
 
-[Troubleshooting](mdt-vsc-troubleshooting)
+[Troubleshooting](mdt-vsc-troubleshooting.html)

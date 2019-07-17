@@ -18,11 +18,11 @@ Write code, track application and build statuses, view project logs, and run you
 
 The VS Code tools are [open source](https://github.com/eclipse/codewind-vscode). You can browse the code, open issues, and contribute.
 
-To get started, see [Getting started with Codewind](mdt-vsc-getting-started).
+To get started, see [Getting started with Codewind](mdt-vsc-getting-started.html).
 
-To uninstall Codewind, see [Uninstalling Codewind for VS Code](mdt-vsc-uninstall)
+To uninstall Codewind, see [Uninstalling Codewind for VS Code](mdt-vsc-uninstall.html)
 
-## **[Features](mdt-vsc-commands-overview)**
+## **[Features](mdt-vsc-commands-overview.html)**
 
 - Create new projects
 - Import existing projects

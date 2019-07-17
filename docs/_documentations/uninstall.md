@@ -12,8 +12,8 @@ parent: root
 
 # Uninstalling Codewind locally
 
-- [Uninstalling Codewind from VS Code](mdt-vsc-uninstall)
-- [Uninstalling Codewind from Eclipse](mdteclipseuninstall)
+- [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.html)
+- [Uninstalling Codewind from Eclipse](mdteclipseuninstall.html)
 
 # Uninstalling Codewind on Kubernetes
 
