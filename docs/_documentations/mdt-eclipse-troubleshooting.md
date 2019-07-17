@@ -12,7 +12,7 @@ parent: mdteclipseoverview
 
 # Troubleshooting Codewind
 
-When troubleshooting, check the project in Codewind to make sure the status is what you expect.  If not, refer to [Codewind troubleshooting](troubleshooting).  For Codewind specific problem solving tips, see the following information.
+When troubleshooting, check the project in Codewind to make sure the status is what you expect.  If not, refer to [Codewind troubleshooting](troubleshooting.html).  For Codewind specific problem solving tips, see the following information.
 
 * [Check the logs](#check-the-logs)
 * [Solving common problems](#solving-common-problems)
@@ -48,10 +48,10 @@ If the debugger is connected but stopped on a ClassNotFoundException, click on t
 If the application is not waiting for the debugger to connect, try restarting the application again. If this does not work, use Codewind to disable the application and then re-enable it.
 
 ## Application does not rebuild after making a change
-To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**.  For more information see [Building Codewind projects](mdteclipsebuildproject).
+To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**.  For more information see [Building Codewind projects](mdteclipsebuildproject.html).
 
 ## Correct project list is not being shown
-Try refreshing by right-clicking on the **Local Projects** item in the **Codewind Explorer** view and selecting **Refresh**. If this does not solve the problem, there could be an issue with Codewind itself, see [Codewind troubleshooting](troubleshooting).
+Try refreshing by right-clicking on the **Local Projects** item in the **Codewind Explorer** view and selecting **Refresh**. If this does not solve the problem, there could be an issue with Codewind itself, see [Codewind troubleshooting](troubleshooting.html).
 
 ## Application is not showing the correct status
-Try refreshing the application by right-clicking on it in the **Codewind Explorer** view and selecting **Refresh**. If this does not solve the problem, there could be an issue with Codewind itself, see [Codewind troubleshooting](troubleshooting).
+Try refreshing the application by right-clicking on it in the **Codewind Explorer** view and selecting **Refresh**. If this does not solve the problem, there could be an issue with Codewind itself, see [Codewind troubleshooting](troubleshooting.html).

@@ -130,7 +130,7 @@ build-log requested, no build log found for project <project name>
 No containerId for running project <project name>
 ```
 
-For more information about valid Codewind projects, see [Imported projects and supported project types](importedprojects).
+For more information about valid Codewind projects, see [Imported projects and supported project types](importedprojects.html).
 
 ***
 

@@ -36,11 +36,11 @@ Codewind can be installed locally into Eclipse or into Visual Studio Code (VS Co
 
 ## Installing into VS Code
 
-To install Codewind for VS Code, see [Getting Started: Codewind for VS Code](mdt-vsc-getting-started)
+To install Codewind for VS Code, see [Getting Started: Codewind for VS Code](mdt-vsc-getting-started.html)
 
 ## Installing into Eclipse
 
-To install Codewind for VS Code, see [Getting Started: Codewind for Eclipse](mdteclipsegettingstarted)
+To install Codewind for VS Code, see [Getting Started: Codewind for Eclipse](mdteclipsegettingstarted.html)
 
 ***
 ## Need help?

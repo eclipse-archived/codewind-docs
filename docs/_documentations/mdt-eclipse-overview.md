@@ -18,6 +18,6 @@ Use the Eclipse IDE to create and make modifications to your application, see th
 
 The Eclipse tools are [open source](https://github.com/eclipse/codewind-eclipse). You are encouraged to browse the code, open issues, and contribute.
 
-To get started, see [Getting started with Codewind](mdteclipsegettingstarted).
+To get started, see [Getting started with Codewind](mdteclipsegettingstarted.html).
 
-To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall)
+To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)

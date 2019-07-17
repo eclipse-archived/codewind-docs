@@ -13,14 +13,14 @@ parent: mdt-vsc-commands-overview
 # Restart and debug: Codewind for VS Code
 
 ### **See also:**
-- [Commands overview](mdt-vsc-commands-overview)
-- [Project commands](mdt-vsc-commands-project)
+- [Commands overview](mdt-vsc-commands-overview.html)
+- [Project commands](mdt-vsc-commands-project.html)
 
 ***
 
 Restart and debug commands are available in the Command Palette and by right-clicking a project in the Codewind view.
 You must restart a project in **Debug** mode before you can debug that project.
-For a walkthrough of the debug functionality, see the [tutorial](mdt-vsc-tutorial).
+For a walkthrough of the debug functionality, see the [tutorial](mdt-vsc-tutorial.html).
 
 ## **Restart**
 Stop and start your application server. Restart is supported for Microprofile, Spring, and Node.js projects.
@@ -37,12 +37,12 @@ Next, the launch configuration runs, and the VS Code debugger attaches to your a
 ## See also:
 - [VS Code debug documentation for Node.js](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 - [VS Code debug documentation for Java](https://code.visualstudio.com/blogs/2017/09/28/java-debug)
-- [Debug troubleshooting](mdt-vsc-troubleshooting#debug)
+- [Debug troubleshooting](mdt-vsc-troubleshooting.html#debug)
 
 ***
 
-[Back to the commands overview](mdt-vsc-commands-overview)
+[Back to the commands overview](mdt-vsc-commands-overview.html)
 
-[Back to the VS Code tools overview](mdt-vsc-overview)
+[Back to the VS Code tools overview](mdt-vsc-overview.html)
 
-[Troubleshooting](mdt-vsc-troubleshooting)
+[Troubleshooting](mdt-vsc-troubleshooting.html)

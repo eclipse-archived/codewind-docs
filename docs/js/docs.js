@@ -23,11 +23,5 @@ $(function() {
         $('body, html').animate({scrollTop: pos});
     });  
     
-    $("a").each( function() {
-    		var url = $(this).attr("href");
-    		if ( url  && !url.includes("#") && !url.startsWith("mailto:") && -1 == url.indexOf("://") &&
-    				!url.endsWith(".html")  && !url.endsWith("/") ) {
-    			$(this).attr("href", url + ".html");
-    		}
-    })
+    
 });

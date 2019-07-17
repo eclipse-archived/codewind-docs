@@ -35,9 +35,9 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Import Project**: Imports your project into the Eclipse workspace.
 - **Show Log Files**: If log files are available, this action displays a list of log files. In the Eclipse **Console** view, click a log file to open it, or click **Show All** to open all available log files. The individual log files are toggle actions. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
 - **Restart in Run Mode**: Restarts the application in run mode.
-- **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. Only Microprofile/Java EE, Spring, and Node.js projects can be debugged. For more information, see [Debugging Codewind projects](mdteclipsedebugproject).
-- **Attach Debugger**: If you detached the debugger accidentally or restarted Eclipse, use this to re-attach the debugger to an application in debug mode. For more information, see [Debugging Codewind projects](mdteclipsedebugproject).
-- **Build**: Initiate a build of your project. This action is not available if a build is already running. For more information, see [Building Codewind projects](mdteclipsebuildproject).
+- **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. Only Microprofile/Java EE, Spring, and Node.js projects can be debugged. For more information, see [Debugging Codewind projects](mdteclipsedebugproject.html).
+- **Attach Debugger**: If you detached the debugger accidentally or restarted Eclipse, use this to re-attach the debugger to an application in debug mode. For more information, see [Debugging Codewind projects](mdteclipsedebugproject.html).
+- **Build**: Initiate a build of your project. This action is not available if a build is already running. For more information, see [Building Codewind projects](mdteclipsebuildproject.html).
 - **Disable Auto Build**: Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This action is only available when auto build is enabled.
 - **Enable Auto Build**: Use this to re-enable automatic builds whenever a change is made. This action is only available when auto build is disabled.
 - **Remove**: Removes a project. This action removes the project from Codewind.  You can then use Eclipse to delete the project from the Eclipse workspace and the file system.

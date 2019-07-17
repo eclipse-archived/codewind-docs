@@ -114,7 +114,7 @@ Configure your `pom.xml` file as follows:
 
 3. Add `/mc-target` to the `.gitignore` file to ignore build output from the `microclimate` build profile.
 
-Note: Due to a known issue the server needs to be configured to use port 9080 in order for the project to be detected as started. See [Troubleshooting](troubleshooting) for more details.
+Note: Due to a known issue the server needs to be configured to use port 9080 in order for the project to be detected as started. See [Troubleshooting](troubleshooting.html) for more details.
 
 ### Post-import instructions
 
