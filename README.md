@@ -1,15 +1,3 @@
-
-# Temporary repo for Codewind landing page. DO NOT MERGE TO Microclimate LANDING PAGE!
-
-Once the server is launched you can view your changes online by visiting `http://localhost:4321/codewind/<link>`
-
-The `<link>` is in your md file.
-
-Example: in `clicommands.md` file, line 7 is `permalink: clicommands`, to view this page in browser, use this url:
-
-`http://localhost:4321/clicommands.html`
-
-
 # codewind-docs
 This repo contains the landing page of Eclipse Codewind project.
 
@@ -24,6 +12,7 @@ Prerequisites:
 
 1. Run the following command: `./serve.sh`.
 2. View the page with this URL: `http://localhost:4321/codewind/`.
+3. Run `./build.sh` command to check broken links.
 
 ## Run the build locally
 
@@ -31,7 +20,8 @@ Prerequisites:
 * Install Docker and make sure Docker daemon is running.
 
 1. Run the following command: `./build.sh`.
-2. The HTML site content are generated in `docs/_site` folder.
+2. The HTML site content are generated in `docs/_site/codewind` folder.
+3. Check the script result, make sure there is no broken links.
 
 ## Push to the external landing page
 
