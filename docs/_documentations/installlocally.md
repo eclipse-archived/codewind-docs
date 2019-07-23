@@ -40,7 +40,7 @@ To install Codewind for VS Code, see [Getting Started: Codewind for VS Code](mdt
 
 ## Installing into Eclipse
 
-To install Codewind for VS Code, see [Getting Started: Codewind for Eclipse](mdteclipsegettingstarted.html)
+To install Codewind for Eclipse, see [Getting Started: Codewind for Eclipse](mdteclipsegettingstarted.html)
 
 ***
 ## Need help?
