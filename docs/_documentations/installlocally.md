@@ -20,9 +20,8 @@ Codewind can be installed locally into Eclipse or into Visual Studio Code (VS Co
 * Linux or macOS, on x86_64 architecture only
 * [Visual Studio Code](https://code.visualstudio.com/) or [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/)
 * [Git](https://git-scm.com/)
-* [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac) **Version 17.06 minimum**
-* [Docker Compose](https://docs.docker.com/compose/install/)
-* On Linux, follow the post-installation steps to [run Docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
+* On macOS, [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac) **Version 17.06 minimum**
+* On Linux, [Docker Compose](https://docs.docker.com/compose/install/), and then follow the post-installation steps to [run Docker as a non-root user](https://docs.docker.com/engine/installation/linux/linux-postinstall/).
 
 ## Prerequisites for Windows
 * Windows 10 and Windows Server 2016 are supported.
