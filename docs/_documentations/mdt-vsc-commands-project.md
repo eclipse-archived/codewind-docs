@@ -27,7 +27,7 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 ## Commands
 
-### **Open in browser**
+### **Open app**
 Open the project application root endpoint in the system browser. The project must be in the *Running* or *Debugging* state, or the application server won't be available.
 
 ### **Open application monitor**

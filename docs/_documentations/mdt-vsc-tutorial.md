@@ -42,7 +42,7 @@ For more detail on any of the commands, see the [commands overview](mdt-vsc-comm
     - At this point, your VS Code should look similar to the following example:
     <br>![Editing nodeproject](dist/images/cdt-vsc/tutorial-1.png)
 7. To make sure your code change was picked up, test your new endpoint.
-    - Right-click the project and select [Open in Browser](mdt-vsc-commands-project.html#open-in-browser). The project root endpoint opens in the browser, and the **IBM Cloud Starter** page appears.
+    - Right-click the project and select [Open App](mdt-vsc-commands-project.html#open-app). The project root endpoint opens in the browser, and the **IBM Cloud Starter** page appears.
     - Navigate to the new endpoint. If you copied the previous snippet, add `/health/test/` to the URL.
     - See the new response:<br>
     <br>![New endpoint response](dist/images/cdt-vsc/tutorial-2.png)
