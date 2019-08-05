@@ -1,6 +1,17 @@
+---
+layout: docs
+title: Codewind OpenAPI Tools for VS Code
+description: How to work with the OpenAPI tools in VS Code
+keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind OpenAPI tools for VS Code
+duration: 1 minute
+permalink: open-api-tools-for-vscode
+type: document
+order: 30
+---
+
 # Codewind OpenAPI Tools for VS Code
 
-The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI Specifications. The tools are integrated and customized to work with Codewind for VS Code, but they can also work without the Codewind extension.
+The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for VS Code, but they can also work without the Codewind extension.
 
 ## Installing
 1. Install [VS Code version 1.27 or later](https://code.visualstudio.com/download).
