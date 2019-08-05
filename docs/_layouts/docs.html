@@ -29,6 +29,16 @@
                         <span class="menu-collapsed">Installing and Using Codewind on Kubernetes</span>
                     </div>
                 </a>
+                <a href="dockerregistry.html" 
+                             {% assign cls = "bg-light list-group-item list-group-item-action" %}
+                                 {% if "/dockerregistry" == page.url %}
+                                         {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+                                {% endif %}
+                                class="{{cls}}">
+                                <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Codewind Docker registry guidance</span>
+                   </div>
+                </a>
                 <a href="supportingmultipleusers.html" 
 			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
 				    {% if "/supportingmultipleusers" == page.url %}
