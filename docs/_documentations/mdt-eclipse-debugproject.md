@@ -24,6 +24,10 @@ Codewind for Eclipse supports debugging Microprofile/Java EE and Spring projects
 - Right-click your project in the **Codewind Explorer** view.
 - Select **Import Project**.
 2. If you need to debug any initialization code, set breakpoints in this code now. You can also set breakpoints in your application code at this time.
+3. [Optional] If you want to use Java hot code replace and change your code while you debug, disable automatic builds.
+- To disable automatic builds, right-click your project in the **Codewind Explorer** view and select **Disable Auto Build**.
+- If you want to start a build while automatic builds are disabled, right-click your project and select **Build**.
+- Enable automatic builds again after you finish debugging. To enable automatic builds again, right-click your project and select **Enable Auto Build**.
 
 ### Debugging
 1. To restart your Microprofile/Java EE or Spring application in debug mode, right-click on the project in the **Codewind Explorer** view and select **Restart in Debug Mode**.
