@@ -26,6 +26,17 @@ The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI 
 5. Enter the requested information that is displayed in the wizard.
 6. After generation, edit the `.openapi-generator-ignore` file to ensure that subsequent code generation does not overwrite custom code.
 
+## Generator options
+The following command line equivalent options are available for client and server generation:
+`-i <OpenAPI definition>`
+`-g <generator name>`
+`-o <output directory>`
+
+The following command line equivalent options are available for HTML generation:
+`-i <OpenAPI definition>`
+`-g html2`
+`-o <output directory>`
+
 ## Features
 - Generate API clients in any of the supported [languages/frameworks](https://github.com/OpenAPITools/openapi-generator#overview).
 - Generate server stubs in any of the supported [languages/frameworks](https://github.com/OpenAPITools/openapi-generator#overview).
