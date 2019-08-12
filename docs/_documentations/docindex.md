@@ -11,46 +11,50 @@ category: How-tos and Guides
 order: 2
 ---
 
-# Getting started
-
 Quickly build and deploy microservices.
 
-## Installing Codewind
-
-- [Installing Codewind locally](installlocally.html)
-- [Installing Codewind on Kubernetes](installoncloud.html)
+## Getting started
+- [Installing Codewind in Eclipse](mdteclipsegettingstarted.html)
+- [Installing Codewind in VS Code](mdt-vsc-getting-started.html)
+- [Installing Codewind in Eclipse Che for Cloud deployments](installoncloud.html)
     - [Docker Registry Guidance](dockerregistry.html)
     - [Support for multiple users](supportingmultipleusers.html)
     - [Installing Kibana and filtering logs in IBM Cloud Private](viewkibanalogs.html)
 
-## Using Codewind
+## Developing with Codewind
 
+Developing with Codewind
 - [Codewind for Eclipse](mdteclipseoverview.html)
-    - [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html)
     - [Managing Codewind projects](mdteclipsemanagingprojects.html)
     - [Building Codewind projects](mdteclipsebuildproject.html)
     - [Debugging Codewind projects](mdteclipsedebugproject.html)
     - [Troubleshooting Codewind for Eclipse](mdteclipsetroubleshooting.html)
     - [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
+    - [Using a template repository of your own](usingadifferenttemplate.html)
+
 - [Codewind for VS Code](mdt-vsc-overview.html)
-    - [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html)
     - [Tutorial: Codewind for VS Code](mdt-vsc-tutorial.html)
     - [Commands overview: Codewind for VS Code](mdt-vsc-commands-overview.html)
     - [Project commands: Codewind for VS Code](mdt-vsc-commands-project.html)
     - [Commands: Restart and Debug](mdt-vsc-commands-restart-and-debug.html)
     - [Troubleshooting: Codewind for VS Code](mdt-vsc-troubleshooting.html)
     - [Uninstalling Codewind for VS Code](mdt-vsc-uninstall.html)
+    - [Using a template repository of your own](usingadifferenttemplate.html)
 
-- [Guide: Monitoring applications with the performance dashboard](guide_performance.html)
+- [Codewind for Eclipse Che](mdtcheoverview.html)
+    - [Managing Codewind projects](mdtchemanagingprojects.html)
+    - [Building Codewind projects](mdtchebuildproject.html)
+    - [Debugging Codewind projects](mdtchedebugproject.html)
+    - [Troubleshooting Codewind for Eclipse Che](mdtchetroubleshooting.html)
+    - [Uninstalling Codewind for Eclipse Che](mdtcheuninstall.html)
+    - [Using a template repository of your own](usingadifferenttemplate.html)
 
-## Configuring Codewind
+- [Hybrid development](hybriddevelopment.html)
 
-- [Using a template repository of your own](usingadifferenttemplate.html)
+[Performance monitoring](guide_performance.html)
 
-## Limitations
+[Codewind and Tekton Pipelines](codewindandtektonpipelines.html)
 
-- [Limitations](limitations.html)
-
-## Uninstalling Codewind
-
-- [Uninstalling Codewind](uninstall.html)
+[Open API Tools](codewind-openapi-tools.html)
+   - [Codewind OpenAPI Tools for Eclipse](open-api-tools-for-eclipse)
+   - [Codewind OpenAPI Tools for VS Code](open-api-tools-for-vscode)
