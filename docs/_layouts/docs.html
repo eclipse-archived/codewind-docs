@@ -51,214 +51,287 @@
                 </a>
             </div>            
 
-<!--			<a href="installlocally.html" 
-			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/installlocally" == page.url %}
-					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				{% endif %}
-				class="{{cls}}">
-				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Installing Codewind locally</span>
-                </div>
-            </a>
--->
-            <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+            <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Developing with Codewind</span>
                     <span class="submenu-icon ml-auto"></span>
                 </div>
             </a>
-            <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
-                <a href="mdteclipseoverview.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipseoverview" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
+            <div id="dev_with_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Codewind for Eclipse</span>
-                    </div>
-                </a>
-<!-- Test indent
-            <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Test indent header</span>
+                    <span class="menu-collapsed">Codewind for Eclipse</span>
                     <span class="submenu-icon ml-auto"></span>
                 </div>
-            </a>
-Test indent-->
-                <a href="mdteclipsegettingstarted.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipsegettingstarted" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Codewind for VS Code</span>
-                    </div>
                 </a>
-                <a href="mdteclipsemanagingprojects.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipsemanagingprojects" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
+                
+                <!-- 3d level - eclipse -->
+                <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdteclipsemanagingprojects.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipsemanagingprojects" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Managing Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdteclipsebuildproject.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipsebuildproject" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Building Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdteclipsedebugproject.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipsedebugproject" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Debugging Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdteclipsetroubleshooting.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipsetroubleshooting" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Troubleshooting Codewind for Eclipse</span>
+	                    </div>
+	                </a>
+	                <a href="mdteclipseuninstall.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipseuninstall" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Uninstalling Codewind for Eclipse</span>
+	                    </div>
+	                </a>
+                </div>
+                <!-- end 3d level eclipse -->
+				<!-- vs code -->
+				<a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Codewind for Eclipse Che</span>
-                    </div>
-                </a>
-                <a href="hybriddevelopment.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/hybriddevlopment" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Hybrid development</span>
-                    </div>
-                </a>
-<!--            <a href="mdteclipsedebugproject.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipsedebugproject" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Debugging Codewind projects</span>
-                    </div>
-                </a>
-                <a href="mdteclipsetroubleshooting.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipsetroubleshooting" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Troubleshooting</span>
-                    </div>
-                </a>
-                <a href="mdteclipseuninstall.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdteclipseuninstall" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Uninstalling</span>
-                    </div>
-                </a>
-            </div>
-           
-            <a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Codewind for VS Code</span>
                     <span class="submenu-icon ml-auto"></span>
                 </div>
-            </a>
-            <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
-                <a href="mdt-vsc-overview.html" 
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-overview" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Overview</span>
-                    </div>
                 </a>
-                <a href="mdt-vsc-getting-started.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-getting-started" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
+                
+                <!-- 3d level - vscode -->
+                <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-vsc-tutorial.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-tutorial" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Tutorial</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-commands-overview.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-commands-overview" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Commands overview</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-commands-project.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-commands-project" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Project commands</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-commands-restart-and-debug.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-commands-restart-and-debug" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Restart and debug commands</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-troubleshooting.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-troubleshooting" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Troubleshooting</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-uninstall.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-uninstall" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Uninstalling</span>
+	                    </div>
+	                </a>
+	            </div>
+	            
+				<!--  end vscode  -->
+				
+				<!-- eclipse che -->
+				<a href="#codewind_for_che" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                     <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Getting started</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-tutorial.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-tutorial" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Tutorial</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-commands-overview.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-commands-overview" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Commands overview</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-commands-project.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-commands-project" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Project commands</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-commands-restart-and-debug.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-commands-restart-and-debug" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Restart and debug commands</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-troubleshooting.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-troubleshooting" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Troubleshooting</span>
-                    </div>
-                </a>
-                <a href="mdt-vsc-uninstall.html"
-                    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                    {% if "/mdt-vsc-uninstall" == page.url %}
-                        {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                    {% endif %}
-                    class="{{cls}}">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Uninstalling</span>
-                    </div>
-                </a>
--->
-            </div>
-<!--
-            <a href="#configuring_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Configuring Codewind</span>
+                    <span class="menu-collapsed">Codewind for Eclipse Che</span>
                     <span class="submenu-icon ml-auto"></span>
                 </div>
-            </a>
-            <div id="configuring_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
-                <a href="usingadifferenttemplate.html" 
-			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				    {% if "/usingadifferenttemplate" == page.url %}
-					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				    {% endif %}
-				    class="{{cls}}">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Using a template repository of your own</span>
-                    </div>
                 </a>
-
+                
+                <!-- 3d level - echlipse che -->
+                <div id="codewind_for_che" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-che-manage.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-manage" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Manage Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-che-build.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-build" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Building Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-che-debug.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-debug" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Debugging Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-che-troubleshoot.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-troubleshoot" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Troubleshooting Codewind projects</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-che-uninstall.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-uninstall" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Uninstalling Codewind projects</span>
+	                    </div>
+	                </a>
+	            </div>
+	            <!--  end eclipse che -->
+	            
+	            <!-- hybrid -->
+				<a href="#codewind_for_hybrid" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Hybrid deployment / developing</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                </a>
+                
+                <!-- 3d level - hybrid -->
+                <div id="codewind_for_hybrid" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-hybrid-tutorial.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-tutorial" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Tutorial</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-hybrid-commands-overview.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-commands-overview" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Commands overview</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-hybrid-commands-project.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-commands-project" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Project commands</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-hybrid-commands-restart-and-debug.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-commands-restart-and-debug" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Restart and debug commands</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-hybrid-troubleshooting.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-troubleshooting" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Troubleshooting</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-hybrid-uninstall.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-hybrid-uninstall" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Uninstalling</span>
+	                    </div>
+	                </a>
+	            </div>
+	            
+				<!--  end hybrid  -->
+				
             </div>
--->
+
             <a href="guide_performance.html" 
 			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
 				{% if "/guide_performance" == page.url %}
@@ -270,9 +343,9 @@ Test indent-->
                 </div>
             </a>
 
-            <a href="guide_performance.html" 
+            <a href="codewind_and_tekton_pipelines.html" 
 			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/guide_performance" == page.url %}
+				{% if "/codewind_and_tekton_pipelines" == page.url %}
 					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				{% endif %}
 				class="{{cls}}">
@@ -281,20 +354,29 @@ Test indent-->
                 </div>
             </a>
 
-            <a href="guide_performance.html" 
-			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/guide_performance" == page.url %}
-					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				{% endif %}
-				class="{{cls}}">
-				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">OpenAPI tools</span>
+			<a href="#openapi_tools" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Open API tools</span>
+                    <span class="submenu-icon ml-auto"></span>
                 </div>
             </a>
+            <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="https://github.com/eclipse/codewind-openapi-vscode" class="bg-light list-group-item list-group-item-action">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Open API tools for VS Code</span>
+                    </div>
+                </a>
+                <a href="https://github.com/eclipse/codewind-openapi-eclipse" class="bg-light list-group-item list-group-item-action">
+				    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="menu-collapsed">Open API tools for Eclipse</span>
+                    </div>
+                </a>
+            </div>
+            
 
-            <a href="guide_performance.html" 
+            <a href="using-theunified-cli.html" 
 			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/guide_performance" == page.url %}
+				{% if "/using-theunified-cli" == page.url %}
 					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				{% endif %}
 				class="{{cls}}">
@@ -303,40 +385,6 @@ Test indent-->
                 </div>
             </a>
 
-<!--
-            <a href="uninstall.html"
-                {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                {% if "/uninstall" == page.url %}
-                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                {% endif %}
-                class="{{cls}}">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Uninstalling Codewind</span>
-                </div>
-            </a>
-
-            <a href="troubleshooting.html"
-                {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                {% if "/troubleshooting" == page.url %}
-                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                {% endif %}
-                class="{{cls}}">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Troubleshooting</span>
-                </div>
-            </a>
-
-            <a href="limitations.html"
-                {% assign cls = "bg-light list-group-item list-group-item-action" %}
-                {% if "/limitations" == page.url %}
-                    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-                {% endif %}
-                class="{{cls}}">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Limitations</span>
-                </div>
-            </a>
--->
             <!-- END hard coded TOC -->
 
             <!-- Separator without title -->
