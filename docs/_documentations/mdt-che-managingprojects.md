@@ -4,7 +4,7 @@ title: Managing Codewind projects
 description: How to work with your Codewind projects in Eclipse
 keywords: run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind Explorer view in Eclipse, project actions, attach, build, disable, enable, validate, refresh
 duration: 1 minute
-permalink: mdtchemanagingprojects
+permalink: mdt-che-managingprojects
 type: document
 order: 30
 parent: mdteclipseoverview
