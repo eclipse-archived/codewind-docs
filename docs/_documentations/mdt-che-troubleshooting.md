@@ -4,7 +4,7 @@ title: Troubleshooting Codewind
 description: How to troubleshoot Codewind
 keywords: troubleshooting, issues, workaround, common problems, help, tools, eclipse, check the logs, solving common problems, fail, stuck, not rebuild, not showing the correct
 duration: 1 minute
-permalink: mdtchetroubleshooting
+permalink: mdt-che-troubleshooting
 type: document
 order: 60
 parent: mdteclipseoverview

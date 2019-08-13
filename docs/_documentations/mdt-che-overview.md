@@ -4,7 +4,7 @@ title: Codewind for Eclipse Che
 description: Codewind for Eclipse Che
 keywords: introducing, introduction, overview, what is, tools, eclipse, Codewind for Eclipse Che, Eclipse tools, Eclipse IDE, local installation
 duration: 1 minute
-permalink: mdtcheoverview
+permalink: mdt-che-overview
 type: document
 order: 1
 parent: settingownide
