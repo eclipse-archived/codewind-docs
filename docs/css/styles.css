@@ -55,7 +55,60 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+.cw-youtube-desc {
+	margin-top: auto;
+    margin-bottom: auto;
+}
+.cw-docs-button:hover > svg *{
+	fill: #ffffff;
+}
+.cw-docs-button:hover {
+	background: #015b8c;
+    color: #fff;
+}
+.cw-docs-button {
+	color: #0083CA;
+    text-align: center;
+    width: 170px;
+    height: 44px;
+    border-radius: 0px;
+    border: 2px solid #0083CA;
+    display: table;
+}
 
+.cw-docs-button > span {
+	display:table-cell;
+ 	vertical-align:middle;
+}
+
+.cw-youtube-view-font {
+	font-size: 36px;
+}
+
+.cw-youtube-left {
+	padding-left: 100px;
+}
+
+.cw-youtube-right {
+	padding-right: 100px;
+}
+
+.cw-youtube-italic {
+	font-style: italic;
+}
+
+.cw-youtube-thin {
+	font-weight: 200;
+}
+
+.cw-youtube-bold {
+	font-weight: 400;
+}
+
+.cw-v-middle {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 .cw-download-button:hover {
     background: #015b8c;
     color: #fff;
@@ -330,9 +383,24 @@ body {
 
 
 /* footer */
+.cw-footer-links{
+	color: #fff;
+	text-decoration: none;
+}
+.cw-footer-links:hover{
+	color: #fff;
+	text-decoration: none;
+}
+#cw-footer-border-right {
+      border-right: 2px solid #ffffff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+}
 
 #footer-div {
-    background: #005E8A;
+    background: #0083ca;
     color: #fff;
 }
 
@@ -341,8 +409,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }
 
+.cw_footer_display_flex  {
+	display: flex;
+}
+
+.cw-font-12 {
+	font-size: 12px;
+}
+
+.cw-font-14 {
+	font-size: 14px;
+}
+
+.cw-footer-vcenter {
+	margin-top: auto;
+	margin-bottom: auto;
+}
 /* end footer */
 
 /* Extra large devices (large laptops and desktops, 1440px and up) */
