@@ -1,6 +1,17 @@
+---
+layout: docs
+title: Codewind OpenAPI Tools for Eclipse
+description: How to work with the OpenAPI tools in Eclipse
+keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind OpenAPI tools for Eclipse
+duration: 1 minute
+permalink: open-api-tools-for-eclipse
+type: document
+order: 30
+---
+
 # Codewind OpenAPI Tools for Eclipse
 
-The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI Specifications. The tools are integrated and customized to work with Codewind for Eclipse, but they also work with a base Eclipse IDE for Java EE Developers installation.
+The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for Eclipse, but they also work with a base Eclipse IDE for Java EE Developers installation.
 
 ## Installing
 1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. If you use Codewind OpenAPI Tools with Codewind, the earliest supported version of the Eclipse IDE is 4.11.0 (2019-03).
@@ -8,14 +19,25 @@ The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI 
 3. Install the [Codewind OpenAPI Tools from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 
 ## Running commands
-1. Launch the context menu on any existing workspace projects or any `openapi.yaml` workspace OpenAPI Specification files from the **Package Explorer** or **Project Explorer** views.
+1. Launch the context menu on any existing workspace projects or any `openapi.yaml` workspace OpenAPI definition files from the **Package Explorer** or **Project Explorer** views.
 2. If Codewind is installed, the context menu generator actions are available in the **Codewind Explorer** view.
-3. Ensure at least one OpenAPI Specification is in the project.
+3. Ensure at least one OpenAPI definition is in the project.
 4. Select an action to generate the client or server stubs or HTML documentation.
 5. Enter the requested information that is displayed in the wizard.
 6. After generation, edit the `.openapi-generator-ignore` file to ensure that subsequent code generation does not overwrite custom code.
 
+## Generator options
+The following command line equivalent options are available for client and server generation:
+`-i <OpenAPI definition>`
+`-g <generator name>`
+`-o <output directory>`
+
+The following command line equivalent options are available for HTML generation:
+`-i <OpenAPI definition>`
+`-g html2`
+`-o <output directory>`
+
 ## Features
 - Generate API clients in any of the supported [languages/frameworks](https://github.com/OpenAPITools/openapi-generator#overview).
 - Generate server stubs in any of the supported [languages/frameworks](https://github.com/OpenAPITools/openapi-generator#overview).
-- Generate HTML documentation from an OpenAPI Specification file.
+- Generate HTML documentation from an OpenAPI definition file.

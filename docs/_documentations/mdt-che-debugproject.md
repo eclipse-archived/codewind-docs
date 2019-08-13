@@ -4,7 +4,7 @@ title: Debugging Codewind projects
 description: How to debug a Codewind project
 keywords: restart, run, debug, attach, tools, eclipse, debugging MicroProfile, debugging Java EE, debugging Spring, debugging Node.js, import project into Eclipse, restarting a project in debug mode, Chromium based web browser, launching a debug session, modifying Node.js debug launch preferences
 duration: 1 minute
-permalink: mdtchedebugproject
+permalink: mdt-che-debugproject
 type: document
 order: 50
 parent: mdteclipseoverview

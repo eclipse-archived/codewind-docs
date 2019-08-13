@@ -4,7 +4,7 @@ title: Building Codewind projects
 description: How to build a Codewind project
 keywords: build, tools, eclipse, disabled autobuild, start a build, manually build
 duration: 1 minute
-permalink: mdtchebuildproject
+permalink: mdt-che-buildproject
 type: document
 order: 40
 parent: mdteclipseoverview
