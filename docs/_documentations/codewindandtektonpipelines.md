@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: Codewind and Tekton pipelines
-description: How to work with Tekton pipelines
-keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Tekton pipelines
+description: Getting started with Tekton pipelines
+keywords: tools, Tekton pipelines, getting started with the Tekton Dashboard Webhooks Extension, Tekton
 duration: 1 minute
 permalink: codewindandtektonpipelines
 type: document
@@ -12,4 +12,4 @@ parent: mdteclipseoverview
 
 # Codewind and Tekton pipelines
 
-Link to Tekton dashboard
+To get started with the Tekton Dashboard Webhooks Extension, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
