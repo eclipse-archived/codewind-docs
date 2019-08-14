@@ -13,3 +13,5 @@ parent: mdteclipseoverview
 # Codewind and Tekton pipelines
 
 To get started with the Tekton Dashboard Webhooks Extension, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
+
+To access the Tekton dashboard, see the [Tekton dashboard README file](https://github.com/tektoncd/dashboard#install-on-openshift).
