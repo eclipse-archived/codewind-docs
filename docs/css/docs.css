@@ -7,7 +7,8 @@
     min-height: 100vh;
     padding: 0;
     width: 350px;
-    padding-top: 131px;
+    padding-top: 115px;
+    border-right: 2px solid #d8d8d8;
 }
 
 #sidebar-container .list-group a {
@@ -27,7 +28,7 @@
 }
 
 .cw-sidebar-submenu {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* Separators */
@@ -50,8 +51,7 @@
     max-height: 90px;
 }
 .cw-current-page {
-    color: #fff !important;
-    background-color: #0083ca !important;
+    background-color: #BEE5F6 !important;
     border-radius: 0 !important;
     /*border-bottom: 5px #0083ca !important;
     border-style: solid !important;
@@ -65,19 +65,23 @@
 
 /* Closed submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
-    content: " \f0da";
+    content: " \f105";
     font-family: FontAwesome;
     display: inline;
     text-align: right;
+    font-size: 20px;
+    font-weight: 300;
     padding-left: 10px;
 }
 
 /* Opened submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
-    content: " \f0d7";
+    content: " \f107";
     font-family: FontAwesome;
     display: inline;
     text-align: right;
+    font-weight: 300;
+    font-size: 20px;
     padding-left: 10px;
 }
 
@@ -104,6 +108,21 @@
 
 .list-group-item {
     border: none;
+}
+.list-group > .list-group-item {
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cw-extlink:after {
+	content: " \f08E";
+    font-family: FontAwesome;
+    display: inline;
+    font-weight: 300;
+    font-size: 14px;
+    padding-left: 10px;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

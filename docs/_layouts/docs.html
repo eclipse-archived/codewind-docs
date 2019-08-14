@@ -5,19 +5,29 @@
     <div id="sidebar-container" class="bg-light">
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top bg-light cw-sticky-offset">
-            <!-- Separator with title -->
-            <li class="list-group-item cw-sidebar-separator-title cw-text-gray d-flex bg-light align-items-center menu-collapsed">
-                <small class="badge badge-success cw-margin-auto">DOCUMENTS</small>
-            </li>
-            <!-- /END Separator -->
+            
             <!-- Hard coded TOC -->
-
+            <!-- Start single page getting started -->
+            
+			<a href="gettingstarted.html" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				{% if "/gettingstarted" == page.url %}
+					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				{% endif %}
+				class="{{cls}}">
+				<div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Getting started</span>
+                </div>
+            </a>
+            
+            <!-- End single page getting started -->
             <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Getting started</span>
                     <span class="submenu-icon ml-auto"></span>
                 </div>
             </a>
+            
             <div id="install_on_cloud" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
                 <a href="mdteclipsegettingstarted.html" 
 			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -49,8 +59,8 @@
                         <span class="menu-collapsed">Installing in Che for Cloud deployments</span>
                     </div>
                 </a>
-            </div>            
-
+            </div>     
+            
             <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Developing with Codewind</span>
@@ -226,48 +236,31 @@
             <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
                 <a href="https://github.com/eclipse/codewind-openapi-vscode" class="bg-light list-group-item list-group-item-action">
 				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Open API tools for VS Code</span>
+                        <span class="menu-collapsed cw-extlink">Open API tools for VS Code</span>
                     </div>
                 </a>
                 <a href="https://github.com/eclipse/codewind-openapi-eclipse" class="bg-light list-group-item list-group-item-action">
 				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Open API tools for Eclipse</span>
+                        <span class="menu-collapsed cw-extlink">Open API tools for Eclipse</span>
                     </div>
                 </a>
             </div>
             
             <!-- END hard coded TOC -->
 
-            <!-- Separator without title -->
-            <li class="list-group-item cw-sidebar-separator-title bg-light  cw-text-gray d-flex align-items-center menu-collapsed">
-                <small class="badge badge-success cw-margin-auto">HELPFUL
-        LINKS</small>
-            </li>
-            <!-- /END Separator -->
-            <a href="https://projects.eclipse.org/proposals/eclipse-codewind" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Eclipse Codewind project page</span>
-                </div>
-            </a>
-            <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Eclipse Codewind YouTube channel</span>
-                </div>
-            </a>
             
-            
-            <!-- Logo -->
-            <li class="list-group-item cw-logo-separator  bg-light d-flex justify-content-center">
-                <img src="images/header-logo.svg">
-            </li>
         </ul>
         <!-- List Group END-->
     </div>
     <!-- sidebar-container END -->
     <!-- MAIN -->
-    <div id="content-container" class="py-5 px-5">
-        <div role="main">{{ content }}</div>
+    <div id="content-container">
+    		<div class="py-5 px-5">
+        		<div role="main">{{ content }}</div>
+        </div>
+        {% include footer.html %}
     </div>
+    
 </div>
 <!-- Main Col END -->
-{% include footer.html %} {% include body-end.html %}
+ {% include body-end.html %}
