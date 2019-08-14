@@ -18,10 +18,14 @@ The Codewind installation includes two parts.
 
 After you click **Install**, the necessary images are downloaded from the internet. The download is approximately 1 GB. Your IDE displays a progress meter to indicate that the installation is being performed as well as messages that state which pieces, such as individual containers, are being installed.
 
-The following images are installed:
--
--
--
+The following images are pulled:
+- `eclipse/codewind-initialize-amd64`
+- `eclipse/codewind-performance-amd64`
+- `eclipse/codewind-pfe-amd64`
+Then, an alias, technically a second tag, is created for each image:
+- `codewind-initialize-amd64`
+- `codewind-performance-amd64`
+- `codewind-pfe-amd64`
 
 ## Using Codewind
 When the installation is complete, the extension starts, and you are prompted to open the workspace. For more information about using Codewind, see [Managing Codewind projects](mdteclipsemanagingprojects.html).
