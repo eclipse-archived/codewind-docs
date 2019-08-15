@@ -16,7 +16,7 @@
 				{% endif %}
 				class="{{cls}}">
 				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Getting started</span>
+                    <span class="menu-collapsed">Welcome</span>
                 </div>
             </a>
             
@@ -58,6 +58,16 @@
 				    <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="menu-collapsed">Installing in Che for Cloud deployments</span>
                     </div>
+                </a>
+                <a href="importedprojects.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/importedprojects" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Importing projects</span>
+	                    </div>
                 </a>
             </div>     
             
