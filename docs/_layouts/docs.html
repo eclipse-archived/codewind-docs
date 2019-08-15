@@ -16,7 +16,7 @@
 				{% endif %}
 				class="{{cls}}">
 				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Getting started</span>
+                    <span class="menu-collapsed">Welcome</span>
                 </div>
             </a>
             
@@ -60,6 +60,16 @@
                         <span class="menu-collapsed">Installing in Che for Cloud deployments</span>
                     </div>
                 </a>
+                <a href="importedprojects.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/importedprojects" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Importing projects</span>
+	                    </div>
+                </a>
             </div>     
              -->
             <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
@@ -78,6 +88,26 @@
                 
                 <!-- 3d level - eclipse -->
                 <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdteclipseoverview.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipseoverview" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Overview</span>
+	                    </div>
+	                </a>
+	                <a href="mdteclipseusingadifferenttemplate.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdteclipseusingadifferenttemplate" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Using a template repository of your own</span>
+	                    </div>
+	                </a>
 	                <a href="mdteclipsemanagingprojects.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
 					    {% if "/mdteclipsemanagingprojects" == page.url %}
@@ -140,6 +170,26 @@
                 
                 <!-- 3d level - vscode -->
                 <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-vsc-overview.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-overview" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Overview</span>
+	                    </div>
+	                </a>
+	                <a href="mdt-vsc-usingadifferenttemplate.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-usingadifferenttemplate" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    <div class="d-flex w-100 justify-content-start align-items-center">
+	                        <span class="menu-collapsed">Using a template repository of your own</span>
+	                    </div>
+	                </a>
 	                <a href="mdt-vsc-tutorial.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
 					    {% if "/mdt-vsc-tutorial" == page.url %}
