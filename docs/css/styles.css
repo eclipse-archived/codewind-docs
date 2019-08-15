@@ -42,11 +42,11 @@ body {
 
 .cw-header-logo {
     position: relative;
-    left: 80px;
+    left: 70px;
 }
 
 .cw-navbar-padding {
-    padding-right: 80px;
+    padding-right: 70px;
 }
 
 .cw-navbar-nav {
@@ -285,8 +285,18 @@ body {
 
 }
 .cw-logo {
-    max-height: 50px;
+    max-height: 35px;
 }
+
+.cw-logo-separator {
+    
+    height: 60px;
+}
+
+.cw-logo-mm {
+    max-height: 60px;
+}
+
 .cw-logo-32 {
     height: 32px;
     margin-top: 32px;
@@ -386,6 +396,10 @@ body {
 
 
 /* footer */
+#footer-div-mobile {
+	display: none;
+
+	}
 .cw-footer-links{
 	color: #fff;
 	text-decoration: none;
@@ -394,7 +408,7 @@ body {
 	color: #fff;
 	text-decoration: none;
 }
-#cw-footer-border-right {
+.cw-footer-border-right {
     border-right: 2px solid #ffffff;
     height: 80%;
 }
@@ -426,6 +440,8 @@ body {
 .cw_footer_display_icons {
 	display: flex;
 	margin: auto;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .cw-font-12 {
 	font-size: 12px;
@@ -438,6 +454,12 @@ body {
 .cw-footer-vcenter {
 	margin-top: auto;
 	margin-bottom: auto;
+}
+.cw-footer-eclipse-img {
+	position: relative;
+}
+.cw-footer-eclipse-img img {
+	
 }
 /* end footer */
 
@@ -674,6 +696,15 @@ body {
     .cw-download-link {
         display: block;
     }
+    /* footer */
+    .cw-logo {
+    		max-height: 20px;
+	}
+	.cw-logo-mm {
+    		max-height: 45px;
+	}
+    
+    /* end footer */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -686,6 +717,51 @@ body {
     }
 
     /* end hero */
+    
+    /* side bar */
+    
+    
+    
+    /* end side bar */
+    /* footer */
+    .cw-footer-col {
+    		padding: 10px;
+    }
+    
+    .cw-footer-border-right {
+	    display: none;
+	}
+	
+	#footer-div-mobile {
+	background: #0083ca;
+    color: #fff;
+    display: block;
+    }
+    .cw-footer-center {
+    		width: 100%;
+    }
+    .cw-footer-desktop{
+    display: none;
+    }
+    .cw-footer-left {
+    	width: 50%;
+    }
+    .cw-footer-right {
+    width: 50%;
+    }
+    .cw-footer-eclipse-img img {
+    		padding-bottom: 0px;
+    }
+    
+    .cw-logo {
+    		max-height: 30px;
+	}
+	.cw-logo-mm {
+    		max-height: 55px;
+	}
+	
+	
+    /* end footer */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
