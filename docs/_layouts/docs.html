@@ -21,6 +21,7 @@
             </a>
             
             <!-- End single page getting started -->
+            <!-- 
             <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Getting started</span>
@@ -70,7 +71,7 @@
 	                    </div>
                 </a>
             </div>     
-            
+             -->
             <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Developing with Codewind</span>
@@ -306,11 +307,13 @@
     <!-- MAIN -->
     <div id="content-container">
     		<div class="py-5 px-5">
+    		    <div class="cw-docs-spacer"></div>
         		<div role="main">{{ content }}</div>
         </div>
-        {% include footer.html %}
+        
     </div>
     
 </div>
+{% include footer.html %}
 <!-- Main Col END -->
  {% include body-end.html %}
