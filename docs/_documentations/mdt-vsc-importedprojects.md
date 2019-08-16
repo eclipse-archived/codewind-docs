@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Adding projects
+title: Importing projects
 description: Documents
 keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, import, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
 duration: 1 minute
-permalink: importedprojects
+permalink: mdt-vsc-importedprojects
 type: document
 parent: importingaproject
 order: 0
 ---
 
-# Adding projects
+# Importing projects
 
 Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. The add process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Codewind.
 
