@@ -20,9 +20,6 @@ The following images are pulled. These images together form the Codewind back en
 - `eclipse/codewind-initialize-amd64`
 - `eclipse/codewind-performance-amd64`
 - `eclipse/codewind-pfe-amd64`
-- `codewind-initialize-amd64`
-- `codewind-performance-amd64`
-- `codewind-pfe-amd64`
 
 ## Using Codewind
 When the installation is complete, the extension is ready to use, and you are prompted to open the Codewind workspace. For more information about using Codewind, see [Tutorial: Codewind for VS Code](mdt-vsc-tutorial.html).
