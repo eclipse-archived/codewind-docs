@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Importing projects
+title: Adding existing projects
 description: Documents
-keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, import, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
+keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, add existing project, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
 duration: 1 minute
 permalink: mdt-vsc-importedprojects
 type: document
@@ -10,21 +10,21 @@ parent: importingaproject
 order: 0
 ---
 
-# Importing projects
+# Adding existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. The add process creates required files if they do not exist. This guide covers the basics of configuring a project to run in Codewind.
+Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. <!--The add process creates required files if they do not exist.--> This guide covers the basics of configuring a project to run in Codewind.
 
 ## What kind of projects can I add?
 
 Codewind is designed to develop cloud native microservices. Therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
 
-* [Eclipse MicroProfile projects](#eclipse-microprofile-projects)
+* [MicroProfile / Java EE projects](#eclipse-microprofile-projects)
 * [Java Spring projects](#java-spring-projects)
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
 
-## Eclipse MicroProfile projects
+## MicroProfile / Java EE projects
 
 MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Codewind with a few changes to your `pom.xml` file.
 
@@ -189,4 +189,4 @@ For example, you should be able to build the project by using the command
 
 ## Generic Docker projects
 
-If you have a Dockerized application that doesn't fit an existing template, you can still import the project into Codewind by selecting the **Docker** import option. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
+If you have a Dockerized application that doesn't fit an existing template, you can still add the project to Codewind by selecting the **Other (Basic Container)** option as the project type. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
