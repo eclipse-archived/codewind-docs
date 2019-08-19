@@ -56,7 +56,7 @@ This command is equivalent to clicking the **Build** button in the Codewind **Ov
 
 ## Configuring project settings
 
-Project settings tell Codewind more about the specifics of your project and can affect the status and/or behaviour of your application. Project settings can be configured from the Project Overview page that is accessible from a project's context menu.
+Project settings tell Codewind more about the specifics of your project and can affect the status and/or behaviour of your application. Project settings can be configured from the Project Overview page that is accessible from a project's context menu, or you can find the project settings in the `.cw-settings` file of the project which you can edit from the IDE. Changes to these fields are automatically picked up by the workspace.
 
 The list of supported project settings are:
 * [Internal debug port](#internal-debug-port)
