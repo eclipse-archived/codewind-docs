@@ -18,13 +18,13 @@ Modifications are usually required to successfully add and deploy projects that 
 
 Codewind is designed to develop cloud native microservices. Therefore, each project must be self-sufficient and not dependent on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
 
-* [MicroProfile / Java EE projects](#eclipse-microprofile-projects)
+* [MicroProfile/Java EE projects](#eclipse-microprofile-projects)
 * [Java Spring projects](#java-spring-projects)
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
 
-## MicroProfile / Java EE projects
+## MicroProfile/Java EE projects
 
 MicroProfile projects are Java applications that are deployed to WebSphere Liberty. They are built by using Maven and the `liberty-maven-plugin` and are based on the [WebSphere Liberty Docker image](https://hub.docker.com/_/websphere-liberty/). MicroProfile projects support rapid iterative development in Codewind with a few changes to your `pom.xml` file.
 

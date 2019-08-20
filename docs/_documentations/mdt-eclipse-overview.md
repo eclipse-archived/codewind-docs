@@ -20,4 +20,4 @@ The Eclipse tools are [open source](https://github.com/eclipse/codewind-eclipse)
 
 To get started, see [Getting started with Codewind](mdteclipsegettingstarted.html).
 
-To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
+To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html).
