@@ -24,7 +24,7 @@ The following images are pulled. These images together form the Codewind back en
 ## Using Codewind
 When the installation is complete, the extension is ready to use, and you are prompted to open the Codewind workspace.
 
-Codewind creates the `~/codewind-workspace` folder to contain your projects. You can open the `codewind-workspace` or a project within the workspace as your Eclipse workspace. For more information, see [Getting started: Codewind for Eclipse](mdteclipsegettingstarted.html).
+Codewind creates the `~/codewind-workspace` folder to contain your projects. On Windows, you can find the workspace at the `C:\codewind-workspace` folder. You can open the `codewind-workspace` or a project within the workspace as your Eclipse workspace. For more information, see [Getting started: Codewind for Eclipse](mdteclipsegettingstarted.html).
 
 ## Removing containers and images
 To remove Codewind, see [Uninstalling Codewind from Eclipse](mdteclipseuninstall.html).
