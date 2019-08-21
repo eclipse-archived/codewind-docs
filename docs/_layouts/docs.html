@@ -2,7 +2,7 @@
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
     <!-- Sidebar -->
-    <div id="sidebar-container" class="bg-light">
+    <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top bg-light cw-sticky-offset">
             
@@ -15,18 +15,14 @@
 					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				{% endif %}
 				class="{{cls}}">
-				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Welcome</span>
-                </div>
+				Welcome
             </a>
             
             <!-- End single page getting started -->
             <!-- 
             <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Getting started</span>
-                    <span class="submenu-icon ml-auto"></span>
-                </div>
+                Getting started
+                <span class="submenu-icon"></span>
             </a>
             
             <div id="install_on_cloud" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
@@ -36,9 +32,7 @@
 					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				    {% endif %}
 				    class="{{cls}}">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Installing in Eclipse</span>
-                    </div>
+				    Installing in Eclipse
                 </a>
                 <a href="mdt-vsc-getting-started.html" 
 			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -46,9 +40,7 @@
 					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				    {% endif %}
 				    class="{{cls}}">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Installing in VS Code</span>
-                    </div>
+				    Installing in VS Code
                 </a>
                 <a href="installoncloud.html" 
 			        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -56,9 +48,7 @@
 					    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				    {% endif %}
 				    class="{{cls}}">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed">Installing in Che for Cloud deployments</span>
-                    </div>
+				    Installing in Che for Cloud deployments
                 </a>
                 <a href="importedprojects.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -66,24 +56,20 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Importing projects</span>
-	                    </div>
+					    Importing projects
                 </a>
             </div>     
              -->
             <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Developing with Codewind</span>
-                    <span class="submenu-icon ml-auto"></span>
+                    <span class="submenu-icon"></span>
                 </div>
             </a>
             <div id="dev_with_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
                 <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Codewind for Eclipse</span>
-                    <span class="submenu-icon ml-auto"></span>
-                </div>
+                    Codewind for Eclipse
+                    <span class="submenu-icon"></span>
                 </a>
                 
                 <!-- 3d level - eclipse -->
@@ -94,9 +80,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Overview</span>
-	                    </div>
+					    Overview
 	                </a>
 	                <a href="mdteclipseusingadifferenttemplate.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -104,9 +88,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Using a template repository of your own</span>
-	                    </div>
+					    Using a template repository of your own
 	                </a>
 	                <a href="mdteclipseimportedprojects.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -114,9 +96,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Adding existing projects</span>
-	                    </div>
+					    Adding existing projects
 	                </a>
 	                <a href="mdteclipsemanagingprojects.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -124,9 +104,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Managing Codewind projects</span>
-	                    </div>
+					    Managing Codewind projects
 	                </a>
 	                <a href="mdteclipsebuildproject.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -134,9 +112,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Building Codewind projects</span>
-	                    </div>
+					    Building Codewind projects
 	                </a>
 	                <a href="mdteclipsedebugproject.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -144,9 +120,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Debugging Codewind projects</span>
-	                    </div>
+					    Debugging Codewind projects
 	                </a>
 	                <a href="mdteclipsetroubleshooting.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -154,9 +128,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Troubleshooting Codewind for Eclipse</span>
-	                    </div>
+					    Troubleshooting Codewind for Eclipse
 	                </a>
 	                <a href="mdteclipseuninstall.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -164,18 +136,14 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Uninstalling Codewind for Eclipse</span>
-	                    </div>
+					    Uninstalling Codewind for Eclipse
 	                </a>
                 </div>
                 <!-- end 3d level eclipse -->
 				<!-- vs code -->
 				<a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Codewind for VS Code</span>
-                    <span class="submenu-icon ml-auto"></span>
-                </div>
+                    Codewind for VS Code
+                    <span class="submenu-icon"></span>
                 </a>
                 
                 <!-- 3d level - vscode -->
@@ -186,9 +154,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Overview</span>
-	                    </div>
+					    Overview
 	                </a>
 	                <a href="mdt-vsc-usingadifferenttemplate.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -196,9 +162,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Using a template repository of your own</span>
-	                    </div>
+					    Using a template repository of your own
 	                </a>
 	                <a href="mdt-vsc-importedprojects.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -206,9 +170,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Adding existing projects</span>
-	                    </div>
+					    Adding existing projects
 	                </a>
 	                <a href="mdt-vsc-tutorial.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -216,9 +178,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Tutorial</span>
-	                    </div>
+					    Tutorial
 	                </a>
 	                <a href="mdt-vsc-commands-overview.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -226,9 +186,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Commands overview</span>
-	                    </div>
+					    Commands overview
 	                </a>
 	                <a href="mdt-vsc-commands-project.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -236,9 +194,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Project commands</span>
-	                    </div>
+					    Project commands
 	                </a>
 	                <a href="mdt-vsc-commands-restart-and-debug.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -246,9 +202,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Restart and debug commands</span>
-	                    </div>
+					    Restart and debug commands
 	                </a>
 	                <a href="mdt-vsc-troubleshooting.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -256,9 +210,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Troubleshooting</span>
-	                    </div>
+					    Troubleshooting
 	                </a>
 	                <a href="mdt-vsc-uninstall.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
@@ -266,9 +218,7 @@
 						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 					    {% endif %}
 					    class="{{cls}}">
-					    <div class="d-flex w-100 justify-content-start align-items-center">
-	                        <span class="menu-collapsed">Uninstalling</span>
-	                    </div>
+					    Uninstalling
 	                </a>
 	            </div>
 	            
@@ -282,9 +232,7 @@
 					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				{% endif %}
 				class="{{cls}}">
-				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Performance monitoring</span>
-                </div>
+				Performance monitoring
             </a>
 
             <a href="codewindandtektonpipelines.html" 
@@ -293,27 +241,23 @@
 					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
 				{% endif %}
 				class="{{cls}}">
-				<div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="menu-collapsed">Codewind and Tekton pipelines</span>
-                </div>
+				Codewind and Tekton pipelines
             </a>
 
 			<a href="#openapi_tools" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">Open API tools</span>
-                    <span class="submenu-icon ml-auto"></span>
+                    <span class="submenu-icon"></span>
                 </div>
             </a>
             <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
                 <a href="https://github.com/eclipse/codewind-openapi-vscode" class="bg-light list-group-item list-group-item-action">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed cw-extlink">Open API tools for VS Code</span>
-                    </div>
+				    Open API tools for VS Code
+				    <span class="cw-extlink"></span>
                 </a>
                 <a href="https://github.com/eclipse/codewind-openapi-eclipse" class="bg-light list-group-item list-group-item-action">
-				    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="menu-collapsed cw-extlink">Open API tools for Eclipse</span>
-                    </div>
+				    Open API tools for Eclipse
+				    <span class="cw-extlink"></span>
                 </a>
             </div>
             
