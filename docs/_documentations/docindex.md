@@ -25,36 +25,28 @@ Quickly build and deploy microservices.
 
 Developing with Codewind
 - [Codewind for Eclipse](mdteclipseoverview.html)
+    - [Using a template repository of your own](mdteclipseusingadifferenttemplate.html)
+    - [Adding existing projects](mdteclipseimportedprojects.html)
     - [Managing Codewind projects](mdteclipsemanagingprojects.html)
     - [Building Codewind projects](mdteclipsebuildproject.html)
     - [Debugging Codewind projects](mdteclipsedebugproject.html)
     - [Troubleshooting Codewind for Eclipse](mdteclipsetroubleshooting.html)
     - [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
-    - [Using a template repository of your own](usingadifferenttemplate.html)
-
+ 
 - [Codewind for VS Code](mdt-vsc-overview.html)
+    - [Using a template repository of your own](mdt-vsc-usingadifferenttemplate.html)
+    - [Adding existing projects](mdt-vsc-importedprojects.html)
     - [Tutorial: Codewind for VS Code](mdt-vsc-tutorial.html)
     - [Commands overview: Codewind for VS Code](mdt-vsc-commands-overview.html)
     - [Project commands: Codewind for VS Code](mdt-vsc-commands-project.html)
     - [Commands: Restart and Debug](mdt-vsc-commands-restart-and-debug.html)
     - [Troubleshooting: Codewind for VS Code](mdt-vsc-troubleshooting.html)
     - [Uninstalling Codewind for VS Code](mdt-vsc-uninstall.html)
-    - [Using a template repository of your own](usingadifferenttemplate.html)
-
-- [Codewind for Eclipse Che](mdtcheoverview.html)
-    - [Managing Codewind projects](mdtchemanagingprojects.html)
-    - [Building Codewind projects](mdtchebuildproject.html)
-    - [Debugging Codewind projects](mdtchedebugproject.html)
-    - [Troubleshooting Codewind for Eclipse Che](mdtchetroubleshooting.html)
-    - [Uninstalling Codewind for Eclipse Che](mdtcheuninstall.html)
-    - [Using a template repository of your own](usingadifferenttemplate.html)
-
-- [Hybrid development](hybriddevelopment.html)
 
 [Performance monitoring](guide_performance.html)
 
 [Codewind and Tekton Pipelines](codewindandtektonpipelines.html)
 
-[Open API Tools](codewind-openapi-tools.html)
-   - [Codewind OpenAPI Tools for Eclipse](open-api-tools-for-eclipse)
-   - [Codewind OpenAPI Tools for VS Code](open-api-tools-for-vscode)
+Open API Tools
+   - [Codewind OpenAPI Tools for Eclipse](https://github.com/eclipse/codewind-openapi-eclipse)
+   - [Codewind OpenAPI Tools for VS Code](https://github.com/eclipse/codewind-openapi-vscode)
