@@ -22,6 +22,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Checking the application and build statuses](#checking-the-application-and-build-statuses)
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
+* [Appsody with Codewind](#appsody-with-codewind)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -231,3 +232,82 @@ Issue link:
 If you turn off `auto build` for a Node.js project when you run Codewind locally, it has no effect. Changes you make to your code automatically start or restart a build even though `auto build` is disabled.
 
 ***
+# Appsody with Codewind
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+## Attaching the debugger must run a second time for Microprofile project extensions
+If you use a VS Code extension on a Mac, the first attempt to attach the debugger fails when you restart an extension project in debug mode. When you set up a project extension environment and create a Microprofile project and then restart in debug mode, you receive an error message that states, `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`. Currently, project extensions do not delay.
+
+**Workaround** Attach the debugger manually. Run the **Attach Debugger** action.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## Node.js and and Swift templates remain in the starting state
+Node.js and Swift templates remain in the starting state because they do not connect with the server.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## A project build error appears before you create an initial project
+If you use Eclipse and either Java Microprofile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error before you create the initial project.
+
+**Workaround** Complete the following instructions to work around the error:
+1. From the **New Codewind Project Wizard**, select a Java-based Appsody template.
+2. Complete the prompts that the wizard presents.
+3. After the project appears in the **Codewind Explorer** view, right-click the project and select **Show Log Files**>**Show All**.
+4. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
+5. Wait until the cache completes. You can wait until the `Liberty defaultServer` starts or when the **Project status** is **Running**.
+6. Right-click the **Project** from the **Project Explorer** and select **Maven**>**Update Project...**.
+7. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
+
+After you create the initial project and set the `.m2` cache, new projects begin to be configured properly.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## An Unknown error appears on on line 1 of the pom.xml file
+If you use an Eclipse IDE for Enterprise Developer EPP prior to 2019.06, you might see an `Unknown` validation erro in the `pom.xml` file.
+
+**Workaround** Switch to version 2019.06 or later or see (Cannot import any project into Eclipse with maven-jar-plugin 3.1.2)[https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340].
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## Classpath warnings appear or the application classes are not on the classpath
+If you work with Appsody projects in Codewind for VS Code, you might encounter `Classpath is incomplete` warnings or notifications that applications classes are not on the classpath.
+
+**Workaround** Complete the following instructions to work around the error:
+1. After you create an Appsody Java Microprofile project, open the `codewind-workspace`.
+2. Right-click the `codewind-workspace` folder and select **Add Folder to Workspace...**.
+3. Choose the project folder and click **Add**.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+## Starting in debug mode results in failure to attach the debugger
+If you work with Appsody projects in Codewind for VS Code, you might receive message that state, `Failed to  attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
+
+**Workaround** Run the `Attach Debugger` action manually:
+1. Right-click the project and select **Restart in Debug Mode**. You might receive one or both error messages that state, `Failed to  attach to remote debuggee VM` or `Failed to attach debugger`.
+2. Right-click on the project and select `Attach Debugger`.
