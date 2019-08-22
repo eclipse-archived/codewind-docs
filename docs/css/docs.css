@@ -27,6 +27,10 @@
     padding-left: 50px;
 }
 
+.submenu-icon {
+	position: absolute;
+    right: 20px;
+}
 .cw-sidebar-submenu {
     font-size: 0.95rem;
 }
@@ -45,7 +49,7 @@
 .cw-current-page {
     background-color: #BEE5F6 !important;
     border-radius: 0 !important;
-    /*border-bottom: 5px #0083ca !important;
+    /*border-bottom: 5px #0073ba !important;
     border-style: solid !important;
     border-right: 0px !important;
     border-left: 0px !important;
@@ -136,7 +140,7 @@
     .cw-gettingstarted-card {
 	    width: 200px;
 	    height: 270px;
-	    background-color: #529EC8;
+	    background-color: #3d7594;
 	}
 }
 
@@ -149,8 +153,8 @@
     }
     .cw-gettingstarted-card {
 	    width: 150px;
-	    height: 200px;
-	    background-color: #529EC8;
+	    height: 250px;
+	    background-color: #3d7594;
 	}
 	.cw-gettingstarted-card-link {
 		font-size: 14px;
@@ -184,7 +188,7 @@
     .cw-gettingstarted-card {
 	    width: 100%;
 	    height: 200px;
-	    background-color: #529EC8;
+	    background-color: #3d7594;
 	}
 	.cw-gettingstarted-card-link {
 		font-size: 20px;

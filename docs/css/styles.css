@@ -6,6 +6,12 @@ body {
 
 }
 
+a {
+    color: #0073ba;
+}
+code {
+	color: #b93370;
+}
 .main {
     margin: auto;
 }
@@ -33,7 +39,7 @@ body {
 }
 
 .cw-nav-link {
-    color: #0083CA !important;
+    color: #0073ba !important;
 }
 
 .cw-nav-link:hover {
@@ -70,12 +76,12 @@ body {
     color: #fff;
 }
 .cw-docs-button {
-	color: #0083CA;
+	color: #0073ba;
     text-align: center;
     width: 170px;
     height: 44px;
     border-radius: 0px;
-    border: 2px solid #0083CA;
+    border: 2px solid #0073ba;
     display: table;
 }
 
@@ -118,7 +124,7 @@ body {
 }
 
 .cw-download-button {
-    background: #0083CA;
+    background: #0073ba;
     color: #fff;
     text-align: center;
     width: 135px;
@@ -151,7 +157,7 @@ body {
     margin: auto;
     color: #fff;
     position: relative;
-    background-image: linear-gradient(180deg, #0083CA 0%, #003462 100%, #D8D8D8 100%);
+    background-image: linear-gradient(180deg, #0073ba 0%, #003462 100%, #D8D8D8 100%);
 }
 
 #hero-main {
@@ -227,7 +233,7 @@ body {
 }
 
 #get-started-button {
-    background: #0083CA;
+    background: #0073ba;
     border: 2px solid #FFFFFF;
     font-weight: 400;
     color: #FFFFFF;
@@ -276,7 +282,7 @@ body {
 }
 
 .cw-getting-started-col {
-    border-right: 3px solid #0083CA;
+    border-right: 3px solid #0073ba;
 }
 
 .cw-getting-started-img-holder {
@@ -309,7 +315,7 @@ body {
 .cw-getting-started-col-header {
     font-size: 21px;
     font-weight: 400;
-    color: #0083CA;
+    color: #0073ba;
 }
 
 .cw-getting-started-col-text-first {
@@ -355,13 +361,13 @@ body {
     font-weight: 400;
     padding-left: 40px;
     padding-right: 40px;
-    color: #0083CA;
+    color: #0073ba;
     text-align: center;
 }
 
 .cw-value-props-div-text {
 
-    color: #0083CA;
+    color: #0073ba;
     text-align: center;
     padding: 25px 40px;
 }
@@ -381,7 +387,7 @@ body {
 }
 
 #key-features-div {
-    background: #0083CA;
+    background: #0073ba;
     padding: 20px 82px 40px 82px;
 }
 
@@ -414,7 +420,7 @@ body {
 }
 
 #footer-div {
-    background: #0083ca;
+    background: #0073ba;
     color: #fff;
     height: 225px;
     align-items: center;
@@ -479,7 +485,7 @@ body {
 .cw-gettingstarted-card {
 	width: 250px;
 	height: 370px;
-	background-color: #529EC8;
+	background-color: #3d7594;
 }
 .cw-gettingstarted-card img {
 	position: absolute;
@@ -509,6 +515,7 @@ body {
 .cw-getting-started-text {
 	position: absolute;
     top: 0;
+    left: 15px;
     font-size: 20px;
     background-color: white;
     }
@@ -733,7 +740,7 @@ body {
 	}
 	
 	#footer-div-mobile {
-	background: #0083ca;
+	background: #0073ba;
     color: #fff;
     display: block;
     }
