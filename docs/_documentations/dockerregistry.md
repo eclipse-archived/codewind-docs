@@ -59,10 +59,5 @@ Before you deploy your project with Codewind, first specify a deployment registr
 - The `docker.io`, `quay.io`, and `artifactory` container registry hosts have been tested with IBM Cloud Private.
 
 ### Instructions specific to OKD and OpenShift
-- The internal container registry on OKD and OpenShift is supported.
-- To use the internal container registry with Codewind, specify the internal hostname for the registry instead of the publicly exposed container registry.
-    - If you enter credentials with Che, use `docker-registry.default.svc:5000` as the host and your cluser user name and account key as the credentials.
-    - If you enter the tag to push with Codewind, use `docker-registry.default.svc:5000/<project>`, where `<project>` is a project on your cluster, such as `eclipse-che`.
-- For more information, see [Remotely Push and Pull Container Images to OpenShift](https://blog.openshift.com/remotely-push-pull-container-images-openshift/). 
-
+If you would like to use OpenShift's internal Docker registry with Codewind, please consult [Using the OpenShift Internal Registry with Codewind](https://www.eclipse.org/codewind/openshiftregistry.html)
    
