@@ -59,5 +59,4 @@ Before you deploy your project with Codewind, first specify a deployment registr
 - The `docker.io`, `quay.io`, and `artifactory` container registry hosts have been tested with IBM Cloud Private.
 
 ### Instructions specific to OKD and OpenShift
-If you would like to use OpenShift's internal Docker registry with Codewind, please consult [Using the OpenShift Internal Registry with Codewind](https://www.eclipse.org/codewind/openshiftregistry.html)
-   
+To use the OpenShift internal Docker registry with Codewind, see [Using the OpenShift Internal Registry with Codewind](https://www.eclipse.org/codewind/openshiftregistry.html).
