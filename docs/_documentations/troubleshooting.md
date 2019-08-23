@@ -241,7 +241,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
 ## Node.js and Swift templates remain in the starting state
-Node.js and Swift templates remain in the starting state because they do not connect with the server.
+Node.js and Swift templates remain in the starting state. These projects don't start a server for Codewind to ping.
 
 <!--
 Action/Topic: Appsody with Codewind
@@ -249,17 +249,15 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
-## A project build error appears before you create an initial project
-If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error before you create the initial project.
+## A project build error appears after you create an initial project
+If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error after you create the initial project.
 
 **Workaround** Complete the following instructions to work around the error:
-1. From the New Codewind Project Wizard, select a Java-based Appsody template.
-2. Complete the prompts that the wizard presents.
-3. After the project appears in the Codewind Explorer view, right-click the project and select **Show Log Files**>**Show All**.
-4. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
-5. Wait until the cache completes. You can wait until the `Liberty defaultServer` starts or when the Project status is `Running`.
-6. Right-click the **Project** from the Project Explorer and select **Maven**>**Update Project...**.
-7. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
+1. Right-click the project and select **Show Log Files**>**Show All**.
+2. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
+3. Wait until the cache completes. You can wait until the Project status is `Running`, or, if you use the MicroProfile template, you can wait until the `Liberty defaultServer` starts.
+4. Right-click the **Project** from the Project Explorer and select **Maven**>**Update Project...**.
+5. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
 
 After you create the initial project and set the `.m2` cache, new projects begin to be configured properly.
 
