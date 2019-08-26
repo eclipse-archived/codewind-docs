@@ -82,6 +82,17 @@
 					    class="{{cls}}">
 					    Overview
 	                </a>
+	                
+	                
+	                <a href="mdt-eclipse-installinfo.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-eclipse-installinfo" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Installing Codewind for Eclipse
+	                </a>
+	                
 	                <a href="mdteclipseusingadifferenttemplate.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
 					    {% if "/mdteclipseusingadifferenttemplate" == page.url %}
@@ -155,6 +166,14 @@
 					    {% endif %}
 					    class="{{cls}}">
 					    Overview
+	                </a>
+	                <a href="mdt-vsc-installinfo.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-vsc-installinfo" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Installing Codewind for VS Code
 	                </a>
 	                <a href="mdt-vsc-usingadifferenttemplate.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
