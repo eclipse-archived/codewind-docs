@@ -132,6 +132,15 @@ For other sample devfiles, see https://github.com/kabanero-io/codewind-templates
 1. If you are using the Terminal, switch to use the workspace namespace. You can check for the namespace with `kubectl get ns`.
 2. Ensure the projects are cloned into the workspace. You might need to refresh the browser to trigger the clone.
 
+### Configuring Codewind for Tekton pipelines
+From your command line, enter the following commands if you want to use existing Tekton installations with Codewind:
+
+```
+oc apply -f setup/install_che/codewind-tektonrole.yaml
+oc apply -f setup/install_che/codewind-tektonbinding.yaml
+```
+
+For more information about Tekton, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
 
 ## After installing Codewind
 

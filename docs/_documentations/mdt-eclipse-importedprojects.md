@@ -71,6 +71,7 @@ Configure your `pom.xml` file as follows:
                   <version>2.1.1</version>
                   <extensions>true</extensions>
                   <configuration>
+                      <serverName>defaultServer</serverName>
                       <looseApplication>true</looseApplication>
                       <appsDirectory>apps</appsDirectory>
                       <installDirectory>/opt/ibm/wlp</installDirectory>
