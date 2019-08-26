@@ -136,8 +136,8 @@ For other sample devfiles, see https://github.com/kabanero-io/codewind-templates
 From your command line, enter the following commands if you want to use existing Tekton installations with Codewind:
 
 ```
-oc apply -f tekton/codewind-che-plugin/setup/install_che/codewind-tektonrole.yaml
-oc apply -f tekton/codewind-che-plugin/setup/install_che/codewind-tektonbinding.yaml
+oc apply -f setup/install_che/codewind-tektonrole.yaml
+oc apply -f setup/install_che/codewind-tektonbinding.yaml
 ```
 
 For more information about Tekton, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
