@@ -300,3 +300,18 @@ If you work with Appsody projects in Codewind for VS Code, you might receive mes
 **Workaround** Run the `Attach Debugger` action manually:
 1. Right-click the project and select **Restart in Debug Mode**. You might receive an error message that states, `Failed to attach to remote debuggee VM` or `Failed to attach debugger`.
 2. Right-click on the project and select `Attach Debugger`.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+## Attempts fail to attach the debugger
+If you work on Appsody projects on macOS, and if you restart an extension project in debug mode, the first attempt to attach the debugger might fail. Currently, a delay does not occur for project extensions.
+
+These steps reproduce the issue:
+1. Set up a project extension environment and create a Microprofile project.
+2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
+
+**Workaround** Run the `Attach Debugger` action manually.
