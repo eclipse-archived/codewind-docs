@@ -270,7 +270,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## An Unknown error appears on line one of the pom.xml file
 If you use an Eclipse IDE for Enterprise Developer EPP prior to version 2019.06, you might see an `Unknown` validation error in the `pom.xml` file.
 
-**Workaround** Switch to version 2019.06 or later, or see (Cannot import any project into Eclipse with maven-jar-plugin 3.1.2)[https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340].
+**Workaround** Switch to version 2019.06 or later, or see [Cannot import any project into Eclipse with maven-jar-plugin 3.1.2](https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340).
 
 <!--
 Action/Topic: Appsody with Codewind
