@@ -12,12 +12,6 @@ parent: mdt-vsc-commands-overview
 
 # Restart and debug: Codewind for VS Code
 
-### **See also:**
-- [Commands overview](mdt-vsc-commands-overview.html)
-- [Project commands](mdt-vsc-commands-project.html)
-
-***
-
 Restart and debug commands are available in the Command Palette and by right-clicking a project in the Codewind view.
 You must restart a project in **Debug** mode before you can debug that project.
 For a walkthrough of the debug functionality, see the [tutorial](mdt-vsc-tutorial.html).
@@ -37,6 +31,7 @@ Next, the launch configuration runs, and the VS Code debugger attaches to your a
 ## See also:
 - [VS Code debug documentation for Node.js](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 - [VS Code debug documentation for Java](https://code.visualstudio.com/blogs/2017/09/28/java-debug)
+- [Project commands](mdt-vsc-commands-project.html)
 - [Debug troubleshooting](mdt-vsc-troubleshooting.html#debug)
 
 ***
