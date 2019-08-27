@@ -33,7 +33,5 @@ To import a project into your Microclimate workspace:
 * The project type could not be determined or isn't the correct type for your project, and you must select a project type.
 * Validation reports that the project is missing required files. You can select the option to generate the missing files or continue with the import. **Note:** The generated files are likely to be needed to configure your project before you can get the project running.
 
-For more information about imported projects and supported project types, see [Imported projects and supported project types](importedprojects).
-
 ## Need help?
 If you encounter problems with importing a project, check the [Troubleshooting page](troubleshooting.html#importing-a-project).
