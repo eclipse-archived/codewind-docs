@@ -140,10 +140,7 @@ Issue link: https://github.com/eclipse/codewind/issues/243
 18.10:
 -->
 ## Adding an existing Open Liberty project fails to build because of missing files
-An Open Liberty project fails to build in the following circumstances: 
-1. Create an Open Liberty project.
-2. Then, remove the project from Codewind but leave it on the disk.
-3. Add the project back into Codewind with the **Add Existing Project** wizard, and the project fails to build because of missing files.
+An Open Liberty project fails to build after a project is added into Codewind with the **Add Existing Project** action, and the project fails to build because of missing files.
 
 **Workaround:** When you bind the existing project again, click **No** followed by **Other** for the project type.
 
