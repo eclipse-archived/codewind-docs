@@ -133,6 +133,20 @@ No containerId for running project <project name>
 
 For more information about valid Codewind projects, see [Imported projects and supported project types](importedprojects.html).
 
+<!--
+Action/Topic: Importing a project.
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/243
+18.10:
+-->
+## Adding an existing Open Liberty project fails with missing files
+An Open Liberty project fails to build in the following circumstances: 
+1. Create an Open Liberty project.
+2. Then, remove the project from Codewind but leave it on the disk.
+3. Now, add the project back into Codewind with the **Add Existing Proeject** wizard, and the project fails to build because of missing files.
+
+**Workaround:** When you bind the existing project again, click **No** followed by **Other** for the project type.
+
 ***
 
 # Understanding Application Metrics
