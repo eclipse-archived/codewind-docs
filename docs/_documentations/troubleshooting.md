@@ -23,6 +23,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [OpenAPI tools](#openapi-tools)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -315,3 +316,28 @@ These steps reproduce the issue:
 2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
 
 **Workaround** Run the `Attach Debugger` action manually.
+
+***
+# OpenAPI tools
+
+<!--
+Action/Topic: OpenAPI tools
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/275
+Version: 2019-06 (4.12.0)
+Build ID: 20190614-1200
+-->
+## OpenAPI generation on Windows fails in Eclipse
+In Eclipse, OpenAPI generation on Windows fails if a path does not exist.
+
+These steps reproduce the issue:
+1. Install the latest version of Codewind.
+2. Add a sample OpenAPI `.yaml` file.
+3. Right-click the project to generate OpenAPI artifacts.
+4. In the dialog window, specify the path to generate artifacts. If a path doesn't already exist, OpenAPI generation fails.
+
+**Workaround:** In Windows, Codewind uses a browse file system dialog that doesn't automatically create a folder. Manually create the folder before launching the wizard to generate OpenAPI artifacts.
+
+1. First, create the folder.
+2. Generate the code into the new folder.
+3. Then, refactor the generated source code and move it into the proper source folders. For example, if you are working with Java or Maven projects, place the code into the `src` folders. The wizard helps generate the code, or stub, into a folder and doesn't know what it's generating into. You need to select how you want to use the generated code.
