@@ -242,6 +242,60 @@
 	            </div>
 	            
 				<!--  end vscode  -->
+				
+				
+				<!-- che -->
+				<a href="#codewind_for_che" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for Eclipse Che
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - che -->
+                <div id="codewind_for_che" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="installoncloud.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/installoncloud" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Overview
+	                </a>
+	                <a href="dockerregistry.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/dockerregistry" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Docker Registry Guidance
+	                </a>
+	                <a href="openshiftregistry.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/openshiftregistry" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Using the OpenShift Registry
+	                </a>
+	                <a href="supportingmultipleusers.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/supportingmultipleusers" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Support for multiple users
+	                </a>
+	                <a href="viewkibanalogs.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/viewkibanalogs" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Installing Kibana and filtering logs in IBM Cloud Private
+	                </a>
+	            </div>
+	            
+				<!--  end che  -->
+				
 				           				
             </div>
 
