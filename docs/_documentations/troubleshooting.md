@@ -333,13 +333,11 @@ In Eclipse, OpenAPI generation fails if a path does not exist, and the wizard do
 These steps reproduce the issue:
 1. Install the latest version of Codewind.
 2. Add a sample OpenAPI `.yaml` file.
-3. From the Proejct or Package Explorer views, right-click the project and select one of the generator actions in  **OpenAPI Generate**. A dialogue window appears.
-4. In the dialog window, if necessary, select the OpenAPI definition file by clicking the **Browse...** button. The **Browse...** dialogue has no option to create a folder.
+3. From the Project or Package Explorer views, right-click the project and select one of the generator actions in **OpenAPI Generate**. A dialog window appears.
+4. In the dialog window, if necessary, select the OpenAPI definition file by clicking the **Browse...** button.
 5. In the **Output folder** field, copy and paste a path or edit the path directly.
 6. Click **Finish**. The OpenAPI generator fails if the folder doesn't already exist.
 
-**Workaround:** Choose either of the following options:
-- Manually create the output folder before you lauch the OpenAPI generator wizard.
-- If you have already launched the wizard, click the **Browse...** button to go to and select an existing folder so that the **Output folder** field is filled with a valid path.
+**Workaround:** Manually create the output folder before you start the OpenAPI generator wizard. After you create the folder, you can start the wizard again.
 
-For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can safely exist at the root of the project, and you don't have to do as much refactoring and merging.
+For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
