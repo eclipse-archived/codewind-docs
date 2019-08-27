@@ -22,6 +22,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Checking the application and build statuses](#checking-the-application-and-build-statuses)
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
+* [Appsody with Codewind](#appsody-with-codewind)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -175,8 +176,8 @@ Issue type: bug
 Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
 18.10: Still an issue
 -->
-## Microprofile project gets updated twice upon file change
-If you modify files in Microprofile projects, sometimes the project gets double updates. You might see the application status changed from **Running** to **Stopped** twice. If you notice this status change, the default polling rate, which is 500 ms, is too short for the application monitor.
+## MicroProfile project gets updated twice upon file change
+If you modify files in MicroProfile projects, sometimes the project gets double updates. You might see the application status changed from **Running** to **Stopped** twice. If you notice this status change, the default polling rate, which is 500 ms, is too short for the application monitor.
 
 **Workaround:** Increase the polling rate in the `server.xml` file to 1000 ms or longer.
 ```
@@ -231,3 +232,86 @@ Issue link:
 If you turn off `auto build` for a Node.js project when you run Codewind locally, it has no effect. Changes you make to your code automatically start or restart a build even though `auto build` is disabled.
 
 ***
+# Appsody with Codewind
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## Node.js and Swift templates remain in the starting state
+The templates `Appsody Node.js template` and `Appsody Swift template` go from the starting state to the stopped state by default. The application stops, but the container still runs. These templates do not have a server and are intended to help you implement your own server.
+
+**Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## A project build error appears after you create an initial project
+If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error after you create the initial project.
+
+**Workaround** Complete the following instructions to work around the error:
+1. Right-click the project and select **Show Log Files**>**Show All**.
+2. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
+3. Wait until the cache completes. You can wait until the Project status is `Running`, or, if you use the MicroProfile template, you can wait until the `Liberty defaultServer` starts.
+4. Right-click the **Project** from the Project Explorer and select **Maven**>**Update Project...**.
+5. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
+
+After you create the initial project and set the `.m2` cache, new projects begin to be configured properly.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## An Unknown error appears on line one of the pom.xml file
+If you use an Eclipse IDE for Enterprise Developer EPP prior to version 2019.06, you might see an `Unknown` validation error in the `pom.xml` file.
+
+**Workaround** Switch to version 2019.06 or later, or see [Cannot import any project into Eclipse with maven-jar-plugin 3.1.2](https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340).
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+## Classpath warnings appear or the application classes are not on the classpath
+If you work with Appsody projects in Codewind for VS Code, you might encounter `Classpath is incomplete` warnings or notifications that application classes are not on the classpath.
+
+**Workaround** Add the `codewind-workspace` folder to the workspace:
+1. After you create an Appsody Java MicroProfile project, open the `codewind-workspace` folder.
+2. Right-click the `codewind-workspace` folder and select **Add Folder to Workspace...**.
+3. Choose the project folder and click **Add**.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+## Starting in debug mode results in failure to attach the debugger
+If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, `Failed to attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
+
+**Workaround** Run the `Attach Debugger` action manually:
+1. Right-click the project and select **Restart in Debug Mode**. You might receive an error message that states, `Failed to attach to remote debuggee VM` or `Failed to attach debugger`.
+2. Right-click on the project and select `Attach Debugger`.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+## Attempts fail to attach the debugger
+If you work on Appsody projects on macOS, and if you restart an extension project in debug mode, the first attempt to attach the debugger might fail. Currently, a delay does not occur for project extensions.
+
+These steps reproduce the issue:
+1. Set up a project extension environment and create a Microprofile project.
+2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
+
+**Workaround** Run the `Attach Debugger` action manually.
