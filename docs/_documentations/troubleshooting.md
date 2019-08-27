@@ -132,6 +132,8 @@ build-log requested, no build log found for project <project name>
 No containerId for running project <project name>
 ```
 
+For more information about valid Codewind projects, see [Imported projects and supported project types](importedprojects.html).
+
 ***
 
 # Understanding Application Metrics
@@ -239,7 +241,7 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
-## Node.js and Swift templates go from the starting state and then to the stopped state by default
+## Node.js and Swift templates remain in the starting state
 The templates `Appsody Node.js template` and `Appsody Swift template` go from the starting state to the stopped state by default. The application stops, but the container still runs. These templates do not have a server and are intended to help you implement your own server.
 
 **Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running.
@@ -336,6 +338,8 @@ These steps reproduce the issue:
 5. In the **Output folder** field, copy and paste a path or edit the path directly.
 6. Click **Finish**. The OpenAPI generator fails if the folder doesn't already exist.
 
-**Workaround:** Manually create the output folder before you start the OpenAPI generator wizard. After you create the folder, you can start the wizard again.
+**Workaround:**
+- Manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can manually edit the **Output folder** text field. Ensure that the path points to a valid folder in the project.
+- Or you can use the **Browse...** button to select the folder that you want to place into the **Output folder** field.
 
 For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
