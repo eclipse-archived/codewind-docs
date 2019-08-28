@@ -243,6 +243,8 @@ If you turn off `auto build` for a Node.js project when you run Codewind locally
 ***
 # Appsody with Codewind
 
+For general information about the Appsody extension on Codewind, see the [README](https://github.com/eclipse/codewind-appsody-extension) file in the `codewind-appsody-extension` repository.
+
 <!--
 Action/Topic: Appsody with Codewind
 Issue type: bug/info
