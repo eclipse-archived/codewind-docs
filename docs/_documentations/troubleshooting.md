@@ -318,10 +318,10 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/92
 18.10:
 -->
-## Appsody does not mount the Maven cache to the Appsody application container
-If you work with Windows Enterprise, such as Azure ID, and use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`, Appsody does not mount the Maven cache to the Appsody application container.
+## Appsody mount errors on Windows Enterprise
+If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`. Appsody does not mount the Maven cache to the Appsody application container.
 
-If you don't set the `MAVEN_OPTS` environment variable, you might receive an error message in the `appsody.log` file when you try to create an Appsody project:
+You might receive an error message in the `appsody.log` file when you try to create an Appsody project:
 ```
 [Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
 ```
@@ -329,8 +329,9 @@ If you don't set the `MAVEN_OPTS` environment variable, you might receive an err
 **Workaround:** Configure the Maven `.m2` cache to be outside of your home directory.
 1. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
   - Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
-2. Configure the IDE to use the custom `.m2` cache location.
-3. (Optional:) If you want Codewind and Eclipse to use the same repository, in Eclipse, go to **Preferences**>**Maven**>**User Settings** and update the **localRepository** field in the `settings.xml` file. In VS Code, locate the Maven `settings.xml` file and edit it manually.
+2. Codewind and Eclipse can use the same repository.
+  - In Eclipse, go to **Preferences**>**Maven**>**User Settings** and update the **localRepository** field in the `settings.xml` file.
+  - If you use VS Code, locate the Maven `settings.xml` file on your computer and update the **localRepository** field manually.
 
 <!--
 Action/Topic: Appsody with Codewind
