@@ -17,7 +17,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
 
 # Table of Contents
 1. [Prerequisites](#prerequisites)
-2. [Installing Che with the Operator](#installing-che-with-the-operator)
+2. [Installing Che with the operator](#installing-che-with-the-operator)
 2. [Setting up OKD and OpenShift](#setting-up-okd-and-openshift)
 3. [Setting up other Kubernetes](#setting-up-other-kubernetes)
 4. [After installing Che](#after-installing-che)
@@ -34,7 +34,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
   4. Next, run `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
 
-## Installing Che with the Operator
+## Installing Che with the operator
 
 For instructions on installing Che with the Che operator, please consult https://operatorhub.io/operator/eclipse-che
 
