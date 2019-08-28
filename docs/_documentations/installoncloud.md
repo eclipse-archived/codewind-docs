@@ -32,25 +32,25 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
-  4. Next, run `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
+  4. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
 
 ## Installing Che with the operator
 
-For instructions on installing Che with the Che operator, please consult https://operatorhub.io/operator/eclipse-che
+For instructions on installing Che with the Che operator, please see the [Eclipse Che operator on Operator Hub](https://operatorhub.io/operator/eclipse-che).
 
-**Note:** You must do the following prior to creating your `CheCluster` custom resource
+**Note:** Complete the following steps before you create your `CheCluster` custom resource.
 
 1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`
 
-2. Ensure the following fields in your `CheCluster` yaml file are set:
-- `spec.server.cheWorkspaceClusterRole` to `eclipse-codewind` (the Codewind ClusterRole applied in the previous step)
-- `spec.storage.preCreateSubPaths` to `true`
+2. Ensure the following fields in your `CheCluster` `.yaml` file are set:
+- The spec.server.cheWorkspaceClusterRole field is set to eclipse-codewind, which was created when you previously applied the Codewind ClusterRole.
+- The `spec.storage.preCreateSubPaths` field is set to `true`.
 
 ## Setting up OKD and OpenShift
 
 ### Installing Che with deployment scripts
 
-If the Che operator was not used to install Eclipse Che, follow these steps instead, otherwise skip this step:
+If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip this step:
 
 1. Git clone the [Eclipse Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/openshift` directory.
@@ -77,7 +77,7 @@ If you're running on IBM Cloud Private, you must add the images that Che uses to
 
 ### Step 1: Setting up the Che Helm chart
 
-If the Che operator was not used to install Eclipse Che, follow these steps instead, otherwise skip this step:
+If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip this step:
 
 1. Clone the [Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/kubernetes/helm/che` directory. Then, edit the `values.yaml` file.
