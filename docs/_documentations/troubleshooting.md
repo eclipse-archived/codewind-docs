@@ -342,12 +342,16 @@ Issue link: https://github.com/eclipse/codewind/issues/309
 -->
 ## Codewind cannot access Tekton Dashboard URL
 
-If you install Codewind before you install Tekton, Codewind cannot access Tekton Dashboard URL. If you click, 'Open Tekton Dashboard URL', you receive this message: '[Error] getTektonDashboardList: response.statusCode=500'.
+If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message: 
+
+```
+[Error] getTektonDashboardList: response.statusCode=500
+```
 
 These steps reproduce the issue:
 1. Install Codewind on Openshift.
 2. Install Tekton Pipelines.
-3. Click on 'Open Tekton Dashboard URL'.
+3. Click **Open Tekton Dashboard URL**.
 
 **Workaround:** Stop workspace and restart workspace from Eclipse Che administration console. 
 
