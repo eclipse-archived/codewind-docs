@@ -18,10 +18,10 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
 # Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Installing Che with the operator](#installing-che-with-the-operator)
-2. [Setting up OKD and OpenShift](#setting-up-okd-and-openshift)
-3. [Setting up other Kubernetes](#setting-up-other-kubernetes)
-4. [After installing Che](#after-installing-che)
-5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
+3. [Setting up OKD and OpenShift](#setting-up-okd-and-openshift)
+4. [Setting up other Kubernetes](#setting-up-other-kubernetes)
+5. [After installing Che](#after-installing-che)
+6. [Creating the Codewind workspace](#creating-the-codewind-workspace)
 
 ## Prerequisites
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
@@ -43,7 +43,7 @@ For instructions on installing Che with the Che operator, please see the [Eclips
 1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`
 
 2. Ensure the following fields in your `CheCluster` `.yaml` file are set:
-- The spec.server.cheWorkspaceClusterRole field is set to eclipse-codewind, which was created when you previously applied the Codewind ClusterRole.
+- The `spec.server.cheWorkspaceClusterRole` field is set to `eclipse-codewind`, which was created when you previously applied the Codewind ClusterRole.
 - The `spec.storage.preCreateSubPaths` field is set to `true`.
 
 ## Setting up OKD and OpenShift
