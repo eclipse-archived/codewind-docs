@@ -132,6 +132,16 @@ build-log requested, no build log found for project <project name>
 No containerId for running project <project name>
 ```
 
+<!--
+Action/Topic: Importing a project.
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/243
+18.10:
+-->
+## Adding an existing Open Liberty project fails to build because of missing files
+An Open Liberty project fails to build after it is added into Codewind with the **Add Existing Project** action, and the project fails to build because of missing files.
+
+**Workaround:** Bind the existing project again and click **No** followed by **Other** for the project type.
 ***
 
 # Understanding Application Metrics
