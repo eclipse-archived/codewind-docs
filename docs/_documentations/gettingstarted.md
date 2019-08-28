@@ -53,7 +53,7 @@ type: document
       	<span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
       	</div>
       <div class="cw-gettingstarted-card">
-        <a href="mdteclipsegettingstarted.html"><img alt="Eclipse che getting started"  title="Eclipse che getting started"  src="images/card/che.svg"/></a>
+        <a href="mdteclipsegettingstarted.html"><img alt="Eclipse che getting started"  title="Eclipse che getting started"  src="images/card/eclipse.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
       		<a class="cw-gettingstarted-card-link" href="mdteclipsegettingstarted.html">Codewind for Eclipse</a>
       	</div>
