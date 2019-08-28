@@ -315,6 +315,23 @@ If you work with Appsody projects in Codewind for VS Code, you might receive mes
 <!--
 Action/Topic: Appsody with Codewind
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/92
+18.10:
+-->
+## Appsody mount errors on Windows Enterprise
+If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`.
+
+You might receive an error message in the `appsody.log` file when you try to create an Appsody project:
+```
+[Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
+```
+
+**Workaround:** Configure the Maven `.m2` cache to be outside of your home directory. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
+- Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/239
 18.10:
 -->
