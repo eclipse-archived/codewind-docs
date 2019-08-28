@@ -315,6 +315,21 @@ If you work with Appsody projects in Codewind for VS Code, you might receive mes
 <!--
 Action/Topic: Appsody with Codewind
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/92
+18.10:
+-->
+## Appsody does not mount the Maven cache to the Appsody application container
+If you work with Windows Enterprise, such as Azure ID, and use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`, Appsody does not mount the Maven cache to the Appsody application container.
+
+**Workaround:** Configure the Maven `.m2` cache to be outside of your home directory.
+1. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
+  - Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
+2. Configure the IDE to use the custom `.m2` cache location.
+3. (Optional:) If you want Codewind and Eclipse to use the same repository, in Eclipse, go to **Preferences**>**Maven**>**User Settings** and update the **localRepository** field in the `settings.xml` file. In VS Code, locate the Maven `settings.xml` file and edit it manually.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/239
 18.10:
 -->
