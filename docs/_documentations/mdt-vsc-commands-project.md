@@ -12,12 +12,6 @@ parent: mdt-vsc-commands-overview
 
 # Project commands: Codewind for VS Code
 
-### **See also:**
-- [Commands overview](mdt-vsc-commands-overview.html)
-- [Restart and debug](mdt-vsc-commands-restart-and-debug.html)
-
-***
-
 ## Create a new project or work with an existing project
 
 - To create a new project, right-click the *Projects (Local)* item and select **Create New Project**, or click on the *+* icon beside the *Projects (Local)* item. You can also create a new project using the **Command Palette**.

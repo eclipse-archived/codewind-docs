@@ -23,6 +23,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [OpenAPI tools](#openapi-tools)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -130,8 +131,6 @@ build-log requested, no build log found for project <project name>
 build-log requested, no build log found for project <project name>
 No containerId for running project <project name>
 ```
-
-For more information about valid Codewind projects, see [Imported projects and supported project types](importedprojects.html).
 
 <!--
 Action/Topic: Importing a project.
@@ -251,7 +250,7 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
-## Node.js and Swift templates remain in the starting state
+## Node.js and Swift templates go from the starting state and then to the stopped state by default
 The templates `Appsody Node.js template` and `Appsody Swift template` go from the starting state to the stopped state by default. The application stops, but the container still runs. These templates do not have a server and are intended to help you implement your own server.
 
 **Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running.
@@ -326,3 +325,28 @@ These steps reproduce the issue:
 2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
 
 **Workaround** Run the `Attach Debugger` action manually.
+
+***
+# OpenAPI tools
+
+<!--
+Action/Topic: OpenAPI tools
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/275
+Version: 2019-06 (4.12.0)
+Build ID: 20190614-1200
+-->
+## OpenAPI generation fails in Eclipse if the output path does not exist
+In Eclipse, OpenAPI generation fails if a path does not exist, and the wizard doesn't automatically create the folder tree hierarchy if the hierarchy doesn't already exist. 
+
+These steps reproduce the issue:
+1. Install the latest version of Codewind.
+2. Add a sample OpenAPI `.yaml` file.
+3. From the Project or Package Explorer views, right-click the project and select one of the generator actions in **OpenAPI Generate**. A dialog window appears.
+4. In the dialog window, if necessary, select the OpenAPI definition file by clicking the **Browse...** button.
+5. In the **Output folder** field, copy and paste a path or edit the path directly.
+6. Click **Finish**. The OpenAPI generator fails if the folder doesn't already exist.
+
+**Workaround:** Manually create the output folder before you start the OpenAPI generator wizard. After you create the folder, you can start the wizard again.
+
+For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
