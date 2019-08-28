@@ -40,7 +40,7 @@ For instructions on installing Che with the Che operator, please see the [Eclips
 
 **Note:** Complete the following steps before you create your `CheCluster` custom resource.
 
-1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`
+1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`.
 
 2. Ensure the following fields in your `CheCluster` `.yaml` file are set:
 - The `spec.server.cheWorkspaceClusterRole` field is set to `eclipse-codewind`, which was created when you previously applied the Codewind ClusterRole.
@@ -50,7 +50,7 @@ For instructions on installing Che with the Che operator, please see the [Eclips
 
 ### Installing Che with deployment scripts
 
-If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip this step:
+If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip these steps:
 
 1. Git clone the [Eclipse Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/openshift` directory.
@@ -77,7 +77,7 @@ If you're running on IBM Cloud Private, you must add the images that Che uses to
 
 ### Step 1: Setting up the Che Helm chart
 
-If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip this step:
+If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip these steps:
 
 1. Clone the [Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/kubernetes/helm/che` directory. Then, edit the `values.yaml` file.
