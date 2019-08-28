@@ -321,6 +321,11 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/92
 ## Appsody does not mount the Maven cache to the Appsody application container
 If you work with Windows Enterprise, such as Azure ID, and use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`, Appsody does not mount the Maven cache to the Appsody application container.
 
+If you don't set the `MAVEN_OPTS` environment variable, you might receive an error message in the `appsody.log` file when you try to create an Appsody project:
+```
+[Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
+```
+
 **Workaround:** Configure the Maven `.m2` cache to be outside of your home directory.
 1. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
   - Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
