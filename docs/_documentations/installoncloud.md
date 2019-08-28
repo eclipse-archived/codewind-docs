@@ -17,6 +17,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
 
 # Table of Contents
 1. [Prerequisites](#prerequisites)
+2. [Installing Che with the Operator](#installing-che-with-the-operator)
 2. [Setting up OKD and OpenShift](#setting-up-okd-and-openshift)
 3. [Setting up other Kubernetes](#setting-up-other-kubernetes)
 4. [After installing Che](#after-installing-che)
@@ -27,16 +28,30 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
   - For NFS, if running on IBM Cloud Private, follow these instructions:[NFS Storage Install Instructions](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage?lang=en) and use 777 permissions for the folders.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
 - Set up the ClusterRole.
-  - **Important:** If you are running on OKD or OpenShift, install Che first and then set up the ClusterRole.
+  - **Important:** If you are installing Che with the Helm chart, do the following:
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
-  3. Log in to the IBM Cloud Private cluster and target cluster to the namespace that you are planning to install.
-  4. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
-  5. Next, run `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
+  3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
+  4. Next, run `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
+
+## Installing Che with the Operator
+
+For instructions on installing Che with the Che operator, please consult https://operatorhub.io/operator/eclipse-che
+
+**Note:** You must do the following prior to creating your `CheCluster` custom resource
+
+1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`
+
+2. Ensure the following fields in your `CheCluster` yaml file are set:
+- `spec.server.cheWorkspaceClusterRole` to `eclipse-codewind` (the Codewind ClusterRole applied in the previous step)
+- `spec.storage.preCreateSubPaths` to `true`
 
 ## Setting up OKD and OpenShift
 
 ### Installing Che with deployment scripts
+
+If the Che operator was not used to install Eclipse Che, follow these steps instead, otherwise skip this step:
+
 1. Git clone the [Eclipse Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/openshift` directory.
 3. Deploy Che with `./deploy_che.sh`.
@@ -61,6 +76,9 @@ If you're running on IBM Cloud Private, you must add the images that Che uses to
   ```
 
 ### Step 1: Setting up the Che Helm chart
+
+If the Che operator was not used to install Eclipse Che, follow these steps instead, otherwise skip this step:
+
 1. Clone the [Che repository](https://github.com/eclipse/che).
 2. Enter the `cd` command to go to the `deploy/kubernetes/helm/che` directory. Then, edit the `values.yaml` file.
    - Set up multiuser if you need the multiple users feature: `multiuser: true`
