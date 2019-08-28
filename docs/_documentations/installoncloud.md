@@ -28,7 +28,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
   - For NFS, if running on IBM Cloud Private, follow these instructions:[NFS Storage Install Instructions](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage?lang=en) and use 777 permissions for the folders.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
 - Set up the ClusterRole.
-  - **Important:** If you are installing Che with with the `deploy_che.sh` script for OpenShift, do this step *after* installing Che
+  - **Important:** If you are installing Che with the `deploy_che.sh` script for OpenShift, do this step *after* installing Che.
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
