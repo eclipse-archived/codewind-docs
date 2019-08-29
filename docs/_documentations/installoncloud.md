@@ -139,7 +139,7 @@ The general format for creating a Che workspace via a factory is:
 http://<che ingress domain>/f?url=<hosted devfile URL>
 ```
 
-We provide a ready to use devfile with some sample projects and the Codewind plugins. To create a workspace from it:
+We provide a ready to use devfile with the Codewind plugins. To create a workspace from it:
 ```
 http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.3.0/devfile.yaml
 ```
