@@ -193,6 +193,17 @@ If you modify files in MicroProfile projects, sometimes the project gets double 
 ```
 <applicationMonitor pollingRate="1000ms" />
 ```
+
+<!--
+Action/Topic: Checking the application and build statuses
+Issue type: bug
+Issue link: https://github.com/docker/hub-feedback/issues/1871, https://github.com/eclipse/codewind/pull/335, https://github.com/eclipse/codewind/pull/336
+-->
+## Buildah on Codewind on Kubernetes cannot be used to push to Docker Hub
+In Codewind versions earlier than 0.3.0, Buildah on Codewind on Kubernetes can’t be used to push to Dockerhub. 
+
+**Workaround** Use a different Docker registry, or update your version of Codewind to version 0.3.0 or later.
+
 ***
 # Editing your project
 
