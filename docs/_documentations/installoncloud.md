@@ -91,7 +91,7 @@ Clone the [Che repository](https://github.com/eclipse/che).
 3. Run the following command:
     ```
     helm upgrade --install che --namespace <ns> \
-        --set cheImage=eclipse/che-server:7.0.0-RC-2.0 \
+        --set cheImage=eclipse/che-server:7.0.0 \
         --set global.ingressDomain=<cluster proxy ip>.nip.io \
         --set global.cheWorkspaceClusterRole=eclipse-codewind \
         --set global.cheWorkspacesNamespace=<ns> \
@@ -124,8 +124,8 @@ Skip this step if you are using the devfiles that Codewind provides by default. 
 2. Make your modifications as you see fit.
 3. The `devfile.yaml` and `meta.yaml` files need to be hosted in a location that Che can access, such as Github.
 4. In `devfile.yaml`, modify the `codewind-sidecar` and `codewind-theia` components so that their ID formats match.
-For example, `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-sidecar/0.2.0/meta.yaml
-` and `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-theia/0.2.0/meta.yaml
+For example, `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-sidecar/0.3.0/meta.yaml
+` and `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-theia/0.3.0/meta.yaml
 ` host the `meta.yaml` files.
 
 ## Creating the Codewind workspace
@@ -139,9 +139,9 @@ The general format for creating a Che workspace via a factory is:
 http://<che ingress domain>/f?url=<hosted devfile URL>
 ```
 
-We provide a ready to use devfile with some sample projects and the Codewind plugins. To create a workspace from it:
+We provide a ready-to-use devfile with the Codewind plug-ins. Enter the following URL to create a workspace from the devfile:
 ```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.2.0/devfile.yaml
+http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.3.0/devfile.yaml
 ```
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles
