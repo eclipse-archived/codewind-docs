@@ -23,6 +23,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
@@ -346,6 +347,37 @@ These steps reproduce the issue:
 2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
 
 **Workaround** Run the `Attach Debugger` action manually.
+
+***
+# Codewind and Tekton Pipelines
+
+<!--
+Codewind version: 0.3
+Che version: 7.0
+IDE extension version: Theia plugin 0.3
+IDE version: Theia 7.0-rc4
+Action/Topic: Codewind and Tekton pipelines
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/309
+-->
+## Codewind cannot access the Tekton dashboard URL
+
+If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message: 
+
+```
+Tekton dashboard does not appear to be installed on this cluster. Please install Tekton dashboard on your cluster, and restart your Codewind Che workspace. 
+```
+
+These steps reproduce the issue:
+1. Install Codewind on OpenShift.
+2. Install Tekton Pipelines.
+3. Click **Open Tekton dashboard URL**. Codewind does not access the Tekton dashboard URL. 
+
+**Workaround:** 
+1. Go to the Eclipse Che workspace console.  
+2. Select your workspace and stop it. 
+3. After 2 minutes, start your workspace again. 
+4. Now, access the Tekton dashboard URL from the Codewind palette. 
 
 ***
 # OpenAPI tools
