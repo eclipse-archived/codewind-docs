@@ -328,6 +328,37 @@ These steps reproduce the issue:
 **Workaround** Run the `Attach Debugger` action manually.
 
 ***
+# Codewind and Tekton pipelines
+
+<!--
+Codewind version: 0.3
+Che version: 7.0
+IDE extension version: Theia plugin 0.3
+IDE version: Theia 7.0-rc4
+Action/Topic: Codewind and Tekton pipelines
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/309
+-->
+## Codewind cannot access the Tekton Dashboard URL
+
+If you install Codewind before you install Tekton, Codewind cannot access the Tekton Dashboard URL. In the logs, you see the following error message: 
+
+```
+Tekton Dashboard does not appear to be installed on this cluster. Please install Tekton Dashboard on your cluster, and restart your Codewind Che workspace. 
+```
+
+These steps reproduce the issue:
+1. Install Codewind on Openshift.
+2. Install Tekton Pipelines.
+3. Click **Open Tekton Dashboard URL**.
+
+**Workaround:** 
+1. Go to the **Eclipse Che workspace console**.  
+2. Select your workspace and stop it. 
+3. After 2 minutes, start your workspace again. 
+4. You now can try to access the **Tekton Dashboard URL**  from the Codewind palette. 
+
+***
 # OpenAPI tools
 
 <!--
