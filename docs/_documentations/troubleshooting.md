@@ -312,8 +312,8 @@ If you work with Appsody projects in Codewind for VS Code, you might receive mes
 1. After you create a project, wait for VS Code to display, `Running [Build succeeded]`.
 2. Then, right-click the project and select **Restart in Debug Mode**.
 3. Allow the process to finish. It fails, and a connection exception window appears.
-4. A message displays, `Restarting <my_project> into debug mode`. Wait for this restart notification to disappear.
-5. To manually set the debugger, click the **Debug** tab and then the **Play** button. The debugger is successfully attached to the project if the message bar displays, `Debug appsody-mp (codewind-workspace) Cloud Code -- NORMAL --`.
+4. The `Restarting <my_project> into debug mode` message is displayed. Wait for this restart notification to disappear.
+5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug appsody-mp (codewind-workspace) Cloud Code -- NORMAL --` is displayed in the message bar.
 
 <!--
 Action/Topic: Appsody with Codewind
