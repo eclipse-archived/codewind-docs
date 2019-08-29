@@ -340,12 +340,12 @@ Action/Topic: Codewind and Tekton pipelines
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/309
 -->
-## Codewind cannot access Tekton Dashboard URL
+## Codewind cannot access the Tekton Dashboard URL
 
-If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message: 
+If you install Codewind before you install Tekton, Codewind cannot access the Tekton Dashboard URL. In the logs, you see the following error message: 
 
 ```
-[Error] getTektonDashboardList: response.statusCode=500
+Tekton Dashboard does not appear to be installed on this cluster. Please install Tekton Dashboard on your cluster, and restart your Codewind Che workspace. 
 ```
 
 These steps reproduce the issue:
@@ -353,7 +353,11 @@ These steps reproduce the issue:
 2. Install Tekton Pipelines.
 3. Click **Open Tekton Dashboard URL**.
 
-**Workaround:** Stop workspace and restart workspace from Eclipse Che administration console. 
+**Workaround:** 
+1. Go to the **Eclipse Che workspace console**.  
+2. Select your workspace and stop it. 
+3. After 2 minutes, start your workspace again. 
+4. You now can try to access the **Tekton Dashboard URL**  from the Codewind palette. 
 
 ***
 # OpenAPI tools
