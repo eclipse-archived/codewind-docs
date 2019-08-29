@@ -309,8 +309,11 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://githu
 If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, `Failed to attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
 
 **Workaround** Run the `Attach Debugger` action manually:
-1. Right-click the project and select **Restart in Debug Mode**. You might receive an error message that states, `Failed to attach to remote debuggee VM` or `Failed to attach debugger`.
-2. Right-click on the project and select `Attach Debugger`.
+1. After you create a project, wait for VS Code to display, `Running [Build succeeded]`.
+2. Then, right-click the project and select **Restart in Debug Mode**.
+3. Allow the process to finish. It fails, and a connection exception window appears.
+4. A message displays, `Restarting <my_project> into debug mode`. Wait for this restart notification to disappear.
+5. To manually set the debugger, click the **Debug** tab and then the **Play** button. The debugger is successfully attached to the project if the message bar displays, `Debug appsody-mp (codewind-workspace) Cloud Code -- NORMAL --`.
 
 <!--
 Action/Topic: Appsody with Codewind
