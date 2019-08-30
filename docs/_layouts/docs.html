@@ -334,6 +334,19 @@
                 </a>
             </div>
             
+            <a href="troubleshooting.html" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action flex-column align-items-start" %}
+				{% if "/troubleshooting" == page.url %}
+					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action flex-column align-items-start" %}
+				{% endif %}
+				class="{{cls}}">
+				Troubleshooting
+            </a>
+            
+            
+            
+            
+            
             <!-- END hard coded TOC -->
 
             
