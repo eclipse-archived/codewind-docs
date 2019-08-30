@@ -317,22 +317,32 @@
 				Codewind and Tekton pipelines
             </a>
 
+				<!-- openapi -->
+
 			<a href="#openapi_tools" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">OpenAPI Tools</span>
                     <span class="submenu-icon"></span>
-                </div>
-            </a>
-            <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
-                <a href="https://github.com/eclipse/codewind-openapi-vscode" class="bg-light list-group-item list-group-item-action">
-				    OpenAPI Tools for VS Code
-				    <span class="cw-extlink"></span>
-                </a>
-                <a href="https://github.com/eclipse/codewind-openapi-eclipse" class="bg-light list-group-item list-group-item-action">
-				    OpenAPI Tools for Eclipse
-				    <span class="cw-extlink"></span>
-                </a>
-            </div>
+			</a>
+			<a href="codewind-open-api-vscode.html" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+			    {% if "/codewind-open-api-vscode" == page.url %}
+				   {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+			    {% endif %}
+			class="{{cls}}">
+			Codewind OpenAPI Tools for VS Code
+			</a>
+			<a href="codewind-open-api-eclipse.html" 
+			   {% assign cls = "bg-light list-group-item list-group-item-action" %}
+			   {% if "/codewind-open-api-eclipse" == page.url %}
+			      {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+		       {% endif %}
+		    class="{{cls}}">
+		    Codewind OpenAPI Tools for Eclipse
+			</a>
+			</div>
+			
+                <!--  end openapi  -->
             
             <a href="troubleshooting.html" 
 			    {% assign cls = "bg-light list-group-item list-group-item-action flex-column align-items-start" %}
