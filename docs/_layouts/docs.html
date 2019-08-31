@@ -324,14 +324,22 @@
                 </div>
             </a>
             <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
-                <a href="https://github.com/eclipse/codewind-openapi-vscode" class="bg-light list-group-item list-group-item-action">
-				    OpenAPI Tools for VS Code
-				    <span class="cw-extlink"></span>
-                </a>
-                <a href="https://github.com/eclipse/codewind-openapi-eclipse" class="bg-light list-group-item list-group-item-action">
-				    OpenAPI Tools for Eclipse
-				    <span class="cw-extlink"></span>
-                </a>
+                <a href="open-api-tools-for-vscode.html" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+			    {% if "/open-api-tools-for-vscode" == page.url %}
+				   {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+			    {% endif %}
+				class="{{cls}}">
+				Codewind OpenAPI Tools for VS Code
+				</a>
+				<a href="open-api-tools-for-eclipse.html" 
+				   {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				   {% if "/open-api-tools-for-eclipse" == page.url %}
+				      {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+			       {% endif %}
+			    class="{{cls}}">
+			    Codewind OpenAPI Tools for Eclipse
+				</a>
             </div>
             
             <a href="troubleshooting.html" 
