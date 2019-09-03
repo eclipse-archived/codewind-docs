@@ -29,7 +29,7 @@ type: document
       <span class=" cs-gettingstarted-mobile-title cw-getting-started-text">Cloud &nbsp;</span>
       </div>
       <div class="cw-gettingstarted-card">
-        <a href="installoncloud.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/cloud.svg"/></a>
+        <a href="installoncloud.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
       		<a class="cw-gettingstarted-card-link" href="installoncloud.html">Codewind for Eclipse Che</a>
       	</div>
