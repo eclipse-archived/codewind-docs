@@ -40,6 +40,6 @@ If you don't click **Install** when the notification window first appears, you c
 If a notification window does not appear...
 
 #### Resetting the installation
-To reset the installation, uninstall Codewind and install it again.
+To reset the installation, [uninstall Codewind](mdt-vsc-uninstall.html) and install it again.
 
 For more information about troubleshooting Codewind, see the [Troubleshooting page](troubleshooting.html).
