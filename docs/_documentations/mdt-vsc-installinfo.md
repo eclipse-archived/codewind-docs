@@ -27,7 +27,10 @@ The following images are pulled. These images together form the Codewind back en
 ## Using Codewind
 When the installation is complete, the extension is ready to use, and you are prompted to open the Codewind workspace.
 
-Codewind creates the `~/codewind-workspace` folder to contain your projects. On Windows, you can find the workspace at the `C:\codewind-workspace` folder. You can open the `codewind-workspace` or a project within the workspace as your VS Code workspace. For more information, see [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html).
+You can open the `codewind-workspace` or a project within the workspace as your VS Code workspace. For more information, see [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html).
+
+## Working with workspaces
+Codewind creates the Codewind workspace on your system. The Codewind workspace is where Codewind expects to find your projects and where Codewind stores its metadata. On macOS and Linux, the workspace folder is `~/codewind-workspace`. On Windows, the workspace folder is `C:\codewind-workspace`. When Codewind creates a new project, it is created in the Codewind workspace. If you want to add an existing project to Codewind, first copy it into the Codewind workspace.
 
 ## Removing containers and images
 To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.html).
