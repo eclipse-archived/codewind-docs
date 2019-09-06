@@ -30,7 +30,7 @@ When the installation is complete, the extension is ready to use, and you are pr
 Codewind creates the `~/codewind-workspace` folder to contain your projects. On Windows, you can find the workspace at the `C:\codewind-workspace` folder. You can open the `codewind-workspace` or a project within the workspace as your VS Code workspace. For more information, see [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html).
 
 ## Updating the Codewind plug-in
-Update your Codewind plug-in without uninstalling the extension.
+Starting with Codewind version 0.3.0, you can update your Codewind plug-in without uninstalling the extension. For example, you can update Codewind 0.3.0 to Codewind 0.3.1.
 1. Go to the **Extensions** view in VS Code.
 2. Search for the latest Codewind version in the Marketplace.
 3. Install the latest version of Codewind. Then, reload Codewind.

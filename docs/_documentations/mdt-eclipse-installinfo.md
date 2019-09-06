@@ -28,7 +28,7 @@ When the installation is complete, the extension is ready to use, and you are pr
 Codewind creates the `~/codewind-workspace` folder to contain your projects. On Windows, you can find the workspace at the `C:\codewind-workspace` folder. You can open the `codewind-workspace` or a project within the workspace as your Eclipse workspace. For more information, see [Getting started: Codewind for Eclipse](mdteclipsegettingstarted.html).
 
 ## Updating the Codewind plug-in
-Update the Codewind Eclipse plug-in to the latest version.
+Starting with Codewind version 0.3.0, you can update the Codewind Eclipse plug-in without uninstalling the extension. For example, you can update Codewind 0.3.0 to Codewind 0.3.1.
 1. From Eclipse, go to **Help**>**About Eclipse IDE**.
 2. Click **Installation details**.
 3. To look for the latest release, highlight **Codewind tech preview** and click **Update...**.
