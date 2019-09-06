@@ -22,6 +22,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
 4. [Setting up other Kubernetes](#setting-up-other-kubernetes)
 5. [After installing Che](#after-installing-che)
 6. [Creating the Codewind workspace](#creating-the-codewind-workspace)
+7. [Updating the version](#updating-the-version)
 
 ## Prerequisites
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
@@ -57,7 +58,6 @@ If the Che operator was not used to install Eclipse Che, follow these steps inst
 3. Deploy Che with `./deploy_che.sh`.
 4. From the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin) run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
 5. From the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin) run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
-
 
 ### Enable privileged and root containers to run
 Codewind is currently required to run as privileged (as it builds container images) and as root. Run the following commands to enable that functionality:
@@ -196,3 +196,6 @@ Go to **View**>**Find Command…**>**Codewind: Build**.
 
 - Alternative instructions:
   - Enter the following command: `curl -k -H "Content-Type: application/json" -X POST https://codewind-release:9191/api/v1/projects/8801a6d0-7805-11e9-b22f-19482c5ffbd6/build -d '{"action": "build"}'`
+
+## Updating the version
+Restart the Codewind workspace in Che. Che automatically pulls the newest version of Codewind and the Theia extension.
