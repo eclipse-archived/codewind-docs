@@ -29,6 +29,19 @@ When the installation is complete, the extension is ready to use, and you are pr
 
 Codewind creates the `~/codewind-workspace` folder to contain your projects. On Windows, you can find the workspace at the `C:\codewind-workspace` folder. You can open the `codewind-workspace` or a project within the workspace as your VS Code workspace. For more information, see [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html).
 
+## Updating the Codewind plug-in
+Update your Codewind plug-in without uninstalling the extension.
+1. Go to the **Extensions** view in VS Code.
+2. Find the latest version in one of the following ways:
+   - Search for the latest Codewind version.
+   - Select **Install from VSIX** and choose the `.vsix` file that corresponds to the latest images.
+3. Install the latest version of Codewind.
+4. Go to the **Explorer** view in VS Code. Reload Codewind.
+5. Depending on the current status of Codewind, one of two messages appear:
+   - If the images from a previous version or release of Codewind are installed on the system, but Codewind is not running, a message asks you to install the most recent images. Click **OK** to start the download.
+   - If an older version of Codewind is installed and running, a message asks you to update the older version. Click **OK**, and Codewind stops automatically, and new images begin to download.
+5. Wait for the Codewind installation to complete. Codewind starts and is ready to use.
+
 ## Removing containers and images
 To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.html).
 
