@@ -34,10 +34,7 @@ To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.h
 ## Troubleshooting
 
 #### Accessing the notification window to install the Codewind containers
-If you don't click **Install** when the notification window first appears, you can access the notification again. Go to the Explorer view, hover the cursor over **Codewind**, and click the switch so that it changes to the **On** position. The window appears.
-
-#### Installing the Codewind containers without a prompt
-If a notification window does not appear...
+If you don't click **Install** when the notification window first appears, you can access the notification again. Go to the **Explorer** view, hover the cursor over **Codewind**, and click the switch so that it changes to the **On** position. The window appears.
 
 #### Resetting the installation
 To reset the installation, [uninstall Codewind](mdt-vsc-uninstall.html) and install it again.
