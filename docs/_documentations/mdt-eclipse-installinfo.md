@@ -30,6 +30,18 @@ You can open the `codewind-workspace` or a project within the workspace as your 
 ## Working with workspaces
 Codewind creates the Codewind workspace on your system. The Codewind workspace is where Codewind expects to find your projects and where Codewind stores its metadata. On macOS and Linux, the workspace folder is `~/codewind-workspace`. On Windows, the workspace folder is `C:\codewind-workspace`. When Codewind creates a new project, it is created in the Codewind workspace. If you want to add an existing project to Codewind, first copy it into the Codewind workspace.
 
+## Updating the Codewind plug-in
+Update the Codewind Eclipse plug-in to the latest version.
+1. From Eclipse, go to **Help**>**About Eclipse IDE**.
+2. Click **Installation details**.
+3. To look for the latest release, highlight **Codewind tech preview** and click **Update...**.
+4. Select the latest version and click **Next**.
+5. Review the license and click **Finish**.
+6. Click **Restart Now** to refresh Codewind to the latest version.
+7. After Codewind restarts, go to the **Codewind Explorer** view. Double-click **Codewind** to update it to the latest version.
+8. Click **OK** in the **Codewind Update** window that states that the older version of Codewind will be removed, and the newer version will be started.
+9. After Codewind updates, the **Codewind Explorer** view appears with your projects.
+
 ## Removing containers and images
 To remove Codewind, see [Uninstalling Codewind from Eclipse](mdteclipseuninstall.html).
 
