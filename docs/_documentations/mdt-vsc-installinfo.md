@@ -32,9 +32,7 @@ Codewind creates the `~/codewind-workspace` folder to contain your projects. On 
 ## Updating the Codewind plug-in
 Update your Codewind plug-in without uninstalling the extension.
 1. Go to the **Extensions** view in VS Code.
-2. Find the latest version in one of the following ways:
-   - Search for the latest Codewind version.
-   - Select **Install from VSIX** and choose the `.vsix` file that corresponds to the latest images.
+2. Search for the latest Codewind version in the Marketplace.
 3. Install the latest version of Codewind. Then, reload Codewind.
 4. Go to the **Explorer** view in VS Code.
 5. Depending on the current status of Codewind, one of two messages appear:
