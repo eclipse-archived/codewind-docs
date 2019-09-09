@@ -15,7 +15,6 @@ parent:
 The Codewind installation includes two parts:
 1. The VS Code extension installs when you install Codewind from the VS Code Marketplace or when you install by searching in the **VS Code Extensions** view.
 2. The Codewind back end containers install after you click **Install** when you are prompted. After you click **Install**, the necessary images are downloaded from the internet. The download is approximately 1 GB.
-3. Optional: If you don't click **Install** when the notification window first appears, you can access the notification again. Go to the Explorer view, hover the cursor over **Codewind**, and click the switch so that it changes to the **On** position. The window appears.
 
 ![Switch start or stop Codewind](dist/images/cdt-vsc/on-off-switch.png)<br>
 
@@ -47,4 +46,11 @@ Update your Codewind plug-in without uninstalling the extension.
 To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.html).
 
 ## Troubleshooting
-To troubleshoot Codewind, see the [Troubleshooting page](troubleshooting.html).
+
+#### Reinitiating the Codewind installation
+If you don't click **Install** when the **Install** prompt first appears, you can access the notification again. Go to the **Explorer** view, hover the cursor over **Codewind**, and click the switch so that it changes to the **On** position. The **Install** prompt appears.
+
+#### Resetting the installation
+To reset the installation, [uninstall Codewind](mdt-vsc-uninstall.html) and install it again.
+
+For more information about troubleshooting Codewind, see the [Troubleshooting page](troubleshooting.html).
