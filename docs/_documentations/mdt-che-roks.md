@@ -11,10 +11,10 @@ type: document
 # Setting up OpenShift on IKS (ROKS) for Codewind
 
 ## Prerequisites
-1. Active your IBM Cloud account.
+- Active your IBM Cloud account.
    - Activate a paid account. Trial accounts cannot create OpenShift clusters.
-2. Start a running ROKS cluster with a minimum of 1 node, 4 CPU, and 16 GB RAM.
-3. Start a running Network File System (NFS) server that the cluster can access and use for storage.
+- Start a running ROKS cluster with a minimum of 1 node, 4 CPU, and 16 GB RAM.
+- Start a running Network File System (NFS) server that the cluster can access and use for storage.
    - The default IBM Cloud Kubernetes Service (IKS) storage cannot be used.
    - Either provision a virtual server on IBM Cloud or create a pod on the cluster that runs as an NFS server.
 
@@ -22,7 +22,6 @@ type: document
 
 #### Provisioning a VPS
 1. From the IBM Cloud catalog, select **Virtual Server**. Then, select **Public Virtual Server**.
-   ![](https://media.github.ibm.com/user/100365/files/7f87a280-b21a-11e9-920e-d89d83acf861)
 2. Leave most of the defaults as they are, but change the following values:
    - **Hostname**: Choose a name for this value, such as `codewind-nfs`.
    - **Location**: Choose the same region that your ROKS cluster is running in, either Washington, D.C. or Dallas.
@@ -31,7 +30,6 @@ type: document
    - **Image**: Select **Ubuntu 18.04**.
    - **Private security group**: Choose either **allow_all** or **allow_outbound**.
    - **Public security group**: Choose either **allow_all** or **allow_outbound**.
-    ![](https://media.github.ibm.com/user/100365/files/29b2fa80-b21a-11e9-94fd-8e8fab98e28d)
 3. Click **create**. Wait approximately 5 to 10 minutes for the provisioning to complete.
 
 #### Setting up the NFS server
