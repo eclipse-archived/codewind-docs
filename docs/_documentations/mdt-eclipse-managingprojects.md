@@ -50,7 +50,7 @@ Project settings tell Codewind more about the specifics of your project and can 
 The list of supported project settings are:
 * [Context root](#context-root)
 * [Health check endpoint](#health-check-endpoint)
-* [Https application](#https-application)
+* [HTTPS application](#https-application)
 * [Internal application port](#internal-application-port)
 * [Internal debug port](#internal-debug-port)
 * [Maven profiles](#maven-profiles)
@@ -73,10 +73,10 @@ The list of supported project settings are:
 - If a wrong health check endpoint is set, the project will be stuck in starting state.
 - If the health check endpoint is set, the context root will not be used to determine the project state.
 
-#### Https application
+#### HTTPS application
 `isHttps: <boolean>`
-- The value is used by Codewind to determine if the project is https-enabled.
-- Convert the application to `https` and set `isHttps` to `true`.
+- This value tells Codewind to use the HTTPS protocol when Codewind detects the application status and also when Codewind launches the application in a browser.
+- If your application supports HTTPS, set `isHttps` to `true`, and Codewind uses HTTPS instead of HTTP to detect application status and to open browser URLs.
 - The default value of this setting is `false`.
 
 #### Internal application port
