@@ -35,7 +35,7 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Open Performance Dashboard**: Opens the performance dashboard in the default Eclipse browser. This action is available only when the application is running or debugging.
 - **Import Project**: Imports your project into the Eclipse workspace.
 - **Disable/Enable Project**: Disables or enables the project.
-- **Show Log Files**: If log files are available, this action displays a list of log files. In the Eclipse **Console** view, click **Show All** or an individual log file toggle action to open the log file in the Eclipse **Console** view. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
+- **Show Log Files**: If log files are available, this action displays a list of log files. Click **Show All** or an individual log file toggle action to open the log file in the Eclipse **Console** view. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
 - **Restart in Run Mode**: Restarts the application in run mode.
 - **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. Only MicroProfile/Java EE, Spring, and Node.js projects can be debugged. For more information, see [Debugging Codewind projects](mdteclipsedebugproject.html).
 - **Attach Debugger**: If you detached the debugger accidentally or restarted Eclipse, use this to re-attach the debugger to an application in debug mode. For more information, see [Debugging Codewind projects](mdteclipsedebugproject.html).
