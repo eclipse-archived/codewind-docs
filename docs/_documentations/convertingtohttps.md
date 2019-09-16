@@ -12,6 +12,8 @@ type: document
 
 You can convert Codewind applications from HTTP to HTTPS. These examples feature a Python and a MicroProfile application.
 
+**Caution:** Use these examples for development but not for production application. The self-signed certificate and steps shown here might not comply with the security policy and usage policy of your project.
+
 ## Converting a Python application from HTTP to HTTPS
 1. Generate a private key.
  ```
