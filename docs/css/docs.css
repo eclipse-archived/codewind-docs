@@ -27,6 +27,15 @@
     padding-left: 50px;
 }
 
+
+.anchorjs-link {
+  text-decoration: none;
+}
+*:hover > .anchorjs-link {
+	text-decoration: none;
+}
+
+
 .submenu-icon {
 	position: absolute;
     right: 20px;
