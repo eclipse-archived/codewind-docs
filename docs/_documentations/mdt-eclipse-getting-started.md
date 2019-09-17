@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Getting Started: Tools for Eclipse"
-description: "Getting Started: Tools for Eclipse"
+title: "Getting Started with Codewind for Eclipse"
+description: "Getting Started with Codewind for Eclipse"
 keywords: introducing, introduction, overview, what is, tools, eclipse, getting started, Codewind for Eclipse, work within Eclipse
 duration: 1 minute
 permalink: mdteclipsegettingstarted
@@ -10,11 +10,13 @@ order: 5
 parent: mdteclipseoverview
 ---
 
-# Getting started: Codewind for Eclipse
+# Getting started with Codewind for Eclipse
 
-Codewind for Eclipse enables you to develop and debug your containerized projects from within Eclipse (debug is only supported for Microprofile/Java EE, Spring, and Node.js projects).
+Codewind for Eclipse enables you to develop your containerized projects from within Eclipse. 
 
-Complete the following steps to install Codewind for Eclipse:
+The following information describes how to install Codewind for Eclipse, and introduces the tools and the Codewind Explorer view. It then describes how you can create a new project or work with an existing project, and introduces the wide range of Codewind development features available to you.  
+
+To install Codewind for Eclipse, complete the following steps:
 
 1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. The earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
 2. Install [Codewind from Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
@@ -39,7 +41,7 @@ You are now ready to use the tools. You can use the Codewind Explorer view to cr
 
 2. Work with your project from within Eclipse including:
     - Editing
-    - Debugging
+    - Debugging (debug is only supported for Microprofile/Java EE, Spring, and Node.js projects)
     - Opening the application in a browser
     - Viewing the logs
     - Opening a shell into the application container

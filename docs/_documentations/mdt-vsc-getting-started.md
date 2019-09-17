@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Getting started: Tools for VS Code"
-description: "Getting started: Tools for VS Code"
+title: "Getting started with Codewind for VS Code"
+description: "Getting started with Codewind for VS Code"
 keywords: introducing, introduction, overview, tools, get, getting, start, started, install, vscode, visual, studio, code, Codewind for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace,installing Codewind for VS Code
 duration: 1 minute
 permalink: mdt-vsc-getting-started
@@ -10,11 +10,13 @@ order: 1
 parent: mdt-vsc-overview
 ---
 
-# Getting started: Codewind for VS Code
+# Getting started with Codewind for VS Code
 
-Codewind for VS Code enables you to develop and debug your containerized projects from within VS Code (debug is only supported for Microprofile/Java EE, Spring, and Node.js projects).
+Codewind for VS Code enables you to develop your containerized projects from within VS Code.
 
-Complete the following steps to install Codewind for VS Code:
+The following information describes how to install Codewind for VS Code, and introduces the tools and the Codewind Explorer view. It then describes how you can create a new project or work with an existing project, and introduces the wide range of Codewind development features available to you.  
+
+To install Codewind for VS Code, complete the following steps:
 
 1. Install [VS Code version 1.28 or later](https://code.visualstudio.com/download).
 2. Install Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind), or by searching for *Codewind* in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
@@ -32,8 +34,10 @@ You are now ready to use the tools. You can use the Codewind view to create new 
 
 2. Work with your project from within VS Code including:
     - Editing
-    - Debugging
+    - Debugging (debug is only supported for Microprofile/Java EE, Spring, and Node.js projects)
     - Opening the application in a browser
     - Viewing the logs
     - Opening a shell into the application container
     - And more
+
+3. (Optional) Explore more options by trying out the Tutorial. 
