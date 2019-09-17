@@ -39,5 +39,3 @@ You are now ready to use the tools. You can use the Codewind view to create new 
     - Viewing the logs
     - Opening a shell into the application container
     - And more
-
-3. (Optional) Explore more options by trying out the Tutorial. 
