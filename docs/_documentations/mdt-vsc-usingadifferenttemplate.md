@@ -21,4 +21,10 @@ When you create a new project, you can choose from the default set of templates 
 }
 ```
 
-After you have edited and saved this file, restart Codewind.
+## Configuring template repositories
+
+Use Codewind to manage templates. Templates can make application development easier by providing a structure and boilerplate code to help get a new project started.
+
+- To open the Template Source Manager, right-click **Projects (Local)**.
+- Click **Add New** to add a repository source to the table.
+- Enable or disable a repository type to view the repositories of that type in the wizard.
