@@ -77,6 +77,10 @@ systemctl restart nfs-kernel-server
 ```
 7. Download the persistent volute (PV) `.yaml` file and set the `<ip-address>` field to the IP address of the VPS.
 8. Run the `oc apply -f che-nfs-pv.yaml` command to create the PVs on the OpenShift cluster.
+9. Disable the IBM Block Storage `storageclass`:
+```
+kubectl patch storageclass ibmc-block-bronze -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+```
 
 ## Install Che and Codewind
 
