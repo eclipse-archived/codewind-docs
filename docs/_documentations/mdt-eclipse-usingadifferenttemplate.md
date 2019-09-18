@@ -15,7 +15,8 @@ parent: usingcodewind
 When you create a new project, you can choose from the default set of templates available, or you can choose from a template source of your own. Use Codewind to manage templates. Templates can make application development easier by providing a structure and boilerplate code to help get a new project started.
 
 - To open the Repository Manager, right-click **Projects (Local)**.
-- Click **Manage Repositories** to add a source to the table.
-- In the dialog window, use the check boxes to enable or disable repositories:
-  - Use **Add** to add a new repository.
-  - Use **Remove** to remove non-default repositories.
+- Click **Manage Template Sources** to add a source to the table.
+- You can perform the following actions in the dialog window:
+  - Use the check boxes to enable or disable sources.
+  - Use **Add** to add a new source.
+  - Use **Remove** to remove non-default sources.
