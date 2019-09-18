@@ -12,7 +12,7 @@ parent: root
 
 # Setting up a Codewind-ready install of Che
 
-To setup a Codewind-ready install of Che, follow these instructions. Alternatively, the install script at https://github.com/eclipse/codewind-che-plugin/tree/master/setup/install_che can be used instead.
+To setup a Codewind-ready install of Che, follow these instructions.
 
 
 # Table of Contents
