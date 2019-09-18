@@ -11,8 +11,7 @@ type: document
 # Setting up OpenShift on IKS (ROKS) for Codewind
 
 ## Prerequisites
-- Active your IBM Cloud account.
-   - Activate a paid account. Trial accounts cannot create OpenShift clusters.
+- Activate a paid IBM Cloud account. Trial accounts cannot create OpenShift clusters.
 - Start a running ROKS cluster with a minimum of 1 node, 4 CPU, and 16 GB RAM.
 - Start a running Network File System (NFS) server that the cluster can access and use for storage.
    - The default IBM Cloud Kubernetes Service (IKS) storage cannot be used.
