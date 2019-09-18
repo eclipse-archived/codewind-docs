@@ -5,7 +5,6 @@ description: New for Codewind tech preview
 keywords: news, new, updates, update, techpreview
 duration: 1 minute
 permalink: newstechpreview
-linkname: New for Codewind tech preview
 ---
 
 ## May 2019
@@ -14,9 +13,9 @@ In the tech preview, Codewind includes the following supported functions with th
 - Create projects from templates, build, and deploy.
 - Bind to existing projects, build, and deploy.
 - View all projects, including application and build statuses.
-- Debug and incrementally update Microprofile, Spring, and Node.js projects.
+- Debug and incrementally update MicroProfile, Spring, and Node.js projects.
 - View application and build logs.
-- View an overview of  project information.
+- View an overview of project information.
 - Integrate validation errors into the IDE problem views.
 - Open a shell session into an application container.
 - Toggle project auto build and manually initiate project builds.
@@ -35,7 +34,7 @@ This release includes the following limitations:
 - Two new Codewind extensions are added:
   - Appsody - Native IDE integration of Appsody for VS Code and Eclipse.
   - OpenAPI - Scaffold an application quickly from an OpenAPI definition in VS Code or Eclipse.
-- Support for multiple template repositories to allow adding Kabanero and Appsody templates to the Codewind configuration.
+- Support for multiple template repositories to allow adding Kabanero and Appsody templates to the Codewind configuration is added.
 - A Kabanero version of Che is included.
 - A new performance dashboard is added.
 - Landing page updates include a docs section and a Codewind introduction video.
