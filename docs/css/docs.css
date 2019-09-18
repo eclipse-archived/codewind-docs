@@ -28,6 +28,15 @@
 }
 
 
+:target:before {
+    content: "";
+    display: block;
+    margin-top: -115x;
+    height: 115px;
+    width: 1px;
+}
+
+
 .anchorjs-link {
   text-decoration: none;
 }
