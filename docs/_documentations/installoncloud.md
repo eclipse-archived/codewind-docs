@@ -29,8 +29,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
 - Ensure cluster can pull images from `docker.io/eclipse`
   - Both Eclipse Che and Eclipse Codewind hosts their docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have PodSecurityPolicies blocking it from accessing dockerhub.
-- Set up the ClusterRole.
-  - **Important:** If you are installing Che with the `deploy_che.sh` script for OpenShift, do this step *after* installing Che.
+- Set up the ClusterRole for Codewind.
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
