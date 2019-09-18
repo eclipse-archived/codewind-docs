@@ -18,7 +18,7 @@ To setup a Codewind-ready install of Che, follow these instructions.
 # Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Installing Che with chectl](#installing-che-with-chectl)
-3. [Enable privileged and root containers to run](#enable-privileged-and-root-containers-to-run)
+3. [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
 4. [After installing Che](#after-installing-che)
 5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
 6. [Updating the version](#updating-the-version)
@@ -48,10 +48,10 @@ Once `chectl` has been installed:
     - On OpenShift 3.x run the `chectl server:start --platform=openshift --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
     - On regular Kubernetes run: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
-## Enable privileged and root containers to run
-Codewind is currently required to run as privileged (as it builds container images) and as root. If your cluster is OpenShift 3.x, please run the following commands:
-1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:eclipse-che` to enable privileged containers
-2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:eclipse-che` to enable containers to run as root.
+## Enabling privileged and root containers to run
+Codewind is currently required to run as privileged (as it builds container images) and as root. If your cluster is OpenShift 3.x, please run the following commands, where `<che namespace>` is the namespace you installed Che in:
+1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>` to enable privileged containers
+2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>` to enable containers to run as root.
 
 ## After installing Che
 
