@@ -37,7 +37,7 @@ To setup a Codewind-ready install of Che, follow these instructions. Alternative
 
 ## Installing Che with chectl
 
-We recommend using the `chectl` CLI to install Eclipse Che for use with Codewind. For instructions on installing the `chectl` CLI tool, please see https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/
+We recommend using the `chectl` CLI to install Eclipse Che for use with Codewind. For instructions on installing the `chectl` CLI tool, please see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/)
 
 Once `chectl` has been installed:
 
