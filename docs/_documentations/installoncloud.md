@@ -46,7 +46,7 @@ Once `chectl` has been installed:
 2. Determine your ingress domain. If you're unsure of your ingress domain, ask your cluster administrator
 2. Install Che:
     - On OpenShift 3.x run the `chectl server:start --platform=openshift --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
-    - On regular Kubernetes run: `chectl server:start --platform=kubernetes --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
+    - On regular Kubernetes run: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
 ## Enable privileged and root containers to run
 Codewind is currently required to run as privileged (as it builds container images) and as root. If your cluster is OpenShift 3.x, please run the following commands:
