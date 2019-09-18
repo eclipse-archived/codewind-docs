@@ -36,7 +36,7 @@ parent: root
 
 The fastest way to install Eclipse Che for use with Codewind is to use the `chectl` CLI. For instructions on installing the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
-Once `chectl` has been installed:
+Complete the following steps after you install `chectl`:
 
 1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
