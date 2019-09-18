@@ -25,9 +25,9 @@ To setup a Codewind-ready install of Che, follow these instructions.
 
 ## Prerequisites
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
-  - For NFS, we recommend 777 permissions for the exported folders and ownership of `nobody:nogroup`
+  - For NFS, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
-- Ensure cluster can pull images from `docker.io/eclipse`
+- Ensure the cluster can pull images from `docker.io/eclipse`.
   - Both Eclipse Che and Eclipse Codewind hosts their docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have PodSecurityPolicies blocking it from accessing dockerhub.
 - Set up the ClusterRole for Codewind.
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
