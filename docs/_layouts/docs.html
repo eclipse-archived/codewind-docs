@@ -276,6 +276,14 @@
 					    class="{{cls}}">
 					    Using the OpenShift Registry
 	                </a>
+	                <a href="mdt-che-roks.html" 
+				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
+					    {% if "/mdt-che-roks" == page.url %}
+						    {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					    {% endif %}
+					    class="{{cls}}">
+					    Setting up OpenShift on IKS (ROKS) for Codewind
+	                </a>
 	                <a href="supportingmultipleusers.html" 
 				        {% assign cls = "bg-light list-group-item list-group-item-action" %}
 					    {% if "/supportingmultipleusers" == page.url %}
@@ -298,6 +306,15 @@
 				
 				           				
             </div>
+
+            <a href="convertingtohttps.html" 
+			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				{% if "/convertingtohttps" == page.url %}
+					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+				{% endif %}
+				class="{{cls}}">
+				Converting an application
+            </a>
 
             <a href="guide_performance.html" 
 			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
