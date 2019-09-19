@@ -34,7 +34,7 @@ You are now ready to use the tools. You can use the Codewind view to create new 
 
 2. Work with your project from within VS Code including:
     - Editing
-    - Debugging Microprofile/Java EE, Spring, and Node.js projects
+    - Debugging MicroProfile/Java EE, Spring, and Node.js projects
     - Opening the application in a browser
     - Viewing the logs
     - Opening a shell into the application container
