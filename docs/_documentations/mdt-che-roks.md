@@ -74,7 +74,7 @@ type: document
 ```
 systemctl restart nfs-kernel-server
 ```
-7. Download the persistent volute (PV) `.yaml` file and set the `<ip-address>` field to the IP address of the VPS.
+7. Download the persistent volume (PV) `.yaml` file from [nfs-pv.yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/nfs/nfs-pv.yaml) and set the `<ip-address>` field to the IP address of the VPS.
 8. Run the `oc apply -f che-nfs-pv.yaml` command to create the PVs on the OpenShift cluster.
 9. Disable the IBM Block Storage `storageclass`:
 ```
