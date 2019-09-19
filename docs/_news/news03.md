@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: news
 title: New for Codewind 0.3
 description: New for Codewind 0.3
 keywords: news, new, updates, update, version

@@ -50,7 +50,21 @@ code {
     position: relative;
     left: 70px;
 }
+.cw-header-link-text {
+	font-size: 16px;
+	font-weight: 600;
+}
+.cw-header-link-text:hover {
+	font-size: 16px;
+	font-weight: 600;
+}
+.cw-header-link-news {
+	padding-right: 33px;
+}
 
+.cw-header-link-docs {
+	padding-right:45px;
+}
 .cw-navbar-padding {
     padding-right: 70px;
 }
