@@ -40,10 +40,10 @@ Complete the following steps after you install `chectl`:
 
 1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
-2. Determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
+2. If you install on Kubernetes, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
     - Set the `spec.server.ingressDomain` field in the Che .yaml to the Ingress domain.
 2. Install Che:
-    - On OpenShift 3.x run the following command: `chectl server:start --platform=openshift --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
+    - On OpenShift 3.x run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file>`
     - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
 ## Enabling privileged and root containers to run
