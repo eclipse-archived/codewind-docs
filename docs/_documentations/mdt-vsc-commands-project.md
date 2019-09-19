@@ -53,26 +53,13 @@ This command is equivalent to clicking the **Build** button in the Codewind **Ov
 Project settings tell Codewind more about the specifics of your project and can affect the status and/or behaviour of your application. Project settings can be configured from the Project Overview page that is accessible from a project's context menu, or you can find the project settings in the `.cw-settings` file of the project which you can edit from the IDE. Changes to these fields are automatically picked up by the workspace.
 
 The list of supported project settings are:
-* [Internal debug port](#internal-debug-port)
-* [Internal application port](#internal-application-port)
 * [Context root](#context-root)
 * [Health check endpoint](#health-check-endpoint)
+* [HTTPS application](#https-application)
+* [Internal application port](#internal-application-port)
+* [Internal debug port](#internal-debug-port)
 * [Maven profiles](#maven-profiles)
 * [Paths to ignore for file changes](#paths-to-ignore-for-file-changes)
-
-#### **Internal debug port**
-`internalDebugPort: <string>`
-- Only applicable to Microprofile, Spring and Node.js projects
-- Only applicable to a local installation of Codewind
-- Can be assigned to a non-exposed port, and Codewind will help expose the port for you
-- If the project is already in debug mode, the project will need to be restarted in debug mode again in order to pick up the new debug port
-- If the project is in run mode, the new debug port will be picked up and used the next time a restart in debug mode is done
-
-#### **Internal application port**
-`internalPort: <string>`
-- Expected to be exposed, Codewind will not expose the port automatically
-- This value is used by Codewind in conjunction with the context root to determine the project state
-- If an incorrect port is set, the project will be stuck in starting state
 
 #### **Context root**
 `contextRoot: <string>`
@@ -88,6 +75,26 @@ The list of supported project settings are:
 - Expected to be used for the application health check endpoint
 - If a wrong health check endpoint is set, the project will be stuck in starting state
 - If the health check endpoint is set, the context root will not be used to determine the project state
+
+#### HTTPS application
+`isHttps: <boolean>`
+- This value tells Codewind to use the HTTPS protocol when Codewind detects the application status and also when Codewind launches the application in a browser.
+- If your application supports HTTPS, set `isHttps` to `true`, and Codewind uses HTTPS instead of HTTP to detect application status and to open browser URLs.
+- The default value of this setting is `false`.
+
+#### **Internal application port**
+`internalPort: <string>`
+- Expected to be exposed, Codewind will not expose the port automatically
+- This value is used by Codewind in conjunction with the context root to determine the project state
+- If an incorrect port is set, the project will be stuck in starting state
+
+#### **Internal debug port**
+`internalDebugPort: <string>`
+- Only applicable to Microprofile, Spring and Node.js projects
+- Only applicable to a local installation of Codewind
+- Can be assigned to a non-exposed port, and Codewind will help expose the port for you
+- If the project is already in debug mode, the project will need to be restarted in debug mode again in order to pick up the new debug port
+- If the project is in run mode, the new debug port will be picked up and used the next time a restart in debug mode is done
 
 #### **Paths to ignore for file changes**
 `ignoredPaths: <string[]>`
