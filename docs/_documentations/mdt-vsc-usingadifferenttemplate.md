@@ -15,6 +15,7 @@ parent: usingcodewind
 When you create a new project, you can choose from the default set of templates available, or you can choose from a template source of your own. Use Codewind to manage templates. Templates can make application development easier by providing a structure and boilerplate code to help get a new project started.
 
 - To open the Template Source Manager, right-click **Projects (Local)**.
-- Click **Manage Template Sources** to add a source to the table.
+- Click **Manage Template Sources** to open the Template Sources wizard.
+- In the wizard, click **Add New** to add a source to the table.
 - Enable a source to make that source template appear in the Create Project wizard.
 - Disable a source to remove that source template from the Create Project wizard.
