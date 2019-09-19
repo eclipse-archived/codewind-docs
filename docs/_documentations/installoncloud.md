@@ -10,96 +10,46 @@ order: 20
 parent: root
 ---
 
-# Setting up a Codewind-ready install of Che
-
-To setup a Codewind-ready install of Che, follow these instructions. Alternatively, the install script at https://github.com/eclipse/codewind-che-plugin/tree/master/setup/install_che can be used instead.
-
+# Installing Codewind on Eclipse Che
 
 # Table of Contents
 1. [Prerequisites](#prerequisites)
-2. [Installing Che with the operator](#installing-che-with-the-operator)
-3. [Setting up OKD and OpenShift](#setting-up-okd-and-openshift)
-4. [Setting up other Kubernetes](#setting-up-other-kubernetes)
-5. [After installing Che](#after-installing-che)
-6. [Creating the Codewind workspace](#creating-the-codewind-workspace)
-7. [Updating the version](#updating-the-version)
+2. [Installing Che with chectl](#installing-che-with-chectl)
+3. [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
+4. [After installing Che](#after-installing-che)
+5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
+6. [Updating the version](#updating-the-version)
 
 ## Prerequisites
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
-  - For NFS, if running on IBM Cloud Private, follow these instructions:[NFS Storage Install Instructions](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage?lang=en) and use 777 permissions for the folders.
+  - For NFS, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
-- Set up the ClusterRole.
-  - **Important:** If you are installing Che with the `deploy_che.sh` script for OpenShift, do this step *after* installing Che.
+- Ensure the cluster can pull images from `docker.io/eclipse`.
+  - Both Eclipse Che and Eclipse Codewind host their Docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have `PodSecurityPolicies` blocking it from accessing Docker Hub.
+- Set up the ClusterRole for Codewind.
   1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
   4. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
 
-## Installing Che with the operator
+## Installing Che with chectl
 
-For instructions on installing Che with the Che operator, please see the [Eclipse Che operator on Operator Hub](https://operatorhub.io/operator/eclipse-che).
+The fastest way to install Eclipse Che for use with Codewind is to use the `chectl` CLI. For instructions on installing the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
-**Note:** Complete the following steps before you create your `CheCluster` custom resource.
+Complete the following steps after you install `chectl`:
 
-1. Create the `eclipse-codewind` cluster role: `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml`.
+1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
+    - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+2. If you install on Kubernetes, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
+    - Set the `spec.server.ingressDomain` field in the Che .yaml to the Ingress domain.
+2. Install Che:
+    - On OpenShift 3.x run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file>`
+    - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
-2. Ensure the following fields in your `CheCluster` `.yaml` file are set:
-- The `spec.server.cheWorkspaceClusterRole` field is set to `eclipse-codewind`, which was created when you previously applied the Codewind ClusterRole.
-- The `spec.storage.preCreateSubPaths` field is set to `true`.
-
-## Setting up OKD and OpenShift
-
-### Installing Che with deployment scripts
-
-If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip these steps:
-
-1. Git clone the [Eclipse Che repository](https://github.com/eclipse/che).
-2. Enter the `cd` command to go to the `deploy/openshift` directory.
-3. Deploy Che with `./deploy_che.sh`.
-4. From the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin) run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
-5. From the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin) run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
-
-### Enable privileged and root containers to run
-Codewind is currently required to run as privileged (as it builds container images) and as root. Run the following commands to enable that functionality:
-1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:eclipse-che` to enable privileged containers
-2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:eclipse-che` to enable containers to run as root.
-
-## Setting up other Kubernetes
-
-### IBM Cloud Private: Set the ClusterImagePolicy
-If you're running on IBM Cloud Private, you must add the images that Che uses to the ClusterImagePolicy before deploying Che:
-1. Log in to the IBM Cloud Private cluster.
-2. Run the `kubectl edit clusterimagepolicy` command. Then, add the following lines:
-  ```
-  - name: gcr.io/*
-  - name: docker.io/*
-  ```
-
-### Step 1: Setting up the Che Helm chart
-
-If the Che operator was not used to install Eclipse Che, follow these steps instead. Otherwise skip these steps:
-
-1. Clone the [Che repository](https://github.com/eclipse/che).
-2. Enter the `cd` command to go to the `deploy/kubernetes/helm/che` directory. Then, edit the `values.yaml` file.
-   - Set up multiuser if you need the multiple users feature: `multiuser: true`
-
-
-### Step 2: Installing Che with the Helm chart
-Clone the [Che repository](https://github.com/eclipse/che).
-1. Enter the `cd` command to go to the `deploy/kubernetes/helm/che` directory.
-2. Run the `helm dependency update` command.
-3. Run the following command:
-    ```
-    helm upgrade --install che --namespace <ns> \
-        --set cheImage=eclipse/che-server:7.0.0 \
-        --set global.ingressDomain=<cluster proxy ip>.nip.io \
-        --set global.cheWorkspaceClusterRole=eclipse-codewind \
-        --set global.cheWorkspacesNamespace=<ns> \
-        --set che.workspace.devfileRegistryUrl="https://che-devfile-registry.openshift.io/" \
-        --set che.workspace.pluginRegistryUrl="https://che-plugin-registry.openshift.io/v3" ./
-    ```
-               
-Append the `--tls` flag if the tiller is configured with SSL in your Kubernetes cluster.
+## Enabling privileged and root containers to run
+Codewind is required to run as privileged and as root, because it builds container images. If your cluster is OpenShift 3.x, run the following commands, where `<che namespace>` is the namespace you installed Che in:
+1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>` to enable privileged containers.
+2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>` to enable containers to run as root.
 
 ## After installing Che
 
@@ -116,18 +66,6 @@ Complete the following instructions to add the registries:
 
 For further information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html)
 
-### Optional: Hosting a Devfile for creating the Che workspace with Codewind
-
-Skip this step if you are using the devfiles that Codewind provides by default. If you wish to host your own devfile, follow these instructions:
-
-1. Clone the [Codewind Che plug-in repositoryhttps://github.com/eclipse/codewind-che-plugin).
-2. Make your modifications as you see fit.
-3. The `devfile.yaml` and `meta.yaml` files need to be hosted in a location that Che can access, such as Github.
-4. In `devfile.yaml`, modify the `codewind-sidecar` and `codewind-theia` components so that their ID formats match.
-For example, `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-sidecar/0.3.0/meta.yaml
-` and `https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/plugins/codewind/codewind-theia/0.3.0/meta.yaml
-` host the `meta.yaml` files.
-
 ## Creating the Codewind workspace
 
 ### Confirm the Docker registry secrets.
@@ -141,7 +79,7 @@ http://<che ingress domain>/f?url=<hosted devfile URL>
 
 We provide a ready-to-use devfile with the Codewind plug-ins. Enter the following URL to create a workspace from the devfile:
 ```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.3.0/devfile.yaml
+http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.4/devfile.yaml
 ```
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles
