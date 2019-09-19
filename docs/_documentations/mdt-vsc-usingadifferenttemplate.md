@@ -16,4 +16,5 @@ When you create a new project, you can choose from the default set of templates 
 
 - To open the Template Source Manager, right-click **Projects (Local)**.
 - Click **Manage Template Sources** to add a source to the table.
-- Enable or disable a source type to view the sources of that type in the wizard.
+- Enable a source to make that source template appear in the Create Project wizard.
+- Disable a source to remove that source template from the Create Project wizard.
