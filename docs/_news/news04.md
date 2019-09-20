@@ -8,6 +8,7 @@ permalink: news04
 ---
 
 ## Codewind 0.4.0
+Friday 20 September 2019
 
 #### Appsody
 - Appsody is updated to use the Appsody Codewind Version 0.4.0 extension.
