@@ -3,6 +3,24 @@
     margin-right: 0;
 }
 
+
+
+:target:before {
+    content: "";
+    display: block;
+    margin-top: -115x;
+    height: 115px;
+    width: 1px;
+}
+
+
+.anchorjs-link {
+  text-decoration: none;
+}
+*:hover > .anchorjs-link {
+	text-decoration: none;
+}
+
 #sidebar-container {
     min-height: 100vh;
     padding: 0;
