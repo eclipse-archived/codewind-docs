@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: news
 title: New for Codewind tech preview
 description: New for Codewind tech preview
 keywords: news, new, updates, update, techpreview
