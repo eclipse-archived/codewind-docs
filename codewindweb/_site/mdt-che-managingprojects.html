@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112407000-2');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS8HHSF');
+</script>
+<!-- End Google Tag Manager -->
+
+<head>
+    	<base href="/codewind/" />
+	<title>Managing Codewind projects | Codewind</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="How to work with your Codewind projects in Eclipse">
+	<meta name="keywords" content="run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind Explorer view in Eclipse, project actions, attach, build, disable, enable, vali..."/>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/docs.css">
+	
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8HHSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="main">
+    <!-- Bootstrap NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light cw-banner fixed-top" aria-label="topnav">
+    		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img alt="Codewind logo image"  title="Codewind logo image" src="images/header-logo.svg" class="cw-header-logo" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end cw-navbar-padding" id="navbarNavDropdown">
+            <ul class="navbar-nav cw-navbar-nav">
+                
+                <li class="nav-item cw-navbar-item cw-header-link-docs">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="gettingstarted.html">Docs</a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="news04.html">News</a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/banner/twitter.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/banner/youtube.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/banner/mattermost.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" data-toggle="tooltip" data-placement="top" id="cw_github_stars" title="..." src="images/banner/github.svg"/></a>
+                </li>
+                <!-- li class="nav-item cw-navbar-item" id="download-li">
+                    <button onClick="window.location.href='https://microclimate.dev/download/codewind';" type="button" class="btn cw-download-button">Download</button>
+                    <a href="https://microclimate.dev/download/codewind" class="nav-link cw-nav-link cw-download-link" href="#">Download</a>
+                </li>  -->
+
+
+                
+                <!-- Smaller devices menu END -->
+
+            </ul>
+        </div>
+
+    	</nav>
+    	<!-- End Bootstrap NavBar -->
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
+        <!-- Bootstrap List Group -->
+        <ul class="list-group sticky-top bg-light cw-sticky-offset">
+            
+            <!-- Hard coded TOC -->
+            <!-- Start single page getting started -->
+            
+			<a href="gettingstarted.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Getting started
+            </a>
+            
+            <!-- End single page getting started -->
+            <!-- 
+            <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                Getting started
+                <span class="submenu-icon"></span>
+            </a>
+            
+            <div id="install_on_cloud" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="mdteclipsegettingstarted.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in Eclipse
+                </a>
+                <a href="mdt-vsc-getting-started.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in VS Code
+                </a>
+                <a href="installoncloud.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in Che for Cloud deployments
+                </a>
+                <a href="importedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Importing projects
+                </a>
+            </div>     
+             -->
+            <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Developing with Codewind</span>
+                    <span class="submenu-icon"></span>
+                </div>
+            </a>
+            <div id="dev_with_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for Eclipse
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - eclipse -->
+                <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdteclipseoverview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                
+	                
+	                <a href="mdt-eclipse-installinfo.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Codewind for Eclipse
+	                </a>
+	                
+	                <a href="mdteclipseusingadifferenttemplate.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using a template repository of your own
+	                </a>
+	                <a href="mdteclipseimportedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Adding existing projects
+	                </a>
+	                <a href="mdteclipsemanagingprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Managing Codewind projects
+	                </a>
+	                <a href="mdteclipsebuildproject.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Building Codewind projects
+	                </a>
+	                <a href="mdteclipsedebugproject.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Debugging Codewind projects
+	                </a>
+	                <a href="mdteclipsetroubleshooting.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Troubleshooting Codewind for Eclipse
+	                </a>
+	                <a href="mdteclipseuninstall.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Uninstalling Codewind for Eclipse
+	                </a>
+                </div>
+                <!-- end 3d level eclipse -->
+				<!-- vs code -->
+				<a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for VS Code
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - vscode -->
+                <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-vsc-overview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                <a href="mdt-vsc-installinfo.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Codewind for VS Code
+	                </a>
+	                <a href="mdt-vsc-usingadifferenttemplate.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using a template repository of your own
+	                </a>
+	                <a href="mdt-vsc-importedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Adding existing projects
+	                </a>
+	                <a href="mdt-vsc-tutorial.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Tutorial
+	                </a>
+	                <a href="mdt-vsc-commands-overview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Commands overview
+	                </a>
+	                <a href="mdt-vsc-commands-project.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Project commands
+	                </a>
+	                <a href="mdt-vsc-commands-restart-and-debug.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Restart and debug commands
+	                </a>
+	                <a href="mdt-vsc-troubleshooting.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Troubleshooting
+	                </a>
+	                <a href="mdt-vsc-uninstall.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Uninstalling
+	                </a>
+	            </div>
+	            
+				<!--  end vscode  -->
+				
+				
+				<!-- che -->
+				<a href="#codewind_for_che" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for Eclipse Che
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - che -->
+                <div id="codewind_for_che" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="installoncloud.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                <a href="dockerregistry.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Docker Registry Guidance
+	                </a>
+	                <a href="openshiftregistry.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using the OpenShift Registry
+	                </a>
+	                <a href="mdt-che-roks.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Setting up OpenShift on IKS (ROKS) for Codewind
+	                </a>
+	                <a href="supportingmultipleusers.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Support for multiple users
+	                </a>
+	                <a href="viewkibanalogs.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Kibana and filtering logs in IBM Cloud Private
+	                </a>
+	            </div>
+	            
+				<!--  end che  -->
+				
+				           				
+            </div>
+
+            <a href="guide_performance.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Performance monitoring
+            </a>
+
+            <a href="codewindandtektonpipelines.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Codewind and Tekton pipelines
+            </a>
+
+			<a href="#openapi_tools" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">OpenAPI Tools</span>
+                    <span class="submenu-icon"></span>
+                </div>
+            </a>
+            <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="open-api-tools-for-vscode.html" 
+			    
+			    
+				class="bg-light list-group-item list-group-item-action">
+				Codewind OpenAPI Tools for VS Code
+				</a>
+				<a href="open-api-tools-for-eclipse.html" 
+				   
+				   
+			    class="bg-light list-group-item list-group-item-action">
+			    Codewind OpenAPI Tools for Eclipse
+				</a>
+            </div>
+            
+            <a href="troubleshooting.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action flex-column align-items-start">
+				Troubleshooting
+            </a>
+          
+            <!-- END hard coded TOC -->
+
+            
+        </ul>
+        <!-- List Group END-->
+    </div>
+    <!-- sidebar-container END -->
+    <!-- MAIN -->
+    <div id="content-container">
+    		<div class="py-5 px-5">
+    		    <div class="cw-docs-spacer"></div>
+        		<div role="main"><h1 id="managing-codewind-projects">Managing Codewind projects</h1>
+
+<p>You can work with your Codewind projects from the <strong>Codewind Explorer</strong> view in Eclipse. If the view is not showing, open it as follows:</p>
+
+<ul>
+  <li>From the <strong>Window</strong> menu select <strong>Show View</strong> &gt; <strong>Other</strong>.</li>
+  <li>Start typing <strong>Codewind</strong> in the filter field or locate and expand the <strong>Codewind</strong> entry in the list.</li>
+  <li>Select <strong>Codewind Explorer</strong> and click <strong>Open</strong>.</li>
+</ul>
+
+<p>To create a new project or import an existing one, use the context menu on the <strong>Local Projects</strong> item in the <strong>Codewind Explorer</strong> view.  Once you have a project, the first thing you might want to do is import your project into the Eclipse workspace so you can start editing files. This also makes your source available for debugging.</p>
+
+<p>Each project shows the application status and the build status. A context menu on each project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more.</p>
+
+<h2 id="project-actions">Project actions</h2>
+
+<p>The following actions are available by right clicking on the project in the <strong>Codewind Explorer</strong> view. Most actions are only available if the project is enabled.</p>
+
+<p>Some actions open the default Eclipse browser. If you find that the default Eclipse browser cannot handle the content, change the default browser by navigating to <strong>Window</strong> &gt; <strong>Web Browser</strong> and selecting a different browser from the list.</p>
+
+<ul>
+  <li><strong>Open Application</strong>: Opens the application in the default Eclipse browser. This action is only available when the application is running or debugging.</li>
+  <li><strong>Open Project Overview</strong>: Opens the overview page for this project. You can use this to see information about the project, enable or disable the project, turn auto build on and off, or edit project settings.</li>
+  <li><strong>Open Container Shell</strong>: Opens a shell into your application container. This action is only available when the container is active.</li>
+  <li><strong>Open Application Monitor</strong>: Opens the application monitor in the default Eclipse browser. Use this to monitor the activity and health of your application. This action is only available when the application is running or debugging.</li>
+  <li><strong>Import Project</strong>: Imports your project into the Eclipse workspace.</li>
+  <li><strong>Show Log Files</strong>: If log files are available, this action displays a list of log files. In the Eclipse <strong>Console</strong> view, click a log file to open it, or click <strong>Show All</strong> to open all available log files. The individual log files are toggle actions. Click the log file again to remove the log file, or click <strong>Hide All</strong> to remove all log files from the <strong>Console</strong> view.</li>
+  <li><strong>Restart in Run Mode</strong>: Restarts the application in run mode.</li>
+  <li><strong>Restart in Debug Mode</strong>: Restarts the application in debug mode and attaches the debugger. Only Microprofile/Java EE, Spring, and Node.js projects can be debugged. For more information, see <a href="mdteclipsedebugproject.html">Debugging Codewind projects</a>.</li>
+  <li><strong>Attach Debugger</strong>: If you detached the debugger accidentally or restarted Eclipse, use this to re-attach the debugger to an application in debug mode. For more information, see <a href="mdteclipsedebugproject.html">Debugging Codewind projects</a>.</li>
+  <li><strong>Build</strong>: Initiate a build of your project. This action is not available if a build is already running. For more information, see <a href="mdteclipsebuildproject.html">Building Codewind projects</a>.</li>
+  <li><strong>Disable Auto Build</strong>: Use this to disable automatic builds if you are making a lot of changes and don’t want builds to be triggered until you are done. This action is only available when auto build is enabled.</li>
+  <li><strong>Enable Auto Build</strong>: Use this to re-enable automatic builds whenever a change is made. This action is only available when auto build is disabled.</li>
+  <li><strong>Remove</strong>: Removes a project. This action removes the project from Codewind.  You can then use Eclipse to delete the project from the Eclipse workspace and the file system.</li>
+  <li><strong>Refresh</strong>: If the project gets out of sync, use this option to refresh it. To refresh all projects, right click on the <strong>Local Projects</strong> item in the <strong>Codewind Explorer</strong> view and select <strong>Refresh</strong>.</li>
+</ul>
+</div>
+        </div>
+        
+    </div>
+    
+</div>
+<!-- footer row -->
+<footer>
+
+<div class="row" id="footer-div-mobile">
+        
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermose icon"  title="mattermose icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		
+    </div>
+    
+    
+    <div class="row" id="footer-div">
+        <div class="cw-footer-left">
+        		<div class="px-5 cw-font-12>
+	        <span class="cw-font-14">Useful Links:</span>
+	        <br/><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+	        </div>
+	        
+        </div>
+        <div class="cw-footer-border-right"></div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center cw-footer-desktop">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"   title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		<div class="cw-footer-border-right"></div>
+		<div class="cw-footer-right cw-footer-same-height cw-footer-vcenter">
+		<div class="cw-footer-eclipse-img cw-footer-same-height px-5 ">
+	        
+		<a href="http://www.eclipse.org">
+		<img alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/>
+		</a>
+	        </div>
+		</div>
+    </div>
+</footer>
+<!-- footer row END -->
+<!-- Main Col END -->
+ <!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+</script>
+
+<script src="js/jquery.matchHeight-min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/docs.js"></script>
+
+</div>
+</body>
+
+</html>
+ 
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+ <script>
+$(document).ready(function(){
+	
+    anchors.options.placement = 'left';
+    anchors.add('h1');
+    anchors.add('h2');
+    anchors.add('h3');
+    anchors.add('h4');
+});
+</script>

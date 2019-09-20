@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112407000-2');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS8HHSF');
+</script>
+<!-- End Google Tag Manager -->
+
+<head>
+    	<base href="/codewind/" />
+	<title>Troubleshooting | Codewind</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Troubleshooting Codewind">
+	<meta name="keywords" content="troubleshooting, issues, workaround, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/docs.css">
+	
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8HHSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="main">
+    <!-- Bootstrap NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light cw-banner fixed-top" aria-label="topnav">
+    		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img alt="Codewind logo image"  title="Codewind logo image" src="images/header-logo.svg" class="cw-header-logo" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end cw-navbar-padding" id="navbarNavDropdown">
+            <ul class="navbar-nav cw-navbar-nav">
+                
+                <li class="nav-item cw-navbar-item cw-header-link-docs">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="gettingstarted.html">Docs</a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="news04.html">News</a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/banner/twitter.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/banner/youtube.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/banner/mattermost.svg"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" data-toggle="tooltip" data-placement="top" id="cw_github_stars" title="..." src="images/banner/github.svg"/></a>
+                </li>
+                <!-- li class="nav-item cw-navbar-item" id="download-li">
+                    <button onClick="window.location.href='https://microclimate.dev/download/codewind';" type="button" class="btn cw-download-button">Download</button>
+                    <a href="https://microclimate.dev/download/codewind" class="nav-link cw-nav-link cw-download-link" href="#">Download</a>
+                </li>  -->
+
+
+                
+                <!-- Smaller devices menu END -->
+
+            </ul>
+        </div>
+
+    	</nav>
+    	<!-- End Bootstrap NavBar -->
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
+        <!-- Bootstrap List Group -->
+        <ul class="list-group sticky-top bg-light cw-sticky-offset">
+            
+            <!-- Hard coded TOC -->
+            <!-- Start single page getting started -->
+            
+			<a href="gettingstarted.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Getting started
+            </a>
+            
+            <!-- End single page getting started -->
+            <!-- 
+            <a href="#install_on_cloud" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                Getting started
+                <span class="submenu-icon"></span>
+            </a>
+            
+            <div id="install_on_cloud" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="mdteclipsegettingstarted.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in Eclipse
+                </a>
+                <a href="mdt-vsc-getting-started.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in VS Code
+                </a>
+                <a href="installoncloud.html" 
+			        
+				    
+				    class="bg-light list-group-item list-group-item-action">
+				    Installing in Che for Cloud deployments
+                </a>
+                <a href="importedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Importing projects
+                </a>
+            </div>     
+             -->
+            <a href="#dev_with_codewind" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Developing with Codewind</span>
+                    <span class="submenu-icon"></span>
+                </div>
+            </a>
+            <div id="dev_with_codewind" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="#codewind_for_eclipse" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for Eclipse
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - eclipse -->
+                <div id="codewind_for_eclipse" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdteclipseoverview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                
+	                
+	                <a href="mdt-eclipse-installinfo.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Codewind for Eclipse
+	                </a>
+	                
+	                <a href="mdteclipseusingadifferenttemplate.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using a template repository of your own
+	                </a>
+	                <a href="mdteclipseimportedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Adding existing projects
+	                </a>
+	                <a href="mdteclipsemanagingprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Managing Codewind projects
+	                </a>
+	                <a href="mdteclipsebuildproject.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Building Codewind projects
+	                </a>
+	                <a href="mdteclipsedebugproject.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Debugging Codewind projects
+	                </a>
+	                <a href="mdteclipsetroubleshooting.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Troubleshooting Codewind for Eclipse
+	                </a>
+	                <a href="mdteclipseuninstall.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Uninstalling Codewind for Eclipse
+	                </a>
+                </div>
+                <!-- end 3d level eclipse -->
+				<!-- vs code -->
+				<a href="#codewind_for_vscode" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for VS Code
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - vscode -->
+                <div id="codewind_for_vscode" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="mdt-vsc-overview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                <a href="mdt-vsc-installinfo.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Codewind for VS Code
+	                </a>
+	                <a href="mdt-vsc-usingadifferenttemplate.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using a template repository of your own
+	                </a>
+	                <a href="mdt-vsc-importedprojects.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Adding existing projects
+	                </a>
+	                <a href="mdt-vsc-tutorial.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Tutorial
+	                </a>
+	                <a href="mdt-vsc-commands-overview.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Commands overview
+	                </a>
+	                <a href="mdt-vsc-commands-project.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Project commands
+	                </a>
+	                <a href="mdt-vsc-commands-restart-and-debug.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Restart and debug commands
+	                </a>
+	                <a href="mdt-vsc-troubleshooting.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Troubleshooting
+	                </a>
+	                <a href="mdt-vsc-uninstall.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Uninstalling
+	                </a>
+	            </div>
+	            
+				<!--  end vscode  -->
+				
+				
+				<!-- che -->
+				<a href="#codewind_for_che" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                    Codewind for Eclipse Che
+                    <span class="submenu-icon"></span>
+                </a>
+                
+                <!-- 3d level - che -->
+                <div id="codewind_for_che" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+	                <a href="installoncloud.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Overview
+	                </a>
+	                <a href="dockerregistry.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Docker Registry Guidance
+	                </a>
+	                <a href="openshiftregistry.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Using the OpenShift Registry
+	                </a>
+	                <a href="mdt-che-roks.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Setting up OpenShift on IKS (ROKS) for Codewind
+	                </a>
+	                <a href="supportingmultipleusers.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Support for multiple users
+	                </a>
+	                <a href="viewkibanalogs.html" 
+				        
+					    
+					    class="bg-light list-group-item list-group-item-action">
+					    Installing Kibana and filtering logs in IBM Cloud Private
+	                </a>
+	            </div>
+	            
+				<!--  end che  -->
+				
+				           				
+            </div>
+
+            <a href="guide_performance.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Performance monitoring
+            </a>
+
+            <a href="codewindandtektonpipelines.html" 
+			    
+				
+				class="bg-light list-group-item list-group-item-action">
+				Codewind and Tekton pipelines
+            </a>
+
+			<a href="#openapi_tools" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">OpenAPI Tools</span>
+                    <span class="submenu-icon"></span>
+                </div>
+            </a>
+            <div id="openapi_tools" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+                <a href="open-api-tools-for-vscode.html" 
+			    
+			    
+				class="bg-light list-group-item list-group-item-action">
+				Codewind OpenAPI Tools for VS Code
+				</a>
+				<a href="open-api-tools-for-eclipse.html" 
+				   
+				   
+			    class="bg-light list-group-item list-group-item-action">
+			    Codewind OpenAPI Tools for Eclipse
+				</a>
+            </div>
+            
+            <a href="troubleshooting.html" 
+			    
+				
+				class="cw-current-page bg-light list-group-item list-group-item-action flex-column align-items-start">
+				Troubleshooting
+            </a>
+          
+            <!-- END hard coded TOC -->
+
+            
+        </ul>
+        <!-- List Group END-->
+    </div>
+    <!-- sidebar-container END -->
+    <!-- MAIN -->
+    <div id="content-container">
+    		<div class="py-5 px-5">
+    		    <div class="cw-docs-spacer"></div>
+        		<div role="main"><!-- NOTE: The '***' before each level one title adds a line to the final output, which helps this topic to be more readable and easier to consume. -->
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<p>The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don’t see your issue here, please check our <a href="https://github.com/eclipse/codewind/issues">GitHub repository</a>. If you still don’t see your issue, you can open a new issue in the repository.</p>
+
+<ul>
+  <li><a href="#installing-codewind">Installing Codewind</a></li>
+  <li><a href="#creating-a-new-project">Creating a new project</a></li>
+  <li><a href="#importing-a-project">Importing a project</a></li>
+  <li><a href="#understanding-application-metrics">Understanding Application Metrics</a></li>
+  <li><a href="#checking-the-application-and-build-statuses">Checking the application and build statuses</a></li>
+  <li><a href="#editing-your-project">Editing your project</a></li>
+  <li><a href="#disabling-development-on-specific-projects">Disabling development on specific projects</a></li>
+  <li><a href="#appsody-with-codewind">Appsody with Codewind</a></li>
+  <li><a href="#codewind-and-tekton-pipelines">Codewind and Tekton pipelines</a></li>
+  <li><a href="#openapi-tools">OpenAPI tools</a></li>
+</ul>
+
+<!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
+
+<hr />
+
+<h1 id="installing-codewind">Installing Codewind</h1>
+
+<!--
+Action/Topic: Installing Codewind
+Issue type: bug/info
+Issue links: https://github.com/docker/for-win/issues/1560, https://github.com/eclipse/codewind-installer/issues/35, https://github.com/eclipse/codewind-installer/issues/40
+0.2.0: Still present
+-->
+
+<h2 id="installer-fails-with-mount-issues-on-windows">Installer fails with mount issues on Windows</h2>
+<p>If you try to install Codewind on Windows 10 and use Docker, you might see the following error:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
+
+ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
+Encountered errors while bringing up the project.
+</code></pre></div></div>
+
+<p><strong>Workaround:</strong>
+Enter the following command and install again:</p>
+<ol>
+  <li>Enter the <code class="highlighter-rouge">docker volume rm -f /host_mnt/c</code> command.</li>
+  <li>Restart Docker and run the installer again.</li>
+</ol>
+
+<p>If the command and another installation attempt don’t succeed, complete the following steps instead:</p>
+<ol>
+  <li>Uninstall Codewind and remove all the images with the <code class="highlighter-rouge">docker system prune -a</code> command.</li>
+  <li>From the Docker settings dialog box, reset Docker to the factory default to resolve the mount issues.</li>
+</ol>
+
+<p>For more information, see <a href="https://github.com/docker/for-win/issues/1560">this issue about Docker mounts on Windows</a>.</p>
+
+<!--
+Action/Topic : Installing Codewind
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="docker-shared-drive-not-accepting-os-credentials-for-windows">Docker Shared Drive not accepting OS credentials for Windows</h2>
+<p>When using OS authentication setups (for example, AzureAD), Docker Shared Drive might not accept your OS credentials.</p>
+
+<p><strong>Workaround:</strong> Create a new user account.</p>
+<ol>
+  <li>Navigate to <strong>Settings</strong> -&gt; <strong>Accounts</strong> -&gt; <strong>Family &amp; other people</strong> -&gt; <strong>Add someone else to this PC</strong> -&gt; <strong>I don’t have this person’s sign-in information</strong> -&gt; <strong>Add a user without a Microsoft account</strong>.</li>
+  <li>Create the new account with the same username but without the prefix (for example, if your AzureAD account is <code class="highlighter-rouge">AzureAD/BobSmith</code>, your new local account should be <code class="highlighter-rouge">BobSmith</code>). Use the same password as your other account.</li>
+  <li>Select your new local account and click <strong>Change account type</strong>. Select the dropdown menu and select <strong>Administrator</strong>. Share the drive again in Docker.</li>
+</ol>
+
+<!--
+Action/Topic : Installing Codewind
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="unable-to-create-multiple-codewind-workspaces-on-docker-desktop-kubernetes">Unable to create multiple Codewind workspaces on Docker Desktop Kubernetes</h2>
+<p>When running a Docker Desktop local Kubernetes cluster, multiple Codewind workspaces may fail to start.</p>
+
+<p><strong>Workaround:</strong>
+Use only one Codewind Che workspace on Docker Desktop for the time being, or use an alternative local Kubernetes cluster such as Minikube or Minishift. Due to how Docker Desktop handles networking, multiple Codewind workspaces may cause a collision on the port that it’s running on.</p>
+
+<hr />
+<h1 id="creating-a-new-project">Creating a new project</h1>
+
+<!--
+Action/Topic: Creating a new project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="projects-created-never-start-after-installing-codewind">Projects created never start after installing Codewind</h2>
+<p>Intermittently, after installing Codewind on Windows, projects can be created, but they never start and instead remain in the <strong>Starting</strong> state. A Docker issue for Windows exists where, although it shows a volume is mounted, it does not allow any writing to the volume. To check if this issue is present, verify that a <code class="highlighter-rouge">codewind-workspace</code> exists (in your $HOME directory on Mac/Linux, or the root of your C: directory on Windows) and verify you can see your project folders created within.</p>
+
+<p><strong>Workaround:</strong> This issue can appear for many reasons, so you have many possible workarounds. First, open the <code class="highlighter-rouge">Docker</code>-&gt;<code class="highlighter-rouge">Settings</code>-&gt;<code class="highlighter-rouge">Shared Drives</code> directory to confirm that you have a shared drive. If you have one selected, unselect it, click <strong>Apply</strong>, and then try creating projects again. If you’re still noticing the problem, and you’re using an ID for the shared drive that is not your current user, check that the ID being used doesn’t have an expired password that requires a password reset. Reset the password if necessary.</p>
+
+<!--
+Action/Topic: Creating a new project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link:
+0.2.0: Issue still present
+-->
+<h2 id="codewind-che-extension-loses-connectivity-to-the-codewind-pod">Codewind Che extension loses connectivity to the Codewind pod</h2>
+<p>The Codewind Che extension might lose connectivity to the Codewind pod during a Lagom or Swift project build if you have multiple projects in the workspace for each runtime type. When this issue occurs, the project tree says <strong>Disconnected</strong>.</p>
+
+<p><strong>Workaround:</strong> Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.</p>
+
+<h1 id="importing-a-project">Importing a project</h1>
+
+<!--
+Action/Topic: Importing a project.
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="imported-project-never-builds-or-starts">Imported project never builds or starts</h2>
+<p>To view the status of the imported project, enter the following command:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs codewind-pfe
+</code></pre></div></div>
+
+<p><strong>Workaround:</strong> If you see the following messages, the imported project is likely not a valid Codewind project.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>build-log requested, no build log found for project &lt;project name&gt;
+build-log requested, no build log found for project &lt;project name&gt;
+build-log requested, no build log found for project &lt;project name&gt;
+build-log requested, no build log found for project &lt;project name&gt;
+No containerId for running project &lt;project name&gt;
+</code></pre></div></div>
+
+<!--
+Action/Topic: Importing a project.
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/243
+18.10:
+-->
+<h2 id="adding-an-existing-open-liberty-project-fails-to-build-because-of-missing-files">Adding an existing Open Liberty project fails to build because of missing files</h2>
+<p>An Open Liberty project fails to build after it is added into Codewind with the <strong>Add Existing Project</strong> action, and the project fails to build because of missing files.</p>
+
+<p><strong>Workaround:</strong> Bind the existing project again and click <strong>No</strong> followed by <strong>Other</strong> for the project type.
+***</p>
+
+<h1 id="understanding-application-metrics">Understanding Application Metrics</h1>
+
+<!--
+Action/Topic: Understanding application metrics
+18.10: Still an issue (Toby)
+-->
+<h2 id="application-monitoring-unavailable-after-project-import">Application Monitoring unavailable after Project Import</h2>
+<p>After importing an application, when you click <code class="highlighter-rouge">App Monitor</code>, the dashboard is not displayed and results in a <code class="highlighter-rouge">Cannot GET /appmetrics-dash/</code> error. If this error appears, the application was not created by Codewind or previously had AppMetrics integration.</p>
+
+<p><strong>Workaround:</strong> Enable AppMetrics for your application. You can enable AppMetrics for <a href="https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/">Node.js</a>, <a href="https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/">Swift</a>, and <a href="https://github.com/RuntimeTools/javametrics#spring-boot">SpringBoot</a> projects.</p>
+
+<!--
+Action/Topic: Understanding application metrics
+Issue type: info
+Issue link: https://github.ibm.com/dev-ex/landing-pages/issues/923
+19.03: Info added in 19.03.
+-->
+<h2 id="profiling-markers-do-not-appear">Profiling markers do not appear</h2>
+<p>If you have the Codewind Language Server for Node.js Profiling extension enabled and have run a load test, profiling markers still might not appear. Ensure that your project and load run conform to the following requirements to use profiling:</p>
+<ul>
+  <li>Your project exists in Theia or VS Code. Profiling is available only in Theia and VS Code.</li>
+  <li>Your project is a Node.js project that was created through Codewind.</li>
+  <li>Your project has <code class="highlighter-rouge">Run Load</code> executed on it.</li>
+  <li>The load run successfully completed. Profiling data is written to the <code class="highlighter-rouge">load-test/&lt;datestamp&gt;/profiling.json</code> file in your Codewind project only on a successfully completed load run. If the load run was cancelled, it won’t be written to the workspace.</li>
+  <li>The load run ran for a minimum of 45 seconds to gather enough profiling data to generate the <code class="highlighter-rouge">profiling.json</code> file.</li>
+  <li>If a function runs quickly, in less than 5 milliseconds with the default configuration, then the function might not run during any of the samples, so it might not be included in the profiling data for that load run.</li>
+  <li>Profiling is not disabled. To enable profiling, access the profiling in one of the following ways:
+    <ul>
+      <li>Right-click in the editor and select <code class="highlighter-rouge">Toggle Profiling</code>.</li>
+      <li>Open the command palette with <code class="highlighter-rouge">cmd+shift+p</code> on a Mac or <code class="highlighter-rouge">ctrl+shift+p</code> on Windows. Then, select <code class="highlighter-rouge">Codewind: Profiling: Toggle Profiling</code>.</li>
+      <li>Toggle the <code class="highlighter-rouge">Codewind Profiling: Show Profiling</code> setting in the extensions settings.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Workaround:</strong> Review the preceding list and ensure that your project conforms to all of the items in the list.</p>
+
+<hr />
+<h1 id="checking-the-application-and-build-statuses">Checking the application and build statuses</h1>
+
+<!--
+Action/Topic: Checking the application and build statuses
+Issue type: bug
+Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
+18.10: Still an issue
+-->
+<h2 id="microprofile-project-gets-updated-twice-upon-file-change">MicroProfile project gets updated twice upon file change</h2>
+<p>If you modify files in MicroProfile projects, sometimes the project gets double updates. You might see the application status changed from <strong>Running</strong> to <strong>Stopped</strong> twice. If you notice this status change, the default polling rate, which is 500 ms, is too short for the application monitor.</p>
+
+<p><strong>Workaround:</strong> Increase the polling rate in the <code class="highlighter-rouge">server.xml</code> file to 1000 ms or longer.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;applicationMonitor pollingRate="1000ms" /&gt;
+</code></pre></div></div>
+<hr />
+<h1 id="editing-your-project">Editing your project</h1>
+
+<!--
+Action/Topic: Editing your project
+Issue type: bug
+Issue link: https://github.ibm.com/dev-ex/theia/issues/3
+18.10: Still an issue
+-->
+<h2 id="theia-editor-might-not-work-correctly-in-microsoft-edge">Theia editor might not work correctly in Microsoft Edge</h2>
+<p>Theia, the open source code editor used by Che, currently has limited support for Microsoft Edge. The Theia team is aware of the issue and is working to fix it.</p>
+
+<p><strong>Workaround:</strong> Use a different web browser.</p>
+
+<!--
+Action/Topic: Editing your project
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="new-projects-sometimes-do-not-show-in-theia-hierarchy-view">New projects sometimes do not show in Theia hierarchy view</h2>
+<p>Sometimes when a new project is created, it doesn’t show up in the hierarchy view within Eclipse Che.</p>
+
+<p><strong>Workaround:</strong> Refresh the page in the browser.</p>
+
+<!--
+Action/Topic: Creating a new project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="context-root--application-endpoint-not-correct">Context Root / Application Endpoint not correct</h2>
+<p>If you create or bind a project which has a context root set in <code class="highlighter-rouge">.cw-settings</code>, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.</p>
+
+<p><strong>Workaround</strong> For Eclipse. add the context root to the URL in your browser. For example, the browser might open with <code class="highlighter-rouge">localhost:34567</code> instead of <code class="highlighter-rouge">localhost:34567/mycontextroot</code> so type <code class="highlighter-rouge">mycontextroot</code>. For VS Code and Theia, edit and save the <code class="highlighter-rouge">.cw-settings</code> file, and the context root updates.</p>
+
+<hr />
+<h1 id="disabling-development-on-specific-projects">Disabling development on specific projects</h1>
+
+<!--
+Action/Topic: Disabling development on specific projects
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+<h2 id="turning-off-auto-build-has-no-effect-for-nodejs-projects-when-you-run-codewind-locally">Turning off auto build has no effect for Node.js projects when you run Codewind locally</h2>
+<p>If you turn off <code class="highlighter-rouge">auto build</code> for a Node.js project when you run Codewind locally, it has no effect. Changes you make to your code automatically start or restart a build even though <code class="highlighter-rouge">auto build</code> is disabled.</p>
+
+<hr />
+<h1 id="appsody-with-codewind">Appsody with Codewind</h1>
+
+<p>For general information about the Appsody extension on Codewind, see the <a href="https://github.com/eclipse/codewind-appsody-extension">README</a> file in the <code class="highlighter-rouge">codewind-appsody-extension</code> repository.</p>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+<h2 id="nodejs-and-swift-templates-go-from-the-starting-state-and-then-to-the-stopped-state-by-default">Node.js and Swift templates go from the starting state and then to the stopped state by default</h2>
+<p>The templates <code class="highlighter-rouge">Appsody Node.js template</code> and <code class="highlighter-rouge">Appsody Swift template</code> go from the starting state to the stopped state by default. The application stops, but the container still runs. These templates do not have a server and are intended to help you implement your own server.</p>
+
+<p><strong>Workaround</strong> To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to <code class="highlighter-rouge">started</code> if the server is running.</p>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+<h2 id="a-project-build-error-appears-after-you-create-an-initial-project">A project build error appears after you create an initial project</h2>
+<p>If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a <code class="highlighter-rouge">Project build error: Non-resolvable parent POM</code> error after you create the initial project.</p>
+
+<p><strong>Workaround</strong> Complete the following instructions to work around the error:</p>
+<ol>
+  <li>Right-click the project and select <strong>Show Log Files</strong>&gt;<strong>Show All</strong>.</li>
+  <li>If your <code class="highlighter-rouge">.m2</code> cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the <code class="highlighter-rouge">[Container] Installing parent dev.appsody</code> message appears.</li>
+  <li>Wait until the cache completes. You can wait until the Project status is <code class="highlighter-rouge">Running</code>, or, if you use the MicroProfile template, you can wait until the <code class="highlighter-rouge">Liberty defaultServer</code> starts.</li>
+  <li>Right-click the <strong>Project</strong> from the Project Explorer and select <strong>Maven</strong>&gt;<strong>Update Project…</strong>.</li>
+  <li>Accept the defaults and click <strong>OK</strong>. The project is configured, and the <code class="highlighter-rouge">Project build error: Non-resolvable parent POM</code> disappears.</li>
+</ol>
+
+<p>After you create the initial project and set the <code class="highlighter-rouge">.m2</code> cache, new projects begin to be configured properly.</p>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+<h2 id="an-unknown-error-appears-on-line-one-of-the-pomxml-file">An Unknown error appears on line one of the pom.xml file</h2>
+<p>If you use an Eclipse IDE for Enterprise Developer EPP prior to version 2019.06, you might see an <code class="highlighter-rouge">Unknown</code> validation error in the <code class="highlighter-rouge">pom.xml</code> file.</p>
+
+<p><strong>Workaround</strong> Switch to version 2019.06 or later, or see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=547340">Cannot import any project into Eclipse with maven-jar-plugin 3.1.2</a>.</p>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64
+18.10:
+-->
+<h2 id="classpath-warnings-appear-or-the-application-classes-are-not-on-the-classpath">Classpath warnings appear or the application classes are not on the classpath</h2>
+<p>If you work with Appsody projects in Codewind for VS Code, you might encounter <code class="highlighter-rouge">Classpath is incomplete</code> warnings or notifications that application classes are not on the classpath.</p>
+
+<p><strong>Workaround</strong> Add the <code class="highlighter-rouge">codewind-workspace</code> folder to the workspace:</p>
+<ol>
+  <li>After you create an Appsody Java MicroProfile project, open the <code class="highlighter-rouge">codewind-workspace</code> folder.</li>
+  <li>Right-click the <code class="highlighter-rouge">codewind-workspace</code> folder and select <strong>Add Folder to Workspace…</strong>.</li>
+  <li>Choose the project folder and click <strong>Add</strong>.</li>
+</ol>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+<h2 id="starting-in-debug-mode-results-in-failure-to-attach-the-debugger">Starting in debug mode results in failure to attach the debugger</h2>
+<p>If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, <code class="highlighter-rouge">Failed to attach to remote debuggee VM</code> or <code class="highlighter-rouge">Failed to attach debugger</code> when you start a project in debug mode.</p>
+
+<p><strong>Workaround</strong> Run the <code class="highlighter-rouge">Attach Debugger</code> action manually:</p>
+<ol>
+  <li>After you create a project, wait for VS Code to display, <code class="highlighter-rouge">Running [Build succeeded]</code>.</li>
+  <li>Then, right-click the project and select <strong>Restart in Debug Mode</strong>.</li>
+  <li>Allow the process to finish. It fails, and a connection exception window appears.</li>
+  <li>The <code class="highlighter-rouge">Restarting &lt;my_project&gt; into debug mode</code> message is displayed. Wait for this restart notification to disappear.</li>
+  <li>To manually set the debugger, click the <strong>Debug</strong> tab and then <strong>Play</strong>. The debugger is successfully attached to the project if <code class="highlighter-rouge">Debug appsody-mp (codewind-workspace) Cloud Code -- NORMAL --</code> is displayed in the message bar.</li>
+</ol>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind-docs/issues/92
+18.10:
+-->
+<h2 id="appsody-mount-errors-on-windows-enterprise">Appsody mount errors on Windows Enterprise</h2>
+<p>If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as <code class="highlighter-rouge">java-microprofile</code> or <code class="highlighter-rouge">java-spring-boot2</code>.</p>
+
+<p>You might receive an error message in the <code class="highlighter-rouge">appsody.log</code> file when you try to create an Appsody project:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Container] docker: Error response from daemon: error while creating mount source path '/C/Users/&lt;user name&gt;/.m2/repository': mkdir /C/Users/&lt;user name&gt;/.m2: permission denied.
+</code></pre></div></div>
+
+<p><strong>Workaround:</strong> Configure the Maven <code class="highlighter-rouge">.m2</code> cache to be outside of your home directory. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global <code class="highlighter-rouge">MAVEN_OPTS</code> environment variable before you start Eclipse or VS Code.</p>
+<ul>
+  <li>Example: <code class="highlighter-rouge">MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository</code></li>
+</ul>
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/239
+18.10:
+-->
+<h2 id="attempts-fail-to-attach-the-debugger">Attempts fail to attach the debugger</h2>
+<p>If you work on Appsody projects on macOS, and if you restart an extension project in debug mode, the first attempt to attach the debugger might fail. Currently, a delay does not occur for project extensions.</p>
+
+<p>These steps reproduce the issue:</p>
+<ol>
+  <li>Set up a project extension environment and create a Microprofile project.</li>
+  <li>Restart the project in debug mode. You receive one or both of the following error messages: <code class="highlighter-rouge">Failed to attach to remote debuggee VM</code> or <code class="highlighter-rouge">Failed to attach debugger to at ipaddress:</code>.</li>
+</ol>
+
+<p><strong>Workaround</strong> Run the <code class="highlighter-rouge">Attach Debugger</code> action manually.</p>
+
+<hr />
+<h1 id="codewind-and-tekton-pipelines">Codewind and Tekton Pipelines</h1>
+
+<!--
+Codewind version: 0.3
+Che version: 7.0
+IDE extension version: Theia plugin 0.3
+IDE version: Theia 7.0-rc4
+Action/Topic: Codewind and Tekton pipelines
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/309
+-->
+<h2 id="codewind-cannot-access-the-tekton-dashboard-url">Codewind cannot access the Tekton dashboard URL</h2>
+
+<p>If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tekton dashboard does not appear to be installed on this cluster. Please install Tekton dashboard on your cluster, and restart your Codewind Che workspace. 
+</code></pre></div></div>
+
+<p>These steps reproduce the issue:</p>
+<ol>
+  <li>Install Codewind on OpenShift.</li>
+  <li>Install Tekton Pipelines.</li>
+  <li>Click <strong>Open Tekton dashboard URL</strong>. Codewind does not access the Tekton dashboard URL.</li>
+</ol>
+
+<p><strong>Workaround:</strong></p>
+<ol>
+  <li>Go to the Eclipse Che workspace console.</li>
+  <li>Select your workspace and stop it.</li>
+  <li>After 2 minutes, start your workspace again.</li>
+  <li>Now, access the Tekton dashboard URL from the Codewind palette.</li>
+</ol>
+
+<hr />
+<h1 id="openapi-tools">OpenAPI tools</h1>
+
+<!--
+Action/Topic: OpenAPI tools
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/275
+Version: 2019-06 (4.12.0)
+Build ID: 20190614-1200
+-->
+<h2 id="openapi-generation-fails-in-eclipse-if-the-output-path-does-not-exist">OpenAPI generation fails in Eclipse if the output path does not exist</h2>
+<p>In Eclipse, OpenAPI generation fails if a path does not exist, and the wizard doesn’t automatically create the folder tree hierarchy if the hierarchy doesn’t already exist.</p>
+
+<p>These steps reproduce the issue:</p>
+<ol>
+  <li>Install the latest version of Codewind.</li>
+  <li>Add a sample OpenAPI <code class="highlighter-rouge">.yaml</code> file.</li>
+  <li>From the Project or Package Explorer views, right-click the project and select one of the generator actions in <strong>OpenAPI Generate</strong>. A dialog window appears.</li>
+  <li>In the dialog window, if necessary, select the OpenAPI definition file by clicking the <strong>Browse…</strong> button.</li>
+  <li>In the <strong>Output folder</strong> field, copy and paste a path or edit the path directly.</li>
+  <li>Click <strong>Finish</strong>. The OpenAPI generator fails if the folder doesn’t already exist.</li>
+</ol>
+
+<p><strong>Workaround:</strong></p>
+<ul>
+  <li>Manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can manually edit the <strong>Output folder</strong> text field. Ensure that the path points to a valid folder in the project.</li>
+  <li>Or you can use the <strong>Browse…</strong> button to select the folder that you want to use. The <strong>Output folder</strong> field is updated with the path.</li>
+</ul>
+
+<p>For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging.</p>
+</div>
+        </div>
+        
+    </div>
+    
+</div>
+<!-- footer row -->
+<footer>
+
+<div class="row" id="footer-div-mobile">
+        
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermose icon"  title="mattermose icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		
+    </div>
+    
+    
+    <div class="row" id="footer-div">
+        <div class="cw-footer-left">
+        		<div class="px-5 cw-font-12>
+	        <span class="cw-font-14">Useful Links:</span>
+	        <br/><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+	        </div>
+	        
+        </div>
+        <div class="cw-footer-border-right"></div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center cw-footer-desktop">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"   title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		<div class="cw-footer-border-right"></div>
+		<div class="cw-footer-right cw-footer-same-height cw-footer-vcenter">
+		<div class="cw-footer-eclipse-img cw-footer-same-height px-5 ">
+	        
+		<a href="http://www.eclipse.org">
+		<img alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/>
+		</a>
+	        </div>
+		</div>
+    </div>
+</footer>
+<!-- footer row END -->
+<!-- Main Col END -->
+ <!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+</script>
+
+<script src="js/jquery.matchHeight-min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/docs.js"></script>
+
+</div>
+</body>
+
+</html>
+ 
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+ <script>
+$(document).ready(function(){
+	
+    anchors.options.placement = 'left';
+    anchors.add('h1');
+    anchors.add('h2');
+    anchors.add('h3');
+    anchors.add('h4');
+});
+</script>

@@ -1,0 +1,20 @@
+
+<svg width="72px" height="73px" viewBox="0 0 72 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="0.1383 0.893 71.245 0.893 71.245 72 0.1383 72"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-277.000000, -18.000000)">
+            <g id="header">
+                <g id="codewind-logo" transform="translate(80.000000, 18.000000)">
+                    <g id="Group-21" transform="translate(197.000000, 0.107100)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-20"></g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
