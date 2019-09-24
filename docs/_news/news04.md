@@ -16,7 +16,7 @@ Friday 20 September 2019
 - The Appsody init is no longer called in the Docker container. Instead, the Appsody binary is installed as part of the IDE. With this update, a Docker bind is no longer needed for Appsody creation.
 
 #### Che
-- Red Hat OpenStack (RHOS) IBM Cloud Kubernetes Service (IKS) support is available.
+- Red Hat OpenShift on IBM Cloud (ROKS) support is available.
 
 #### Eclipse
 - [IDE support is available for configuring template sources.](https://github.com/eclipse/codewind/issues/32)
