@@ -55,6 +55,7 @@ type: document
 5. Export the folders in the `/etc/exports` directory:
    - First, retrieve the public IP addresses for your worker nodes.
    - Then, add the following code to the `/etc/exports` directory. Repeat for as many worker nodes that you have. Do not use the wildcard to whitelist all IP addresses.
+   
    ```
    /nfs/codewind/data worker1-public-ip(rw,sync,no_subtree_check,insecure,no_root_squash)
    /nfs/codewind/workspace1 worker1-public-ip(rw,sync,no_subtree_check,insecure,no_root_squash)
@@ -70,6 +71,7 @@ type: document
    /nfs/codewind/workspace4 worker2-public-ip(rw,sync,no_subtree_check,insecure,no_root_squash)
    /nfs/codewind/workspace5 worker2-public-ip(rw,sync,no_subtree_check,insecure,no_root_squash)
    ```
+
 6. Restart the NFS server:
 ```
 systemctl restart nfs-kernel-server
