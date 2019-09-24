@@ -249,6 +249,17 @@ For general information about the Appsody extension on Codewind, see the [README
 <!--
 Action/Topic: Appsody with Codewind
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/498
+18.10:
+-->
+## Appsody and Docker Desktop on Windows 10
+When you use Appsody, configure Docker Desktop to access the shared drive that contains your home directory and that you associated with the shared drive. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the local host and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
+
+**Workaround** Complete the instructions in [Special notes about Appsody and Docker Desktop on Windows 10](https://github.com/gcharters/kabanero-dev-getting-started/blob/master/docker-windows-aad.md).
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
