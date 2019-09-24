@@ -1,0 +1,78 @@
+- title: 'Getting started'
+  url: gettingstarted.html
+ 
+- title: 'Developing with Codewind'
+  children:
+    - title: 'Codewind for Eclipse'
+      children:
+        - title: 'Overview'
+          url: mdteclipseoverview.html
+        - title: 'Installing Codewind for Eclipse'
+          url: mdt-eclipse-installinfo.html
+        - title: 'Using a template repository of your own'
+          url: mdteclipseusingadifferenttemplate.html
+        - title: 'Adding existing projects'
+          url: mdteclipseimportedprojects.html
+        - title: 'Managing Codewind projects'
+          url: mdteclipsemanagingprojects.html
+        - title: 'Building Codewind projects'
+          url: mdteclipsebuildproject.html
+        - title: 'Debugging Codewind projects'
+          url: mdteclipsedebugproject.html
+        - title: 'Troubleshooting Codewind for Eclipse'
+          url: mdteclipsetroubleshooting.html
+        - title: 'Uninstalling Codewind for Eclipse'
+          url: mdteclipseuninstall.html
+
+
+    - title: 'Codewind for VS Code'
+      children:
+        - title: 'Overview'
+          url: mdt-vsc-overview.html
+        - title: 'Installing Codewind for VS Code'
+          url: mdt-vsc-installinfo.html
+        - title: 'Using a template repository of your own'
+          url: mdt-vsc-usingadifferenttemplate.html
+        - title: 'Adding existing projects'
+          url: mdt-vsc-importedprojects.html
+        - title: 'Tutorial'
+          url: mdt-vsc-tutorial.html
+        - title: 'Commands overview'
+          url: mdt-vsc-commands-overview.html
+        - title: 'Project commands'
+          url: mdt-vsc-commands-project.html
+        - title: 'Restart and debug commands'
+          url: mdt-vsc-commands-restart-and-debug.html
+        - title: 'Troubleshooting'
+          url: mdt-vsc-troubleshooting.html
+        - title: 'Uninstalling'
+          url: mdt-vsc-uninstall.html
+ 
+    - title: 'Codewind for Eclipse Che'
+      children:
+        - title: 'Overview'
+          url: installoncloud.html
+        - title: 'Docker Registry Guidance'
+          url: dockerregistry.html
+        - title: 'Using the OpenShift Registry'
+          url: openshiftregistry.html
+        - title: 'Support for multiple users'
+          url: supportingmultipleusers.html
+        - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
+          url: viewkibanalogs.html
+
+- title: 'Performance monitoring'
+  url: guide_performance.html
+
+- title: 'Codewind and Tekton pipelines'
+  url: codewindandtektonpipelines.html
+ 
+- title: 'OpenAPI Tools'
+  children:
+    - title: 'Codewind OpenAPI Tools for VS Code'
+      url: open-api-tools-for-vscode.html
+    - title: 'Codewind OpenAPI Tools for Eclipse'
+      url: open-api-tools-for-eclipse.html
+ 
+- title: 'Troubleshooting'
+  url: troubleshooting.html

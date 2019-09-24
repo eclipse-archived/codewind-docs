@@ -2,6 +2,9 @@
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
     <!-- Sidebar -->
+    
+    
+
     <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top bg-light cw-sticky-offset">
@@ -9,36 +12,25 @@
             <!-- Hard coded TOC -->
             <!-- Start single page getting started -->
             
+            {% for entry in site.data.newstoc %}
+		      {% if entry.children %}
 			
-            
-           <a href="news04.html" 
-			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/news04" == page.url %}
-					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				{% endif %}
-				class="{{cls}}">
-				Codewind 0.4
-            </a>
-            
-            <a href="news03.html" 
-			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/news03" == page.url %}
-					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				{% endif %}
-				class="{{cls}}">
-				Codewind 0.3
-            </a>
-            
-            <a href="newstechpreview.html" 
-			    {% assign cls = "bg-light list-group-item list-group-item-action" %}
-				{% if "/newstechpreview" == page.url %}
-					{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
-				{% endif %}
-				class="{{cls}}">
-				Codewind tech preview
-            </a>
-            
-            <!-- END hard coded TOC -->
+			  {% else %}
+			  
+				<a href="{{ entry.url }}" 
+				    {% assign cls = "bg-light list-group-item list-group-item-action" %}
+				    {% assign url = '/' | append: entry.url | remove: ".html" %}
+					{% if url == page.url %}
+						{% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %}
+					{% endif %}
+					class="{{cls}}">
+					{{ entry.title}}
+	            </a>
+	            
+			  {% endif %}
+			{% endfor %}
+			
+			<!-- END hard coded TOC -->
 
             
         </ul>
