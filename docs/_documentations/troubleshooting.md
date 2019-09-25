@@ -41,7 +41,8 @@ Issue links: https://github.com/docker/for-win/issues/1560, https://github.com/e
 
 ## Installer fails with mount issues on Windows
 If you try to install Codewind on Windows 10 and use Docker, you might see the following error:
-```
+
+```sh
 ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
 
 ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
@@ -120,12 +121,14 @@ Issue link:
 -->
 ## Imported project never builds or starts
 To view the status of the imported project, enter the following command:
-```
+
+```sh
 docker logs codewind-pfe
 ```
 
 **Workaround:** If you see the following messages, the imported project is likely not a valid Codewind project.
-```
+
+```sh
 build-log requested, no build log found for project <project name>
 build-log requested, no build log found for project <project name>
 build-log requested, no build log found for project <project name>
@@ -190,7 +193,8 @@ Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
 If you modify files in MicroProfile projects, sometimes the project gets double updates. You might see the application status changed from **Running** to **Stopped** twice. If you notice this status change, the default polling rate, which is 500 ms, is too short for the application monitor.
 
 **Workaround:** Increase the polling rate in the `server.xml` file to 1000 ms or longer.
-```
+
+```xml
 <applicationMonitor pollingRate="1000ms" />
 ```
 ***
@@ -364,7 +368,7 @@ Issue link: https://github.com/eclipse/codewind/issues/309
 
 If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message: 
 
-```
+```sh
 Tekton dashboard does not appear to be installed on this cluster. Please install Tekton dashboard on your cluster, and restart your Codewind Che workspace. 
 ```
 
