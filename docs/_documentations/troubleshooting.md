@@ -16,7 +16,7 @@ parent: root
 The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
-* [Creating a new project](#creating-a-new-project)
+* [Creating a project](#creating-a-project)
 * [Importing a project](#importing-a-project)
 * [Understanding Application Metrics](#understanding-application-metrics)
 * [Checking the application and build statuses](#checking-the-application-and-build-statuses)
@@ -86,10 +86,10 @@ When running a Docker Desktop local Kubernetes cluster, multiple Codewind worksp
 Use only one Codewind Che workspace on Docker Desktop for the time being, or use an alternative local Kubernetes cluster such as Minikube or Minishift. Due to how Docker Desktop handles networking, multiple Codewind workspaces may cause a collision on the port that it's running on.
 
 ***
-# Creating a new project
+# Creating a project
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 18.10:
@@ -100,7 +100,23 @@ Intermittently, after installing Codewind on Windows, projects can be created, b
 **Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/477
+0.4.0: Issue still present
+-->
+## Project creation on macOS fails, and Codewind reports an error
+If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. You might encounter the same issue if you run `codewind-installer` from the Terminal. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
+
+**Workaround**
+Choose one of the following solutions:
+- As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), delete some or all certificates from the keychain and then restart. You might notice that some certificates are redundant.
+- Run the `curl` command that is used by the installer.
+- Build your own version of the `codewind-installer`.
+
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 0.2.0: Issue still present
@@ -219,7 +235,7 @@ Sometimes when a new project is created, it doesn't show up in the hierarchy vie
 **Workaround:** Refresh the page in the browser.
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 18.10:
