@@ -19,11 +19,12 @@ The following information describes how to install Codewind for VS Code, and int
 To install Codewind for VS Code, complete the following steps:
 
 1. Install [VS Code version 1.28 or later](https://code.visualstudio.com/download).
-2. Install Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind), or by searching for *Codewind* in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
+2. Install [Docker](https://docs.docker.com/install/). If you use Linux, you also need to install Docker Compose.
+3. Install Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind), or by searching for *Codewind* in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
     - If you're going to work on Java projects, also install the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
-3. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface), or enter *Focus on Codewind View* into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
+4. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface), or enter *Focus on Codewind View* into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Codewind view in either the Explorer or the Command Palette, the extension did not install correctly.
-4. Codewind requires the installation of additional Docker images to run.  Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
+5. Codewind requires the installation of additional Docker images to run.  Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
 6. Codewind creates a folder called `codewind-workspace` within your home directory (`C:\codewind-workspace` on Windows) to contain your projects.  When the installation is complete, you can open the codewind-workspace folder or a project within the workspace as your VS Code workspace. The tools offer to open the workspace for you if it's not open already.
 
 You are now ready to use the tools. You can use the Codewind view to create new projects or add existing ones.  Right-click a project in the Codewind tree or enter *Codewind* into the Command Palette to look at the features available.
