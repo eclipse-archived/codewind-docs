@@ -21,7 +21,8 @@ To install Codewind for Eclipse, complete the following steps:
 1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation.
     - Install Eclipse IDE Version 2019-09 R (4.13.0) or later to avoid [Bug 541220](https://bugs.eclipse.org/bugs/show_bug.cgi?id=541220).
     - However, the earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
-2. Install [Codewind from Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
+2. Install [Docker](https://docs.docker.com/install/). If you use Linux, you also need to install Docker Compose.
+3. Install [Codewind from Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
     - [![Drag to your running Eclipse workspace. ](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4638524 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client") Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.
     - Or, if you want to install from the Eclipse IDE, complete the following steps:
         1. Open the Eclipse IDE and navigate to **Help** > **Eclipse Marketplace**.
@@ -29,8 +30,8 @@ To install Codewind for Eclipse, complete the following steps:
         3. Click the **Install** button.
         4. Finish the wizard and accept licenses as needed.
         5. When the installation is complete, restart Eclipse.
-3. Open the Codewind view.  Navigate to **Window** > **Show View** > **Other...** > **Codewind** > **Codewind Explorer**
-4. Codewind requires the installation of additional Docker images to run.  Double-click on the **Codewind** item in the Codewind Explorer view to complete the installation. The installation may take a few minutes to complete.
+4. Open the Codewind view.  Navigate to **Window** > **Show View** > **Other...** > **Codewind** > **Codewind Explorer**
+5. Codewind requires the installation of additional Docker images to run.  Double-click on the **Codewind** item in the Codewind Explorer view to complete the installation. The installation may take a few minutes to complete.
 6. Codewind creates a folder called `codewind-workspace` within your home directory (`C:\codewind-workspace` on Windows) to contain your projects.
 
 You are now ready to use the tools. You can use the Codewind Explorer view to create new projects or add existing ones.  Right-click an element in the Codewind Explorer to look at the features available.
