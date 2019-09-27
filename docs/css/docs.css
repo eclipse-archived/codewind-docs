@@ -3,7 +3,9 @@
     margin-right: 0;
 }
 
-
+code {
+	font-size: 14px !important;
+}
 
 :target:before {
     content: "";
