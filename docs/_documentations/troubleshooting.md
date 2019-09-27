@@ -16,7 +16,7 @@ parent: root
 The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
-* [Creating a new project](#creating-a-new-project)
+* [Creating a project](#creating-a-project)
 * [Importing a project](#importing-a-project)
 * [Understanding Application Metrics](#understanding-application-metrics)
 * [Checking the application and build statuses](#checking-the-application-and-build-statuses)
@@ -87,10 +87,10 @@ When running a Docker Desktop local Kubernetes cluster, multiple Codewind worksp
 Use only one Codewind Che workspace on Docker Desktop for the time being, or use an alternative local Kubernetes cluster such as Minikube or Minishift. Due to how Docker Desktop handles networking, multiple Codewind workspaces may cause a collision on the port that it's running on.
 
 ***
-# Creating a new project
+# Creating a project
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 18.10:
@@ -101,7 +101,19 @@ Intermittently, after installing Codewind on Windows, projects can be created, b
 **Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/477
+0.4.0: Issue still present
+-->
+## Project creation on macOS fails, and Codewind reports an error
+If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. You might encounter the same issue if you run `codewind-installer` from the Terminal. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
+
+**Workaround**
+As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), go to **Applications**>**Utilities**>**Keychain Access** and delete from the keychain the certificates that you no longer need. You might notice that some certificates are redundant. Then, restart Codewind.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 0.2.0: Issue still present
@@ -223,7 +235,7 @@ Sometimes when a new project is created, it doesn't show up in the hierarchy vie
 **Workaround:** Refresh the page in the browser.
 
 <!--
-Action/Topic: Creating a new project and/or Checking the application and build statuses
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Issue link:
 18.10:
@@ -249,6 +261,17 @@ If you turn off `auto build` for a Node.js project when you run Codewind locally
 # Appsody with Codewind
 
 For general information about the Appsody extension on Codewind, see the [README](https://github.com/eclipse/codewind-appsody-extension) file in the `codewind-appsody-extension` repository.
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/498
+18.10:
+-->
+## Appsody and Docker Desktop on Windows 10
+When you use Appsody, configure Docker Desktop to access the shared drive that contains your home directory and that you associated with the shared drive. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the local host and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
+
+**Workaround** Complete the instructions in [Special notes about Appsody and Docker Desktop on Windows 10](https://github.com/gcharters/kabanero-dev-getting-started/blob/master/docker-windows-aad.md).
 
 <!--
 Action/Topic: Appsody with Codewind
