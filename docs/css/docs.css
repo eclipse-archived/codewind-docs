@@ -7,6 +7,14 @@ code {
 	font-size: 14px !important;
 }
 
+:not(pre)>code[class*=language-], pre[class*=language-] {
+	background: #eff0f1 !important;
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    background: unset !important;
+}
+
 :target:before {
     content: "";
     display: block;

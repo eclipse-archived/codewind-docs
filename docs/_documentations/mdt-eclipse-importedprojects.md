@@ -148,7 +148,7 @@ Requirements:
 - Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile. If your project does not have a Dockerfile, one is generated for you.
 
 For example:
-```sh
+```docker
 FROM ibmjava:8-sfj
     MAINTAINER IBM Java engineering at IBM Cloud
 
