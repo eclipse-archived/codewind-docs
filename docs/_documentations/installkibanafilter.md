@@ -24,7 +24,7 @@ The following procedure shows you how to use Kibana and Elasticsearch to view an
 
 Using Elasticsearch, build a query similar to the following example:
 
-```
+```json
  {
    "query": {
      "bool": {
@@ -47,7 +47,7 @@ This query filters the logs, providing logs from only Codewind pods (with the ``
 
 To get more than one type of log, change the filter stanza to ```"filter": [{ "terms": { "log": ["info", "error"] }}]```, putting every log term you want to match into the ```"log":``` section, as in the following example. Log levels you can filter by are `info`, `error`, `fatal`, and `debug`.
 
-```
+```json
  {
    "query": {
      "bool": {

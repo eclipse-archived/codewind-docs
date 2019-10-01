@@ -42,7 +42,7 @@ Configure your `pom.xml` file as follows:
 
 1. The Liberty Maven parent is required for rapid iterative development:
 
-```
+```xml
 <parent>
     <groupId>net.wasdev.wlp.maven.parent</groupId>
     <artifactId>liberty-maven-app-parent</artifactId>
@@ -52,7 +52,7 @@ Configure your `pom.xml` file as follows:
 
   2a. Add a Maven profile for Codewind that configures the Liberty Maven plug-in.
 
-  ```sh
+  ```xml
   <profile>
       <id>microclimate</id>
       <activation>
@@ -96,19 +96,19 @@ Configure your `pom.xml` file as follows:
 
   2b. Liberty server configuration file, `server.xml`, that is located in the source folder that is referenced in the `pom.xml` file.
 
-  ```sh
+  ```xml
   <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
   ```
 
   2c. Optional: Liberty server environment file:
 
-  ```sh
+  ```xml
   <serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
   ```
 
   2d. Optional: Liberty Java Virtual Machine options file:
 
-  ```sh
+  ```xml
   (jvm.options)
   <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
   ```
@@ -148,7 +148,8 @@ Requirements:
 - Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile. If your project does not have a Dockerfile, one is generated for you.
 
 For example:
-```sh
+
+```docker
 FROM ibmjava:8-sfj
     MAINTAINER IBM Java engineering at IBM Cloud
 
