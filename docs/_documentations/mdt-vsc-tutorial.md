@@ -15,7 +15,7 @@ Follow this example workflow to use the tools for VS Code to develop a Node.js p
 
 For more detail on any of the commands, see the [commands overview](mdt-vsc-commands-overview.html).
 
-1. First, ensure that Codewind is installed and running. For more information, see the [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html) page. Proceed after your projects appear with the **Codewind view**.
+1. First, ensure that Codewind and Docker are installed and running. Codewind displays as **On** in the VS Code sidebar. For more information, see the [Getting started: Codewind for VS Code](mdt-vsc-getting-started.html) page. Proceed after your projects appear with the **Codewind view**.
 2. Create a Node.js project in Codewind. Skip this step if a Node.js project already exists. This tutorial assumes that your project is called *nodeproject*.
     - Right-click the **Projects (Local)** item in the Codewind tree and select **Create new project**.
     - In the **Command Palette**, select **Node.js Template** and press **Enter**.
