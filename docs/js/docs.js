@@ -7,21 +7,27 @@ $(function() {
         });
     });
     
+    var location = window.location;
+    var pathname = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+
     
-    $('a[href^="#"]').not('.list-group-item').on("click", function(e) {
-    	
-    		e.preventDefault();
-    		var id = $($(this).attr('href'));
-       
-        if (id.length === 0) {
-            return;
+    var clicked = false;
+    $(':not(a[data-url=""])').each ( function() {
+        
+        if ($(this).data('url') == pathname) {
+        		clicked = true;
+            $(this).trigger("click");
         }
         
-        var pos = id.offset().top - 131;
+    });
+    
+    $(':not(a[data-url=""])').on("click", function(e) {
 
-        // animated top scrolling
-        $('body, html').animate({scrollTop: pos});
-    });  
+		if ($(this).data("url") && !clicked) {
+			window.location.replace($(this).data("url"));
+		}
+	});
+
     
     
 });
