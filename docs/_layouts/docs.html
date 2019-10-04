@@ -19,7 +19,7 @@
 				{% assign hash = '#' | append: entry.title | downcase | replace: " ", "_" %}
 			    {% assign anchor = entry.title | downcase | replace: " ", "_" %}
 				    
-		        <a href="{{ hash }}" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+		        <a href="{{ hash }}" data-url="{{entry.url}}" data-toggle="collapse" aria-expanded="false" class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
 		                <div class="d-flex w-100 justify-content-start align-items-center">
 		                    <span class="menu-collapsed">{{ entry.title }}</span>
 		                    <span class="submenu-icon"></span>
