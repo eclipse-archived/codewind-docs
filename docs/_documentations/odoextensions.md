@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Understanding Application Metrics
-description: Understanding Application Metrics
-keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, app monitor, dashboard, CPU, HTTP incoming requests, memory, HTTP throughput, Heap, HTTP outbound requests, loop times, other requests, run load, HTTP Requests, environment, resource usage, profiling, enabling, graph
+title: Accessing OpenShift to support ODO extensions
+description: Accessing OpenShift to support ODO extensions
+keywords: ODO
 duration: 1 minute
-permalink: appmetrics
+permalink: odoextensions
 type: document
-parent: usingmicroclimate
-order: 6
+parent: 
+order: 
 ---
 # Accessing OpenShift to support ODO extensions
 
