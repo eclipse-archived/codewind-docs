@@ -74,18 +74,6 @@ When using OS authentication setups (for example, AzureAD), Docker Shared Drive 
 2. Create the new account with the same username but without the prefix (for example, if your AzureAD account is `AzureAD/BobSmith`, your new local account should be `BobSmith`). Use the same password as your other account.
 3. Select your new local account and click **Change account type**. Select the dropdown menu and select **Administrator**. Share the drive again in Docker.
 
-<!--
-Action/Topic : Installing Codewind
-Issue type: bug/info
-Issue link:
-18.10:
--->
-## Unable to create multiple Codewind workspaces on Docker Desktop Kubernetes
-When running a Docker Desktop local Kubernetes cluster, multiple Codewind workspaces may fail to start.
-
-**Workaround:**
-Use only one Codewind Che workspace on Docker Desktop for the time being, or use an alternative local Kubernetes cluster such as Minikube or Minishift. Due to how Docker Desktop handles networking, multiple Codewind workspaces may cause a collision on the port that it's running on.
-
 ***
 # Creating a project
 
