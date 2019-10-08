@@ -25,7 +25,9 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Open application monitor**: Open the Codewind **Application Monitor** page for this project in the system browser.
 
-- **Open folder as workspace**: Open the project as your VS Code workspace folder. This command is useful if you want to work on just one project at a time per window. If you want the folder to open in a new window, set *window.openFoldersInNewWindow* to **true**.
+- **Open Performance Dashboard**: Opens the performance dashboard in the browser. This action is available only when the application is running or debugging.
+
+- **Add Project to Workspace**: Add this project's folder on your local disk to your VS Code workspace.
 
 - **Show project overview**: Open an editor tab that displays all of the Codewind information for the project. From this page, you can build, disable, or delete the project, and you can change the project auto build setting. This page is the only place in the extension where you can delete a project. If you delete a project, you remove it from both Codewind and from your file system.
 
@@ -38,6 +40,8 @@ This command is equivalent to clicking the **Build** button in the Codewind **Ov
 
 - **Enable or disable project**: Enable or disable the project. This command is also available in the project info page.<br>
 
+- **Remove project**: Removes the project from Codewind. The project folder can optionally be deleted from disk after removal.
+
 ## Logs
 
 - **Show all logs**: Open a channel in the **Output** view for each of the project's logs. To remove the output channel, use the **Hide logs** command.
@@ -45,8 +49,6 @@ This command is equivalent to clicking the **Build** button in the Codewind **Ov
 - **Hide all logs**: This command hides all the output channels that contain logs for this project.
 
 - **Manage logs**: This command presents a list of all logs for this project, which you can toggle individually.
-
-- **Project-specific settings**: Edit the internal app and debug ports as well as the **application endpoint**, sometimes known as the **context root**, from the **Project Overview** page.
 
 ## Configuring project settings
 
