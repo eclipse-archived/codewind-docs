@@ -9,7 +9,7 @@ permalink: gettingstartedoptions
 
 # Which Getting Started option should I choose? 
 
-Codewind helps you to develop, build, and deploy your app wherever you want. You can choose to edit, build, and run your app locally, or in the Cloud.
+Codewind helps you to develop, build, and deploy your apps wherever you want. You can choose to edit, build, and run your apps locally, or in the Cloud.
 
 ## Local
 
