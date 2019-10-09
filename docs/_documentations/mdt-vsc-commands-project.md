@@ -23,7 +23,7 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Open app**: Open the project application root endpoint in the system browser. The project must be in the *Running* or *Debugging* state, or the application server won't be available.
 
-- **Show Project Overview**: Open an editor Tab that displays all of the Codewind information for the project. From this page, you can build, disable, or delete the project, and you can change the project auto build setting. 
+- **Open Project Overview**: Open an editor Tab that displays all of the Codewind information for the project. From this page, you can build, disable, or delete the project, and you can change the project auto build setting. 
 
 - **Open Container Shell**: Open a shell, either *bash* or *sh*, in the project application container with *docker exec*. The project must have a container running. The VS Code integrated terminal needs access to your *PATH* environment variable so that it can run the *docker* command.
 
