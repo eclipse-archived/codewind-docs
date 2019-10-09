@@ -23,7 +23,7 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Open app**: Open the project application root endpoint in the system browser. The project must be in the *Running* or *Debugging* state, or the application server won't be available.
 
-- **Show Project Overview**: Open an editor tab that displays all of the Codewind information for the project. From this page, you can build, disable, or delete the project, and you can change the project auto build setting. This page is the only place in the extension where you can delete a project. If you delete a project, you remove it from both Codewind and from your file system.
+- **Show Project Overview**: Open an editor Tab that displays all of the Codewind information for the project. From this page, you can build, disable, or delete the project, and you can change the project auto build setting. 
 
 - **Open Container Shell**: Open a shell, either *bash* or *sh*, in the project application container with *docker exec*. The project must have a container running. The VS Code integrated terminal needs access to your *PATH* environment variable so that it can run the *docker* command.
 
@@ -33,14 +33,13 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Add Project to Workspace**: Add this project's folder on your local disk to your VS Code workspace.
 
-- **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project info page.
-This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
+- **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project i page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
 
-- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project info page. This command is equivalent to clicking the **Auto Build** toggle in the Codewind **Overview** page.
+- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project overview. This command is equivalent to clicking the **Auto Build** toggle in the Codewind **Overview** page.
 
-- **Enable or disable project**: Enable or disable the project. This command is also available in the project info page.<br>
+- **Enable or disable project**: Enable or disable the project. This command is also available in the project overview.
 
-- **Remove project**: Removes the project from Codewind. The project folder can optionally be deleted from disk after removal.
+- **Remove project**: Removes the project from Codewind. The project folder can optionally be deleted from disk after removal. This command is also available in the project overview.
 
 ## Logs
 
