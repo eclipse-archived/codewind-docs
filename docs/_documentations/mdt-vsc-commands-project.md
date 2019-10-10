@@ -33,9 +33,9 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Add Project to Workspace**: Add this project's folder on your local disk to your VS Code workspace.
 
-- **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project i page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
+- **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project overview page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
 
-- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project overview. This command is equivalent to clicking the **Auto Build** toggle in the Codewind **Overview** page.
+- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
 
 - **Enable or disable project**: Enable or disable the project. This command is also available in the project overview.
 
