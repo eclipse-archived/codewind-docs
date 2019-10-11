@@ -420,3 +420,41 @@ These steps reproduce the issue:
 - Or you can use the **Browse...** button to select the folder that you want to use. The **Output folder** field is updated with the path.
 
 For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
+
+<!--
+Action/Topic: Plugin execution validation error in the pom.xml file for Open API tools
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/650
+0.5.0: New issue
+-->
+## Plugin execution validation error in the pom.xml file
+When generating a Java client or server stub into an existing Appsody or Codewind Liberty Microprofile project, you might see a plugin execution validation error in the `pom.xml` file:
+
+```sh
+Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
+```
+
+The build is successful even though the validator reports this issue. 
+
+**Workaround:** To resolve this in Eclipse, surround the plugins element under the `build` element of the `pom.xml` file with the `pluginManagement` element.
+
+```xml
+<build>
+    <pluginManagement>
+        <plugins>   
+        ...
+```
+
+The following work-around applies to both VS Code and Eclipse. The spring server generator creates invalid source in the `OpenAPI2SpringBoot` class. Simply implement the methods from the interface and save the file. Also add the configuration element to the `pom.xml` file, like this:
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.openapitools.OpenAPI2SpringBoot</mainClass>
+                </configuration>
+                ....             
+```
