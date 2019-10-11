@@ -418,7 +418,7 @@ These steps reproduce the issue:
 **Workaround:**
 For the VS Code extension: 
 - Manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can manually edit the **Output folder** text field. Ensure that the path points to a valid folder in the project.
-- Or you can use the **Browse…** button to select the folder that you want to use. The **Output folder** field is updated with the path.
+- Or you can use the **Browse...** button to select the folder that you want to use. The **Output folder** field is updated with the path.
 
 For non-Java based post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging.
 
