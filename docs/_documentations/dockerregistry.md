@@ -50,7 +50,7 @@ Before you deploy your project with Codewind, first specify a deployment registr
 1. When you first deploy a project in Codewind, Codewind prompts you to set a deployment registry.
     - If Codewind detects the registry is unset, Codewind prompts before deploying a project.
 2. Enter a path with which to push your container.
-    - **Important:** Before attempting this step, ensure that you have entered the registry credentials with the Che dashboard.
+    - **Important:** Before attempting this step, ensure that you have correctly entered the registry credentials in the Che dashboard in Step 1.
 3. Codewind asks if you want to verify push permissions. If you select **yes**, Codewind pushes a small `hello-world` image to the registry to verify permissions.
 
 ### Instructions specific to IBM Cloud Private

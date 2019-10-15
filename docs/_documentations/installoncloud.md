@@ -55,16 +55,15 @@ Codewind is required to run as privileged and as root, because it builds contain
 
 ### Adding registries in Che
 After Che is started and running, add the container registry that will be used with Codewind.
-- On IBM Cloud Private, push your 
-to any Docker registry *except* the internal Docker registry
 - On OpenShift or other Kube platforms, you can push your images to any Docker registry, such as Dockerhub, Quay.io, Google Cloud Registry (GCR), and more.
+- On IBM Cloud Private, you can push your image to any Docker registry *except* the internal Docker registry
 
-Complete the following instructions to add the registries:
+You'll need the following information to complete the instructions to add the registries:
   - Server: `<registry-to-push-images-to>`
   - Username: `<Your username>`
   - Password: `<Your password>`
 
-For further information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html)
+For information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html)
 
 ## Creating the Codewind workspace
 
