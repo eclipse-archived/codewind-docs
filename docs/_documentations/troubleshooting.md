@@ -416,7 +416,46 @@ These steps reproduce the issue:
 6. Click **Finish**. The OpenAPI generator fails if the folder doesn't already exist.
 
 **Workaround:**
-- Manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can manually edit the **Output folder** text field. Ensure that the path points to a valid folder in the project.
-- Or you can use the **Browse...** button to select the folder that you want to use. The **Output folder** field is updated with the path.
+For the VS Code extension, manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can also create the **Output folder** in the browse dialog. Ensure that the path points to a valid folder in the project.
 
-For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
+For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging. 
+
+For Eclipse, for Java-based code generators, the Open API wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
+
+<!--
+Action/Topic: Plugin execution validation error in the pom.xml file for Open API tools
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/650
+0.5.0: New issue
+-->
+## Plugin execution validation error in the pom.xml file
+When generating a Java client or server stub into an existing Appsody or Codewind Liberty Microprofile project, you might see a plugin execution validation error in the `pom.xml` file:
+
+```sh
+Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
+```
+
+The build is successful even though the validator reports this issue. 
+
+**Workaround:** To resolve this in Eclipse, surround the plugins element under the `build` element of the `pom.xml` file with the `pluginManagement` element.
+
+```xml
+<build>
+    <pluginManagement>
+        <plugins>   
+        ...
+```
+
+The following work-around applies to both VS Code and Eclipse. The spring server generator creates invalid source in the `OpenAPI2SpringBoot` class. Simply implement the methods from the interface and save the file. Also add the configuration element to the `pom.xml` file, like this:
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.openapitools.OpenAPI2SpringBoot</mainClass>
+                </configuration>
+                ....             
+```
