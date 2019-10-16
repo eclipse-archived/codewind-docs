@@ -62,6 +62,10 @@
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
+          
+     - title: 'Appsody Projects for Codewind`
+    
+     - title: `ODO for Codewind`
 
 - title: 'Performance monitoring'
   url: guide_performance.html
