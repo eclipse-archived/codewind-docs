@@ -12,7 +12,7 @@ order: 0
 
 # Adding existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. <!--The add process creates required files if they do not exist.--> This guide covers the basics of configuring a project to run in Codewind.
+Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This guide covers the basics of configuring a project to run in Codewind.
 
 ## What kind of projects can I add?
 
@@ -23,7 +23,7 @@ Codewind is designed to develop cloud native microservices. Therefore, each proj
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
-* [Binding Appsody projects](#binding-appsody-projects) 
+* [Appsody projects](#binding-appsody-projects) 
 
 ### Binding Appsody projects
 
