@@ -23,10 +23,11 @@ Codewind is designed to develop cloud native microservices. Therefore, each proj
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
+* [Binding Appsody projects](#binding-appsody-projects) 
 
 ### Binding Appsody projects
 
-If you have existing Appsody project, or a project that you wish to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
+If you have an existing Appsody project, or a project that you wish to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
 For more information on Appsody and Appsody stacks, visit https://appsody.dev 
 
 ## MicroProfile/Java EE projects
