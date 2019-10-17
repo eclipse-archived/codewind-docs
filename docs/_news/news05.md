@@ -14,7 +14,7 @@ Thursday 17 October 2019
 - [Appsody binding support is available for VS Code and Eclipse.](https://github.com/eclipse/codewind/issues/292)
 
 #### OpenShift
-- Codewind supports the OpenShift project type in Eclipse Che running on OpenShift or OKD. Create and build applications with Codewind and OpenShift. In addition, Codewind supports the ODO extension feature, for more information, see . 
+- Codewind supports the OpenShift project type in Eclipse Che running on OpenShift or OKD. Create and build applications with Codewind and OpenShift. Codewind supports the [ODO extension feature](https://github.com/eclipse/codewind/issues/605). 
 
 #### IDEs (Both Eclipse and VS Code)
 - Project template support is improved.
