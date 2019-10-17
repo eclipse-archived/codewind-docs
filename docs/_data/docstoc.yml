@@ -63,9 +63,12 @@
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
           
-     - title: 'Appsody Projects for Codewind`
+    - title: 'Appsody Projects for Codewind'
+      url: mdt-vsc-importedprojects.md.html
+      url: mdt-eclipse-importedprojects.md.html
     
-     - title: `ODO for Codewind`
+    - title: 'Codewind OpenShift (ODO) Extension'
+      url: installoncloud.md.html 
 
 - title: 'Performance monitoring'
   url: guide_performance.html
