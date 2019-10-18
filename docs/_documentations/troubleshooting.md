@@ -24,6 +24,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
 * [ODO with Codewind](#odo-with-codewind)
+* [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 
@@ -406,6 +407,30 @@ Follow these steps to reproduce the issue:
    ```sh
    oc delete svc,route,dc,pvc,is -l=app.kubernetes.io/instance=<component>
    ```
+
+***
+# OKD and OpenShift
+
+<!--
+Codewind version: 0.5.0
+OS: RHEL
+Che version: 7.2.0
+IDE extension version: 0.5.0
+IDE version: 7.1.0
+Kubernetes cluster: OKD/OpenShift
+Action/Topic: 
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/733
+-->
+## Plugin runtime crashes unexpectedly and all plugins are not working
+With the latest Eclipse Che Version 7.2, you might see the following error when your user session expires for the Eclipse Che workspace: `Plugin runtime crashed unexpectedly, all plugins are not working, please reload ...`
+
+Follow these steps to reproduce the issue: 
+1. Install Eclipse Che on an OKD cluster.
+2. Create your Codewind workspace from this [devfile](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.5.0/devfile.yaml).
+3. After your session expires, you see a `Crash` message in the Codewind workspace.
+
+**Workaround** Go to the `Che workspace` dashboard, log out of the Che workspace, and then log back in to the Che workspace. Access the Codewind workspace. 
 
 ***
 # Codewind and Tekton Pipelines
