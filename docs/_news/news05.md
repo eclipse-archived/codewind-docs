@@ -14,7 +14,7 @@ Thursday 17 October 2019
 - You can now easily import existing Appsody projects into Codewind, or convert projects to use Appsody during import. If you are using the Eclipse IDE, see [Adding existing projects](mdteclipseimportedprojects.html). If you are using VS Code, see [Adding existing projects](mdt-vsc-importedprojects.html).
 
 #### OpenShift
-- Codewind supports the OpenShift project type in Eclipse Che running on OpenShift or OKD. Create and build applications with Codewind and OpenShift. Codewind supports the [ODO extension feature](https://github.com/eclipse/codewind/issues/605). 
+- Codewind supports the OpenShift project type in Eclipse Che running on OpenShift or OKD. Create and build applications with Codewind and OpenShift. Codewind supports the [ODO extension feature](https://github.com/eclipse/codewind-odo-extension/blob/master/README.md). 
 
 #### IDEs (Both Eclipse and VS Code)
 - Project template support is improved.
