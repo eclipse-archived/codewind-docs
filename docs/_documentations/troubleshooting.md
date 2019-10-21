@@ -380,7 +380,7 @@ Issue link: https://github.com/eclipse/codewind/issues/692
 
 If you create ODO projects and then delete the workspace without deleting the projects, all your ODO deployments still exist. 
 
-Follow these steps to reproduce the issue: 
+These steps to reproduce the issue: 
 
 1. Install Codewind Che.
 2. Create ODO projects.
