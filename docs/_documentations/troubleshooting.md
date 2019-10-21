@@ -378,7 +378,7 @@ Issue link: https://github.com/eclipse/codewind/issues/692
 -->
 ## ODO projects are not deleted after the workspace is deleted
 
-If you create ODO projects and then delete the workspace, all your ODO deployments still exist. 
+If you create ODO projects and then delete the workspace without deleting the projects, all your ODO deployments still exist. 
 
 Follow these steps to reproduce the issue: 
 
