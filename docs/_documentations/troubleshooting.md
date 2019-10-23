@@ -369,10 +369,9 @@ These steps reproduce the issue:
 Action/Topic: Appsody with Codewind
 Issue type: bug/info
 Codewind version: 0.5.0
-Che version: 7.2.0
+OS: Windows
 IDE extension version: 0.5.0
-IDE version: **7.1.0
-Issue type: bug/info
+IDE version: Eclipse 2019-09
 Issue link: https://github.com/eclipse/codewind/issues/715
 -->
 ## Appsody projects stuck in starting state
