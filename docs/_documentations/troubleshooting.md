@@ -365,6 +365,32 @@ These steps reproduce the issue:
 
 **Workaround** Run the `Attach Debugger` action manually.
 
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Codewind version: 0.5.0
+Che version: 7.2.0
+IDE extension version: 0.5.0
+IDE version: **7.1.0
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/715
+-->
+## Appsody projects stuck in starting state
+If you work on Appsody projects on Windows using the Eclipse IDE, you might see Appsody projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects using the default and Appsody templates with Codewind 0.5.0. 
+
+These steps reproduce the issue:
+
+1. Install Codewind 0.5.0 from the Eclipse plugin.
+2. Create default and Appsody projects from the templates.
+3. Wait until all projects are built and running.
+4. Stop and uninstall Codewind.
+5. Install Codewind. Codewind builds all projects. 
+6. You see all of your default template projects up and running but Appsody projects are stuck in `Starting` or `Stopped` state, even though the container log says the projects are up and running. 
+
+**Workaround** Manually rebuild the Appsody projects that are stuck in `Starting` or `Stopped` state. To do this: 
+1. In the **Codewind Explorer** view, right-click your project and select **Build**.
+2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
+
 ***
 # ODO with Codewind
 
