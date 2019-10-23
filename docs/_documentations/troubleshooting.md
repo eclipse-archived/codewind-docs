@@ -31,7 +31,6 @@ The following sections contain workarounds for issues that you might encounter w
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
 ***
-
 # Installing Codewind
 
 <!--
@@ -113,6 +112,23 @@ The Codewind Che extension might lose connectivity to the Codewind pod during a 
 
 **Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
 
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Codewind version: 0.5.0
+OS: Windows
+IDE extension version: 0.5.0
+IDE version: Eclipse 2019-09
+Issue link: https://github.com/eclipse/codewind/issues/715
+-->
+## Projects stuck in starting or stopped state
+You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
+
+**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
+1. In the **Codewind Explorer** view, right-click your project and select **Build**.
+2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
+
+***
 # Importing a project
 
 <!--
@@ -148,8 +164,8 @@ Issue link: https://github.com/eclipse/codewind/issues/243
 An Open Liberty project fails to build after it is added into Codewind with the **Add Existing Project** action, and the project fails to build because of missing files.
 
 **Workaround:** Bind the existing project again and click **No** followed by **Other** for the project type.
-***
 
+***
 # Understanding Application Metrics
 
 <!--
@@ -364,22 +380,6 @@ These steps reproduce the issue:
 2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
 
 **Workaround** Run the `Attach Debugger` action manually.
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Codewind version: 0.5.0
-OS: Windows
-IDE extension version: 0.5.0
-IDE version: Eclipse 2019-09
-Issue link: https://github.com/eclipse/codewind/issues/715
--->
-## Appsody projects stuck in starting state
-If you work on Appsody projects on Windows using the Eclipse IDE, you might see Appsody projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects using the default and Appsody templates with Codewind 0.5.0. 
-
-**Workaround** Manually rebuild the Appsody projects that are stuck in `Starting` or `Stopped` state. To do this: 
-1. In the **Codewind Explorer** view, right-click your project and select **Build**.
-2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
 
 ***
 # ODO with Codewind
