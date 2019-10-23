@@ -378,7 +378,6 @@ Issue link: https://github.com/eclipse/codewind/issues/715
 If you work on Appsody projects on Windows using the Eclipse IDE, you might see Appsody projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects using the default and Appsody templates with Codewind 0.5.0. 
 
 These steps reproduce the issue:
-
 1. Install Codewind 0.5.0 from the Eclipse plugin.
 2. Create default and Appsody projects from the templates.
 3. Wait until all projects are built and running.
@@ -406,8 +405,7 @@ Issue link: https://github.com/eclipse/codewind/issues/692
 
 If you create ODO projects and then delete the workspace without deleting the projects, all your ODO deployments still exist. 
 
-These steps to reproduce the issue: 
-
+These steps reproduce the issue: 
 1. Install Codewind Che.
 2. Create ODO projects.
 3. Delete the Codewind workspace.
@@ -448,7 +446,8 @@ Issue link: https://github.com/eclipse/codewind/issues/733
 -->
 ## Plugin runtime crashes unexpectedly and all plugins are not working
 With the latest Eclipse Che Version 7.2, you might see the following error when your user session expires for the Eclipse Che workspace: `Plugin runtime crashed unexpectedly, all plugins are not working, please reload ...`
-Follow these steps to reproduce the issue: 
+
+These steps reproduce the issue: 
 1. Install Eclipse Che on an OKD cluster.
 2. Create your Codewind workspace from this [devfile](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.5.0/devfile.yaml).
 3. After your session expires, you see a `Crash` message in the Codewind workspace.
