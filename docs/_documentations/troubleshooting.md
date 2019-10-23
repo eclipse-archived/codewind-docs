@@ -113,7 +113,7 @@ The Codewind Che extension might lose connectivity to the Codewind pod during a 
 **Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
 
 <!--
-Action/Topic: Appsody with Codewind
+Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Codewind version: 0.5.0
 OS: Windows
