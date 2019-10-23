@@ -384,7 +384,7 @@ These steps reproduce the issue:
 3. Wait until all projects are built and running.
 4. Stop and uninstall Codewind.
 5. Install Codewind. Codewind builds all projects. 
-6. You see all of your default template projects up and running but Appsody projects are stuck in `Starting` or `Stopped` state, even though the container log says the projects are up and running. 
+6. You see all of your default template projects up and running but Appsody projects are stuck in `Starting` or `Stopped` state even though the container log says the projects are up and running. 
 
 **Workaround** Manually rebuild the Appsody projects that are stuck in `Starting` or `Stopped` state. To do this: 
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
