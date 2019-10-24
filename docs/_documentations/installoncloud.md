@@ -28,7 +28,7 @@ parent: root
 - Ensure the cluster can pull images from `docker.io/eclipse`.
   - Both Eclipse Che and Eclipse Codewind host their Docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have `PodSecurityPolicies` blocking it from accessing Docker Hub.
 - Set up the ClusterRole for Codewind.
-  1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin)
+  1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin).
   2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
   3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
   4. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
@@ -42,7 +42,7 @@ Complete the following steps after you install `chectl`:
 1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
 2. If you're installing on a Kubernetes platform other than OpenShift, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
-    - Set the `spec.server.ingressDomain` field in the Che .yaml to the Ingress domain.
+    - Set the `spec.server.ingressDomain` field in the Che `.yaml` to the Ingress domain.
 3. Install Che:
     - On OpenShift 3.x run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file>`
     - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
@@ -56,20 +56,20 @@ Codewind is required to run as privileged and as root, because it builds contain
 
 ### Adding registries in Che
 After Che is started and running, add the container registry that will be used with Codewind.
-- On OpenShift or other Kube platforms, you can push your images to any Docker registry, such as Dockerhub, Quay.io, Google Cloud Registry (GCR), and more.
-- On IBM Cloud Private, you can push your image to any Docker registry *except* the internal Docker registry
+- On OpenShift or other Kube platforms, you can push your images to any Docker registry, such as Docker Hub, Quay.io, Google Cloud Registry (GCR), and more.
+- On IBM Cloud Private, you can push your image to any Docker registry *except* the internal Docker registry.
 
 You'll need the following information to complete the instructions to add the registries:
   - Server: `<registry-to-push-images-to>`
   - Username: `<Your username>`
   - Password: `<Your password>`
 
-For information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html)
+For information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html).
 
 ## Creating the Codewind workspace
 
 ### Confirm the Docker registry secrets.
-Confirm that you added the docker registry secrets in the Che dashboard. Go to **Administration**>**Add Registry** to check for the secrets.
+Confirm that you added the Docker registry secrets in the Che dashboard. Go to **Administration**>**Add Registry** to check for the secrets.
 
 ### Creating the Codewind workspace with a Devfile
 The general format for creating a Che workspace via a factory is:
@@ -77,7 +77,7 @@ The general format for creating a Che workspace via a factory is:
 http://<che ingress domain>/f?url=<hosted devfile URL>
 ```
 
-We provide a ready-to-use devfile with the Codewind plug-ins. Enter the following URL to create a workspace from the devfile:
+Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
 ```
 http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.4/devfile.yaml
 ```
@@ -101,7 +101,7 @@ For more information about Tekton, see [Getting started with the Tekton Dashboar
 ## After installing Codewind
 
 ### Setting the Docker registry
-Upon creating a Codewind workspace. The container registry to deploy your projects to must be set. When you go to create or add an existing project to Codewind, Codewind will prompt you for the registry. See (Docker registry docs) for guidance on using proper container registries
+After creating a Codewind workspace. The container registry to deploy your projects to must be set. When you go to create or add an existing project to Codewind, Codewind will prompt you for the registry. See [Docker registry docs](https://www.eclipse.org/codewind/dockerregistry.html) for guidance on using proper container registries
 
 If you would like to change the registry that's used at any time, run the `Codewind: Set Deployment Registry` command in Theia to dynamically set a new registry for your workspace. <br>
 
