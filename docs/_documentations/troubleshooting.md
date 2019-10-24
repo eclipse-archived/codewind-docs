@@ -104,6 +104,17 @@ As noted in the report [Error "net/http: TLS handshake timeout"](https://discuss
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/829
+0.5.0: Issue still present
+-->
+## Project creation fails if a persistent volume (PV) is unavailable
+If you try to create a project on Codewind for Eclipse Che, errors might occur if a PV is unavailable for your cluster.
+
+**Workaround:** Run the `kubectl get pv` command to check that a PV is available for each project that you want to create.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
 Issue link:
 0.2.0: Issue still present
 -->
