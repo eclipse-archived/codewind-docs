@@ -12,7 +12,7 @@ order: 0
 
 # Adding existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. <!--The add process creates required files if they do not exist.--> This guide covers the basics of configuring a project to run in Codewind.
+Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This guide covers the basics of configuring a project to run in Codewind.
 
 ## What kind of projects can I add?
 
@@ -23,6 +23,7 @@ Codewind is designed to develop cloud native microservices. Therefore, each proj
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
 * [Generic Docker projects](#generic-docker-projects)
+* [Appsody projects](#appsody-projects) 
 
 ## MicroProfile/Java EE projects
 
@@ -191,3 +192,8 @@ For example, you should be able to build the project by using the command
 ## Generic Docker projects
 
 If you have a Dockerized application that doesn't fit an existing template, you can still add the project to Codewind by selecting the **Other (Basic Container)** option as the project type. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
+
+## Appsody projects
+
+If you have an existing Appsody project, or a project that you want to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
+For more information about Appsody and Appsody stacks, see [https://appsody.dev](https://appsody.dev).

@@ -21,3 +21,15 @@ The Eclipse tools are [open source](https://github.com/eclipse/codewind-eclipse)
 To get started, see [Getting started with Codewind](mdteclipsegettingstarted.html).
 
 To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
+
+## Codewind OpenShift (ODO) extension  
+Extension to Codewind providing support for ODO projects: https://codewind.dev
+
+### Add additional rules to support Codewind ODO extension
+The ODO extension needs to add additional rules for accessing OpenShift resources:
+1. In your home directory, run the following command to clone the ODO extension repository:
+`git clone https://github.com/eclipse/codewind-odo-extension`
+2. Login to your OpenShift/OKD cluster
+3. Go into `~/codewind-odo-extension/odo-RBAC` then run the following commands to add additional rules:
+`kubectl apply -f codewind-odoclusterrole.yaml`
+`kubectl apply -f codewind-odoclusterrolebinding.yaml`

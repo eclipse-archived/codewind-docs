@@ -23,13 +23,14 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [ODO with Codewind](#odo-with-codewind)
+* [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
 ***
-
 # Installing Codewind
 
 <!--
@@ -103,6 +104,17 @@ As noted in the report [Error "net/http: TLS handshake timeout"](https://discuss
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/829
+0.5.0: Issue still present
+-->
+## Project creation fails if a persistent volume (PV) is unavailable
+If you try to create a project on Codewind for Eclipse Che, errors might occur if a PV is unavailable for your cluster.
+
+**Workaround:** Run the `kubectl get pv` command to check that a PV is available for each project that you want to create.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
 Issue link:
 0.2.0: Issue still present
 -->
@@ -111,6 +123,23 @@ The Codewind Che extension might lose connectivity to the Codewind pod during a 
 
 **Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
 
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Codewind version: 0.5.0
+OS: Windows
+IDE extension version: 0.5.0
+IDE version: Eclipse 2019-09
+Issue link: https://github.com/eclipse/codewind/issues/715
+-->
+## Projects stuck in starting or stopped state
+You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
+
+**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
+1. In the **Codewind Explorer** view, right-click your project and select **Build**.
+2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
+
+***
 # Importing a project
 
 <!--
@@ -146,8 +175,8 @@ Issue link: https://github.com/eclipse/codewind/issues/243
 An Open Liberty project fails to build after it is added into Codewind with the **Add Existing Project** action, and the project fails to build because of missing files.
 
 **Workaround:** Bind the existing project again and click **No** followed by **Other** for the project type.
-***
 
+***
 # Understanding Application Metrics
 
 <!--
@@ -364,6 +393,70 @@ These steps reproduce the issue:
 **Workaround** Run the `Attach Debugger` action manually.
 
 ***
+# ODO with Codewind
+
+<!--
+Codewind version: 0.5.0
+Che version: 7.2.0
+IDE extension version: 0.5.0
+IDE version: **7.1.0
+Action/Topic: ODO with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/692
+-->
+## ODO projects are not deleted after the workspace is deleted
+
+If you create ODO projects and then delete the workspace without deleting the projects, all your ODO deployments still exist. 
+
+These steps reproduce the issue: 
+1. Install Codewind Che.
+2. Create ODO projects.
+3. Delete the Codewind workspace.
+4. Create a new workspace. You still see previously created ODO project deployments.
+
+**Workaround** 
+1. Login to the OKD/OpenShift cluster.
+2. Change to the project where the resources are by running the following command: 
+
+   ```sh
+   oc project <project name>
+   ```
+
+3. Delete the ODO project resources by running the following command: 
+
+   ```sh
+   oc delete svc,route,dc,pvc,is -l=app.kubernetes.io/part-of=app
+   ```
+
+   Or for individual components:
+
+   ```sh
+   oc delete svc,route,dc,pvc,is -l=app.kubernetes.io/instance=<component>
+   ```
+
+***
+# OKD and OpenShift
+<!--
+Codewind version: 0.5.0
+OS: RHEL
+Che version: 7.2.0
+IDE extension version: 0.5.0
+IDE version: 7.1.0
+Kubernetes cluster: OKD/OpenShift
+Action/Topic: 
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/733
+-->
+## Plugin runtime crashes unexpectedly and all plugins are not working
+With the latest Eclipse Che Version 7.2, you might see the following error when your user session expires for the Eclipse Che workspace: `Plugin runtime crashed unexpectedly, all plugins are not working, please reload ...`
+
+These steps reproduce the issue: 
+1. Install Eclipse Che on an OKD cluster.
+2. Create your Codewind workspace from this [devfile](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.5.0/devfile.yaml).
+3. After your session expires, you see a `Crash` message in the Codewind workspace.
+**Workaround** Go to the `Che workspace` dashboard, log out of the Che workspace, and then log back in to the Che workspace. Access the Codewind workspace. 
+
+***
 # Codewind and Tekton Pipelines
 
 <!--
@@ -416,7 +509,46 @@ These steps reproduce the issue:
 6. Click **Finish**. The OpenAPI generator fails if the folder doesn't already exist.
 
 **Workaround:**
-- Manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can manually edit the **Output folder** text field. Ensure that the path points to a valid folder in the project.
-- Or you can use the **Browse...** button to select the folder that you want to use. The **Output folder** field is updated with the path.
+For the VS Code extension, manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can also create the **Output folder** in the browse dialog. Ensure that the path points to a valid folder in the project.
 
-For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, if you are working with an existing Java or Maven project, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don't need to do as much refactoring and merging.
+For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging. 
+
+For Eclipse, for Java-based code generators, the Open API wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
+
+<!--
+Action/Topic: Plugin execution validation error in the pom.xml file for Open API tools
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/650
+0.5.0: New issue
+-->
+## Plugin execution validation error in the pom.xml file
+When generating a Java client or server stub into an existing Appsody or Codewind Liberty Microprofile project, you might see a plugin execution validation error in the `pom.xml` file:
+
+```sh
+Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
+```
+
+The build is successful even though the validator reports this issue. 
+
+**Workaround:** To resolve this in Eclipse, surround the plugins element under the `build` element of the `pom.xml` file with the `pluginManagement` element.
+
+```xml
+<build>
+    <pluginManagement>
+        <plugins>   
+        ...
+```
+
+The following work-around applies to both VS Code and Eclipse. The spring server generator creates invalid source in the `OpenAPI2SpringBoot` class. Simply implement the methods from the interface and save the file. Also add the configuration element to the `pom.xml` file, like this:
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.openapitools.OpenAPI2SpringBoot</mainClass>
+                </configuration>
+                ....             
+```
