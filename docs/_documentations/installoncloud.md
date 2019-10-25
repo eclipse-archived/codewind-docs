@@ -19,7 +19,7 @@ parent: root
 4. [After installing Che](#after-installing-che)
 5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
 6. [Updating the version](#updating-the-version)
-7. [Adding additional rules to support Codewind ODO extension](#adding-additional-rules-to-support-codewind-odo-extension)
+7. [Adding additional rules to support Codewind odo extension](#adding-additional-rules-to-support-codewind-odo-extension)
 
 ## Prerequisites
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
@@ -138,18 +138,13 @@ Go to **View**>**Find Command…**>**Codewind: Build**.
 ## Updating the version
 Restart the Codewind workspace in Che. Che automatically pulls the newest version of Codewind and the Theia extension.
 
-## Adding additional rules to support Codewind ODO extension
-The Codewind ODO extension needs to add additional rules for accessing OpenShift resources:
-1. In your home directory, run the following command to clone the Codewind ODO extension repository:
-```
-git clone https://github.com/eclipse/codewind-odo-extension
-```
-2. Login to your OpenShift/OKD cluster
-3. Go into `~/codewind-odo-extension/odo-RBAC` then run the following commands to add additional rules:
-```
-kubectl apply -f codewind-odoclusterrole.yaml
-kubectl apply -f codewind-odoclusterrolebinding.yaml
-```
+# Codewind OpenShift Do (odo) extension 
+See the [`codewind-odo-extension` repository](https://github.com/eclipse/codewind-odo-extension) for the extension to Codewind that provides support for odo projects.
 
-# Codewind OpenShift Do (ODO) extension 
-Extension to Codewind providing support for OpenShift projects: https://github.com/eclipse/codewind-odo-extension
+## Adding rules to support the Codewind odo extension
+The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the `codewind-odo-extension` repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
+```
+git clone https://github.com/eclipse/codewind-odo-extension &&\
+    kubectl apply -f codewind-odoclusterrole.yaml &&\
+    kubectl apply -f codewind-odoclusterrolebinding.yaml
+```
