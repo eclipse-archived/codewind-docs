@@ -8,7 +8,7 @@ permalink: news05
 ---
 
 ## Codewind 0.5.0
-Thursday 17 October 2019
+Thursday 24 October 2019
 
 #### Appsody
 - You can now easily import existing Appsody projects into Codewind, or convert projects to use Appsody during import. If you are using the Eclipse IDE, see [Adding existing projects](mdteclipseimportedprojects.html). If you are using VS Code, see [Adding existing projects](mdt-vsc-importedprojects.html).
