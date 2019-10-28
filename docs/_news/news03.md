@@ -1,7 +1,7 @@
 ---
 layout: news
-title: New for Codewind 0.3
-description: New for Codewind 0.3
+title: New for Codewind 0.3.0
+description: New for Codewind 0.3.0
 keywords: news, new, updates, update, version
 duration: 1 minute
 permalink: news03

@@ -1,7 +1,7 @@
 ---
 layout: news
-title: New for Codewind 0.5
-description: New for Codewind 0.5
+title: New for Codewind 0.5.0
+description: New for Codewind 0.5.0
 keywords: news, new, updates, update, version
 duration: 1 minute
 permalink: news05
@@ -23,7 +23,7 @@ Thursday 24 October 2019
 
 #### Eclipse
 - OpenAPI for Eclipse includes improved post-generation support for Liberty Maven projects. Code is generated and ready for use with no manual steps required to compile it and have a valid `pom.xml` file.
-- [Automatically import projects from other workspaces into the Eclipse workspace.](https://github.com/eclipse/codewind/issues/507)
+- [Add existing projects to Codewind directly from the file system. The project will be added to Codewind and imported into Eclipse.](https://github.com/eclipse/codewind/issues/507)
 - [The project overview page opens when a project is created or added.](https://github.com/eclipse/codewind-eclipse/issues/258)
 
 #### VS Code
