@@ -43,6 +43,8 @@
           url: mdt-vsc-commands-project.html
         - title: 'Restart and debug commands'
           url: mdt-vsc-commands-restart-and-debug.html
+        - title: Installing and running the Codewind language server for Node.js profiling
+          url: mdt-vsc-nodejsprofiling.html
         - title: 'Troubleshooting'
           url: mdt-vsc-troubleshooting.html
         - title: 'Uninstalling'
