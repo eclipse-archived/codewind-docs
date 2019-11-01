@@ -23,7 +23,7 @@ type: document
 1. From the IBM Cloud catalog, select **Virtual Server**. Then, select **Public Virtual Server**.
 2. Leave most of the defaults as they are, but change the following values:
    - **Hostname**: Choose a name for this value, such as `codewind-nfs`.
-   - **Location**: Choose the same region that your OpenShift on IKS cluster is running in, either Washington, D.C., or Dallas.
+   - **Location**: Choose the same region that your OpenShift on IKS cluster is running in, either Washington, D.C. or Dallas.
    - **Profiles**: Select **Balanced B1.2x2** by default, which gives the server 2 CPU and 4 GB RAM.
    - **SSH Key**: Add the SSH key of your machine to the cluster so that you can SSH to the virtual private server (VPS).
    - **Image**: Select **Ubuntu 18.04**.
