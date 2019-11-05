@@ -12,13 +12,13 @@ order: 1
 
 ## Configuring Codewind remote
 
-To configure Codewind remote:
+To securely configure Codewind remote:
 
 1. Create a namespace to install into by running the following command: `kubectl create namespace <your_namespace>`
-2. If you are developing on macOS, you must install an ingress load balanacer into your Kube environment. For example: 
+2. If you are developing on macOS, you must install an ingress load balancer into your Kube environment. For example: 
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml`
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml`
-3. Use the following `cwctl` command to create the remote deployment: 
+3. Create the remote deployment by entering the following `cwctl` command: 
    `cwctl install remote \`
      `--namespace {your_namespace}  \`
      `--kadminuser admin \`
@@ -39,7 +39,19 @@ To configure Codewind remote:
      `--kdevpass  <userPassword>`
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
 
+   This command:
+   1. Checks your Cloud is valid.
+	 2. Determines the ingress domain based on NGINX ingress that you added earlier. 
+	 3. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
+	 4. It then populates all of the database entries inside Keycloak with the values necessary that you added on the command line. 
+	 5. Fetches the client secrets.
+	 6. Sets up the performance pods.
+	 7. Creates the gatekeeper certificates that it needs to expose over TLS, plus other necessary certificates.
+	 8. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new two new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
+	 9. On successful completion of the command, the command returns a URL which is the one and only secure remote access entry point for the service. 
+
    You see the following example output: 
+
    ```
    INFO[0000] Using namespace : {your_namespace}
    INFO[0000] Container images :
@@ -71,7 +83,8 @@ To configure Codewind remote:
    .
    INFO[0039] Codewind is available at: https://codewind-gatekeeper-k2brrr7a-10.20.30.40.nip.io
    ```
-4. Add a connection to the remote deployment: 
+
+4. Add a new connection to the remote deployment. Entering the following example command reaches out to the API and builds a connection record inside your desktop, returning a unique ID:
    `cwctl --insecure connections add --label MyTestKubeCluster --url https://codewind-gatekeeper-k2brrr7a-10.20.30.40.nip.io`
    You see the following success message:
    ```
@@ -83,6 +96,7 @@ To configure Codewind remote:
    ```
    {"status":"OK"}
    ```
-6. Obtain an access token for use with PFE:
+6. Obtain an access token for use with PFE. The following example command connects to Keycloak and returns the access and refresh tokens all securely keyed under the one unique connection ID:
    `cwctl --insecure sectoken get --username developer --conid K2BPWS07`
 
+Your Codewind installation can now securely communicate with any exposed PFE APIs. For example, you can send a secure request in the Postman UI using the access and refresh tokens keyed under the one unique connection ID.
