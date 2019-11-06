@@ -40,15 +40,15 @@ To securely configure Codewind remote:
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
 
    This command:
-   1. Checks your Cloud is valid.
-	 2. Determines the ingress domain based on NGINX ingress that you added earlier. 
-	 3. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
-	 4. It then populates all of the database entries inside Keycloak with the values necessary that you added on the command line. 
-	 5. Fetches the client secrets.
-	 6. Sets up the performance pods.
-	 7. Creates the gatekeeper certificates that it needs to expose over TLS, plus other necessary certificates.
-	 8. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new two new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
-	 9. On successful completion of the command, the command returns a URL which is the one and only secure remote access entry point for the service. 
+   a. Checks your Cloud is valid.
+	 b. Determines the ingress domain based on NGINX ingress that you added earlier. 
+	 c. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
+	 d. It then populates all of the database entries inside Keycloak with the values necessary that you added on the command line. 
+	 e. Fetches the client secrets.
+	 f. Sets up the performance pods.
+	 g. Creates the gatekeeper certificates that it needs to expose over TLS, plus other necessary certificates.
+	 h. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new two new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
+	 i. On successful completion of the command, the command returns a URL which is the one and only secure remote access entry point for the service. 
 
    You see the following example output: 
 
