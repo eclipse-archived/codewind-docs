@@ -22,6 +22,19 @@ The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI
 3. This extension pulls the [OpenAPI Generator CLI Docker Image](https://github.com/OpenAPITools/openapi-generator#16---docker) and runs the OpenAPI Generator in a Docker container. Install Docker if necessary.
 4. Install the Codewind OpenAPI Tools from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-openapi-tools) or by searching for `Codewind OpenAPI` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
 
+## Generating and building code in an existing Java Maven project
+1. Right-click your Codewind project and launch the **Generate Server from OpenAPI Definition** wizard.
+2. Select your OpenAPI document `.json` file.
+3. Select the `jaxrs-spec` server generator type. When you're prompted to select the output folder, the project root, which is the parent of the source folder, is selected by default.
+4. Click **Select As Output Folder** to merge the generated `.pom` file with the existing `.pom` file. When prompted with the warning message, click **Yes** to proceed. The files build.
+5. Your `src` folder shows the newly generated code complete with a `gen` package. Your project state returns to the `[Running]` state.
+6. Now, you can customize the application logic.
+
+## Generating and building code in an existing Java Spring project
+When you generate into a Spring project, don't override the implicitly or explicitly configured main class that comes with the project.
+1. To use the generated class, comment out the main class text in the project `.java` file.
+2. To use the current application, copy the packages at the component scan annotation and move them to the `SBApplication.java` file. Then, launch the project.
+
 ## Running commands
 1. Before you run a command, ensure the OpenAPI definition is in the folder or project.
 2. If you have **Codewind** installed, go to the **Explorer** view group and open the **Codewind** view.
