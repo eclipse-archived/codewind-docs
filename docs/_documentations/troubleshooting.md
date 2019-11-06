@@ -539,7 +539,7 @@ The build is successful even though the validator reports this issue.
         ...
 ```
 
-The following work-around applies to both VS Code and Eclipse. The spring server generator creates invalid source in the `OpenAPI2SpringBoot` class. Simply implement the methods from the interface and save the file. Also add the configuration element to the `pom.xml` file, like this:
+The following workaround applies to Eclipse. The Spring server generator creates invalid source in the `OpenAPI2SpringBoot` class. Simply implement the methods from the interface and save the file. Also add the configuration element to the `pom.xml` file:
 
 ```xml
 <build>
