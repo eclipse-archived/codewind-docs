@@ -25,10 +25,12 @@ The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI
 ## Generating and building code in an existing Java Maven project
 1. Right-click your Codewind project and launch the **Generate Server from OpenAPI Definition** wizard.
 2. Select your OpenAPI document `.json` file.
-3. Select the `jaxrs-spec` server generator type. When you're prompted to select the output folder, the project root, which is the parent of the source folder, is selected by default.
-4. Click **Select As Output Folder** to merge the generated `.pom` file with the existing `.pom` file. When prompted with the warning message, click **Yes** to proceed. The files build.
-5. Your `src` folder shows the newly generated code complete with a `gen` package. Your project state returns to the `[Running]` state.
-6. Now, you can customize the application logic.
+3. Select the `jaxrs-spec` server generator type.
+4. When you're prompted to select the output folder, keep the default selection. The project root, which is the parent of the source folder, is selected by default.
+5. Click **Select As Output Folder** to merge the generated `.pom` file with the existing `.pom` file. The merge attempts to include all necessary dependencies for the project to build properly.
+6. When prompted with the warning message, note that the `pom.xml` file is backed up. However, XML comments, such as `<!-- example comment -->`, are removed. Click **Yes** to proceed. The files build.
+7. See that your `src` folder shows the newly generated code complete with a `gen` package. Your project state returns to the `[Running]` state. The `src/main/java` and `src/test/java` are not customizable.
+8. Now, you can customize the application logic.
 
 ## Generating and building code in an existing Java Spring project
 When you generate into a Spring project, don't override the implicitly or explicitly configured main class that comes with the project.
