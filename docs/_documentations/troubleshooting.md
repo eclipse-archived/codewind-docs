@@ -367,9 +367,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/92
 18.10:
 -->
 ## Appsody mount errors on Windows Enterprise
-If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`.
-
-You might receive an error message in the `appsody.log` file when you try to create an Appsody project:
+If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`:
 ```
 [Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
 ```
