@@ -38,7 +38,7 @@ Update the Codewind Eclipse plug-in to the latest version.
 4. Select the latest version and click **Next**.
 5. Review the license and click **Finish**.
 6. Click **Restart Now** to refresh Codewind to the latest version.
-7. After Codewind restarts, go to the **Codewind Explorer** view. Double-click **Codewind** to update it to the latest version.
+7. After Codewind restarts, go to the **Codewind Explorer** view. Double-click **Local** to update it to the latest version.
 8. Click **OK** in the **Codewind Update** window that states that the older version of Codewind will be removed, and the newer version will be started.
 9. After Codewind updates, the **Codewind Explorer** view appears with your projects.
 
