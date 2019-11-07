@@ -18,7 +18,7 @@ You can work with your Codewind projects from the **Codewind Explorer** view in 
 - Start typing **Codewind** in the filter field or locate and expand the **Codewind** entry in the list.
 - Select **Codewind Explorer** and click **Open**.
 
-To create a new project or import an existing one, use the context menu on the **Local Projects** item in the **Codewind Explorer** view.  Once you have a project, the first thing you might want to do is import your project into the Eclipse workspace so you can start editing files. This also makes your source available for debugging.
+To create a new project or import an existing one, use the context menu on the **Local** item in the **Codewind Explorer** view.  Once you have a project, the first thing you might want to do is import your project into the Eclipse workspace so you can start editing files. This also makes your source available for debugging.
 
 Each project shows the application status and the build status. A context menu on each project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more.
 
@@ -42,8 +42,8 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Build**: Initiate a build of your project. This action is not available if a build is already running. For more information, see [Building Codewind projects](mdteclipsebuildproject.html).
 - **Disable Auto Build**: Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This action is only available when auto build is enabled.
 - **Enable Auto Build**: Use this to re-enable automatic builds whenever a change is made. This action is only available when auto build is disabled.
-- **Remove**: Removes a project. This action removes the project from Codewind.  You can then use Eclipse to delete the project from the Eclipse workspace and the file system.
-- **Refresh**: If the project gets out of sync, use this option to refresh it. To refresh all projects, right-click the **Projects (Local)** item in the **Codewind Explorer** view and select **Refresh**.
+- **Remove**: Removes a project. This action removes the project from Codewind and optionally deletes the project files from the file system.
+- **Refresh**: If the project gets out of sync, use this option to refresh it. To refresh all projects, right-click the **Local** item in the **Codewind Explorer** view and select **Refresh**.
 
 ## Project settings
 
