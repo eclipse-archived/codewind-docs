@@ -18,7 +18,7 @@ You can work with your Codewind projects from the **Codewind Explorer** view in 
 - Start typing **Codewind** in the filter field or locate and expand the **Codewind** entry in the list.
 - Select **Codewind Explorer** and click **Open**.
 
-To create a new project or import an existing one, use the context menu on the **Local** item in the **Codewind Explorer** view. After you have a project, the first thing you might want to do is import your project into the Eclipse workspace so you can start editing files. This also makes your source available for debugging.
+To create a new project or import an existing one, use the context menu on the **Local** item in the **Codewind Explorer** view.
 
 Each project shows the application status and the build status. A context menu on each project enables you to open your application in a browser, view application and build logs, restart in debug mode, and much more.
 
