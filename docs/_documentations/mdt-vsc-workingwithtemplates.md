@@ -23,7 +23,7 @@ Template management in Codewind is provided by the **Template Source Manager**. 
 Codewind templates are stored in the [codewind-resources/codewind-templates](https://github.com/codewind-resources/codewind-templates) repository. Standard Codewind Templates, the default set of templates from Kabanero Collections,  and Appsody Stacks to develop applications with sharable technology stacks, are already included in Codewind and you can refer to those as examples.
 
 Use the **Template Source Manager** to perform the following actions:
-1. To add a new template source to the table, click `Add new`. For more information, see [Adding your own templates](#adding-your-own-templates)
+1. To add a new template source to the table, click **Add new**. For more information, see [Adding your own templates](#adding-your-own-templates)
 2. To remove non-default template sources, click delete. 
 3. To enable a set of templates so they appear in the **Create Project** wizard, toggle the `Enabled` slide to on. 
 4. To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the `Enabled` slide to off.
