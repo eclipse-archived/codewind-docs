@@ -28,25 +28,11 @@ Use the **Template Source Manager** to perform the following actions:
 3. To enable a set of templates so they appear in the **Create Project** wizard, toggle the `Enabled` slide to on. 
 4. To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the `Enabled` slide to off.
 
-## Adding your own templates
+## Adding your own template repository to Codewind
 
-Add your own template to use Codewind with the framework of your choice. This is a two-step process comprising the following steps:
-1. Configure your template repository.
-2. Add your template repository to Codewind. 
-
-### Configuring your template repository
-
-To configure your template repository:
-1. Create a folder for your template in the `codewind-templates/devfiles` repository. Include the name of the framework in the name of the new folder.
-2. Add `devfile.yaml` and `meta.yaml` files.
-    - The devfile.yaml file needs to include...
-    - The meta.yaml file needs to include...
-3. Update the `codewind-templates/devfiles/index.json` file with information about your new template, for example, see [https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json](https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json).
-
-### Adding your template repository to Codewind
-
-To add your template repository to Codewind:
-1. In the Codewind view project tree, right-click **Local**. A menu appears.
-2. Click **Manage Template Sources**. The **Template Source Manager** appears.
-3. Click **Add New**.
-4. Enter the URL to your template source's index file, and press `Enter` to confirm, or `Escape` to cancel. 
+Add your own template to use Codewind with the framework of your choice. 
+1. Ensure your template repository has an `index.json` file containing information about your new templates in the same format as, for example, [https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json](https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json).
+2. In the Codewind view project tree, right-click **Local**. A menu appears.
+3. Click **Manage Template Sources**. The **Template Source Manager** appears.
+4. Click **Add New**.
+5. Enter the URL to your template source's index file, and press `Enter` to confirm, or `Escape` to cancel. 
