@@ -35,4 +35,4 @@ Add your own template to use Codewind with the framework of your choice.
 2. In the Codewind view project tree, right-click **Local**. A menu appears.
 3. Click **Manage Template Sources**. The **Template Source Manager** appears.
 4. Click **Add New**.
-5. Enter the URL to your template source's index file, and press `Enter` to confirm, or `Escape` to cancel. 
+5. Enter the URL to your template source's index file, and press `Enter` to confirm. 
