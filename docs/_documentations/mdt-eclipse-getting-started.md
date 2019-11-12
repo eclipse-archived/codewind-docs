@@ -37,9 +37,9 @@ To install Codewind for Eclipse, complete the following steps:
 You are now ready to use the tools. You can use the Codewind Explorer view to create new projects or add existing ones.  Right-click an element in the Codewind Explorer to look at the features available.
 
 1. Create a new project or work with an existing project.
-  - To create a new Codewind project, right-click the *Local Projects* item and select **New Project**. If you create a new project from within Eclipse, the new project is imported into the Eclipse workspace for you.
+  - To create a new Codewind project, right-click the **Local** item and select **New Project**. If you create a new project from within Eclipse, the new project is imported into the Eclipse workspace for you.
    <br>![Create a new project](./dist/images/cdt-eclipse/cdt-eclipse-newproject.png)<br>
-  - To work with an existing project, right-click the *Local Projects* item and select **Add Existing Project**.  Note that the project must already exist within the `codewind-workspace` folder, and have been added to the Eclipse workspace.
+  - To work with an existing project, right-click the **Local** item and select **Add Existing Project**. Note that the project must already exist within the `codewind-workspace` folder, and have been added to the Eclipse workspace.
    <br>![Import your project](./dist/images/cdt-eclipse/cdt-eclipse-importproject.png)<br>
 
 2. Work with your project from within Eclipse including:

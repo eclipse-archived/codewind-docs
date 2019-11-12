@@ -25,6 +25,7 @@ parent: root
 - Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
   - For NFS, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
+  - Because Codewind uses RWX (ReadWriteMany) volumes to provide persistent storage, you need to use NFS for storage on OpenShift 4.
 - Ensure the cluster can pull images from `docker.io/eclipse`.
   - Both Eclipse Che and Eclipse Codewind host their Docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have `PodSecurityPolicies` blocking it from accessing Docker Hub.
 - Set up the ClusterRole for Codewind.
@@ -79,7 +80,7 @@ http://<che ingress domain>/f?url=<hosted devfile URL>
 
 Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
 ```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.5.0/devfile.yaml
+http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.6.0/devfile.yaml
 ```
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles

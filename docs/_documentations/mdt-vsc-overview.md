@@ -14,7 +14,7 @@ parent: settingownide
 
 You can use [Codewind for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) to develop and debug your containerized projects from within VS Code.
 
-Write code, track application and build statuses, view project logs, and run your application. Codewind for VS Code supports development of Microprofile/Java EE, Java Lagom, Spring, Node.js, Go, Python, Swift, and Appsody containerized projects. In addition, the tools support easily debugging Microprofile/Java EE, Spring, and Node.js applications.
+Write code, track application and build statuses, view project logs, and run your application. Codewind for VS Code supports development of Appsody, Go, Java Lagom, Microprofile/Java EE, Node.js, Python, Spring, and Swift containerized projects. In addition, the tools support easily debugging Microprofile/Java EE, Spring, and Node.js applications.
 
 The VS Code tools are [open source](https://github.com/eclipse/codewind-vscode). You can browse the code, open issues, and contribute.
 
