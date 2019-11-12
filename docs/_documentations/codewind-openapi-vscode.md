@@ -22,7 +22,7 @@ The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI
 3. This extension pulls the [OpenAPI Generator CLI Docker Image](https://github.com/OpenAPITools/openapi-generator#16---docker) and runs the OpenAPI Generator in a Docker container. Install Docker if necessary.
 4. Install the Codewind OpenAPI Tools from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-openapi-tools) or by searching for `Codewind OpenAPI` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
 
-## Generating and building code and clients for OpenAPI tools
+## Generating and building client and server stubs by using the OpenAPI tools
 1. Right-click your Codewind project from the Codewind view and select either the **Generate Server from OpenAPI Definition** menu or **Generate Client from OpenAPI Definition** action. You are then prompted to provide options to the OpenAPI generator.
 2. Select your OpenAPI document file. The file must be a valid OpenAPI 3.0 `.yaml` or `.json` file that is in the project.
 3. Select the client or server generator type.
@@ -30,11 +30,11 @@ The Codewind OpenAPI Tools for VS Code provides commands that invoke the OpenAPI
 5. Click **Select As Output Folder**.
 6. When prompted with the warning message, click **Yes** to merge the generated `.pom` file with the existing `.pom` file. The existing `pom.xml` file is backed up as `pom-backup.xml` or as a variation of this name. The new `pom.xml` file is a merged version of the original `.pom` file and the `.pom` file that is generated. The merge attempts to include all necessary dependencies for the project to build properly. Because of limitations in the merge process, XML comments, such as `<!-- example comment -->`, from the original `.pom` file are removed. For any Codewind project, if autobuild is turned on, the project builds automatically.
 7. See that your `src` folder shows the newly generated code. Depending on the generator type that you chose, a `gen` package is created. Your Codewind project state returns to the `[Running]` state. The target source folders, `src/main/java` and `src/test/java`, are not customizable.
-8. Now, you can customize the application logic.
+8. Now, you can customize the application logic. Choose one of the two methods in the **Generating and building code in an existing Java Spring project** section.
 
 ## Generating and building code in an existing Java Spring project
 When you generate a Spring server stub into a Spring project, the OpenAPI tools for VS Code don't override the main class that is already implicitly or explicitly configured in the project. Complete one of the following steps to expose the OpenAPI endpoints:
-- To use the generated class, uncomment the main method in the `OpenAPI2SpringBoot.java` Java class  file and explicitly configure the project to use this main class.
+- To use the generated class, uncomment the main method in the `OpenAPI2SpringBoot.java` Java class file and explicitly configure the project to use this main class.
 - To continue to use the currently configured main class, copy the base packages that are listed in the `@ComponentScan` component scan annotation from the `OpenAPI2SpringBoot.java` file. Then, add the packages to the currently configured main class. For example, if you use the Codewind Spring Boot project, the implicit main class is the `SBApplication.java` file.
 
 ## Running commands
