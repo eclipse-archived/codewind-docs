@@ -398,13 +398,13 @@ Issue link: https://github.com/eclipse/codewind/issues/1061
 -->
 ## Appsody binds fail
 
-If an Appsody respository is already added in your local Appsody CLI, the Appsody bind might fail in the following scenario:
-1. Use the template manager to add the Appsody repository in Codewind.
+If an Appsody repository is already added in your local Appsody CLI, the Appsody bind might fail in the following scenario:
+1. From your IDE, right-click **Projects (Local)** and click **Manage Template Sources** to add the Appsody repository in Codewind.
 2. Try to bind the project to a stack from the added Appsody repository. The project appears in the Codewind Explorer view, and the `appsody.log` displays this error:
 ```
 [Error] The current directory is not a valid appsody project. Run `appsody init <stack>` to create one. Run `appsody list` to see the available stacks.
 ```
-In the Codewind log in VS Code, the `cwctl` log displays an error like this one:
+Codewind displays an error. In VS Code, the error appears in the Codewind log:
 ```
 2019/11/08 11:07:29 Please wait while the command runs... 
 2019/11/08 11:07:31 [Error] Repository 77b94c9b-0daf-5426-98b8-83eb8ee63e3c is not in configured list of repositories
@@ -412,7 +412,7 @@ In the Codewind log in VS Code, the `cwctl` log displays an error like this one:
 
 **Workaround**
 1. Remove the repository from the local Appsody CLI. For example, run the `appsody repo remove` command.
-2. Remove and add the repository back into Codewind with the template manager.
+2. Remove and add the repository back into Codewind with **Manage Template Sources**.
 3. Rebind the project to Codewind.
 
 ***
