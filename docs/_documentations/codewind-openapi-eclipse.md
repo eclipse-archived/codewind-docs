@@ -18,6 +18,16 @@ The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI 
 2. [Optional] Install [Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 3. Install the [Codewind OpenAPI Tools from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 
+## Generating and building client and server stubs by using the OpenAPI tools
+1. Right-click your Codewind project from the Codewind view and select either the **Generate Server from OpenAPI Definition** menu or **Generate Client from OpenAPI Definition** action. You are then prompted to provide options to the OpenAPI generator.
+2. Select your OpenAPI document file. The file must be a valid OpenAPI 3.0 `.yaml` or `.json` file that is in the project.
+3. Select the client or server generator type.
+4. When you're prompted to select the output folder, keep the default selection. The project root, which is the parent of the source folder, is selected by default.
+5. Click **Select As Output Folder**.
+6. When prompted with the warning message, click **Yes** to merge the generated `.pom` file with the existing `.pom` file. The existing `pom.xml` file is backed up as `pom-backup.xml` or as a variation of this name. The new `pom.xml` file is a merged version of the original `.pom` file and the `.pom` file that is generated. The merge attempts to include all necessary dependencies for the project to build properly. Because of limitations in the merge process, XML comments, such as `<!-- example comment -->`, from the original `.pom` file are removed. For any Codewind project, if autobuild is turned on, the project builds automatically.
+7. See that your `src` folder shows the newly generated code. Depending on the generator type that you chose, a `gen` package is created. Your Codewind project state returns to the `[Running]` state. The target source folders, `src/main/java` and `src/test/java`, are not customizable.
+8. Now, you can customize the application logic.
+
 ## Running commands
 1. Launch the context menu on any existing workspace projects or any `openapi.yaml` workspace OpenAPI definition files from the **Package Explorer** or **Project Explorer** views.
 2. If Codewind is installed, the context menu generator actions are available in the **Codewind Explorer** view.
