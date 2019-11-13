@@ -9,8 +9,8 @@
           url: mdteclipseoverview.html
         - title: 'Installing Codewind for Eclipse'
           url: mdt-eclipse-installinfo.html
-        - title: 'Using a template repository of your own'
-          url: mdteclipseusingadifferenttemplate.html
+        - title: 'Working with templates'
+          url: mdteclipseworkingwithtemplates.html
         - title: 'Adding existing projects'
           url: mdteclipseimportedprojects.html
         - title: 'Managing Codewind projects'
@@ -31,8 +31,8 @@
           url: mdt-vsc-overview.html
         - title: 'Installing Codewind for VS Code'
           url: mdt-vsc-installinfo.html
-        - title: 'Using a template repository of your own'
-          url: mdt-vsc-usingadifferenttemplate.html
+        - title: 'Working with templates'
+          url: mdt-vsc-workingwithtemplates.html
         - title: 'Adding existing projects'
           url: mdt-vsc-importedprojects.html
         - title: 'Tutorial'
@@ -51,7 +51,9 @@
     - title: 'Codewind for Eclipse Che'
       children:
         - title: 'Overview'
-          url: installoncloud.html
+          url: mdt-che-overview.html
+        - title: 'Installing Codewind on the Cloud'
+          url: 'mdt-che-installinfo.html'
         - title: 'Docker Registry Guidance'
           url: dockerregistry.html
         - title: 'Using the OpenShift Registry'
