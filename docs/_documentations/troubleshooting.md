@@ -398,8 +398,10 @@ Issue link: https://github.com/eclipse/codewind/issues/1061
 -->
 ## Appsody binds fail
 
-The Appsody bind might fail if the following events occurred:
-1. The Appsody repository was added to your local Appsody CLI from your IDE by right-clicking **Projects (Local)** and then clicking **Manage Template Sources**.
+If an Appsody repository is already added in your local Appsody CLI, the Appsody bind might fail.
+
+These steps create the issue:
+1. The Appsody repository was added to your local Appsody CLI from your IDE by right-clicking **Projects (Local)** and then clicking **Manage Template Sources**. The same Appsody repository was then added to Codewind from your IDE.
 2. Later, a project was bound to a stack from the added Appsody repository. The project appears in the Codewind Explorer view, and the `appsody.log` displays this error:
 ```
 [Error] The current directory is not a valid appsody project. Run `appsody init <stack>` to create one. Run `appsody list` to see the available stacks.
