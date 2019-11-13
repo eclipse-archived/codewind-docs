@@ -9,6 +9,9 @@ body {
 a {
     color: #0073ba;
 }
+.brand-icon {
+	width: 40px;
+}
 code {
 	color: #b93370;
 	background-color: #eff0f1;
@@ -263,8 +266,17 @@ code {
     width: 100%;
 }
 
+#hero-city-svg-2 {
+   	 display: none;
+}
+#hero-city-svg-3 {
+   	 display: none;
+}
+
 #hero-city {
     position: absolute;
+    display: unset;
+    overflow: hidden;
     bottom: 0px;
     width: 100%;
     pointer-events:none;
@@ -536,7 +548,29 @@ code {
     }
 /* end getting started */
 
-/* Extra large devices (large laptops and desktops, 1440px and up) */
+/* Exrea large devices wider than 1440px */
+@media only screen and (min-width: 1921px) {
+
+    /* start hero section */
+    #hero-city {
+    	 display: inline-flex;
+    }
+    #hero-city-svg {
+   	 width: unset;
+	}
+	#hero-city-svg-2 {
+   	 margin-left: -20px;
+   	 display: unset;
+	}
+	#hero-city-svg-3 {
+   	 margin-left: -20px;
+   	 display: unset;
+	}
+
+    /* end hero section */
+}
+
+/* Extra large devices (large laptops and desktops, 1440px and below) */
 @media only screen and (max-width: 1440px) {
 
     /* hero section */
@@ -581,6 +615,18 @@ code {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
 
+	.cw-header-link {
+        padding-left: 18px;
+	}
+	
+	.cw-header-link-news {
+	    padding-right: 18px;
+	}
+	
+	.cw-header-link-docs {
+		padding-right: 26px;
+	}
+	
     /* hero section */
     #hero-main-text {
         max-width: 400px;
@@ -756,6 +802,7 @@ code {
 	
 	#footer-div-mobile {
 	background: #0073ba;
+	padding-bottom: 30px;
     color: #fff;
     display: block;
     }
@@ -777,13 +824,55 @@ code {
     
     .cw-logo {
     		max-height: 30px;
+    		margin-top: 30px;
 	}
 	.cw-logo-mm {
     		max-height: 55px;
+    		margin-top: 30px;
+	}
+	.cw-logo-eclipse-mobile {
+		margin-top: 30px;
 	}
 	
 	
+	
     /* end footer */
+    #value-props-div {
+    		padding-top: 40px;
+    		padding-bottom: 40px;
+    		padding-left: 0px;
+    		padding-right: 0px;
+    }
+    
+    #key-features-div {
+	    padding-top: 20px;
+	    padding-bottom: 40px;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	
+	.cw-value-props-col-header {
+	
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+    	
+    	.cw-value-props-div-text {
+	
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+    	
+    	.cw-youtube-view-font {
+	    font-size: unset;
+	}
+	.cw-smile-icon {
+		width: 22px;
+	}
+	
+	#footer-div-mobile {
+		padding-top: 20px;
+	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -826,4 +915,38 @@ code {
     }
 
     /* end hero */
+}
+
+/* Small devices (portrait tablets and large phones, 500px and up) */
+@media only screen and (max-width: 500px) {
+
+    
+
+    #hero-main-hero {
+        top: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 440px and up) */
+@media only screen and (max-width: 440px) {
+
+    
+
+    #hero-main-hero {
+        top: 10px;
+    }
+    
+    #hero-main-hero-eclipse {
+       
+        top: 70px;
+    }
+
+    #hero-main-hero-eclipse img {
+        max-width: unset;
+        width: calc(100% - 30px);
+    }
+
+    #hero-main-hero-che {
+        top: 120px;
+    }
 }
