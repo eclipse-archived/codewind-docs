@@ -18,7 +18,7 @@ The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI 
 2. [Optional] Install [Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 3. Install the [Codewind OpenAPI Tools from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 
-## Running commands, generating, and building client and server stubs by using the OpenAPI tools
+## Generating HTML and client and server stubs by using the OpenAPI wizard
 1. Launch the context menu on any existing workspace projects or any `openapi.yaml` workspace OpenAPI definition files from the **Package Explorer** or **Project Explorer** views.
 2. If Codewind is installed, the context menu generator actions are available in the **Codewind Explorer** view.
 3. Ensure at least one OpenAPI definition is in the project.
