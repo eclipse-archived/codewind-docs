@@ -24,7 +24,7 @@ The information in the **VS Code** section also applies to Eclipse but with thes
 - Select the location of the project when you create it. The Eclipse workspace is the default location, but you can clear the **Use default location** checkbox and enter another location in the **Location** field.
 
 #### Appsody
-- Appsody works on Che.
+- Appsody works on Che!
 
 #### Che
 - The file, **Setting up OpenShift on IKS for Codewind**, is removed because these steps are no longer needed. The instructions to set up Codewind on OpenShift on IKS are the same as a regular OpenShift installation.
