@@ -22,3 +22,14 @@ To get started, see [Getting started with Codewind](mdteclipsegettingstarted.htm
 
 To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html).
 
+## Features
+
+- Create new projects
+- Import existing projects
+- Debug Microprofile, Spring, and Node.js projects.
+- View application and build logs in the Eclipse **Output** view.
+- View project information.
+- Open a shell session into an application container.
+- Toggle project auto build and manually initiate project builds.
+- Scope your Eclipse workspace to a single project or to your *codewind-workspace*.
+- Disable, enable, and delete projects.
