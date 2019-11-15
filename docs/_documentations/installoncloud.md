@@ -22,19 +22,19 @@ parent: root
 7. [Adding rules to support the Codewind odo extension](#adding-rules-to-support-the-codewind-odo-extension)
 
 ## Prerequisites
-- Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
+1) Ensure PersistentVolumes (PV) are set up and support both `ReadWriteOnce` and `ReadWriteMany` and have minimum 1Gi storage.
+  - One volume is required for Che, and two volumes are required for each Codewind workspace
   - For NFS, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
-  - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
   - Because Codewind uses RWX (ReadWriteMany) volumes to provide persistent storage, you need to use NFS for storage on OpenShift 4.
-- Ensure the cluster can pull images from `docker.io/eclipse`.
-  - Both Eclipse Che and Eclipse Codewind host their Docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have `PodSecurityPolicies` blocking it from accessing Docker Hub.
-- Set up the ClusterRole for Codewind.
-  1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin).
-  2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
-  3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
-  4. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
 
-## Installing Che with chectl
+2) Ensure the cluster can pull images from `docker.io/eclipse` and `quay.io/eclipse`.
+  - Both Eclipse Che and Eclipse Codewind host their Docker images at those locations. Ensure that your cluster can pull from that registry and does not have `ImagePullPolicies` blocking it from accessing Docker Hub.
+
+3) Set up the ClusterRole for Codewind. Run `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.6.0/setup/install_che/codewind-clusterrole.yaml`
+
+## Setting up Che
+
+### Installing Che with chectl
 
 The fastest way to install Eclipse Che for use with Codewind is to use the `chectl` CLI. For instructions on installing the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
@@ -42,14 +42,26 @@ Complete the following steps after you install `chectl`:
 
 1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/master/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+
 2. If you're installing on a Kubernetes platform other than OpenShift, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` to the Ingress domain.
-3. Install Che:
-    - On OpenShift 3.x run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file>`
-    - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
-## Enabling privileged and root containers to run
-Codewind is required to run as privileged and as root, because it builds container images. If your cluster is OpenShift 3.x, run the following commands, where `<che namespace>` is the namespace you installed Che in:
+3. Install Che:
+   - On OpenShift run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file> --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
+   - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file> --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
+
+### Updating an Existing Che Install
+
+If you already have an existing Che install, it's relatively easy to update it for Codewind. 
+
+After creating the Codewind ClusterRole in the prerequisites step, run the 
+```
+kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.6.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE
+``` 
+command, where `$NAMESPACE` is the namespace your Che workspaces run in (by default `che`). 
+
+### Enabling privileged and root containers to run
+Codewind is required to run as privileged and as root, because it builds container images. If your cluster is running OpenShift, run the following commands, where `<che namespace>` is the namespace you installed Che in:
 1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>` to enable privileged containers.
 2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>` to enable containers to run as root.
 
@@ -120,21 +132,11 @@ If you would like to change the registry that's used at any time, run the `Codew
 ### Binding a project:
 Go to **View**>**Find Command…**>**Codewind: Add Project**.
 
-- Alternative instructions:
-  - From the sidecar container, run the following command:
-`curl -k -H "Content-Type: application/json" -X POST https://codewind-release:9191/api/v1/projects/bind -d '{"name": "microproj", "path": "/microclimate-workspace/microproj", "language": "java", "projectType": "liberty"}'`
-
 ### Checking the status of a project
 Go to **View**>**Find Command…**>**Codewind: App status**.
 
-- Alternative instructions:
-  - From the sidecar container, run the following command: `curl -k -H "Content-Type: application/json" -X GET https://codewind-release:9191/api/v1/projects`
-
 ### Building a project 
 Go to **View**>**Find Command…**>**Codewind: Build**.
-
-- Alternative instructions:
-  - Enter the following command: `curl -k -H "Content-Type: application/json" -X POST https://codewind-release:9191/api/v1/projects/8801a6d0-7805-11e9-b22f-19482c5ffbd6/build -d '{"action": "build"}'`
 
 ## Updating the version
 Restart the Codewind workspace in Che. Che automatically pulls the newest version of Codewind and the Theia extension.
