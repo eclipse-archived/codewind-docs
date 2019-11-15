@@ -18,6 +18,18 @@ You can also post questions on our [Mattermost channel](https://mattermost.eclip
 
 ***
 
+### **Codewind Output stream**
+
+The Codewind Output stream is a tab within Codewind that is visible in the VS Code editor. It logs `cwctl` commands together with their ouput, for example:
+
+![Image of VS Code output](dist/images/cdt-vsc/output.png)<br>
+
+Check the Output stream first when troubleshooting because it is particularly useful in helping you to debug unusual problems especially when starting Codewind. Some errors will also provide you with a button to open the Output stream, for example:
+
+![Image of VS Code output with View button](dist/images/cdt-vsc/output_view.png)<br>
+
+***
+
 ### **Finding the extension logs**
 
 If you report an issue, you will be asked to upload your logs.
