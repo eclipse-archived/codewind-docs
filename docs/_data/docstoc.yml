@@ -52,7 +52,7 @@
       children:
         - title: 'Overview'
           url: mdt-che-overview.html
-        - title: 'Installing Codewind on the Cloud'
+        - title: 'Installing Codewind for Eclipse Che'
           url: 'mdt-che-installinfo.html'
         - title: 'Docker Registry Guidance'
           url: dockerregistry.html

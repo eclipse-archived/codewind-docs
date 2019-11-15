@@ -14,13 +14,9 @@ parent: settingownide
 
 You can use Codewind for Eclipse Che to develop your containerized projects from within Eclipse Che.
 
-Use the Eclipse IDE to create and make modifications to your application, see the application and build status, view the logs, and run your application. Codewind for Eclipse supports development of Appsody, Go, Java Lagom, Microprofile/Java EE, Node.js, Python, Spring, and Swift containerized projects. In addition, Microprofile/Java EE, Spring, and Node.js applications can be debugged.
+Use the Eclipse Che IDE to create and make modifications to your application, see the application and build status, view the logs, and run your application. Codewind for Eclipse Che supports development of OpenShift (Node.js, Python, Perl), Go, Java Lagom, Microprofile/Java EE, Node.js, Python, Spring, and Swift containerized projects.
 
-The Eclipse tools are [open source](https://github.com/eclipse/codewind-eclipse). You are encouraged to browse the code, open issues, and contribute.
-
-To get started, see [Getting started with Codewind](mdteclipsegettingstarted.html).
-
-To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html).
+To install Codewind for Eclipse Che, see [Installing Codewind for Eclipse Che](mdt-che-installinfo.html).
 
 ## Features
 

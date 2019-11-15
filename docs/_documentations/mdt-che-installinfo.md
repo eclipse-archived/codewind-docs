@@ -10,9 +10,9 @@ order: 20
 parent: root
 ---
 
-# Installing Codewind on Eclipse Che
+# Installing Codewind for Eclipse Che
 
-Installing Codewind on Eclipse Che comprises the following steps:
+Installing Codewind for Eclipse Che comprises the following steps:
 1. [Prerequisites](#prerequisites)
 2. [Installing Che with chectl](#installing-che-with-chectl)
 3. [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
