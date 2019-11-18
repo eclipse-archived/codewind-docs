@@ -21,7 +21,7 @@ To install Codewind for Eclipse, complete the following steps:
 1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation.
     - Install Eclipse IDE Version 2019-09 R (4.13.0) or later to avoid [Bug 541220](https://bugs.eclipse.org/bugs/show_bug.cgi?id=541220).
     - However, the earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
-2. Install [Docker](https://docs.docker.com/install/). If you use Linux, you also need to install Docker Compose.
+2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you also need to install Docker Compose.
 3. Install [Codewind from Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
     - [![Drag to your running Eclipse workspace. ](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4638524 "Drag to your running Eclipse* workspace. *Requires Eclipse Marketplace Client") Drag this install button to your running Eclipse workspace. Note: You need to have the Eclipse Marketplace Client.
     - Or, if you want to install from the Eclipse IDE, complete the following steps:
