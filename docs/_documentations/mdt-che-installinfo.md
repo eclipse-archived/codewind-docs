@@ -85,6 +85,36 @@ http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/code
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
 
+### Updating Codewind on Eclipse Che
+1. Determine which Che version you are running.
+- Navigate to the Che dashboard and the version of Che will be visible at the bottom:
+Screen Shot 2019-11-14 at 9 13 11 AM
+2. Download the newest devfile from Github. 
+- You can find the devfile for Codewind 0.6.0 at [githubusercontent](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.6.0/devfile.yaml).
+3. If your Che version is backlevel, update Che. 
+- Codewind 0.6.0 requires Che 7.3.1 or higher. 
+- Run `kubectl get checluster`. 
+- Find the name of your Che install:
+ ```
+ sh$ johncollier$ kubectl get checluster
+NAME          AGE
+codewind-che   19h
+```
+- Run `kubectl edit checluster <che>`, where `che` is the name of your Che install found in the previous step.
+- Change the image tags on `spec.server.cheImage`, `spec.server.devfileRegistryImage`, `spec.server.pluginRegistryImage`, and `spec.auth.identityProviderImage` to `7.3.1` (or the version of Che that you desire). 
+4. Apply new roles for Codewind. 
+- The roles that Codewind requires may have been updated from release to release. To be safe, it is best to update the Codewind roles as well.
+- Run the following command:
+```
+kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml && \
+kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/setup/install_che/codewind-clusterrole.yaml
+```
+5. Once Che has been updated, update your Codewind workspace:
+- Click on the `gear` tab next to your workspace in the Che dashboard to open its settings page.
+- In the settings, navigate to the `Devfile` tab:
+Screen Shot 2019-11-14 at 8 29 53 AM
+- Copy and paste the devfile that was downloaded earlier into the text box. Hit `Save->Run` to restart workspace. 
+
 ### Checking for the Codewind pod
 1. If you are using the Terminal, switch to use the workspace namespace. You can check for the namespace with `kubectl get ns`.
 2. Ensure the projects are cloned into the workspace. You might need to refresh the browser to trigger the clone.
