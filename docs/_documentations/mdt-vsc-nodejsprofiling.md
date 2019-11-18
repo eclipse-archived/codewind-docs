@@ -15,7 +15,7 @@ The Codewind language server for Node.js profiling annotates your Node.js code w
 1. Open a local project that you created with [Codewind](mdt-vsc-getting-started.html) and profiled by using the [performance test](guide_performance.html) feature. Opening the project creates profiling data in a `load-test/[datestamp]/profiling.json` file in your Codewind project.
 2. In VS Code, open a JavaScript file in your project. The extension highlights any lines that it finds in the profiling data and annotates them to show how often they were seen and where they were called from.
 
-## Running the extension with VS Code
+## Developing the extension with VS Code
 1. Clone the [`codewind-node-profiler` repository](https://github.com/eclipse/codewind-node-profiler) locally.
 2. Run `npm install` in the cloned `codewind-ls-node-prof` folder. This command installs all necessary npm modules in both the client and server folder.
 3. Open the clone of the `codewind-node-profiler` repository in VS Code.
