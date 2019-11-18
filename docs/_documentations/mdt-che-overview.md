@@ -12,24 +12,17 @@ parent: settingownide
 
 # Codewind for Eclipse Che
 
-You can use [Codewind for Eclipse Che](https://marketplace.eclipse.org/content/codewind) to develop and debug your containerized projects from within Eclipse.
+You can use Codewind for Eclipse Che to develop your containerized projects from within Eclipse Che.
 
-Use the Eclipse IDE to create and make modifications to your application, see the application and build status, view the logs, and run your application. Codewind for Eclipse supports development of Appsody, Go, Java Lagom, Microprofile/Java EE, Node.js, Python, Spring, and Swift containerized projects. In addition, Microprofile/Java EE, Spring, and Node.js applications can be debugged.
+Use the Eclipse Che IDE to create and make modifications to your application, see the application and build status, view the logs, and run your application. Codewind for Eclipse Che supports development of OpenShift (Node.js, Python, Perl), Go, Java Lagom, Microprofile/Java EE, Node.js, Python, Spring, and Swift containerized projects.
 
-The Eclipse tools are [open source](https://github.com/eclipse/codewind-eclipse). You are encouraged to browse the code, open issues, and contribute.
+To install Codewind for Eclipse Che, see [Installing Codewind for Eclipse Che](mdt-che-installinfo.html).
 
-To get started, see [Getting started with Codewind](mdteclipsegettingstarted.html).
+## Features
 
-To uninstall Codewind, see [Uninstalling Codewind for Eclipse](mdteclipseuninstall.html)
-
-## Codewind OpenShift (ODO) extension  
-Extension to Codewind providing support for ODO projects: https://codewind.dev
-
-### Add additional rules to support Codewind ODO extension
-The ODO extension needs to add additional rules for accessing OpenShift resources:
-1. In your home directory, run the following command to clone the ODO extension repository:
-`git clone https://github.com/eclipse/codewind-odo-extension`
-2. Login to your OpenShift/OKD cluster
-3. Go into `~/codewind-odo-extension/odo-RBAC` then run the following commands to add additional rules:
-`kubectl apply -f codewind-odoclusterrole.yaml`
-`kubectl apply -f codewind-odoclusterrolebinding.yaml`
+- Create new projects
+- Import existing projects
+- View application and build logs in the Eclipse Che **Output** view.
+- View project information.
+- Toggle project auto build and manually initiate project builds.
+- Disable, enable, and delete projects.

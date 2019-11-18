@@ -51,7 +51,9 @@
     - title: 'Codewind for Eclipse Che'
       children:
         - title: 'Overview'
-          url: installoncloud.html
+          url: mdt-che-overview.html
+        - title: 'Installing Codewind for Eclipse Che'
+          url: 'mdt-che-installinfo.html'
         - title: 'Docker Registry Guidance'
           url: dockerregistry.html
         - title: 'Using the OpenShift Registry'

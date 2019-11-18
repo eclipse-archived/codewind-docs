@@ -4,15 +4,15 @@ title: Installing Codewind on the Cloud
 description: Installing Codewind on the Cloud
 keywords: build, deploy, IBM Cloud Private, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
 duration: 1 minute
-permalink: installoncloud
+permalink: mdt-che-installinfo
 type: document
 order: 20
 parent: root
 ---
 
-# Installing Codewind on Eclipse Che
+# Installing Codewind for Eclipse Che
 
-# Table of Contents
+Installing Codewind for Eclipse Che comprises the following steps:
 1. [Prerequisites](#prerequisites)
 2. [Installing Che with chectl](#installing-che-with-chectl)
 3. [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
@@ -22,17 +22,17 @@ parent: root
 7. [Adding rules to support the Codewind odo extension](#adding-rules-to-support-the-codewind-odo-extension)
 
 ## Prerequisites
-- Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
+1. Set up the PersistentVolume (PV) with either Network File System (NFS) or GlusterFS.
   - For NFS, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
   - You do not need to set up the PV for local Kube, such as Minikube, Minishift, Docker Desktop, and others.
   - Because Codewind uses RWX (ReadWriteMany) volumes to provide persistent storage, you need to use NFS for storage on OpenShift 4.
-- Ensure the cluster can pull images from `docker.io/eclipse`.
+2. Ensure that the cluster can pull images from `docker.io/eclipse`.
   - Both Eclipse Che and Eclipse Codewind host their Docker images on `docker.io/eclipse`. Ensure that your cluster can pull from that registry and does not have `PodSecurityPolicies` blocking it from accessing Docker Hub.
-- Set up the ClusterRole for Codewind.
-  1. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin).
-  2. Enter the `cd` command to go to the `codewind-che-plugin` repository.
-  3. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
-  4. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
+3. Set up the ClusterRole for Codewind.
+   i. Clone the [Codewind Che plug-in repository](https://github.com/eclipse/codewind-che-plugin).
+   ii. Enter the `cd` command to go to the `codewind-che-plugin` repository.
+   iii. Run the `kubectl apply -f setup/install_che/codewind-clusterrole.yaml` command to create a cluster role with the required permission.
+   iv. Next, run the `kubectl apply -f setup/install_che/codewind-rolebinding.yaml` command.
 
 ## Installing Che with chectl
 
@@ -49,9 +49,9 @@ Complete the following steps after you install `chectl`:
     - On Kubernetes run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file>`
 
 ## Enabling privileged and root containers to run
-Codewind is required to run as privileged and as root, because it builds container images. If your cluster is OpenShift 3.x, run the following commands, where `<che namespace>` is the namespace you installed Che in:
-1. Enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>` to enable privileged containers.
-2. Enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>` to enable containers to run as root.
+Codewind is required to run as privileged and as root because it builds container images. If your cluster is OpenShift 3.x, run the following commands where `<che namespace>` is the namespace into which you installed Che:
+1. To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>`.
+2. To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>`.
 
 ## After installing Che
 
@@ -65,12 +65,12 @@ You'll need the following information to complete the instructions to add the re
   - Username: `<Your username>`
   - Password: `<Your password>`
 
-For information on adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html).
+For information about adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html).
 
 ## Creating the Codewind workspace
 
 ### Confirm the Docker registry secrets.
-Confirm that you added the Docker registry secrets in the Che dashboard. Go to **Administration**>**Add Registry** to check for the secrets.
+Confirm that you added the Docker registry secrets in the Che dashboard. To check for the secrets, go to **Administration**>**Add Registry**.
 
 ### Creating the Codewind workspace with a Devfile
 The general format for creating a Che workspace via a factory is:
@@ -83,14 +83,14 @@ Codewind includes a ready-to-use devfile with its plug-ins. Enter the following 
 http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.6.0/devfile.yaml
 ```
 
-For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles
+For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
 
 ### Checking for the Codewind pod
 1. If you are using the Terminal, switch to use the workspace namespace. You can check for the namespace with `kubectl get ns`.
 2. Ensure the projects are cloned into the workspace. You might need to refresh the browser to trigger the clone.
 
 ### Configuring Codewind for Tekton pipelines
-From your command line, enter the following commands if you want to use existing Tekton installations with Codewind:
+If you want to use existing Tekton installations with Codewind, from your command line, enter the following commands:
 
 ```
 oc apply -f setup/install_che/codewind-tektonrole.yaml
@@ -102,7 +102,7 @@ For more information about Tekton, see [Getting started with the Tekton Dashboar
 ## After installing Codewind
 
 ### Setting the Docker registry
-After creating a Codewind workspace. The container registry to deploy your projects to must be set. When you go to create or add an existing project to Codewind, Codewind will prompt you for the registry. See [Docker registry docs](https://www.eclipse.org/codewind/dockerregistry.html) for guidance on using proper container registries.
+After creating a Codewind workspace, you must set the container registry to deploy your projects. When you go to create or add an existing project to Codewind, Codewind will prompt you for the registry. See [Docker registry docs](https://www.eclipse.org/codewind/dockerregistry.html) for guidance on using proper container registries.
 
 If you would like to change the registry that's used at any time, run the `Codewind: Set Deployment Registry` command in Theia to dynamically set a new registry for your workspace. <br>
 
@@ -114,6 +114,19 @@ If you would like to change the registry that's used at any time, run the `Codew
 
 **Note:** To proceed, you need to have added the registry credentials with Che.
 - Codewind restarts with the changes added.
+
+### Adding rules to support the Codewind odo extension
+The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the `codewind-odo-extension` repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
+1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
+2. Enter the following commands to go to the correct location, add the rules, and perform cleanup:
+```
+git clone https://github.com/eclipse/codewind-odo-extension &&\
+   cd ./codewind-odo-extension/odo-RBAC &&\
+   kubectl apply -f codewind-odoclusterrole.yaml &&\
+   kubectl apply -f codewind-odoclusterrolebinding.yaml &&\
+   cd - &&\
+   rm -rf codewind-odo-extension
+```
 
 ## Using Codewind from the Che Theia IDE
 
@@ -138,21 +151,3 @@ Go to **View**>**Find Command…**>**Codewind: Build**.
 
 ## Updating the version
 Restart the Codewind workspace in Che. Che automatically pulls the newest version of Codewind and the Theia extension.
-
-# Installing Codewind on OpenShift
-
-## Codewind OpenShift Do (odo) extension 
-See the [`codewind-odo-extension` repository](https://github.com/eclipse/codewind-odo-extension) for the extension to Codewind that provides support for OpenShift projects.
-
-## Adding rules to support the Codewind odo extension
-The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the `codewind-odo-extension` repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
-1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
-2. Enter the following commands to go to the correct location, add the rules, and perform cleanup:
-```
-git clone https://github.com/eclipse/codewind-odo-extension &&\
-   cd ./codewind-odo-extension/odo-RBAC &&\
-   kubectl apply -f codewind-odoclusterrole.yaml &&\
-   kubectl apply -f codewind-odoclusterrolebinding.yaml &&\
-   cd - &&\
-   rm -rf codewind-odo-extension
-```
