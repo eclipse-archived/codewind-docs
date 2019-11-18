@@ -58,8 +58,6 @@
           url: dockerregistry.html
         - title: 'Using the OpenShift Registry'
           url: openshiftregistry.html
-        - title: Setting up OpenShift on IKS (ROKS) for Codewind
-          url: mdt-che-roks.html
         - title: 'Support for multiple users'
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
