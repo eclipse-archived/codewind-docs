@@ -612,7 +612,7 @@ code {
     /* end hero section */
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
 
 	.cw-header-link {
@@ -663,7 +663,7 @@ code {
     /* end hero section */
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and below) */
 @media only screen and (max-width: 992px) {
 
     /* hero section */
@@ -775,7 +775,7 @@ code {
     /* end footer */
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
     /*hero*/
 
@@ -875,7 +875,7 @@ code {
 	}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
 
     /*hero*/
@@ -917,7 +917,7 @@ code {
     /* end hero */
 }
 
-/* Small devices (portrait tablets and large phones, 500px and up) */
+/* Small devices (portrait tablets and large phones, 500px and below) */
 @media only screen and (max-width: 500px) {
 
     
@@ -927,7 +927,7 @@ code {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 440px and up) */
+/* Small devices (portrait tablets and large phones, 440px and below) */
 @media only screen and (max-width: 440px) {
 
     
@@ -949,4 +949,11 @@ code {
     #hero-main-hero-che {
         top: 120px;
     }
+}
+
+/* Small devices (portrait tablets and large phones, 410px and below) */
+@media only screen and (max-width: 410px) {
+	.cw-header-logo {
+		width: 200px;
+	}
 }
