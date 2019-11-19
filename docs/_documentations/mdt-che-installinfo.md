@@ -122,7 +122,7 @@ If you would like to change the registry that's used at any time, run the `Codew
 - Codewind restarts with the changes added.
 
 ### Adding rules to support the Codewind odo extension
-The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the `codewind-odo-extension` repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
+The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the [`codewind-odo-extension`](https://github.com/eclipse/codewind-odo-extension) repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
 1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
 2. Enter the following commands to go to the correct location, add the rules, and perform cleanup:
 ```
