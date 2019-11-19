@@ -31,5 +31,4 @@ To uninstall Codewind, see [Uninstalling Codewind for VS Code](mdt-vsc-uninstall
 - View project information.
 - Open a shell session into an application container.
 - Toggle project auto build and manually initiate project builds.
-- Scope your VS Code workspace to a single project or to your *codewind-workspace*.
 - Disable, enable, and delete projects.

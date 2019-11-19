@@ -44,9 +44,9 @@ Issue links: https://github.com/docker/for-win/issues/1560, https://github.com/e
 If you try to install Codewind on Windows 10 and use Docker, you might see the following error:
 
 ```sh
-ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
+ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-data': mkdir /host_mnt/c: file exists"
 
-ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-workspace': mkdir /host_mnt/c: file exists"
+ERROR: for codewind-performance  Cannot start service codewind-performance: b"error while creating mount source path '/host_mnt/c/codewind-data': mkdir /host_mnt/c: file exists"
 Encountered errors while bringing up the project.
 ```
 
@@ -339,9 +339,9 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## Classpath warnings appear or the application classes are not on the classpath
 If you work with Appsody projects in Codewind for VS Code, you might encounter `Classpath is incomplete` warnings or notifications that application classes are not on the classpath.
 
-**Workaround** Add the `codewind-workspace` folder to the workspace:
-1. After you create an Appsody Java MicroProfile project, open the `codewind-workspace` folder.
-2. Right-click the `codewind-workspace` folder and select **Add Folder to Workspace...**.
+**Workaround** Add the project's parent folder to the VS Code workspace. 
+1. After you create an Appsody Java MicroProfile project, right-click and `Add Project to Workspace` if it is not already added. 
+2. Right-click on the project from the workspace view and select **Add Folder to Workspace...** and choose the parent folder of the project. Click `Add`. 
 3. Choose the project folder and click **Add**.
 
 <!--
@@ -358,7 +358,7 @@ If you work with Appsody projects in Codewind for VS Code, you might receive mes
 2. Then, right-click the project and select **Restart in Debug Mode**.
 3. Allow the process to finish. It fails, and a connection exception window appears.
 4. The `Restarting <my_project> into debug mode` message is displayed. Wait for this restart notification to disappear.
-5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug appsody-mp (codewind-workspace) Cloud Code -- NORMAL --` is displayed in the message bar.
+5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar, or if the project's state shows `[Debugging][Build Succeeded]`.
 
 <!--
 Action/Topic: Appsody with Codewind

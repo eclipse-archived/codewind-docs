@@ -15,7 +15,7 @@ parent: mdt-vsc-commands-overview
 ## Create a new project or work with an existing project
 
 - To create a new project, right-click the *Projects (Local)* item and select **Create New Project**, or click on the *+* icon beside the *Projects (Local)* item. You can also create a new project using the **Command Palette**.
-- To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**, or click on the *link* icon beside the *Projects (Local)* item. You can also add an existing project using the **Command Palette**. Note that the project must already exist within the *codewind-workspace* folder.
+- To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**, or click on the *link* icon beside the *Projects (Local)* item. You can also add an existing project using the **Command Palette**. 
 
 Right-click a project in the **Codewind view** to see most project commands. All commands are available in the **Command Palette**.
 
