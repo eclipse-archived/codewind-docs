@@ -62,7 +62,7 @@ If the command and another installation attempt don't succeed, complete the foll
 For more information, see [this issue about Docker mounts on Windows](https://github.com/docker/for-win/issues/1560).
 
 <!--
-Action/Topic : Installing Codewind
+Action/Topic: Installing Codewind
 Issue type: bug/info
 Issue link:
 18.10:
@@ -74,6 +74,27 @@ When using OS authentication setups (for example, AzureAD), Docker Shared Drive 
 1. Navigate to **Settings** -> **Accounts** -> **Family & other people** -> **Add someone else to this PC** -> **I don't have this person's sign-in information** -> **Add a user without a Microsoft account**.
 2. Create the new account with the same username but without the prefix (for example, if your AzureAD account is `AzureAD/BobSmith`, your new local account should be `BobSmith`). Use the same password as your other account.
 3. Select your new local account and click **Change account type**. Select the dropdown menu and select **Administrator**. Share the drive again in Docker.
+
+<!--
+Action/Topic: Installing Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/436
+0.6.0: Still present
+-->
+## Unknown error occurs when Codewind starts
+After you install or update Codewind, an unknown error might appear when you try to start Codewind.
+
+**Workaround:** Stop Codewind. Understand that the `docker system prune -a` command removes the following items:
+```
+docker system prune -a
+WARNING! This will remove:
+ - all stopped containers
+ - all networks not used by at least one container
+ - all images without at least one container associated to them
+ - all build cache
+Are you sure you want to continue? [y/N] y
+```
+If removing the items does not cause unintentional setbacks for you, run the `docker system prune -a` command and enter `y` when prompted.
 
 ***
 # Creating a project
