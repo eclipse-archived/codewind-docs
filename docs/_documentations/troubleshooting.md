@@ -81,8 +81,8 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/436
 0.6.0: Still present
 -->
-## Unknown error occurs when Codewind starts
-After you install or update Codewind, an unknown error might appear when you try to start Codewind.
+## Error appears after installing or updating Codewind
+After you install or update Codewind, an error might appear when you try to start Codewind.
 
 **Workaround:** Stop Codewind. Understand that the `docker system prune -a` command removes the following items:
 ```
