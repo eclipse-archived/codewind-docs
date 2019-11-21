@@ -96,7 +96,8 @@ If removing the images with the IDE fails, try to remove them with the Docker co
 2. Use `docker image ls` to identify the Codewind images.
 3. Then, enter `docker image rm` to remove them.
 
-If installing and starting Codewind still fails, you can use Docker system prune. However, this command removes more than just the Codewind Docker images:
+If installing and starting Codewind still fails, you can use Docker system prune:<br>
+**Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
 1. Stop Codewind.
 2. Enter the `docker system prune -a` command.
 3. Review the list of items that Docker system prune removes.
