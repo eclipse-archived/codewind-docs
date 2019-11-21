@@ -91,7 +91,7 @@ Remove the Codewind Docker images with your IDE:
    - In VS Code, use the `Remove Codewind Images` command.
    - In Eclipse, use the `Uninstall` action.
 
-If removing the images with the IDE fails, try to remove them with the Docker command line instead:
+If removing the images with the IDE fails, remove them with the Docker command line instead:
 1. Stop Codewind.
 2. Use `docker image ls` to identify the Codewind images.
 3. Then, enter `docker image rm` to remove them.
@@ -100,10 +100,10 @@ If installing and starting Codewind still fails, you can use Docker system prune
 **Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
 1. Stop Codewind.
 2. Enter the `docker system prune -a` command.
-3. Carefully review the list of items that Docker system prune removes.
+3. Carefully review the list of items that Docker system prune removes. Preserve any items that you want to keep.
    - To preserve containers, start all the containers that you want to save.
    - To preserve images, start a container from the images that you want to save.
-4. If removing the items does not cause setbacks for you, enter `y` to continue.
+4. After you ensure the preservation of any necessary items that Docker system prune removes, enter `y` to continue.
 
 ***
 # Creating a project
