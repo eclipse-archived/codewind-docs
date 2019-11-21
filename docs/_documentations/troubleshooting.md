@@ -84,17 +84,23 @@ Issue link: https://github.com/eclipse/codewind/issues/436
 ## Error appears after installing or updating Codewind
 After you install or update Codewind, an error might appear when you try to start Codewind.
 
-**Workaround:** Stop Codewind. Understand that the `docker system prune -a` command removes the following items:
-```
-docker system prune -a
-WARNING! This will remove:
- - all stopped containers
- - all networks not used by at least one container
- - all images without at least one container associated to them
- - all build cache
-Are you sure you want to continue? [y/N] y
-```
-If removing the items does not cause unintentional setbacks for you, run the `docker system prune -a` command and enter `y` when prompted.
+**Workaround:**
+Remove the Codewind Docker images with your IDE:
+1. Stop Codewind.
+2. Remove the Codewind Docker images.
+   - In VS Code, use the `Remove Codewind Images` command.
+   - In Eclipse, use the `Uninstall` action.
+
+If removing the images with the IDE fails, try to remove them with the Docker command line instead:
+1. Stop Codewind.
+2. Use `docker image ls` to identify the Codewind images.
+3. Then, enter `docker image rm` to remove them.
+
+If installing and starting Codewind still fails, you can use Docker system prune. However, this command removes more than just the Codewind Docker images:
+1. Stop Codewind.
+2. Enter the `docker system prune -a` command.
+3. Review the list of items that Docker system prune removes.
+4. If removing the items does not cause setbacks for you, enter `y` to continue.
 
 ***
 # Creating a project
