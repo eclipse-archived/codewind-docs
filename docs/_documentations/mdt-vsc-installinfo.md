@@ -26,8 +26,7 @@ The following images are pulled. These images together form the Codewind back en
 ## Using Codewind
 When the installation is complete, the extension is ready to use. 
 
-## Working with workspaces
-Codewind creates a codewind-data directory for storing its metadata. You should not save your projects to the codewind-data directory.  
+Codewind creates a codewind-data directory for storing its metadata. Do not save your projects to the codewind-data directory.  
 
 ## Updating the Codewind plug-in
 Update your Codewind plug-in without uninstalling the extension.

@@ -81,17 +81,6 @@ When using OS authentication setups (for example, AzureAD), Docker Shared Drive 
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
-Issue link:
-18.10:
--->
-## Projects created never start after installing Codewind
-Intermittently, after installing Codewind on Windows, projects can be created, but they never start and instead remain in the **Starting** state. A Docker issue for Windows exists where, although it shows a volume is mounted, it does not allow any writing to the volume. To check if this issue is present, verify that a `codewind-workspace` exists (in your $HOME directory on Mac/Linux, or the root of your C: directory on Windows) and verify you can see your project folders created within.
-
-**Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
-
-<!--
-Action/Topic: Creating a project and/or Checking the application and build statuses
-Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/477
 0.4.0: Issue still present
 -->
@@ -278,6 +267,17 @@ If you turn off `auto build` for a Node.js project when you run Codewind locally
 # Appsody with Codewind
 
 For general information about the Appsody extension on Codewind, see the [README](https://github.com/eclipse/codewind-appsody-extension) file in the `codewind-appsody-extension` repository.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link:
+18.10:
+-->
+## Projects created never start after installing Codewind
+Intermittently, after installing Codewind on Windows, projects can be created, but they never start and instead remain in the **Starting** state. A Docker issue for Windows exists where, although it shows a volume is mounted, it does not allow any writing to the volume. To check if this issue is present, verify that a `codewind-data` directory exists (in your $HOME directory on Mac/Linux, or the root of your C: directory on Windows) and verify you can see your Appsody project folders created within.
+
+**Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
 
 <!--
 Action/Topic: Appsody with Codewind
