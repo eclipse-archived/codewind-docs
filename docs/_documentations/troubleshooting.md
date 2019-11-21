@@ -100,7 +100,9 @@ If installing and starting Codewind still fails, you can use Docker system prune
 **Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
 1. Stop Codewind.
 2. Enter the `docker system prune -a` command.
-3. Review the list of items that Docker system prune removes.
+3. Carefully review the list of items that Docker system prune removes.
+   - To preserve containers, start all the containers that you want to save.
+   - To preserve images, start a container from the images that you want to save.
 4. If removing the items does not cause setbacks for you, enter `y` to continue.
 
 ***
