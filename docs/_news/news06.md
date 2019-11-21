@@ -8,7 +8,7 @@ permalink: news06
 ---
 
 ## Codewind 0.6.0
-Thursday 21 November 2019
+Friday 22 November 2019
 
 #### Codewind workspace updates
 
