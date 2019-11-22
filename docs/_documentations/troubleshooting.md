@@ -176,9 +176,9 @@ Codewind version: 0.6.0
 Issue link: https://github.com/eclipse/codewind/issues/1039
 -->
 ## Che and local projects build twice when you create a project
-If you are using Codewind on Eclipse and VS Code at the same time, Che and local projects build twice during project creation. Project creation fails, and a build begins after. The application reverts to the **Starting** state.
+If you are using Codewind on Eclipse and VS Code at the same time, local projects build twice during project creation, resulting in longer project creation time.
 
-**Workaround:** Codewind on Eclipse and Codewind on VS Code cannot be used at the same time. Close either Eclipse or VS Code and then create your project.
+**Workaround:** To reduce project creation time, do not use Codewind on Eclipse and Codewind on VS Code at the same time. Close either Eclipse or VS Code and then create your project.
 
 ***
 # Importing a project
