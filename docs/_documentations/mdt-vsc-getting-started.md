@@ -25,13 +25,13 @@ To install Codewind for VS Code, complete the following steps:
 4. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface), or enter *Focus on Codewind View* into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Codewind view in either the Explorer or the Command Palette, the extension did not install correctly.
 5. Codewind requires the installation of additional Docker images to run.  Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
-6. Codewind creates a folder called `codewind-workspace` within your home directory (`C:\codewind-workspace` on Windows) to contain your projects.  When the installation is complete, you can open the codewind-workspace folder or a project within the workspace as your VS Code workspace. The tools offer to open the workspace for you if it's not open already.
+6. Codewind creates a codewind-data directory for storing its metadata. Do not save your projects to the codewind-data directory.  
 
 You are now ready to use the tools. You can use the Codewind view to create new projects or add existing ones.  Right-click a project in the Codewind tree or enter *Codewind* into the Command Palette to look at the features available.
 
 1. Create a new project or work with an existing project.
   - To create a new project, right-click the *Projects (Local)* item and select **Create New Project**, or click on the *+* icon beside the *Projects (Local)* item.
-  - To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**, or click on the *link* icon beside the *Projects (Local)* item.  Note that the project must already exist within the `codewind-workspace` folder.
+  - To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**.
 
 2. Work with your project from within VS Code including:
     - Editing

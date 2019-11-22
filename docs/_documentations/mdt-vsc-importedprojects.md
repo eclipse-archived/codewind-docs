@@ -128,7 +128,7 @@ The following files are generated during the import process. If your project req
 
 The `Dockerfile-lang` file is an optional project file and a development version of the Dockerfile. It contains any Docker instructions that are required only for the development image, including copying application resources from source. For example, if your application requires configuration files, you can use a `COPY` instruction to copy those files into your application's Docker container.
 
-This file is used for building only the projects in the Codewind workspace. The pipeline build is not affected. The pipeline build uses only the `Dockerfile` file, which is a required project file. If `Dockerfile-lang` doesn't exist, the Dockerfile is used for the development image instead.
+If `Dockerfile-lang` does not exist, the Dockerfile is used for the development image instead. 
 
 Maven is included in a generated `Dockerfile-build` file, so you do not need to include instructions to set up a Maven download in `Dockerfile-lang`.
 

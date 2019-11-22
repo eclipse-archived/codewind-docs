@@ -12,7 +12,7 @@ parent: usingcodewind
 
 # Managing projects
 
-The project list contains a listing of all the projects in your Codewind workspace, and you can use this page to determine the status of your applications.
+The project list contains a listing of all the projects known to Codewind, and you can use this page to determine the status of your applications.
 
 To view the project list, ensure you have the Codewind view open in your IDE.
 
