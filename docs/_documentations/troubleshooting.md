@@ -158,6 +158,17 @@ You might occasionally see projects stuck in the `Starting` or `Stopped` state e
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
 
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Codewind version: 0.6.0
+Issue link: https://github.com/eclipse/codewind/issues/1039
+-->
+## Che and local projects build twice when you create a project
+If you are using Codewind on Eclipse and VS Code at the same time, Che and local projects build twice during project creation. Project creation fails, and a build begins after. The application reverts to the **Starting** state.
+
+**Workaround:** Codewind on Eclipse and Codewind on VS Code cannot be used at the same time. Close either Eclipse or VS Code and then create your project.
+
 ***
 # Importing a project
 
