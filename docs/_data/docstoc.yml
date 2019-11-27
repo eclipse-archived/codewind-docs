@@ -65,9 +65,13 @@
 - title: 'Deploying Codewind remote'
   children:
     - title: 'Overview'
-      url: deployingcodewindremote.html
+      url: remote-overview.html
     - title: 'Configuring Codewind remote'
-      url: configuringcodewindremote.html
+      url: remote-configuring.html
+    - title: 'Obtaining an ingress or route'
+      url: remote-obtainingingressorroute.html
+    - title: 'Removing Codewind remote'
+      url: remote-removing.html
 
 - title: 'Performance monitoring'
   url: guide_performance.html
