@@ -24,7 +24,6 @@
         - title: 'Uninstalling Codewind for Eclipse'
           url: mdteclipseuninstall.html
 
-
     - title: 'Codewind for VS Code'
       children:
         - title: 'Overview'
@@ -47,7 +46,7 @@
           url: mdt-vsc-nodejsprofiling.html
         - title: 'Troubleshooting'
           url: mdt-vsc-troubleshooting.html
-        - title: 'Uninstalling'
+        - title: 'Uninstalling Codewind for VS Code'
           url: mdt-vsc-uninstall.html
  
     - title: 'Codewind for Eclipse Che'
@@ -64,6 +63,8 @@
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
+        - title: 'Unintalling Codewind for Eclipse Che'
+          url: mdt-che-uninstall.html
 
 - title: 'Performance monitoring'
   url: guide_performance.html

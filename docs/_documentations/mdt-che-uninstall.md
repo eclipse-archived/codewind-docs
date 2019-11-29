@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Uninstalling Codewind for Eclipse
-description: How to uninstall Codewind from Eclipse
-keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for Eclipse, restart Eclipse
+title: Uninstalling Codewind for Eclipse Che
+description: How to uninstall Codewind from Eclipse Che
+keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for Eclipse Che, restart Eclipse
 duration: 1 minute
 permalink: mdt-che-uninstall
 type: document
@@ -10,19 +10,28 @@ order: 70
 parent: mdteclipseoverview
 ---
 
-# Uninstalling Codewind from Eclipse
+# Uninstalling Codewind for Eclipse Che
 
-Remove the Codewind containers and images
+To uninstall Codewind on Kubernetes, follow these instructions:
 
-1. Bring up the context menu of the **Codewind** item in the **Codewind Explorer**
-2. Click on **Uninstall**
-3. If your application containers are running, you will be prompted whether you want to stop them.
+## Step 1: Stop Che workspaces
+1. Access the Che dashboard.
+2. Select workspaces in the sidebar on the dashboard.
+3. Stop all of the running workspaces and delete them.
 
-Use the Eclipse uninstall support to uninstall Codewind for Eclipse:
+## Step 2: Uninstall Che
 
-1. Navigate to **Help** > **About Eclipse IDE**.
-2. Click on **Installation Details**.
-3. Search for *Codewind*.
-4. Select **Codewind** and click **Uninstall**.
-5. On the **Uninstall Details** page click **Finish**.
-6. When the uninstall is complete, restart Eclipse.
+### OpenShift or OKD
+If Che is installed on OpenShift or OKD, follow these instructions:
+1. Open the OpenShift dashboard in your browser.
+2. Select the project that Eclipse Che was installed into. (The `eclipse-che` project is used by default.)
+3. Delete the project to remove Eclispe Che.
+
+### Helm Chart
+If Che was installed via its Helm chart, follow these instructions:
+1. Open a terminal session.
+2. Configure the Kubernetes client API to point to your Kubernetes cluster.
+3. Run the following command:
+```bash
+helm delete <che-release-name> --purge
+```
