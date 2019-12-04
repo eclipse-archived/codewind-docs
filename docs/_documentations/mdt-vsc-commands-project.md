@@ -35,7 +35,9 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project overview page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
 
-- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
+- **Auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
+
+- **Auto inject metrics**: Enable or disable the injection of app metrics for your project. This option is disabled by default. Enable this option to add Appmetrics Prometheus code to your project at build time. 
 
 - **Enable or disable project**: Enable or disable the project. This command is also available in the project overview.
 
