@@ -15,7 +15,7 @@ parent: mdt-vsc-commands-overview
 ## Create a new project or work with an existing project
 
 - To create a new project, right-click the *Projects (Local)* item and select **Create New Project**, or click on the *+* icon beside the *Projects (Local)* item. You can also create a new project using the **Command Palette**.
-- To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**. You can also add an existing project using the **Command Palette**. 
+- To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**, or click on the *link* icon beside the *Projects (Local)* item. You can also add an existing project using the **Command Palette**. Note that the project must already exist within the *codewind-workspace* folder.
 
 Right-click a project in the **Codewind view** to see most project commands. All commands are available in the **Command Palette**.
 
@@ -35,7 +35,9 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project overview page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
 
-- **Toggle auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
+- **Auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
+
+- **Auto inject metrics**: Enable or disable the injection of app metrics for your project. This option is disabled by default. Enable this option to add Appmetrics Prometheus code to your project at build time. 
 
 - **Enable or disable project**: Enable or disable the project. This command is also available in the project overview.
 
