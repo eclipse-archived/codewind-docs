@@ -37,7 +37,7 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Auto build**: Enable or disable auto build for the project. This command is also available in the project overview. 
 
-- **Auto inject metrics**: Enable or disable the injection of app metrics for your project. This option is disabled by default. Enable this option to add Open Metrics code to your project at build time. 
+- **Auto inject metrics**: Enable or disable the injection of open metrics into your application at build time. This option provides monitoring capabilities that are then used by the performance dashboard. This option is disabled by default. 
 
 - **Enable or disable project**: Enable or disable the project. This command is also available in the project overview.
 
