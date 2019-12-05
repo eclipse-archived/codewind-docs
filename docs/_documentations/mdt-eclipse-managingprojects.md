@@ -42,7 +42,7 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Build**: Initiate a build of your project. This action is not available if a build is already running. For more information, see [Building Codewind projects](mdteclipsebuildproject.html).
 - **Disable Auto Build**: Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This action is only available when auto build is enabled.
 - **Enable Auto Build**: Use this to re-enable automatic builds whenever a change is made. This action is only available when auto build is disabled.
-- **Auto inject metrics**: Enable or disable the injection of app metrics for your project. This option is disabled by default. Enable this option to add Appmetrics Prometheus code to your project at build time. 
+- **Auto inject metrics**: Enable or disable the injection of app metrics for your project. This option is disabled by default. Enable this option to add Open Metrics code to your project at build time. 
 - **Remove**: Removes a project. This action removes the project from Codewind.  You can then use Eclipse to delete the project from the Eclipse workspace and the file system.
 - **Refresh**: If the project gets out of sync, use this option to refresh it. To refresh all projects, right-click the **Projects (Local)** item in the **Codewind Explorer** view and select **Refresh**.
 
