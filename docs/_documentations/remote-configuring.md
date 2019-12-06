@@ -10,21 +10,29 @@ parent: installoncloud
 order: 1
 ---
 
-## Configuring Codewind remote
+# Configuring Codewind remote
 
-To securely configure Codewind remote, do the following steps.
+To use Codewind remote, configure your system by following these steps. 
 
-1. If you are using Kubernetes for Docker Desktop, validate you have an ingress controller installed on your cluster by typing the following command: [Mark to supply]
+## Prerequisites
+- Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
+- Ensure you have access to the Codewind CLI `cwctl`. To access the Codewind CLI... (**where???**)
+
+## Procedure
+
+To securely configure Codewind remote there are two options, configuring Kubernetes for Docker Desktop, or configuring a Cloud deployment that does not have an Ingress NGINX controller, for example, OpenShift. 
+
+### Configuring Kubernetes for Docker Desktop
+
+1. Validate you have an ingress controller installed on your cluster by typing the following command: [Mark to supply] 
+
+   If you are developing on Windows [get map local address from Mark]
 
    If you do not have an ingress controller, install one using the following commands:
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml`
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml`
 
-   If you are developing on Windows [get map local address from Mark]
-
-   If you are on OpenShift, you must provide the ingress in the `cwctl install remote \` command during installation. 
-
-2. If you are using using Kubernetes for Docker Desktop, create the remote deployment by entering the following `cwctl` command: 
+2. Create the remote deployment by entering the following `cwctl` command: 
    `cwctl install remote \`
      `--namespace {your_namespace}  \`
      `--kadminuser admin \`
@@ -32,24 +40,36 @@ To securely configure Codewind remote, do the following steps.
      `--krealm codewind \`
      `--kclient codewind  \`
      `--kdevuser developer \`
-     `--kdevpass  <userPassword>`
+     `--kdevpass <userPassword>`
 
-   For Cloud deployments that have not got the Ingress NGINX controller, for example, OpenShift, add the `--ingress` option to the `cwctl install remote \` command, for example:
+### Configuring Cloud deployments that do not have an Ingress NGINX controller
+
+1. If you are deploying to a Cloud that does not have an Ingress NGINX controller, for example, OpenShift, you must provide the ingress value in the `cwctl install remote \` command during installation. Derive the `ingress` value from the cluster URL. [Needs more from Mark]
+2. Create the remote deployment by issuing the following example `cwctl` command: 
+
+  `cwctl install remote \`
+     `--namespace {your_namespace}  \`
+     `--kadminuser admin \`
+     `--kadminpass <keycloakPassword>  \`
+     `--krealm codewind \`
+     `--kclient codewind  \`
+     `--kdevuser developer \`
+     `--kdevpass <userPassword>`
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
-     
-   You can derive the `ingress` value in the quotes from the cluster URL. [Mark to supply]
+    
+### Codewind CLI command explanation and sample output
 
-   This command:
-   a. Checks your Cloud is valid.
-	 b. Determines the ingress domain based on NGINX ingress that you added earlier. 
-	 c. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
-	 d. It then populates all of the database entries inside Keycloak with the values that you added to the command. 
-	 e. Sets up the performance pods.
-	 f. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new four new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
-	 g. On successful completion of the command, the command returns a Gatekeeper URL which is the one and only secure remote access entry point for the service. 
+The `cwctl install remote` command:
+1. Checks your Cloud is valid.
+2. Determines the ingress domain based on NGINX ingress that you added earlier. 
+3. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
+4. It then populates all of the database entries inside Keycloak with the values that you added to the command. 
+5. Sets up the performance pods.
+6. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new four new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
+7. On successful completion of the command, the command returns a Gatekeeper URL which is the one and only secure remote access entry point for the service. 
 
 You see example output similar to the following, this for a deployment on Kubernetes:
-  
+
 ```
 ~ cwctl --insecure install remote \
   --namespace codewind  \
