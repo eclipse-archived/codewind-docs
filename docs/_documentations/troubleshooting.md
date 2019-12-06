@@ -23,7 +23,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
-* [ODO with Codewind](#odo-with-codewind)
+* [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
@@ -459,46 +459,7 @@ Codewind displays an error. In VS Code, the error appears in the Codewind log:
 3. Rebind the project to Codewind.
 
 ***
-# ODO with Codewind
-
-<!--
-Codewind version: 0.5.0
-Che version: 7.2.0
-IDE extension version: 0.5.0
-IDE version: **7.1.0
-Action/Topic: ODO with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind/issues/692
--->
-## ODO projects are not deleted after the workspace is deleted
-
-If you create ODO projects and then delete the workspace without deleting the projects, all your ODO deployments still exist. 
-
-These steps reproduce the issue: 
-1. Install Codewind Che.
-2. Create ODO projects.
-3. Delete the Codewind workspace.
-4. Create a new workspace. You still see previously created ODO project deployments.
-
-**Workaround** 
-1. Login to the OKD/OpenShift cluster.
-2. Change to the project where the resources are by running the following command: 
-
-   ```sh
-   oc project <project name>
-   ```
-
-3. Delete the ODO project resources by running the following command: 
-
-   ```sh
-   oc delete svc,route,dc,pvc,is -l=app.kubernetes.io/part-of=app
-   ```
-
-   Or for individual components:
-
-   ```sh
-   oc delete svc,route,dc,pvc,is -l=app.kubernetes.io/instance=<component>
-   ```
+# OpenShift Do (odo) with Codewind
 
 ***
 # OKD and OpenShift
