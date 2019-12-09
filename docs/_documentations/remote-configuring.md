@@ -50,6 +50,8 @@ To securely configure Codewind remote there are two options, configuring Kuberne
      `--kdevuser <keycloakDevUser> \`
      `--kdevpass <keycloakDevUserPassword>`
 
+  Where `keycloakAdminUser` and `keycloakAdminPass` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service.  
+
 ### Configuring other Cloud deployments
 
 1. If you are deploying to a Cloud that does not have an Ingress NGINX controller, for example, OpenShift, you must provide the ingress value in the `cwctl install remote \` command during installation. You can derive the `ingress` value from the cluster URL. To do this, go to the OpenShift console, for example, `https://<mycluster>|<myaddress>.nip.io:7443/console`, and then derive the `ingress` value, for example, from the previous address, this would be `apps.<mycluster>.<myaddress>.nip.io`. OpenShift also refer to this as the `routing-suffix`. 
@@ -65,7 +67,9 @@ To securely configure Codewind remote there are two options, configuring Kuberne
      `--kdevuser <keycloakDevUser> \`
      `--kdevpass <keycloakDevUserPassword>`
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
-   
+
+   Where `keycloakAdminUser` and `keycloakAdminPass` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service. 
+
 ### Codewind CLI command explanation and sample output
 
 The `cwctl install remote` command:
