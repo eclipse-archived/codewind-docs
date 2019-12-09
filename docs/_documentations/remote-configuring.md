@@ -50,7 +50,7 @@ To securely configure Codewind remote there are two options, configuring Kuberne
      `--kdevuser <keycloakDevUser> \`
      `--kdevpass <keycloakDevUserPassword>`
 
-  Where `keycloakAdminUser` and `keycloakAdminPass` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service.  
+  Where `keycloakAdminUser` and `keycloakAdminPassword` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service.  
 
 ### Configuring other Cloud deployments
 
@@ -68,7 +68,7 @@ To securely configure Codewind remote there are two options, configuring Kuberne
      `--kdevpass <keycloakDevUserPassword>`
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
 
-   Where `keycloakAdminUser` and `keycloakAdminPass` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service. 
+   Where `keycloakAdminUser` and `keycloakAdminPassword` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service. 
 
 ### Codewind CLI command explanation and sample output
 
