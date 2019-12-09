@@ -12,4 +12,5 @@ order: 1
 
 ## Removing Codewind remote
 
-To remove Codewind remote...
+To remove Codewind remote, enter the following `cwctl` command: `cwctl remove remote --namespace {mynamespace} --workspace {workspaceID}`
+

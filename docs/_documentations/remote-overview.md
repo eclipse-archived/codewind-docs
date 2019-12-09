@@ -18,7 +18,7 @@ You install your preferred IDE on your local machine. For more information about
 
 You then use the Codewind features inside your preferred IDE to create a connection to the Cloud. Once connected, connection details appear, and you are able to use Codewind as you would locally, for example, you can right-click to open a project, access performance details, and so on. 
 
-[Screenshot of local + remote needed here]
+![Project view](dist/images/remote/project_view.png)
 
 Codewind enables you to choose which preferred IDE you want to use, however do not use two different IDEs at the same time. For the best user experience, choose which one you want to use, and disable the other. 
 
