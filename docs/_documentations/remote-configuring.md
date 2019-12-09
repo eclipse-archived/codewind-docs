@@ -74,7 +74,7 @@ The `cwctl install remote` command:
 6. Waits for Codewind to start. When Codewind has started, in Kubernetes, you see new four new pods including keycloak plus the services and the deployment configurations for those pods. If you are deploying on to OpenShift, you can use routes instead of ingress. 
 7. On successful completion of the command, the command returns a Gatekeeper URL which is the one and only secure remote access entry point for the service. 
 
-You see example output similar to the following, this for a deployment on Kubernetes:
+You see example output similar to the following, this for a Linux/macOS deployment on Kubernetes:
 
 ```
 ~ cwctl --insecure install remote \
