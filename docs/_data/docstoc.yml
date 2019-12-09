@@ -24,7 +24,6 @@
         - title: 'Uninstalling Codewind for Eclipse'
           url: mdteclipseuninstall.html
 
-
     - title: 'Codewind for VS Code'
       children:
         - title: 'Overview'
@@ -64,6 +63,15 @@
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
+
+- title: 'Deploying Codewind remote'
+  children:
+    - title: 'Overview'
+      url: remote-overview.html
+    - title: 'Configuring Codewind remote'
+      url: remote-configuring.html
+    - title: 'Removing Codewind remote'
+      url: remote-removing.html
 
 - title: 'Performance monitoring'
   url: guide_performance.html
