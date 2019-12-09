@@ -17,7 +17,7 @@ To use Codewind remote, configure your system by following these steps.
 ## Prerequisites
 - Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 - Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window, and navigate to the following hidden folder: `~/.codewind/{version}` On Windows, navigate to the following folder: `/users/{username}/.codewind/{version}`.
-- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice would be to deploy Keycloak first, and then deploy your Codewind instances. 
+- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice is to deploy Keycloak first, and then deploy your Codewind instances. 
 
 ## Procedure
 
@@ -26,13 +26,16 @@ To securely configure Codewind remote there are two options, configuring Kuberne
 ### Configuring Kubernetes for Docker Desktop
 
 1. Validate you have an ingress controller installed on your cluster by typing the following command:
+
    `kubectl get service -n ingress-nginx`
 
    If you do not have an ingress controller, install one using the following commands:
+
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml`
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml`
 
 2. To resolve the address of the cluster network and to enable the `cwctl` browsers and client side software to communicate with your installation, map the cluster network to `lo0` using the following command:
+
    `export INGRESS_DOMAIN=$(kubectl get services --namespace ingress-nginx -o jsonpath='{.items[*].spec.clusterIP}') sudo ifconfig lo0 alias ${INGRESS_DOMAIN}`
 
 3. Create the remote deployment by entering the following `cwctl` command: 
