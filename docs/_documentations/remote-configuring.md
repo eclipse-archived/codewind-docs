@@ -34,9 +34,10 @@ To securely configure Codewind remote there are two options, configuring Kuberne
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml`
    - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud-generic.yaml`
 
-2. To resolve the address of the cluster network and to enable the `cwctl` browsers and client side software to communicate with your installation, map the cluster network to `lo0` using the following command:
+2. To resolve the address of the cluster network and to enable the `cwctl` browsers and client side software to communicate with your installation, map the cluster network to `lo0` using the following commands:
 
-   `export INGRESS_DOMAIN=$(kubectl get services --namespace ingress-nginx -o jsonpath='<.items[*].spec.clusterIP>') sudo ifconfig lo0 alias $<INGRESS_DOMAIN>`
+   - `export INGRESS_DOMAIN=$(kubectl get services --namespace ingress-nginx -o jsonpath='<.items[*].spec.clusterIP>')`
+   - `sudo ifconfig lo0 alias $<INGRESS_DOMAIN>`
 
 3. Create the remote deployment by entering the following `cwctl` command: 
 
@@ -70,7 +71,7 @@ To securely configure Codewind remote there are two options, configuring Kuberne
 The `cwctl install remote` command:
 
 1. Checks your Cloud is valid.
-2. Determines the ingress domain based on NGINX ingress that you added earlier. 
+2. Determines the ingress domain based on NGINX ingress that you added earlier, or using the supplied value from the `--ingress` flag. 
 3. Creates the SSL certificates for the keycloak server and adds these to the ingress endpoint, and then starts Keycloak. 
 4. It then populates all of the database entries inside Keycloak with the values that you added to the command. 
 5. Sets up the performance pods.

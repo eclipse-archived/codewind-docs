@@ -50,8 +50,6 @@ When Codewind is configured to run in Remote mode, all connections to Gatekeeper
 
 The role of the Gatekeeper container is to marshal the requests from the local environment through to the Codewind Cloud service. By acting as a reverse proxy, Gatekeeper ensures Codewind PFE bound traffic is accompanied with a valid authentication bearer token.
 
-The exception to this are UI Socket connections which are allowed to tunnel through to the Gatekeeper proxy and terminate directly in the PFE container. For these connections token validation is handled by PFE directly during a socket connection handshake.
-
 At deployment time, Gatekeeper is configured with the necessary secrets and connectivity details of the Codewind Keycloak service.
 
 ### Codewind Keycloak
