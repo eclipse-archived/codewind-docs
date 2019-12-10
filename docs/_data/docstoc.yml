@@ -67,11 +67,11 @@
 - title: 'Deploying Codewind remote'
   children:
     - title: 'Overview'
-      url: remote-overview.html
+      url: remoteoverview.html
     - title: 'Configuring Codewind remote'
-      url: remote-configuring.html
+      url: remoteconfiguring.html
     - title: 'Removing Codewind remote'
-      url: remote-removing.html
+      url: remoteremoving.html
 
 - title: 'Performance monitoring'
   url: guide_performance.html

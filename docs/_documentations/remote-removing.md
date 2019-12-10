@@ -2,7 +2,7 @@
 layout: docs
 title: Removing Codewind remote
 description: Removing Codewind remote
-keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing Cloud connection
+keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
 permalink: remoteremoving
 type: document
