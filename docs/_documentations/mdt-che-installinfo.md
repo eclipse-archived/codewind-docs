@@ -19,7 +19,7 @@ Installing Codewind for Eclipse Che comprises the following steps:
 4. [After installing Che](#after-installing-che)
 5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
 6. [Updating the version](#updating-the-version)
-7. [Adding rules to support the Codewind odo extension](#adding-rules-to-support-the-codewind-odo-extension)
+7. [Adding extension to support OpenShift Do (odo)](https://www.eclipse.org/codewind/mdt-che-odo-support.html)
 
 ## Prerequisites
 1. Ensure PersistentVolumes (PV) are set up and support both `ReadWriteOnce` and `ReadWriteMany` and have minimum 1Gi storage.
@@ -120,19 +120,6 @@ If you would like to change the registry that's used at any time, run the `Codew
 
 **Note:** To proceed, you need to have added the registry credentials with Che.
 - Codewind restarts with the changes added.
-
-### Adding rules to support the Codewind odo extension
-The Codewind odo extension needs additional rules for accessing OpenShift resources. Use the following commands to clone the [`codewind-odo-extension`](https://github.com/eclipse/codewind-odo-extension) repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the Che workspace service account:
-1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
-2. Enter the following commands to go to the correct location, add the rules, and perform cleanup:
-```
-git clone https://github.com/eclipse/codewind-odo-extension &&\
-   cd ./codewind-odo-extension/odo-RBAC &&\
-   kubectl apply -f codewind-odoclusterrole.yaml &&\
-   kubectl apply -f codewind-odoclusterrolebinding.yaml &&\
-   cd - &&\
-   rm -rf codewind-odo-extension
-```
 
 ## Using Codewind from the Che Theia IDE
 
