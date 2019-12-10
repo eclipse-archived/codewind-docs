@@ -2,7 +2,7 @@
 layout: docs
 title: Deploying Codewind remote
 description: Deploying Codewind remote
-keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing Cloud connection
+keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
 permalink: remoteoverview
 type: document
@@ -12,25 +12,25 @@ order: 1
 
 # Deploying Codewind remote
 
-Codewind remote is where you develop your code locally and build and run it remotely and securely in the Cloud. This option is incredibly useful because it frees up your local machine to focus purely on developing code and you use the Cloud's resources to build and run your apps. Codewind enables you to develop your apps securely by securing the connection between your local editor and your remote Cloud deployment. To do this, Codewind uses Keycloak, an open source identity and access management solution for modern applications and services which is highly configurable to your environment. 
+Codewind remote is where you develop your code locally and build and run it remotely and securely in the cloud. This option is incredibly useful because it frees up your local machine to focus purely on developing code and you use the cloud's resources to build and run your apps. Codewind enables you to develop your apps securely by securing the connection between your local editor and your remote cloud deployment. To do this, Codewind uses Keycloak, an open source identity and access management solution for modern applications and services which is highly configurable to your environment. 
 
 You install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 
-You then use the Codewind features inside your preferred IDE to create a connection to the Cloud. Once connected, connection details appear, and you are able to use Codewind as you would locally, for example, you can right-click to open a project, access performance details, and so on. 
+You then use the Codewind features inside your preferred IDE to create a connection to the cloud. Once connected, connection details appear, and you are able to use Codewind as you would locally, for example, you can right-click to open a project, access performance details, and so on. 
 
 ![Project view](dist/images/remote/project_view.png)
 
 Codewind enables you to choose which preferred IDE you want to use, however do not use two different IDEs at the same time. For the best user experience, choose which one you want to use, and disable the other. 
 
-To configure Codewind remote, see [Configuring Codewind remote](remote-configuring.html).
+To configure Codewind remote, see [Configuring Codewind remote](remoteconfiguring.html).
 
 ## Codewind remote security overview
 
 The following information provides an overview of the various components that comprise your secure Codewind remote installation. 
 
-When running in remote mode, you can use your desktop installed IDE and the Codewind remote services to build and run your projects in a remote Cloud. Cloud services are secured using a Gatekeeper container which exposes an ingress route that proxies the connection through to the Codewind PFE service.
+When running in remote mode, you can use your desktop installed IDE and the Codewind remote services to build and run your projects in a remote cloud. Cloud services are secured using a Gatekeeper container which exposes an ingress route that proxies the connection through to the Codewind PFE service.
 
-![Remote overview](dist/images/remote/image4.png)
+![Remote overview](dist/images/remote/image4.png){:height="800px" width="1100px"}
 
 ### Codewind CLI
 
@@ -48,7 +48,7 @@ When Codewind is configured to run in Remote mode, all connections to Gatekeeper
 
 ### Codewind Gatekeeper
 
-The role of the Gatekeeper container is to marshal the requests from the local environment through to the Codewind Cloud service. By acting as a reverse proxy, Gatekeeper ensures Codewind PFE bound traffic is accompanied with a valid authentication bearer token.
+The role of the Gatekeeper container is to marshal the requests from the local environment through to the Codewind cloud service. By acting as a reverse proxy, Gatekeeper ensures Codewind PFE bound traffic is accompanied with a valid authentication bearer token.
 
 At deployment time, Gatekeeper is configured with the necessary secrets and connectivity details of the Codewind Keycloak service.
 
