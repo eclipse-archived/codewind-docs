@@ -22,7 +22,7 @@ You then use the Codewind features inside your preferred IDE to create a connect
 
 Codewind enables you to choose which preferred IDE you want to use, however do not use two different IDEs at the same time. For the best user experience, choose which one you want to use, and disable the other. 
 
-To configure Codewind remote, see [Configuring Codewind remote](remote-configuring.html).
+To configure Codewind remote, see [Configuring Codewind remote](remoteconfiguring.html).
 
 ## Codewind remote security overview
 
@@ -30,7 +30,7 @@ The following information provides an overview of the various components that co
 
 When running in remote mode, you can use your desktop installed IDE and the Codewind remote services to build and run your projects in a remote cloud. Cloud services are secured using a Gatekeeper container which exposes an ingress route that proxies the connection through to the Codewind PFE service.
 
-![Remote overview](dist/images/remote/image4.png)
+![Remote overview](dist/images/remote/image4.png){:height="800px" width="1100px"}
 
 ### Codewind CLI
 
