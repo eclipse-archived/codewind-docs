@@ -12,7 +12,7 @@ order: 1
 
 # Deploying Codewind remotely
 
-Deploying Codewind remotely is where you deploy Codewind in the cloud. You then develop your code locally and build and run it remotely and securely using your remote deployment of Codewind. This option is incredibly useful because it frees up your local machine to focus purely on developing code and you use the cloud's resources to build and run your apps. Codewind enables you to develop your apps securely by securing the connection between your local editor and your remote cloud deployment. To do this, Codewind uses Keycloak, an open source identity and access management solution for modern applications and services which is highly configurable to your environment. 
+Deploying Codewind remotely enables you to develop your code locally and then build and run it remotely and securely in the cloud. This option is incredibly useful because it frees up local resource usage and you use the cloud's resources to build and run your apps. By using [Keycloak](https://www.keycloak.org/), the connection between your local editor and your remote cloud deployment is secure.
 
 You install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 
