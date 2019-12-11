@@ -64,13 +64,13 @@
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
 
-- title: 'Deploying Codewind remote'
+- title: 'Deploying Codewind remotely'
   children:
     - title: 'Overview'
       url: remoteoverview.html
-    - title: 'Configuring Codewind remote'
+    - title: 'Configuring your remote deployment of Codewind'
       url: remoteconfiguring.html
-    - title: 'Removing Codewind remote'
+    - title: 'Removing your remote deployment of Codewind'
       url: remoteremoving.html
 
 - title: 'Performance monitoring'

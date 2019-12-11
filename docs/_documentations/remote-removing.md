@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Removing Codewind remote
-description: Removing Codewind remote
+title: Removing your remote deployment of Codewind
+description: Removing your remote deployment of Codewind
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
 permalink: remoteremoving
@@ -10,7 +10,8 @@ parent: installoncloud
 order: 1
 ---
 
-## Removing Codewind remote
+## Removing your remote deployment of Codewind
 
-To remove Codewind remote, enter the following `cwctl` command: `cwctl remove remote --namespace {mynamespace} --workspace {workspaceID}`
+To remove your remote deployment of Codewind, enter the following `cwctl` command: 
+`cwctl remove remote --namespace {mynamespace} --workspace {workspaceID}`
 
