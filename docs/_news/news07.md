@@ -8,15 +8,15 @@ permalink: news07
 ---
 
 ## Codewind 0.7.0
-// DOUBLE CHECK -- Monday 16 December 2019
+Monday 16 December 2019
 
-#### :sparkles: Remote Deploy with Codewind: Tech Preview :sparkles:
+#### ✨ Remote Deploy with Codewind: Tech Preview ✨
 
 You can now develop your code locally and securely build and deploy your apps in the cloud! Why is this cool?
-- Free up local resources. :clap:
-- It's secure! We use [Keycloak](https://keycloak.org/) to secure the connection between your local editor and remote cloud deployment.
+- Free up local resources. 👏
+- It's secure! 🔐 We use [Keycloak](https://keycloak.org/) to secure the connection between your local editor and remote cloud deployment.
 
-// Curious? [Try it out!](link to docs) or [learn more](Link to our tech preview blog).
+// Curious? [Try it out!](link to docs) and keep an eye out for more information!
 
 #### New Features and Highlights for 0.7.0
 
