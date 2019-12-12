@@ -16,11 +16,12 @@ The Codewind CLI `cwctl` is designed to do almost all the steps required to remo
 
 There are two modes of use. You can:
 1. Remove Codewind.
-2. Remove Keycloak. A Keycloak service can provide authentication services to many Codewind deployments in different namespaces, so only remove it if you are sure it is no longer used.
+2. Remove Keycloak. A Keycloak service can provide authentication services to many Codewind deployments in different namespaces, so only remove it when you are sure it is no longer used.
 
 ## Removing a remote deployment of Codewind
 
 To remove a remote deployment of Codewind, enter the following `cwctl` command:
+
 `cwctl remove remote --namespace <namespace> --workspace <workspaceID>`
 
 Where the command parameters `<namespace>` and `<workspaceID>` are used to identify which Kubernetes resources to remove. If you are unsure of the `<workspaceID>`, you can find it as part of the ingress or route URL, for example:
@@ -32,7 +33,8 @@ Where the command parameters `<namespace>` and `<workspaceID>` are used to ident
 
 WARNING: Removing Keycloak breaks all remote deployments of Codewind that are using it for authentication services. 
 
-If you are ready to remove keycloak, use the following `cwctl` command:
-`cwctl remove keycloak  --namespace <namespace> keycloak-only --workspace <workspaceID>`
+If you are ready to remove Keycloak, use the following `cwctl` command:
+
+`cwctl remove keycloak  --namespace <namespace> --workspace <workspaceID>`
 
 Where the command parameters `<namespace>` and `<workspaceID>` are used to identify which Kubernetes resources to remove.
