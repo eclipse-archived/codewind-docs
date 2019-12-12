@@ -16,7 +16,7 @@ You can now develop your code locally and securely build and deploy your apps in
 - Free up local resources. 👏
 - It's secure! 🔐 We use [Keycloak](https://keycloak.org/) to secure the connection between your local editor and remote cloud deployment.
 
-// Curious? [Try it out!](link to docs) and keep an eye out for more information!
+Curious? [Try it out](remoteoverview.html) and keep an eye out for more information!
 
 #### New Features and Highlights for 0.7.0
 
@@ -24,6 +24,7 @@ You can now develop your code locally and securely build and deploy your apps in
 - You can now easily import existing projects into Codewind and [use odo](https://github.com/eclipse/codewind/issues/1115) to build and deploy projects to your OpenShift or OKD cluster.
 - Introducing [support for Java template](https://github.com/eclipse/codewind/issues/450) and Java projects can build and deploy [once configured](//permalink to landing page).
 - You no longer have to create your [docker registry secret](https://github.com/eclipse/codewind/issues/665) in Codewind.
+
 
 
 #### List of Fixes
