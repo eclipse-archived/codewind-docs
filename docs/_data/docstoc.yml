@@ -72,6 +72,8 @@
       url: remoteoverview.html
     - title: 'Configuring Codewind remote'
       url: remoteconfiguring.html
+    - title: 'Entering remote connection settings'
+      url: remoteconnectionui.html
     - title: 'Removing Codewind remote'
       url: remoteremoving.html
 
