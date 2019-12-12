@@ -84,7 +84,7 @@ The `cwctl install remote` command:
 
 You see example output similar to the following, this for a Linux/macOS deployment on Kubernetes:
 
-```
+```sh
 ~ cwctl --insecure install remote \
   --namespace codewind  \
   --kadminuser admin \
