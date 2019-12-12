@@ -70,6 +70,10 @@ To securely configure your remote deployment of Codewind, there are two options,
 
    Where `keycloakAdminUser` and `keycloakAdminPassword` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service. 
 
+3. Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+
 ### Codewind CLI command explanation and sample output
 
 The `cwctl install remote` command:
