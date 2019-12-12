@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Deploying Codewind remote
-description: Deploying Codewind remote
-keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
+title: Deploying Codewind remotely
+description: Deploying Codewind remotely
+keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remoteoverview
 type: document
@@ -10,9 +10,9 @@ parent: installoncloud
 order: 1
 ---
 
-# Deploying Codewind remote
+# Deploying Codewind remotely
 
-Codewind remote is where you develop your code locally and build and run it remotely and securely in the cloud. This option is incredibly useful because it frees up your local machine to focus purely on developing code and you use the cloud's resources to build and run your apps. Codewind enables you to develop your apps securely by securing the connection between your local editor and your remote cloud deployment. To do this, Codewind uses Keycloak, an open source identity and access management solution for modern applications and services which is highly configurable to your environment. 
+Deploying Codewind remotely enables you to develop your code locally and then build and run it remotely and securely in the cloud. This option is incredibly useful because it frees up local resource usage and you use the cloud's resources to build and run your apps. By using [Keycloak](https://www.keycloak.org/), the connection between your local editor and your remote cloud deployment is secure.
 
 You install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 
@@ -22,7 +22,7 @@ You then use the Codewind features inside your preferred IDE to create a connect
 
 Codewind enables you to choose which preferred IDE you want to use, however do not use two different IDEs at the same time. For the best user experience, choose which one you want to use, and disable the other. 
 
-To configure Codewind remote, see [Configuring Codewind remote](remoteconfiguring.html).
+To configure your remote deployment of Codewind, see [Configuring your remote deployment of Codewind](remoteconfiguring.html).
 
 ## Codewind remote security overview
 
