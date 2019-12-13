@@ -19,7 +19,9 @@ code {
 .main {
     margin: auto;
 }
-
+.banner-image {
+	width: 40px;
+}
 .cw-main-content {
     position: absolute;
     top: 115px;
