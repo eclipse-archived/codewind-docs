@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Configuring Codewind remote
-description: Configuring your environment to use Codewind remote
+title: Configuring your remote deployment of Codewind
+description: Configuring your environment to use your remote deployment of Codewind
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
 permalink: remoteconfiguring
@@ -10,9 +10,9 @@ parent: installoncloud
 order: 1
 ---
 
-# Configuring Codewind remote
+# Configuring your remote deployment of Codewind
 
-To use Codewind remote, configure your system by following these steps. 
+Configure your remote deployment of Codewind by following these steps. 
 
 ## Prerequisites
 - Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
@@ -21,7 +21,7 @@ To use Codewind remote, configure your system by following these steps.
 
 ## Procedure
 
-To securely configure Codewind remote there are two options, configuring Kubernetes for Docker Desktop, or configuring a cloud deployment that does not have an Ingress NGINX controller, for example, OpenShift. 
+To securely configure your remote deployment of Codewind, there are two options, configuring Kubernetes for Docker Desktop, or configuring a cloud deployment that does not have an Ingress NGINX controller, for example, OpenShift. 
 
 ### Configuring Kubernetes for Docker Desktop
 
@@ -39,7 +39,7 @@ To securely configure Codewind remote there are two options, configuring Kuberne
    - `export INGRESS_DOMAIN=$(kubectl get services --namespace ingress-nginx -o jsonpath='<.items[*].spec.clusterIP>')`
    - `sudo ifconfig lo0 alias $<INGRESS_DOMAIN>`
 
-3. Create the remote deployment by entering the following `cwctl` command: 
+3. Create the remote deployment of Codewind by entering the following `cwctl` command: 
 
    `cwctl install remote \`
      `--namespace <your_namespace>  \`
@@ -56,7 +56,7 @@ To securely configure Codewind remote there are two options, configuring Kuberne
 
 1. If you are deploying to a cloud that does not have an Ingress NGINX controller, for example, OpenShift, you must provide the ingress value in the `cwctl install remote \` command during installation. You can derive the `ingress` value from the cluster URL. To do this, go to the OpenShift console, for example, `https://<mycluster>|<myaddress>.nip.io:7443/console`, and then derive the `ingress` value, for example, from the previous address, this would be `apps.<mycluster>.<myaddress>.nip.io`. OpenShift also refer to this as the `routing-suffix`. 
 
-2. Create the remote deployment by issuing the following example `cwctl` command: 
+2. Create the remote deployment of Codewind by issuing the following example `cwctl` command: 
 
    `cwctl install remote \`
      `--namespace <your_namespace>  \`
@@ -69,6 +69,10 @@ To securely configure Codewind remote there are two options, configuring Kuberne
      `--ingress "apps.myopenshiftserver.10.20.30.40.nip.io`
 
    Where `keycloakAdminUser` and `keycloakAdminPassword` are the Keycloak Administrator's user credentials, and `keycloakDevUser` and `keycloakDevUserPassword` are the credentials of the first user to use the service. 
+
+3. Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
 ### Codewind CLI command explanation and sample output
 
@@ -84,7 +88,7 @@ The `cwctl install remote` command:
 
 You see example output similar to the following, this for a Linux/macOS deployment on Kubernetes:
 
-```
+```sh
 ~ cwctl --insecure install remote \
   --namespace codewind  \
   --kadminuser admin \
