@@ -71,7 +71,7 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
    ![Screen Shot 2019-08-22 at 12 18 51 PM](https://user-images.githubusercontent.com/6880023/63531743-2d633580-c4d7-11e9-9960-ae5470398a3f.png)
 2. Click the **Add Registry** button.
 3. Enter the following information:
-   - Enter `docker-registry.default.svc:5000` as the address.
+   - Enter `image-registry.openshift-image-registry.svc:5000` as the address.
    - Enter the service account name as the username.
    - Enter the token retrieved from the service account token secret as the password.
    ![Screen Shot 2019-08-22 at 12 19 38 PM](https://user-images.githubusercontent.com/6880023/63531755-32c08000-c4d7-11e9-8fae-74799b50d549.png)
@@ -84,7 +84,7 @@ After the internal Docker registry credentials are added to Che as a Docker regi
    - **Note:** If you're opening an existing workspace, you must stop and start the workspace before the registry credentials take effect.
 2. Run the `Codewind: Set Deployment Registry` command. 
    ![Screen Shot 2019-08-22 at 12 53 19 PM](https://user-images.githubusercontent.com/6880023/63533949-e592dd00-c4db-11e9-99d6-906a8c5edf21.png)
-3. Enter `docker-registry.default.svc:5000/<project>` as the deployment registry, where `<project>` is the OpenShift project that you created the service account in.
-   - Example: `docker-registry.default.svc:5000/pushed`
+3. Enter `image-registry.openshift-image-registry.svc:5000/<project>` as the deployment registry, where `<project>` is the OpenShift project that you created the service account in.
+   - Example: `image-registry.openshift-image-registry.svc:5000/pushed`
    ![Screen Shot 2019-08-22 at 12 53 24 PM](https://user-images.githubusercontent.com/6880023/63534021-1c68f300-c4dc-11e9-937f-a3903e12456d.png)
 4. Click **enter**.
