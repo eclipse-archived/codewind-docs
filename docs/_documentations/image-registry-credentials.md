@@ -20,21 +20,22 @@ Before you proceed, see the [examples](#examples) section on recommended values 
 The following deployment registries have been tested and verified with Codewind:
 - Docker Hub:
     - Address: `docker.io`
-    - Codewind deployment registry: `docker.io/<username>`
+    - Namespace: `docker.io/<username>`
     - Credentials: Docker Hub username and password or token access
 - Quay.io:
     - Address: `https://quay.io`
-    - Codewind deployment registry: `https://quay.io/<username>`
+    - Namespace: `https://quay.io/<username>`
     - Credentials: Quay.io user name and encrpyted password
 - Artifactory
     - Address: `<artifactory-hostname>`
-    - Codewind deployment registry: `<artifactory-hostname>/<username>`
+    - Namespace: `<artifactory-hostname>/<username>`
     - Credentials: Artifactory user name and token
 - OpenShift Registry
     - Address: `docker-registry.default.svc:5000`
-    - Codewind deployment registry: `docker-registry.default.svc:5000/<project>`
+    - Namespace: `docker-registry.default.svc:5000/<project>`
     - Credentials: OpenShift user name and token
-    
+**Note:** For Docker Hub, the `Namespace` value is likely to be your username. 
+
 ### Specifying image registries for Codewind 
 There are three scenarios in Codewind where you need to specify what image registry to use:
 
