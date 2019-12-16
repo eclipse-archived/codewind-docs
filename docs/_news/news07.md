@@ -21,8 +21,8 @@ Curious? [Learn more](remoteoverview.html)!
 #### New Features and Highlights for 0.7.0
 
 **Monitoring Updates**
-- You can now [inject metrics](https://github.com/codewind-resources/design-documentation/blob/master/codewindServer/metricsInjection.md) into your Nodejs, Liberty and Spring projects. 
-- Effortlessly [visualise data](https://github.com/eclipse/codewind/issues/977) like your CPU useage, memory footprint and web traffic on our included application monitoring dashboard at the click of a button. If you don't want or need it, you can simply [disable it](https://github.com/eclipse/codewind/issues/1290). We'll host the dashboard, so displaying the graphs won't eat into your project's resources.
+- You can now [inject metrics](https://github.com/codewind-resources/design-documentation/blob/master/codewindServer/metricsInjection.md) into your Node.js, Liberty, and Spring projects. 
+- Effortlessly [visualize data](https://github.com/eclipse/codewind/issues/977) like CPU useage, memory footprint, and web traffic on the included application monitoring dashboard at the click of a button. If you don't want it or need it, simply [disable it](https://github.com/eclipse/codewind/issues/1290). Codewind hosts the dashboard, so displaying the graphs won't eat into your project's resources.
 
 **OpenShift Do (odo)**
 - You can now easily import existing projects into Codewind and [use odo](https://github.com/eclipse/codewind/issues/1115) to build and deploy projects to your OpenShift or OKD cluster.
@@ -31,5 +31,5 @@ Curious? [Learn more](remoteoverview.html)!
 
 #### List of Fixes
 - Changes to the Eclipse plugin for Spring Server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116)
-- Appsody binary updated from 0.5.0 to 0.5.2 in the codewind-appsody-extension
+- Appsody [binary updated](https://github.com/eclipse/codewind-docs/pull/267) from 0.5.0 to 0.5.2 in the codewind-appsody-extension
 - Other security fixes
