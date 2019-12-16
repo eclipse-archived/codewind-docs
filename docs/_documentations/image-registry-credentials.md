@@ -18,36 +18,31 @@ Before you proceed, see the [examples](#examples) section on recommended values 
 
 ## Examples:
 The following deployment registries have been tested and verified with Codewind:
-- Dockerhub:
-    - Host: `docker.io`
+- Docker Hub:
+    - Address: `docker.io`
     - Codewind deployment registry: `docker.io/<username>`
-    - Credentials: Dockerhub user name and password
+    - Credentials: Docker Hub username and password or token access
 - Quay.io:
-    - Host: `https://quay.io`
+    - Address: `https://quay.io`
     - Codewind deployment registry: `https://quay.io/<username>`
     - Credentials: Quay.io user name and encrpyted password
 - Artifactory
-    - Host: `<artifactory-hostname>`
+    - Address: `<artifactory-hostname>`
     - Codewind deployment registry: `<artifactory-hostname>/<username>`
     - Credentials: Artifactory user name and token
 - OpenShift Registry
-    - Host: `docker-registry.default.svc:5000`
+    - Address: `docker-registry.default.svc:5000`
     - Codewind deployment registry: `docker-registry.default.svc:5000/<project>`
     - Credentials: OpenShift user name and token
     
-### Specifying Image Registries for Codewind 
+### Specifying image registries for Codewind 
 There are three scenarios in Codewind where you need to specify what image registry to use:
 
-1. If you run Codewind on a remote Kubernetes cluster to develop an Appsody style project, and the image registry for the Appsody stack requires credentials, you need to configure Codewind to use the credentials for that specific image registry.
-2. If you develop an Appsody style project, you need to specify an image registry, so Appsody can pull stack images from that specific image registry. 
-3. If you run Codewind locally to develop an Appsody style project, and the the image registry for the Appsody stack requires credentials, you need to `docker login` to the registry from the command line before you create the Appsody project. 
+1. If you run Codewind on a remote Kubernetes cluster (this includes Che) to develop an Appsody style project, and the image registry for the Appsody stack requires credentials, you need to configure Codewind to use the credentials for that specific image registry.
+2. If you run Codewind locally to develop an Appsody style project, and the image registry for the Appsody stack requires credentials, you need to `docker login` to the registry from the command line before you create the Appsody project.
+3. If you run Codewind on a remote Kubernetes cluster (this includes Che) to develop a Codewind style project, you need to configure Codewind with an image registry to push the application's image to that specific image registry.
 
 If you do not develop any Codewind style projects,and you use an image registry that does not require credentials, then you do not need to specify an image registry. 
-
-### Instructions specific to IBM Cloud Private
-- The internal Docker registry on IBM Cloud Private is **not** supported. Instead, you need to use either an external registry or an image registry that you installed yourself.
-    - If a registry that you installed is using self-signed certificates, the registry must be whitelisted in both Kubernetes and Docker on **all** nodes.
-- The `docker.io`, `quay.io`, and `artifactory` image registry hosts have been tested with IBM Cloud Private.
 
 ### Instructions specific to OKD and OpenShift
 To use the OpenShift internal Docker registry with Codewind, see [Using the OpenShift Internal Registry with Codewind](https://www.eclipse.org/codewind/openshiftregistry.html).
