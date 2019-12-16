@@ -26,10 +26,10 @@ Curious? [Learn more](remoteoverview.html)!
 
 **OpenShift Do (odo)**
 - You can now easily import existing projects into Codewind and [use odo](https://github.com/eclipse/codewind/issues/1115) to build and deploy projects to your OpenShift or OKD cluster.
-- Introducing [support for Java template](https://github.com/eclipse/codewind/issues/450) and Java projects can build and deploy [once configured](mdt-che-odo-support.html).
-- You no longer have to create your [docker registry secret](https://github.com/eclipse/codewind/issues/665) in Codewind.
+- Codewind now [supports Java templates](https://github.com/eclipse/codewind/issues/450), and Java projects can build and deploy after they have been [configured](mdt-che-odo-support.html).
+- You no longer have to create your [Docker registry secret](https://github.com/eclipse/codewind/issues/665) in Codewind.
 
 #### List of Fixes
-- Changes to the Eclipse plug-in for Spring Server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116)
+- Changes to the Eclipse plug-in for Spring server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116)
 - Appsody [binary updated](https://github.com/eclipse/codewind-docs/pull/267) from 0.5.0 to 0.5.2 in the `codewind-appsody-extension`
 - Other security fixes
