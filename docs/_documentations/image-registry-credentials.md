@@ -20,19 +20,19 @@ Before you proceed, see the [examples](#examples) section on recommended values 
 The following deployment registries have been tested and verified with Codewind:
 - Docker Hub:
     - Address: `docker.io`
-    - Namespace: `docker.io/<username>`
+    - Namespace: `<namespace>`
     - Credentials: Docker Hub username and password or token access
 - Quay.io:
     - Address: `https://quay.io`
-    - Namespace: `https://quay.io/<username>`
+    - Namespace: `<namespace>`
     - Credentials: Quay.io user name and encrpyted password
 - Artifactory
     - Address: `<artifactory-hostname>`
-    - Namespace: `<artifactory-hostname>/<username>`
+    - Namespace: `<namespace>`
     - Credentials: Artifactory user name and token
 - OpenShift Registry
     - Address: `docker-registry.default.svc:5000`
-    - Namespace: `docker-registry.default.svc:5000/<project>`
+    - Namespace: `<project>`
     - Credentials: OpenShift user name and token
 **Note:** For Docker Hub, the `Namespace` value is likely to be your username. 
 
