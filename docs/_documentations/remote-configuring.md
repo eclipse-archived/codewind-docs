@@ -17,7 +17,8 @@ Configure your remote deployment of Codewind by following these steps.
 ## Prerequisites
 - Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 - Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window, and navigate to the following hidden folder: `~/.codewind/<version>` On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
-- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice is to deploy Keycloak first, and then deploy your Codewind instances. 
+- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice is to deploy Keycloak first, and then deploy your Codewind instances.
+- Have an active Kubernetes context that points to your cluster.
 
 ## Procedure
 
