@@ -31,11 +31,8 @@ Curious? [Learn more](remoteoverview.html)!
 **Docker**
 - Your [Docker registry secret](https://github.com/eclipse/codewind/issues/665) is now dynamically created through a Codewind extension.
 
-**OpenAPI Experience for VS Code**
-
-
 #### List of Fixes
-- Changes to the Eclipse plug-in for Spring server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116). 
+- Changes to the Eclipse plug-in for Spring server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116)
    - The OpenAPI Wizard generator will not override the implicitly or explicitly defined main class in the Spring project.
    - The compilation errors related to unimplemented methods in the OpenAPI2SpringBoot class are fixed.
 - Appsody [binary updated](https://github.com/eclipse/codewind-docs/pull/267) from 0.5.0 to 0.5.2 in the `codewind-appsody-extension`
