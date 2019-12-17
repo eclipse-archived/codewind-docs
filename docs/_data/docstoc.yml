@@ -67,9 +67,7 @@
           url: viewkibanalogs.html
 
     - title: 'Specifying image registries for Codewind'
-      children: 
-        - title: 'Specifying image registries for Codewind'
-        - url: image-registry-credentials.html
+      url: image-registry-credentials.html
 
 - title: 'Deploying Codewind remotely'
   children:
