@@ -29,7 +29,7 @@ Curious? [Learn more](remoteoverview.html)!
 - Codewind now [supports Java templates](https://github.com/eclipse/codewind/issues/450), and Java projects can build and deploy after they have been [configured](mdt-che-odo-support.html).
 
 **Docker**
-- Your [Docker registry secret](https://github.com/eclipse/codewind/issues/665) is now dynamically created through a Codewind extension.
+- You can now specify any [Docker registry secret](https://github.com/eclipse/codewind/issues/1178) required by Codewind within the Codewind extension for the editor.
 
 #### List of Fixes
 - Changes to the Eclipse plug-in for Spring server [post-code generation stability for OpenAPI](https://github.com/eclipse/codewind/issues/1116)
