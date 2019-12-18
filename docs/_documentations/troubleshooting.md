@@ -471,7 +471,7 @@ Issue link: https://github.com/eclipse/codewind/issues/1514
 ## Building an odo project fails because of an existing image stream
 If you try to create an image stream that already exists in your cluster and then build an odo project, you might receive error messages in the build log:
 ```
-Failed to create component with name <image stream name>. Please use odo config view to view settings used to create component. Error: imagestreams.image.openshift.io "<image stream name>" already exists unable to create ImageStream for <image stream name>
+Failed to create component with name <component name>. Please use odo config view to view settings used to create component. Error: imagestreams.image.openshift.io "<image stream name>" already exists unable to create ImageStream for <image stream name>
 ```
 
 **Workaround:**
