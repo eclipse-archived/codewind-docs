@@ -461,6 +461,23 @@ Codewind displays an error. In VS Code, the error appears in the Codewind log:
 ***
 # OpenShift Do (odo) with Codewind
 
+For more information about the OpenShift Do (odo) extension in Codewind, see the [README](https://github.com/eclipse/codewind-odo-extension) file in the `codewind-odo-extension` repository.
+
+<!--
+Action/Topic: OpenShift Do (odo) with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/1514
+-->
+## Building an odo project fails because of an existing image stream
+If you try to create an image stream that already exists in your cluster and then build an odo project, you might receive error messages in the build log:
+```
+Failed to create component with name <component name>. Please use odo config view to view settings used to create component. Error: imagestreams.image.openshift.io "<image stream name>" already exists unable to create ImageStream for <image stream name>
+```
+
+**Workaround:**
+1. Run `kubectl get is` to get the existing image stream.
+2. Run `kubectl delete is <existing image stream name>` to manually delete the existing image stream.
+
 ***
 # OKD and OpenShift
 <!--
