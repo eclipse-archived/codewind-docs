@@ -66,9 +66,6 @@
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
 
-    - title: 'Specifying image registries for Codewind'
-      url: image-registry-credentials.html
-
 - title: 'Deploying Codewind remotely'
   children:
     - title: 'Overview'
