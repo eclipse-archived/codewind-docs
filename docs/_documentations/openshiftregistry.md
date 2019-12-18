@@ -67,7 +67,6 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
 6. Copy the value from the **token** field.
 
 ### Adding the OpenShift registry in Codewind
-After the internal Docker registry credentials are added to Che as a Docker registry, you can use the credentials in Codewind.
 1. Create or open a Codewind workspace.
 2. Run the command, `Codewind: Image Registry Manager`. 
 3. Enter `docker-registry.default.svc:5000` as the `Address` (`image-registry.openshift-image-registry.svc:5000` for OCP version 4). 
