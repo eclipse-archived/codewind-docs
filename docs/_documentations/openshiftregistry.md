@@ -66,23 +66,12 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
       ```
 6. Copy the value from the **token** field.
 
-### OpenShift registry in Che and Codewind
-
-#### Adding the OpenShift registry in Che
-1. Open the Che dashboard and select the **Administration** tab.
-2. Click the **Add Registry** button.
-3. Enter the following information:
-   - Enter `docker-registry.default.svc:5000` as the address for OKD version 3.
-   - Enter `image-registry.openshift-image-registry.svc:5000` as the address for OCP version 4. 
-   - Enter the service account name as the username.
-   - Enter the token retrieved from the service account token secret as the password.
-4. Click **Add**.
-
-#### Adding the OpenShift registry in Codewind
+### Adding the OpenShift registry in Codewind
 After the internal Docker registry credentials are added to Che as a Docker registry, you can use the credentials in Codewind.
 1. Create or open a Codewind workspace.
-   - **Note:** If you open an existing workspace, you must stop and start the workspace before the registry credentials take effect.
-2. Run the `Codewind: Set Deployment Registry` command. 
-3. Enter `docker-registry.default.svc:5000/<project>` as the deployment registry, where `<project>` is the OpenShift project that you created the service account in.
-   - Example: `docker-registry.default.svc:5000/pushed`
-4. Click **enter**.
+2. Run the command, `Codewind: Image Registry Manager`. 
+3. Enter `docker-registry.default.svc:5000` as the `Address` (`image-registry.openshift-image-registry.svc:5000` for OCP version 4). 
+4. Enter the service account name as the `username`.
+5. Enter the token retrieved from the service account token secret as the `password`. 
+6. Enter `<project>` as `namespace`, where `<project>` is the OpenShift project where you created the service account. 
+7. Click **enter**.
