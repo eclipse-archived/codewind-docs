@@ -30,9 +30,9 @@ The extension needs additional roles for accessing OpenShift resources. Use the 
 ### Importing Java image stream to your OpenShift or OKD cluster
 In order to create or import Java compoent, you need to import Java image stream to your OpenShift or OKD cluster so that odo can build component image.
 
-### Adding roles and importing Java image stream
+### Adding the roles and importing the Java image stream
 1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
-2. Enter the following commands to go to the correct location, add the roles and import Java image stream, and perform cleanup:
+2. Enter the following commands to go to the correct location, add the roles and import the Java image stream, and perform cleanup:
 ```
 git clone https://github.com/eclipse/codewind-odo-extension &&\
    cd ./codewind-odo-extension/setup &&\
