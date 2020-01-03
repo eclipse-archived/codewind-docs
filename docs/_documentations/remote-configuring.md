@@ -168,3 +168,11 @@ INFO[0101] Waiting for Codewind PFE to start
 .
 INFO[0101] Codewind is available at: https://codewind-gatekeeper-k3rdhvxk.10.99.117.86.nip.io
 ```
+
+### Configuring Codewind for Tekton pipelines
+
+Configure the Tekton dashboard in Codewind remote scenarios to use existing Tekton installations with Codewind.
+
+To get started with the Tekton Dashboard Webhooks Extension, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
+
+To access the Tekton dashboard, see the [Tekton dashboard README file](https://github.com/tektoncd/dashboard#install-on-openshift).
