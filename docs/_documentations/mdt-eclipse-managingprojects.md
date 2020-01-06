@@ -33,6 +33,7 @@ Some actions open the default Eclipse browser. If you find that the default Ecli
 - **Open Container Shell**: Opens a shell into your application container. This action is only available when the container is active.
 - **Open Application Monitor**: Opens the application monitor in the default Eclipse browser. Use this to monitor the activity and health of your application. This action is only available when the application is running or debugging.
 - **Open Performance Dashboard**: Opens the performance dashboard in the default Eclipse browser. This action is available only when the application is running or debugging.
+- **Open Tekton Dashboard**: This option is available to you only if you installed pipelines. Use this option to open the dashboard.
 - **Import Project**: Imports your project into the Eclipse workspace.
 - **Disable/Enable Project**: Disables or enables the project.
 - **Show Log Files**: If log files are available, this action displays a list of log files. Click **Show All** or an individual log file toggle action to open the log file in the Eclipse **Console** view. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
