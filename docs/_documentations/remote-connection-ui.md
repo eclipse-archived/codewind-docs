@@ -11,7 +11,7 @@ type: document
 ### Entering Codewind remote connection settings
 1. From the **Codewind** view, click **New Codewind Connection**. From the Codewind connection settings page, enter a connection name, an optional connection description, and Codewind connection credentials. Then, click **Test** to confirm that the Codewind Connection Credentials are correct.
 2. Add sources with the Template Source Manager [for Eclipse](mdteclipseworkingwithtemplates.html) or [for VS Code](mdt-vsc-workingwithtemplates.html).
-3. If your source uses Codewind style templates, add a push image registry to the [Image Registry Manager](dockerregistry.html).
+3. If your source uses Codewind style templates, add a push image registry to the [Image Registry Manager](image-registry-credentials.html).
    - To go to the Image Registry Manager command, click the button in the Remote Connection wizard or right-click your connection in the **Codewind** view.
    - From the Image Registry Manager, click **Add New** and follow the prompts in the windows.
    - You have opportunities to test your credentials if you are using a Codewind style template and need a push registry. To test, you can deploy a Hello World image to the image registry.
