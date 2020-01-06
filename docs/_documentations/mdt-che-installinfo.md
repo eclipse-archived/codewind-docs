@@ -38,13 +38,13 @@ The fastest way to install Eclipse Che for use with Codewind is to use the `chec
 
 Complete the following steps after you install `chectl`:
 
-1. Download the [codewind-che checluster yaml](https://github.com/eclipse/codewind-che-plugin/blob/0.7.0/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
+1. Download the [codewind-checluster.yaml](https://github.com/eclipse/codewind-che-plugin/blob/0.7.0/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
 2. If you're installing on a Kubernetes platform other than OpenShift, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` to the Ingress domain.
 3. Install Che:
-    - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=<codewind-che.yaml file> --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
-    - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=<codewind-che.yaml file> --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
+    - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
+    - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
 
 ### Updating an existing Che install
 
