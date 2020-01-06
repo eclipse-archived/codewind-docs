@@ -81,9 +81,6 @@
 
 - title: 'Performance monitoring'
   url: guide_performance.html
-
-- title: 'Codewind and Tekton pipelines'
-  url: codewindandtektonpipelines.html
  
 - title: 'OpenAPI Tools'
   children:
