@@ -63,7 +63,7 @@
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
-        - title: 'Unintalling Codewind for Eclipse Che'
+        - title: 'Uninstalling Codewind for Eclipse Che'
           url: mdt-che-uninstall.html
 
 - title: 'Performance monitoring'
