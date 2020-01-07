@@ -91,10 +91,6 @@ http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/code
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
 
-### Checking for the Codewind pod
-1. If you are using the Terminal, switch to use the workspace namespace. You can check for the namespace with `kubectl get ns`.
-2. Ensure the projects are cloned into the workspace. You might need to refresh the browser to trigger the clone.
-
 ### Configuring Codewind for Tekton pipelines
 If you want to use existing Tekton installations with Codewind, from your command line, enter the following commands:
 

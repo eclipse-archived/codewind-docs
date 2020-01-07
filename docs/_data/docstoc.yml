@@ -46,7 +46,7 @@
           url: mdt-vsc-nodejsprofiling.html
         - title: 'Troubleshooting'
           url: mdt-vsc-troubleshooting.html
-        - title: 'Uninstalling'
+        - title: 'Uninstalling Codewind for VS Code'
           url: mdt-vsc-uninstall.html
  
     - title: 'Codewind for Eclipse Che'
@@ -65,6 +65,8 @@
           url: supportingmultipleusers.html
         - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
           url: viewkibanalogs.html
+        - title: 'Uninstalling Codewind for Eclipse Che'
+          url: mdt-che-uninstall.html
 
 - title: 'Deploying Codewind remotely'
   children:
