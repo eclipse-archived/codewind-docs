@@ -21,4 +21,4 @@ To uninstall Codewind for Eclipse Che, follow these instructions:
 
 ## Uninstall Che
 1. Ensure that you have an active Kube context to the cluster where Che is running.
-2. Run the following command: `chectl:server delete`
+2. Run the following command: `chectl server:delete`
