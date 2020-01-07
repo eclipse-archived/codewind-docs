@@ -4,12 +4,13 @@ title: Image registry guidance for Eclipse Codewind
 description: Image registry guidance for Eclipse Codewind
 keywords: users, projects, Kubernetes, image, registry, deployment, push
 duration: 5 minutes
-permalink: dockerregistry
+permalink: image-registry-credentials
 type: document
 parent: installoncloud
 order: 1
 ---
 # Codewind Docker registry guidance
+
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. You can use the `Image Registry Manager` in your Codewind IDE to configure the registry to use. 
 
 Codewind is flexible with the registry that can be used as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` is unable to resolve the registry hostname,`buildah` is unable to push your projects to the registry, and deployment on Kubernetes is prevented.

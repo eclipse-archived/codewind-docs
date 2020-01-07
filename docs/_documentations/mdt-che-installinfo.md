@@ -71,7 +71,7 @@ You'll need the following information to complete the instructions to add the re
   - Username: `<Your username>`
   - Password: `<Your password>`
 
-For information about adding deployment registries to Che, consult our [registry documentation](https://www.eclipse.org/codewind/dockerregistry.html).
+For information about adding deployment registries to Che, consult our [registry documentation](image-registry-credentials.html).
 
 ## Creating the Codewind workspace
 
