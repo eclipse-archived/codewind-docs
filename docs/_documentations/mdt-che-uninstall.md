@@ -12,26 +12,13 @@ parent: mdteclipseoverview
 
 # Uninstalling Codewind for Eclipse Che
 
-To uninstall Codewind on Kubernetes, follow these instructions:
+To uninstall Codewind for Eclipse Che, follow these instructions:
 
-## Step 1: Stop Che workspaces
-1. Access the Che dashboard.
-2. Select workspaces in the sidebar on the dashboard.
-3. Stop all of the running workspaces and delete them.
+## Uninstall Codewind
+1. Navigate to the `Che` dashboard, and select the workspace where Che is running. 
+3. Click the **Stop** button to stop the workspace. 
+3. Click the **Delete** button to delete it. 
 
-## Step 2: Uninstall Che
-
-### OpenShift or OKD
-If Che is installed on OpenShift or OKD, follow these instructions:
-1. Open the OpenShift dashboard in your browser.
-2. Select the project that Eclipse Che was installed into. (The `eclipse-che` project is used by default.)
-3. Delete the project to remove Eclispe Che.
-
-### Helm Chart
-If Che was installed via its Helm chart, follow these instructions:
-1. Open a terminal session.
-2. Configure the Kubernetes client API to point to your Kubernetes cluster.
-3. Run the following command:
-```bash
-helm delete <che-release-name> --purge
-```
+## Uninstall Che
+1. Ensure that you have an active Kube context to the cluster where Che is running.
+2. Run the following command: `chectl:server delete`
