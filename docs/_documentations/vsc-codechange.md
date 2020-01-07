@@ -42,4 +42,4 @@ icon will now show your code change running
 ![](../images/vsc-screenchanged.png)
 
 Next step, 
-<a class="cw-gettingstarted-card-link" href="vsc-remote.md">Buiding and deploying in a cloud environment</a>
+<a class="cw-gettingstarted-card-link" href="remote-overview.md">Buiding and deploying in a cloud environment</a>
