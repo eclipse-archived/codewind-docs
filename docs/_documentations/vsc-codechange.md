@@ -11,6 +11,35 @@ parent: gettingstarted
 ---
 # Making a code change
 
-To create your first project, click on the prompt in the CODEWIND extension
+Codewind will automatically build and redeploy your application whenever you make a code change and save the file.
 
-![](../images/createproject.png)
+To see this in action, we can make a change to the getting started example.
+
+First step is to edit the index.html file
+
+![](../images/vsc-codechange.png)
+
+and navigate to the bottom of the file to find the lines
+
+![](../images/vsc-codeline.png)
+
+Change the heading from *Congratulations* to be *I did this* 
+
+![](../images/vsc-ididthis.png)
+
+You will see the status of the project change to be *stopped* whilst the project is being rebuilt and deployed
+
+![](../images/vsc-buildstopped.png)
+
+After a few moments, the status will change back to running
+
+![](../images/vsc-buildrunning.png)
+
+Clicking the
+![](../images/launchicon.png)
+icon will now show your code change running
+
+![](../images/vsc-screenchanged.png)
+
+Next step, 
+<a class="cw-gettingstarted-card-link" href="vsc-remote.md">Buiding and deploying in a cloud environment</a>

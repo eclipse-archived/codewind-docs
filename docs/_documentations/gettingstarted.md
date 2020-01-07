@@ -51,7 +51,7 @@ Write code, track application and build statuses, view project logs, and run you
       <span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
       </div>
       <div class="cw-gettingstarted-card">
-        <a href="mdt-vsc-getting-started.html"><img alt="VSCode getting started"  title="VSCode getting started"  src="images/card/vscode.svg"/></a>
+        <a href="mdt-vsc-getting-started.md"><img alt="VSCode getting started"  title="VSCode getting started"  src="images/card/vscode.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
       		<a class="cw-gettingstarted-card-link" href="mdt-vsc-getting-started.html">Codewind for VS Code</a>
       	</div>
