@@ -1,5 +1,15 @@
+- title: 'Overview'
+  url: overview.html
+
 - title: 'Getting started'
   url: gettingstarted.html
+  children:
+    - title: 'Installing Codewind for VS Code'
+      url: mdt-vsc-getting-started.html
+    - title: 'Creating your first project '
+      url: mdt-vsc-firstproject.html
+    - title: 'Making a code change'
+      url: vsc-codechange.html
  
 - title: 'Developing with Codewind'
   children:
@@ -8,7 +18,7 @@
         - title: 'Overview'
           url: mdteclipseoverview.html
         - title: 'Installing Codewind for Eclipse'
-          url: mdt-eclipse-installinfo.html
+          url: mdt-vsc-getting-started.html
         - title: 'Working with templates'
           url: mdteclipseworkingwithtemplates.html
         - title: 'Adding existing projects'

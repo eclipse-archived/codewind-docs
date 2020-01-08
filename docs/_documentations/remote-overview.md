@@ -6,7 +6,7 @@ keywords: users, projects, Kubernetes, LDAP, user management, access management,
 duration: 5 minutes
 permalink: remoteoverview
 type: document
-parent: installoncloud
+parent: mdt-vsc-overview
 order: 1
 ---
 
