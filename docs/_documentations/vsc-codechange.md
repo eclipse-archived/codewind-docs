@@ -10,14 +10,14 @@ order: 1
 parent: mdt-vsc-overview
 ---
 # Making a code change
-
+<br/>
 Codewind will automatically build and redeploy your application whenever you make a code change and save the file.
 
 To see this in action, we can make a change to the getting started example.
 
 First step is to edit the index.html file
 
-![](dist/images/vsc-codechange.png)
+![](dist/images/vsc-codechange.png){:width="800px"}
 
 and navigate to the bottom of the file to find the lines
 
