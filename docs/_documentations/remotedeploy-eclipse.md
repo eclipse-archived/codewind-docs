@@ -77,11 +77,7 @@ Codewind will ask you to confirm the project type identified as NodeJS:
 
 click Next
 
-The project files are copied over to the Codewind server and the new "myFirstNodeProject" appears in the Codewind panel:
-
-![Project Added](./images/remoteeclipse/projectAdded.png)
-
-Codewind will begin building the code and Docker image, moments later the Project Image will be uploaded to DockerHub and used by your cloud deployment to provision a new pod. 
+The project files are copied over to the Codewind server and the new "myFirstNodeProject" appears in the Codewind panel. Codewind will begin building your application code and Docker image, moments later the Project Image will be uploaded to DockerHub and used by your cloud deployment to provision a new pod:
 
 ![Build Success](./images/remoteeclipse/buildSuccess.png)
 

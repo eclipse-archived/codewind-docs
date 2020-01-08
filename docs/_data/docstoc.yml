@@ -10,7 +10,19 @@
       url: mdt-vsc-firstproject.html
     - title: 'Making a code change'
       url: vsc-codechange.html
- 
+    - title: 'Hybrid, deploying Codewind to the cloud'
+      url: remoteoverview.html
+    - title: 'Deploying all-in-one'
+      url: remotedeploy-combo.html
+    - title: 'Deploying components individually'
+      url: remotedeploy-single.html
+    - title: 'Connecting VSCode to a remote deployment '
+      url: remotedeploy-vscode.html
+    - title: 'Connecting Eclipse to a remote deployment'
+      url: remotedeploy-eclipse.html
+    - title: 'Removing a remote deployment'
+      url: remote-removing.html
+
 - title: 'Developing with Codewind'
   children:
     - title: 'Codewind for Eclipse'
