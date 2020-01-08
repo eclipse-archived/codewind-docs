@@ -11,12 +11,10 @@ parent: mdt-vsc-overview
 ---
 
 # Installing Codewind for VS Code
-
+<br/>
 Codewind for VS Code enables you to develop your containerized projects from within VS Code.
 
- 
-
-To install Codewind for VS Code, complete the following steps:
+ To install Codewind for VS Code, complete the following steps:
 
 1. Install [VS Code version 1.38 or later](https://code.visualstudio.com/download).
 2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you also need to install Docker Compose.
