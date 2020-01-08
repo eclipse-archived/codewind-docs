@@ -28,8 +28,9 @@ If you are running a pilot you can install everything into a single namespace an
 
 Next step either :
 
-<a class="cw-gettingstarted-card-link" href="remotedeploy-combo.md">Install both Codewind and authentication services together</a>
+* [Install both Codewind and authentication services together](./remotedeploy-combo.html)
 
 or
 
-<a class="cw-gettingstarted-card-link" href="remotedeploy-single.md">Install  Codewind components and authentication services individually</a>
+* [Install  Codewind components and authentication services individually](./remotedeploy-single.html)
+
