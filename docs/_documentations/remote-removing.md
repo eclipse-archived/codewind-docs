@@ -4,10 +4,10 @@ title: Removing your remote deployment of Codewind
 description: Removing your remote deployment of Codewind
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
-permalink: remoteremoving
+permalink: remote-removing
 type: document
 parent: installoncloud
-order: 1
+order: 2
 ---
 
 # Removing your remote deployment of Codewind
@@ -100,7 +100,7 @@ use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 
 Any previously configured IDEs will now be in a "disconnected" state. In this screenshot the remote deployment called MyIBMCloud is offline. Click the connection properties icon beside it:
 
-![](../images/remotevs/removeConnection.png)
+![](./images/remotevs/removeConnection.png)
 
 and then click the 'Remove Connection" button.
 
