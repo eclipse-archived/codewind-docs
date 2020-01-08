@@ -65,3 +65,44 @@ Navigate to the Codewind panel and click the + icon beside the new cloud deploym
 Select the template type, project name and your new project should be built and after a few seconds begin running in the cloud.
 
 
+## Copying an existing local project to the cloud
+
+Copying an existing local project "myFirstNodeProject" over to the remote Codewind deployment.
+
+To begin :
+
+Select the remote deployment and click the "Add existing project button"
+
+![](../images/remotevs/addExistingProject.png)
+
+Navigate to the folder containing the local project files and click "Add to Codewind":
+
+![](../images/remotevs/addExistingProject.png)
+
+Codewind will ask you to confirm the project type identified as NodeJS:
+
+![](../images/remotevs/confirmProjectType.png)
+
+click Yes
+
+The project files are copied over to the Codewind server and the new "myFirstNodeProject" appears in the Codewind panel:
+
+![](../images/remotevs/projectAdded.png)
+
+Codewind will begin building the code and Docker image, moments later the Project Image will be uploaded to DockerHub and used by your cloud deployment to provision a new pod. 
+
+![](../images/remotevs/buildSuccess.png)
+
+myFirstProject on MyIBMCloud is now running and ready.
+
+Congratulations, In this topic you:
+
+1. Deployed a new Codewind install into Openshift
+2. Configured your IDE to use this new deployment
+3. Registered all the necessary security parameters
+4. Created a new project built that builds and runs in the cloud
+5. Copied an existing local project to build and run in the cloud
+
+In the next step you will learn how to remove an existing Codewind deployment
+
+<a class="cw-gettingstarted-card-link" href="remote-removing.md">Remove a remote deployment of Codewind</a>
