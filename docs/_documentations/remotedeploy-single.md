@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-## Installing a Codewind remote deployment
+# Installing a Codewind remote deployment
 
 Codewind includes a CLI to simplify the installation process. You will find `cwctl` in your HOME directory under the path ~/.codewind/{version}
 
@@ -20,7 +20,7 @@ The command for installing an "all-in" deployment with a new Keycloak and new Co
 
 and requires various flags to specify where and what to install.
 
-### Deploying Keycloak Authentication Services using CWCTL
+## Deploying Keycloak 
 
 1.  Open a new terminal window on your local workstation
 2.  Navigate to your home directory and to the Codewind cli:
@@ -37,7 +37,7 @@ $ kubectl get namespaces
 
 If the command is successful you should see a list of current namespaces.  If not,  ensure you are logged into your Kubernetes or Openshift cluster.
 
-### Determine your Cloud ingress domain
+## Determine your Cloud ingress domain
 
 The cli command requires an ingress domain,  you can find yours based on any of the existing routes:
 
@@ -53,7 +53,7 @@ In the above example the ingress domain needed is:
 mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-### Running the cli command to install Keycloak
+### Deploying Authentication services (Keycloak)
 
 Determine the following for your cloud deployment
 
@@ -96,11 +96,11 @@ INFO[0159] Keycloak is available at: https://codewind-keycloak-k55dxqhx.mycluste
 
 Keycloak has now been sucessfully deployed and available.
 
-### Running the cli command to install a Codewind deployment
+### Deploying a remote Codewind service
 
-To deploy a new Codewind instance, generate a user in Keycloak and configure security cwctl can be used again but with additional options :
+To deploy a new Codewind instance in the onto Kubernetes, generate a user in Keycloak and configure security,  `cwctl` can be used but with additional options :
 
-A complete command might look something like this :
+A complete command will look something like this :
 
 ```
 ./cwctl --insecure install remote \
@@ -144,8 +144,8 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind has been sucessfully deployed and available.
 
-You can re-run the last command several times and each time a new Codewind deployment will be generated against the existing Keycloak service. A dev user must have their own Codewind instance however they can also have more than one instances assigned to them.
+You can re-run the last command several times and each time a new Codewind deployment will be generated against the existing Keycloak service. A developer must have their own Codewind instance,  however they may also have more than one instances assigned to them through role-based access control which `cwctl` has setup automatically.
 
-Make a note of the address provided : `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`  since you'll need it when configuring your IDE.
+Make a note of the address provided : `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   you'll need that when configuring your IDE in the next step.
 
 Next step, connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment

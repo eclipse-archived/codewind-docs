@@ -105,4 +105,6 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind has been sucessfully deployed and available.
 
+Make a note of the address provided : `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   you'll need that when configuring your IDE in the next step.
+
 Next step, connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment
