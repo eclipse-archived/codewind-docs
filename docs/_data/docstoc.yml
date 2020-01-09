@@ -13,7 +13,7 @@
 <<<<<<< HEAD
 =======
     - title: 'Hybrid, deploying Codewind to the cloud'
-      url: remoteoverview.html
+      url: remote-overview.html
     - title: 'Deploying all-in-one'
       url: remotedeploy-combo.html
     - title: 'Deploying components individually'
