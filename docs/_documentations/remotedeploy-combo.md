@@ -62,7 +62,7 @@ Determine the following for your cloud deployment
 * {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. cwctl will create the user and add it to the realm if it does not exist.
 * {ingress}: the ingress domain for your cloud environment
 
-A complete command might look something like :
+A complete command might look something like this :
 
 ```
 ./cwctl --insecure install remote \
@@ -85,7 +85,7 @@ Which will:
 * create an initial Codewind user called `developer` with password `passw0rd`
 * use the ingress appropriate to the deployment environment
 
-On running the command you should see output similar to : 
+On running the command you should see output similar to :
 
 ```
 INFO[0000] Checking namespace codewind-0001 exists
@@ -105,4 +105,6 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind has been sucessfully deployed and available.
 
-Next step, connecting your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment
+Make a note of the address provided : `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   you'll need that when configuring your IDE in the next step.
+
+Next step, connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment

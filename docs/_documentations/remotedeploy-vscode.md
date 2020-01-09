@@ -105,4 +105,4 @@ Congratulations, In this topic you:
 
 In the next step you will learn how to remove an existing Codewind deployment
 
-<a class="cw-gettingstarted-card-link" href="remote-removing.md">Remove a remote deployment of Codewind</a>
+[Remove a remote deployment of Codewind](./remote-removing.html)
