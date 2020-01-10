@@ -22,7 +22,4 @@ You'll need the following information to complete the instructions to add the re
 
 For information about adding deployment registries to Che, consult our [registry documentation](image-registry-credentials.html).
 
-### Confirm the Docker registry secrets.
-Confirm that you added the Docker registry secrets in the Che dashboard. To check for the secrets, go to **Administration**>**Add Registry**.
-
 Next step: [Create Codewind workspace](mdt-che-createcodewindworkspace.html)

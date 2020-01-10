@@ -31,6 +31,8 @@ Right-click a project in the **Codewind view** to see most project commands. All
 
 - **Open Performance Dashboard**: Opens the performance dashboard in the browser. This action is available only when the application is running or debugging.
 
+- **Open Tekton Dashboard**: This option is available to you only if you installed pipelines. Use this option to open the dashboard.
+
 - **Add Project to Workspace**: Add this project's folder on your local disk to your VS Code workspace.
 
 - **Build**: Manually request an application build for this project. If the project has auto build enabled, this command should not be necessary because builds are triggered automatically with a code change. This command is also available in the project overview page. This command is equivalent to clicking the **Build** button in the Codewind **Overview** page.
