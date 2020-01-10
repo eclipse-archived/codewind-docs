@@ -13,13 +13,12 @@ parent: root
 # Installing Codewind for Eclipse Che
 
 Installing Codewind for Eclipse Che comprises the following steps:
-1. [Prerequisites](#prerequisites)
-2. [Installing Che with chectl](#installing-che-with-chectl)
-3. [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
-4. [After installing Che](#after-installing-che)
-5. [Creating the Codewind workspace](#creating-the-codewind-workspace)
-6. [Updating the version](#updating-the-version)
-7. [Adding extension to support OpenShift Do (odo)](https://www.eclipse.org/codewind/mdt-che-odo-support.html)
+- [Installing Codewind for Eclipse Che](#installing-codewind-for-eclipse-che)
+  - [Prerequisites](#prerequisites)
+- [Setting up Che](#setting-up-che)
+  - [Installing Che with chectl](#installing-che-with-chectl)
+    - [Updating an existing Che install](#updating-an-existing-che-install)
+    - [Enabling privileged and root containers to run](#enabling-privileged-and-root-containers-to-run)
 
 ## Prerequisites
 1. Ensure PersistentVolumes (PV) are set up and support both `ReadWriteOnce` and `ReadWriteMany` and have minimum 1Gi storage.
@@ -59,78 +58,5 @@ Codewind is required to run as privileged and as root because it builds containe
 1. To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>`.
 2. To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>`.
 
-## After installing Che
+Next step: [Setup registries](mdt-che-setupregistries.html)
 
-### Adding registries in Che
-After Che is started and running, add the container registry that will be used with Codewind.
-- On OpenShift or other Kube platforms, you can push your images to any Docker registry, such as Docker Hub, Quay.io, Google Cloud Registry (GCR), and more.
-- On IBM Cloud Private, you can push your image to any Docker registry *except* the internal Docker registry.
-
-You'll need the following information to complete the instructions to add the registries:
-  - Server: `<registry-to-push-images-to>`
-  - Username: `<Your username>`
-  - Password: `<Your password>`
-
-For information about adding deployment registries to Che, consult our [registry documentation](image-registry-credentials.html).
-
-## Creating the Codewind workspace
-
-### Confirm the Docker registry secrets.
-Confirm that you added the Docker registry secrets in the Che dashboard. To check for the secrets, go to **Administration**>**Add Registry**.
-
-### Creating the Codewind workspace with a Devfile
-The general format for creating a Che workspace via a factory is:
-```
-http://<che ingress domain>/f?url=<hosted devfile URL>
-```
-
-Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
-```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.7.0/devfiles/0.7.0/devfile.yaml
-```
-
-For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
-
-### Checking for the Codewind pod
-1. If you are using the Terminal, switch to use the workspace namespace. You can check for the namespace with `kubectl get ns`.
-2. Ensure the projects are cloned into the workspace. You might need to refresh the browser to trigger the clone.
-
-### Configuring Codewind for Tekton pipelines
-If you want to use existing Tekton installations with Codewind, from your command line, enter the following commands:
-
-```
-oc apply -f setup/install_che/codewind-tektonrole.yaml
-oc apply -f setup/install_che/codewind-tektonbinding.yaml
-```
-
-For more information about Tekton, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
-
-## After installing Codewind
-
-### Setting the Docker registry
-After creating a Codewind workspace, you must set the container registry to deploy your projects. When you go to create or add an existing project to Codewind, Codewind will prompt you for the registry. See [Docker registry docs](https://www.eclipse.org/codewind/dockerregistry.html) for guidance on using proper container registries.
-
-If you would like to change the registry that's used at any time, run the `Codewind: Set Deployment Registry` command in Theia to dynamically set a new registry for your workspace. <br>
-
-![Set deployment registry](dist/images/che-docs/SetDockerRegistry-1.png){:height="90px" width="623px"}. <br>
-
-![Set deployment registry location](dist/images/che-docs/SetDockerRegistry-2.png){:height="85px" width="633px"}. <br>
-
-![Test deployment](dist/images/che-docs/SetDockerRegistry-3.png){:height="208px" width="801px"}. <br>
-
-**Note:** To proceed, you need to have added the registry credentials with Che.
-- Codewind restarts with the changes added.
-
-## Using Codewind from the Che Theia IDE
-
-### Binding a project:
-Go to **View**>**Find Command…**>**Codewind: Add Project**.
-
-### Checking the status of a project
-Go to **View**>**Find Command…**>**Codewind: App status**.
-
-### Building a project 
-Go to **View**>**Find Command…**>**Codewind: Build**.
-
-## Updating the version
-Restart the Codewind workspace in Che. Che automatically pulls the newest version of Codewind and the Theia extension.

@@ -20,9 +20,9 @@ type: document
       <span class=" cs-gettingstarted-mobile-title cw-getting-started-text">Cloud &nbsp;</span>
       </div>
       <div class="cw-gettingstarted-card">
-        <a href="mdt-che-overview.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
+        <a href="mdt-che-installinfo.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="mdt-che-overview.html">Codewind for Eclipse Che</a>
+      		<a class="cw-gettingstarted-card-link" href="mdt-che-installinfo.html">Codewind for Eclipse Che</a>
       	</div>
       </div>
     </div>

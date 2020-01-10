@@ -20,6 +20,32 @@
         url: mdt-eclipse-firstproject.html
       - title: 'Making a code change'
         url: mdt-eclipse-codechange.html
+    - title: "Eclipse Che"
+      children:
+      - title: "Installing Codewind for Eclipse Che"
+        url: mdt-che-installinfo.html
+      - title: "Adding registries in Che"
+        url: mdt-che-setupregistries.html
+      - title: "Creating the Codewind workspace"
+        url: mdt-che-createcodewindworkspace.html
+      - title: "Setup to use Tekton Pipelines"
+        url: mdt-che-tektonpipelines.html
+      - title: "Set Docker registries"
+        url: mdt-che-dockerregistries.html
+      - title: "Using Codewind in Theia"
+        url: mdt-che-usingtheia.html
+      - title: 'OpenShift Do (odo) support in Codewind'
+        url: 'mdt-che-odo-support.html'          
+      - title: 'Docker Registry Guidance'
+        url: image-registry-credentials.html
+      - title: 'Using the OpenShift Registry'
+        url: openshiftregistry.html
+      - title: 'Support for multiple users'
+        url: supportingmultipleusers.html
+      - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
+        url: viewkibanalogs.html
+      - title: 'Uninstalling Codewind for Eclipse Che'
+        url: mdt-che-uninstall.html
 
 - title: 'Local to remote development'
   children:
@@ -37,12 +63,22 @@
       url: remote-removing.html
       
 - title: 'Templates'
+  children:
+    - title: 'Overview'
 
 - title: 'Developing projects'
+  children:
+    - title: 'Overview'
+    - title: 'Importing existing projects'
+    - title: 'Build logs'
 
 - title: 'Performance monitoring'
-  url: guide_performance.html
- 
+  children:
+    - title: 'Application Metrics'
+      url: 'appmetrics.html'
+    - title: 'Performance'
+      url: guide_performance.html
+
 - title: 'OpenAPI Tools'
   children:
     - title: 'Codewind OpenAPI Tools for VS Code'
