@@ -6,8 +6,6 @@ keywords: users, projects, Kubernetes, LDAP, user management, access management,
 duration: 5 minutes
 permalink: remote-overview
 type: document
-parent: mdt-vsc-overview
-order: 1
 ---
 
 # Deploying Codewind remotely

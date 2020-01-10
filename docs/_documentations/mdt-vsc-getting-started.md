@@ -25,7 +25,7 @@ Codewind for VS Code enables you to develop your containerized projects from wit
 5. Codewind requires the installation of additional Docker images to run.  Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
 6. Once complete, you will now have a CODEWIND section in the IDE
    
-![image of Codewind once installed](dist/images/installed.png)
+![image of Codewind once installed](dist/images/installed.png){:width="800px"}
 
 Next step: [Create your first project](mdt-vsc-firstproject.html)
 

@@ -4,17 +4,15 @@ title: "Getting Started with Codewind for Eclipse"
 description: "Getting Started with Codewind for Eclipse"
 keywords: introducing, introduction, overview, what is, tools, eclipse, getting started, Codewind for Eclipse, work within Eclipse
 duration: 1 minute
-permalink: mdteclipsegettingstarted
+permalink: mdt-eclipse-getting-started
 type: document
 order: 5
 parent: mdteclipseoverview
 ---
 
-# Getting started with Codewind for Eclipse
-
+# Installing Codewind for Eclipse
+<br/>
 Codewind for Eclipse enables you to develop your containerized projects from within Eclipse. 
-
-The following information describes how to install Codewind for Eclipse, and introduces the tools and the Codewind Explorer view. It then describes how you can create a new project or work with an existing project, and introduces the wide range of Codewind development features available to you.  
 
 To install Codewind for Eclipse, complete the following steps:
 
@@ -31,22 +29,12 @@ To install Codewind for Eclipse, complete the following steps:
         4. Finish the wizard and accept licenses as needed.
         5. When the installation is complete, restart Eclipse.
 4. Open the Codewind view.  Navigate to **Window** > **Show View** > **Other...** > **Codewind** > **Codewind Explorer**
-5. Codewind requires the installation of additional Docker images to run.  Double-click on the **Codewind** item in the Codewind Explorer view to complete the installation. The installation may take a few minutes to complete.
-6. Codewind creates a codewind-data directory for storing its metadata. Do not save your projects to the codewind-data directory. 
+5. Codewind requires the installation of additional Docker images to run.  Double-click on the **Codewind** item in the Codewind Explorer view to complete the installation.
+   
+![image of Codewind once installed](dist/images/eclipseinstall1.png){:width="800px"}
 
-You are now ready to use the tools. You can use the Codewind Explorer view to create new projects or add existing ones.  Right-click an element in the Codewind Explorer to look at the features available.
+The installation may take a few minutes to complete.
 
-1. Create a new project or work with an existing project.
-  - To create a new Codewind project, right-click the **Local** item and select **New Project**. If you create a new project from within Eclipse, the new project is imported into the Eclipse workspace for you.
-   <br>![Create a new project](./dist/images/cdt-eclipse/cdt-eclipse-newproject.png)<br>
-  - To work with an existing project, right-click the **Local** item and select **Add Existing Project**. Note that the project must already have been added to the Eclipse workspace.
-   <br>![Import your project](./dist/images/cdt-eclipse/cdt-eclipse-importproject.png)<br>
+![image of Codewind once installed](dist/images/eclipseinstall2.png){:width="800px"}
 
-2. Work with your project from within Eclipse including:
-    - Editing
-    - Debugging MicroProfile/Java EE, Spring, and Node.js projects
-    - Opening the application in a browser
-    - Viewing the logs
-    - Opening a shell into the application container
-    - And more
-    <br>![Work with your project](./dist/images/cdt-eclipse/cdt-eclipse-actions.png)<br>
+Next step: [Create your first project](mdt-eclipse-firstproject.html)
