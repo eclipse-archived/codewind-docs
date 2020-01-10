@@ -21,7 +21,7 @@ Curious? [Learn more](remoteoverview.html)!
 #### New Features and Highlights for 0.7.0
 
 **Monitoring Updates**
-- You can now [inject metrics](https://github.com/codewind-resources/design-documentation/blob/master/codewindServer/metricsInjection.md) into your Node.js, Liberty, and Spring projects. You can [enable or disable](https://github.com/eclipse/codewind/issues/1290) this feature with just a click.
+- You can now [inject metrics](https://github.com/codewind-resources/design-documentation/blob/master/codewindServer/metricsInjection.md) into your Node.js, Spring, and WebSphere Liberty MicroProfile projects. You can [enable or disable](https://github.com/eclipse/codewind/issues/1290) this feature with just a click.
 - Effortlessly [visualize data](https://github.com/eclipse/codewind/issues/977) like CPU usage, memory footprint, and web traffic on the included application monitoring dashboard at the click of a button. Codewind hosts the dashboard, so displaying the graphs won't eat into your project's resources. 
 
 **OpenShift Do (odo)**
