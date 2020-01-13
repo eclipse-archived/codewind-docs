@@ -34,7 +34,7 @@ In order to create or import Java compoent, you need to import Java image stream
 1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
 2. Enter the following commands to go to the correct location, add the roles and import the Java image stream, and perform cleanup:
 ```
-git clone https://github.com/eclipse/codewind-odo-extension &&\
+git clone -b 0.8.0 https://github.com/eclipse/codewind-odo-extension &&\
    cd ./codewind-odo-extension/setup &&\
    ./setup.sh
    cd - &&\
