@@ -4,15 +4,15 @@
 - title: 'Getting started'
   url: gettingstarted.html
   children:
-    - title: "VS Code"
+    - title: 'VS Code'
       children:
       - title: 'Installing Codewind for VS Code'
         url: mdt-vsc-getting-started.html
-      - title: 'Creating your first project '
+      - title: 'Creating your first project'
         url: mdt-vsc-firstproject.html
       - title: 'Making a code change'
         url: vsc-codechange.html
-    - title: "Eclipse"
+    - title: 'Eclipse'
       children:
       - title: 'Installing Codewind for Eclipse'
         url: mdt-eclipse-getting-started.html
@@ -20,22 +20,22 @@
         url: mdt-eclipse-firstproject.html
       - title: 'Making a code change'
         url: mdt-eclipse-codechange.html
-    - title: "Eclipse Che"
+    - title: 'Eclipse Che'
       children:
-      - title: "Installing Codewind for Eclipse Che"
+      - title: 'Installing Codewind for Eclipse Che'
         url: mdt-che-installinfo.html
-      - title: "Adding registries in Che"
+      - title: 'Adding registries in Che'
         url: mdt-che-setupregistries.html
-      - title: "Creating the Codewind workspace"
+      - title: 'Creating the Codewind workspace'
         url: mdt-che-createcodewindworkspace.html
-      - title: "Setup to use Tekton Pipelines"
+      - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
-      - title: "Set Docker registries"
+      - title: 'Set Docker registries'
         url: mdt-che-dockerregistries.html
-      - title: "Using Codewind in Theia"
+      - title: 'Using Codewind in Theia'
         url: mdt-che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
-        url: 'mdt-che-odo-support.html'          
+        url: mdt-che-odo-support.html         
       - title: 'Docker Registry Guidance'
         url: image-registry-credentials.html
       - title: 'Using the OpenShift Registry'
@@ -62,9 +62,8 @@
     - title: 'Removing a remote deployment'
       url: remote-removing.html
       
-- title: 'Templates'
-  children:
-    - title: 'Overview'
+- title: 'Working with templates'
+  url: workingwithtemplates.html
 
 - title: 'Developing projects'
   children:

@@ -4,7 +4,7 @@ title: Working with templates
 description: Working with templates
 keywords: getting started, setting up, projects, update, help, Theia, test, edit, Theia editor, using own IDE, empty page, refresh, credentials, default editor, Node.js profiling support, code highlighting, JavaScript file, template source
 duration: 1 minute
-permalink: mdt-vsc-workingwithtemplates
+permalink: workingwithtemplates
 type: document
 order: 8
 parent: usingcodewind
