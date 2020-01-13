@@ -10,13 +10,11 @@ order: 1
 parent: mdt-vsc-overview
 ---
 
-# Getting started with Codewind for VS Code
-
+# Installing Codewind for VS Code
+<br/>
 Codewind for VS Code enables you to develop your containerized projects from within VS Code.
 
-The following information describes how to install Codewind for VS Code, and introduces the tools and the Codewind Explorer view. It then describes how you can create a new project or work with an existing project, and introduces the wide range of Codewind development features available to you.  
-
-To install Codewind for VS Code, complete the following steps:
+ To install Codewind for VS Code, complete the following steps:
 
 1. Install [VS Code version 1.38 or later](https://code.visualstudio.com/download).
 2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you also need to install Docker Compose.
@@ -25,18 +23,11 @@ To install Codewind for VS Code, complete the following steps:
 4. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface), or enter *Focus on Codewind View* into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Codewind view in either the Explorer or the Command Palette, the extension did not install correctly.
 5. Codewind requires the installation of additional Docker images to run.  Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
-6. Codewind creates a codewind-data directory for storing its metadata. Do not save your projects to the codewind-data directory.  
+6. Once complete, you will now have a CODEWIND section in the IDE
+   
+![image of Codewind once installed](dist/images/installed.png){:width="800px"}
 
-You are now ready to use the tools. You can use the Codewind view to create new projects or add existing ones.  Right-click a project in the Codewind tree or enter *Codewind* into the Command Palette to look at the features available.
+Next step: [Create your first project](mdt-vsc-firstproject.html)
 
-1. Create a new project or work with an existing project.
-  - To create a new project, right-click the *Projects (Local)* item and select **Create New Project**, or click on the *+* icon beside the *Projects (Local)* item.
-  - To work with an existing project, right-click the *Projects (Local)* item and select **Add Existing Project**.
 
-2. Work with your project from within VS Code including:
-    - Editing
-    - Debugging MicroProfile/Java EE, Spring, and Node.js projects
-    - Opening the application in a browser
-    - Viewing the logs
-    - Opening a shell into the application container
-    - And more
+
