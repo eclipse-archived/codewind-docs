@@ -55,7 +55,7 @@
       url: remotedeploy-combo.html
     - title: 'Deploying components individually'
       url: remotedeploy-single.html
-    - title: 'Connecting VSCode to a remote deployment '
+    - title: 'Connecting VSCode to a remote deployment'
       url: remotedeploy-vscode.html
     - title: 'Connecting Eclipse to a remote deployment'
       url: remotedeploy-eclipse.html
@@ -87,3 +87,4 @@
  
 - title: 'Troubleshooting'
   url: troubleshooting.html
+  
