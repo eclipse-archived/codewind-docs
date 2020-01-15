@@ -11,7 +11,7 @@ parent: mdt-vsc-overview
 ---
 # Making a code change
 <br/>
-Codewind will automatically build and redeploy your application whenever you make a code change and save the file.
+Codewind automatically builds and redeploys your application whenever you make a code change and save the file.
 
 To see this in action, we can make a change to the getting started example.
 
@@ -36,7 +36,7 @@ After a few moments, the status will change back to running
 ![](dist/images/vsc-buildrunning.png)
 
 Clicking the
-![](dist/imagess/launchicon.png)
+![](dist/images/launchicon.png)
 icon will now show your code change running
 
 ![](dist/images/vsc-screenchanged.png)
