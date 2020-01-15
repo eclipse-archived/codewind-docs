@@ -16,7 +16,7 @@
       children:
       - title: 'Installing Codewind for Eclipse'
         url: mdt-eclipse-getting-started.html
-      - title: 'Creating your first project '
+      - title: 'Creating your first project'
         url: mdt-eclipse-firstproject.html
       - title: 'Making a code change'
         url: mdt-eclipse-codechange.html
@@ -67,10 +67,10 @@
 
 - title: 'Developing projects'
   children:
-    - title: 'Overview'
     - title: 'Importing existing projects'
+      url: importing-existing-projects.html
     - title: 'Build logs'
-
+      
 - title: 'Performance monitoring'
   children:
     - title: 'Application Metrics'
