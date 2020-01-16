@@ -198,3 +198,10 @@ If you have a Dockerized application that doesn't fit an existing template, you 
 
 If you have an existing Appsody project, or a project that you want to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
 For more information about Appsody and Appsody stacks, see [https://appsody.dev](https://appsody.dev).
+
+#### Defining environment variables for Appsody projects
+Complete the following steps to define environment variables that take effect in an Appsody application:
+1. Create an `env.properties' file in the root of the Appsody project.
+   - **Caution:** Do not commit the `env.properties` file to your source repository if it contains confidential information, such as passwords.
+2. Define your environment variables in this file by using the standard properties format. This format features one `name=value` entry per line.
+3. If autobuild is enabled, Codewind automatically rebuilds the project to pick up the environment values. If autobuild is not enabled, new values take effect the next time you rebuild the project.
