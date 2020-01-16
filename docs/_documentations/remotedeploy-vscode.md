@@ -38,15 +38,15 @@ Before projects can be deployed on Kubernetes, you need to specify a docker regi
 
 ![Docker Registry](./images/remotevs/connectionSettings.png)
 
-2. Locate and click 'Open Container Registry Manager':
+2. Locate and click `Open Container Registry Manager`:
 
 ![Open Registry Manager](./images/remotevs/registryManager.png)
 
-3. In the image registry screen, click `+ Add New`
+3. In the image registry screen, click `+ Add New`:
 
 ![Adding registry](./images/remotevs/ImageRegistries.png)
 
-4. Complete the docker connection details. For example. if you are using Docker hub, enter `docker.io` and press `Enter`.
+4. Complete the docker connection details. For example. if you are using Docker hub, enter `docker.io` and press `Enter`:
 
 ![New Registry](./images/remotevs/newReg1.png)
 
@@ -73,7 +73,7 @@ Copying an existing local project, for example `myFirstNodeProject` over to the 
 
 To begin:
 
-1. Select the remote deployment and click the `Add existing project` button.
+1. Select the remote deployment and click the `Add existing project` button:
 
 ![Add existing project](./images/remotevs/addExistingProject.png)
 
@@ -81,7 +81,7 @@ To begin:
 
 ![Add to Codewind](./images/remotevs/existingProject.png)
 
-3. Codewind prompts you to confirm the project type, in this case, identified as NodeJS:
+   Codewind prompts you to confirm the project type, in this case, identified as NodeJS:
 
 ![Confirm Project Type](./images/remotevs/confirmProjectType.png)
 
