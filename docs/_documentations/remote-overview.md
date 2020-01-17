@@ -14,9 +14,9 @@ Deploying Codewind remotely enables you to develop your code locally and then bu
 
 After you've installed your IDE and configured Codewind for local use, there are a few extra steps to deploy to the cloud:
 
-1. Use the Codewind CLI to deploy Codewind remote services
-2. Use your IDE to create a connection link
-3. Move over any projects to the alternative remote service
+1. Use the Codewind CLI to deploy Codewind remote services.
+2. Use your IDE to create a connection link.
+3. Move over any projects to the alternative remote service.
 
 ## Planning your deployment
 

@@ -24,7 +24,7 @@ order: 2
 
 ![Required Fields](./images/remotevs/connectionCreds.png)
 
-4. The IDE validates the connection and adds it to the Codewind panel:
+   The IDE validates the connection and adds it to the Codewind panel:
 
 ![Validate settings](./images/remotevs/connectionAdded.png)
 

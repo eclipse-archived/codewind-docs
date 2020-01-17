@@ -29,17 +29,17 @@ This command requires various flags to specify where and what to install.
 cd ~/.codewind/0.8.0
 ```
 
-Ensure you are logged into your Kubernetes or Openshift cluster.
+Ensure that you are logged into your Kubernetes or Openshift cluster.
 
 ```
 $ kubectl get namespaces
 ```
 
-If the command is successful, you see a list of current namespaces.  If not, ensure that you are logged into your Kubernetes or Openshift cluster.
+If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or Openshift cluster.
 
 ## Determine your Cloud ingress domain
 
-The CLI command requires an ingress domain,  you can find yours based on any of the existing routes:
+The CLI command requires an ingress domain, you can find yours based on any of the existing routes:
 
 ```
 oc get routes -n default
@@ -57,9 +57,9 @@ mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain
 
 Determine the following for your cloud deployment:
 
-* {namespace}: `cwctl` creates the namespace if it does not yet exist.
-* {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. `cwctl` creates the user and adds it to the realm if it does not exist.
-* {ingress}: The ingress domain for your cloud environment
+* {namespace}: The `cwctl` command creates the namespace if it does not yet exist.
+* {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
+* {ingress}: The ingress domain for your cloud environment.
 
 A complete command might look something like this:
 
@@ -74,7 +74,7 @@ A complete command might look something like this:
 
 Which:
 
-* Deploys just a keycloak service into the `keycloak-0001 `namespace.
+* Deploys just a Keycloak service into the `keycloak-0001 `namespace.
 * Creates an initial Keycloak administrator user called `admin` with password `passw0rd`.
 * Uses the ingress domain appropriate to the deployment environment.
 
@@ -122,9 +122,9 @@ Which:
 * Adds a client prefix of `codewind`.
 * Creates an initial Codewind user called `developer` with password `passw0rd`.
 * Uses the ingress appropriate to the deployment environment.
-* And the keycloak admin credentials of `admin` with password `passw0rd`.  <-??? Adds a keycloak admin / uses the keycloak admin
+* Adds the Keycloak admin credentials of `admin` with password `passw0rd`.  
 
-Running the command, you see output similar to:
+Running the command, you see the following example output:
 
 ```
 INFO[0000] Checking namespace codewind-0001 exists
@@ -142,10 +142,10 @@ INFO[0159] Waiting for Codewind PFE to start
 INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-Codewind has been sucessfully deployed and is available.
+Codewind has been successfully deployed and is available.
 
-You can re-run the command several times and each time a new Codewind deployment is generated against the existing Keycloak service. A developer must have their own Codewind instance, however they might also have more than one instances assigned to them through role-based access control which `cwctl` has setup automatically.
+You can re-run the command several times. Each time you re-run the command, a new Codewind deployment is generated against the existing Keycloak service. A developer must have their own Codewind instance, however, they might also have more than one instance assigned to them through role-based access control which `cwctl` has setup automatically.
 
-Make a note of the address provided : `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   You need that for configuring your IDE in the next step.
+Make a note of the address provided because you will need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
 
 Next step: Connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment
