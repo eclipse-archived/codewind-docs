@@ -3,6 +3,20 @@
     margin-right: 0;
 }
 
+h1, h2 {
+	padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1em;
+    margin-top: 1em;
+}
+
 code {
 	font-size: 14px !important;
 }
