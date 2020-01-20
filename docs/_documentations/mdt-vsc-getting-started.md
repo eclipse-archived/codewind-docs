@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Getting started with Codewind for VS Code"
-description: "Getting started with Codewind for VS Code"
+title: "Installing Codewind for VS Code"
+description: "Installing Codewind for VS Code"
 keywords: introducing, introduction, overview, tools, get, getting, start, started, install, vscode, visual, studio, code, Codewind for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace,installing Codewind for VS Code
 duration: 1 minute
 permalink: mdt-vsc-getting-started
@@ -12,8 +12,7 @@ parent: mdt-vsc-overview
 
 # Installing Codewind for VS Code
 <br/>
-
- Codewind for VS Code enables you to develop your containerized projects from within VS Code. 
+ Codewind for Visual Studio (VS) Code enables you to develop your containerized projects from within VS Code. 
 
  To install Codewind for VS Code, complete the following steps:
 
