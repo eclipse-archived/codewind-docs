@@ -22,7 +22,7 @@ parent: mdt-vsc-overview
     - If you're going to work on Java projects, install the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 4. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface) or enter *Focus on Codewind View* into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Codewind view in either the Explorer or the Command Palette, the extension did not install correctly.
-5. Codewind requires the installation of additional Docker images to run. Choose **Install** when prompted to complete the installation.  The installation may take a few minutes to complete.
+5. Codewind requires the installation of additional Docker images to run. Choose **Install** when prompted to complete the installation. The installation might take a few minutes to complete.
 6. Once complete, you have a CODEWIND section in the IDE. 
    
 ![image of Codewind once installed](dist/images/installed.png){:width="800px"}
