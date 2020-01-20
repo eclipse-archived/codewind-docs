@@ -12,7 +12,7 @@ parent: mdt-vsc-overview
 
 # Installing Codewind for VS Code
 <br/>
- Codewind for Visual Studio (VS) Code enables you to develop your containerized projects from within VS Code. 
+ Install Codewind for Visual Studio Code (VS Code) to develop your containerized projects from within VS Code. 
 
  To install Codewind for VS Code, complete the following steps:
 
