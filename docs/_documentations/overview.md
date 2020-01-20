@@ -57,7 +57,7 @@ Codewind supports several architectures, so you can use your local, test, and de
 
 These options mean that you can use Codewind in 3 different setups:
 
-1. **local configuration** - your IDE is hosted on your desktop. The building and running of your microservice also takes place on your desktop, via your local Docker Desktop installation.
+1. **local configuration** - your IDE is hosted on your desktop. The building and running of your microservice also takes place on your desktop, via your local Docker Desktop installation (or, if you are using Linux, your local Docker Engine and Docker Compose installations).
 
 2. **fully hosted configuration** - both your IDE and the Codewind server are hosted on your cloud. In this setup, your code development takes place in the same location that your microservices are built and run.
 
@@ -69,11 +69,11 @@ Codewind provides pre-configured project templates covering several languages in
  
 Codewind also supplies [Appsody](https://appsody.dev/) project templates for many languages and frameworks. 
 
-### What are the pre-requisites for Codewind?
-Codewind requires Docker Desktop/Docker engine and Docker compose. If you are using Linux then you also need to install Docker Compose.
+### What are the prerequisites for Codewind?
+Codewind requires Docker Desktop for Windows or Mac, or Docker Engine and Docker Compose for Linux.
 
 ### Can I contribute to the project?
 Codewind is an [open source Eclipse project](https://github.com/eclipse/codewind). 
 
-[Contribute  in Github](https://github.com/eclipse/codewind) and let us know what you think via [Mattermost](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind).
+[Contribute in GitHub](https://github.com/eclipse/codewind) and let us know what you think via [Mattermost](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind).
 
