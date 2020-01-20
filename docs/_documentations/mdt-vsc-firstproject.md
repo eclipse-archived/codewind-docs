@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Creating your first project"
-description: "Creating your first project"
+title: "Creating your first VS Code Codewind project"
+description: "Creating your first VS Code Codewind project"
 keywords: introducing, introduction, overview, what is, tools, vscode, visual, studio, code, java, microprofile, spring, node, nodejs, node.js, javascript, Codewind for VS Code, tools, view, debug, integrate, open a shell session, toggle auto build, manually build, scope VS Code workspace, disable, enable, delete
 duration: 1 minute
 permalink: mdt-vsc-firstproject
@@ -9,25 +9,25 @@ type: document
 order: 2
 parent: mdt-vsc-overview
 ---
-# Creating your first project
+# Creating your first VS Code Codewind project
 <br/>
-To create your first project, click on the prompt in the **CODEWIND** window
+To create your first project, click on the prompt in the **CODEWIND** window.
 
 ![](dist/images/createproject.png)
 
-This prompt gives you a list of project types for you to select 
+This prompt gives you a list of project types for you to select. 
 
 ![](dist/images/listtemplates.png)
 
-Scroll through the list until you see **Node.js Express (Default templates)**
+Scroll through the list until you see **Node.js Express (Default templates)**.
 
 ![](dist/images/nodetemplate.png)
 
-Selecting this template prompts you to enter a name for your project
+Selecting this template prompts you to enter a name for your project.
 
 ![](dist/images/projectname.png)
 
-Enter a name and then choose where to create this on disk. For example, myFirstNodeProject
+Enter a name and then choose where to create this on disk. For example, `myFirstNodeProject`.
 
 ![](dist/images/projloc.png)
 
@@ -42,7 +42,7 @@ To view your running application, click on the project name in the **CODEWIND** 
 and select the icon
 ![](dist/images/launchicon.png)
 
-This icon launches your web browser and displays your application
+This icon launches your web browser and displays your application.
 
 ![](dist/images/runningapp.png)
 
