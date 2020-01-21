@@ -12,15 +12,15 @@ order: 2
 
 ## Connecting VS Code to Remote Codewind
 
-1. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
+1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
 
 ![New Connection](./images/remotevs/newConnection.png)
 
-2. Add a connection name and press `Enter`.
+2\. Add a connection name and press `Enter`.
 
 ![Name Connection](./images/remotevs/connectionName.png)
 
-3. Complete the three required fieldsLGatekeeper URL, developer username, and developer password, and then save.
+3\. Complete the three required fieldsLGatekeeper URL, developer username, and developer password, and then save.
 
 ![Required Fields](./images/remotevs/connectionCreds.png)
 
@@ -34,19 +34,19 @@ The IDE and Codewind are connected.
 
 Before projects can be deployed on Kubernetes, you need to specify a docker registry. In this example we use DockerHub. 
 
-1. If it's not already open, navigate to the connection details page by way of the link:
+1\. If it's not already open, navigate to the connection details page by way of the link:
 
 ![Docker Registry](./images/remotevs/connectionSettings.png)
 
-2. Locate and click `Open Container Registry Manager`:
+2\. Locate and click `Open Container Registry Manager`:
 
 ![Open Registry Manager](./images/remotevs/registryManager.png)
 
-3. In the image registry screen, click `+ Add New`:
+3\. In the image registry screen, click `+ Add New`:
 
 ![Adding registry](./images/remotevs/ImageRegistries.png)
 
-4. Complete the docker connection details. For example. if you are using Docker hub, enter `docker.io` and press `Enter`:
+4\. Complete the docker connection details. For example. if you are using Docker hub, enter `docker.io` and press `Enter`:
 
 ![New Registry](./images/remotevs/newReg1.png)
 
@@ -73,11 +73,11 @@ Copying an existing local project, for example `myFirstNodeProject` over to the 
 
 To begin:
 
-1. Select the remote deployment and click the `Add existing project` button:
+1\. Select the remote deployment and click the `Add existing project` button:
 
 ![Add existing project](./images/remotevs/addExistingProject.png)
 
-2. Navigate to the folder containing the local project files and click `Add to Codewind`:
+2\. Navigate to the folder containing the local project files and click `Add to Codewind`:
 
 ![Add to Codewind](./images/remotevs/existingProject.png)
 
@@ -85,11 +85,11 @@ To begin:
 
 ![Confirm Project Type](./images/remotevs/confirmProjectType.png)
 
-4. Click `Yes`. Project files are copied over to the Codewind server and the new `myFirstNodeProject` appears in the Codewind panel:
+3\. Click `Yes`. Project files are copied over to the Codewind server and the new `myFirstNodeProject` appears in the Codewind panel:
 
 ![Project Added](./images/remotevs/projectAdded.png)
 
-5. Codewind begins building the code and the Docker image. Moments later the project image will be uploaded to DockerHub and used by your cloud deployment to provision a new pod. 
+4\. Codewind begins building the code and the Docker image. Moments later the project image will be uploaded to DockerHub and used by your cloud deployment to provision a new pod. 
 
 ![Build Success](./images/remotevs/buildSuccess.png)
 

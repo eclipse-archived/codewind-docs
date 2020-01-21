@@ -24,6 +24,14 @@ Codewind remote services contains many different components. You can use the Cod
 
 If you are running a pilot, you can install everything into a single namespace and have one authentication server per Codewind instance. However, for production use,  we recommend installing a single Keycloak service that is shared by many Codewind services.
 
+### Prerequisites
+
+- Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
+- Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window, and navigate to the following hidden folder: `~/.codewind/<version>` On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
+- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice is to deploy Keycloak first, and then deploy your Codewind instances.
+- Have an active Kubernetes context that points to your cluster.
+- Access to a keyring, a software application designed to store security credentials such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+
 Next step, either:
 
 * [Install both Codewind and authentication services together](./remotedeploy-combo.html)
