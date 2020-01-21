@@ -15,15 +15,15 @@ Codewind automatically builds and redeploys your application whenever you make a
 
 To see this feature in action, make a change to the getting started example.
 
-Edit the index.html file
+1\. Edit the index.html file.
 
 ![](dist/images/vsc-codechange.png){:width="800px"}
 
-and navigate to the bottom of the file to find the lines.
+2\. Navigate to the bottom of the file to find the lines.
 
 ![](dist/images/vsc-codeline.png)
 
-Change the heading from *Congratulations* to *I did this*. 
+3\. Change the heading from *Congratulations* to *I did this*. 
 
 ![](dist/images/vsc-ididthis.png)
 
@@ -35,9 +35,9 @@ After a few moments, the status changes back to *running*.
 
 ![](dist/images/vsc-buildrunning.png)
 
-Click the
+4\. Click the **Open App** icon
 ![](dist/images/launchicon.png)
-icon to show your code change running.
+to show your code change running.
 
 ![](dist/images/vsc-screenchanged.png)
 
