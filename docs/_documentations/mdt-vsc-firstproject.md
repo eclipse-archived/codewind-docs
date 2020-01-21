@@ -11,35 +11,37 @@ parent: mdt-vsc-overview
 ---
 # Creating your first VS Code Codewind project
 <br/>
-To create your first project, click on the prompt in the **CODEWIND** window.
+To create your first project:
+
+1\. Click on the prompt in the **CODEWIND** window.
 
 ![](dist/images/createproject.png)
 
-This prompt gives you a list of project types for you to select. 
+2\. This prompt gives you a list of project types for you to select. 
 
 ![](dist/images/listtemplates.png)
 
-Scroll through the list until you see **Node.js Express (Default templates)**.
+3\. Scroll through the list until you see **Node.js Express (Default templates)**.
 
 ![](dist/images/nodetemplate.png)
 
-Selecting this template prompts you to enter a name for your project.
+4\. Selecting this template prompts you to enter a name for your project.
 
 ![](dist/images/projectname.png)
 
-Enter a name and then choose where to create this on disk. For example, `myFirstNodeProject`.
+5\. Enter a name and then choose where to create this on disk. For example, `myFirstNodeProject`.
 
 ![](dist/images/projloc.png)
 
-Codewind now starts to build and run your very first project. Once complete,the following screen shows your application is built and running.
+6\. Codewind now starts to build and run your very first project. Once complete,the following screen shows your application is built and running.
 
 ![](dist/images/allbuilt.png)
 
-To view your running application, click on the project name in the **CODEWIND** window 
+7\. To view your running application, click on the project name in the **CODEWIND** window. 
 
 ![](dist/images/launch.png)
 
-and select the icon
+8\. Then click the **Open App** icon.
 ![](dist/images/launchicon.png)
 
 This icon launches your web browser and displays your application.
