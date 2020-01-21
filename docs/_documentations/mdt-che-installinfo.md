@@ -9,6 +9,7 @@ type: document
 ---
 
 # Installing Codewind for Eclipse Che
+Install Che to use with Codewind or use Codewind with an existing Che installation.
 
 ### Prerequisites
 1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and have a minimum of 1 Gi storage.
