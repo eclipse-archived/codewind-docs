@@ -17,7 +17,7 @@ To create your first project:
 
 ![](dist/images/createproject.png)
 
-2\. This prompt gives you a list of project types for you to select. 
+2\. This prompt displays a list of project types for you to select. 
 
 ![](dist/images/listtemplates.png)
 
