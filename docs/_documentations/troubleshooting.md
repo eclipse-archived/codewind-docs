@@ -500,6 +500,33 @@ These steps reproduce the issue:
 3. After your session expires, you see a `Crash` message in the Codewind workspace.
 **Workaround** Go to the `Che workspace` dashboard, log out of the Che workspace, and then log back in to the Che workspace. Access the Codewind workspace. 
 
+<!--
+Codewind version: 0.8.0
+OS: RHEL
+Che version: 7.5.1
+IDE extension version: 0.8.0
+IDE version: 7.5.1
+Kubernetes cluster: Red Hat OpenShift on IBM Cloud
+Action/Topic: 
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/1806
+-->
+## Che sometimes fails to reinstall successfully on Red Hat OpenShift on IBM Cloud
+Sometimes when Che is reinstalled on Red Hat OpenShift on IBM Cloud, the installation might fail with the following error:
+```
+ ✔ Create Che Cluster eclipse-che in namespace che...done.
+  ❯ ✅  Post installation checklist
+    ❯ PostgreSQL pod bootstrap
+      ✔ scheduling...done.
+      ✔ downloading images...done.
+      ✖ starting
+        → ERR_TIMEOUT: Timeout set to pod ready timeout 130000
+```
+
+This error appears because of permissions issues in the namespace.
+
+To resolve the error, install Che into a namespace other than `che` with the `--chenamespace` flag when running `chectl server:start`.
+
 ***
 # Codewind and Tekton Pipelines
 
