@@ -34,8 +34,8 @@ If you are running a pilot, you can install everything into a single namespace a
 
 Next step, either:
 
-* [Install both Codewind and authentication services together](./remotedeploy-combo.html)
+- [Install both Codewind and authentication services together](./remotedeploy-combo.html)
 
 Or:
 
-* [Install Codewind components and authentication services individually](./remotedeploy-single.html)
+- [Install Codewind components and authentication services individually](./remotedeploy-single.html)

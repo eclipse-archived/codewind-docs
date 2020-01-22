@@ -16,11 +16,11 @@ order: 2
 
 ![New Connection](./images/remoteeclipse/newConnection.png)
 
-2\. Add a connection name, connection URL of your deployment, username and password:
+2\. Add a connection name, the connection URL of your deployment, username, and password:
 
 ![Required Fields](./images/remoteeclipse/connectionCreds.png)
 
-    The IDE validates the connection and adds it to the Codewind panel:
+The IDE validates the connection and adds it to the Codewind panel:
 
 ![Validate settings](./images/remoteeclipse/connectionAdded.png)
 
@@ -61,15 +61,13 @@ The connection is tested to validate your credentials, and these are then stored
 
 ## Copying an existing local project to the cloud
 
-The folowing procedure copies an existing local project `myFirstNodeProject` over to the remote Codewind deployment.
+The folowing procedure copies an existing local project `myFirstNodeProject` over to the remote Codewind deployment:
 
-To begin:
-
-1\. Right-click the remote deployment and click the "Add existing project button"
+1\. Right-click the remote deployment and click the `Add existing project button`:
 
 ![Add existing project](./images/remoteeclipse/addExistingProject.png)
 
-2\. Navigate to the folder containing your local project files, or choose the previously created "myFirstNodeProject" from the workspace. Click next to proceed :
+2\. Navigate to the folder containing your local project files, or choose the previously created `myFirstNodeProject` from the workspace. Click `Next` to proceed:
 
 ![Add to Codewind](./images/remoteeclipse/existingProject.png)
 

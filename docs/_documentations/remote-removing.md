@@ -64,7 +64,7 @@ INFO[0001] Kubernetes namespace: CWCTL will not remove the namespace automatical
 use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 ```
 
-Since it is possible to install multiple Codewind servers into a Kubernetes namespace, the `cwctl` command does not remove the namespace as part of the uninstall. You should only remove the namespace if you no longer need it and are sure there are no other applications installed inside it. For now we will leave the namespace in place.
+Since it is possible to install multiple Codewind servers into a Kubernetes namespace, the `cwctl` command does not remove the namespace as part of the uninstall. You should only remove the namespace if you no longer need it and are sure there are no other applications installed inside it. 
 
 ## Removing Keycloak service
 
@@ -97,7 +97,7 @@ use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 
 WARNING: You must only remove the namespace if you no longer need it and are sure there are no other applications installed inside it.
 
-Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called MyIBMCloud is offline. Click the connection properties icon next to it, and then click the `Remove Connection` button.
+Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called `MyIBMCloud` is offline. Click the connection properties icon next to it, and then click the `Remove Connection` button.
 
 ![](./images/remotevs/removeConnection.png)
 

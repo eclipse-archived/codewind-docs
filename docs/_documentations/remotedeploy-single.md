@@ -29,7 +29,7 @@ This command requires various flags to specify where and what to install.
 cd ~/.codewind/0.8.0
 ```
 
-Ensure that you are logged into your Kubernetes or Openshift cluster.
+Ensure that you are logged into your Kubernetes or Openshift cluster:
 
 ```
 $ kubectl get namespaces
@@ -98,9 +98,7 @@ Keycloak has been sucessfully deployed and is available.
 
 ## Deploying a remote Codewind service
 
-To deploy a new Codewind instance in Kubernetes, generate a user in Keycloak and configure security. You can use the CLI `cwctl` with additional options.
-
-A complete command might look something like this:
+To deploy a new Codewind instance in Kubernetes, generate a user in Keycloak and configure security. You can use the CLI `cwctl` with additional options, for example: 
 
 ```
 ./cwctl --insecure install remote \
