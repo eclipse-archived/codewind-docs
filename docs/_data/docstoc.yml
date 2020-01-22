@@ -30,14 +30,10 @@
         url: mdt-che-createcodewindworkspace.html
       - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
-      - title: 'Set Docker registries'
-        url: mdt-che-dockerregistries.html
       - title: 'Using Codewind in Theia'
         url: mdt-che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
         url: mdt-che-odo-support.html         
-      - title: 'Docker Registry Guidance'
-        url: image-registry-credentials.html
       - title: 'Using the OpenShift Registry'
         url: openshiftregistry.html
       - title: 'Support for multiple users'
