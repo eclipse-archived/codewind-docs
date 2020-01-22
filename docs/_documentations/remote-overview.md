@@ -22,9 +22,9 @@ After you've installed your IDE and configured Codewind for local use, there are
 
 Codewind remote services contains many different components. You can use the Codewind CLI `cwctl` to install all the required components at once, or each component separately. 
 
-If you are running a pilot, you can install everything into a single namespace and have one authentication server per Codewind instance. However, for production use,  we recommend installing a single Keycloak service that is shared by many Codewind services.
+If you are running a pilot, you can install everything into a single namespace and have one authentication server per Codewind instance. However, for production use, the recommended approach is to install a single Keycloak service that is shared by many Codewind services.
 
-### Prerequisites
+## Prerequisites
 
 - Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 - Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window, and navigate to the following hidden folder: `~/.codewind/<version>` On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.

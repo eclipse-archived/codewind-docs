@@ -21,29 +21,27 @@ There are two modes of use. You can:
 
 ## Removing a remote deployment of Codewind
 
-You will find `cwctl` in your HOME directory under the path ~/.codewind/{version}
+You can find `cwctl` in your HOME directory under the path `~/.codewind/{version}`.
 
-1.  Open a new terminal window on your local workstation
-2.  Navigate to your home directory and to the Codewind cli:
+1.  Open a new terminal window on your local workstation.
+2.  Navigate to your home directory, and then to the Codewind cli:
 
 ```
 cd ~/.codewind/0.8.0
 ```
 
-The command to remove just the Codewind deployment is:
+To remove the Codewind deployment, enter the following command:
 
 `cwctl remove remote --namespace <namespace> --workspace <workspaceID>`
 
-Where parameters `<namespace>` and `<workspaceID>` are used to identify which Kubernetes resources to remove. If you are unsure of the `<workspaceID>`, you can find it as part of the ingress or route URL used when you created the connection in your IDE:
-
-eg:
+Where parameters `<namespace>` and `<workspaceID>` are used to identify which Kubernetes resources to remove. If you are unsure of the `<workspaceID>`, you can find it as part of the ingress or route URL used when you created the connection in your IDE, for example:
 
 ```
 https://codewind-gatekeeper-k412oms7.apps.mycluster.X.X.X.X.nip.io
                             ^^^^^^^^
 ```
 
-enter the command and review the results :
+Enter the command and review the results:
 
 ```
 cwctl remove remote --namespace mycodewind-ns --workspace k55333j0
@@ -66,8 +64,7 @@ INFO[0001] Kubernetes namespace: CWCTL will not remove the namespace automatical
 use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 ```
 
->Since it is possible to install multiple Codewind servers into a Kubernetes namespace the cwctl will not remove the namespace as part of the uninstall. You should only remove the namespace if you no longer need it and are sure there are no other applications installed inside it. For now we will leave the namespace in place.
-
+Since it is possible to install multiple Codewind servers into a Kubernetes namespace, the `cwctl` command does not remove the namespace as part of the uninstall. You should only remove the namespace if you no longer need it and are sure there are no other applications installed inside it. For now we will leave the namespace in place.
 
 ## Removing Keycloak service
 
@@ -75,9 +72,11 @@ Keycloak can be installed alongside a single Codewind deployment or shared by ma
 
 WARNING: Removing Keycloak breaks all remote deployments of Codewind that are using it for authentication. Users will no longer be able to login and will require a full redeploy to recover.
 
-If you are ready to remove Keycloak, use the following `cwctl` command:
+To remove Keycloak, use the following example `cwctl` command:
 
-enter the command and review the results:
+`cwctl remove keycloak --namespace <namespace> --workspace <workspaceID>`
+
+For example:
 
 ```
 cwctl remove keycloak --namespace mycodewind-ns --workspace k55333j0
@@ -96,12 +95,10 @@ INFO[0000] Kubernetes namespace: CWCTL will not remove the namespace automatical
 use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 ```
 
->You should only remove the namespace if you no longer need it and are sure there are no other applications installed inside it.
+WARNING: You must only remove the namespace if you no longer need it and are sure there are no other applications installed inside it.
 
-Any previously configured IDEs will now be in a "disconnected" state. In this screenshot the remote deployment called MyIBMCloud is offline. Click the connection properties icon beside it:
+Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called MyIBMCloud is offline. Click the connection properties icon next to it, and then click the `Remove Connection` button.
 
 ![](./images/remotevs/removeConnection.png)
 
-and then click the 'Remove Connection" button.
-
-You have now removed the Codewind and Keycloak services from your cloud platform, you also removed the linkage to it from your IDE.
+In this procedure you removed the Codewind and Keycloak services from your cloud platform, and you also removed the linkage to it from your IDE.

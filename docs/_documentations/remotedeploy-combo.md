@@ -57,12 +57,17 @@ mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain
 
 Determine the following for your cloud deployment:
 
-* {namespace}: The `cwctl` command creates the namespace if it does not yet exist.
-* {kadminuser} & {kadminpass}: Initial Keycloak administrator username and password.
-* {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
-* {ingress}: The ingress domain for your cloud environment.
+- {namespace}: The `cwctl` command creates the namespace if it does not yet exist.
+- {kadminuser} & {kadminpass}: Initial Keycloak administrator username and password.
+- {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
+- {ingress}: The ingress domain for your cloud environment.
 
-A complete command might look something like this:
+Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where <namespace> is the namespace into which you plan to install Codewind:
+
+- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+
+To install Codewind, enter the following example command:
 
 ```
 ./cwctl --insecure install remote \
@@ -78,12 +83,12 @@ A complete command might look something like this:
 
 Which:
 
-* Deploys Codewind into the `codewind-0001 `namespace.
-* Configures Keycloak with a realm called `codewind`.
-* Configures a client prefix of `codewind`.
-* Creates an initial Keycloak administrator user called `admin` with password `passw0rd`.
-* Creates an initial Codewind user called `developer` with password `passw0rd`.
-* Uses the ingress appropriate to the deployment environment.
+- Deploys Codewind into the `codewind-0001 `namespace.
+- Configures Keycloak with a realm called `codewind`.
+- Configures a client prefix of `codewind`.
+- Creates an initial Keycloak administrator user called `admin` with password `passw0rd`.
+- Creates an initial Codewind user called `developer` with password `passw0rd`.
+- Uses the ingress appropriate to the deployment environment.
 
 Running the command, you see the following example output:
 
@@ -103,8 +108,8 @@ INFO[0159] Waiting for Codewind PFE to start
 INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-Codewind has been successfully deployed and is available.
+Codewind is successfully deployed and is available.
 
-Make a note of the address provided because you will need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   
+Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   
 
-Next step: Connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment
+Next step: Connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment.

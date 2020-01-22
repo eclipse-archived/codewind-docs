@@ -50,11 +50,11 @@ Before projects can be deployed on Kubernetes, you need to specify a docker regi
 
 ![New Registry](./images/remotevs/newReg1.png)
 
-Then enter:
+    Enter:
 
-1. Your dockerhub username.
-2. Your dockerhub password.
-3. Your repo name which is usually the same as your username.
+    1. Your dockerhub username.
+    2. Your dockerhub password.
+    3. Your repo name which is usually the same as your username.
 
 The connection is tested to validate your credentials and stored in a Kubernetes secret within the Codewind service.
 
