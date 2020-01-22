@@ -29,9 +29,9 @@ Thursday 23 January 2020
 
 
 #### List of Fixes
-- Updated node.js express server generator to 4.2.2 in [Eclipse](https://github.com/eclipse/codewind-openapi-eclipse/pull/83) and [VS Code](https://github.com/eclipse/codewind-openapi-vscode/pull/77)
+- Updated Node.js Express server generator to 4.2.2 in [Eclipse](https://github.com/eclipse/codewind-openapi-eclipse/pull/83) and [VS Code](https://github.com/eclipse/codewind-openapi-vscode/pull/77)
 - [Updated Appsody CLI to v0.5.4 for the `codewind-appsopdy-extension`](https://github.com/eclipse/codewind/issues/1666)
 - Image Registry Manager push registry buttons are now [toggles](https://github.com/eclipse/codewind/issues/1490).
 - In Codewind 0.7.0, an incorrect network error appeared when attempting to connect to an uninstalled or failed remote Codewind instance: `Authentication service unavailable`. However, this [network error is actually a connection error](https://github.com/eclipse/codewind/issues/1547). This inaccuracy is corrected.
 - The remote settings page in VS Code is more [responsive when the window is resized](https://github.com/eclipse/codewind-vscode/pull/364).
-- [VS Code no longer stores the remote connection in extension data](https://github.com/eclipse/codewind/issues/1641). You can now delete an existing remote connection in VS Code when switching IDEs.
+- [VS Code no longer stores the remote connection in extension data](https://github.com/eclipse/codewind/issues/1641). VS Code now recognizes remote connections created in the Eclipse IDE. 
