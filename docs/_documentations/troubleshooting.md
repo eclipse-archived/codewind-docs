@@ -525,7 +525,7 @@ Sometimes when Che is reinstalled on Red Hat OpenShift on IBM Cloud, the install
 
 This error appears because of permissions issues in the namespace.
 
-To resolve the error, install Che into a namespace other than `che` with the `--chenamespace` flag when running `chectl server:start`.
+**Workaround:** To resolve the error, install Che into a namespace other than `che` with the `--chenamespace` flag when running `chectl server:start`.
 
 ***
 # Codewind and Tekton Pipelines
