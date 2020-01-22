@@ -65,6 +65,7 @@ The list of supported project settings are:
 * [Internal debug port](#internal-debug-port)
 * [Maven profiles](#maven-profiles)
 * [Paths to ignore for file changes](#paths-to-ignore-for-file-changes)
+* [Project status ping timeout](#project-status-ping-timeout)
 
 #### **Context root**
 `contextRoot: <string>`
@@ -119,6 +120,12 @@ The list of supported project settings are:
 - Maven properties can be entered in the form `key=value`
 - It is not advised to overwrite the microclimate property
 - Maven properties can be used in conjunction with Maven profiles
+
+#### Project status ping timeout
+`statusPingTimeout: <string>`
+- This value is the total number of pings used by Codewind to determine if the project has timeout issue during starting state.
+- Each ping takes 2 seconds. e.g. if the value is set to 30, the timeout is 60 seconds.
+- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects, and `30` (1 minute) for all other project types.  
 
 ***
 
