@@ -4,7 +4,7 @@ title: New for Codewind 0.8.0
 description: New for Codewind 0.8.0
 keywords: news, new, updates, update, version, hybrid
 duration: 1 minute
-permalink: news07
+permalink: news08
 ---
 
 ## Codewind 0.8.0
