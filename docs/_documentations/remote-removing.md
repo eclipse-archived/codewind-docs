@@ -21,20 +21,20 @@ There are two modes of use. You can:
 
 ## Removing a remote deployment of Codewind
 
-You can find `cwctl` in your HOME directory under the path `~/.codewind/{version}`.
+You can find `cwctl` in your Home directory under the path `~/.codewind/{version}`.
 
 1.  Open a new terminal window on your local workstation.
-2.  Navigate to your home directory, and then to the Codewind cli:
+2.  Go to your Home directory and then to the Codewind CLI:
 
 ```
 cd ~/.codewind/0.8.0
 ```
 
-To remove the Codewind deployment, enter the following command:
+3. To remove the Codewind deployment, enter the following command, where parameters `<namespace>` and `<workspaceID>` identify which Kubernetes resources to remove:
 
 `cwctl remove remote --namespace <namespace> --workspace <workspaceID>`
 
-Where parameters `<namespace>` and `<workspaceID>` are used to identify which Kubernetes resources to remove. If you are unsure of the `<workspaceID>`, you can find it as part of the ingress or route URL used when you created the connection in your IDE, for example:
+If you are unsure of the `<workspaceID>`, you can find it as part of the ingress or route URL used when you created the connection in your IDE, for example:
 
 ```
 https://codewind-gatekeeper-k412oms7.apps.mycluster.X.X.X.X.nip.io
@@ -72,7 +72,7 @@ Keycloak can be installed alongside a single Codewind deployment or shared by ma
 
 WARNING: Removing Keycloak breaks all remote deployments of Codewind that are using it for authentication. Users will no longer be able to login and will require a full redeploy to recover.
 
-To remove Keycloak, use the following example `cwctl` command:
+To remove Keycloak, use the following `cwctl` command:
 
 `cwctl remove keycloak --namespace <namespace> --workspace <workspaceID>`
 
@@ -97,7 +97,7 @@ use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 
 WARNING: You must only remove the namespace if you no longer need it and are sure there are no other applications installed inside it.
 
-Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called `MyIBMCloud` is offline. Click the connection properties icon next to it, and then click the `Remove Connection` button.
+Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called `MyIBMCloud` is offline. Click the connection properties icon, and then click the `Remove Connection` button.
 
 ![](./images/remotevs/removeConnection.png)
 
