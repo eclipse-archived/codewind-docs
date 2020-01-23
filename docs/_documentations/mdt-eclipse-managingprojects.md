@@ -60,7 +60,7 @@ The list of supported project settings are:
 * [Maven profiles](#maven-profiles)
 * [Maven properties](#maven-properties)
 * [Paths to ignore for file changes](#paths-to-ignore-for-file-changes)
-
+* [Project status ping timeout](#project-status-ping-timeout)
 
 #### Context root
 `contextRoot: <string>`
@@ -115,3 +115,9 @@ The list of supported project settings are:
 `ignoredPaths: <string[]>`
 - A list of file paths that indicate a build should be triggered on file change events in relation to the paths.
 - Each item is expected to be a regex (`"*/node_modules*"` ) or a path relative to the project's root directory (`"/README.md"`).
+
+#### Project status ping timeout
+`statusPingTimeout: <string>`
+- This value is the total number of pings used by Codewind to determine if the project has timeout issues during starting state.
+- Each ping takes 2 seconds. For example, if the value is set to 30, the timeout is 60 seconds.
+- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects, and `30` (1 minute) for all other project types.   
