@@ -12,9 +12,9 @@ order: 2
 
 # Installing components individually for a Codewind remote deployment
 
-Codewind includes a CLI to simplify the installation process. You can find the `cwctl` CLI in your HOME directory under the path `~/.codewind/{version}`.
+Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
 
-The command for installing components individually for a remote deployment with a new Keycloak and a new Codewind service is:
+Use this command to install components individually for a remote deployment with a new Keycloak and a new Codewind service:
 
 `cwctl --insecure install remote` 
 
@@ -23,7 +23,7 @@ This command requires various flags to specify where and what to install.
 ## Deploying Keycloak 
 
 1.  Open a new terminal window on your local workstation.
-2.  Navigate to your home directory, and then to the Codewind CLI:
+2.  Go to your home directory and then to the Codewind CLI:
 
 ```
 cd ~/.codewind/0.8.0

@@ -22,7 +22,7 @@ After you install your IDE and configure Codewind for local use, follow these st
 
 Codewind remote services contain many different components. Use the Codewind CLI `cwctl` to install all the required components at once, or each component separately. 
 
-If you are running a pilot, you can install everything into a single namespace and have one authentication server per Codewind instance. If you are running in production, the best approach is to install a single Keycloak service that is shared by many Codewind services. 
+If you are running a pilot, you can install everything into a single namespace and have one authentication server per Codewind instance. However, for production use, the recommended approach is to install a single Keycloak service that is shared by many Codewind services.
 
 ## Prerequisites
 
