@@ -12,7 +12,7 @@ parent: root
 
 # Troubleshooting
 
-If you experience an issue using Codewind, [search the issues labelled ![kind/bug](dist/images/kind-bug-label.png) in the Codewind GitHub repository](https://github.com/eclipse/codewind/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug) to see if yours, or something similar, is already recorded. These contain useful information, and often describe remedial actions or workarounds to help you resolve your issue. 
+If you experience an issue using Codewind, [search the issues labelled ![kind/bug](dist/images/kind-bug-label.png) in the Codewind GitHub repository](https://github.com/eclipse/codewind/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug) to see if yours, or something similar, is already recorded. These contain useful information and often describe remedial actions or workarounds to help you resolve your issue. 
 
 You might experience an issue with a particular phase of Codewind use. Use these keyword queries to narrow your search: 
 - [Installing](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+install)
