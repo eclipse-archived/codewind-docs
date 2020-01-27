@@ -13,7 +13,7 @@ parent: mdt-eclipse-overview
 <br/>
 To create your first project:
 
-1\. Right-click the **Local [Running]** item >  select **Create New Project...**.
+1\. Right-click the **Local [Running]** item and select **Create New Project...**.
 
 ![](dist/images/eclipsecreateproject1.png){:width="800px"}
 
@@ -21,11 +21,11 @@ To create your first project:
 
 ![](dist/images/eclipsecreateproject2.png){:width="800px"}
 
-3\. Enter a name for the project > change the location if you want > scroll through the list of templates until you see **Node.js Express**. 
+3\. Enter a name for the project and change the location if you want. Scroll through the list of templates until you see **Node.js Express**. 
 
 ![](dist/images/eclipsecreateproject3.png){:width="800px"}
 
-4\. Select this template > click **Finish**. You now see the project overview screen.
+4\. Select this template and click **Finish**. You now see the project overview screen.
 
 ![](dist/images/eclipsecreateproject4.png){:width="800px"}
 
