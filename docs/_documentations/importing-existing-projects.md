@@ -37,7 +37,7 @@ Avoid copying files from the project’s Maven target folder to any Dockerfile i
 
 MicroProfile projects must be configured to build by using Maven.
 
-**Note:** for an example of a working MicroProfile application, create a new MicroProfile project in Codewind. You can see the `pom.xml` file contents and use the file as a template when you configure your project's `pom.xml` file.
+**Note:** For an example of a working MicroProfile application, create a new MicroProfile project in Codewind. You can see the `pom.xml` file contents and use the file as a template when you configure your project's `pom.xml` file.
 
 Configure your `pom.xml` file as follows:
 
@@ -93,21 +93,21 @@ Configure your `pom.xml` file as follows:
   </profile>
   ```
 
-3. Add the required Liberty Maven plugin configuration:
+3. Add the required Liberty Maven plug-in configuration:
 
-- Liberty server configuration file, `server.xml`, that is located in the source folder that is referenced in the `pom.xml` file.
+- Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
 
   ```xml
   <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
   ```
 
-- Optional: Liberty server environment file:
+- Optional: Add the Liberty server environment file:
 
   ```xml
   <serverEnv>${basedir}/src/main/liberty/config/server.env</serverEnv>
   ```
 
-- Optional: Liberty Java Virtual Machine options file:
+- Optional: Add the Liberty Java Virtual Machine options file:
 
   ```xml
   (jvm.options)
@@ -166,8 +166,8 @@ Your `package.json` must meet the following requirements. For an example of a go
 
 - Ensure the project provides a `start` npm script in `package.json`, so it can be started by `npm start`.
     - For example: `start: "node server/server.js"`.
-- In local installations of Codewind, you can restart the project in Debug mode. To use this feature, the project must also provide a `debug` npm script which accepts connections from all hosts on port 9229. For help configuring this script, see [the Node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
-    - For example: `debug: "node --inspect=0.0.0.0:9229 server/server.js"`.
+- In local installations of Codewind, you can restart the project in Debug mode. To use this feature, the project must also provide a `debug` npm script that accepts connections from all hosts on port 9229. For help configuring this script, see [the Node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
+    - For example: `debug: "node --inspect=0.0.0.0:9229 server/server.js"`
 - If auto-build is enabled, `nodemon` is used to restart your project automatically. `nodemon` calls either the `start` or `debug` script on a code change, depending on whether or not the project is debugging. Consequently, neither of these scripts should invoke `nodemon`.
     - If a problem occurs with either script, the error appears in the Application Logs view in Codewind.
 
@@ -175,8 +175,7 @@ If you have a `Dockerfile`, it must meet the following requirements:
 - A `Dockerfile` is generated if it does not exist. Ensure the `Dockerfile` exposes your application port.
     - For example, if you're using port 3000, the `Dockerfile` needs to include `EXPOSE 3000`.
 - Ensure that the application is located in the `/app` directory within the Docker container.
-- Ensure that the `Dockerfile` sets the working directory to `/app`:
-    - `WORKDIR "/app"`.
+- Ensure that the `Dockerfile` sets the working directory to `/app` with `WORKDIR "/app"`.
 
 
 ## Swift projects
@@ -186,7 +185,7 @@ Codewind works with Swift projects that use the Kitura web framework.
 Requirements:
 
 - A `Dockerfile-tools` file is generated to build the project. Ensure the project can be built by using a `release` build configuration.
-For example, you should be able to build the project by using the command:
+For example, you can build the project by using the command:
 `swift build --configuration release`.
 - A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
 
