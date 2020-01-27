@@ -14,7 +14,7 @@ order: 2
 
 Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
 
-Use this command to install an all-in-one deployment with a new Keycloak and a new Codewind service:
+Use the following command to install an all-in-one deployment with a new Keycloak and a new Codewind service:
 
 `cwctl --insecure install remote` 
 
@@ -29,17 +29,17 @@ This command requires various flags to specify where and what to install.
 cd ~/.codewind/0.8.0
 ```
 
-Ensure that you are logged into your Kubernetes or Openshift cluster:
+Ensure that you are logged in to your Kubernetes or OpenShift cluster:
 
 ```
 $ kubectl get namespaces
 ```
 
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or Openshift cluster.
+If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 ## Determine your Cloud ingress domain
 
-The CLI command requires an ingress domain. You can find your ingress domain based on any of the existing routes:
+The CLI command requires an ingress domain. Find your ingress domain based on any of the existing routes:
 
 ```
 oc get routes -n default
@@ -47,7 +47,7 @@ NAME               HOST/PORT                                                    
 registry-console   registry-console-default.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud             registry-console   registry-console   passthrough   None
 ```
 
-In the above example the ingress domain is:
+In the example the ingress domain is:
 
 ```
 mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
@@ -55,14 +55,14 @@ mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain
 
 ## Running the CLI command
 
-Determine the following for your cloud deployment:
+Determine the following values for your cloud deployment:
 
-- {namespace}: The `cwctl` command creates the namespace if it does not yet exist.
-- {kadminuser} & {kadminpass}: Initial Keycloak administrator username and password.
-- {kdevuser} & {kdevpass}: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
-- {ingress}: The ingress domain for your cloud environment.
+- `namespace`: The `cwctl` command creates the namespace if it does not yet exist.
+- `kadminuser` and `kadminpass`: Initial Keycloak administrator user name and password.
+- `kdevuser` and `kdevpass`: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
+- `ingress`: The ingress domain for your cloud environment.
 
-Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where <namespace> is the namespace into which you plan to install Codewind:
+Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
 
 - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
 - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
@@ -81,7 +81,7 @@ To install Codewind, enter the following example command:
 --ingress mycluster-12345-7674b4bd9abbdeea0be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-Which:
+This command performs the following actions:
 
 - Deploys Codewind into the `codewind-0001 `namespace.
 - Configures Keycloak with a realm called `codewind`.
@@ -101,7 +101,7 @@ INFO[0000] eclipse/codewind-pfe-amd64:latest
 INFO[0000] eclipse/codewind-performance-amd64:latest
 INFO[0000] eclipse/codewind-keycloak-amd64:latest
 INFO[0000] eclipse/codewind-gatekeeper-amd64:latest
-INFO[0000] Running on openshift: true
+INFO[0000] Running on OpenShift: true
 ...
 INFO[0156] Waiting for Codewind Gatekeeper to start on https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 INFO[0159] Waiting for Codewind PFE to start

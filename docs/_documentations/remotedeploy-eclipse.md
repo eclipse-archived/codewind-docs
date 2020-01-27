@@ -16,7 +16,7 @@ order: 2
 
 ![New Connection](./images/remoteeclipse/newConnection.png)
 
-2\. Add a connection name, the connection URL of your deployment, username, and password:
+2\. Add a connection name, the connection URL of your deployment, user name, and password:
 
 ![Required Fields](./images/remoteeclipse/connectionCreds.png)
 
@@ -28,9 +28,9 @@ The IDE and Codewind are connected.
 
 ## Adding a deployment registry
 
-Before projects can be deployed on Kubernetes, you must specify a docker registry. This example uses DockerHub. 
+Before projects can be deployed on Kubernetes, you must specify a Docker registry. This example uses Docker Hub. 
 
-1\. If it's not already open, navigate to the connection details page; right-click the deployment and select `Manage Deployment Registries`:
+1\. If it's not already open, navigate to the connection details page, right-click the deployment, and select `Manage Deployment Registries`:
 
 ![Docker Registry](./images/remoteeclipse/connectionSettings.png)
 
@@ -38,14 +38,14 @@ Before projects can be deployed on Kubernetes, you must specify a docker registr
 
 ![Open Registry Manager](./images/remoteeclipse/registryManager.png)
 
-3\. Complete the docker registry connection details:
+3\. Complete the Docker registry connection details:
 
 ![New Registry](./images/remoteeclipse/newReg1.png)
 
-1. Add your dockerhub username
-2. Add your dockerhub password
+1. Add your Docker Hub username
+2. Add your Docker Hub password
 3. Click the checkbox to desigate this registry as push registry
-4. Your dockerhub namespace (which is usually the same as your username)
+4. Your Docker Hub namespace (which is usually the same as your username)
 
 The connection is tested to validate your credentials, and these are then stored in a Kubernetes secret within the Codewind service.
 
@@ -55,13 +55,13 @@ The connection is tested to validate your credentials, and these are then stored
 
 ![Adding new remote project](./images/remoteeclipse/newProject.png)
 
-2\. Select the template type, and name your project. Your new project is built and after a few seconds begins running in the cloud.
+2\. Select the template type and name your project. Your new project is built and after a few seconds begins running in the cloud.
 
 ![Adding new remote project](./images/remoteeclipse/runningProject.png)
 
 ## Copying an existing local project to the cloud
 
-The folowing procedure copies an existing local project `myFirstNodeProject` over to the remote Codewind deployment:
+The following procedure copies an existing local project `myFirstNodeProject` over to the remote Codewind deployment:
 
 1\. Right-click the remote deployment and click the `Add existing project button`:
 
@@ -71,13 +71,13 @@ The folowing procedure copies an existing local project `myFirstNodeProject` ove
 
 ![Add to Codewind](./images/remoteeclipse/existingProject.png)
 
-3\. Codewind prompts you to confirm the project type identified as NodeJS:
+3\. Codewind prompts you to confirm the project type identified as `NodeJS`:
 
 ![Confirm Project Type](./images/remoteeclipse/confirmProjectType.png)
 
 4\. Click `Next`.
 
-The project files are copied over to the Codewind server and the new `myFirstNodeProject` appears in the Codewind panel. Codewind builds your application code and Docker image, and moments later, the project image is uploaded to DockerHub and used by your cloud deployment to provision a new pod:
+The project files are copied over to the Codewind server and the new `myFirstNodeProject` appears in the Codewind panel. Codewind builds your application code and Docker image, and moments later, the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
 
 ![Build Success](./images/remoteeclipse/buildSuccess.png)
 
@@ -85,10 +85,10 @@ The project files are copied over to the Codewind server and the new `myFirstNod
 
 Congratulations! In this topic you:
 
-1. Deployed a new Codewind install into Openshift.
+1. Deployed a new Codewind install into OpenShift.
 2. Configured your IDE to use this new deployment.
 3. Registered all the necessary security parameters.
-4. Created a new project built that builds and runs in the cloud.
+4. Created a new project that builds and runs in the cloud.
 5. Copied an existing local project to build and run in the cloud.
 
 In the next step you learn how to remove an existing Codewind deployment: [Remove a remote deployment of Codewind](./remote-removing.html)
