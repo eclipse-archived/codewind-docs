@@ -15,11 +15,11 @@ Codewind automatically builds and redeploys your application whenever you make a
 
 To see this feature in action, make a change to the getting started example.
 
-1\. Edit the index.html file.
+1\. Edit the `index.html` file.
 
 ![](dist/images/eclipsechangeproject1.png){:width="800px"}
 
-2\. Navigate to the bottom of the file to find the lines.
+2\. Go to the bottom of the file to find the lines.
 
 ![](dist/images/eclipsechangeproject2.png)
 
