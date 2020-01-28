@@ -24,7 +24,7 @@ Codewind remote services contain many different components. Use the Codewind CLI
 
 If you are running a pilot or a short lived demonstration environment with a single user you can install everything into a single namespace and have one authentication server per Codewind instance. By deploying Keycloak and Codewind in a single namespace the deployment process is shorter and the removal process is simpler. 
 
-If you are running in production, the best approach is to install a single Keycloak service that is shared by many Codewind services which simplifies user administration.
+If you are running in production, the best approach to simplify user administration is to install a single Keycloak service that is shared by many Codewind services. 
 
 ## Prerequisites
 
