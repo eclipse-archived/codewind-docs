@@ -44,7 +44,7 @@ These examples show recommended values for common registries. The following depl
 - Docker Hub:
     - Address: `docker.io`
     - Namespace: `<namespace>`
-    - Credentials: Docker Hub username and password or token access
+    - Credentials: Docker Hub user name and password or access token
     - **Note:** For Docker Hub, the `Namespace` value is likely to be your user name. 
 - Quay.io:
     - Address: `https://quay.io`
@@ -53,11 +53,11 @@ These examples show recommended values for common registries. The following depl
 - Artifactory
     - Address: `<artifactory-hostname>`
     - Namespace: `<namespace>`
-    - Credentials: Artifactory user name and token
+    - Credentials: Artifactory user name and access token
 - OpenShift Registry
     - Address: `docker-registry.default.svc:5000`
     - Namespace: `<project>`
-    - Credentials: OpenShift user name and token
+    - Credentials: OpenShift user name and access token
 
 ### Specifying image registries for Codewind 
 Three scenarios in Codewind require you to specify which image registry is in use:
