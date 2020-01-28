@@ -49,7 +49,7 @@ These examples show recommended values for common registries. The following depl
 - Quay.io:
     - Address: `https://quay.io`
     - Namespace: `<namespace>`
-    - Credentials: Quay.io user name and encrpyted password
+    - Credentials: Quay.io user name and encrypted password
 - Artifactory
     - Address: `<artifactory-hostname>`
     - Namespace: `<namespace>`
