@@ -14,11 +14,13 @@ Install Che to use with Codewind or use Codewind with an existing Che installati
 ### Prerequisites
 1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and have a minimum of 1 Gi storage.
    - One volume is required for Che, and two volumes are required for each Codewind workspace.
-   - For Network File System (NFS), set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
-   - Because Codewind uses RWX volumes to provide persistent storage, use NFS for storage on OpenShift 4.
-2. Ensure that the cluster can pull images from `docker.io/eclipse` and `quay.io/eclipse`.
-   - Both Eclipse Che and Eclipse Codewind host Docker images at those locations. Your cluster needs to pull from that Docker registry, and `ImagePullPolicies` cannot block the cluster from accessing Docker Hub.
-3. Set up the ClusterRole for Codewind by running the `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/setup/install_che/codewind-clusterrole.yaml` command.
+   - For Network File System (NFS) shares, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
+   - Because Codewind uses `ReadWriteMany` (RWX) volumes to provide persistent storage, use NFS for storage on OpenShift 4.
+2. Ensure that the cluster can pull images from the `docker.io/eclipse` and `quay.io/eclipse` registries.
+   - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
+   - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
+3. Set up the ClusterRole for Codewind:
+`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/setup/install_che/codewind-clusterrole.yaml`
 
 ### Installing Che with chectl
 The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. To install the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
@@ -26,7 +28,9 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 After you install `chectl`, complete the following steps:
 1. Download the [codewind-checluster.yaml](https://github.com/eclipse/codewind-che-plugin/blob/0.8.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
-2. If you're installing Che on a Kubernetes platform other than OpenShift, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator. Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
+2. If you're installing Che on a Kubernetes platform other than OpenShift, determine your Ingress domain.
+    - Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
+    - If you're unsure of your Ingress domain, ask your cluster administrator.
 3. Install Che:
     - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
     - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
