@@ -26,7 +26,6 @@ If you are running a pilot or a short lived demonstration environment
 
 If you are running in production, the best approach is to install a single Keycloak service that is shared by many Codewind services to simplify user administration
 
-
 ## Prerequisites
 
 - Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
@@ -37,7 +36,6 @@ If you are running in production, the best approach is to install a 
 - Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
     - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
-
 
 ## Install Codewind and the authentication services
 
