@@ -70,6 +70,7 @@
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
     - title: 'Build logs'
+      url: buildcodewindproject.html
       
 - title: 'Performance monitoring'
   children:
