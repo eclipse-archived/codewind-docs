@@ -73,10 +73,10 @@
       
 - title: 'Performance monitoring'
   children:
-    - title: 'Application Metrics'
+    - title: 'Understanding Application Metrics'
       url: 'appmetrics.html'
-    - title: 'Performance'
-      url: guide_performance.html
+    - title: 'Monitoring applications with the performance dashboard'
+      url: performance.html
 
 - title: 'OpenAPI Tools'
   children:
