@@ -6,8 +6,8 @@ keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, a
 duration: 1 minute
 permalink: appmetrics
 type: document
-parent: usingmicroclimate
-order: 6
+parent:
+order:
 ---
 
 # Understanding Application Metrics
@@ -32,6 +32,7 @@ Click **App monitor** in the Microclimate project to access Application Metrics.
 If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/).
 
 ## Understanding performance metrics in the **Dashboard** tab
+
 View these metrics to learn if your application is performing as intended. An application might look like it's functioning well, but these metrics can reveal if an application is working harder than it should be.
 * **CPU:** View this graph to see whether your computer is keeping up with the work you're doing. If you have spare CPU cycles, your machine is likely keeping up with your throughput. If you don't have spare CPU cycles, you might notice a degradation in performance.
 * **HTTP Incoming Requests:** View this graph to see the incoming requests that your microservice receives. You can track the incoming requests and their response times. The graph doesn't show each request. Instead, it shows requests at specific points in time. Use this graph to see whether your application responds back to the requests as quickly as intended or if a change created delays in response times.
@@ -43,18 +44,22 @@ View these metrics to learn if your application is performing as intended. An ap
 * **Other Requests:** This graph indicates the Socket.IO and other requests that the application processes.
 
 ## Clicking the **Run load** button
+
 Click the **Run load** button to run load your microservice. This button pings endpoints by using the Microclimate load runner service.
 
 ## Viewing metrics information in the **Summary** tab
+
 View a summary of the information from the performance metrics graphs that you saw in the **Dashboard** tab.
 * **HTTP Requests:** This table displays how many times an endpoint is hit. If you repeatedly run a test while making code changes, you can see how the code changes are impacting application performance.
 * **Environment:** This table shows information about the environment you're running, such as the OS architecture and the number of processors you have. Having this information can make troubleshooting easier if you need to contact support and provide it.
 * **Resource usage:** This table shows the **Average Process CPU**, which shows what Microclimate is doing, and the **Average System CPU**, which shows what the environment as a whole is doing. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
 
 ## Viewing the graph in the **Profiling** tab
+
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
 
 ## Profiling Data Support
+
 In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [Microclimate load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Microclimate and then profiled.
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
@@ -76,6 +81,7 @@ For more information on sample-based profiling, see [Sample-based profiling](htt
 If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting#profiling-markers-do-not-appear).
 
 ## Interpreting the annotation tooltip
+
 After you start the load test and the test completes, view the source code. Theia displays an annotation tooltip with a specified message in a similar format to the following example:
 
 ![image of Theia annotation tooltip](dist/images/theia-annotation-tooltip.png)
@@ -85,4 +91,5 @@ After you start the load test and the test completes, view the source code. Thei
 - If a function runs quickly, in less than 5 milliseconds with the default configuration, then the function might not run during any of the samples, so it might not be included in the profiling data for that load run.
 
 ## Need help?
+
 If you encounter problems with application metrics, check the [Troubleshooting page](troubleshooting.html#understanding-application-metrics).
