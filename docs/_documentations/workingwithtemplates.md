@@ -16,6 +16,8 @@ Codewind gives you the flexibility to code and develop in languages of your choi
 
 When you create a new project, you can choose from the default set of templates available in Codewind, or you can choose a template source of your own. You can add more development languages and sample projects by adding new templates. 
 
+Codewind provides pre-configured, Docker-containerized project templates covering several languages including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/) and [Swift](https://swift.org/), and several frameworks such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot) and [Open Liberty](https://openliberty.io/). [Quickly create and deploy microservices](https://www.youtube.com/watch?v=zKMggp10gq4&t=12s) in languages and frameworks that you're familiar with. Modify the pre-configured projects to develop your customised microservice.
+
 ## Managing templates
 
 Template management in Codewind is provided by the **Template Source Manager**. To open the **Template Source Manager**, right-click **Local** then **Manage Template Sources**. The **Template Source Manager** appears. 
