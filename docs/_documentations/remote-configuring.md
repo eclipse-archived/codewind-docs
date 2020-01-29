@@ -19,6 +19,8 @@ Configure your remote deployment of Codewind by following these steps.
 - Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window, and navigate to the following hidden folder: `~/.codewind/<version>` On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
 - The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install using the `cwctl install remote \` commands described in the following installation procedures, and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service. Best practice is to deploy Keycloak first, and then deploy your Codewind instances.
 - Have an active Kubernetes context that points to your cluster.
+- Access to a keyring, a software application designed to store security credentials such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+
 
 ## Procedure
 

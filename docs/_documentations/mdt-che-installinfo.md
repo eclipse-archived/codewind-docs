@@ -27,7 +27,7 @@ Installing Codewind for Eclipse Che comprises the following steps:
    - Because Codewind uses RWX (ReadWriteMany) volumes to provide persistent storage, you need to use NFS for storage on OpenShift 4.
 2. Ensure that the cluster can pull images from `docker.io/eclipse` and `quay.io/eclipse`.
    - Both Eclipse Che and Eclipse Codewind host their Docker images at those locations. Ensure that your cluster can pull from that registry and does not have `ImagePullPolicies` blocking it from accessing Docker Hub.
-3. Set up the ClusterRole for Codewind. Run `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.7.0/setup/install_che/codewind-clusterrole.yaml`
+3. Set up the ClusterRole for Codewind. Run `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/setup/install_che/codewind-clusterrole.yaml`
 
 # Setting up Che
 
@@ -37,20 +37,20 @@ The fastest way to install Eclipse Che for use with Codewind is to use the `chec
 
 Complete the following steps after you install `chectl`:
 
-1. Download the [codewind-checluster.yaml](https://github.com/eclipse/codewind-che-plugin/blob/0.7.0/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
+1. Download the [codewind-checluster.yaml](https://github.com/eclipse/codewind-che-plugin/blob/0.8.0/setup/install_che/che-operator/codewind-checluster.yaml) file to your machine.
     - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
 2. If you're installing on a Kubernetes platform other than OpenShift, determine your Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` to the Ingress domain.
 3. Install Che:
-    - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
-    - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.3.1`
+    - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
+    - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
 
 ### Updating an existing Che install
 
 If you already have an existing Che install, it's relatively easy to update it for Codewind.
 
 After creating the Codewind ClusterRole in the prerequisites step, run the following command, where `$NAMESPACE` is the namespace your Che workspaces run in (by default `che`):
-`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.7.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE`
+`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE`
 
 ### Enabling privileged and root containers to run
 

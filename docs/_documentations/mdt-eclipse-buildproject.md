@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Building Codewind projects
-description: How to build a Codewind project
+title: Codewind build logs
+description: Codewind build logs
 keywords: build, tools, eclipse, disabled autobuild, start a build, manually build
 duration: 1 minute
 permalink: mdteclipsebuildproject
@@ -10,9 +10,9 @@ order: 40
 parent: mdteclipseoverview
 ---
 
-# Building Codewind projects
+# Codewind build logs
 
-When auto build is enabled for a project, Codewind for Eclipse detects when you make a change and starts a build automatically. If you have disabled auto build for the project, you can start a build manually when you have made a change or a set of changes:
+If you enable auto build for a project, Codewind detects when you make a change and starts a build automatically. If you disable auto build for a project, you can start a build manually when you make a change or a set of changes:
 
 1. Right-click your project in the **Codewind Explorer** view and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view and then test your changes.
