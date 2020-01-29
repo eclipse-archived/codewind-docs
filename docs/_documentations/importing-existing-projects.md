@@ -41,7 +41,7 @@ MicroProfile projects must be configured to build by using Maven.
 
 Configure your `pom.xml` file as follows:
 
-1. The Liberty Maven parent is required for rapid iterative development:
+1\. The Liberty Maven parent is required for rapid iterative development:
 
 ```xml
 <parent>
@@ -51,7 +51,7 @@ Configure your `pom.xml` file as follows:
 </parent>
 ```
 
-2. Add a Maven profile for Codewind that configures the Liberty Maven plug-in.
+2\. Add a Maven profile for Codewind that configures the Liberty Maven plug-in.
 
   ```xml
   <profile>
@@ -93,7 +93,7 @@ Configure your `pom.xml` file as follows:
   </profile>
   ```
   
-3. Add the required Liberty Maven plug-in configuration:
+3\. Add the required Liberty Maven plug-in configuration:
 
 - Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
 
