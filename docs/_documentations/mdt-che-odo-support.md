@@ -24,6 +24,9 @@ The extension to Codewind provides support for [OpenShift Do (odo)](https://gith
 
 ## Setting up extension
 
+### Prerequisites
+- [Install](mdt-che-installinfo.html) Codewind and run it on Che.
+
 ### Adding roles to support the extension
 The extension needs additional roles for accessing OpenShift resources. Use the following commands to clone the [codewind-odo-extension](https://github.com/eclipse/codewind-odo-extension) repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the corresponding Codewind service account.
 
