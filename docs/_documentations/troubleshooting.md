@@ -12,15 +12,15 @@ parent: root
 
 # Troubleshooting
 
-If you experience an issue using Codewind, [search the issues labelled ![kind/bug](dist/images/kind-bug-label.png) in the Codewind GitHub repository](https://github.com/eclipse/codewind/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug) to see if yours, or something similar, is already recorded. These contain useful information and often describe remedial actions or workarounds to help you resolve your issue. 
+If you experience an issue with Codewind, [click here](https://github.com/eclipse/codewind/issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug) to see if yours, or something similar, is already recorded. These issues contain useful information and often describe remedial actions or workarounds to help you resolve your issue. 
 
-You might experience an issue with a particular phase of Codewind use. Use these keyword queries to narrow your search: 
-- [Installing](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+install)
-- [Creating](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+creating)
-- [Importing](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+importing)
-- [Building](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+build)
-- [Editing](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+edit)
-- [Disabling](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+disable)
+You might experience an issue with a feature of Codewind. Use these keyword queries to narrow your search: 
+- [Installing Codewind](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+install)
+- [Creating projects](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+creating)
+- [Importing projects](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+importing)
+- [Building projects](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+build)
+- [Editing code](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+edit)
+- [Disabling projects](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+disable)
 
 Or your issue might be related to using a particular technology, in which case, use these keyword queries: 
 - [Appsody](https://github.com/eclipse/codewind/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug+appsody)
