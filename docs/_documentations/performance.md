@@ -12,7 +12,7 @@ order:
 
 # Monitoring applications with the performance dashboard
 
-Learn how to improve application performance with the performance dashboard.
+Learn how to monitor and improve application performance with the performance dashboard.
 
 ## What you’ll learn
 
