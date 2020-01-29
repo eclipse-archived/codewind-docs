@@ -12,7 +12,7 @@ order: 0
 
 # Importing existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind. This tutorial covers the basics of configuring a project to run in Codewind.
+Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This tutorial covers the basics of configuring a project to run in Codewind.
 
 ## What kind of projects can I add?
 
@@ -92,7 +92,7 @@ Configure your `pom.xml` file as follows:
       </build>
   </profile>
   ```
-
+  
 3. Add the required Liberty Maven plug-in configuration:
 
 - Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
@@ -114,7 +114,7 @@ Configure your `pom.xml` file as follows:
   <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
   ```
 
-    - Add `/mc-target` to the `.gitignore` file to ignore build output from the `microclimate` build profile.
+- Add `/mc-target` to the `.gitignore` file to ignore build output from the `microclimate` build profile.
 
 **Note:** Due to a known issue, the server needs to be configured to use port 9080 in order for the project to be detected as `started`. See [Troubleshooting](troubleshooting.html) for more details.
 
@@ -177,7 +177,6 @@ If you have a `Dockerfile`, it must meet the following requirements:
 - Ensure that the application is located in the `/app` directory within the Docker container.
 - Ensure that the `Dockerfile` sets the working directory to `/app` with `WORKDIR "/app"`.
 
-
 ## Swift projects
 
 Codewind works with Swift projects that use the Kitura web framework.
@@ -185,8 +184,8 @@ Codewind works with Swift projects that use the Kitura web framework.
 Requirements:
 
 - A `Dockerfile-tools` file is generated to build the project. Ensure the project can be built by using a `release` build configuration.
-For example, you can build the project by using the command:
-`swift build --configuration release`.
+
+For example, you can build the project by using the command: `swift build --configuration release`.
 - A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
 
 ## Generic Docker projects
