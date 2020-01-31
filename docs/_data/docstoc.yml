@@ -42,6 +42,10 @@
         url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: mdt-che-uninstall.html
+    - title: 'IntelliJ'
+      children:
+      - title: 'Installing Codewind for IntelliJ'
+        url: mdt-intellij-getting-started.html
 
 - title: 'Local to remote development'
   children:
