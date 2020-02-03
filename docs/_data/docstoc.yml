@@ -1,84 +1,121 @@
-- title: 'Overview'
+- title: 'Product Overview'
   url: overview.html
 
 - title: 'Getting started'
   url: gettingstarted.html
   children:
-    - title: 'VS Code'
+    - title: 'Using Codewind locally'
+      url: new_topic_tabbed_by_ide.html
       children:
-      - title: 'Installing Codewind for VS Code'
-        url: mdt-vsc-getting-started.html
-      - title: 'Creating your first project'
-        url: mdt-vsc-firstproject.html
-      - title: 'Making a code change'
-        url: vsc-codechange.html
-    - title: 'Eclipse'
-      children:
-      - title: 'Installing Codewind for Eclipse'
-        url: mdt-eclipse-getting-started.html
-      - title: 'Creating your first project'
-        url: mdt-eclipse-firstproject.html
-      - title: 'Making a code change'
-        url: mdt-eclipse-codechange.html
-    - title: 'Eclipse Che'
-      children:
-      - title: 'Installing Codewind for Eclipse Che'
-        url: mdt-che-installinfo.html
-      - title: 'Adding registries in Che'
-        url: mdt-che-setupregistries.html
-      - title: 'Creating the Codewind workspace'
-        url: mdt-che-createcodewindworkspace.html
-      - title: 'Setup to use Tekton Pipelines'
-        url: mdt-che-tektonpipelines.html
-      - title: 'Set Docker registries'
-        url: mdt-che-dockerregistries.html
-      - title: 'Using Codewind in Theia'
-        url: mdt-che-usingtheia.html
-      - title: 'OpenShift Do (odo) support in Codewind'
-        url: mdt-che-odo-support.html         
-      - title: 'Docker Registry Guidance'
-        url: image-registry-credentials.html
-      - title: 'Using the OpenShift Registry'
-        url: openshiftregistry.html
-      - title: 'Support for multiple users'
-        url: supportingmultipleusers.html
-      - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
-        url: viewkibanalogs.html
-      - title: 'Uninstalling Codewind for Eclipse Che'
-        url: mdt-che-uninstall.html
-
-- title: 'Local to remote development'
-  children:
-    - title: 'Overview'
-      url: remote-overview.html
-    - title: 'Deploying all-in-one'
-      url: remotedeploy-combo.html
-    - title: 'Deploying components individually'
-      url: remotedeploy-single.html
-    - title: 'Connecting VS Code to a remote deployment'
-      url: remotedeploy-vscode.html
-    - title: 'Connecting Eclipse to a remote deployment'
-      url: remotedeploy-eclipse.html
-    - title: 'Removing a remote deployment'
-      url: remote-removing.html
-      
-- title: 'Working with templates'
+        - title: 'VS Code'
+          children:
+          - title: 'Installing Codewind for VS Code'
+            url: mdt-vsc-getting-started.html
+          - title: 'Creating your first project'
+            url: mdt-vsc-firstproject.html
+          - title: 'Making a code change'
+            url: vsc-codechange.html
+        - title: 'Eclipse'
+          children:
+          - title: 'Installing Codewind for Eclipse'
+            url: mdt-eclipse-getting-started.html
+          - title: 'Creating your first project'
+            url: mdt-eclipse-firstproject.html
+          - title: 'Making a code change'
+            url: mdt-eclipse-codechange.html
+        - title: 'IntelliJ'
+          children:
+          - title: 'Installing Codewind for Eclipse'
+            url: mdt-intellij-getting-started.html
+          - title: 'Creating your first project'
+            url: mdt-intellij-firstproject.html
+          - title: 'Making a code change'
+            url: mdt-intellij-codechange.html
+            
+- title: 'Working with project templates'
   url: workingwithtemplates.html
+  children:
+      - title: 'Adding existing projects'
+      - title: 'Importing existing projects'
+        url: importing-existing-projects.html
 
 - title: 'Developing projects'
   children:
+    - title: 'Using the project view'
+      url: projectview.html
+    - title: 'Checking the application and build statuses'
+      url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
-    - title: 'Build logs'
-      
-- title: 'Performance monitoring'
-  children:
-    - title: 'Understanding Application Metrics'
-      url: 'appmetrics.html'
-    - title: 'Monitoring applications with the performance dashboard'
-      url: performance.html
+    - title: 'Performance monitoring'
+      children:
+        - title: 'Understanding Application Metrics'
+          url: appmetrics.html
+        - title: 'Monitoring applications with the performance dashboard'
+          url: performance.html
 
-- title: 'OpenAPI Tools'
+- title: 'Integration'
+  children:
+    - title: 'Using Codewind with the Appsody CLI'
+      url: new_topic.html
+
+- title: 'Using Codewind in your cloud environment'
+  children:
+    - title: 'Using Codewind as a hosted application on Eclipse Che'
+      url: new_topic.html
+      children: 
+        - title: 'Installing Codewind for Eclipse Che'
+          url: mdt-che-installinfo.html
+        - title: 'Creating a Codewind connection'
+          url: new_topic.html
+          children:
+          - title: 'Adding registries in Che'
+            url: mdt-che-setupregistries.html
+          - title: 'Creating the Codewind workspace'
+            url: mdt-che-createcodewindworkspace.html
+        - title: 'Creating your first project using a template'
+          url: new_topic.html
+        - title: 'Making a code change'
+          url: new_topic.html
+             
+- title: 'Using Codewind remotely in VS Code Eclipse or IntelliJ'
+  children:
+    - title: 'Installing Codewind on your IDE'
+      children: 
+        - title: 'Install Codewind for VS Code'
+          url: link_to_getting_started.html
+        - title: 'Install Codewind for Eclipse'
+          url: link_to_getting_started.html
+    - title: 'Creating a Codewind connection'
+      children: 
+        - title: 'Installing Codewind Engine into your remote Kube/Openshift cluster'
+          url: new_topic.html
+        - title: 'Configuring your IDE to connect to the Codewind Service on remote'
+          url: new_topic.html
+        - title: 'Registering all necessary security parameters'
+          url: new_topic.html
+    - title: 'Creating a project that builds and runs on the cloud'
+      url: new_topic.html
+    - title: 'Building and running an existing project in the cloud'
+      url: new_topic.html
+    - title: 'Making a code change'
+      url: new_topic.html
+    - title: 'Moving projects to the alternative remote service WIP add this somewhere'
+      url: new_topic.html
+
+- title: 'Optional additional configurations for remote development on Codewind'
+  url: new_topic.html
+  children:
+    - title: 'Support for ODO'
+      url: mdt-che-odo-support.html
+    - title: 'Using the Codewind OpenShift registry'
+      url: openshiftregistry.html
+    - title: 'Support for multiple users on Eclipse Che'
+      url: supportingmultipleusers.html
+    - title: 'Configuring Pipelines'
+      url: mdt-che-tektonpipelines.md
+      
+- title: 'Tools'
   children:
     - title: 'Codewind OpenAPI Tools for VS Code'
       url: open-api-tools-for-vscode.html
