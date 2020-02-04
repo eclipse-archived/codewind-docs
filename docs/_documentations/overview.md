@@ -52,15 +52,15 @@ Codewind improves your inner loop experience, enabling you to create a microserv
 
 ### What Integrated Development Environments (IDEs) does Codewind support?
 
-* Codewind is available as a Desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind), and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/mdt-che-installinfo.html).
+Codewind is available as a Desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind), and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/mdt-che-installinfo.html).
 
 ### What cloud-native technology does Codewind support?
 Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://www.openshift.com/) for container orchestration. 
 
-### Where can I choose to develop, build and run my containerised application? How does Codewind support my development flow?
+### Where can I use Codewind? How does Codewind support my development flow?
 Codewind supports several ways to develop your applications, so you can develop containerised applications on your desktop, directly in the cloud, or a combination of both:
 
-1. **Use Codewind locally** - your IDE, with the Codewind extension installed, and Docker Desktop, is all you need to build and run containerised applications on your Desktop.
+1. **Use Codewind locally** - your IDE, with the Codewind extension installed, and Docker Desktop<sup>**</sup>, is all you need to build and run containerised applications on your Desktop.
 
 2. **Use Codewind as a hosted application on your cloud** - both your IDE, with the Codewind extension installed, and your containerised applications, are located in your cloud environement.
 
