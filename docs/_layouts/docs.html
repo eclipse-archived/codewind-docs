@@ -112,6 +112,12 @@
         		<div role="main">{{ content }}</div>
         </div>
         
+        {% if page.permalink != "gettingstarted" %}
+        <div class="py-5 px-5 text-right">
+        Last update: {{ page.last_modified_at| date: '%b %d, %Y'}}
+        </div>
+        {% endif %}
+        
     </div>
     
 </div>
