@@ -36,6 +36,7 @@ If you are running in production, the best approach to simplify user administrat
 - Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
     - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+- If you are deploying into the IBM Public Cloud, you must install Keycloak and Codewind in different namespaces.
 
 ## Install Codewind and the authentication services
 
