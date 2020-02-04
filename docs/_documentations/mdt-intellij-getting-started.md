@@ -2,18 +2,61 @@
 layout: docs
 title: Installing Codewind on IntelliJ
 description: Installing Codewind on IntelliJ
-keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
+keywords: install, installing, IntelliJ, Eclipse, Codewind, IDE, plugin, plug-in, settings, creating, project, projects, template, code change, edit, edits, application, removing
 duration: 1 minute
 permalink: mdt-intellij-getting-started
 type: document
 ---
 
-# Installing Codewind on IntelliJ
+# Getting started with Codewind on IntelliJ
+Use Codewind on IntelliJ to develop your applications.
 
 ## Prerequisites
+- Install [IntelliJ](https://www.jetbrains.com/idea/download/#section=mac).
+- Install Docker.
+- If you use Linux, also install Docker Compose.
 
-## Where the Codewind plug-in sits within IntelliJ
+## Installing Codewind on IntelliJ
+1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/?d) for Codewind. Click **milestone** and **0.9.0**. Then, click **codewind-intellij-0.9.0.zip** to download the file.
+2. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
+   - On macOS, go to **Main**>**Preferences**.
+   - On Windows, go to **File**>**Settings**.
+3. Open **Plugins** and click the **Manage plugin repositories** icon. From the menu, click **Install Plugin from Disk...**. A window appears that displays the files on your computer.
+4. Choose the `codewind-intellij-0.9.0.zip` file and click **Open**.
 
-## Where to go for information and getting started
+## Creating your first project from a template
+1. Start IntelliJ. From the welcome page, click **Create New Project**. The **New Project** window opens.
+2. Create a Codewind project by clicking **Codewind**.
+   - If Codewind isn't installed yet, click **Install Codewind** to complete the installation.
+   - If Codewind isn't running yet, click **Start Codewind**. A **Starting Codewind** window appears.
+3. After Codewind is installed and started, click **Next**. A list of available templates appears.
+   - Currently, IntelliJ supports only the Java language templates.
+4. Click the template of your choice. Then, click **Next**.
+5. Enter the **Project name:** field to name your project and enter the **Project location:** field to choose where to put it.
+6. Click **Finish**. A window for your project appears.
+7. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** window, click **Add as Maven Project** to access your project source files.
+   - The project doesn't work if you disable the notification.
+8. To access the Codewind view, click the **Codewind** tab. From the Codewind view, right-click your project to open an application, start a build, and more.
 
-## How to use Codewind for IntelliJ
+## Creating more projects from templates
+1. From an IntelliJ project that's already open, go to **File**>**New**>**Project...**. The **New Project** window appears.
+2. Click **Next**.
+3. Click the template of your choice and click **Next**. A list of available templates appears.
+   - Currently, IntelliJ supports only the Java language templates.
+4. Enter the **Project name:** and **Project location:** and click **Finish**. The **Open Project** window appears.
+5. To create a new project, click **New Window**. A new window appears for the new project.
+6. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** window, click **Add as Maven Project** to access your project source files.
+   - The project doesn't work if you disable the notification.
+7. To access the Codewind view, click the **Codewind** tab.
+   - The new project appears with any other projects.
+   - Right-click your project to open an application, start a build, and more.
+
+## Making a code change
+1. From a project, open the file that you want to edit, for example, **Project1**>**src**>**main**>**java**>**application**>**rest**>**v1**>**example**.
+2. Edit your file.
+3. Save your changes.
+4. Open the application again. Your changes appear.
+
+## Removing a project
+1. If you delete a project, it is removed from Codewind.
+2. However, the files remain in the file system, and you need to manually delete them.
