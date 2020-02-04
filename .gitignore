@@ -1,3 +1,7 @@
 /.DS_Store
 /.settings
 /.project
+/_tmp
+/_jekyllHome
+/vendor
+/docs/.jekyll-cache
