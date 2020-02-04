@@ -45,7 +45,7 @@ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0
 
 ### Enabling privileged and root containers to run
 Codewind needs to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands, where `<che namespace>` is the namespace into which you installed Che.
-1. To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<che namespace>`.
-2. To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<che namespace>`.
+1. To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<che namespace>:che-workspace`.
+2. To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccount:<che namespace>:che-workspace`.
 
 Next step: [Adding registries in Che](mdt-che-setupregistries.html)
