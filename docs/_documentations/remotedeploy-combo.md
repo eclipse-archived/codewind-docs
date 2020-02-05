@@ -62,12 +62,7 @@ Determine the following values for your cloud deployment:
 - `kdevuser` and `kdevpass`: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
 - `ingress`: The ingress domain for your cloud environment.
 
-Codewind is required to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-
-- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
-- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
-
-To install Codewind, enter the following example command:
+Codewind on IBM Public Cloud requires Keycloak and Codewind to be installed separately. For deploying in IBM Public Cloud, follow the instructions in [Install Codewind components and authentication services individually](./remotedeploy-single.html). If you are not deploying in IBM Pubic Cloud, to install Codewind, enter the following example command:
 
 ```
 ./cwctl --insecure install remote \
