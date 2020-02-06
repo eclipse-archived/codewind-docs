@@ -18,7 +18,7 @@ http://<che ingress domain>/f?url=<hosted devfile URL>
 
 Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
 ```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/devfiles/0.8.0/devfile.yaml
+http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml
 ```
 
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
