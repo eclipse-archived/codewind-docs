@@ -11,12 +11,19 @@ type: document
 # Getting started with Codewind on IntelliJ: Tech Preview
 Use Codewind on IntelliJ to develop your applications.
 
-## Prerequisites
+## Installing Codewind on IntelliJ
+Complete the prerequisites and choose to install Codewind on IntelliJ with either the custom plug-in repository or the Eclipse Downloads page.
+
+### Prerequisites
 - Install [IntelliJ](https://www.jetbrains.com/idea/download/#section=mac).
 - Install Docker.
 - If you use Linux, also install Docker Compose.
 
-## Installing Codewind on IntelliJ
+### Installing Codewind on IntelliJ with the custom plug-in repository
+1. To add the custom repository, open a browser and enter `https://download.eclipse.org/codewind/codewind-intellij/0.9.0/latest/updatePlugins.xml`.
+2. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
+
+### Installing Codewind on IntelliJ from the Eclipse Downloads page
 1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/milestone/0.9.0/codewind-intellij-0.9.0.zip) and click `codewind-intellij-0.9.0.zip` to download the file.
 2. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
    - On macOS, go to **Main**>**Preferences**.
