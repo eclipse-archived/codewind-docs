@@ -10,7 +10,7 @@ type: document
 
 # Uninstalling Codewind for VS Code
 Remove the Codewind containers and images:
-1. Stop all running containers. From the **Local** folder in **Codewind** view, click **Stop Local Codewind**.
+1. Stop all running containers. From the local Codewind tree item in the **Codewind** view, click **Stop Local Codewind**.
 2. To remove the Docker images, right-click the **Local** folder and click **Remove Local Codewind Images**.
 
 Use the VS Code uninstall support to uninstall Codewind for VS Code:
