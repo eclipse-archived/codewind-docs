@@ -95,7 +95,7 @@ INFO[0000] Kubernetes namespace: CWCTL will not remove the namespace automatical
 use 'kubectl delete namespace mycodewind-ns' if you would like to remove it
 ```
 
-Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called `MyIBMCloud` is offline. Click the connection properties icon, and then click the `Remove Connection` button.
+Any previously configured IDEs are now in a `Disconnected` state. In this example, the remote deployment called `CloudName1` is offline. Click the connection properties icon, and then click the `Remove Connection` button.
 
 ![](./images/remotevs/removeConnection.png)
 
