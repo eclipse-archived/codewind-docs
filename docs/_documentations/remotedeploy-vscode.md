@@ -90,7 +90,7 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 
 ![Build Success](./images/remotevs/buildSuccess.png)
 
-`myFirstProject` on `MyIBMCloud` is now running and ready.
+`myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
 Congratulations! In this topic you:
 
