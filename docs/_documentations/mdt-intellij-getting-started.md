@@ -20,15 +20,22 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 - If you use Linux, also install Docker Compose.
 
 ### Installing Codewind on IntelliJ with the custom plug-in repository
-1. To add the custom repository, open a browser and enter `https://download.eclipse.org/codewind/codewind-intellij/0.9.0/latest/updatePlugins.xml`.
-2. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
+1. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
+   - On macOS, go to **Main**>**Preferences**.
+   - On Windows, go to **File**>**Settings**.
+2. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon.
+3. From the menu, click **Manage Plugin Repositories...**.
+4. Click the **+** button.
+5. Enter `https://download.eclipse.org/codewind/codewind-intellij/0.9.0/latest/updatePlugins.xml` and click **OK**.
+6. Click the **Marketplace** heading.
+7. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
 
 ### Installing Codewind on IntelliJ from the Eclipse Downloads page
 1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/milestone/0.9.0/codewind-intellij-0.9.0.zip) and click `codewind-intellij-0.9.0.zip` to download the file.
 2. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
    - On macOS, go to **Main**>**Preferences**.
    - On Windows, go to **File**>**Settings**.
-3. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon to open **Plugins**. Click the **Manage plugin repositories** icon. From the menu, click **Install Plugin from Disk...**. A window appears that displays the files on your computer.
+3. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon. From the menu, click **Install Plugin from Disk...**. A window appears that displays the files on your computer.
 4. Choose the `codewind-intellij-0.9.0.zip` file and click **Open**.
 
 ## Creating your first project from a template
@@ -41,19 +48,20 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 4. Click the template of your choice. Then, click **Next**.
 5. Enter the **Project name:** field to name your project and enter the **Project location:** field to choose where to put it.
 6. Click **Finish**. A window for your project appears.
-7. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** window, click **Add as Maven Project** to access your project source files and create the correct project structure.
-   - The **Non-managed pom.xml file found:** window might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
+7. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** notification, click **Add as Maven Project** to access your project source files. From these files, create the correct project structure.
+   - The **Non-managed pom.xml file found:** notification might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to access your project source files.
 8. To access the Codewind view, click the **Codewind** tab. From the Codewind view, right-click your project to open an application, start a build, and more.
 
 ## Creating more projects from templates
 1. From an IntelliJ project that's already open, go to **File**>**New**>**Project...**. The **New Project** window appears.
+   - **Note:** Unlike other IDEs, IntelliJ doesn't have a **Create New Project** menu item in the Codewind view.
 2. Click **Next**.
 3. Click the template of your choice and click **Next**. A list of available templates appears.
    - Currently, IntelliJ supports only the Java language templates.
 4. Enter the **Project name:** and **Project location:** and click **Finish**. The **Open Project** window appears.
 5. To create a new project, click **New Window**. A new window appears for the new project.
-6. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** window, click **Add as Maven Project** to access your project source files and create the correct project structure.
-   - The **Non-managed pom.xml file found:** window might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
+6. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** notification, click **Add as Maven Project** to access your project source files. From these files, create the correct project structure.
+   - The **Non-managed pom.xml file found:** notification might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to access your project source files.
 7. To access the Codewind view, click the **Codewind** tab.
    - The new project appears with any other projects.
    - Right-click your project to open an application, start a build, and more.
