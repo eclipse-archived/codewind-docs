@@ -20,6 +20,14 @@ Use the following command to install components individually for a remote deploy
 
 This command requires various flags to specify where and what to install.
 
+For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+    - For Codewind on OpenShift, you must create the namespace first. To do this, enter: `oc create namespace <Codewind-namespace>`.
+    - If you are on IBM Public Cloud, you must install Keycloak and Codewind in separate namesapaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
+    - For both IBM Public Cloud and OpenShift, run the following commands on only the Codewind namespace:
+        - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+
 ## Deploying Keycloak 
 
 1.  Open a new terminal window on your local workstation.
