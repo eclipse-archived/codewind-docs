@@ -49,7 +49,7 @@ Supported project settings include:
 
 ## **Internal application port**
 `internalPort: <string>`
-- Codewind does not automatically expose the port. 
+- Codewind gets the port from the container information, so by default, the port is the same as the one exposed in Dockerfile. 
 - Codewind uses the value in conjunction with the context root to determine the project state.
 - If an incorrect port is set, the project continuously pings the wrong endpoint, keeping the project stuck in the starting state.
 
