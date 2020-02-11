@@ -73,6 +73,8 @@
       url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
+    - title: 'Referencing files external to a project'
+      url: referencing-files.html
       
 - title: 'Performance monitoring'
   children:
