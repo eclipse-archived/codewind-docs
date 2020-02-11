@@ -24,7 +24,7 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
    - On macOS, go to **Main**>**Preferences**.
    - On Windows, go to **File**>**Settings**.
 2. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon.
-3. From the menu, click **Manage Plugin Repositories...**.
+3. From the menu, click the **Manage Plugin Repositories...** gear icon.
 4. Click the **+** button.
 5. Enter `https://download.eclipse.org/codewind/codewind-intellij/0.9.0/latest/updatePlugins.xml` and click **OK**.
 6. Click the **Marketplace** heading.
