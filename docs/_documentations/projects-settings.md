@@ -29,7 +29,7 @@ Supported project settings include:
 `contextRoot: <string>`
 - Codewind uses the value to determine the project state.
 - When the Open Application action is used, it uses the value as the initial endpoint. 
-- If an incorrect context root is set, the project is stuck in the starting state.
+- If an incorrect context root is set, the project continuously pings the wrong endpoint, keeping the project stuck in the starting state. 
 - If the health check endpoint is set, the context root is not used to determine the project state.
 - If the value is not set, the default value is `/`.
 
@@ -37,8 +37,9 @@ Supported project settings include:
 `healthCheck: <string>`
 - Codewind uses the value to determine the project state.
 - Codewind expects to use this value for the application health check endpoint.
-- If a wrong health check endpoint is set, the project is stuck in the starting state.
+- If a wrong health check endpoint is set, the project continuously pings the wrong endpoint, keeping the project stuck in the starting state. 
 - If the health check endpoint is set, the context root is not used to determine the project state. 
+- If the value is not set, the default value is `/`.
 
 ## HTTPS application
 `isHttps: <boolean>`
@@ -48,9 +49,9 @@ Supported project settings include:
 
 ## **Internal application port**
 `internalPort: <string>`
-- When exposed, Codewind does not automatically expose the port. 
+- Codewind does not automatically expose the port. 
 - Codewind uses the value in conjunction with the context root to determine the project state.
-- If an incorrect port is set, the project is stuck in starting state.
+- If an incorrect port is set, the project continuously pings the wrong endpoint, keeping the project stuck in the starting state.
 
 ## **Internal debug port**
 `internalDebugPort: <string>`
