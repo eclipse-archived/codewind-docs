@@ -122,7 +122,7 @@ Configure your `pom.xml` file as follows:
 
 The following files are generated during the import process. If your project requires additional configuration files or instructions for build, you might need to modify them.
 
-**Note:** Only Microprofile projects enable the use of `Dockerfile-lang` and `Dockerfile-build` files.
+**Note:** Only MicroProfile projects enable the use of `Dockerfile-lang` and `Dockerfile-build` files.
 
 **Dockerfile-lang**
 
@@ -146,7 +146,7 @@ Requirements:
 - The `artifactId` value in the `pom.xml` file must match the project name.
 - Configure the project to build with Maven and produce a exectutable `.jar` file.
 - Configure the application to use port 8080.
-- Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile. If your project does not have a Dockerfile, one is generated for you.
+- Copy the executable `.jar` file produced by the Maven build to `/app.jar` within the Docker container. To do this, simply add a `COPY` instruction to the Dockerfile.
 
 Example:
 
@@ -172,10 +172,11 @@ Your `package.json` must meet the following requirements. For an example of a go
     - If a problem occurs with either script, the error appears in the Application Logs view in Codewind.
 
 If you have a `Dockerfile`, it must meet the following requirements:
-- A `Dockerfile` is generated if it does not exist. Ensure the `Dockerfile` exposes your application port.
+- Ensure the `Dockerfile` exposes your application port.
     - For example, if you're using port 3000, the `Dockerfile` needs to include `EXPOSE 3000`.
 - Ensure that the application is located in the `/app` directory within the Docker container.
 - Ensure that the `Dockerfile` sets the working directory to `/app` with `WORKDIR "/app"`.
+- For more information about Dockerfiles, see [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 ## Swift projects
 
@@ -183,10 +184,9 @@ Codewind works with Swift projects that use the Kitura web framework.
 
 Requirements:
 
-- A `Dockerfile-tools` file is generated to build the project. Ensure the project can be built by using a `release` build configuration.
+- Ensure the project can be built by using a `release` build configuration.
 
 For example, you can build the project by using the command: `swift build --configuration release`.
-- A `Dockerfile` file is generated. It runs the application that was built by using `Dockerfile-tools`.
 
 ## Generic Docker projects
 
