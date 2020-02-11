@@ -49,7 +49,7 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 5. Enter the **Project name:** field to name your project and enter the **Project location:** field to choose where to put it.
 6. Click **Finish**. A window for your project appears.
 7. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** notification, click **Add as Maven Project** to create the correct project structure.
-   - The **Non-managed pom.xml file found:** notification might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
+   - The **Non-managed pom.xml file found:** notification might disappear after some time. To create the correct project structure, go to the IntelliJ project view and right-click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
 8. To access the Codewind view, click the **Codewind** tab. From the Codewind view, right-click your project to open an application, start a build, and more.
 
 ## Creating more projects from templates
@@ -61,7 +61,7 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 4. Enter the **Project name:** and **Project location:** and click **Finish**. The **Open Project** window appears.
 5. To create a new project, click **New Window**. A new window appears for the new project.
 6. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** notification, click **Add as Maven Project** to create the correct project structure.
-   - The **Non-managed pom.xml file found:** notification might disappear after some time. To open it again, go to the IntelliJ project view and click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
+   - The **Non-managed pom.xml file found:** notification might disappear after some time. To create the correct project structure, go to the IntelliJ project view and right-click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
 7. To access the Codewind view, click the **Codewind** tab.
    - The new project appears with any other projects.
    - Right-click your project to open an application, start a build, and more.
