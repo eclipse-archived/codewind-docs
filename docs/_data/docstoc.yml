@@ -73,6 +73,8 @@
       url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
+    - title: 'Project settings'
+      url: project-settings.html 
       
 - title: 'Performance monitoring'
   children:
