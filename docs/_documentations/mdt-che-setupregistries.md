@@ -2,7 +2,7 @@
 layout: docs
 title: Adding registries in Che
 description: Adding registries in Che
-keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
+keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
 permalink: mdt-che-setupregistries
 type: document
@@ -10,19 +10,17 @@ type: document
 
 # Adding registries in Che
 After Che is started and running, add the container registry to be used with Codewind.
-
-- On OpenShift and other Kube platforms, push your images to any Docker registry, such as Docker Hub, Quay.io, Google Cloud Registry (GCR), and more.
-- On IBM Cloud Private, you can push your image to any Docker registry except the internal Docker registry.
-
-Use the following information to add the registries:
-  - Server: `<registry-to-push-images-to>`
+1. From the Codewind project explorer view, right-click **Projects** and select **Image Registry Manager**.
+2. From the **Image Registry Manager**, click **Add New**.
+3. On OpenShift and other Kube platforms, push your images to a container registry, such as Docker Hub, Quay.io, Google Cloud Registry (GCR), and more. Enter the following information to add the registries:
+  - Registry server name or domain name: `<registry-to-push-images-to>`
   - User name: `<Your username>`
-  - Password: `<Your password>`
-
-For information about adding deployment registries to Che, see [Codewind Docker registry guidance](#codewind-docker-registry-guidance).
+  - Password or API key: `<Your password or API key>`
+4. Next, enter the namespace that you want to use to push your registry to. After you enter all the information, from the **Image Registry Manager**, you can see values for the **Address**, **Username**, and **Namespace** of your latest registry.
+5. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
 
 # Setting the Docker registry
-After creating a Codewind workspace, set the container registry to deploy your projects. When you create or add an existing project to Codewind, Codewind prompts you for the registry. For guidance on using proper container registries, see [Codewind Docker registry guidance](#codewind-docker-registry-guidance).
+After creating a Codewind workspace, set the container registry to deploy your projects. When you create or add an existing project to Codewind, Codewind prompts you for the registry.
 
 To change the registry in use, run the `Codewind: Set Deployment Registry` command in Theia to dynamically set a new registry for your workspace. <br>
 
@@ -60,7 +58,7 @@ These examples show recommended values for common registries. The following depl
     - Credentials: OpenShift user name and access token
 
 ### Specifying image registries for Codewind 
-Three scenarios in Codewind require you to specify which image registry is in use:
+The following scenarios in Codewind require you to specify which image registry is in use:
 
 - In the following scenario, configure Codewind with an image registry to push the application image to that specific image registry:
     - Run Codewind on a remote Kubernetes cluster, including Che, to develop a Codewind style project.
@@ -71,10 +69,7 @@ Three scenarios in Codewind require you to specify which image registry is in us
     - Run Codewind locally to develop an Appsody style project.
     - The image registry for the Appsody stack requires credentials. 
 
-If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, then you do not need to specify an image registry.
+If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, you do not need to specify an image registry.
 
 ### Adding registries to OKD and OpenShift
 To use the OpenShift internal Docker registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
-
-Next step: [Create Codewind workspace](mdt-che-createcodewindworkspace.html)
-Next step: [Using Codewind in Theia](mdt-che-usingtheia.html)
