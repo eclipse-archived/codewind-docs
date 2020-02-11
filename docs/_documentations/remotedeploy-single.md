@@ -12,26 +12,53 @@ order: 2
 
 # Installing components individually for a Codewind remote deployment
 
-Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
-Use the following command to install components individually for a remote deployment with a new Keycloak and a new Codewind service:
+Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
+
+# Orientation
+
+In this topic you will learn how to:
+
+
+1. Deploy a Keycloak, the authentication service used for using Codewind remotely, using Codewind's CLI
+2. Deploy Codewind remotely.
+3. Use the same keycloak to install additional remote Codewind instances
+
+If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind.
+Codewind includes a CLI to simplify the installation process. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+
+you will use the following command to install components individually for a remote deployment with a new Keycloak and a new Codewind service:
 
 `cwctl --insecure install remote` 
 
-This command requires various flags to specify where and what to install.
+This command requires various flags to specify where and what to install which will be explained below.
 
-For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-    - For Codewind on OpenShift, you must create the namespace first. To do this, enter: `oc create namespace <Codewind-namespace>`.
-    - If you are on IBM Public Cloud, you must install Keycloak and Codewind in separate namesapaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
-    - For both IBM Public Cloud and OpenShift, run the following commands on only the Codewind namespace:
+# Pre-requisites
+
+- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
+    Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+    1. Create the namespace by entering: `oc create namespace <Codewind-namespace>`.
+    2. Run the following commands on only the Codewind namspace: 
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
-## Deploying Keycloak 
+- For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
+    Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+    1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
+    2. run the following commands on only the Codewind namespace:
+        - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+ 
 
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
+# 1. Deploy Keycloak using the Codewind CLI
+
+If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind and go straight to [Deploy a remote Codewind service].
+
+1. Open a new terminal window on your local workstation.
+2. Go to your home directory and then to the Codewind CLI:
 
 ```
 cd ~/.codewind/0.8.0
@@ -61,7 +88,7 @@ In the example the ingress domain is:
 mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-## Deploying Authentication services (Keycloak)
+## Deploy Authentication services (Keycloak)
 
 Determine the following values for your cloud deployment:
 
@@ -69,7 +96,7 @@ Determine the following values for your cloud deployment:
 - `kdevuser` and `kdevpass`: A developer user name and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
 - `ingress`: The ingress domain for your cloud environment.
 
-To install Codewind, enter the following example command:
+To install Keycloak using Codewind, enter the following example command:
 
 ```
 ./cwctl --insecure install remote \
@@ -104,9 +131,9 @@ INFO[0159] Keycloak is available at: https://codewind-keycloak-k55dxqhx.mycluste
 
 Keycloak has been sucessfully deployed and is available.
 
-## Deploying a remote Codewind service
+# 2. Deploy a remote Codewind service
 
-To deploy a new Codewind instance in Kubernetes, generate a user in Keycloak and configure security. You can use the CLI `cwctl` with additional options, for example: 
+Deploy a new Codewind instance in Kubernetes/the cloud, generate a user in Keycloak and configure security all using the following single Codewind CLI `cwctl` command. You can use the CLI `cwctl` with additional options LIKE WHAT? WHICH ONES ARE REQUIRED?, for example: 
 
 ```
 ./cwctl --insecure install remote \
@@ -150,8 +177,17 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind is successfully deployed and is available.
 
-You can re-run the command several times. Each time you re-run the command, a new Codewind deployment is generated against the existing Keycloak service. You must have your own Codewind instance. However, you might also have more that one instance assigned to you through role-based access control that `cwctl` sets up automatically. 
+### Save the address of the remote Codewind Service 
+REPLACEMENT - ASSUME THIS IS VALID FOR A SINGLE REMOTE CODEWIND SERVICE? Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
 
-Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
+# 3. Deploy additional remote Codewind services
 
-Next step: Connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment.
+WIP You will now use the same keycloak to install multiple codewinds remotely.
+
+Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new Codewind deployment is generated against the existing Keycloak service. You must have your own Codewind instance MEANING? 
+
+You can use this process to assign yourself(?) to multiple instances of remote Codewind services, or UNDERSTAND NEXT SENTENCE AND REWRITE
+Additional instances of remote Codewind services may/CAN? also be assigned to you thrhough role-based access control, set up autoatically by 'cwctl'. 
+
+# Next Steps
+Connect your local Codewind on your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment.

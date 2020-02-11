@@ -10,36 +10,57 @@ type: document
 
 # Deploying Codewind remotely
 
-Deploy Codewind remotely to develop your code locally and build and run it remotely and securely in the cloud. This option is useful because it frees up resource on your laptop and uses the cloud's resources to build and run your apps.
+Codewind can be used in one of 3 ways - [locally], [hosted] as an application on a cloud, or remotely. By deploying Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up resources on your laptop, using the cloud's resources to build and run your applications. 
 
-After you install your IDE and configure Codewind for local use, follow these steps to deploy to the cloud:
+# What you will learn
 
-1. Use the Codewind CLI to deploy Codewind remote services.
-2. Use your IDE to create a connection link.
-3. Move over any projects to the alternative remote service.
+You will learn how to install and configure Codewind to be used remotely, and then create a project from your local IDE that builds and runs in the cloud. Finally, you will learn how to move an existing local project to your new Cloud deployment (?)
 
-## Planning your deployment
+After you install your local IDE and configure Codewind for local use, you will follow these steps to deploy Codewind to the cloud:
 
-Codewind remote services contain many different components. Use the Codewind CLI `cwctl` to install all the required components at once, or each component separately. 
+1. Use the Codewind CLI to deploy/INSTALL Codewind to your cloud / cluster.
+2. Configure your IDE to connect to your new Codewind deployment
+3. Register all necessary security parameters
 
-If you are running a pilot or a short lived demonstration environment with a single user, and are not using IBM Public Cloud, you can install everything into a single namespace and have one authentication server per Codewind instance. By deploying Keycloak and Codewind in a single namespace the deployment process is shorter and the removal process is simpler. 
+Once you have deployed your Codewind to the cloud, you will learn how to:
 
-If you are running in production, the best approach to simplify user administration is to install a single Keycloak service that is shared by many Codewind services. 
+1. create a new project that builds and runs in the cloud
+2. build and run an existing project in the cloud
+3. Move an existing local project from your local Codewind ?? to the cloud. 
 
 ## Prerequisites
 
-- Install your preferred IDE on your local machine. For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
-- Ensure that you have access to the Codewind CLI `cwctl`. To access the Codewind CLI, open a terminal window and navigate to the following hidden folder: `~/.codewind/<version>`. On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
-- The installer can install Keycloak on its own, Keycloak and Codewind together, or Codewind pointing at an existing Keycloak. If you decide you want to deploy Keycloak on its own first, install it using the `cwctl install remote \` commands described in the following installation procedures and add the `--konly` flag. Then install a Codewind instance that uses Keycloak by adding the `--kurl` flag, which is the ingress of the Keycloak service.
-- Have an active Kubernetes context that points to your cluster. Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
-- Have access to a keyring, a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+Before deploying Codewind to the cloud, you must:
 
-## Install Codewind and the authentication services
 
-Next step, either:
+1. **Install your preferred IDE on your local machine.** 
+For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 
-- [Install both Codewind and authentication services together](./remotedeploy-combo.html)
+2. **Ensure that you have access to the Codewind CLI `cwctl`.** To access the Codewind CLI, open a terminal window and navigate to the following hidden folder: `~/.codewind/<version>`. On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
+
+3. **Have an active Kubernetes context that points to your cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
+
+4. **Have access to a keyring** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+
+## Planning your remote deployment - Codewind and Authentication Services
+
+A Keycloak must be used as the authentication service when using Codewind remotely. To use Codewind with Keycloak, you can either
+1. point Codewind to an existing Keycloak and then install Codewind remotely using this keycloak.
+2. use the Codewind CWCTL command on your local Codewind instance to install both Codewind remotely and Keycloak at the same time.
+3. use the Codewind CWCTL command on your local Codewind instance to install Keycloak on it's own. Then, install a Codewind instance that uses your new Keycloak.
+
+To determine the best way to configure Keycloak for your use case, consider whether there will be more than 1 user accessing Codewind remotely. TRUE?
+
+If you are running a pilot or a short lived demonstration environment with a single user, and are not using IBM Public Cloud, you can use the simplest deployment and removal process of deploying Keycloak and Codewind in a single namespace, by using the Codewind CWCTL command to install both Codewind remotely and Keycloak at the same time. With this configuration, there is one authentication server per Codewind instance. 
+
+If you are running in production, the best approach to simplify user administration is to install a single Keycloak service that is shared by many Codewind services. For this case, you need to install the authentication services separately from installing Codewind remotely. You will use a single keycloak to install multiple codewinds remotely.
+
+### Next Steps
+
+Once you have decided how you will be administering Codewind remotely, you can choose which installation procedure you need to follow:
+
+- [Install both the remote Codewind instance and Keycloak together](./remotedeploy-combo.html)
 
 Or:
 
-- [Install Codewind components and authentication services individually](./remotedeploy-single.html)
+- [Install the remote Codewind instance and Keycloak individually](./remotedeploy-single.html)
