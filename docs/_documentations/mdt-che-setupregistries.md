@@ -10,7 +10,8 @@ order: 20
 parent: root
 ---
 
-### Adding registries in Che
+# Adding registries in Che
+
 After Che is started and running, add the container registry that will be used with Codewind.
 - On OpenShift or other Kube platforms, you can push your images to any Docker registry, such as Docker Hub, Quay.io, Google Cloud Registry (GCR), and more.
 - On IBM Cloud Private, you can push your image to any Docker registry *except* the internal Docker registry.

@@ -1,28 +1,25 @@
 ---
 layout: docs
-title: Installing Codewind on the Cloud
-description: Installing Codewind on the Cloud
-keywords: build, deploy, IBM Cloud Private, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
+title: Creating a Codewind workspace in Che
+description: Creating a Codewind workspace in Che
+keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
 permalink: mdt-che-createcodewindworkspace
 type: document
-order: 20
-parent: root
 ---
 
-### Creating the Codewind workspace with a Devfile
-The general format for creating a Che workspace via a factory is:
-```
-http://<che ingress domain>/f?url=<hosted devfile URL>
-```
+# Creating a Codewind workspace in Che
+Use Codewind with Che workspaces to develop your application in a single location.
 
-Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
-```
-http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.8.0/devfiles/0.8.0/devfile.yaml
-```
+### Creating the Codewind workspace with a devfile
+Codewind includes a ready-to-use devfile with its plug-ins. 
+1. Log in to Che. Che loads.
+2. Go to **Workspaces** and click **Add Workspace**.
+3. Click **Import Devfile**.
+4. From **Source**, click **YAML**.
+5. Go to the [https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml) link and copy and paste the contents into the YAML text box in your Che workspace.
+6. Click **Create & Open**.
 
-For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
+For more sample devfiles, see [`codewind-templates/devfiles/`](https://github.com/kabanero-io/codewind-templates/tree/master/devfiles).
 
 Next step: [Setup Tekton Pipelines](mdt-che-tektonpipelines.html)
-
-

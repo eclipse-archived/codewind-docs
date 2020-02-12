@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-## Connecting Eclipse to Remote Codewind
+# Connecting Eclipse to Remote Codewind
 
 1\. Locate the Codewind view in Eclipse and click the cloud icon to launch the new connection wizard:
 
@@ -30,7 +30,7 @@ The IDE and Codewind are connected.
 
 Before projects can be deployed on Kubernetes, you must specify a Docker registry. This example uses Docker Hub. 
 
-1\. If it's not already open, navigate to the connection details page, right-click the deployment, and select `Manage Deployment Registries`:
+1\. If it's not already open, navigate to the connection details page, right-click the deployment, and select `Manage Image Registries`:
 
 ![Docker Registry](./images/remoteeclipse/connectionSettings.png)
 
@@ -81,7 +81,7 @@ The project files are copied over to the Codewind server and the new `myFirstNod
 
 ![Build Success](./images/remoteeclipse/buildSuccess.png)
 
-`myFirstNodeProject` on `MyIBMCloud` is now running and ready.
+`myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
 Congratulations! In this topic you:
 

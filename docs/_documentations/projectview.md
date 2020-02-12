@@ -37,7 +37,7 @@ The page header contains the following information:
 
 At the side of the page is a menu:
 
-![Image of menu](dist/images/projectmenu.png)
+![Image of menu](./images/projectmenu.png)
 
 
 From this menu, you have seven options:
@@ -74,7 +74,7 @@ When one or more log files have changed, an `Updated` notice is displayed. The c
 
 If there are no log files, the dropdown menu will be empty.
 
-![Image of log files](dist/images/viewingmultiplelogfiles.png)
+![Image of log files](./images/viewingmultiplelogfiles.png)
 
 ## Need help?
 If you encounter problems with using the project view, check the [Troubleshooting page](troubleshooting.html#using-the-project-view).
