@@ -28,6 +28,3 @@ parent: mdt-vsc-overview
 ![image of Codewind once installed](dist/images/installed.png){:width="800px"}
 
 Next step: [Create your first project](mdt-vsc-firstproject.html)
-
-
-

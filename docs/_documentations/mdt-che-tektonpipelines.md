@@ -10,7 +10,8 @@ order: 20
 parent: root
 ---
 
-### Configuring Codewind for Tekton pipelines
+# Configuring Codewind for Tekton pipelines
+
 If you want to use existing Tekton installations with Codewind, from your command line, enter the following commands:
 
 ```
