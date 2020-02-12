@@ -12,7 +12,7 @@ order: 7
 
 # Checking the application and build statuses
 
-Builds automatically begin when Codewind detects changes or when a build is initiated by pressing the Build button on a project.
+Builds automatically begin when Codewind detects changes or when a build is initiated by clicking the **Build** button on a project.
 
 ## Application status
 

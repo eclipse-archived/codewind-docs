@@ -1,29 +1,29 @@
 ---
 layout: docs
-title: Understanding Application Metrics
-description: Understanding Application Metrics
+title: Understanding the Metrics Dashboard
+description: Understanding the Metrics Dashboard
 keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, app monitor, dashboard, CPU, HTTP incoming requests, memory, HTTP throughput, Heap, HTTP outbound requests, loop times, other requests, run load, HTTP Requests, environment, resource usage, profiling, enabling, graph
 duration: 1 minute
-permalink: appmetrics
+permalink: metrics-dashboard
 type: document
 parent:
 order:
 ---
 
-# Understanding Application Metrics
+# Understanding the Metrics Dashboard
 
-## What is Application Metrics?
+## What is the Metrics Dashboard?
 
-Application Metrics instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. You can also visualize data with the Application Metrics Dashboard. For more information, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
+The Metrics Dashboard instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. You can also visualize data with the Metrics Dashboard. For more information, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
 
-## Application Metrics types
+## Metrics Dashboard types
 
-Application Metrics is available in Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
+The Metrics Dashboard is available in Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
 * [Application Metrics for Java](https://developer.ibm.com/javasdk/application-metrics-java/)
 * [Application Metrics for Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/)
 * [Application Metrics for Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/)
 
-## Accessing Application Metrics
+## Accessing the Metrics Dashboard
 
 Click **App monitor** in the Microclimate project to access Application Metrics. Toggle between the **Dashboard** and **Summary** tabs. If you have a Node.js project, you can also access the **Profiling** tab.
 
