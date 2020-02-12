@@ -46,21 +46,25 @@ For more information about installing Eclipse, see [Getting started with Codewin
 
 A Keycloak must be used as the authentication service when using Codewind remotely. To use Codewind with Keycloak, you can either
 1. point Codewind to an existing Keycloak and then install Codewind remotely using this keycloak.
-2. use the Codewind CWCTL command on your local Codewind instance to install both Codewind remotely and Keycloak at the same time.
+2. use the Codewind CWCTL command on your local Codewind instance to install both Codewind remotely and Keycloak simultaneously.
 3. use the Codewind CWCTL command on your local Codewind instance to install Keycloak on it's own. Then, install a Codewind instance that uses your new Keycloak.
 
-To determine the best way to configure Keycloak for your use case, consider whether there will be more than 1 user accessing Codewind remotely. TRUE?
+To determine the best way to configure Keycloak for your use case, consider the following:
 
-If you are running a pilot or a short lived demonstration environment with a single user, and are not using IBM Public Cloud, you can use the simplest deployment and removal process of deploying Keycloak and Codewind in a single namespace, by using the Codewind CWCTL command to install both Codewind remotely and Keycloak at the same time. With this configuration, there is one authentication server per Codewind instance. 
+- If you are running a pilot or a short lived demonstration environment with a single user, and are not using IBM Public Cloud, you can use the simplest deployment and removal process of deploying Keycloak and Codewind in a single namespace, by using the Codewind CWCTL command to install both Codewind remotely and Keycloak simultaneously. With this configuration, there is one authentication server per Codewind instance. 
 
-If you are running in production, the best approach to simplify user administration is to install a single Keycloak service that is shared by many Codewind services. For this case, you need to install the authentication services separately from installing Codewind remotely. You will use a single keycloak to install multiple codewinds remotely.
+- If you are running in production, the best approach to simplify user administration is to install a single Keycloak service that is shared by many Codewind services. For this case, you need to install the authentication services separately from installing Codewind remotely. You will use a single keycloak to install multiple codewinds remotely.
 
 ### Next Steps
 
 Once you have decided how you will be administering Codewind remotely, you can choose which installation procedure you need to follow:
 
-- [Install both the remote Codewind instance and Keycloak together](./remotedeploy-combo.html)
+- [Installing both the remote Codewind instance and Keycloak simultaneously](./remotedeploy-combo.html)
 
 Or:
 
-- [Install the remote Codewind instance and Keycloak individually](./remotedeploy-single.html)
+- [Installing the remote Codewind instance and Keycloak individually](./remotedeploy-single.html)
+
+Or:
+
+- [Installing the remote Codewind instance only and pointing to an existing Keycloak ](./remotedeploy-existingkeycloak.html)
