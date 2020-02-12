@@ -161,6 +161,43 @@ You might occasionally see projects stuck in the `Starting` or `Stopped` state e
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## How to stop the app from continuously pinging 
+With all the stacks and templates Codewind offers, some template applications come with no server, like Node.js. The backend in PFE expects all applications to have a server. Thus, the backend continuously pings the port of the application retrieved from the application's container information. Since no server is available to ping on that port, the application times out and is stuck on `Starting`. 
+
+**Workaround** Disable your application stuck on the `Starting` state:
+1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
+    - This key forces the application to stop, stops pinging the application, and bypasses the timeout error. 
+2. Once you implement the server into the application, resume the application ping and run it by setting `internalPort1` to `""` for the default port of the container. Or you can choose a specific port you want to ping. 
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## How to create a .cw-settings file if it does not exist
+Prior to the 0.9.0 release, non-Codewind stacks, like Appsody and OpenShift Do (odo), did not come with a .cw-settings. If you have a project from those stacks from a previous release, you need to create the .cw-settings file. The file must reside under the project root directory. 
+
+**Workaround** Create a template .cw-settings file with the following contents: 
+
+```
+{
+"contextRoot": "",
+"internalPort": "",
+"healthCheck": "",
+"isHttps": false,
+"ignoredPaths": [
+""
+]
+}
+```
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
 Codewind version: 0.6.0
 Issue link: https://github.com/eclipse/codewind/issues/1039
 -->
