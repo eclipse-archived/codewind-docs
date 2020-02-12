@@ -15,29 +15,28 @@ Codewind automatically builds and redeploys your application whenever you make a
 
 To see this feature in action, make a change to the getting started example.
 
-1\. Edit the index.html file.
+1\. Edit the index.html file:
 
 ![](dist/images/vsc-codechange.png){:width="800px"}
 
-2\. Navigate to the bottom of the file to find the lines.
+2\. Navigate to the bottom of the file to find the lines:
 
 ![](dist/images/vsc-codeline.png)
 
-3\. Change the heading from *Congratulations* to *I did this*. 
+3\. Change the heading from *Congratulations* to *I did this*:
 
 ![](dist/images/vsc-ididthis.png)
 
-The status of the project changes to *stopped* while the project is rebuilt and deployed.
+The status of the project changes to *stopped* while the project is rebuilt and deployed:
 
 ![](dist/images/vsc-buildstopped.png)
 
-After a few moments, the status changes back to *running*.
+After a few moments, the status changes back to *running*:
 
 ![](dist/images/vsc-buildrunning.png)
 
-4\. Click the **Open App** icon
+4\. Click the **Open App** icon to show your code change running:
 ![](dist/images/launchicon.png)
-to show your code change running.
 
 ![](dist/images/vsc-screenchanged.png)
 

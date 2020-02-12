@@ -16,7 +16,7 @@ parent: mdt-vsc-overview
 
  To install Codewind for VS Code, complete the following steps:
 
-1. Install [VS Code version 1.38 or later](https://code.visualstudio.com/download).
+1. Install [VS Code version 1.41.0 or later](https://code.visualstudio.com/download).
 2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you must also install Docker Compose.
 3. Install Codewind by clicking [this link](vscode:extension/IBM.codewind) to install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) or by searching for *Codewind* in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
     - If you're going to work on Java projects, install the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).

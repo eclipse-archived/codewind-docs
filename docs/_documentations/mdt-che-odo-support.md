@@ -24,6 +24,9 @@ The extension to Codewind provides support for [OpenShift Do (odo)](https://gith
 
 ## Setting up extension
 
+### Prerequisites
+- [Install](mdt-che-installinfo.html) Codewind on Che on an OpenShift cluster.
+
 ### Adding roles to support the extension
 The extension needs additional roles for accessing OpenShift resources. Use the following commands to clone the [codewind-odo-extension](https://github.com/eclipse/codewind-odo-extension) repository, create the ClusterRole with the required permissions, and bind that ClusterRole to the corresponding Codewind service account.
 
@@ -31,7 +34,7 @@ The extension needs additional roles for accessing OpenShift resources. Use the 
 In order to create or import Java compoent, you need to import Java image stream to your OpenShift or OKD cluster so that odo can build component image.
 
 ### Adding the roles and importing the Java image stream
-1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster.
+1. Log in to your OpenShift or Origin Community Distribution (OKD) cluster and ensure the Codewind workspace is created.
 2. Enter the following commands to go to the correct location, add the roles and import the Java image stream, and perform cleanup:
 ```
 git clone https://github.com/eclipse/codewind-odo-extension &&\
