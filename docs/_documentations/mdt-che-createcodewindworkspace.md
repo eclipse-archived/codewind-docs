@@ -10,13 +10,16 @@ order: 20
 parent: root
 ---
 
-### Creating the Codewind workspace with a Devfile
+# Creating the Codewind workspace with a Devfile
+
 The general format for creating a Che workspace via a factory is:
+
 ```
 http://<che ingress domain>/f?url=<hosted devfile URL>
 ```
 
 Codewind includes a ready-to-use devfile with its plug-ins. Enter the following URL to create a workspace from the devfile:
+
 ```
 http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml
 ```
@@ -24,5 +27,3 @@ http://<che ingress domain>/f?url=https://raw.githubusercontent.com/eclipse/code
 For other sample devfiles, see https://github.com/kabanero-io/codewind-templates/tree/master/devfiles.
 
 Next step: [Setup Tekton Pipelines](mdt-che-tektonpipelines.html)
-
-

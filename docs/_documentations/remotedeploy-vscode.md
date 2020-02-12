@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-## Connecting VS Code to Remote Codewind
+# Connecting VS Code to Remote Codewind
 
 1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
 

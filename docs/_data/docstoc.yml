@@ -67,8 +67,6 @@
 
 - title: 'Developing projects'
   children:
-    - title: 'Using the project view'
-      url: projectview.html
     - title: 'Checking the application and build statuses'
       url: checkingstatuses.html
     - title: 'Importing existing projects'

@@ -9,9 +9,11 @@ type: document
 ---
 
 # Installing Codewind for Eclipse Che
+
 Install Che to use with Codewind or use Codewind with an existing Che installation.
 
-### Prerequisites
+## Prerequisites
+
 1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and have a minimum of 1 Gi storage.
    - One volume is required for Che, and two volumes are required for each Codewind workspace.
    - For Network File System (NFS) shares, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
@@ -22,7 +24,8 @@ Install Che to use with Codewind or use Codewind with an existing Che installati
 3. Set up the ClusterRole for Codewind:
 `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/setup/install_che/codewind-clusterrole.yaml`
 
-### Installing Che with chectl
+## Installing Che with chectl
+
 The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. To install the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
 After you install `chectl`, complete the following steps:
@@ -35,7 +38,8 @@ After you install `chectl`, complete the following steps:
     - On OpenShift, run the following command: `chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
     - On Kubernetes, run the following command: `chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.5.1`
 
-### Updating an existing Che installation
+## Updating an existing Che installation
+
 If you already have a Che installation, you can update it for Codewind.
 
 After creating the Codewind ClusterRole from the [Prerequisites](#prerequisites), run the following command, where `$NAMESPACE` is the namespace that your Che workspaces run in. By default, this namespace is `che`.
@@ -43,7 +47,8 @@ After creating the Codewind ClusterRole from the [Prerequisites](#prerequisites)
 kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE
 ```
 
-### Enabling privileged and root containers to run
+## Enabling privileged and root containers to run
+
 Codewind needs to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands, where `<che namespace>` is the namespace into which you installed Che.
 1. To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<che namespace>:che-workspace`.
 2. To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<che namespace>:che-workspace`.

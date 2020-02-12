@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-## Connecting Eclipse to Remote Codewind
+# Connecting Eclipse to Remote Codewind
 
 1\. Locate the Codewind view in Eclipse and click the cloud icon to launch the new connection wizard:
 

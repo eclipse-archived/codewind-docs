@@ -60,7 +60,7 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Profiling Data Support
 
-In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [Microclimate load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Microclimate and then profiled.
+In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performance). Profiling support is only available for Node.js projects that are created through Microclimate and then profiled.
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
 - Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
@@ -68,7 +68,7 @@ In Theia or VS Code, you can use the Profiling Language Server to provide code h
 - Out of all the folders that contain a `profiling.json` file, the most up-to-date `profiling.json` file is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
 
 To display code highlighting:
-1. Open a project created with Microclimate and profiled using the [performance testing](performancetesting) feature of Microclimate. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Microclimate project.
+1. Open a project created with Microclimate and profiled using the [performance testing](performance) feature of Microclimate. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Microclimate project.
 2. In the **Editor** view, open a JavaScript file. The Editor highlights any lines that were found in the profiling data and annotates them to show how often they were seen and where they were called from.
 
 To enable or disable the profile highlighting in the code, access the profiling in one of the following ways:
