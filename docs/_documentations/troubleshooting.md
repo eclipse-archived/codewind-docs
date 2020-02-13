@@ -467,7 +467,7 @@ Issue link: https://github.com/eclipse/codewind/issues/938
 ## Using Appsody stacks images from private Docker registries
 
 **Local scenario**
-For Codewind to work with an Appsody stack image on a private Docker registry, the stack must fully qualify the image name in the `.appsody-config.yaml` configuration of its template.
+For Codewind to work with an Appsody stack image on a private Docker registry, the stack must fully qualify the image name in the `.appsody-config.yaml` configuration of its template, for example: `hostname[:port]/username/reponame[:tag]`. Also, before you work with the stack, on the local system, enter `docker login` to the private registry.
 - **Note:** When you view the application log, you might see failures to pull the image during a rebuild. However, Codewind is taking the cached container image from your local machine. If you ever delete that image, you need to pull the image again. You can either create another project from the same stack or manually call a `docker pull` with the required image.
 
 **Remote scenario**
