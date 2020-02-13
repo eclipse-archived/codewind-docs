@@ -43,10 +43,9 @@ If the command is successful, you see a list of current namespaces. If not, ensu
 
 ## Determine your Cloud ingress domain
 
-The CLI command requires an ingress domain. Find your ingress domain based on any of the existing routes:
+The CLI command requires an ingress domain. Enter the `oc get routes -n default` command and find your ingress domain based on any of the existing routes:
 
 ```
-oc get routes -n default
 NAME               HOST/PORT                                                                                                          PATH      SERVICES           PORT               TERMINATION   WILDCARD
 registry-console   registry-console-default.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud             registry-console   registry-console   passthrough   None
 ```
