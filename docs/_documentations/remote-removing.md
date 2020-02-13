@@ -23,7 +23,7 @@ WARNING: Since it is possible to install multiple Codewind servers into a Kubern
 
 ## Removing a remote deployment of Codewind
 
-You can find `cwctl` in your Home directory under the path `~/.codewind/{version}`.
+You can find `cwctl` in your Home directory under the path `~/.codewind/<version>`.
 
 1.  Open a new terminal window on your local workstation.
 2.  Go to your Home directory and then to the Codewind CLI:
