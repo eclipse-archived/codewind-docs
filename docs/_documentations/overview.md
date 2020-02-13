@@ -41,32 +41,30 @@ Codewind improves your inner loop experience, enabling you to create a microserv
 
 7. **Access application, build, and container logs and run commands from within the container without leaving your IDE** Codewind integrates with your IDE's terminal window and Problems and Output panels for a smooth test and debug experience. Additionally, you can open a shell session inside your container with a simple click.
 
-8. **Support for your IDE's debug features where supported** Full compatibility with the debug functionality of your IDE.
+8. **Support for your IDE's debug features (where supported)** Full compatibility with the debug functionality of your IDE.
 
-9. **Visualize your container application's footprint such as CPU and memory usage** <sup>*</sup> Codewind's Application Metrics Dashboard exposes your microservice's core metrics, including HTTP(S) request and throughput information, as well as CPU usage, memory footprint, and heap.
+9. **Visualize your container application's footprint, such as CPU and memory usage (where supported)** Codewind's Application Metrics Dashboard exposes your microservice's core metrics, including HTTP(S) request and throughput information, as well as CPU usage, memory footprint, and heap.
 
-10. **Integrated load-testing** <sup>*</sup> Configure and run load tests against your microservices using [Codewind's performance dashboard](https://www.youtube.com/watch?v=nfJt3f5TUvc). Use the graphs to compare your repeated load test results and iterate on performance improvements.
+10. **Integrated load-testing (where supported)** Configure and run load tests against your microservices using [Codewind's performance dashboard](https://www.youtube.com/watch?v=nfJt3f5TUvc). Use the graphs to compare your repeated load test results and iterate on performance improvements.
 
 ### What Integrated Development Environments (IDEs) does Codewind support?
 
-Codewind is available as a desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind), and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/mdt-che-installinfo.html).
+Codewind is available as a desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind) and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/mdt-che-installinfo.html).
 
 ### What cloud native technology does Codewind support?
 Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://www.openshift.com/) for container orchestration. 
 
 ### Where do I develop my code? Where can I build and run my containers? How does Codewind support my development flow?
-Codewind supports different configurations for developing your containerised applications, so you can use Codewind with whichever development flow you choose - you can develop containerized applications on your desktop, directly in the cloud, or a combination of both:
+Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both:
 
-1. **Use Codewind locally** - Your IDE, with the Codewind extension installed, and Docker Desktop<sup>**</sup>, is all you need to build and run containerized applications on your desktop.
+1. **Use Codewind locally** Your IDE, with the Codewind extension installed, and Docker Desktop or your local Docker Engine and Docker Compose installations if you're using Linux, is all you need to build and run containerized applications on your desktop.
 
-2. **Use Codewind as a hosted application on your cloud** - Both your IDE, with the Codewind extension installed, and your containerized applications, are located in your cloud environement.
+2. **Use Codewind as a hosted application on your cloud** Both your IDE with the Codewind extension installed and your containerized applications are located in your cloud environement.
 
-3. **Use Codewind remotely** - Your IDE, with the Codewind extension installed, is hosted on your desktop, but the building and running of your microservice takes place in your cloud enviroment. Using secure HTTPS connections, you connect to your multiple cloud hosted microservices from the Codewind panel in your desktop-hosted IDE.
-
-<sup>**</sup> or, if you are using Linux, your local Docker Engine and Docker Compose installations
+3. **Use Codewind remotely** Your IDE with the Codewind extension installed is hosted on your desktop, but the building and running of your microservice takes place in your cloud enviroment. Using secure HTTPS connections, you connect to your multiple cloud hosted microservices from the Codewind panel in your desktop-hosted IDE.
 
 ### What preconfigured containerized projects does Codewind provide?
-Codewind provides preconfigured [project templates](mdt-vsc-workingwithtemplates.html) covering several languages including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/) and [Swift](https://swift.org/), and several frameworks such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot) and [Open Liberty](https://openliberty.io/).
+Codewind provides preconfigured [project templates](mdt-vsc-workingwithtemplates.html) covering several languages including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/) and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/).
  
 Codewind also supplies [Appsody](https://appsody.dev/) [project templates](mdt-vsc-workingwithtemplates.html) for many languages and frameworks. 
 
@@ -76,5 +74,5 @@ Codewind requires Docker Desktop for Windows or Mac, or Docker Engine and Docker
 ### Can I contribute to the project?
 Codewind is an [open source Eclipse project](https://github.com/eclipse/codewind). 
 
-[Contribute in GitHub](https://github.com/eclipse/codewind) and let us know what you think via [Mattermost](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind).
+[Contribute in GitHub](https://github.com/eclipse/codewind) and let us know what you think on [Mattermost](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind).
 
