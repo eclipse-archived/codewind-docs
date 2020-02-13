@@ -31,7 +31,7 @@ GitHub repository. Three examples are included in Codewind for your reference:
 * Appsody Stacks to develop applications with sharable technology stacks. 
 
 Use the **Template Source Manager** to perform the following actions:
-1. To add a new template source to the table, click **Add new**. For more information, see [Adding your own template sources to Codewind](#adding-your-own-template-sources-to-codewind).
+1. To add a new template source to the table, click **Add New**. For more information, see [Adding your own template sources to Codewind](#adding-your-own-template-sources-to-codewind).
 2. To remove non-default template sources, click the trash icon. 
 3. Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
     * Use template source templates to add style projects to Codewind. 
