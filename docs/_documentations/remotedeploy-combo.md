@@ -12,7 +12,7 @@ order: 2
 
 # Installing a Codewind remote deployment all-in-one
 
-Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your `HOME` directory under the `~/.codewind/<version>` path.
 
 Use the following command to install an all-in-one deployment with a new Keycloak and a new Codewind service:
 
@@ -33,6 +33,10 @@ Ensure that you are logged in to your Kubernetes or OpenShift cluster:
 
 ```
 $ kubectl get namespaces
+```
+or 
+```
+$ oc get namespaces
 ```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
