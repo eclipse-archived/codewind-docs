@@ -99,4 +99,4 @@ Any previously configured IDEs are now in a `Disconnected` state. In this exampl
 
 ![](./images/remotevs/removeConnection.png)
 
-In this procedure you removed the Codewind and Keycloak services from your cloud platform, and you also removed the linkage to it from your IDE.
+In this procedure, you removed the Codewind and Keycloak services from your cloud platform, and you also removed the linkage to it from your IDE.
