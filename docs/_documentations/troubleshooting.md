@@ -167,7 +167,7 @@ Issue link: https://github.com/eclipse/codewind/issues/1269
 ## How to stop the app from continuously pinging 
 With all the stacks and templates Codewind offers, some template applications come with no server, like Appsody Node.js. The backend in PFE expects all applications to have a server. Thus, the backend continuously pings the port of the application retrieved from the application's container information. Since no server is available to ping on that port, the application times out and is stuck on `Starting`. 
 
-**Workaround** Disable your application stuck on the `Starting` state:
+**Workaround** Disable the pinging of your application stuck on the `Starting` state:
 1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
     - This key forces the application to stop, stops pinging the application, and bypasses the timeout error. 
 2. Once you implement the server into the application, resume the application ping and run it by setting `internalPort` to `""` for the default port of the container. Or you can choose a specific port you want to ping. 
