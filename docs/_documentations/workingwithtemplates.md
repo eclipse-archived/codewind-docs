@@ -22,6 +22,8 @@ Codewind provides preconfigured, containerized project templates covering severa
 
 Template management in Codewind is provided by the **Template Source Manager**. To open the **Template Source Manager**, right-click **Local** then **Manage Template Sources**. The **Template Source Manager** appears. 
 
+- **Note:** **Template Source Manager** is the name used in VS Code. Eclipse uses the name **Manage Template Sources**.
+
 Codewind templates are stored in the [codewind-resources/codewind-templates](https://github.com/codewind-resources/codewind-templates)
 GitHub repository. Three examples are included in Codewind for your reference: 
 * Standard Codewind Templates.
