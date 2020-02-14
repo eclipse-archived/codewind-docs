@@ -12,7 +12,7 @@ order: 2
 
 # Installing a Codewind remote deployment all-in-one
 
-Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your `HOME` directory under the `~/.codewind/<version>` path.
 
 Use the following command to install an all-in-one deployment with a new Keycloak and a new Codewind service:
 
@@ -34,15 +34,18 @@ Ensure that you are logged in to your Kubernetes or OpenShift cluster:
 ```
 $ kubectl get namespaces
 ```
+or 
+```
+$ oc get namespaces
+```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 ## Determine your Cloud ingress domain
 
-The CLI command requires an ingress domain. Find your ingress domain based on any of the existing routes:
+The CLI command requires an ingress domain. Enter the `oc get routes -n default` command and find your ingress domain based on any of the existing routes:
 
 ```
-oc get routes -n default
 NAME               HOST/PORT                                                                                                          PATH      SERVICES           PORT               TERMINATION   WILDCARD
 registry-console   registry-console-default.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud             registry-console   registry-console   passthrough   None
 ```
