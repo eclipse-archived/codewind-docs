@@ -12,7 +12,7 @@ Tuesday, 18 February 2020
 
 #### ✨ New Features and Highlights for 0.9.0 ✨
 Introducing the tech preview of Codewind on the IntelliJ IDE! We want to make our tools available to as many developers as possible in their preferred IDEs. Many people have asked about IntelliJ, as it is a popular option among Java developers, so we are working hard to bring the effortless Codewind experience to IntelliJ. With this tech preview, you can now use Codewind on IntelliJ locally.
-![](images/imagesfornews/intelliJ-techpreview.gif)
+![](images/imagesfornews/intelliJ-techpreview.gif){:width="800"}
 
 **IDEs (Both Eclipse and VS Code)**
 - Detailed application status notifications provide a [link to documentation if a problem is encountered](https://github.com/eclipse/codewind/issues/1812).
