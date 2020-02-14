@@ -29,7 +29,7 @@ Click **Metrics Dashboard** in the Codewind project to access the Metrics Dashbo
 
 ## Enabling Application Metrics
 
-If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/). For more information about Application Metrics, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
+If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/).
 
 ## Understanding performance metrics in the **Dashboard** tab
 
@@ -48,7 +48,7 @@ View these metrics to learn if your application is performing as intended. An ap
 View a summary of the information from the performance metrics graphs that you saw in the **Dashboard** tab.
 * **HTTP Requests:** This table displays how many times an endpoint is hit. If you repeatedly run a test while making code changes, you can see how the code changes are impacting application performance.
 * **Environment:** This table shows information about the environment you're running, such as the OS architecture and the number of processors you have. Having this information can make troubleshooting easier if you need to contact support and provide it.
-* **Resource Usage:** This table shows the **Average Process CPU**, which shows what the application is doing, and the **Average System CPU**, which shows what the environment as a whole is doing. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
+* **Resource Usage:** This table shows the **Average Process CPU**, which shows what the application is using, and the **Average System CPU**, which shows what the environment as a whole is using. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
 
 ![image of viewing metrics](dist/images/performanceguide/viewing_metrics.png)
 
