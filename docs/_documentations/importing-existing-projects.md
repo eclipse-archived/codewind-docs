@@ -16,9 +16,9 @@ Modifications are usually required to successfully add and deploy projects that 
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
-If you are running Codewind locally, to import your project it must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
+Local projects are built and run on Docker. To import your project to a local Codewind instance, it must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
 
-If you are running Codewind remotely on Kubernetes, to import your project it must include a Dockerfile and a Helm chart. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and for more information about Helm charts, see [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, it must include a Dockerfile and a Helm chart. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and for more information about Helm charts, see [Helm chart documentation](https://helm.sh/docs/topics/charts/).
 
 ## What kind of projects can I add?
 
