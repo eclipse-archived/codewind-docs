@@ -58,7 +58,7 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Code highlighting
 
-In Theia or VS Code, you can use code highlighting to improve your code. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is available for Node.js or Java projects that are created through Codewind and then profiled.
+In Theia or VS Code, you can use code highlighting to improve your code. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performance). Profiling support is available for Node.js or Java projects that are created through Codewind and then profiled.
 
 To enable code hightlighting, you must install the appropriate VS Code extension:
 - For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
