@@ -14,6 +14,12 @@ order: 0
 
 Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This tutorial covers the basics of configuring a project to run in Codewind.
 
+## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
+
+Local projects are built and run on Docker. To import your project to a local Codewind instance, it must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
+
+Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, it must include a Dockerfile and a Helm chart. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and for more information about Helm charts, see [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+
 ## What kind of projects can I add?
 
 Codewind is designed to develop cloud native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
