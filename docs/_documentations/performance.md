@@ -20,13 +20,13 @@ You will learn how to add and enable monitoring to your application. Then, you c
 
 ## Prerequisites
 
-- VS Code or Eclipse
+- VS Code, Eclipse, or Eclipse Che
 - A Codewind installation
 
-## Accessing the performance dashboard
+## Accessing the Performance Dashboard
 
 1. From your IDE, go to the Codewind plug-in and right-click a project.
-2. Then, select **Open Performance Dashboard**. A window appears that displays the performance dashboard.<br>
+2. Then, select **Performance Dashboard**. A window appears that displays the performance dashboard.<br>
 
 ![performance dashboard](dist/images/performanceguide/performancedash_window.png){:height="345px" width="691px"}. <br>
 
@@ -40,7 +40,7 @@ You will learn how to add and enable monitoring to your application. Then, you c
 
 ## Modifying the load test
 
-1. To modify the type of load run, click **Modify Parameters**. The **Load test configuration** window appears.
+1. To modify the type of load run, click **Edit load run settings**. The **Load test configuration** window appears.
 2. You can change the following values:
     - **Method**: Choose a GET or POST request.
     - **Path**
