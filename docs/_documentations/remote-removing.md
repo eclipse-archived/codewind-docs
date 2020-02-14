@@ -23,7 +23,7 @@ WARNING: Since it is possible to install multiple Codewind servers into a Kubern
 
 ## Removing a remote deployment of Codewind
 
-You can find `cwctl` in your Home directory under the path `~/.codewind/{version}`.
+You can find `cwctl` in your Home directory under the path `~/.codewind/<version>`.
 
 1.  Open a new terminal window on your local workstation.
 2.  Go to your Home directory and then to the Codewind CLI:
@@ -99,4 +99,4 @@ Any previously configured IDEs are now in a `Disconnected` state. In this exampl
 
 ![](./images/remotevs/removeConnection.png)
 
-In this procedure you removed the Codewind and Keycloak services from your cloud platform, and you also removed the linkage to it from your IDE.
+In this procedure, you removed the Codewind and Keycloak services from your cloud platform, and you also removed the linkage to it from your IDE.
