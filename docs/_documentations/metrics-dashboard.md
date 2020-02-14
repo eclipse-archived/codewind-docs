@@ -14,11 +14,11 @@ order:
 
 ## What is the Metrics Dashboard?
 
-The Metrics Dashboard instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. You can also visualize data with the Metrics Dashboard. For more information, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
+Application Metrics instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. The Metrics Dashboard is a method for you to visualize this data. 
 
 ## Metrics Dashboard types
 
-The Metrics Dashboard is available in Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
+The Metrics Dashboard is available for Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
 * [Application Metrics for Java](https://developer.ibm.com/javasdk/application-metrics-java/)
 * [Application Metrics for Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/)
 * [Application Metrics for Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/)
@@ -29,7 +29,7 @@ Click **Metrics Dashboard** in the Codewind project to access the Metrics Dashbo
 
 ## Enabling Application Metrics
 
-If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/).
+If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/). For more information about Application Metrics, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
 
 ## Understanding performance metrics in the **Dashboard** tab
 
@@ -48,7 +48,7 @@ View these metrics to learn if your application is performing as intended. An ap
 View a summary of the information from the performance metrics graphs that you saw in the **Dashboard** tab.
 * **HTTP Requests:** This table displays how many times an endpoint is hit. If you repeatedly run a test while making code changes, you can see how the code changes are impacting application performance.
 * **Environment:** This table shows information about the environment you're running, such as the OS architecture and the number of processors you have. Having this information can make troubleshooting easier if you need to contact support and provide it.
-* **Resource Usage:** This table shows the **Average Process CPU**, which shows what Codewind is doing, and the **Average System CPU**, which shows what the environment as a whole is doing. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
+* **Resource Usage:** This table shows the **Average Process CPU**, which shows what the application is doing, and the **Average System CPU**, which shows what the environment as a whole is doing. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
 
 ![image of viewing metrics](dist/images/performanceguide/viewing_metrics.png)
 
@@ -56,9 +56,15 @@ View a summary of the information from the performance metrics graphs that you s
 
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
 
-## Profiling Data Support
+## Code highlighting
 
-In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Codewind and then profiled.
+In Theia or VS Code, you can use code highlighting to improve your code. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is available for Node.js or Java projects that are created through Codewind and then profiled.
+
+To enable code hightlighting, you must install the appropriate VS Code extension:
+- For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
+- For Java apps, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler).
+
+Java is supported however if the Metrics Dashboard does not show profiling data, use the editor plugin to display it instead. 
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
 - Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
