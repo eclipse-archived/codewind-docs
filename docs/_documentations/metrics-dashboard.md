@@ -62,7 +62,7 @@ In Codewind, the load test data is obtained by running a load test using the Per
 - For Java, the extension provides code highlighting showing relative time spent in Java methods based on profiling data collected through the Codewind load test feature. Once you execute a test, an hcd file is created in `load-test/[timestamp]/xxxx.hcd`.
 - For Node.js, the extension provides code highlighting showing relative time spent in JavaScript functions based on profiling data collected through the Codewind load test feature. Once you execute a test, a JSON file is created in `load-test/[timestamp]/profiling.json`.
 
-In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Microclimate and then profiled.
+In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Codewind and then profiled.
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
 - Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
