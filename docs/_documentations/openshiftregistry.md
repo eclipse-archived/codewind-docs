@@ -73,4 +73,4 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
 4. Enter the service account name as the `username`.
 5. Enter the token retrieved from the service account token secret as the `password`. 
 6. Enter `<project>` as `namespace`, where `<project>` is the OpenShift project where you created the service account. 
-7. Click **enter**.
+7. Click **Enter**.
