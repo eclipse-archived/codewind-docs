@@ -58,15 +58,9 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Profiling Data Support
 
-In Codewind, the load test data is obtained by running a load test using the Performance Dashboard. The directory is created in your project directory if Codewind Java Profiler or Codewind Node.js profiler is installed.
-- For Java, the extension provides code highlighting showing relative time spent in Java methods based on profiling data collected through the Codewind load test feature. Once you execute a test, an hcd file is created in `load-test/[timestamp]/xxxx.hcd`.
-- For Node.js, the extension provides code highlighting showing relative time spent in JavaScript functions based on profiling data collected through the Codewind load test feature. Once you execute a test, a JSON file is created in `load-test/[timestamp]/profiling.json`.
-
 In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performancetesting). Profiling support is only available for Node.js projects that are created through Codewind and then profiled.
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
-- Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
-- You can configure the load run time in the `config.json` file in the `load-test` directory. The default time is 2 minutes.
 - Out of all the folders that contain a `profiling.json` file, the most up-to-date `profiling.json` file is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
 
 To display code highlighting:
