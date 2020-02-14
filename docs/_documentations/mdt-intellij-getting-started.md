@@ -26,7 +26,7 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 2. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon.
 3. From the menu, click the **Manage Plugin Repositories...** gear icon.
 4. Click the **+** button.
-5. Enter `https://download.eclipse.org/codewind/codewind-intellij/0.9.0/latest/updatePlugins.xml` and click **OK**.
+5. Enter `https://download.eclipse.org/codewind/milestone/0.9.0/updatePlugins.xml` and click **OK**.
 6. Click the **Marketplace** heading.
 7. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
 
