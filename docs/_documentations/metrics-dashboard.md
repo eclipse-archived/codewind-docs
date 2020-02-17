@@ -58,7 +58,7 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Code highlighting for profiling data
 
-Code highlighting for profiing data highlights the most heavily used functions based on profiling data gathered through [load testing](performance). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
+Code highlighting for profiling data highlights the most heavily used functions based on profiling data gathered through [load testing](performance). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
 
 To enable code hightlighting, you must install the appropriate VS Code extension:
 - For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
