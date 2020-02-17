@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Installing a Codewind remote deployment all-in-one
+# Deploying remote Codewind all-in-one
 
 
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).

@@ -10,23 +10,21 @@ type: document
 
 # Deploying Codewind remotely
 
-Codewind can be used in one of 3 ways - [locally], [hosted] as an application on a cloud, or remotely. By deploying Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up resources on your laptop, using the cloud's resources to build and run your applications. 
+Codewind can be used in one of 3 ways - [locally], [hosted] as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+
+To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely ](remote-jane-overview).
 
 # What you will learn
 
-You will learn how to install and configure Codewind to be used remotely, and then create a project from your local IDE that builds and runs in the cloud. Finally, you will learn how to move an existing local project to your new Cloud deployment (?)
+You will learn how to deploy Codewind to be used remotely. 
 
-After you install your local IDE and configure Codewind for local use, you will follow these steps to deploy Codewind to the cloud:
+After you install your local IDE and configure Codewind for local use, you will use the Codewind CLI to:
 
-1. Use the Codewind CLI to deploy/INSTALL Codewind to your cloud / cluster.
-2. Configure your IDE to connect to your new Codewind deployment
-3. Register all necessary security parameters
+1. deploy Codewind to your cloud
+2. create additional instances of Codewind on your cloud, as required
 
-Once you have deployed your Codewind to the cloud, you will learn how to:
+Finally, you will learn how to remove a remote deployment of Codewind.
 
-1. create a new project that builds and runs in the cloud
-2. build and run an existing project in the cloud
-3. Move an existing local project from your local Codewind ?? to the cloud. 
 
 ## Prerequisites
 
@@ -59,12 +57,12 @@ To determine the best way to configure Keycloak for your use case, consider the 
 
 Once you have decided how you will be administering Codewind remotely, you can choose which installation procedure you need to follow:
 
-- [Installing both the remote Codewind instance and Keycloak simultaneously](./remotedeploy-combo.html)
+- to install both the remote Codewind instance and Keycloak simultaneously, see [deploying all-in-one](./remotedeploy-combo.html)
 
 Or:
 
-- [Installing the remote Codewind instance and Keycloak individually](./remotedeploy-single.html)
+- to install the remote Codewind instance and Keycloak individually, see [deploying components individually](./remotedeploy-single.html)
 
 Or:
 
-- [Installing the remote Codewind instance only and pointing to an existing Keycloak ](./remotedeploy-existingkeycloak.html)
+- to install the remote Codewind instance only and pointing to an existing Keycloak, see [deploying with an existing keycloak](./remotedeploy-existingkeycloak.html)
