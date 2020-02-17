@@ -56,9 +56,9 @@ View a summary of the information from the performance metrics graphs that you s
 
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
 
-## Code highlighting
+## Code highlighting for profiling data
 
-In Theia or VS Code, you can use code highlighting to improve your code. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performance). Profiling support is available for Node.js or Java projects that are created through Codewind and then profiled.
+Code highlighting for profiing data highlights the most heavily used functions based on profiling data gathered through [load testing](performance). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
 
 To enable code hightlighting, you must install the appropriate VS Code extension:
 - For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
