@@ -1,31 +1,31 @@
 ---
 layout: docs
-title: Understanding Application Metrics
-description: Understanding Application Metrics
+title: Understanding the Metrics Dashboard
+description: Understanding the Metrics Dashboard
 keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, app monitor, dashboard, CPU, HTTP incoming requests, memory, HTTP throughput, Heap, HTTP outbound requests, loop times, other requests, run load, HTTP Requests, environment, resource usage, profiling, enabling, graph
 duration: 1 minute
-permalink: appmetrics
+permalink: metrics-dashboard
 type: document
 parent:
 order:
 ---
 
-# Understanding Application Metrics
+# Understanding the Metrics Dashboard
 
-## What is Application Metrics?
+## What is the Metrics Dashboard?
 
-Application Metrics instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. You can also visualize data with the Application Metrics Dashboard. For more information, see [Application Metrics on GitHub](https://github.com/RuntimeTools/appmetrics).
+Application Metrics instruments Java, Node.js, and Swift runtimes for performance monitoring and provides the monitoring data through an API. The Metrics Dashboard is a method for you to visualize this data. 
 
-## Application Metrics types
+## Metrics Dashboard types
 
-Application Metrics is available in Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
+The Metrics Dashboard is available for Java, Node.js, and Swift. You can monitor the projects that you create in these languages.
 * [Application Metrics for Java](https://developer.ibm.com/javasdk/application-metrics-java/)
 * [Application Metrics for Node.js](https://developer.ibm.com/node/monitoring-post-mortem/application-metrics-node-js/)
 * [Application Metrics for Swift](https://developer.ibm.com/swift/monitoring-diagnostics/application-metrics-for-swift/)
 
-## Accessing Application Metrics
+## Accessing the Metrics Dashboard
 
-Click **App monitor** in the Codewind project to access Application Metrics. Toggle between the **Dashboard** and **Summary** tabs. If you have a Node.js project, you can also access the **Profiling** tab.
+Click **Metrics Dashboard** in the Codewind project to access the Metrics Dashboard. Toggle between the **Dashboard** and **Summary** tabs. If you have a Node.js project, you can also access the **Profiling** tab.
 
 ## Enabling Application Metrics
 
@@ -43,38 +43,37 @@ View these metrics to learn if your application is performing as intended. An ap
 * **Loop Times:** This graph indicates how fast a Node.js project is processing through an event loop.
 * **Other Requests:** This graph indicates the Socket.IO and other requests that the application processes.
 
-## Clicking the **Run load** button
-
-Click the **Run load** button to run load your microservice. This button pings endpoints by using the Codewind load runner service.
-
 ## Viewing metrics information in the **Summary** tab
 
 View a summary of the information from the performance metrics graphs that you saw in the **Dashboard** tab.
 * **HTTP Requests:** This table displays how many times an endpoint is hit. If you repeatedly run a test while making code changes, you can see how the code changes are impacting application performance.
 * **Environment:** This table shows information about the environment you're running, such as the OS architecture and the number of processors you have. Having this information can make troubleshooting easier if you need to contact support and provide it.
-* **Resource usage:** This table shows the **Average Process CPU**, which shows what Codewind is doing, and the **Average System CPU**, which shows what the environment as a whole is doing. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
+* **Resource Usage:** This table shows the **Average Process CPU**, which shows what the application is using, and the **Average System CPU**, which shows what the environment as a whole is using. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
+
+![image of viewing metrics](dist/images/performanceguide/viewing_metrics.png)
 
 ## Viewing the graph in the **Profiling** tab
 
 The **Profiling** tab is available only in Node.js projects. This tab pulls information from the CPU metric in the **Dashboard** tab. CPU cycles are caused by an execution of code. Receiving an endpoint doesn't cause many CPU cycles, but receiving an incoming payload can. Profiling shows you what occurs when a spike appears in the CPU metric. Each spike on the flame graph shows a call stack in the path. The width of a spike indicates how much time the CPU spends on a function. Wide spikes indicate that your CPU spends much time on a particular function and where you might want change the code to optimize it.
 
-## Profiling Data Support
+## Code highlighting for profiling data
 
-In Theia or VS Code, you can use the Profiling Language Server to provide code highlighting. Code highlighting displays the relative time spent in JavaScript functions based on profiling data gathered through [load testing](performance). Profiling support is only available for Node.js projects that are created through Codewind and then profiled.
+Code highlighting for profiing data highlights the most heavily used functions based on profiling data gathered through [load testing](performance). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
+
+To enable code hightlighting, you must install the appropriate VS Code extension:
+- For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
+- For Java apps, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler).
+
+Java is supported however if the Metrics Dashboard does not show profiling data, use the editor plugin to display it instead. 
 
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
 - Run the load run for a minimum of 45 seconds for enough profiling data to be gathered to generate the `profiling.json` file.
-- You can configure the load run time in the `config.json` file in the `load-test` directory. The default time is 2 minutes.
+- You can configure the load run time in the `config.json` file in the `load-test` directory. The default time is 3 minutes.
 - Out of all the folders that contain a `profiling.json` file, the most up-to-date `profiling.json` file is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
 
 To display code highlighting:
 1. Open a project created with Codewind and profiled using the [performance testing](performance) feature of Codewind. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Codewind project.
 2. In the **Editor** view, open a JavaScript file. The Editor highlights any lines that were found in the profiling data and annotates them to show how often they were seen and where they were called from.
-
-To enable or disable the profile highlighting in the code, access the profiling in one of the following ways:
-- Right-click in the editor and select `Toggle Profiling`.
-- Open the command palette with `cmd+shift+p` on a Mac or `ctrl+shift+p` on Windows. Then, select `Profiling: Toggle Profiling`.
-- Toggle the `Microprofile Profiling: Show Profiling` setting in the extensions settings.
 
 For more information on sample-based profiling, see [Sample-based profiling](https://www.ibm.com/support/knowledgecenter/en/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/profiling_using.html).
 
@@ -92,4 +91,4 @@ After you start the load test and the test completes, view the source code. Thei
 
 ## Need help?
 
-If you encounter problems with application metrics, check the [Troubleshooting page](troubleshooting.html#understanding-application-metrics).
+If you encounter problems with the Metrics Dashboard, check the [Troubleshooting page](troubleshooting.html#understanding-application-metrics).

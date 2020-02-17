@@ -78,8 +78,8 @@
       
 - title: 'Performance monitoring'
   children:
-    - title: 'Understanding Application Metrics'
-      url: 'appmetrics.html'
+    - title: 'Understanding the Metrics Dashboard'
+      url: 'metrics-dashboard.html'
     - title: 'Monitoring applications with the performance dashboard'
       url: performance.html
 
