@@ -19,17 +19,17 @@ Try it out [here](mdt-intellij-getting-started.html).
 
 **IDEs (Both Eclipse and VS Code)**
 - Detailed application status notifications provide a [link to documentation if a problem is encountered](https://github.com/eclipse/codewind/issues/1812).
-- Depending on the level of support, you can [change the logging level in the IDE](https://github.com/eclipse/codewind/issues/1251). In Eclipse, first enable support features in the Codewind preferences and then right click on the connection in the Codewind Explorer view and select `Codewind Server Log Level`. In VS Code, you can access this configuration in the command palette - `Set Codewind Server Logging Level`.
+- Depending on the level of support, you can [change the logging level in the IDE](https://github.com/eclipse/codewind/issues/1251). In Eclipse, first enable support features in the Codewind preferences and then right-click on the connection in the Codewind Explorer view and select `Codewind Server Log Level`. In VS Code, you can access this configuration in the command palette, `Set Codewind Server Logging Level`.
 
 **VS Code**
 - If a remote connection disconnects due to network changes, such as the local machine going into sleep mode or switching networks, you can simply [refresh to reconnect](https://github.com/eclipse/codewind/issues/1776). 
-- There were styling updates to all webviews, including a better reaction to the theme. Instead of using grey icons for all themes, black and white icons are used and adjust to the theme. There were also fixes to the remote connection settings page - it should react better when the window is resized horizontally. 
+- There were styling updates to all web views, including a better reaction to the theme. Instead of using grey icons for all themes, black and white icons are used and adjust to the theme. There were also fixes to the remote connection settings page. It reacts better when the window is resized horizontally. 
 - A `Welcome Page` has been added to help new users get started!
-    - From the welcome page, you can click on the `Codewind View` link or on the Codewind View screenshot to open the Codewind view.
+    - From the welcome page, you can click the `Codewind View` link or the Codewind View screenshot to open the Codewind view.
     - Instructions and links are provided to make it easy to install Codewind on your local Docker Desktop, create connections to a remote Codewind instance, and create new and add existing projects.
 
 **Eclipse**
-- When working with more than one Codewind connection in Eclipse, you can now [select the connection to use when creating a new project](https://github.com/eclipse/codewind/issues/2014), or [select the connection use when adding an existing project](https://github.com/eclipse/codewind/issues/1695).
+- When working with more than one Codewind connection in Eclipse, you can now [select the connection to use when creating a new project](https://github.com/eclipse/codewind/issues/2014) or [select the connection use when adding an existing project](https://github.com/eclipse/codewind/issues/1695).
 - The Add Image Registry dialog includes a [drop-down of common registry addresses](https://github.com/eclipse/codewind/issues/1907). 
 - Restructured the [`Application Overview page in Eclipse`](https://github.com/eclipse/codewind/issues/1698) for an improved user experience.
 
