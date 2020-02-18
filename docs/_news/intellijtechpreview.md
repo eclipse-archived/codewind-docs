@@ -79,10 +79,11 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 1. If you delete a project, it is removed from Codewind.
 2. However, the files remain in the file system, and you need to manually delete them.
 
-# Troubleshooting the IntelliJ tech preview
+# Troubleshooting
 
-## Cannot find Codewind in Marketplace when attempting to install in Intellij
-When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plugin in Marketplace, and if you verify the custom plugin repository link, you get a `Connection failed` error message.
+## Cannot find Codewind in Marketplace when attempting to install in IntelliJ
+When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plug-in in Marketplace, and if you verify the custom plug-in repository link, you get a `Connection failed` error message.
+
 This error occurs because the custom plug-in repository link contains an additional space.
 
 **Workaround**
