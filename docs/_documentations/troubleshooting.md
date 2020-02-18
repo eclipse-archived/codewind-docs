@@ -111,7 +111,7 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/2239
 0.9.0: New
 -->
-## Cannot find Codewind in Marketplace when attempting IntelliJ install
+## Cannot find Codewind in Marketplace when attempting to install in Intellij
 When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plugin in Marketplace, and you get a `Connection failed` error message:
 
 ![intellij install error](dist/images/intellij/custom-plugin-repo-connection-failed-error.png)
