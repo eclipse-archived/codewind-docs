@@ -4,7 +4,7 @@ title: IntelliJ tech preview
 description: IntelliJ tech preview
 keywords: news, new, updates, update, version, intellij, techpreview
 duration: 1 minute
-permalink: intellijtechpreview.md
+permalink: intellijtechpreview
 ---
 
 # IntelliJ tech preview
