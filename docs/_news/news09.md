@@ -23,7 +23,9 @@ Introducing the tech preview of Codewind on the IntelliJ IDE! We want to make ou
 **VS Code**
 - If a remote connection disconnects due to network changes, such as the local machine going into sleep mode or switching networks, you can simply [refresh to reconnect](https://github.com/eclipse/codewind/issues/1776). 
 - There were styling updates to all webviews, including a better reaction to the theme. Instead of using grey icons for all themes, black and white icons are used and adjust to the theme. There were also fixes to the remote connection settings page - it should react better when the window is resized horizontally. 
-- Clicking on *Codewind View* or the Codewind View screenshot should open and focus the Codewind view.
+- A `Welcome Page` has been added to help new users get started!
+    - From the welcome page, you can click on the `Codewind View` link or on the Codewind View screenshot to open the Codewind view.
+    - Instructions and links are provided to make it easy to install Codewind on your local Docker Desktop, create connections to a remote Codewind instance, and create new and add existing projects.
 
 **Eclipse**
 - When working with more than one Codewind connection in Eclipse, you can now [select the connection to use when creating a new project](https://github.com/eclipse/codewind/issues/2014), or [select the connection use when adding an existing project](https://github.com/eclipse/codewind/issues/1695).
@@ -33,7 +35,7 @@ Introducing the tech preview of Codewind on the IntelliJ IDE! We want to make ou
 #### List of Fixes
 - The build application queue [supports applications that are being updated](https://github.com/eclipse/codewind/issues/1563), not just project creation or restart.
 - You can [define references to files that reside outside of a project](https://github.com/eclipse/codewind/issues/1399) by creating the `.cw-refpaths.json` file in your project to specify the path reference.
-- [`Inject Metrics` is supported for Generic Docker Java projects](https://github.com/eclipse/codewind-vscode/pull/425). The action appears on all projects, but [only works on Open Liberty](https://github.com/eclipse/codewind/issues/1509).
+- We [enable](https://github.com/eclipse/codewind-vscode/pull/425) and [support](https://github.com/eclipse/codewind/issues/1509) metrics injection for `Open Liberty` projects.
 - Creating an `Open Liberty` project [automatically configures the project with the generated API in Eclipse](https://github.com/eclipse/codewind-openapi-eclipse/pull/131).
 - Support has been added to [disable application status tracking](https://github.com/eclipse/codewind/issues/1862). This is useful for projects that do not have an endpoint to indicate status. 
 - [Stability fixes](https://github.com/eclipse/codewind-appsody-extension/pull/83) for [debugging Appsody projects](https://github.com/eclipse/codewind/issues/1708).
