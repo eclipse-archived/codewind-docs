@@ -15,8 +15,8 @@ parent: mdt-che-installinfo
 The Codewind Odo extension provides support for [OpenShift Do (odo)](https://github.com/openshift/odo). You can use the extension to efficiently write, build, and deploy components on an OpenShift or OKD cluster.
 
 1. [Extension overview](#overview)
-2. [Setting up extension](#setting-up-extension)
-3. [Current limitation](#current-limitation)
+2. [Setting up the extension](#setting-up-the-extension)
+3. [Current limitations](#current-limitations)
 
 ## Extension overview
 
