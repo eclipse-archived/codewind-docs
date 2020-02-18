@@ -15,6 +15,7 @@ Introducing the tech preview of Codewind on the IntelliJ IDE! We want to make ou
 
 ![](images/imagesfornews/intelliJ-techpreview.gif){:width="800"}
 
+Try it out [here](mdt-intellij-getting-started.html).
 
 **IDEs (Both Eclipse and VS Code)**
 - Detailed application status notifications provide a [link to documentation if a problem is encountered](https://github.com/eclipse/codewind/issues/1812).
