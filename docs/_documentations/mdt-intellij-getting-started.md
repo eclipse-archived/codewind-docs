@@ -23,22 +23,24 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 1. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
    - On macOS, go to **Main**>**Preferences**.
    - On Windows, go to **File**>**Settings**.
-2. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon.
-3. From the menu, click the **Manage Plugin Repositories...** gear icon.
-4. Click the **+** button.
-5. Enter `https://download.eclipse.org/codewind/milestone/0.9.0/updatePlugins.xml`.
-6. **For IntelliJ on Linux and Windows:** After you paste the URL, click outside the entry field so that the URL is deselected. If the URL isn't deselected before clicking **OK**, the URL is saved as a blank entry, and an error occurs.
-7. Click **OK**.
-8. Click the **Marketplace** heading.
-9. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
+2. Click **Plugins**.
+3. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon.
+4. From the menu, click the **Manage Plugin Repositories...** gear icon.
+5. Click the **+** button.
+6. Enter `https://download.eclipse.org/codewind/milestone/0.9.0/updatePlugins.xml`.
+7. **For IntelliJ on Linux and Windows:** After you paste the URL, click outside the entry field so that the URL is deselected. If the URL isn't deselected before clicking **OK**, the URL is saved as a blank entry, and an error occurs.
+8. Click **OK**.
+9. Click the **Marketplace** heading.
+10. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
 
 ### Installing Codewind on IntelliJ from the Eclipse Downloads page
 1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/milestone/0.9.0/codewind-intellij-0.9.0.zip) and click `codewind-intellij-0.9.0.zip` to download the file.
 2. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
    - On macOS, go to **Main**>**Preferences**.
    - On Windows, go to **File**>**Settings**.
-3. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon. From the menu, click **Install Plugin from Disk...**. A window appears that displays the files on your computer.
-4. Choose the `codewind-intellij-0.9.0.zip` file and click **Open**.
+3. Click **Plugins**.
+4. Click the **Manage Repositories, Configure Proxy or Install Plugin from Disk** gear icon. From the menu, click **Install Plugin from Disk...**. A window appears that displays the files on your computer.
+5. Choose the `codewind-intellij-0.9.0.zip` file and click **Open**.
 
 ## Creating your first project from a template
 1. Start IntelliJ. From the welcome page, click **Create New Project**. The **New Project** window opens.
