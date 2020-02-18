@@ -37,7 +37,7 @@ The information in the **VS Code** section also applies to Eclipse but with thes
 - Codewind 0.6.0 introduces usability improvements for Maven projects after code generation. When you generate a Maven project into the project root folder for the first time, the existing `.pom` file is merged with the one from the generator so that the Maven build completes successfully. In some cases, you might need [manual steps to expose the API endpoints](open-api-tools-for-vscode.html#generating-and-building-client-and-server-stubs-by-using-the-openapi-tools) because the OpenAPI Tools do not override existing project configurations.
 
 #### Templates
-- Templates are improved with added details about what a template is. Information is also included for managing templates, working with default templates, and adding your own templates. For Eclipse, see the Eclipse documentation for [Working with templates](mdteclipseworkingwithtemplates.html). For VS Code, see the VS Code documentation for [Working with templates](mdt-vsc-workingwithtemplates.html).
+- Templates are improved with added details about what a template is. Information is also included for managing templates, working with default templates, and adding your own templates. For more information, see [Working with templates](workingwithtemplates.html).
 
 #### VS Code output view
 - New to VS Code is the Codewind output stream, which logs `cwctl` commands and their output. In addition to providing status on all of your `cwctl` commands, it also helps you to debug unusual problems, especially when you start Codewind. For more information, see [Troubleshooting](mdt-vsc-troubleshooting.html).<br>
