@@ -105,6 +105,22 @@ If installing and starting Codewind still fails, you can use Docker system prune
    - To preserve images, start a container from the images that you want to save.
 4. After you ensure the preservation of any necessary items that Docker system prune removes, enter `y` to continue.
 
+<!--
+Action/Topic: Installing Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2239
+0.9.0: New
+-->
+## Cannot find Codewind in Marketplace when attempting to install in Intellij
+When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plugin in Marketplace, and if you verify the custom plugin repository link, you get a `Connection failed` error message:
+
+![intellij install error](dist/images/intellij/custom-plugin-repo-connection-failed-error.png)
+
+This error occurs because the custom plugin repository link contains an additional space.
+
+**Workaround**
+Remove the extra space from the custom plugin repository link. 
+
 ***
 # Creating a project
 
