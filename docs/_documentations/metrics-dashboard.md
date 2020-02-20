@@ -77,7 +77,7 @@ To display code highlighting:
 
 For more information on sample-based profiling, see [Sample-based profiling](https://www.ibm.com/support/knowledgecenter/en/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/profiling_using.html).
 
-If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting#profiling-markers-do-not-appear.html).
+If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting.html#profiling-markers-do-not-appear).
 
 ## Interpreting the annotation tooltip
 
