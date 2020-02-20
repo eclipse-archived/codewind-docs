@@ -34,7 +34,7 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 10. In the search field, type `codewind`. The `codewind-intellij` plug-in appears. Click **Install**.
 
 ### Installing Codewind on IntelliJ from the Eclipse Downloads page
-1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/milestone/0.9.0/codewind-intellij-0.9.0.zip) and click `codewind-intellij-0.9.0.zip` to download the file.
+1. Go to the [Eclipse Downloads page](https://download.eclipse.org/codewind/milestone/0.9.0/codewind-intellij-0.9.0.zip) to download the file.
 2. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
    - On macOS, go to **Main**>**Preferences**.
    - On Windows, go to **File**>**Settings**.
