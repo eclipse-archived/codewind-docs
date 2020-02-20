@@ -458,6 +458,21 @@ Codewind displays an error. In VS Code, the error appears in the Codewind log:
 2. Remove and add the repository back into Codewind with **Manage Template Sources**.
 3. Rebind the project to Codewind.
 
+<!--
+Codewind version: 0.9.0
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/938
+-->
+## Using Appsody stacks images from private Docker registries
+
+**Local scenario**
+For Codewind to work with an Appsody stack image on a private Docker registry, the stack must fully qualify the image name in the `.appsody-config.yaml` configuration of its template, for example: `hostname[:port]/username/reponame[:tag]`. Also, before you work with the stack, on the local system, enter `docker login` to the private registry.
+- **Note:** When you view the application log, you might see failures to pull the image during a rebuild. However, Codewind is taking the cached container image from your local machine. If you ever delete that image, you need to pull the image again. You can either create another project from the same stack or manually call a `docker pull` with the required image.
+
+**Remote scenario**
+Follow the instructions in [Adding a container registry in Codewind](image-registry-credentials.html).
+
 ***
 # OpenShift Do (odo) with Codewind
 
