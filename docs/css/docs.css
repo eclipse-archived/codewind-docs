@@ -3,6 +3,9 @@
     margin-right: 0;
 }
 
+#content-container img {
+	max-width: 100%;
+}
 h1, h2 {
 	padding-bottom: .3em;
     border-bottom: 1px solid #eaecef;
