@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Installing Codewind for Eclipse Che
-description: Installing Codewind for Eclipse Che
+title: Installing Eclipse Che for Codewind
+description: Installing Eclipse Che for Codewind
 keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
 duration: 1 minute
 permalink: mdt-che-installinfo
 type: document
 ---
 
-# Installing Codewind for Eclipse Che
+# Installing Eclipse Che for Codewind
 
-Install Che to use with Codewind or use Codewind with an existing Che installation.
+Install Che to use with Codewind or prepare to use Codewind with an existing Che installation.
 
 ## Prerequisites
 

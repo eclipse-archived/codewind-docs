@@ -58,7 +58,7 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Code highlighting for profiling data
 
-Code highlighting for profiing data highlights the most heavily used functions based on profiling data gathered through [load testing](performance). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
+Code highlighting for profiling data highlights the most heavily used functions based on profiling data gathered through [load testing](performance.html). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
 
 To enable code hightlighting, you must install the appropriate VS Code extension:
 - For Node apps, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
@@ -72,12 +72,12 @@ Java is supported however if the Metrics Dashboard does not show profiling data,
 - Out of all the folders that contain a `profiling.json` file, the most up-to-date `profiling.json` file is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
 
 To display code highlighting:
-1. Open a project created with Codewind and profiled using the [performance testing](performance) feature of Codewind. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Codewind project.
+1. Open a project created with Codewind and profiled using the [performance testing](performance.html) feature of Codewind. Profiling data is created in a `load-test/<datestamp>/profiling.json` file in your Codewind project.
 2. In the **Editor** view, open a JavaScript file. The Editor highlights any lines that were found in the profiling data and annotates them to show how often they were seen and where they were called from.
 
 For more information on sample-based profiling, see [Sample-based profiling](https://www.ibm.com/support/knowledgecenter/en/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/profiling_using.html).
 
-If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting#profiling-markers-do-not-appear).
+If profiling markers do not appear, check to see if your project and load run conform to the [necessary requirements to use profiling](troubleshooting.html#profiling-markers-do-not-appear).
 
 ## Interpreting the annotation tooltip
 

@@ -22,11 +22,11 @@
         url: mdt-eclipse-codechange.html
     - title: 'Eclipse Che'
       children:
-      - title: 'Installing Codewind for Eclipse Che'
+      - title: 'Installing Eclipse Che for Codewind'
         url: mdt-che-installinfo.html
       - title: 'Adding registries in Che'
         url: mdt-che-setupregistries.html
-      - title: 'Creating the Codewind workspace'
+      - title: 'Creating a Codewind workspace in Che'
         url: mdt-che-createcodewindworkspace.html
       - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
