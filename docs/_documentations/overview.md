@@ -18,7 +18,7 @@ Then, if you are a software developer, you need to perform many actions as you d
 
 Or, if you are responsible for defining standards for application and runtime environments, such as framework and software levels, you need to implement and maintain your standards across the whole development team, ensuring consistency and reliability. 
 
-Built from the ground up, Codewind, an [open source project](https://github.com/eclipse/codewind), helps you to achieve all of the above by extending your Integrated Development Environment (IDE). Container development flow feels like a traditional application flow and [project templates](mdt-vsc-workingwithtemplates.html) can be used across your development teams. Support for rapid iteration of your code is achieved using features including automatic updating of containers with code changes, pre-supplied container-based [project templates](mdt-vsc-workingwithtemplates.html), and a user interface that exposes metrics, logs, and load testing at the click of a button. Your own standardized [project templates](mdt-vsc-workingwithtemplates.html) can be accessed by your developers using their IDE of choice.
+Built from the ground up, Codewind, an [open source project](https://github.com/eclipse/codewind), helps you to achieve all of the above by extending your Integrated Development Environment (IDE). Container development flow feels like a traditional application flow and [project templates](workingwithtemplates.html) can be used across your development teams. Support for rapid iteration of your code is achieved using features including automatic updating of containers with code changes, pre-supplied container-based [project templates](workingwithtemplates.html), and a user interface that exposes metrics, logs, and load testing at the click of a button. Your own standardized [project templates](workingwithtemplates.html) can be accessed by your developers using their IDE of choice.
 
 Different development flows are supported, so you can choose whether you want to use a desktop-based or cloud-based IDE, and whether you want to build and run your containers on your desktop or in the cloud.
 
@@ -27,9 +27,9 @@ Codewind can be used to build and run Docker-containerized applications on [Kube
 ### How does Codewind help me develop containerized applications?
 Codewind improves your inner loop experience, enabling you to create a microservice quickly, rapidly iterate on changes, and make improvements to performance thanks to the following features:
 
-1. **Access to preconfigured containerized project templates** Codewind provides preconfigured, Docker-containerized [project templates](mdt-vsc-workingwithtemplates.html) covering several languages, including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/), and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/). [Quickly create and deploy microservices](https://www.youtube.com/watch?v=zKMggp10gq4&t=12s) in languages and frameworks that you're familiar with. Modify the preconfigured projects to develop your customized microservice.
+1. **Access to preconfigured containerized project templates** Codewind provides preconfigured, Docker-containerized [project templates](workingwithtemplates.html) covering several languages, including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/), and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/). [Quickly create and deploy microservices](https://www.youtube.com/watch?v=zKMggp10gq4&t=12s) in languages and frameworks that you're familiar with. Modify the preconfigured projects to develop your customized microservice.
 
-2. **Ability to add your own standardized project templates** Create your own [project templates](mdt-vsc-workingwithtemplates.html), and your development teams can access them within their IDE. 
+2. **Ability to add your own standardized project templates** Create your own [project templates](workingwithtemplates.html), and your development teams can access them within their IDE. 
 
 3. **Ability to add your own applications** Access the seamless container development and deployment experience on your IDE that Codewind offers for your current projects.
 
@@ -64,9 +64,9 @@ Codewind supports different configurations for developing your containerized app
 3. **Use Codewind remotely** Your IDE with the Codewind extension installed is hosted on your desktop, but the building and running of your microservice takes place in your cloud enviroment. Using secure HTTPS connections, you connect to your multiple cloud hosted microservices from the Codewind panel in your desktop-hosted IDE.
 
 ### What preconfigured containerized projects does Codewind provide?
-Codewind provides preconfigured [project templates](mdt-vsc-workingwithtemplates.html) covering several languages including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/) and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/).
+Codewind provides preconfigured [project templates](workingwithtemplates.html) covering several languages including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/) and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/).
  
-Codewind also supplies [Appsody](https://appsody.dev/) [project templates](mdt-vsc-workingwithtemplates.html) for many languages and frameworks. 
+Codewind also supplies [Appsody](https://appsody.dev/) [project templates](workingwithtemplates.html) for many languages and frameworks. 
 
 ### What are the prerequisites for Codewind?
 Codewind requires Docker Desktop for Windows or Mac, or Docker Engine and Docker Compose for Linux.

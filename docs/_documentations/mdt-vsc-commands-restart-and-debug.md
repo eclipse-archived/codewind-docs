@@ -38,6 +38,4 @@ Next, the launch configuration runs, and the VS Code debugger attaches to your a
 
 [Back to the commands overview](mdt-vsc-commands-overview.html)
 
-[Back to the VS Code tools overview](mdt-vsc-overview.html)
-
 [Troubleshooting](mdt-vsc-troubleshooting.html)
