@@ -76,8 +76,6 @@ When one or more log files have changed, an `Updated` notice is displayed. The c
 
 If there are no log files, the dropdown menu will be empty.
 
-Would it be possible to add something to the IDEs to allow the user to configure the log level for a Codewind instance?
-
 ![Image of log files](./images/viewingmultiplelogfiles.png)
 
 ## Need help?
