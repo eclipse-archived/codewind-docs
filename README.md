@@ -1,102 +1,94 @@
 # codewind-docs
-
 Stores files to be part of the Eclipse Codewind landing and documentation pages. 
 
-* This repository is a staging environment for creating the live Eclipse Codewind website
-* The live website is located at [https://www.eclipse.org/codewind](https://www.eclipse.org/codewind)
-* The live website repository is at: [https://git.eclipse.org/c/www.eclipse.org/codewind.git/](https://git.eclipse.org/c/www.eclipse.org/codewind.git/). The files from this repository will be commited to the live website repository. This repository will contain documentation files (MD files) that are transformed into HTML files. As a result, this repository will not contain the same files as the live website repository
+* This repository is a staging environment for creating the live Eclipse Codewind website.
+* The live website is located at [https://www.eclipse.org/codewind](https://www.eclipse.org/codewind).
+* The live website repository is at [https://git.eclipse.org/c/www.eclipse.org/codewind.git/](https://git.eclipse.org/c/www.eclipse.org/codewind.git/). The files from this repository are commited to the website repository. This repository contains `.md` documentation files that are transformed into HTML files. As a result, this repository does not contain the same files as the website repository.
 
-
-# Landing Pages UI repo
+# Landing pages UI repo
 Store any pages to be part of the landing pages in the `docs/_documentations` folder.
 
-## View the landing pages on your local machine
+## Viewing the landing pages on your local machine
 View your changes before creating a pull request so you can fix problems before the changes are merged. Each time you merge or push to GitHub, GitHub runs Jekyll.
 
 Prerequisites:
-* Install Docker and make sure Docker daemon is running.
+* Install Docker and make sure the Docker daemon is running.
 
 1. Run the following command: `./serve.sh`.
 2. View the page with this URL: `http://localhost:4321/codewind/`.
-3. Run `./build.sh` command to check broken links.
+3. Run the `./build.sh` command to check broken links.
 
-## Run the build locally
-
+## Running the build locally
 Prerequisites:
-* Install Docker and make sure Docker daemon is running.
+* Install Docker and make sure the Docker daemon is running.
 
 1. Run the following command: `./build.sh`.
-2. The HTML site content are generated in `docs/_site/codewind` folder.
-3. Check the script result, make sure there is no broken links.
+2. The HTML site content is generated in the `docs/_site/codewind` folder.
+3. Check the script result and make sure there are no broken links.
 
-## Push to the external landing page
+## Pushing to the landing page
+See [Publishing.md](https://github.com/eclipse/codewind-docs/blob/master/Publishing.md) for instructions on publishing the landing pages.
 
+## Assigning an issue
 TBD
 
-## To assign an issue
-
+## Creating a backup
 TBD
 
-## To create a backup
-
+## Updating the docs
 TBD
 
-## To update the docs
+# Developer guide to the landing pages
+The landing page is built on [Jekyll](https://jekyllrb.com/). The Jekyll templates, config, and documents are in the `docs` folder.
 
-TBD
+## Files in the `docs` folder
+* `_data/docstoc.yml` - The config file for the Docs tab.
+* `_data/newstoc.yml` - The config file for the News tab.
+* `_documentations` - The Markdown files for the Codewind docs.
+* `_includes` - Common Jekyll template snippets that are included in Jekyll templates, such as headers and footers.
+* `_layouts/docs-dynamic.html` - The file to dynamically generate the Docs tab. Do not edit.
+* `_layout/docs.html` - Jekyll template for docs pages.
+* `_layout/landing.html` - Jekyll template for the homepage page.
+* `_layout/news.html` - Jekyll template for news pages.
+* `_layout/newsredirect.html` - Jekyll template for the latest news page.
+* `_news` - Folder that contains release news. The latest is always `news.md`. Use the template `_layout/newsredirect.html`.
+* `_site` - Folder that contains the generated site HTML.  
+* `css` - CSS styles for the site.
+* `dist` - The folder that contains some of the static images.
+* `images` - Also contains some of the docs static images. We need to split images into two folders, one for images in any document created by the documentation team and another for images on the landing page. See issue https://github.com/eclipse/codewind/issues/1883.
+* `js/docs.js` - Docs JavaScript.
+* `js/index.js` - Homepage JavaScript.
+* `js/jquery.matchHeight-min.js` - JavaScript library to match div heights on the homepage.
+* `_config.yml` - Jekyll configuration file.
+* `Gemfile` - The Gemfile that installs the [jekyll-last-modified-at](https://github.com/gjtorikian/jekyll-last-modified-at) plug-in to display `last updated on` on each doc page.
+* `index.html` - The landing page homepage.
 
-# Code developer's guide to the Landing Pages
-The landing page is built on [jekyll](https://jekyllrb.com/).  The jekyll templates, config and documents are under `docs` folder.
+The `_includes` folder has two header files. Use the `header.html` file in the `landing.html` template, which is for the homepage only. Use the `header-fixedtop.html` in the `docs.html` template, which is for pages in the News and Docs tabs, to maintain a fixed header bar.
 
-## Files in `docs` folder
-* `_data/docstoc.yml` - This is the config file for docs' navigation menu.
-* `_data/newstoc.yml` - This is the config file for news' navigation menu.
-* `_documentations` - The markdown files of the codewind docs.  ID team manages this folder.
-* `_includes` - The common jekyll template snippets which are included in jekyll templates, such as headers and footers.
-* `_layouts/docs-dynamic.html` - Not used.  This is for dynamically generates the docs navigation menu.
-* `_layout/docs.html` - Jekyll template for docs page.
-* `_layout/landing.html` - Jekyll template for homepage page.
-* `_layout/news.html` - Jekyll template for news page.
-* `_layout/newsredirect.html` - Jekyll template for latest news page.
-* `_news` - Folder contains release news.  Latest is always news.md (use template `_layout/newsredirect.html`).
-* `_site` - Folder contains the generated site html.  
-* `css` - CSS Styles of the site.
-* `dist` - The folder contains some of the static images
-* `images` - Also contains some of the docs static images.  We need to split images into two folders, one is the images that for any documents created by ID team, another one is for landing page. There is a issue opened for this: https://github.com/eclipse/codewind/issues/1883
-* `js/docs.js` - Docs javascript.
-* `js/index.js` - Homepage javascript
-* `js/jquery.matchHeight-min.js` Javascript lib to match div heights on home page.
-* `_config.yml` Jekyll configuration file
-* `Gemfile` - Gemfile.  We need to install plugin [jekyll-last-modified-at](https://github.com/gjtorikian/jekyll-last-modified-at) to display `last updated on` on each docs.
-* `index.html` - The landing page home page
+Steven Hung (@sghung) has permission to update the production page. Run `./build.sh` to generate the HTML files in the `_site` folder.
 
-There are two header files in `_includes` folder.  `header.html` is used in `landing.html` template, which is home page only.  `header-fixedtop.html` is used in `docs.html` template, which is for news and docs pages, because we wanted a fixed header bar.
-
-Steven Hung has the permission to update the production page.  Run the above `build.sh` to generate the html files (in `_site` folder).  I have never done that (I don't have permission to update).
-
-## Files in root folder
-
-* `serve.sh` - Launch the landing page on local host.  Requires docker.
-* `build.sh` - Generate the site html files, and perform 404 checks.
-* `Publishing.md` - How to launch the site on local host and how to publish to production server.
+## Files in the root folder
+* `serve.sh` - Enter `./serve.sh` to launch the landing page on localhost. Requires Docker.
+* `build.sh` - Enter `./build.sh` to generate the site HTML files and perform 404 checks.
+* `Publishing.md` - Instructions for launching the site on localhost and publishing to a production server.
 
 ## Q and A
+Q: If we need to add another level of child topics in the documentation table of contents, do we need to make a code change? Does the dynamic table of contents allow for many child topics?
+A: Edit the `_data/docstoc.yml` file.
+- Also, topics have a limit to how deeply they can be nested.
+- For example, if you have a **Parent topic** and a **First level child topic** nested in the parent, and then you have another **Second level child topic** nested in the first level child topic, the second level child topic cannot have its own child topics.
+- If you attempt to add more nested child topics, when you merge the changes and view them on the landing pages Docs tab, the **Second level child topic** plus all its children appear at the same level, and the **Second level child topic** links out to the main homepage if you try to click it.
 
-Q: For the TOC, if we need to add another sub level, does that require code change? Or does the dynamic TOC allow for many children properties.
-A: No, the template has to be modified.
+Q: Does the `newsredirect.html` file pick up the first entry in `newstoc` config file? 
+A: Yes, this is in the template: `{% assign entry = site.data.newstoc | first %}`
 
-Q: For the newsredirect.html, does it pick up the first entry in newstoc config file? 
-A: Yes, as we have this in the template: `{% assign entry = site.data.newstoc | first %}`
+Q: Quite a few places remove `.html`. What is that logic for? We had issues with `.html` before, but all our pages appear to end with `.html`.
+A: When we define the URL in the `.md` file, we omit the `.html` extension. When the site is being built, it automatically adds an `.html` extension to the file. In the config file, we have `.html` added to the link. So when we compare the URL in the templates, we need to remove the `.html` extension.
 
-Q: Quite a few places does remove: ".html" what is that logic for? I recall we had issues with .html before but all our pages appear to end with .html, so just wanted some clarification
-A: When we define the url in MD file, we omit the `.html` extension.  When the site is being built it automatically adds `.html` extension to the file.  In the config file, we have `.html` added to the link.  So when we compare the url in the templates we will need to remove `.html` extension.
-
-Q: The folders with underscores (e.g. _data, _layouts), how are they picked up by Jekyll? Is it automatic? Does Jekyll copy all folders to the generated _site folder?
-A: Yes they are automatically picked up jekyll when the site is being built.  These folders are only used for building the site, and are not used on production server.  We only need to publish files in `_site` to production server.
-
+Q: How does Jekyll pick up the folders with underscores, such as `_data` and `_layouts`? Is it automatic? Does Jekyll copy all folders to the generated `_site` folder?
+A: Yes, they are automatically picked up by Jekyll when the the site is being built. These folders are used only for building the site. They are not used on the production server. We need only to publish files in `_site` to the production server.
 
 ## Reference
-
 * https://jekyllrb.com/
 * https://jekyllrb.com/docs/liquid/
 * https://bundler.io/gemfile.html
