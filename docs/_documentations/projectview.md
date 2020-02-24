@@ -40,23 +40,25 @@ At the side of the page is a menu:
 ![Image of menu](./images/projectmenu.png)
 
 
-From this menu, you have seven options:
+From this menu, you have the following options:
 
-1. **Overview** Provides you with project information including language, location of you project, status, and whether the project is set to automatically build on modification.
+- **Overview** Provides you with project information including language, location of you project, status, and whether the project is set to automatically build on modification.
 
-2. **Edit code** After creating your project, Microclimate has already built your project and started it. Use the Theia editor to modify your code, and to redeploy it.
+- **Edit code** After creating your project, Microclimate has already built your project and started it. Use the Theia editor to modify your code, and to redeploy it.
 
-3. **Build logs** Click this tab to view the Microclimate project build logs.
+- **Build logs** Click this tab to view the Microclimate project build logs.
   - On the **Build logs** page, the **Log File** drop-down menu lists individual build logs. If a log file changed, an **Updated** icon appears next to the **Log File** menu. An asterisk appears next to the name of each changed log file in the list.
   - After you select any of the changed log files, the asterisk disappears from the log file entry in the menu. After you select all of the changed log files, the icon disappears from the **Log File** menu.
 
-4. **Open app** Supply the context root and then open your application.
+- **Open app** Supply the context root and then open your application.
 
-5. **App logs** Log files for your application.
+- **App logs** Log files for your application.
 
-6. **App monitor** Use this tab to monitor your application.
+- **App monitor** Use this tab to monitor your application.
 
-7. **Pipeline** Use a pipeline to automatically detect changes in your application, and to rebuild and redeploy it. For more information, see [Using a pipeline](./usingapipeline).
+- **Pipeline** Use a pipeline to automatically detect changes in your application, and to rebuild and redeploy it. For more information, see [Using a pipeline](./usingapipeline).
+
+- **Set Codewind Server Logging Level** To assist with problem determination, configure the log level in PFE.
 
 ### Project view main workspace
 
@@ -73,6 +75,8 @@ You can view multiple log files in **Build logs** and **Apps logs** by selecting
 When one or more log files have changed, an `Updated` notice is displayed. The changed logs are marked with `*`. 
 
 If there are no log files, the dropdown menu will be empty.
+
+Would it be possible to add something to the IDEs to allow the user to configure the log level for a Codewind instance?
 
 ![Image of log files](./images/viewingmultiplelogfiles.png)
 
