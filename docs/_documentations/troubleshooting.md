@@ -292,6 +292,17 @@ If you have the Codewind Language Server for Node.js Profiling extension enabled
 
 **Workaround:** Review the preceding list and ensure that your project conforms to all of the items in the list.
 
+<!--
+Action/Topic: Understanding application metrics
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1251
+Info added in 0.10.0.
+-->
+## Setting Codewind server logging levels
+To assist with problem determination, change the default log level, such as trace, in PFE with the `cwctl loglevels` command.
+
+In Eclipse, set your preference to enable support features. If you enable the preference, the menus include setting PFE log level items.
+
 ***
 # Checking the application and build statuses
 
