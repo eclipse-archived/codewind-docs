@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Installing components individually for a Codewind remote deployment
+# Deploying Codewind components individually
 
 Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
 

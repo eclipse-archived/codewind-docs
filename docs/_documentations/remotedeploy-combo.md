@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Deploying Codewind components combined
-description: Deploying all Codewind components
+title: Installing a Codewind remote deployment all-in-one
+description: Installing a Codewind remote deployment all-in-one
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-combo
