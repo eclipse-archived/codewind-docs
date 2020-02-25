@@ -43,7 +43,7 @@ For more information about installing Eclipse, see [Getting started with Codewin
 A Keycloak must be used as the authentication service when using Codewind remotely. To use Codewind with Keycloak, you can either:
 1. Point Codewind to an existing Keycloak and then install Codewind remotely using this keycloak.
 2. Use the Codewind CWCTL command on your local Codewind instance to install both Codewind remotely and Keycloak simultaneously.
-3. Use the Codewind CWCTL command on your local Codewind instance to install Keycloak on it's own. Then, install a Codewind instance that uses your new Keycloak.
+3. Use the Codewind CWCTL command on your local Codewind instance to install Keycloak on its own. Then, install a Codewind instance that uses your new Keycloak.
 
 To determine the best way to configure Keycloak for your use case, consider the following:
 
