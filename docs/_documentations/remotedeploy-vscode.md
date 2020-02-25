@@ -19,7 +19,7 @@ Ensure you have [satisfied all prequisites](./remote-deploy-jane.html).
 
 In this topic you will:
 
-1. connect Codewind on VS Code to the remote instance of Codewind in the cloud. 
+1. Connect Codewind on VS Code to the remote instance of Codewind in the cloud. 
 
 2. Add a deployment registry
 
@@ -43,7 +43,7 @@ The IDE validates the connection and adds it to the Codewind panel:
 
 The IDE and Codewind are connected.
 
-# 2. Adding a deployment registry
+# 2. Add a deployment registry
 
 Before projects can be deployed on Kubernetes, you need to specify a Docker Registry. Docker Hub is used in this example: 
 
@@ -75,4 +75,4 @@ The connection is tested to validate your credentials and stored in a Kubernetes
 
 You have now finshed configuring Codewind to be used remotely. 
 
-In the next topic, you will learn how to [use Codewind remotely to build and run projects in your cloud](./remotedeploy-projects.html).
+In the next topic, you will learn how to [use Codewind remotely to create and import projects](./remotedeploy-projects-vscode.html).

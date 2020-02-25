@@ -49,7 +49,7 @@ This command requires various flags to specify where and what to install which w
 - For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
-    2. run the following commands on only the Codewind namespace:
+    2. Run the following commands on only the Codewind namespace:
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
@@ -183,15 +183,14 @@ Make a note of the address provided because you need it for configuring your IDE
 
 # 3. Deploy additional remote Codewind services
 
-*WIP* You will now use the same keycloak to install multiple codewinds remotely.
+You will now use the same keycloak to install multiple codewinds remotely.
 
-Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. You must have your own remote Codewind instance in order to generate additional remote codewind services.
+Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in section 2. [Deploy a remote Codewind services](#2.-Deploy-a-remote-Codewind-service). Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. You must have your own remote Codewind instance in order to generate additional remote codewind services.
 
-*SWAP THESE PARAGRAPHS AROUND?*
 Each user can have several remote Codewind instances allocated to them. This can be achieved by either:
-1. re-running the `./cwctl --insecure install remote \` command
+1. Re-running the `./cwctl --insecure install remote \` command
 or
-2. assigning users through role-based acccess control. This is/*can be?* set up automatically using/*by?* the `cwctl` command *MORE DETAILS ARE WHERE?*
+2. Assigning users through role-based acccess control. This can be set up automatically using the `cwctl` command.
 
 
 # Next Steps

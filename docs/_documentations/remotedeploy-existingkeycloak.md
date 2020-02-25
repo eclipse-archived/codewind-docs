@@ -33,7 +33,7 @@ You will use the following command to install a new remote Codewind service:
 
 This command requires various flags to specify where and what to install which will be explained below.
 
-# Pre-requisites *NEEDS CHANGING FOR THIS SCENARIO?*
+# Pre-requisites 
 
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:

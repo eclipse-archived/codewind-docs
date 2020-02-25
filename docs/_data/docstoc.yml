@@ -57,9 +57,11 @@
       url: remotedeploy-vscode.html
     - title: 'Connecting Eclipse to remote Codewind'
       url: remotedeploy-eclipse.html
-  - title: 'Creating and moving projects'
-    url: remotedeploy-projects.html
-
+  - title: 'Creating and importing projects'
+    children:
+    - title: 'VS Code'
+      url: remotedeploy-projects-vscode.html
+  
 - title: 'Deploying Codewind remotely'
   children:
   - title: 'Overview'

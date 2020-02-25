@@ -10,9 +10,9 @@ type: document
 
 # Deploying Codewind remotely
 
-Codewind can be used in one of 3 ways - [locally], [hosted] as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+Codewind can be used in one of three ways - locally, [hosted](./mdt-che-installinfo.html) as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
 
-To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely ](remote-jane-overview).
+To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-jane-overview.html).
 
 # What you will learn
 
@@ -20,8 +20,8 @@ You will learn how to deploy Codewind to be used remotely.
 
 After you install your local IDE and configure Codewind for local use, you will use the Codewind CLI to:
 
-1. deploy Codewind to your cloud
-2. create additional instances of Codewind on your cloud, as required
+1. Deploy Codewind to your cloud
+2. Create additional instances of Codewind on your cloud, as required
 
 Finally, you will learn how to remove a remote deployment of Codewind.
 
