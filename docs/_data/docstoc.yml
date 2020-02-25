@@ -51,11 +51,11 @@
 
 - title: 'Local to remote development'
   children:
-    - title: 'Overview'
+    - title: 'Deploying Codewind remotely overview'
       url: remote-overview.html
-    - title: 'Deploying all-in-one'
+    - title: 'Installing a Codewind remote deployment all-in-one'
       url: remotedeploy-combo.html
-    - title: 'Deploying components individually'
+    - title: 'Installing components individually for a Codewind remote deployment'
       url: remotedeploy-single.html
     - title: 'Connecting VS Code to a remote deployment'
       url: remotedeploy-vscode.html

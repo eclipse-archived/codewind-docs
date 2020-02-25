@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Deploying Codewind remotely
-description: Deploying Codewind remotely
+title: Connecting Eclipse to a remote deployment
+description: Connecting Eclipse to a remote deployment
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remote-overview
 type: document
 ---
 
-# Deploying Codewind remotely
+# Connecting Eclipse to a remote deployment
 
 Deploy Codewind remotely to develop your code locally and build and run it remotely and securely in the cloud. This option is useful because it frees up resource on your laptop and uses the cloud's resources to build and run your apps.
 
