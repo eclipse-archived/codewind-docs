@@ -150,6 +150,20 @@ If you try to create a project on Codewind for Eclipse Che, errors might occur i
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2251
+0.10.0: Issue still present
+-->
+## Codewind unable to deploy projects on IBM Cloud Kubernetes Service (IKS) with Kubernetes 1.15 and earlier
+Codewind cannot deploy Codewind style projects with remote Codewind on IKS and Kubernetes 1.15 and earlier. The projects fail to deploy, and you see the following error:
+```
+Failed to pull image "<image>": rpc error: code = Unknown desc = failed to pull and unpack image "<image>": failed to unpack image on snapshotter overlayfs: failed to extract layer sha256:<hash>: mount callback failed on /var/lib/containerd/tmpmounts/containerd-mount799987480: archive/tar: invalid tar header: unknown
+```
+
+**Workaround:** Upgrade to the latest version of IKS. IKS clusters that run Kubernetes 1.16 and later run a later version of containerd and are not affected by this issue. 
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
 Issue link:
 0.2.0: Issue still present
 -->
