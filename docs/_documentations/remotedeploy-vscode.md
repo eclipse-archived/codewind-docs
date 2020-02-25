@@ -14,7 +14,6 @@ order: 2
 
 Ensure you have [satisfied all prequisites](./remote-deploy-jane.html). 
 
-
 # Objectives
 
 In this topic you will:
@@ -24,6 +23,7 @@ In this topic you will:
 2. Add a deployment registry
 
 # 1. Connect your IDE's Codewind extension to your remote instance of Codewind
+
 
 1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
 

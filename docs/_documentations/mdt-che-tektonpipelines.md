@@ -10,7 +10,8 @@ order: 20
 parent: root
 ---
 
-### Configuring Codewind for Tekton pipelines
+# Configuring Codewind for Tekton pipelines
+
 If you want to use existing Tekton installations with Codewind, from your command line, enter the following commands:
 
 ```
@@ -20,5 +21,5 @@ oc apply -f setup/install_che/codewind-tektonbinding.yaml
 
 For more information about Tekton, see [Getting started with the Tekton Dashboard Webhooks Extension](https://github.com/tektoncd/experimental/blob/master/webhooks-extension/docs/GettingStarted.md).
 
-Next step: [Set Docker Registries](mdt-che-dockerregistries.html)
+Next step: [Adding a container registry in Codewind](mdt-che-setupregistries.html)
 

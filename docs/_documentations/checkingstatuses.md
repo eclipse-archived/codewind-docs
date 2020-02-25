@@ -12,7 +12,7 @@ order: 7
 
 # Checking the application and build statuses
 
-Builds automatically begin when Codewind detects changes or when a build is initiated by pressing the Build button on a project.
+Builds automatically begin when Codewind detects changes or when a build is initiated by clicking the **Build** button on a project.
 
 ## Application status
 
@@ -26,7 +26,7 @@ The application status shows the current state of your application.
   * To disable a project, navigate to the *Project Overview* page and click the *Disable project* button to stop the application and build containers to save resources.
 
 Troubleshooting the application status
-* If your application goes into the **Stopped** state unexpectedly or stays in the **Starting** state longer than expected, check the application logs to see whether something went wrong. Problems with the application build or server configuration can make the application fail to start and create errors in the **Build logs** or **App logs**.
+* If your application goes into the **Stopped** state unexpectedly or stays in the **Starting** state longer than expected, check the application logs to see whether something went wrong. Problems with the application build or server configuration can make the application fail to start and create errors in the log files.
 * Even without errors, the **Stopped** state can occur if the context root of the application is unreachable.
 
 ## Build status

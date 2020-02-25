@@ -12,7 +12,6 @@ order: 2
 
 # Deploying remote Codewind all-in-one
 
-
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed all-in-one simultaneously, or separately. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
@@ -52,6 +51,10 @@ Ensure that you are logged in to your Kubernetes or OpenShift cluster by running
 ```
 $ kubectl get namespaces
 ```
+or 
+```
+$ oc get namespaces
+```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
@@ -62,10 +65,9 @@ If the command is successful, you see a list of current namespaces. If not, ensu
 
 ## Determine your Cloud ingress domain
 
-The CLI command requires an ingress domain. Find your ingress domain based on any of the existing routes:
+The CLI command requires an ingress domain. Enter the `oc get routes -n default` command and find your ingress domain based on any of the existing routes:
 
 ```
-oc get routes -n default
 NAME               HOST/PORT                                                                                                          PATH      SERVICES           PORT               TERMINATION   WILDCARD
 registry-console   registry-console-default.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud             registry-console   registry-console   passthrough   None
 ```

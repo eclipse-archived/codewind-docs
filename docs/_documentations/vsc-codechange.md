@@ -28,7 +28,7 @@ To see this feature in action, make a change to the getting started example.
 ![](dist/images/vsc-ididthis.png)
 
 The status of the project changes to *stopped* while the project is rebuilt and deployed:
-
+ 
 ![](dist/images/vsc-buildstopped.png)
 
 After a few moments, the status changes back to *running*:
@@ -40,4 +40,4 @@ After a few moments, the status changes back to *running*:
 
 ![](dist/images/vsc-screenchanged.png)
 
-Next step: [Buiding and deploying in a cloud environment](remoteoverview.html)
+Next step: [Buiding and deploying in a cloud environment](remote-overview.html)

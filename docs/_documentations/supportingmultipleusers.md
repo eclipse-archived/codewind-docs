@@ -19,4 +19,4 @@ Codewind provides support for multiple users via Eclipse Che on Kubernetes. If E
 
 The Eclipse Che Keycloak OIDC server supports connection of Lightweight Directory Access Protocol (LDAP) directory services to provide user ID administration. User IDs defined in the connected directory service are then available to the Eclipse Che installation running on the cluster. For detailed information on connecting an LDAP directory service to your Eclipse Che Keycloak instance, see [Configuring LDAP connection](https://www.keycloak.org/docs/latest/server_admin/index.html#_ldap).
 
-**Note**: The Eclipse Che keycloak server comes with its own LDAP provider, allowing you to register/manage users through Keycloak itself.
+**Note**: The Eclipse Che Keycloak server comes with its own LDAP provider, allowing you to register/manage users through Keycloak itself.
