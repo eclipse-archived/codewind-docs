@@ -25,7 +25,6 @@ After you install your local IDE and configure Codewind for local use, you will 
 
 Finally, you will learn how to remove a remote deployment of Codewind.
 
-
 ## Prerequisites
 
 Before deploying Codewind to the cloud, you must:
@@ -56,12 +55,12 @@ To determine the best way to configure Keycloak for your use case, consider the 
 
 Once you have decided how you will be administering Codewind remotely, you can choose which installation procedure you need to follow:
 
-- to install both the remote Codewind instance and Keycloak simultaneously, see [deploying all-in-one](./remotedeploy-combo.html)
+- To install both the remote Codewind instance and Keycloak simultaneously, see [deploying all-in-one](./remotedeploy-combo.html)
 
 Or:
 
-- to install the remote Codewind instance and Keycloak individually, see [deploying components individually](./remotedeploy-single.html)
+- To install the remote Codewind instance and Keycloak individually, see [deploying components individually](./remotedeploy-single.html)
 
 Or:
 
-- to install the remote Codewind instance only and pointing to an existing Keycloak, see [deploying with an existing keycloak](./remotedeploy-existingkeycloak.html)
+- To install the remote Codewind instance only and pointing to an existing Keycloak, see [deploying with an existing keycloak](./remotedeploy-existingkeycloak.html)
