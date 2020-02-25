@@ -59,7 +59,7 @@
       url: remotedeploy-eclipse.html
   - title: 'Creating and importing projects'
     children:
-    - title: 'VS Code CHANGE'
+    - title: 'VS Code'
       url: remotedeploy-projects-vscode.html
   
 - title: 'Deploying Codewind remotely'
