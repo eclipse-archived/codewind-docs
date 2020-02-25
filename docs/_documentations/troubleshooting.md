@@ -105,6 +105,22 @@ If installing and starting Codewind still fails, you can use Docker system prune
    - To preserve images, start a container from the images that you want to save.
 4. After you ensure the preservation of any necessary items that Docker system prune removes, enter `y` to continue.
 
+<!--
+Action/Topic: Installing Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2239
+0.9.0: New
+-->
+## Cannot find Codewind in Marketplace when attempting to install in IntelliJ
+When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plug-in in Marketplace, and if you verify the custom plug-in repository link, you get a `Connection failed` error message:
+
+![intellij install error](dist/images/intellij/custom-plugin-repo-connection-failed-error.png)
+
+This error occurs because the custom plug-in repository link contains an additional space.
+
+**Workaround**
+Remove the extra space from the custom plug-in repository link. 
+
 ***
 # Creating a project
 
@@ -157,6 +173,43 @@ You might occasionally see projects stuck in the `Starting` or `Stopped` state e
 **Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
+
+<!--
+Action/Topic: Checking the application status 
+Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## How to stop the app from continuously pinging 
+With all the stacks and templates Codewind offers, some template applications come with no server, like Appsody Node.js. The backend in PFE expects all applications to have a server. Thus, the backend continuously pings the port of the application retrieved from the application's container information. Since no server is available to ping on that port, the application times out and is stuck on `Starting`. 
+
+**Workaround** Disable the pinging of your application stuck on the `Starting` state:
+1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
+    - This key forces the application to stop, stops pinging the application, and bypasses the timeout error. 
+2. Once you implement the server into the application, resume the application ping and run it by setting `internalPort` to `""` for the default port of the container. Or you can choose a specific port you want to ping. 
+
+<!--
+Action/Topic: Checking the application status 
+Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## How to create a .cw-settings file if it does not exist
+Prior to the 0.9.0 release, non-Codewind stacks, like Appsody and OpenShift Do (odo), did not come with a .cw-settings. If you have a project from those stacks from a previous release, you need to create the .cw-settings file. The file must reside under the project root directory. 
+
+**Workaround** Create a template .cw-settings file with the following contents: 
+
+```
+{
+"contextRoot": "",
+"internalPort": "",
+"healthCheck": "",
+"isHttps": false,
+"ignoredPaths": [
+""
+]
+}
+```
 
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
@@ -457,6 +510,21 @@ Codewind displays an error. In VS Code, the error appears in the Codewind log:
 1. Remove the repository from the local Appsody CLI. For example, run the `appsody repo remove` command.
 2. Remove and add the repository back into Codewind with **Manage Template Sources**.
 3. Rebind the project to Codewind.
+
+<!--
+Codewind version: 0.9.0
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/938
+-->
+## Using Appsody stacks images from private Docker registries
+
+**Local scenario**
+For Codewind to work with an Appsody stack image on a private Docker registry, the stack must fully qualify the image name in the `.appsody-config.yaml` configuration of its template, for example: `hostname[:port]/username/reponame[:tag]`. Also, before you work with the stack, on the local system, enter `docker login` to the private registry.
+- **Note:** When you view the application log, you might see failures to pull the image during a rebuild. However, Codewind is taking the cached container image from your local machine. If you ever delete that image, you need to pull the image again. You can either create another project from the same stack or manually call a `docker pull` with the required image.
+
+**Remote scenario**
+Follow the instructions in [Adding a container registry in Codewind](mdt-che-setupregistries.html).
 
 ***
 # OpenShift Do (odo) with Codewind

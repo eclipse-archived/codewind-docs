@@ -131,8 +131,4 @@ The list of supported project settings are:
 
 [Next: Restart and debug](mdt-vsc-commands-restart-and-debug.html)
 
-[Back to the commands overview](mdt-vsc-commands-overview.html)
-
-[Back to the VS Code tools overview](mdt-vsc-overview.html)
-
 [Troubleshooting](mdt-vsc-troubleshooting.html)

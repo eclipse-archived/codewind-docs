@@ -30,7 +30,6 @@ Finally, you will learn how to remove a remote deployment of Codewind.
 
 Before deploying Codewind to the cloud, you must:
 
-
 1. **Install your preferred IDE on your local machine.** 
 For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 

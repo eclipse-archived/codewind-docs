@@ -10,16 +10,18 @@ order: 20
 parent: root
 ---
 
+# Using Codewind from the Che Theia IDE
 
-## Using Codewind from the Che Theia IDE
+## Binding a project:
 
-### Binding a project:
 Go to **View**>**Find Command…**>**Codewind: Add Project**.
 
-### Checking the status of a project
+## Checking the status of a project
+
 Go to **View**>**Find Command…**>**Codewind: App status**.
 
-### Building a project 
+## Building a project 
+
 Go to **View**>**Find Command…**>**Codewind: Build**.
 
 

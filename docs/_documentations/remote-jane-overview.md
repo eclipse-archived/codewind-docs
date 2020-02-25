@@ -10,7 +10,11 @@ type: document
 
 # Using Codewind remotely
 
+<<<<<<< HEAD
 Codewind can be used in one of three ways - locally, [hosted](./mdt-che-installinfo.html) as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications. 
+=======
+Codewind can be used in one of three ways - [locally], [hosted] as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications. 
+>>>>>>> 003281abac672d0a97eea2f4f66855c5f8159801
 
 # What you will learn
 

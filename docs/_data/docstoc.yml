@@ -22,22 +22,18 @@
         url: mdt-eclipse-codechange.html
     - title: 'Eclipse Che'
       children:
-      - title: 'Installing Codewind for Eclipse Che'
+      - title: 'Installing Eclipse Che for Codewind'
         url: mdt-che-installinfo.html
       - title: 'Adding registries in Che'
         url: mdt-che-setupregistries.html
-      - title: 'Creating the Codewind workspace'
+      - title: 'Creating a Codewind workspace in Che'
         url: mdt-che-createcodewindworkspace.html
       - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
-      - title: 'Set Docker registries'
-        url: mdt-che-dockerregistries.html
       - title: 'Using Codewind in Theia'
         url: mdt-che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
         url: mdt-che-odo-support.html         
-      - title: 'Docker Registry Guidance'
-        url: image-registry-credentials.html
       - title: 'Using the OpenShift Registry'
         url: openshiftregistry.html
       - title: 'Support for multiple users'
@@ -46,6 +42,10 @@
         url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: mdt-che-uninstall.html
+    - title: 'IntelliJ'
+      children:
+      - title: 'Installing Codewind for IntelliJ'
+        url: mdt-intellij-getting-started.html
 
 - title: 'Using Codewind remotely'
   children:
@@ -59,7 +59,7 @@
       url: remotedeploy-eclipse.html
   - title: 'Creating and importing projects'
     children:
-    - title: 'VS Code'
+    - title: 'VS Code CHANGE'
       url: remotedeploy-projects-vscode.html
   
 - title: 'Deploying Codewind remotely'
@@ -83,17 +83,19 @@
 
 - title: 'Developing projects'
   children:
-    - title: 'Using the project view'
-      url: projectview.html
     - title: 'Checking the application and build statuses'
       url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
+    - title: 'Project settings'
+      url: project-settings.html 
+    - title: 'Referencing files external to a project'
+      url: referencing-files.html
       
 - title: 'Performance monitoring'
   children:
-    - title: 'Understanding Application Metrics'
-      url: 'appmetrics.html'
+    - title: 'Understanding the Metrics Dashboard'
+      url: 'metrics-dashboard.html'
     - title: 'Monitoring applications with the performance dashboard'
       url: performance.html
 

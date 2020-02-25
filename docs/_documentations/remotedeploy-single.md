@@ -12,7 +12,6 @@ order: 2
 
 # Deploying Codewind components individually for a Codewind remote deployment
 
-
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
@@ -51,9 +50,8 @@ This command requires various flags to specify where and what to install which w
     1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
     2. Run the following commands on only the Codewind namespace:
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
-        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
-        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
- 
+        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
+        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
 
 
 Ensure you are in the correct directory for accessing the Codewind CLI:

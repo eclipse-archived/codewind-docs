@@ -10,6 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
+<<<<<<< HEAD
 
 # Connecting Eclipse to your remote Codewind instance
 
@@ -24,6 +25,9 @@ In this topic you will:
 2. Add a deployment registry
 
 # 1. Connect your IDE's Codewind extension to your remote instance of Codewind
+=======
+# Connecting Eclipse to Remote Codewind
+>>>>>>> 003281abac672d0a97eea2f4f66855c5f8159801
 
 1\. Locate the Codewind view in Eclipse and click the cloud icon to launch the new connection wizard:
 
