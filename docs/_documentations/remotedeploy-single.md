@@ -11,9 +11,7 @@ order: 2
 ---
 
 # Deploying Codewind components individually for a Codewind remote deployment
-
-
-Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
+Complete the prerequisites in the [overview](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
 
@@ -38,13 +36,10 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites
 
-- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
-    Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-    1. Create the namespace by entering: `oc create namespace <Codewind-namespace>`.
-    2. Run the following commands on only the Codewind namspace: 
-        - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
-        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
-        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
+    - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+    - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+    - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
 - For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
