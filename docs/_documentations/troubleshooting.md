@@ -27,6 +27,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
+* [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 
 <!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
 
@@ -309,17 +310,6 @@ If you modify files in MicroProfile projects, sometimes the project gets double 
 ```xml
 <applicationMonitor pollingRate="1000ms" />
 ```
-
-<!--
-Action/Topic: Checking the application and build statuses
-Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/1251
-Info added in 0.10.0.
--->
-## Setting Codewind server logging levels
-To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
-- In Eclipse, set your preference to enable support features. Right-click the connection or the connection menu in the Codewind Explorer view. Now, the menus include setting the Codewind server log level items.
-- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
 ***
 # Editing your project
@@ -703,3 +693,17 @@ The following workaround applies to Eclipse. Add the configuration element to th
                 </configuration>
                 ....             
 ```
+
+***
+# Setting Codewind server log levels
+
+<!--
+Action/Topic: Setting Codewind server log levels
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1251
+Info added in 0.10.0.
+-->
+## Assisting with problem determination by raising the default Codewind server log level
+To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
+- In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
+- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
