@@ -292,18 +292,6 @@ If you have the Codewind Language Server for Node.js Profiling extension enabled
 
 **Workaround:** Review the preceding list and ensure that your project conforms to all of the items in the list.
 
-<!--
-Action/Topic: Understanding application metrics
-Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/1251
-Info added in 0.10.0.
--->
-## Setting Codewind server logging levels
-To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace** with the `cwctl loglevels` command.
-
-- In Eclipse, set your preference to enable support features. If you enable the preference, the menus include setting the Codewind server log level items.
-- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
-
 ***
 # Checking the application and build statuses
 
@@ -321,6 +309,18 @@ If you modify files in MicroProfile projects, sometimes the project gets double 
 ```xml
 <applicationMonitor pollingRate="1000ms" />
 ```
+
+<!--
+Action/Topic: Checking the application and build statuses
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1251
+Info added in 0.10.0.
+-->
+## Setting Codewind server logging levels
+To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
+- In Eclipse, set your preference to enable support features. Right-click the connection or the connection menu in the Codewind Explorer view. Now, the menus include setting the Codewind server log level items.
+- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
+
 ***
 # Editing your project
 
