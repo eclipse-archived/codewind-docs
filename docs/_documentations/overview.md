@@ -10,7 +10,7 @@ type: document
 
 # What is Codewind?
 
-Building and developing a cloud native, containerized application can be challenging. 
+Developing and building a cloud native, containerized application can be challenging. 
 
 Firstly, you need to create your own application stack for a containerized microservice that also fits your preferred language and project type.
 
