@@ -49,8 +49,6 @@ This command requires various flags to specify where and what to install which w
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
-
-
 Ensure you are in the correct directory for accessing the Codewind CLI:
 
 1.  Open a new terminal window on your local workstation.

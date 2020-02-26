@@ -9,6 +9,7 @@ type: document
 ---
 
 # Objectives
+
 Now that you have configured Codewind to be used remotely, you are now ready to:
 
 1. Create a new project
