@@ -8,39 +8,39 @@
       children:
       - title: 'Installing Codewind for VS Code'
         url: mdt-vsc-getting-started.html
-      - title: 'Creating your first project'
+      - title: 'Creating your first VS Code Codewind project'
         url: mdt-vsc-firstproject.html
-      - title: 'Making a code change'
+      - title: 'Making a code change with VS Code'
         url: vsc-codechange.html
     - title: 'Eclipse'
       children:
       - title: 'Installing Codewind for Eclipse'
         url: mdt-eclipse-getting-started.html
-      - title: 'Creating your first project'
+      - title: 'Creating your first Eclipse Codewind project'
         url: mdt-eclipse-firstproject.html
-      - title: 'Making a code change'
+      - title: 'Making a code change with Eclipse'
         url: mdt-eclipse-codechange.html
     - title: 'Eclipse Che'
       children:
       - title: 'Installing Eclipse Che for Codewind'
         url: mdt-che-installinfo.html
-      - title: 'Adding registries in Che'
+      - title: 'Adding a container registry in Codewind'
         url: mdt-che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: mdt-che-createcodewindworkspace.html
       - title: 'Creating your first project with Codewind for Eclipse Che'
         url: mdt-che-createfirstproject.html
-      - title: 'Setup to use Tekton Pipelines'
+      - title: 'Configuring Codewind for Tekton pipelines'
         url: mdt-che-tektonpipelines.html
-      - title: 'Using Codewind in Theia'
+      - title: 'Using Codewind from the Che Theia IDE'
         url: mdt-che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
         url: mdt-che-odo-support.html         
-      - title: 'Using the OpenShift Registry'
+      - title: 'Adding the OpenShift internal registry with Codewind'
         url: openshiftregistry.html
       - title: 'Support for multiple users'
         url: supportingmultipleusers.html
-      - title: 'Installing Kibana and filtering logs in IBM Cloud Private'
+      - title: 'Viewing logs using Kibana in IBM Cloud Private'
         url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: mdt-che-uninstall.html
@@ -51,11 +51,11 @@
 
 - title: 'Using Codewind remotely'
   children:
-    - title: 'Overview'
+    - title: 'Overview: Using Codewind remotely'
       url: remote-jane-overview.html
     - title: 'Connecting your IDE to remote Codewind'
       children:
-      - title: 'Connecting your VS Code to remote Codewind'
+      - title: 'Connecting VS Code to remote Codewind'
         url: remotedeploy-vscode.html
       - title: 'Connecting Eclipse to remote Codewind'
         url: remotedeploy-eclipse.html
@@ -64,15 +64,15 @@
  
 - title: 'Deploying Codewind remotely'
   children:   
-    - title: 'Overview'
+    - title: 'Overview: Deploying Codewind remotely'
       url: remote-overview.html
     - title: 'Deploying your remote Codewind instance'
       children:
-      - title: 'Deploying all-in-one'
+      - title: 'Deploying remote Codewind all-in-one'
         url: remotedeploy-combo.html
-      - title: 'Deploying Codewind components individually'
+      - title: 'Deploying remote Codewind components individually'
         url: remotedeploy-single.html
-      - title: 'Deploying with an existing keycloak'
+      - title: 'Deploying remote Codewind with an existing keycloak'
         url: remotedeploy-existingkeycloak.html
       - title: 'Removing a remote deployment'
         url: remote-removing.html

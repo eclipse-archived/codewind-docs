@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Projects in the cloud - VS Code
-description: Projects in the cloud - VS Code
+title: Creating and importing projects
+description: Creating and importing projects
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-projects-vscode
 type: document
 ---
 
-# Objectives
+# Creating and importing projects
 
 Now that you have configured Codewind to be used remotely, you are now ready to:
 

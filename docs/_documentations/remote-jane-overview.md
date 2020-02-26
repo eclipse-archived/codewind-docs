@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Using Codewind remotely
-description: Using Codewind remotely
+title: Overview Using Codewind remotely
+description: Overview Using Codewind remotely
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remote-jane-overview
 type: document
 ---
 
-# Using Codewind remotely
+# Overview: Using Codewind remotely
 
 Codewind can be used in one of three ways - locally, [hosted](./mdt-che-installinfo.html) as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications. 
 

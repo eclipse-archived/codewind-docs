@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Connecting Eclipse to a remote deployment
-description: Connecting Eclipse to a remote deployment
+title: Connecting Eclipse to remote Codewind
+description: Connecting Eclipse to remote Codewind
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-eclipse
@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Connecting Eclipse to your remote Codewind instance
+# Connecting Eclipse to remote Codewind
 
 Ensure you have [satisfied all prequisites](./remote-deploy-jane.html). 
 
