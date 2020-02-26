@@ -299,9 +299,10 @@ Issue link: https://github.com/eclipse/codewind/issues/1251
 Info added in 0.10.0.
 -->
 ## Setting Codewind server logging levels
-To assist with problem determination, change the default log level, such as trace, in PFE with the `cwctl loglevels` command.
+To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace** with the `cwctl loglevels` command.
 
-In Eclipse, set your preference to enable support features. If you enable the preference, the menus include setting PFE log level items.
+- In Eclipse, set your preference to enable support features. If you enable the preference, the menus include setting the Codewind server log level items.
+- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
 ***
 # Checking the application and build statuses
