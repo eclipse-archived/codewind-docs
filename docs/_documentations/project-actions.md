@@ -28,10 +28,11 @@ Some actions open the default browser. If you find that the default browser cann
 
 - **Restart in Run Mode**: Restarts the application in run mode. This action is only available on projects that support restart in run mode. 
 - **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. This action is only available on projects that support it. For MicroProfile and Spring projects, a debug session is started automatically. For Node.js projects you are guided in the set up of a debug session in a Chromium based browser. For all other project types that support debug you have to set up a debug session manually. 
-- **Launch Debug Session**: If you accidentally detached the Java debugger or restarted your IDE, use this action to set up a new debug session.
+- **Attach Debugger**:  If you accidentally detached the Java debugger or restarted your IDE, use this action to set up a new debug session. This menu item is only available for Java applications that support restart in debug mode. 
+- **Launch Debug Session**: If you ended your Node.js debug session accidentally, use this to set up a new debug session. This menu item is only available for Node.js applications that support restart in debug mode.
 
 - **Build**: Initiate a build of your project. This action is not available if a build is already running. 
-- **Disable/Enable Auto Build**: Enable or disable the automatic building of projects. Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This action is only available when auto build is enabled.
+- **Disable/Enable Auto Build**: Enable or disable the automatic building of projects. Use this to disable automatic builds if you are making a lot of changes and don't want builds to be triggered until you are done. This option is enabled by default. 
 - **Enable/Disable Inject Metrics**: Enable or disable the injection of open metrics into your application at build time. This option provides monitoring capabilities that are then used by the performance dashboard. This option is disabled by default. 
 
 - **Disable/Enable Project**: Disables or enables the project.
