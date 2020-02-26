@@ -89,6 +89,8 @@
       url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
+    - title: 'Project actions'
+      url: project-actions.html
     - title: 'Project settings'
       url: project-settings.html 
     - title: 'Referencing files external to a project'
