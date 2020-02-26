@@ -9,6 +9,7 @@ type: document
 ---
 
 # Objectives
+
 Now that you have configured Codewind to be used remotely, you are now ready to:
 
 1. Create a new project
@@ -61,4 +62,3 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 For how to remove an existing Codewind deployment, see [Remove a remote deployment of Codewind](./remote-removing.html)
 
 To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)
-

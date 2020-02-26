@@ -30,13 +30,11 @@ Once you have connected your local Codewind to Codewind in the cloud, you will l
 
 Before deploying Codewind to the cloud, you must:
 
-
 1. **Install your preferred IDE on your local machine.** 
 For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdteclipsegettingstarted.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
 
 2. **Have access to a keyring** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
 
-
 ### Next Steps
 
-Select [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html) to configure your IDE to connect to Codewind in the cloud 
+Select [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html) to configure your IDE to connect to Codewind in the cloud.

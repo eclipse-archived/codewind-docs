@@ -51,34 +51,31 @@
 
 - title: 'Using Codewind remotely'
   children:
-  - title: 'Overview'
-    url: remote-Jane-overview.html
-  - title: 'Connecting your IDE to remote Codewind' 
-    children:   
-    - title: 'Connecting your VS Code to remote Codewind'
-      url: remotedeploy-vscode.html
-    - title: 'Connecting Eclipse to remote Codewind'
-      url: remotedeploy-eclipse.html
-  - title: 'Creating and importing projects'
-    children:
-    - title: 'VS Code'
-      url: remotedeploy-projects-vscode.html
-  
+    - title: 'Overview'
+      url: remote-jane-overview.html
+    - title: 'Connecting your IDE to remote Codewind'
+      children:
+      - title: 'Connecting your VS Code to remote Codewind'
+        url: remotedeploy-vscode.html
+      - title: 'Connecting Eclipse to remote Codewind'
+        url: remotedeploy-eclipse.html
+      - title: 'Creating and importing projects'
+        url: remotedeploy-projects-vscode.html
+ 
 - title: 'Deploying Codewind remotely'
-  children:
-  - title: 'Overview'
-    url: remote-overview.html
-  - title: 'Deploying your remote Codewind instance'  
-    children:
-    - title: 'Deploying all-in-one'
-      url: remotedeploy-combo.html
-    - title: 'Deploying Codewind components individually'
-      url: remotedeploy-single.html
-    - title: 'Deploying with an existing keycloak'
-      url: remotedeploy-existingkeycloak.html
-  
-  - title: 'Removing a remote deployment'
-    url: remote-removing.html
+  children:   
+    - title: 'Overview'
+      url: remote-overview.html
+    - title: 'Deploying your remote Codewind instance'
+      children:
+      - title: 'Deploying all-in-one'
+        url: remotedeploy-combo.html
+      - title: 'Deploying Codewind components individually'
+        url: remotedeploy-single.html
+      - title: 'Deploying with an existing keycloak'
+        url: remotedeploy-existingkeycloak.html
+      - title: 'Removing a remote deployment'
+        url: remote-removing.html
       
 - title: 'Working with templates'
   url: workingwithtemplates.html

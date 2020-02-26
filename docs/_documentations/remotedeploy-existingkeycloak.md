@@ -12,7 +12,6 @@ order: 2
 
 # Deploying Codewind with an existing keycloak for a Codewind remote deployment
 
-
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
 An existing Keycloak can be used with a remote deployment of Codewind. If you do not have an existing keycloak, see [Planning your Deployment](remote-overview.html).
@@ -20,8 +19,6 @@ An existing Keycloak can be used with a remote deployment of Codewind. If you do
 # Objectives
 
 In this topic you will learn how to:
-
-
 1. Deploy Codewind remotely, pointing to an existing keycloak
 2. Use the same keycloak to install additional remote Codewind instances *WORKS?*
 
@@ -50,8 +47,6 @@ This command requires various flags to specify where and what to install which w
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
- 
-
 
 Ensure you are in the correct directory for accessing the Codewind CLI:
 
@@ -156,7 +151,6 @@ Each user can have several remote Codewind instances allocated to them. This can
 1. re-running the `./cwctl --insecure install remote \` command
 or
 2. assigning users through role-based acccess control. This is/can be? set up automatically using/by? the `cwctl` command - MORE DETAILS ARE WHERE?
-
 
 # Next Steps
 
