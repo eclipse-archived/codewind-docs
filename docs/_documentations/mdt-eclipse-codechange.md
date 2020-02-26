@@ -23,11 +23,11 @@ To see this feature in action, make a change to the getting started example.
 
 ![](dist/images/eclipsechangeproject2.png)
 
-3\. Change the heading from **Congratulations** to **I did this** and save the file.
+3\. Change the heading from `Congratulations` to `I did this` and save the file.
 
 ![](dist/images/eclipsechangeproject3.png)
 
-4\. Click the **Open App**
+4\. Click the **Open Application**
 ![](dist/images/eclipseopenprojecticon.png)
 icon to show your code change running.
 

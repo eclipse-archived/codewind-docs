@@ -19,7 +19,7 @@ To see this feature in action, make a change to the getting started example.
 
 ![](dist/images/vsc-codechange.png){:width="800px"}
 
-2\. Navigate to the bottom of the file to find the lines:
+2\. In the file, find the `Congratulations!` line.
 
 ![](dist/images/vsc-codeline.png)
 
@@ -27,15 +27,15 @@ To see this feature in action, make a change to the getting started example.
 
 ![](dist/images/vsc-ididthis.png)
 
-The status of the project changes to **stopped** while the project is rebuilt and deployed:
+The status of the project changes to **Stopped** while the project is rebuilt and deployed:
  
 ![](dist/images/vsc-buildstopped.png)
 
-After a few moments, the status changes back to **running**:
+After a few moments, the status changes back to **Running**:
 
 ![](dist/images/vsc-buildrunning.png)
 
-4\. Click the **Open App** icon to show your code change running:
+4\. Click the **Open Application** icon to show your code change running:
 ![](dist/images/launchicon.png)
 
 ![](dist/images/vsc-screenchanged.png)
