@@ -19,11 +19,11 @@ To see this feature in action, make a change to the getting started example.
 
 ![](dist/images/eclipsechangeproject1.png){:width="800px"}
 
-2\. Go to the bottom of the file to find the lines.
+2\. In the file, find the `Congratulations!` line.
 
 ![](dist/images/eclipsechangeproject2.png)
 
-3\. Change the heading from *Congratulations* to *I did this* and save the file.
+3\. Change the heading from **Congratulations** to **I did this** and save the file.
 
 ![](dist/images/eclipsechangeproject3.png)
 
