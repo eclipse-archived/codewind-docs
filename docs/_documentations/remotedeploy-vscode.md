@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Connecting VSCode to Remote Codewind
-description: Connecting a VSCode IDE to a Remote Codewind deployment
+title: Connecting VS Code to a remote deployment
+description: Connecting VS Code to a remote deployment
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-vscode
@@ -10,7 +10,19 @@ parent: installoncloud
 order: 2
 ---
 
-# Connecting VS Code to Remote Codewind
+# Connecting VS Code to your remote Codewind instance
+
+Ensure you have [satisfied all prequisites](./remote-deploy-jane.html). 
+
+# Objectives
+
+In this topic you will:
+
+1. Connect Codewind on VS Code to the remote instance of Codewind in the cloud. 
+
+2. Add a deployment registry
+
+# 1. Connect your IDE's Codewind extension to your remote instance of Codewind
 
 1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
 
@@ -30,7 +42,7 @@ The IDE validates the connection and adds it to the Codewind panel:
 
 The IDE and Codewind are connected.
 
-## Adding a deployment registry
+# 2. Add a deployment registry
 
 Before projects can be deployed on Kubernetes, you need to specify a Docker Registry. Docker Hub is used in this example: 
 
@@ -58,46 +70,8 @@ Enter:
 
 The connection is tested to validate your credentials and stored in a Kubernetes secret within the Codewind service.
 
-## Create a new project
+# Next Steps
 
-Go to the Codewind panel and click the Plus (+) icon on the new cloud deployment:
+You have now finshed configuring Codewind to be used remotely. 
 
-![Adding new remote project](./images/remotevs/newProject.png)
-
-Select the template type and enter a project name. Your new project is built and after a few seconds begins running in the cloud.
-
-## Copying an existing local project to the cloud
-
-Copy an existing local project, for example `myFirstNodeProject`, over to the remote Codewind deployment:
-
-1\. Select the remote deployment and click the `Add existing project` button:
-
-![Add existing project](./images/remotevs/addExistingProject.png)
-
-2\. Go to the folder containing the local project files and click `Add to Codewind`:
-
-![Add to Codewind](./images/remotevs/existingProject.png)
-
-Codewind prompts you to confirm the project type, in this case, identified as `NodeJS`:
-
-![Confirm Project Type](./images/remotevs/confirmProjectType.png)
-
-3\. Click `Yes`. Project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears in the Codewind panel:
-
-![Project Added](./images/remotevs/projectAdded.png)
-
-4\. Codewind begins building the code and the Docker image. Moments later the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
-
-![Build Success](./images/remotevs/buildSuccess.png)
-
-`myFirstNodeProject` on `CloudName1` cluster is now running and ready.
-
-Congratulations! In this topic you:
-
-1. Deployed a new Codewind install into OpenShift.
-2. Configured your IDE to use this new deployment.
-3. Registered all the necessary security parameters.
-4. Created a new project that builds and runs in the cloud.
-5. Copied an existing local project to build and run in the cloud.
-
-In the next step you learn how to remove an existing Codewind deployment: [Remove a remote deployment of Codewind](./remote-removing.html)
+In the next topic, you will learn how to [use Codewind remotely to create and import projects](./remotedeploy-projects-vscode.html).

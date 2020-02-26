@@ -28,6 +28,8 @@
         url: mdt-che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: mdt-che-createcodewindworkspace.html
+      - title: 'Creating your first project with Codewind for Eclipse Che'
+        url: mdt-che-createfirstproject.html
       - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
       - title: 'Using Codewind in Theia'
@@ -84,6 +86,8 @@
       url: checkingstatuses.html
     - title: 'Importing existing projects'
       url: importing-existing-projects.html
+    - title: 'Project actions'
+      url: project-actions.html
     - title: 'Project settings'
       url: project-settings.html 
     - title: 'Referencing files external to a project'

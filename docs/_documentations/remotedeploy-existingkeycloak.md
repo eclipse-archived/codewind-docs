@@ -19,7 +19,6 @@ An existing Keycloak can be used with a remote deployment of Codewind. If you do
 # Objectives
 
 In this topic you will learn how to:
-
 1. Deploy Codewind remotely, pointing to an existing keycloak
 2. Use the same keycloak to install additional remote Codewind instances *WORKS?*
 

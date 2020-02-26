@@ -1,15 +1,14 @@
 ---
 layout: docs
-title: Projects in the cloud - VS Code
-description: Projects in the cloud - VS Code
+title: Projects in the cloud
+description: Projects in the cloud
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: remotedeploy-projects-vscode
+permalink: remotedeploy-projects
 type: document
 ---
 
 # Objectives
-
 Now that you have configured Codewind to be used remotely, you are now ready to:
 
 1. Create a new project
@@ -23,7 +22,7 @@ Go to the Codewind panel and click the Plus (+) icon on the new cloud deployment
 
 Select the template type and enter a project name. Your new project is built and after a few seconds begins running in the cloud.
 
-## Import an existing local project to the cloud
+## Importing an existing local project to the cloud
 
 Copy an existing local project, for example `myFirstNodeProject`, over to the remote Codewind deployment:
 
@@ -62,3 +61,4 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 For how to remove an existing Codewind deployment, see [Remove a remote deployment of Codewind](./remote-removing.html)
 
 To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)
+

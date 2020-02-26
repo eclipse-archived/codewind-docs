@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Connecting VSCode to Remote Codewind
-description: Connecting a VSCode IDE to a Remote Codewind deployment
+title: Connecting Eclipse to a remote deployment
+description: Connecting Eclipse to a remote deployment
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-eclipse
@@ -10,7 +10,20 @@ parent: installoncloud
 order: 2
 ---
 
-# Connecting Eclipse to Remote Codewind
+# Connecting Eclipse to your remote Codewind instance
+
+Ensure you have [satisfied all prequisites](./remote-deploy-jane.html). 
+
+# Objectives
+
+In this topic you will:
+
+1. connect Codewind on Eclipse to the remote instance of Codewind in the cloud. 
+
+2. Add a deployment registry
+
+# 1. Connect your IDE's Codewind extension to your remote instance of Codewind
+
 
 1\. Locate the Codewind view in Eclipse and click the cloud icon to launch the new connection wizard:
 
@@ -26,7 +39,7 @@ The IDE validates the connection and adds it to the Codewind panel:
 
 The IDE and Codewind are connected.
 
-## Adding a deployment registry
+# 2. Add a deployment registry
 
 Before projects can be deployed on Kubernetes, you must specify a Docker registry. This example uses Docker Hub. 
 
@@ -83,12 +96,8 @@ The project files are copied over to the Codewind server and the new `myFirstNod
 
 `myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
-Congratulations! In this topic you:
+# Next Steps
 
-1. Deployed a new Codewind install into OpenShift.
-2. Configured your IDE to use this new deployment.
-3. Registered all the necessary security parameters.
-4. Created a new project that builds and runs in the cloud.
-5. Copied an existing local project to build and run in the cloud.
+You have now finshed configuring Codewind to be used remotely. 
 
-In the next step you learn how to remove an existing Codewind deployment: [Remove a remote deployment of Codewind](./remote-removing.html)
+In the next topic, you will learn how to [use Codewind remotely to build and run projects in your cloud](./remotedeploy-projects.html).

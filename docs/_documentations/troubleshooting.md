@@ -28,8 +28,6 @@ The following sections contain workarounds for issues that you might encounter w
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 
-<!-- Provide an upfront link to where users can go if they can't figure out how to troubleshoot the problems. Avoid telling them to call IBM support, but you can link to the support website. -->
-
 ***
 # Installing Codewind
 
