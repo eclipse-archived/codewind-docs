@@ -10,17 +10,34 @@ parent: installoncloud
 order: 2
 ---
 
-# Installing a Codewind remote deployment all-in-one
+# Deploying remote Codewind all-in-one
 
-Codewind includes a CLI to simplify the installation process. Find the `cwctl` CLI in your `HOME` directory under the `~/.codewind/<version>` path.
+Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
-Use the following command to install an all-in-one deployment with a new Keycloak and a new Codewind service:
+Keycloak and the remote instance of Codewind can be installed all-in-one simultaneously, or separately. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
+
+If you are using an IBM Public Cloud, you must install Codewind and Keycloak separately. For more information, see [Deploying Codewind components individually](remotedeploy-single.html). 
+
+
+# Objectives
+
+In this topic you will learn how to:
+
+- Deploy a Keycloak and remote Codewind instance simultaneously, using Codewind's CLI.
+
+Codewind includes a CLI to simplify the installation process. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+
+You will use the following command to install both the keycloak and remote instance of Codewind at the same time: 
 
 `cwctl --insecure install remote` 
 
-This command requires various flags to specify where and what to install.
+This command requires various flags to specify where and what to install which will be explained below.
 
-## Deploying Codewind with CWCTL
+
+
+# Prerequisites
+
+Ensure you are in the correct directory for accessing the Codewind CLI:
 
 1.  Open a new terminal window on your local workstation.
 2.  Go to your home directory and then to the Codewind CLI:
@@ -29,7 +46,7 @@ This command requires various flags to specify where and what to install.
 cd ~/.codewind/0.8.0
 ```
 
-Ensure that you are logged in to your Kubernetes or OpenShift cluster:
+Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
 
 ```
 $ kubectl get namespaces
@@ -40,6 +57,11 @@ $ oc get namespaces
 ```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
+
+
+# Deploy a remote Codewind service and keycloak using the Codewind CLI
+
 
 ## Determine your Cloud ingress domain
 
@@ -56,8 +78,6 @@ In the example the ingress domain is:
 mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-## Running the CLI command
-
 Determine the following values for your cloud deployment:
 
 - `namespace`: The `cwctl` command creates the namespace if it does not yet exist.
@@ -65,7 +85,10 @@ Determine the following values for your cloud deployment:
 - `kdevuser` and `kdevpass`: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
 - `ingress`: The ingress domain for your cloud environment.
 
-Codewind on IBM Public Cloud requires Keycloak and Codewind to be installed separately. For deploying in IBM Public Cloud, follow the instructions in [Install Codewind components and authentication services individually](./remotedeploy-single.html). If you are not deploying in IBM Pubic Cloud, to install Codewind, enter the following example command:
+ 
+
+## Run the Codewind CLI command
+To install Codewind AND AND ASSOCIATED KEYCLOAK?, enter the following example command:
 
 ```
 ./cwctl --insecure install remote \
@@ -110,4 +133,6 @@ Codewind is successfully deployed and is available.
 
 Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`   
 
-Next step: Connect your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment.
+# Next Steps
+
+Connect your local Codewind on your [VSCode](remotedeploy-vscode.html) or [Eclipse](remotedeploy-eclipse.html) IDE to the new Codewind deployment.
