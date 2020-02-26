@@ -28,6 +28,8 @@
         url: mdt-che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: mdt-che-createcodewindworkspace.html
+      - title: 'Creating your first project with Codewind for Eclipse Che'
+        url: mdt-che-createfirstproject.html
       - title: 'Setup to use Tekton Pipelines'
         url: mdt-che-tektonpipelines.html
       - title: 'Using Codewind in Theia'
@@ -70,7 +72,7 @@
     children:
     - title: 'Deploying all-in-one'
       url: remotedeploy-combo.html
-    - title: 'Deploying components individually'
+    - title: 'Deploying Codewind components individually'
       url: remotedeploy-single.html
     - title: 'Deploying with an existing keycloak'
       url: remotedeploy-existingkeycloak.html

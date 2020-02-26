@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Removing your remote deployment of Codewind
-description: Removing your remote deployment of Codewind
+title: Removing a remote deployment
+description: Removing a remote deployment
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection
 duration: 5 minutes
 permalink: remote-removing
@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Removing your remote deployment of Codewind
+# Removing a remote deployment
 
 The Codewind CLI `cwctl` is designed to do almost all the steps required to remove a remote deployment of Codewind by chaining together a number of Kubernetes operations.
 

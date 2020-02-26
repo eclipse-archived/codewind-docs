@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Connecting VSCode to Remote Codewind
-description: Connecting a VSCode IDE to a Remote Codewind deployment
+title: Connecting VS Code to a remote deployment
+description: Connecting VS Code to a remote deployment
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-vscode
@@ -23,7 +23,6 @@ In this topic you will:
 2. Add a deployment registry
 
 # 1. Connect your IDE's Codewind extension to your remote instance of Codewind
-
 
 1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
 

@@ -12,6 +12,7 @@ order: 2
 
 # Deploying Codewind components individually for a Codewind remote deployment
 
+
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
