@@ -17,7 +17,7 @@ Codewind includes a ready-to-use devfile with its plug-ins. Complete the followi
 2. Go to **Workspaces** and click **Add Workspace**.
 3. Click **Import Devfile**.
 4. From **Source**, click **YAML**.
-5. Go to the link, [codewind-che-plugin/0.9.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml) and copy and paste the contents into the YAML text box in your Che workspace.
+5. Go to the link [codewind-che-plugin/0.9.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/devfiles/0.9.0/devfile.yaml) and copy and paste the contents into the YAML text box in your Che workspace.
 6. Click **Create & Open**.
 
 For more sample devfiles, see [`codewind-templates/devfiles/`](https://github.com/kabanero-io/codewind-templates/tree/master/devfiles).
