@@ -49,19 +49,6 @@
       - title: 'Installing Codewind for IntelliJ'
         url: intellij-getting-started.html
 
-- title: 'Using Codewind remotely'
-  children:
-    - title: 'Overview: Using Codewind remotely'
-      url: remote-jane-overview.html
-    - title: 'Connecting your IDE to remote Codewind'
-      children:
-      - title: 'Connecting VS Code to remote Codewind'
-        url: remotedeploy-vscode.html
-      - title: 'Connecting Eclipse to remote Codewind'
-        url: remotedeploy-eclipse.html
-      - title: 'Creating and importing projects'
-        url: remotedeploy-projects-vscode.html
- 
 - title: 'Deploying Codewind remotely'
   children:   
     - title: 'Overview: Deploying Codewind remotely'
@@ -76,7 +63,20 @@
         url: remotedeploy-existingkeycloak.html
       - title: 'Removing a remote deployment'
         url: remote-removing.html
-      
+
+- title: 'Using Codewind remotely'
+  children:
+    - title: 'Overview: Using Codewind remotely'
+      url: remote-codewind-overview.html
+    - title: 'Connecting your IDE to remote Codewind'
+      children:
+      - title: 'Connecting VS Code to remote Codewind'
+        url: remotedeploy-vscode.html
+      - title: 'Connecting Eclipse to remote Codewind'
+        url: remotedeploy-eclipse.html
+      - title: 'Creating and importing projects'
+        url: remotedeploy-projects-vscode.html
+       
 - title: 'Working with templates'
   url: workingwithtemplates.html
 

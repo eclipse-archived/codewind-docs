@@ -4,7 +4,7 @@ title: Overview Using Codewind remotely
 description: Overview Using Codewind remotely
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: remote-jane-overview
+permalink: remote-codewind-overview
 type: document
 ---
 
