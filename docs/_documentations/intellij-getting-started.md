@@ -57,7 +57,9 @@ Complete the prerequisites and choose to install Codewind on IntelliJ with eithe
 8. To access the Codewind view, click the **Codewind** tab. From the Codewind view, right-click your project to open an application, start a build, and more.
 
 ## Creating more projects from templates
-If you have an IntelliJ project already open, you can create additional projects by either going to **File**>**New**>**Project...**, or by right-clicking on the **Local** node in the Codewind view and clicking **New Project...**, then following the steps above.
+If you have an IntelliJ project already open, you can create more projects.
+1. Either go to **File**>**New**>**Project...** or right-click the **Local** node in the Codewind view.
+2. Then, click **New Project...** and continue with creating a Codewind project by following the steps in [Creating your first project from a template](#creating-your-first-project-from-a-template).
 
 ## Making a code change
 1. From a project, open the file that you want to edit, for example, **Project1**>**src**>**main**>**java**>**application**>**rest**>**v1**>**example**.
