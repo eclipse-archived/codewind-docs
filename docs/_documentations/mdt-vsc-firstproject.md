@@ -13,7 +13,7 @@ parent: mdt-vsc-overview
 <br/>
 To create your first project:
 
-1\. Click on the prompt in the **CODEWIND** window.
+1\. Click on the prompt in the **Codewind** window.
 
 ![](dist/images/createproject.png)
 
@@ -37,11 +37,11 @@ To create your first project:
 
 ![](dist/images/allbuilt.png)
 
-7\. To view your running application, click on the project name in the **CODEWIND** window. 
+7\. To view your running application, click on the project name in the **Codewind** window. 
 
 ![](dist/images/launch.png)
 
-8\. Then click the **Open App** icon.
+8\. Then click the **Open Application** icon.
 ![](dist/images/launchicon.png)
 
 This icon launches your web browser and displays your application.
