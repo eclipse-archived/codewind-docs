@@ -17,7 +17,7 @@ Ensure that you have performed all prerequisites detailed [here](remote-overview
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
 
-If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind by instead following the instructions for [Deploying Codewind with an existing keycloak](remotedeloy-existingkeycloak)
+If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind by instead following the instructions for [Deploying Codewind with an existing keycloak](remotedeploy-existingkeycloak.html)
 
 # Objectives
 
