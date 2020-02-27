@@ -26,7 +26,7 @@ Curious? [Learn more](remote-overview.html)!
 
 **OpenShift Do (odo)**
 - You can now easily import existing projects into Codewind and [use odo](https://github.com/eclipse/codewind/issues/1115) to build and deploy projects to your OpenShift or OKD cluster.
-- Codewind now [supports Java templates](https://github.com/eclipse/codewind/issues/450), and Java projects can build and deploy after they have been [configured](mdt-che-odo-support.html).
+- Codewind now [supports Java templates](https://github.com/eclipse/codewind/issues/450), and Java projects can build and deploy after they have been [configured](che-odo-support.html).
 
 **Docker**
 - You can now specify any [Docker registry secret](https://github.com/eclipse/codewind/issues/1178) required by Codewind within the Codewind extension for the editor.

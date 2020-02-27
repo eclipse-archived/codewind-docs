@@ -27,6 +27,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
+* [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 
 ***
 # Installing Codewind
@@ -144,6 +145,20 @@ Issue link: https://github.com/eclipse/codewind/issues/829
 If you try to create a project on Codewind for Eclipse Che, errors might occur if a PV is unavailable for your cluster.
 
 **Workaround:** Run the `kubectl get pv` command to check that a PV is available for each project that you want to create.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2251
+0.10.0: Issue still present
+-->
+## Codewind unable to deploy projects on IBM Cloud Kubernetes Service (IKS) with Kubernetes 1.15 and earlier
+Codewind cannot deploy Codewind style projects with remote Codewind on IKS and Kubernetes 1.15 and earlier. The projects fail to deploy, and you see the following error:
+```
+Failed to pull image "<image>": rpc error: code = Unknown desc = failed to pull and unpack image "<image>": failed to unpack image on snapshotter overlayfs: failed to extract layer sha256:<hash>: mount callback failed on /var/lib/containerd/tmpmounts/containerd-mount799987480: archive/tar: invalid tar header: unknown
+```
+
+**Workaround:** Upgrade to the latest version of IKS. IKS clusters that run Kubernetes 1.16 and later run a later version of containerd and are not affected by this issue. 
 
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
@@ -307,6 +322,7 @@ If you modify files in MicroProfile projects, sometimes the project gets double 
 ```xml
 <applicationMonitor pollingRate="1000ms" />
 ```
+
 ***
 # Editing your project
 
@@ -522,7 +538,7 @@ For Codewind to work with an Appsody stack image on a private Docker registry, t
 - **Note:** When you view the application log, you might see failures to pull the image during a rebuild. However, Codewind is taking the cached container image from your local machine. If you ever delete that image, you need to pull the image again. You can either create another project from the same stack or manually call a `docker pull` with the required image.
 
 **Remote scenario**
-Follow the instructions in [Adding a container registry in Codewind](mdt-che-setupregistries.html).
+Follow the instructions in [Adding a container registry in Codewind](che-setupregistries.html).
 
 ***
 # OpenShift Do (odo) with Codewind
@@ -689,3 +705,17 @@ The following workaround applies to Eclipse. Add the configuration element to th
                 </configuration>
                 ....             
 ```
+
+***
+# Setting Codewind server log levels
+
+<!--
+Action/Topic: Setting Codewind server log levels
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1251
+Info added in 0.10.0.
+-->
+## Assisting with problem determination by raising the default Codewind server log level
+To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
+- In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
+- In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.

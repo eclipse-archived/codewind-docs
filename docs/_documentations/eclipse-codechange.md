@@ -4,10 +4,10 @@ title: "Making a code change with Eclipse"
 description: "Making a code change with Eclipse"
 keywords: introducing, introduction, overview, tools, get, getting, start, started, install, vscode, visual, studio, code, Codewind for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace,installing Codewind for VS Code
 duration: 1 minute
-permalink: mdt-eclipse-codechange
+permalink: eclipse-codechange
 type: document
 order: 1
-parent: mdt-vsc-overview
+parent: vsc-overview
 ---
 # Making a code change with Eclipse 
 <br/>
@@ -19,15 +19,15 @@ To see this feature in action, make a change to the getting started example.
 
 ![](dist/images/eclipsechangeproject1.png){:width="800px"}
 
-2\. Go to the bottom of the file to find the lines.
+2\. In the file, find the `Congratulations!` line.
 
 ![](dist/images/eclipsechangeproject2.png)
 
-3\. Change the heading from *Congratulations* to *I did this* and save the file.
+3\. Change the heading from `Congratulations` to `I did this` and save the file.
 
 ![](dist/images/eclipsechangeproject3.png)
 
-4\. Click the **Open App**
+4\. Click the **Open Application**
 ![](dist/images/eclipseopenprojecticon.png)
 icon to show your code change running.
 

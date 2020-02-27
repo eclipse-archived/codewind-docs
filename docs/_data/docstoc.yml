@@ -7,35 +7,35 @@
     - title: 'VS Code'
       children:
       - title: 'Installing Codewind for VS Code'
-        url: mdt-vsc-getting-started.html
+        url: vsc-getting-started.html
       - title: 'Creating your first VS Code Codewind project'
-        url: mdt-vsc-firstproject.html
+        url: vsc-firstproject.html
       - title: 'Making a code change with VS Code'
         url: vsc-codechange.html
     - title: 'Eclipse'
       children:
       - title: 'Installing Codewind for Eclipse'
-        url: mdt-eclipse-getting-started.html
+        url: eclipse-getting-started.html
       - title: 'Creating your first Eclipse Codewind project'
-        url: mdt-eclipse-firstproject.html
+        url: eclipse-firstproject.html
       - title: 'Making a code change with Eclipse'
-        url: mdt-eclipse-codechange.html
+        url: eclipse-codechange.html
     - title: 'Eclipse Che'
       children:
       - title: 'Installing Eclipse Che for Codewind'
-        url: mdt-che-installinfo.html
+        url: che-installinfo.html
       - title: 'Adding a container registry in Codewind'
-        url: mdt-che-setupregistries.html
+        url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
-        url: mdt-che-createcodewindworkspace.html
+        url: che-createcodewindworkspace.html
       - title: 'Creating your first project with Codewind for Eclipse Che'
-        url: mdt-che-createfirstproject.html
+        url: che-createfirstproject.html
       - title: 'Configuring Codewind for Tekton pipelines'
-        url: mdt-che-tektonpipelines.html
+        url: che-tektonpipelines.html
       - title: 'Using Codewind from the Che Theia IDE'
-        url: mdt-che-usingtheia.html
+        url: che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
-        url: mdt-che-odo-support.html         
+        url: che-odo-support.html         
       - title: 'Adding the OpenShift internal registry with Codewind'
         url: openshiftregistry.html
       - title: 'Support for multiple users'
@@ -43,11 +43,11 @@
       - title: 'Viewing logs using Kibana in IBM Cloud Private'
         url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
-        url: mdt-che-uninstall.html
+        url: che-uninstall.html
     - title: 'IntelliJ'
       children:
       - title: 'Installing Codewind for IntelliJ'
-        url: mdt-intellij-getting-started.html
+        url: intellij-getting-started.html
 
 - title: 'Using Codewind remotely'
   children:

@@ -4,7 +4,7 @@ title: Installing Eclipse Che for Codewind
 description: Installing Eclipse Che for Codewind
 keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
 duration: 1 minute
-permalink: mdt-che-installinfo
+permalink: che-installinfo
 type: document
 ---
 
@@ -53,4 +53,4 @@ Codewind needs to run as privileged and as root because it builds container imag
 1. To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<che namespace>:che-workspace`.
 2. To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<che namespace>:che-workspace`.
 
-Next step: [Adding registries in Che](mdt-che-setupregistries.html)
+Next step: [Adding registries in Che](che-setupregistries.html)
