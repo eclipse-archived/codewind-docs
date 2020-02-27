@@ -413,24 +413,6 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
-## A project build error appears after you create an initial project
-If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error after you create the initial project.
-
-**Workaround** Complete the following instructions to work around the error:
-1. Right-click the project and select **Show Log Files**>**Show All**.
-2. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
-3. Wait until the cache completes. You can wait until the Project status is `Running`, or, if you use the MicroProfile template, you can wait until the `Liberty defaultServer` starts.
-4. Right-click the **Project** from the Project Explorer and select **Maven**>**Update Project...**.
-5. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
-
-After you create the initial project and set the `.m2` cache, new projects begin to be configured properly.
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind-docs/issues/64
-18.10:
--->
 ## An Unknown error appears on line one of the pom.xml file
 If you use an Eclipse IDE for Enterprise Developer EPP prior to version 2019.06, you might see an `Unknown` validation error in the `pom.xml` file.
 
@@ -460,11 +442,11 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://githu
 If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, `Failed to attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
 
 **Workaround** Run the `Attach Debugger` action manually:
-1. After you create a project, wait for VS Code to display, `Running [Build succeeded]`.
+1. After you create a project, wait for VS Code to display the project's state as `Running`.
 2. Then, right-click the project and select **Restart in Debug Mode**.
 3. Allow the process to finish. It fails, and a connection exception window appears.
 4. The `Restarting <my_project> into debug mode` message is displayed. Wait for this restart notification to disappear.
-5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar, or if the project's state shows `[Debugging][Build Succeeded]`.
+5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar, or if the project's state shows `Debugging`.
 
 <!--
 Action/Topic: Appsody with Codewind
