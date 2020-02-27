@@ -34,7 +34,7 @@ Once complete, the following screen shows your application is built and running.
 
 ![](dist/images/eclipsecreateproject5.png){:width="800px"}
 
-6\. To view your running application, click the **Open Application** icon.
+6\. To view your running application, select it in the Codewind Explorer view and click the **Open Application** icon.
 ![](dist/images/eclipseopenprojecticon.png)
 
 This icon launches your web browser and displays your application.
