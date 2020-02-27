@@ -439,44 +439,14 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://githu
 18.10:
 -->
 ## Starting in debug mode results in failure to attach the debugger
-If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, `Failed to attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
+If you work with Appsody projects in Codewind, and if you restart the project in debug mode, the first attempt to attach the debugger might fail.
 
-**Workaround** Run the `Attach Debugger` action manually:
+**Workaround** Run the `Attach Debugger` action manually. Below are sample steps to follow in VS Code. The steps to manually attach the debugger in other IDEs will be similar:
 1. After you create a project, wait for VS Code to display the project's state as `Running`.
 2. Then, right-click the project and select **Restart in Debug Mode**.
 3. Allow the process to finish. It fails, and a connection exception window appears.
 4. The `Restarting <my_project> into debug mode` message is displayed. Wait for this restart notification to disappear.
 5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar, or if the project's state shows `Debugging`.
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind-docs/issues/92
-18.10:
--->
-## Appsody mount errors on Windows Enterprise
-If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`:
-```
-[Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
-```
-
-**Workaround:** Configure the Maven `.m2` cache to be outside of your home directory. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
-- Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind/issues/239
-18.10:
--->
-## Attempts fail to attach the debugger
-If you work on Appsody projects on macOS, and if you restart an extension project in debug mode, the first attempt to attach the debugger might fail. Currently, a delay does not occur for project extensions.
-
-These steps reproduce the issue:
-1. Set up a project extension environment and create a Microprofile project.
-2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
-
-**Workaround** Run the `Attach Debugger` action manually.
 
 <!--
 Codewind version: 0.6.0
