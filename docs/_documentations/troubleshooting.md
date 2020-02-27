@@ -392,7 +392,7 @@ Issue link: https://github.com/eclipse/codewind/issues/498
 18.10:
 -->
 ## Appsody and Docker Desktop on Windows 10
-When you use Appsody, configure Docker Desktop to access the shared drive that contains your home directory and that you associated with the shared drive. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the local host and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
+When you use Appsody, configure Docker Desktop to access your C: drive that contains your `codewind-data` directory. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the local host and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
 
 **Workaround** Complete the instructions in [Special notes about Appsody and Docker Desktop on Windows 10](https://github.com/gcharters/kabanero-dev-getting-started/blob/master/docker-windows-aad.md).
 
@@ -405,7 +405,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## Node.js and Swift templates remain in the starting state
 The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, its status cannot be detected. These templates do not have a server and are intended to help you implement your own server.
 
-**Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running.
+**Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running. Alternately, you can also temporarily [stop Codewind from continueously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
 <!--
 Action/Topic: Appsody with Codewind
