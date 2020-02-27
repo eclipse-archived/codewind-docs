@@ -12,7 +12,7 @@ parent: developing-projects
 
 # Project settings
 
-Project settings tell Codewind more about the specifics of your project and can affect the status or behavior of your application. Project settings can be configured from the `Project Overview` page that is accessible from a project's context menu. You can also find the project settings in the `.cw-settings` file of the project which you can edit from the IDE. The workspace automatically picks up changes to these fields.
+Project settings tell Codewind more about the specifics of your project and can affect the status or behavior of your application. Project settings can be configured from the `Project Overview` page that is accessible from a project's context menu. You can also find the project settings in the `.cw-settings` file of the project, which you can edit from the IDE. The workspace automatically picks up changes to these fields.
 
 Supported project settings include:
 * [Context root](#context-root)
@@ -55,7 +55,7 @@ Supported project settings include:
 
 ## **Internal debug port**
 `internalDebugPort: <string>`
-- Only applicable to Microprofile, Spring and Node.js projects.
+- Only applicable to Microprofile, Spring, and Node.js projects.
 - Only applicable to a local installation of Codewind.
 - Can be assigned to a non-exposed port, then Codewind helps expose the port for you.
 - If the project is already in debug mode, restart the project in debug mode in order to pick up the new debug port.
@@ -84,4 +84,4 @@ Supported project settings include:
 `statusPingTimeout: <string>`
 - This value is the total number of pings used by Codewind to determine if the project has timeout issues during the starting state.
 - Each ping takes 2 seconds. For example, if the value is set to 30 seconds, the timeout is 60 seconds.
-- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects, and `30` (1 minute) for all other project types.  
+- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects and `30` (1 minute) for all other project types.  

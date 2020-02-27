@@ -20,7 +20,7 @@ Codewind provides preconfigured, containerized project templates covering severa
 
 ## Managing templates
 
-Template management in Codewind is provided by the **Template Source Manager**. To open the **Template Source Manager**, right-click **Local** then **Manage Template Sources**. The **Template Source Manager** appears. 
+Template management in Codewind is provided by the **Template Source Manager**. To open the **Template Source Manager**, right-click **Local**, then **Manage Template Sources**. The **Template Source Manager** appears. 
 
 - **Note:** **Template Source Manager** is the name used in VS Code. Eclipse uses the name **Manage Template Sources**.
 
@@ -31,16 +31,16 @@ GitHub repository. Three examples are included in Codewind for your reference:
 * Appsody Stacks to develop applications with sharable technology stacks. 
 
 Use the **Template Source Manager** to perform the following actions:
-1. To add a new template source to the table, click **Add New**. For more information, see [Adding your own template sources to Codewind](#adding-your-own-template-sources-to-codewind).
+1. To add a new template source to the table, click **Add New**. For more information, see [Adding your template sources to Codewind](#adding-your-template-sources-to-codewind).
 2. To remove non-default template sources, click the trash icon. 
 3. Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
     * Use template source templates to add style projects to Codewind. 
     * For example, before adding an Appsody project, enable at least one Appsody-style template. 
 4. To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
 
-## Adding your own template sources to Codewind
+## Adding your template sources to Codewind
 
-Add your own template sources to use Codewind with the framework of your choice. 
+Add your template sources to use Codewind with the framework of your choice. 
 1. Ensure your template source has an `index.json` file containing information about your new templates. Follow the same format as the `index.json` file found in [https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json](https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json).
 2. In the **Template Source Manager**, click **Add New**.
 3. Enter the URL to your template source's index file and click `Enter` to confirm. 

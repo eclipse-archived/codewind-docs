@@ -97,7 +97,7 @@
   children:
     - title: 'Understanding the Metrics Dashboard'
       url: 'metrics-dashboard.html'
-    - title: 'Monitoring applications with the performance dashboard'
+    - title: 'Monitoring applications with the Performance Dashboard'
       url: performance.html
 
 - title: 'OpenAPI Tools'
