@@ -19,10 +19,13 @@ Complete the prerequisites and install Codewind on IntelliJ.
 - Install Docker.
 - If you use Linux, also install Docker Compose.
 
-### Installing
-1. Go to the Codewind page on the [JetBrains website](https://plugins.jetbrains.com/plugin/13839-codewind).
-2. Click **Get**.
-3. Download the latest release of Codewind.
+### Installing Codewind from the IntelliJ IDE
+1. From IntelliJ, open either **Preferences** or **Settings**. A new window appears.
+   - On macOS, go to **Main**>**Preferences**.
+   - On Windows or Linux, go to **File**>**Settings**.
+2. Click **Plugins**.
+3. Click the **Marketplace** tab.
+4. In the search field, type `codewind`.  The `Codewind` plug-in appears. Click **Install**.
 
 ## Creating your first project from a template
 1. Start IntelliJ. From the welcome page, click **Create New Project**. The **New Project** window opens.
