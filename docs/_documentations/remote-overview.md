@@ -12,7 +12,7 @@ type: document
 
 Codewind can be used in one of three ways - locally, [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
 
-To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-jane-overview.html).
+To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-codewind-overview.html).
 
 ## What you will learn
 

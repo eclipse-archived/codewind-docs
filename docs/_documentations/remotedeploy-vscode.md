@@ -12,7 +12,7 @@ order: 2
 
 # Connecting VS Code to remote Codewind
 
-Ensure you have [satisfied all prequisites](./remote-jane-overview.html). 
+Ensure you have [satisfied all prequisites](./remote-codewind-overview.html). 
 
 # Objectives
 
