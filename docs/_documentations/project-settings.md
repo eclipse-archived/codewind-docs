@@ -25,7 +25,7 @@ Supported project settings include:
 * [Paths to ignore for file changes](#paths-to-ignore-for-file-changes)
 * [Project status ping timeout](#project-status-ping-timeout)
 
-## **Context root**
+## Context root
 `contextRoot: <string>`
 - Codewind uses the value to determine the project state.
 - When the Open Application action is used, it uses the value as the initial endpoint. 
@@ -33,7 +33,7 @@ Supported project settings include:
 - If the health check endpoint is set, the context root is not used to determine the project state.
 - If the value is not set, the default value is `/`.
 
-## **Health check endpoint**
+## Health check endpoint
 `healthCheck: <string>`
 - Codewind uses the value to determine the project state.
 - Codewind expects to use this value for the application health check endpoint.
@@ -41,19 +41,19 @@ Supported project settings include:
 - If the health check endpoint is set, the context root is not used to determine the project state. 
 - If the value is not set, the default value is `/`.
 
-## **HTTPS application**
+## HTTPS application
 `isHttps: <boolean>`
 - This value tells Codewind to use the HTTPS protocol when Codewind detects the application status, and also when Codewind launches the application in a browser.
 - If your application supports HTTPS, set `isHttps` to `true`, and Codewind uses HTTPS instead of HTTP to detect the application status and to open browser URLs.
 - The default value of this setting is `false`.
 
-## **Internal application port**
+## Internal application port
 `internalPort: <string>`
 - Codewind gets the port from the container information, so by default, the port is the same as the one exposed in Dockerfile. 
 - Codewind uses the value in conjunction with the context root to determine the project state.
 - If an incorrect port is set, the project continuously pings the wrong endpoint, keeping the project stuck in the starting state.
 
-## **Internal debug port**
+## Internal debug port
 `internalDebugPort: <string>`
 - Only applicable to Microprofile, Spring and Node.js projects.
 - Only applicable to a local installation of Codewind.
@@ -61,26 +61,26 @@ Supported project settings include:
 - If the project is already in debug mode, restart the project in debug mode in order to pick up the new debug port.
 - If the project is in run mode, the next restart picks up and uses the new debug port and completes a debug mode.
 
-## **Maven profiles**
+## Maven profiles
 `mavenProfiles: <string[]>`
 - Only applicable to Microprofile and Spring projects.
 - Set a list of profiles if your project requires to use additional Maven profiles when Codewind issues Maven commands.
 - Do not overwrite nor remove the microclimate profile.
 - Maven profiles can be used in conjunction with Maven properties.
 
-## **Maven properties**
+## Maven properties
 `mavenProperties: <string[]>`
 - Only for Microprofile and Spring projects.
 - Maven properties can be entered in the form `key=value`.
 - Do not overwrite the microclimate property.
 - Maven properties can be used in conjunction with Maven profiles.
 
-## **Paths to ignore for file changes**
+## Paths to ignore for file changes
 `ignoredPaths: <string[]>`
 - A list of file paths that indicate a build must be triggered on file change events in relation to the paths.
 - Each item is expected to be a regex (`"*/node_modules*"` ) or a path relative to the project's root directory (`"/README.md"`).
 
-## **Project status ping timeout**
+## Project status ping timeout
 `statusPingTimeout: <string>`
 - This value is the total number of pings used by Codewind to determine if the project has timeout issues during the starting state.
 - Each ping takes 2 seconds. For example, if the value is set to 30 seconds, the timeout is 60 seconds.
