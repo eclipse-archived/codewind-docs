@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Deploying Codewind with an existing keycloak
-description: Deploying Codewind with an existing keycloak
+title: Deploying remote Codewind with an existing keycloak
+description: Deploying remote Codewind with an existing keycloak
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-existingkeycloak
@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Deploying Codewind with an existing keycloak for a Codewind remote deployment
+# Deploying remote Codewind with an existing keycloak
 
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).
 

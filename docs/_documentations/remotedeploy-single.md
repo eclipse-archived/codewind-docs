@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Deploying Codewind components individually
-description: Deploying Codewind components individually
+title: Deploying remote Codewind components individually
+description: Deploying remote Codewind components individually
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-single
@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Deploying Codewind components individually for a Codewind remote deployment
+# Deploying remote Codewind components individually
 
 
 Ensure that you have performed all prerequisites detailed [here](remote-overview.html).

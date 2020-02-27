@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Connecting VS Code to a remote deployment
-description: Connecting VS Code to a remote deployment
+title: Connecting VS Code to remote Codewind
+description: Connecting VS Code to remote Codewind
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-vscode
@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Connecting VS Code to your remote Codewind instance
+# Connecting VS Code to remote Codewind
 
 Ensure you have [satisfied all prequisites](./remote-jane-overview.html). 
 
