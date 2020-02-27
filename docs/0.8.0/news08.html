@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112407000-2');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS8HHSF');
+</script>
+<!-- End Google Tag Manager -->
+
+<head>
+    	<base href="/codewind/0.8.0/" />
+	<title>New for Codewind 0.8.0 | Codewind</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="New for Codewind 0.8.0">
+	<meta name="keywords" content="news, new, updates, update, version, hybrid"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/docs.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css">
+	
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8HHSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="main">
+    <!-- Bootstrap NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light cw-banner fixed-top" aria-label="topnav">
+    		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img alt="Codewind logo image"  title="Codewind logo image" src="images/header-logo.svg" class="cw-header-logo" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end cw-navbar-padding" id="navbarNavDropdown">
+            <ul class="navbar-nav cw-navbar-nav">
+                
+                <li class="nav-item cw-navbar-item cw-header-link-docs">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="gettingstarted.html">Docs</a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="news.html">News</a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="https://medium.com/codewind">Blog</a>
+                </li>
+                
+                 <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://github.com/eclipse/codewind"><img alt="github icon"  class="banner-image"  title="github icon" data-toggle="tooltip" data-placement="top" id="cw_github_stars" title="..." src="images/banner/github.svg"/></a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  class="banner-image" title="twitter icon" src="images/banner/twitter.png"/></a>
+                </li>
+                 <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  class="banner-image"  title="mattermost icon" src="images/banner/mattermost.png"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  class="banner-image" title="youtube icon" src="images/banner/youtube.png"/></a>
+                </li>
+               
+               
+                <!-- li class="nav-item cw-navbar-item" id="download-li">
+                    <button onClick="window.location.href='https://microclimate.dev/download/codewind';" type="button" class="btn cw-download-button">Download</button>
+                    <a href="https://microclimate.dev/download/codewind" class="nav-link cw-nav-link cw-download-link" href="#">Download</a>
+                </li>  -->
+
+
+                
+                <!-- Smaller devices menu END -->
+
+            </ul>
+        </div>
+
+    	</nav>
+    	<!-- End Bootstrap NavBar -->
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    
+    
+
+    <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
+        <!-- Bootstrap List Group -->
+        <ul class="list-group sticky-top bg-light cw-sticky-offset">
+            
+            <!-- Hard coded TOC -->
+            <!-- Start single page getting started -->
+            
+            
+		      
+			  
+				<a href="news08.html" 
+				    
+				    
+					
+					class="cw-current-page bg-light list-group-item list-group-item-action">
+					Codewind 0.8.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="news07.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind 0.7.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="news06.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind 0.6.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="news05.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind 0.5.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="news04.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind 0.4.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="news03.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind 0.3.0
+	            </a>
+	            
+			  
+			
+		      
+			  
+				<a href="newstechpreview.html" 
+				    
+				    
+					
+					class="bg-light list-group-item list-group-item-action">
+					Codewind tech preview
+	            </a>
+	            
+			  
+			
+			
+			<!-- END hard coded TOC -->
+
+            
+        </ul>
+        <!-- List Group END-->
+    </div>
+    <!-- sidebar-container END -->
+    <!-- MAIN -->
+    <div id="content-container">
+    		<div class="py-5 px-5">
+    		    <div class="cw-docs-spacer"></div>
+        		<div role="main"><h2 id="codewind-080">Codewind 0.8.0</h2>
+<p>Thursday 23 January 2020</p>
+
+<h4 id="-new-features-and-highlights-for-080-">✨ New Features and Highlights for 0.8.0 ✨</h4>
+
+<p><strong>Appsody</strong></p>
+<ul>
+  <li>The <code class="highlighter-rouge">codewind-appsody-extension</code> supports passing environment options to the Appsody CLI using <a href="https://github.com/eclipse/codewind/issues/1401"><code class="highlighter-rouge">--docker-options</code></a>.</li>
+</ul>
+
+<p><strong>Che</strong></p>
+<ul>
+  <li>The <a href="https://github.com/eclipse/codewind/issues/1320"><code class="highlighter-rouge">codewind-che-plugin</code> supports Helm 3</a>, and the insecure non-default tiller was removed.</li>
+</ul>
+
+<p><strong>IDEs (Both Eclipse and VS Code)</strong></p>
+<ul>
+  <li>Detailed project application status and errors are displayed in the UI in <a href="https://github.com/eclipse/codewind-eclipse/issues/236">Eclipse</a> and <a href="https://github.com/eclipse/codewind/issues/1391">VS Code</a>.</li>
+</ul>
+
+<p><strong>VS Code</strong></p>
+<ul>
+  <li>Push registry is no longer required unless a <a href="https://github.com/eclipse/codewind/issues/1469">Codewind-style template source is enabled</a>.</li>
+  <li>If you <a href="https://github.com/eclipse/codewind/issues/1421">switch push registries, a warning appears</a> that your namespace will be lost.</li>
+  <li>You can <a href="https://github.com/eclipse/codewind/issues/1621">cancel image registry creation during the <code class="highlighter-rouge">namespace</code> step, and you can use the <code class="highlighter-rouge">Esc</code> key to cancel the whole process</a>.</li>
+  <li>You can navigate the <a href="https://github.com/eclipse/codewind/issues/1562">remote connection settings page with keyboard shortcuts</a>.</li>
+</ul>
+
+<h4 id="list-of-fixes">List of Fixes</h4>
+<ul>
+  <li>Updated Node.js Express server generator to 4.2.2 in <a href="https://github.com/eclipse/codewind-openapi-eclipse/pull/83">Eclipse</a> and <a href="https://github.com/eclipse/codewind-openapi-vscode/pull/77">VS Code</a></li>
+  <li><a href="https://github.com/eclipse/codewind/issues/1666">Updated Appsody CLI to v0.5.4 for the <code class="highlighter-rouge">codewind-appsopdy-extension</code></a></li>
+  <li>Image Registry Manager push registry buttons are now <a href="https://github.com/eclipse/codewind/issues/1490">toggles</a>.</li>
+  <li>In Codewind 0.7.0, an incorrect network error appeared when attempting to connect to an uninstalled or failed remote Codewind instance: <code class="highlighter-rouge">Authentication service unavailable</code>. However, this <a href="https://github.com/eclipse/codewind/issues/1547">network error is actually a connection error</a>. This inaccuracy is corrected.</li>
+  <li>The remote settings page in VS Code is more <a href="https://github.com/eclipse/codewind-vscode/pull/364">responsive when the window is resized</a>.</li>
+  <li><a href="https://github.com/eclipse/codewind/issues/1641">VS Code no longer stores the remote connection in extension data</a>. VS Code now recognizes remote connections created in the Eclipse IDE.</li>
+</ul>
+</div>
+        </div>
+        
+    </div>
+    
+</div>
+<!-- footer row -->
+<footer>
+
+<div id="footer-div-mobile">
+        
+        <div class="row">
+	        <div class="col-sm-12 text-center">
+		        <span>Useful Links:</span>
+		        <br/><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+		    </div>
+        </div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        
+        <div class="cw_footer_display_icons row">
+    		<div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermose icon"  title="mattermose icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    
+                    <a href="http://www.eclipse.org"><img class="cw-logo-eclipse-mobile" alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+		</div>
+		
+    </div>
+    
+    
+    <div class="row cw-footer-desktop" id="footer-div">
+        <div class="cw-footer-left">
+        		<div class="px-5 cw-font-12>
+	        <span class="cw-font-14">Useful Links:</span>
+	        <br/><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+	        </div>
+	        
+        </div>
+        <div class="cw-footer-border-right"></div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"   title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		<div class="cw-footer-border-right"></div>
+		<div class="cw-footer-right cw-footer-same-height cw-footer-vcenter">
+		<div class="cw-footer-eclipse-img cw-footer-same-height px-5 ">
+	        
+		<a href="http://www.eclipse.org">
+		<img alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/>
+		</a>
+	        </div>
+		</div>
+    </div>
+</footer>
+<!-- footer row END -->
+<!-- Main Col END -->
+ <!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+</script>
+
+<script src="js/jquery.matchHeight-min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/docs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-docker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-json.min.js"></script>
+
+</div>
+</body>
+
+</html>

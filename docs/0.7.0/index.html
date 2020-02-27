@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112407000-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112407000-2');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KS8HHSF');
+</script>
+<!-- End Google Tag Manager -->
+
+<head>
+    	<base href="/codewind/0.7.0/" />
+	<title>Codewind</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eclipse Codewind">
+	<meta name="keywords" content="Eclipse, docker, container, devops, applications, development, iteration, microservices, cloud, services, rapid, integrated"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/docs.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css">
+	
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8HHSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div class="main">
+    <!-- Bootstrap NavBar -->
+	<nav class="navbar navbar-expand-lg navbar-light cw-banner"  aria-label="topnav">
+    		        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">
+            <img alt="Codewind logo image"  title="Codewind logo image" src="images/header-logo.svg" class="cw-header-logo" alt="">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end cw-navbar-padding" id="navbarNavDropdown">
+            <ul class="navbar-nav cw-navbar-nav">
+                
+                <li class="nav-item cw-navbar-item cw-header-link-docs">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="gettingstarted.html">Docs</a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="news.html">News</a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link-news">
+                    <a class="nav-link cw-nav-link cw-header-link-text" href="https://medium.com/codewind">Blog</a>
+                </li>
+                
+                 <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://github.com/eclipse/codewind"><img alt="github icon"  class="banner-image"  title="github icon" data-toggle="tooltip" data-placement="top" id="cw_github_stars" title="..." src="images/banner/github.svg"/></a>
+                </li>
+                
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  class="banner-image" title="twitter icon" src="images/banner/twitter.png"/></a>
+                </li>
+                 <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  class="banner-image"  title="mattermost icon" src="images/banner/mattermost.png"/></a>
+                </li>
+                <li class="nav-item cw-navbar-item cw-header-link">
+                    <a class="nav-link cw-nav-link" href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  class="banner-image" title="youtube icon" src="images/banner/youtube.png"/></a>
+                </li>
+               
+               
+                <!-- li class="nav-item cw-navbar-item" id="download-li">
+                    <button onClick="window.location.href='https://microclimate.dev/download/codewind';" type="button" class="btn cw-download-button">Download</button>
+                    <a href="https://microclimate.dev/download/codewind" class="nav-link cw-nav-link cw-download-link" href="#">Download</a>
+                </li>  -->
+
+
+                
+                <!-- Smaller devices menu END -->
+
+            </ul>
+        </div>
+
+    	</nav>
+    	<!-- End Bootstrap NavBar -->
+<div role="main">
+<!-- Hero -->
+<div id="hero-body">
+    <div id="hero-main">
+        <div id="hero-main-text">
+            <div id="hero-main-title"><span>Eclipse Code</span>wind</div>
+            <div id="hero-main-headline">Container development unleashed</div>
+            <div id="hero-main-fulltext">Codewind simplifies and enhances development in containers by extending
+                industry standard IDEs with
+                features to write, debug, and deploy cloud-native applications. Get started quickly with
+                templates
+                or samples, or pull in your applications and let Codewind get them cloud ready. </div>
+            <aside aria-label="about Longboards">
+            	<button onclick="location.href='gettingstarted.html'"  type="button" id="get-started-button" class="btn">Get started</button>
+        		</aside>
+        </div>
+
+        <div id="hero-main-hero">
+            <div id="hero-main-hero-vscode">
+                <div>VS Code</div>
+                <div><img alt="vscode ide"  title="vscode ide" src="images/hero-vscode-noshadow.png"></div>
+            </div>
+            <div id="hero-main-hero-eclipse">
+                <div>Eclipse</div>
+                <div><img alt="eclipse ide"  title="eclipse ide" src="images/hero-eclipse-noshadow.png"></div>
+            </div>
+            <div id="hero-main-hero-che">
+                <div class="text-right">Eclipse Che</div>
+                <div><img alt="che ide"  title="che ide" src="images/hero-che-noshadow.png"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero-city">
+        <img alt="city background"   title="city background" id="hero-city-svg" src="images/hero-city.svg" /><img alt="city background"   title="city background" id="hero-city-svg-2" src="images/hero-city.svg" /><img alt="city background"   title="city background" id="hero-city-svg-3" src="images/hero-city.svg" />
+    </div>
+    <div id="hero-turbine">
+            <img alt="turbine image"   title="turbine image" id="hero-turbine-svg" src="images/hero-turbines.svg" />
+    </div>
+</div>
+
+<!-- end hero -->
+
+
+<!-- value props div -->
+
+
+<div class="row cw-value-props-div-last" id="value-props-div">
+    <div class="col-lg-4 col-md-6 cw-value-props-col cw-getting-started-col text-center">
+
+        <div class="cw-value-props-col-header">Lightweight container
+            development</div>
+        <div class="cw-value-props-div-text">
+            Develop in containers without feeling like you are developing in containers. Quick, iterative
+            development and fast feedback directly in your IDE.
+        </div>
+        <div class="cw-value-props-col-img-holder">
+            <img alt="container image"  title="container image" src="images/container-icon.svg" class="cw-logo" />
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 cw-value-props-col cw-getting-started-col text-center">
+        <div class="cw-value-props-col-header">Leverage existing
+            knowledge</div>
+
+        <div class="cw-value-props-div-text">
+            Code in the tools you use today, for the runtimes and languages you use today.
+        </div>
+        <div class="cw-value-props-col-img-holder">
+            <img alt="knowledge image"  title="knowledge image" src="images/knowledge-icon.svg" class="cw-logo" />
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 cw-value-props-col text-center">
+        <div class="cw-value-props-col-header">Kubernetes gently</div>
+
+        <div class="cw-value-props-div-text">
+            You don't need to be an expert in Kubernetes to deploy your apps! Get started quickly, and learn as
+            you go.
+        </div>
+        <div class="cw-value-props-col-img-holder">
+            <img alt="kubernetes image"  title="kubernetes image" src="images/kubernetes.svg" class="cw-logo" />
+        </div>
+    </div>
+</div>
+
+
+<!-- value props div e end -->
+
+<!-- key features row -->
+<div class="row" id="key-features-div" >
+    <div class="col-md-12 cw-key-features-header text-center">Key features</div>
+    <div class="col-lg-3 col-md-6 cw-getting-started-col text-center">
+
+        <div class="cw-key-features-col-header">Inner loop</div>
+        <div class="cw-key-features-col-text">
+            We understand the artifacts in your application and make the minimal possible change to reflect
+            updates in the running container.
+        </div>
+        <div>
+            <img alt="inner loop image"  title="inner loop image" src="images/inner-loop.svg" class="cw-logo" />
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 cw-getting-started-col text-center">
+
+        <div class="cw-key-features-col-header">Container development
+            everywhere</div>
+        <div class="cw-key-features-col-text">
+            For most developers, working on a desktop is still king. But we also recognize there are times when
+            you might want to run and debug apps directly on Kubernetes. Why choose? We let you use the same
+            tools in local or hosted IDE, and run in local containers or deployed directly on Kubernetes.
+        </div>
+        <div>
+            <img alt="container image"  title="container image" src="images/container2-icon.svg" class="cw-logo" />
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 cw-getting-started-col text-center">
+
+        <div class="cw-key-features-col-header">IDE support
+        </div>
+        <div class="cw-key-features-col-text">
+            Developers often have lifelong connections to their IDEs, which is why we deliver native IDE
+            integration with VS Code, Eclipse, and Eclipse Che. And we aren't stopping there... we're just
+            getting started with plans to support others soon. 
+        </div>
+        <div>
+            <img alt="ide icon"  title="ide icon" src="images/ide-icon.svg" class="cw-logo" />
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 text-center">
+
+        <div class="cw-key-features-col-header">Developer performance
+            monitoring
+
+        </div>
+        <div class="cw-key-features-col-text">
+            Applications are automatically analysed for performance issues. Through configurable load testing,
+            code changes can be made and their impact immediately shown through live and historical performance
+            graphs.
+        </div>
+        <div>
+            <img alt="monitoring icon"  title="monitoring icon" src="images/monitoring-icon.svg" class="cw-logo" />
+        </div>
+    </div>
+    
+    
+</div>
+
+<!-- key features row END -->
+
+<div class="row">
+	<div class="col-xl-6 col-offset-xl-2 col-md-12 col-sm-12">
+		<div class="p-md-5">
+		<span class="cw-youtube-view-font">View the demo</span>
+			<div class="embed-responsive embed-responsive-16by9">
+			    
+				<iframe width="1280" height="720" title="Codewind youtube video" src="https://www.youtube.com/embed/mjADP2_4FBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-6 col-md-12 col-sm-12 cw-v-middle">
+		<div class="p-5 cw-youtube-desc">
+			<span class="cw-youtube-view-font cw-youtube-italic">Containerize existing applications and create new applications in several languages.</span>
+<br/><br/>
+			<span class="cw-youtube-view-font cw-youtube-thin">Leave behind, </span><span class="cw-youtube-view-font cw-youtube-italic cw-youtube-bold">“But it worked on my machine!” </span><span class="cw-youtube-view-font cw-youtube-thin"></span>
+			&nbsp;&nbsp;
+			<img src="images/smile.svg" alt="smile face" class="cw-smile-icon">
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- footer row -->
+<footer>
+
+<div id="footer-div-mobile">
+        
+        <div class="row">
+	        <div class="col-sm-12 text-center">
+		        <span>Useful Links:</span>
+		        <br/><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+		        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+		    </div>
+        </div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        
+        <div class="cw_footer_display_icons row">
+    		<div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermose icon"  title="mattermose icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"  title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center col-md-3 col-sm-6 col-xs-12">
+            <div>
+                <div>
+                    
+                    <a href="http://www.eclipse.org"><img class="cw-logo-eclipse-mobile" alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+		</div>
+		
+    </div>
+    
+    
+    <div class="row cw-footer-desktop" id="footer-div">
+        <div class="cw-footer-left">
+        		<div class="px-5 cw-font-12>
+	        <span class="cw-font-14">Useful Links:</span>
+	        <br/><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org">Eclipse Foundation</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/privacy.php">Privacy policy</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/termsofuse.php">Website terms of use</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal/copyright.php">Copyright agent</a><br/>
+	        <a class="cw-footer-links" href="http://www.eclipse.org/legal">Legal</a><br/>
+	        </div>
+	        
+        </div>
+        <div class="cw-footer-border-right"></div>
+        <div class="cw_footer_display_flex cw-footer-same-height cw-footer-center">
+        <div class="cw_footer_display_icons">
+    		<div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="mailto:codewind-dev@eclipse.org"><img alt="email icon"  title="email icon" src="images/email-icon.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://twitter.com/EclipseCodewind"><img alt="twitter icon"  title="twitter icon" src="images/twitter-logo.svg" class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://github.com/eclipse/codewind"><img alt="github icon"  title="github icon" src="images/github-logo.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class=" cw-footer-col text-center">
+            <div class="cw-logo-mm" >
+                <div class="cw-logo-mm" >
+                    <a href="https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind"><img alt="mattermost icon"  title="mattermost icon" src="images/mattermost-logo.png" class="cw-logo-mm" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="cw-footer-col text-center">
+            <div>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ"><img alt="youtube icon"   title="youtube icon" src="images/youtube-logo-dark.svg"
+                            class="cw-logo" /></a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+		</div>
+		<div class="cw-footer-border-right"></div>
+		<div class="cw-footer-right cw-footer-same-height cw-footer-vcenter">
+		<div class="cw-footer-eclipse-img cw-footer-same-height px-5 ">
+	        
+		<a href="http://www.eclipse.org">
+		<img alt="eclipse icon"  title="eclipse icon" src="images/eclipse.svg"/>
+		</a>
+	        </div>
+		</div>
+    </div>
+</footer>
+<!-- footer row END -->
+<!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+</script>
+
+<script src="js/jquery.matchHeight-min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/docs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-docker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-json.min.js"></script>
+
+</div>
+</body>
+
+</html>
