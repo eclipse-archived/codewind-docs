@@ -4,10 +4,9 @@ title: Uninstalling Codewind for Eclipse
 description: How to uninstall Codewind from Eclipse
 keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for Eclipse, restart Eclipse
 duration: 1 minute
-permalink: mdteclipseuninstall
+permalink: eclipse-uninstall
 type: document
 order: 70
-parent: mdteclipseoverview
 ---
 
 # Uninstalling Codewind from Eclipse

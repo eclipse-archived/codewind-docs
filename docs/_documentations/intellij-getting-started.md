@@ -4,7 +4,7 @@ title: Installing Codewind on IntelliJ
 description: Installing Codewind on IntelliJ
 keywords: install, installing, IntelliJ, Eclipse, Codewind, IDE, plugin, plug-in, settings, creating, project, projects, template, code change, edit, edits, application, removing
 duration: 1 minute
-permalink: mdt-intellij-getting-started
+permalink: intellij-getting-started
 type: document
 ---
 

@@ -4,10 +4,9 @@ title: "Project commands: Tools for VS Code"
 description: "Project commands: Tools for VS Code"
 keywords: tools, vscode, visual, studio, code, commands, project, Codewind Developer Tools for VS Code project commands overview, connection commands, restart, debug
 duration: 1 minute
-permalink: mdt-vsc-commands-project
+permalink: vsc-commands-project
 type: document
 order: 2
-parent: mdt-vsc-commands-overview
 ---
 
 # Project commands: Codewind for VS Code
@@ -129,6 +128,6 @@ The list of supported project settings are:
 
 ***
 
-[Next: Restart and debug](mdt-vsc-commands-restart-and-debug.html)
+[Next: Restart and debug](vsc-commands-restart-and-debug.html)
 
-[Troubleshooting](mdt-vsc-troubleshooting.html)
+[Troubleshooting](troubleshooting.html)

@@ -4,10 +4,9 @@ title: "Installing Codewind for VS Code"
 description: "Installing Codewind for VS Code"
 keywords: introducing, introduction, overview, tools, get, getting, start, started, install, vscode, visual, studio, code, Codewind for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace,installing Codewind for VS Code
 duration: 1 minute
-permalink: mdt-vsc-getting-started
+permalink: vsc-getting-started
 type: document
 order: 1
-parent: mdt-vsc-overview
 ---
 
 # Installing Codewind for VS Code
@@ -27,4 +26,4 @@ parent: mdt-vsc-overview
    
 ![image of Codewind once installed](dist/images/installed.png){:width="800px"}
 
-Next step: [Create your first project](mdt-vsc-firstproject.html)
+Next step: [Create your first project](vsc-firstproject.html)

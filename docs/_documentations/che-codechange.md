@@ -4,7 +4,7 @@ title: Making a code change with Codewind for Eclipse Che
 description: Making a code change with Codewind for Eclipse Che
 keywords: build, deploy, develop, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
-permalink: mdt-che-codechange
+permalink: che-codechange
 type: document
 ---
 

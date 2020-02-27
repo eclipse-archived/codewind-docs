@@ -4,10 +4,9 @@ title: "Installing Codewind for Eclipse"
 description: "Installing Codewind for Eclipse"
 keywords: introducing, introduction, overview, what is, tools, eclipse, getting started, Codewind for Eclipse, work within Eclipse
 duration: 1 minute
-permalink: mdt-eclipse-getting-started
+permalink: eclipse-getting-started
 type: document
 order: 5
-parent: mdteclipseoverview
 ---
 
 # Installing Codewind for Eclipse
@@ -39,4 +38,4 @@ To install Codewind for Eclipse, complete the following steps:
 
 ![image of Codewind once installed](dist/images/eclipseinstall2.png){:width="800px"}
 
-Next step: [Create your first project](mdt-eclipse-firstproject.html)
+Next step: [Create your first project](eclipse-firstproject.html)

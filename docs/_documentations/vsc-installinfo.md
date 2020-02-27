@@ -4,7 +4,7 @@ title: Installing Codewind for VS Code
 description: Installing Codewind for VS Code
 keywords: install, installing, add, adding, tools, VS Code, Eclipse, installing Codewind for VS Code
 duration: 1 minute
-permalink: mdt-vsc-installinfo
+permalink: vsc-installinfo
 type: document
 order: 
 parent: 
@@ -40,7 +40,7 @@ Update your Codewind plug-in without uninstalling the extension.
 5. Wait for the Codewind installation to complete. Codewind starts and is ready to use.
 
 ## Removing containers and images
-To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.html).
+To remove Codewind, see [Uninstalling Codewind from VS Code](vsc-uninstall.html).
 
 ## Troubleshooting
 
@@ -48,6 +48,6 @@ To remove Codewind, see [Uninstalling Codewind from VS Code](mdt-vsc-uninstall.h
 If you don't click **Install** when the **Install** prompt first appears, you can access the notification again. Go to the **Explorer** view, hover the cursor over **Codewind**, and click the switch so that it changes to the **On** position. The **Install** prompt appears.
 
 #### Resetting the installation
-To reset the installation, [uninstall Codewind](mdt-vsc-uninstall.html) and install it again.
+To reset the installation, [uninstall Codewind](vsc-uninstall.html) and install it again.
 
 For more information about troubleshooting Codewind, see the [Troubleshooting page](troubleshooting.html).

@@ -4,7 +4,7 @@ title: Creating your first project with Codewind for Eclipse Che
 description: Creating your first project with Codewind for Eclipse Che
 keywords: build, deploy, install, installing, installation, chart, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
-permalink: mdt-che-createfirstproject
+permalink: che-createfirstproject
 type: document
 ---
 
@@ -27,4 +27,4 @@ The Codewind Project Explorer view shows two statuses.
 2. After the application is built and deployed, the appliction status changes to **Starting**.
 3. When the application is running, the application status changes to **Running**.
 
-Next step: [Making a code change with Codewind for Eclipse Che](mdt-che-codechange.html)
+Next step: [Making a code change with Codewind for Eclipse Che](che-codechange.html)
