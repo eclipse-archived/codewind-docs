@@ -15,7 +15,7 @@ Install Codewind for Eclipse to develop your containerized projects from within 
 
 To install Codewind for Eclipse, complete the following steps:
 
-1\. Download and install the latest [Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation.
+1\. Download and install the latest [Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) or use an existing installation.
     - Install Eclipse IDE Version 2019-09 R (4.13.0) or later to avoid [Bug 541220](https://bugs.eclipse.org/bugs/show_bug.cgi?id=541220).
     - **Note:** the earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
 2\. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you must also install [Docker Compose](https://docs.docker.com/compose/install/).
