@@ -4,7 +4,7 @@ title: Creating a Codewind workspace in Che
 description: Creating a Codewind workspace in Che
 keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
-permalink: mdt-che-createcodewindworkspace
+permalink: che-createcodewindworkspace
 type: document
 ---
 
@@ -22,4 +22,4 @@ Codewind includes a ready-to-use devfile with its plug-ins.
 
 For more sample devfiles, see [`codewind-templates/devfiles/`](https://github.com/kabanero-io/codewind-templates/tree/master/devfiles).
 
-Next step: [Setup Tekton Pipelines](mdt-che-tektonpipelines.html)
+Next step: [Setup Tekton Pipelines](che-tektonpipelines.html)

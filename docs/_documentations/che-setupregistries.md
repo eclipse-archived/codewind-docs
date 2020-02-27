@@ -4,7 +4,7 @@ title: Adding a container registry in Codewind
 description: Adding a container registry in Codewind
 keywords: container, registry, Che, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
-permalink: mdt-che-setupregistries
+permalink: che-setupregistries
 type: document
 ---
 

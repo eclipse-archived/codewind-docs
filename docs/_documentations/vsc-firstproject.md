@@ -4,10 +4,9 @@ title: "Creating your first VS Code Codewind project"
 description: "Creating your first VS Code Codewind project"
 keywords: introducing, introduction, overview, what is, tools, vscode, visual, studio, code, java, microprofile, spring, node, nodejs, node.js, javascript, Codewind for VS Code, tools, view, debug, integrate, open a shell session, toggle auto build, manually build, scope VS Code workspace, disable, enable, delete
 duration: 1 minute
-permalink: mdt-vsc-firstproject
+permalink: vsc-firstproject
 type: document
 order: 2
-parent: mdt-vsc-overview
 ---
 # Creating your first VS Code Codewind project
 <br/>

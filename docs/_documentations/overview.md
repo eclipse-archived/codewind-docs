@@ -49,7 +49,7 @@ Codewind improves your inner loop experience, enabling you to create a microserv
 
 ### What Integrated Development Environments (IDEs) does Codewind support?
 
-Codewind is available as a desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind) and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/mdt-che-installinfo.html).
+Codewind is available as a desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind) and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/che-installinfo.html).
 
 ### What cloud native technology does Codewind support?
 Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://www.openshift.com/) for container orchestration. 

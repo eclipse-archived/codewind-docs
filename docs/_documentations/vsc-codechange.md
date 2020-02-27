@@ -7,7 +7,6 @@ duration: 1 minute
 permalink: vsc-codechange
 type: document
 order: 1
-parent: mdt-vsc-overview
 ---
 # Making a code change with VS Code
 <br/>

@@ -12,7 +12,7 @@ order: 2
 
 # Connecting Eclipse to your remote Codewind instance
 
-Ensure you have [satisfied all prequisites](./remote-deploy-jane.html). 
+Ensure you have [satisfied all prequisites](./remote-jane-overview.html). 
 
 # Objectives
 

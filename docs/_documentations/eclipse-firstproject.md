@@ -4,10 +4,9 @@ title: "Creating your first Eclipse Codewind project"
 description: "Creating your first Eclipse Codewind project"
 keywords: introducing, introduction, overview, what is, tools, vscode, visual, studio, code, java, microprofile, spring, node, nodejs, node.js, javascript, Codewind for VS Code, tools, view, debug, integrate, open a shell session, toggle auto build, manually build, scope VS Code workspace, disable, enable, delete
 duration: 1 minute
-permalink: mdt-eclipse-firstproject
+permalink: eclipse-firstproject
 type: document
 order: 2
-parent: mdt-eclipse-overview
 ---
 # Creating your first Eclipse Codewind project
 <br/>
@@ -44,6 +43,6 @@ This icon launches your web browser and displays your application.
 
 Congratulations, you have created your first application on Codewind.
 
-Next step: [Making a code change](mdt-eclipse-codechange.html)
+Next step: [Making a code change](eclipse-codechange.html)
 
 

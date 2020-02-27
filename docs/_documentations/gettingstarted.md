@@ -20,9 +20,9 @@ type: document
       <span class=" cs-gettingstarted-mobile-title cw-getting-started-text">Cloud &nbsp;</span>
       </div>
       <div class="cw-gettingstarted-card">
-        <a href="mdt-che-installinfo.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
+        <a href="che-installinfo.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="mdt-che-installinfo.html">Codewind for Eclipse Che</a>
+      		<a class="cw-gettingstarted-card-link" href="che-installinfo.html">Codewind for Eclipse Che</a>
       	</div>
       </div>
     </div>
@@ -32,9 +32,9 @@ type: document
       <span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
       </div>
       <div class="cw-gettingstarted-card">
-        <a href="mdt-vsc-getting-started.html"><img alt="VSCode getting started"  title="VSCode getting started"  src="images/card/vscode.svg"/></a>
+        <a href="vsc-getting-started.html"><img alt="VSCode getting started"  title="VSCode getting started"  src="images/card/vscode.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="mdt-vsc-getting-started.html">Codewind for VS Code</a>
+      		<a class="cw-gettingstarted-card-link" href="vsc-getting-started.html">Codewind for VS Code</a>
       	</div>
       </div>
     </div>
@@ -44,9 +44,9 @@ type: document
       	<span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
       	</div>
       <div class="cw-gettingstarted-card">
-        <a href="mdt-eclipse-getting-started.html"><img alt="Eclipse che getting started"  title="Eclipse che getting started"  src="images/card/eclipse.svg"/></a>
+        <a href="eclipse-getting-started.html"><img alt="Eclipse che getting started"  title="Eclipse che getting started"  src="images/card/eclipse.svg"/></a>
       	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="mdt-eclipse-getting-started.html">Codewind for Eclipse</a>
+      		<a class="cw-gettingstarted-card-link" href="eclipse-getting-started.html">Codewind for Eclipse</a>
       	</div>
       </div>
     </div>
