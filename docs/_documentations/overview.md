@@ -10,13 +10,13 @@ type: document
 
 # What is Codewind?
 
-Developing and building a cloud native, containerized application can be challenging. 
+Developing and building a cloud-native, containerized application can be challenging. 
 
-Firstly, you need to create your own application stack for a containerized microservice that also fits your preferred language and project type.
+First, you need to create your own application stack for a containerized microservice that also fits your preferred language and project type.
 
-Then, if you are a software developer, you need to perform many actions as you develop, build, run, and test your code. You need to build images, assess build status, create containers, open application endpoints, debug, analyze the different logs, assess performance metrics, and rebuild the containers with each code change.
+If you are a software developer, there are many actions you take as you develop, build, run, and test your code. You need to build images, assess build status, create containers, open application endpoints, debug, analyze the different logs, assess performance metrics, and rebuild the containers with each code change.
 
-Or, if you are responsible for defining standards for application and runtime environments, such as framework and software levels, you need to implement and maintain your standards across the whole development team, ensuring consistency and reliability. 
+If you are responsible for defining standards for application and runtime environments, such as framework and software levels, you need to implement and maintain your standards across the whole development team, ensuring consistency and reliability. 
 
 Built from the ground up, Codewind, an [open source project](https://github.com/eclipse/codewind), helps you to achieve all of the above by extending your Integrated Development Environment (IDE). Container development flow feels like a traditional application flow and [project templates](workingwithtemplates.html) can be used across your development teams. Support for rapid iteration of your code is achieved using features including automatic updating of containers with code changes, pre-supplied container-based [project templates](workingwithtemplates.html), and a user interface that exposes metrics, logs, and load testing at the click of a button. Your own standardized [project templates](workingwithtemplates.html) can be accessed by your developers using their IDE of choice.
 
@@ -37,7 +37,7 @@ Codewind improves your inner loop experience, enabling you to create a microserv
 
 5. **Ability to toggle between auto-build and manual build settings** Have control over when you want to implement Codewind's auto-build feature.
 
-6. **Project details displayed in a user-friendly panel on your IDE** Use Codewind's Project Overview interface to instantly view the endpoint, container ID, location on disk, build and run status, and ports.
+6. **Project details displayed in a user friendly panel on your IDE** Use Codewind's Project Overview interface to instantly view the endpoint, container ID, location on disk, build and run status, and ports.
 
 7. **Access application, build, and container logs and run commands from within the container without leaving your IDE** Codewind integrates with your IDE's terminal window and Problems and Output panels for a smooth test and debug experience. Additionally, you can open a shell session inside your container with a simple click.
 
@@ -47,11 +47,11 @@ Codewind improves your inner loop experience, enabling you to create a microserv
 
 10. **Integrated load-testing (where supported)** Configure and run load tests against your microservices using [Codewind's performance dashboard](https://www.youtube.com/watch?v=nfJt3f5TUvc). Use the graphs to compare your repeated load test results and iterate on performance improvements.
 
-### What Integrated Development Environments (IDEs) does Codewind support?
+### What Integrated Development Environments (IDEs) do Codewind support?
 
 Codewind is available as a desktop IDE extension for [**VS Code**](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and [**Eclipse**](https://marketplace.eclipse.org/content/codewind) and as a cloud-based IDE extension for [**Eclipse Che**](https://www.eclipse.org/codewind/che-installinfo.html).
 
-### What cloud native technology does Codewind support?
+### What cloud-native technology does Codewind support?
 Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://www.openshift.com/) for container orchestration. 
 
 ### Where do I develop my code? Where can I build and run my containers? How does Codewind support my development flow?
