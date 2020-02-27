@@ -69,7 +69,7 @@ Codewind provides preconfigured [project templates](workingwithtemplates.html) c
 Codewind also supplies [Appsody](https://appsody.dev/) [project templates](workingwithtemplates.html) for many languages and frameworks. 
 
 ### What are the prerequisites for Codewind?
-Codewind requires Docker Desktop for Windows or Mac, or Docker Engine and Docker Compose for Linux.
+Codewind requires Docker Desktop for Windows or Mac, or Docker Engine, Docker Compose for Linux and your favorite IDE.
 
 ### Can I contribute to the project?
 Codewind is an [open source Eclipse project](https://github.com/eclipse/codewind). 
