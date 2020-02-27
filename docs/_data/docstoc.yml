@@ -52,7 +52,7 @@
 - title: 'Using Codewind remotely'
   children:
     - title: 'Overview: Using Codewind remotely'
-      url: remote-jane-overview.html
+      url: remote-codewind-overview.html
     - title: 'Connecting your IDE to remote Codewind'
       children:
       - title: 'Connecting VS Code to remote Codewind'
