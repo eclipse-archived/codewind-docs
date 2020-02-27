@@ -42,18 +42,7 @@ Complete the prerequisites and install Codewind on IntelliJ.
 8. To access the Codewind view, click the **Codewind** tab. From the Codewind view, right-click your project to open an application, start a build, and more.
 
 ## Creating more projects from templates
-1. From an IntelliJ project that's already open, go to **File**>**New**>**Project...**. The **New Project** window appears.
-   - **Note:** Unlike other IDEs, IntelliJ doesn't have a **Create New Project** menu item in the Codewind view.
-2. Click **Next**.
-3. Click the template of your choice and click **Next**. A list of available templates appears.
-   - Currently, IntelliJ supports only the Java language templates.
-4. Enter the **Project name:** and **Project location:** and click **Finish**. The **Open Project** window appears.
-5. To create a new project, click **New Window**. A new window appears for the new project.
-6. IntelliJ detects a `pom.xml` file and asks if you want to add the file as a Maven project. In the **Non-managed pom.xml file found:** notification, click **Add as Maven Project** to create the correct project structure.
-   - The **Non-managed pom.xml file found:** notification might disappear after some time. To create the correct project structure, go to the IntelliJ project view and right-click the `pom.xml` file. From the context menu, click **Add as Maven Project** to create the correct project structure.
-7. To access the Codewind view, click the **Codewind** tab.
-   - The new project appears with any other projects.
-   - Right-click your project to open an application, start a build, and more.
+If you have an IntelliJ project already open, you can create additional projects by either going to **File**>**New**>**Project...**, or by right-clicking on the **Local** node in the Codewind view and clicking **New Project...**, then following the steps above.
 
 ## Making a code change
 1. From a project, open the file that you want to edit, for example, **Project1**>**src**>**main**>**java**>**application**>**rest**>**v1**>**example**.
