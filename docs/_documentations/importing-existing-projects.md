@@ -22,9 +22,9 @@ Remote projects are built and run on Kubernetes. To import your project to a rem
 
 ## What kind of projects can I add?
 
-Codewind is designed to develop cloud native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
+Codewind is designed to develop cloud-native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
 
-* [MicroProfile/Java EE projects](#eclipse-microprofile-projects)
+* [MicroProfile/Java EE projects](#microprofilejava-ee-projects)
 * [Java Spring projects](#java-spring-projects)
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
@@ -200,7 +200,7 @@ If you have a Dockerized application that does not fit an existing template, you
 
 ## Appsody projects
 
-If you have an existing Appsody project, or a project that you want to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
+If you have an existing Appsody project or a project that you want to add to Codewind as an Appsody project, select the corresponding Appsody project type and, if applicable, the Appsody stack when adding the project. 
 For more information about Appsody and Appsody stacks, see [https://appsody.dev](https://appsody.dev).
 
 #### Defining environment variables for Appsody projects
