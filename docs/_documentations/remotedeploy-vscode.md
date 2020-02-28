@@ -20,7 +20,7 @@ In this topic you will:
 
 1. Connect Codewind on VS Code to the remote instance of Codewind in the cloud. 
 
-2. Add a deployment registry
+2. Add a deployment registry.
 
 # 1. Connect your IDE's Codewind extension to your remote instance of Codewind
 
@@ -28,11 +28,11 @@ In this topic you will:
 
 ![New Connection](./images/remotevs/newConnection.png)
 
-2\. Add a connection name and press `Enter`.
+2\. Add a connection name and press **Enter**.
 
 ![Name Connection](./images/remotevs/connectionName.png)
 
-3\. Complete the three required fields: Gatekeeper URL, developer username, and developer password, and then save.
+3\. Complete the three required fields: Gatekeeper URL, user name, and password. Then **Save**.
 
 ![Required Fields](./images/remotevs/connectionCreds.png)
 
@@ -46,19 +46,19 @@ The IDE and Codewind are connected.
 
 Before projects can be deployed on Kubernetes, you need to specify a Docker Registry. Docker Hub is used in this example: 
 
-1\. If it's not already open, navigate to the connection details page with the link:
+1\. If it's not already open, go to the connection details page with the link:
 
 ![Docker Registry](./images/remotevs/connectionSettings.png)
 
-2\. Locate and click `Open Container Registry Manager`:
+2\. Locate and click **Open Container Registry Manager**:
 
 ![Open Registry Manager](./images/remotevs/registryManager.png)
 
-3\. In the image registry screen, click `+ Add New`:
+3\. In the image registry screen, click **+ Add New**:
 
 ![Adding Registry](./images/remotevs/ImageRegistries.png)
 
-4\. Complete the Docker connection details. For example, if you are using Docker Hub, enter `docker.io` and press `Enter`:
+4\. Complete the Docker connection details. For example, if you are using Docker Hub, enter `docker.io` and press **Enter**:
 
 ![New Registry](./images/remotevs/newReg1.png)
 
@@ -66,7 +66,7 @@ Enter:
 
 1. Your Docker Hub user name.
 2. Your Docker Hub password.
-3. Your repo name, which is usually the same as your username.
+3. Your namespace, which is usually the same as your user name.
 
 The connection is tested to validate your credentials and stored in a Kubernetes secret within the Codewind service.
 
