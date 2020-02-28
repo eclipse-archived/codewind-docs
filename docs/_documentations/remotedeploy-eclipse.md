@@ -23,9 +23,9 @@ In this topic you will:
 
 2. Add a deployment registry.
 
-3. Create a new project
+3. Create a new project.
 
-4. Copy an existing project to your remote connection
+4. Copy an existing project to your remote connection.
 
 # 1. Connect your IDE's Codewind extension to your remote instance of Codewind
 
