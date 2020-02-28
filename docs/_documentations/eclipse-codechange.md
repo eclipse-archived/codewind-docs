@@ -17,20 +17,20 @@ To see this feature in action, make a change to the getting started example.
 
 1\. Edit the `index.html` file.
 
-![](dist/images/eclipsechangeproject1.png){:width="800px"}
+![](images/eclipsechangeproject1.png){:width="800px"}
 
 2\. In the file, find the `Congratulations!` line.
 
-![](dist/images/eclipsechangeproject2.png)
+![](images/eclipsechangeproject2.png)
 
 3\. Change the heading from `Congratulations` to `I did this` and save the file.
 
-![](dist/images/eclipsechangeproject3.png)
+![](images/eclipsechangeproject3.png)
 
 4\. Click the **Open Application**
-![](dist/images/eclipseopenprojecticon.png)
+![](images/eclipseopenprojecticon.png)
 icon to show your code change running.
 
-![](dist/images/eclipsechangeproject4.png){:width="800px"}
+![](images/eclipsechangeproject4.png){:width="800px"}
 
 Next step: [Buiding and deploying in a cloud environment](remote-overview.html)

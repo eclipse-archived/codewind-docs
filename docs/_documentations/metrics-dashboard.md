@@ -67,7 +67,7 @@ View a summary of the information from the performance metrics graphs that you s
 
 * **Resource Usage:** This table shows the **Average Process CPU**, which shows what the application is using, and the **Average System CPU**, which shows what the environment as a whole is using. This information can help determine whether application issues are caused by something else in the environment that is external to the application.
 
-![Resource Usage](dist/images/performanceguide/viewing_metrics.png)
+![Resource Usage](images/performanceguide/viewing_metrics.png)
 
 ## Viewing the graph in the **Profiling** tab
 
@@ -100,7 +100,7 @@ If profiling markers do not appear, check to see if your project and load run co
 
 After you start the load test and the test completes, view the source code. Theia displays an annotation tooltip with a specified message in a similar format to the following example:
 
-![image of Theia annotation tooltip](dist/images/theia-annotation-tooltip.png)
+![image of Theia annotation tooltip](images/theia-annotation-tooltip.png)
 
 - The bullet points indicate the parent callers of the function. The percentages equal the number of times that a parent caller called a function. In this example, `<anonymous function>` probably made 2 calls to the `app.get()` function, and the `handle()` function probably made 1 call.
 - The numbers in the parenthesis indicate the position of the parent function in the file, such as the line and character number. This position information is ambiguous for anonymous functions, but the message includes the information regardless.

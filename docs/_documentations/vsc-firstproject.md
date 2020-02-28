@@ -14,38 +14,38 @@ To create your first project:
 
 1\. Click on the prompt in the **Codewind** window.
 
-![](dist/images/createproject.png)
+![](images/createproject.png)
 
 2\. This prompt displays a list of project types for you to select. 
 
-![](dist/images/listtemplates.png)
+![](images/listtemplates.png)
 
 3\. Scroll through the list until you see **Node.js Express (Default templates)**.
 
-![](dist/images/nodetemplate.png)
+![](images/nodetemplate.png)
 
 4\. Selecting this template prompts you to enter a name for your project.
 
-![](dist/images/projectname.png)
+![](images/projectname.png)
 
 5\. Enter a name and then choose where to create this on disk. For example, `myFirstNodeProject`.
 
-![](dist/images/projloc.png)
+![](images/projloc.png)
 
 6\. Codewind now starts to build and run your very first project. Once complete,the following screen shows your application is built and running.
 
-![](dist/images/allbuilt.png)
+![](images/allbuilt.png)
 
 7\. To view your running application, click on the project name in the **Codewind** window. 
 
-![](dist/images/launch.png)
+![](images/launch.png)
 
 8\. Then click the **Open Application** icon.
-![](dist/images/launchicon.png)
+![](images/launchicon.png)
 
 This icon launches your web browser and displays your application.
 
-![](dist/images/runningapp.png)
+![](images/runningapp.png)
 
 Congratulations, you have created your first application on Codewind.
 
