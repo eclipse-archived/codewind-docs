@@ -6,8 +6,8 @@ keywords: users, projects, Kubernetes, Kube, Minikube, Codewind, deploy, hybrid
 duration: 5 minutes
 permalink: hybrid-codewind
 type: document
-parent: Local to remote development 
-order: 7
+parent: Using Codewind remotely  
+order: 3
 ---
 
 # Hybrid Codewind on Minikube
