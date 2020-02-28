@@ -32,10 +32,10 @@ To install Codewind for Eclipse, complete the following steps:
     - Navigate to **Window**>**Show View**>**Other...**>**Codewind**>**Codewind Explorer**
 5. Codewind requires the installation of additional Docker images to run.  Double-click the **Codewind** item in the Codewind Explorer view to complete the installation. The installation might take a few minutes to complete.
    
-![image of Codewind once installed](dist/images/eclipseinstall1.png){:width="800px"}
+![image of Codewind once installed](images/eclipseinstall1.png){:width="800px"}
 
 6\. Once complete, you have a **Codewind** section in the IDE. 
 
-![image of Codewind once installed](dist/images/eclipseinstall2.png){:width="800px"}
+![image of Codewind once installed](images/eclipseinstall2.png){:width="800px"}
 
 Next step: [Create your first project](eclipse-firstproject.html)

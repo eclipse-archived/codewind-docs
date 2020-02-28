@@ -24,6 +24,6 @@ order: 1
 5. Codewind requires the installation of additional Docker images to run. Choose **Install** when prompted to complete the installation. The installation might take a few minutes to complete.
 6. Once complete, you have a **Codewind** section in the IDE. 
    
-![image of Codewind once installed](dist/images/installed.png){:width="800px"}
+![image of Codewind once installed](images/installed.png){:width="800px"}
 
 Next step: [Create your first project](vsc-firstproject.html)

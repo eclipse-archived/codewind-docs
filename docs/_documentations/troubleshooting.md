@@ -113,7 +113,7 @@ Issue link: https://github.com/eclipse/codewind/issues/2239
 ## Cannot find Codewind in Marketplace when attempting to install in IntelliJ
 When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plug-in in Marketplace, and if you verify the custom plug-in repository link, you get a `Connection failed` error message:
 
-![intellij install error](dist/images/intellij/custom-plugin-repo-connection-failed-error.png)
+![intellij install error](images/intellij/custom-plugin-repo-connection-failed-error.png)
 
 This error occurs because the custom plug-in repository link contains an additional space.
 

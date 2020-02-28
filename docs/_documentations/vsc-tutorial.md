@@ -40,12 +40,12 @@ For more detail on any of the commands, see the [commands overview](vsc-commands
         - In the Codewind tree, the application stops and starts again as the application server restarts.
         - You can also see **nodemon** restart the project in the application logs.
     - At this point, your VS Code should look similar to the following example:
-    <br>![Editing nodeproject](dist/images/cdt-vsc/tutorial-1.png)
+    <br>![Editing nodeproject](images/cdt-vsc/tutorial-1.png)
 7. To make sure your code change was picked up, test your new endpoint.
     - Right-click the project and select [Open App](vsc-commands-project.html#open-app). The project root endpoint opens in the browser, and the **IBM Cloud Starter** page appears.
     - Navigate to the new endpoint. If you copied the previous snippet, add `/health/test/` to the URL.
     - See the new response:<br>
-    <br>![New endpoint response](dist/images/cdt-vsc/tutorial-2.png)
+    <br>![New endpoint response](images/cdt-vsc/tutorial-2.png)
 8. You can debug your application within the container. To debug a containerized project, restart it in **Debug** mode.
     - Right-click the project and select [Restart in Debug Mode](vsc-commands-restart-and-debug.html#restart).
     - The project restarts into the **Debugging** state.
@@ -56,4 +56,4 @@ For more detail on any of the commands, see the [commands overview](vsc-commands
     - If your code matches the screenshot, set a breakpoint at line 13 in `health.js`.
     - Refresh the new endpoint page that you opened in step 7 so that a new request is made, and the breakpoint gets hit.
     - VS Code suspends your application at the breakpoint. Here you can step through the code, inspect variables, see the call stack, and evaluate expressions in the **Debug Console**.
-    ![Debugging](dist/images/cdt-vsc/tutorial-3.png)
+    ![Debugging](images/cdt-vsc/tutorial-3.png)
