@@ -36,7 +36,7 @@ Use the **Template Source Manager** to perform the following actions:
 2. **VSCode:** To remove non-default template sources, click the trash icon. 
    **Eclipse:** To remove non-default template sources, first make sure you are in the **Manage Template Sources** wizard. Select the non-default templates you want to remove. Then click the **Remove** button.
 3. **VSCode:** Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
-   **Eclipse:** In the Manage Template Sources wizard, use the check boxes to enable or disable template sources. Once done, click the OK button. You should see a notification in the bottom right saying **Updating Template Sources: (0%)**. Once that message disappears, it has successfully set your preferred template sources. 
+   **Eclipse:** In the Manage Template Sources wizard, check the check boxes for the template sources you want to enable. Once done, click the OK button. You should see a notification in the bottom right saying **Updating Template Sources: (0%)**. Once that message disappears, it has successfully set your preferred template sources. 
    * Use template sources to add style projects to Codewind. 
    * For example, before adding an Appsody project, enable at least one Appsody-style template source. 
 4. **VSCode:** To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
