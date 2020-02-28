@@ -66,7 +66,7 @@ Before projects can be deployed on Kubernetes, you must specify a Docker push re
 
 The connection is tested to validate your credentials, and these are then stored in a Kubernetes secret within the Codewind service.
 
-## Create a new project
+# 3. Create a new project
 
 1\. In the Codewind Explorer view, right-click your remote connection, and select `Create New Project`:
 
@@ -76,7 +76,7 @@ The connection is tested to validate your credentials, and these are then stored
 
 ![Adding new remote project](./images/remoteeclipse/runningProject.png)
 
-## Copying an existing local project to the cloud
+# 4. Copying an existing local project to the cloud
 
 The following procedure copies an existing local project `myFirstNodeProject` over to the remote Codewind deployment:
 
