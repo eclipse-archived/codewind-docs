@@ -54,8 +54,8 @@ The landing page is built on [Jekyll](https://jekyllrb.com/). The Jekyll templat
 * `_news` - Folder that contains release news. The latest is always `news.md`. Use the template `_layout/newsredirect.html`.
 * `_site` - Folder that contains the generated site HTML.  
 * `css` - CSS styles for the site.
-* `dist` - The folder that contains some of the static images.
-* `images` - Also contains some of the docs static images. We need to split images into two folders, one for images in any document created by the documentation team and another for images on the landing page. See issue https://github.com/eclipse/codewind/issues/1883.
+* `dist` - (Removed as of February 2020.) The folder that contains some of the static images.
+* `images` - (Currently in progress.) Also contains some of the docs static images. We need to split images into two folders, one for images in any document created by the documentation team and another for images on the landing page. See issue https://github.com/eclipse/codewind/issues/1883.
 * `js/docs.js` - Docs JavaScript.
 * `js/index.js` - Homepage JavaScript.
 * `js/jquery.matchHeight-min.js` - JavaScript library to match div heights on the homepage.
