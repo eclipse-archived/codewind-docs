@@ -31,16 +31,22 @@ GitHub repository. Three examples are included in Codewind for your reference:
 * Appsody Stacks to develop applications with sharable technology stacks. 
 
 Use the **Template Source Manager** to perform the following actions:
+
 1. To add a new template source to the table, click **Add New**. For more information, see [Adding your template sources to Codewind](#adding-your-template-sources-to-codewind).
-2. To remove non-default template sources, click the trash icon. 
-3. Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
-    * Use template source templates to add style projects to Codewind. 
-    * For example, before adding an Appsody project, enable at least one Appsody-style template. 
-4. To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
+2. **VSCode:** To remove non-default template sources, click the trash icon. 
+   **Eclipse:** To remove non-default template sources, first make sure you are in the **Manage Template Sources** wizard. Select the non-default templates you want by ticking the check mark. Then click the **Remove** button.
+3. **VSCode:** Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
+   **Eclipse:** In the Manage Templates Sources wizard, check the templates that you want to use in your project. Once done, click the OK button. You should see a notification in the bottom right saying **Updating Template Sources: (0%)**. Once that message disappears, it has successfully set your preferred templates. 
+   * Use template source templates to add style projects to Codewind. 
+   * For example, before adding an Appsody project, enable at least one Appsody-style template. 
+4. **VSCode:** To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
+   **Eclipse:** In the Manage Templates Sources, simply uncheck the templates you want to disable, and then click OK. 
 
 ## Adding your template sources to Codewind
 
 Add your template sources to use Codewind with the framework of your choice. 
 1. Ensure your template source has an `index.json` file containing information about your new templates. Follow the same format as the `index.json` file found in [https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json](https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json).
-2. In the **Template Source Manager**, click **Add New**.
-3. Enter the URL to your template source's index file and click `Enter` to confirm. 
+2. **VSCode:** In the **Template Source Manager**, click **Add New**. 
+   **Eclipse:** Right click on local, and select **Manage Template Sources...**. Once the **Manage Template Sources** wizard pops up, click **Add...**.
+3. **VSCode:** Enter the URL to your template source's index file and click `Enter` to confirm.
+   **Eclipse:** Fill in the fields for URL, Name, and Description. Click the **OK** button once you are finished.

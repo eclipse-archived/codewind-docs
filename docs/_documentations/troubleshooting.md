@@ -374,8 +374,6 @@ If you turn off `auto build` for a Node.js project when you run Codewind locally
 ***
 # Appsody with Codewind
 
-For general information about the Appsody extension on Codewind, see the [README](https://github.com/eclipse/codewind-appsody-extension) file in the `codewind-appsody-extension` repository.
-
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
@@ -383,9 +381,9 @@ Issue link:
 18.10:
 -->
 ## Projects created never start after installing Codewind
-Intermittently, after installing Codewind on Windows, projects can be created, but they never start and instead remain in the **Starting** state. A Docker issue for Windows exists where, although it shows a volume is mounted, it does not allow any writing to the volume. To check if this issue is present, verify that a `codewind-data` directory exists (in your $HOME directory on Mac/Linux, or the root of your C: directory on Windows) and verify you can see your Appsody project folders created within.
+Intermittently, after installing Codewind on Windows, projects can be created, but they never start and instead remain in the **Starting** state. A Docker issue for Windows exists where, although it shows a volume is mounted, it does not allow any writing to the volume. To check if this issue is present, verify that a `codewind-data` directory exists in the root of your `C:` drive on Windows and verify you can see your Appsody project folders created within.
 
-**Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker`->`Settings`->`Shared Drives` directory to confirm that you have a shared drive. If you have one selected, unselect it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
+**Workaround:** This issue can appear for many reasons, so you have many possible workarounds. First, open the `Docker\Settings\Shared Drives` directory to confirm that your `C:` drive is selected. If it is not selected, select it, click **Apply**, and then try creating projects again. If you're still noticing the problem, and you're using an ID for the shared drive that is not your current user, check that the ID being used doesn't have an expired password that requires a password reset. Reset the password if necessary.
 
 <!--
 Action/Topic: Appsody with Codewind
@@ -394,7 +392,7 @@ Issue link: https://github.com/eclipse/codewind/issues/498
 18.10:
 -->
 ## Appsody and Docker Desktop on Windows 10
-When you use Appsody, configure Docker Desktop to access the shared drive that contains your home directory and that you associated with the shared drive. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the local host and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
+When you use Appsody, configure Docker Desktop to access your `C:` drive that contains your `codewind-data` directory. In most cases, you can configure Docker with the same user as the user who develops applications with Appsody. However, if you use Windows 10 Enterprise secured with Azure Active Directory (AAD), the AAD user does not reside in the localhost and might not be accepted in the **Shared Drives** tab of the Docker Desktop **Settings** page, especially if the organization configured AAD to issue only PIN codes instead of user passwords.
 
 **Workaround** Complete the instructions in [Special notes about Appsody and Docker Desktop on Windows 10](https://github.com/gcharters/kabanero-dev-getting-started/blob/master/docker-windows-aad.md).
 
@@ -407,25 +405,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## Node.js and Swift templates remain in the starting state
 The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, its status cannot be detected. These templates do not have a server and are intended to help you implement your own server.
 
-**Workaround** To get the application into a started state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to `started` if the server is running.
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind-docs/issues/64
-18.10:
--->
-## A project build error appears after you create an initial project
-If you use Eclipse and either Java MicroProfile or Spring Appsody templates, you might receive a `Project build error: Non-resolvable parent POM` error after you create the initial project.
-
-**Workaround** Complete the following instructions to work around the error:
-1. Right-click the project and select **Show Log Files**>**Show All**.
-2. If your `.m2` cache is empty, or if you have not previously created a Java Appsody project, the dependencies will download, and the `[Container] Installing parent dev.appsody` message appears.
-3. Wait until the cache completes. You can wait until the Project status is `Running`, or, if you use the MicroProfile template, you can wait until the `Liberty defaultServer` starts.
-4. Right-click the **Project** from the Project Explorer and select **Maven**>**Update Project...**.
-5. Accept the defaults and click **OK**. The project is configured, and the `Project build error: Non-resolvable parent POM` disappears.
-
-After you create the initial project and set the `.m2` cache, new projects begin to be configured properly.
+**Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continueously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
 <!--
 Action/Topic: Appsody with Codewind
@@ -459,44 +439,14 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64 and https://githu
 18.10:
 -->
 ## Starting in debug mode results in failure to attach the debugger
-If you work with Appsody projects in Codewind for VS Code, you might receive messages that state, `Failed to attach to remote debuggee VM` or `Failed to attach debugger` when you start a project in debug mode.
+If you work with Appsody projects in Codewind, and if you restart the project in debug mode, the first attempt to attach the debugger might fail.
 
-**Workaround** Run the `Attach Debugger` action manually:
-1. After you create a project, wait for VS Code to display, `Running [Build succeeded]`.
+**Workaround** Run the `Attach Debugger` action manually. The following sample steps show instructions for VS Code. The steps to manually attach the debugger in other IDEs is similar:
+1. After you create a project, wait for VS Code to display the project's state as **Running**.
 2. Then, right-click the project and select **Restart in Debug Mode**.
 3. Allow the process to finish. It fails, and a connection exception window appears.
 4. The `Restarting <my_project> into debug mode` message is displayed. Wait for this restart notification to disappear.
-5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar, or if the project's state shows `[Debugging][Build Succeeded]`.
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind-docs/issues/92
-18.10:
--->
-## Appsody mount errors on Windows Enterprise
-If you use Windows Enterprise and authenticate through Azure Active Directory (AAD), you might see mount errors when you use any of the Java Appsody stacks, such as `java-microprofile` or `java-spring-boot2`:
-```
-[Container] docker: Error response from daemon: error while creating mount source path '/C/Users/<user name>/.m2/repository': mkdir /C/Users/<user name>/.m2: permission denied.
-```
-
-**Workaround:** Configure the Maven `.m2` cache to be outside of your home directory. If you log in to your Windows machine as an Azure user, and you want to create Appsody applications, set the global `MAVEN_OPTS` environment variable before you start Eclipse or VS Code.
-- Example: `MAVEN_OPTS=-Dmaven.repo.local=C:\somefolder\.m2\repository`
-
-<!--
-Action/Topic: Appsody with Codewind
-Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind/issues/239
-18.10:
--->
-## Attempts fail to attach the debugger
-If you work on Appsody projects on macOS, and if you restart an extension project in debug mode, the first attempt to attach the debugger might fail. Currently, a delay does not occur for project extensions.
-
-These steps reproduce the issue:
-1. Set up a project extension environment and create a Microprofile project.
-2. Restart the project in debug mode. You receive one or both of the following error messages: `Failed to attach to remote debuggee VM` or `Failed to attach debugger to at ipaddress:`.
-
-**Workaround** Run the `Attach Debugger` action manually.
+5. To manually set the debugger, click the **Debug** tab and then **Play**. The debugger is successfully attached to the project if `Debug <my_project>` is displayed in the message bar or if the project's state shows **Debugging**.
 
 <!--
 Codewind version: 0.6.0
