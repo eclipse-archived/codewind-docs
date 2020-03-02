@@ -29,13 +29,13 @@ Finally, you will learn how to remove a remote deployment of Codewind.
 
 Before deploying Codewind to the cloud, you must:
 
-1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdt-eclipse-getting-started.html). For more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
+1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html). For more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
 2. **Have access to the Codewind CLI `cwctl`.** To access the Codewind CLI on macOS, open a terminal window and navigate to the following hidden folder: `~/.codewind/<version>`. On Windows, navigate to the `%SystemDrive%\Users\<username>\.codewind\<version>` folder.
 3. **Have an active Kubernetes context that points to your cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 4. **Have access to a keyring.** A keyring is a software application designed to store security credentials, such as user names, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
 5. **Enable privileged and root containers to run.** Codewind needs to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands, where `<codewind namespace>` is the namespace into which you installed Che.
-   - To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<codewind namespace>:codewind-workspace`.
-   - To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<codewind namespace>:codewind-workspace`.
+   - To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<codewind namespace>`.
+   - To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<codewind namespace>`.
 
 ## Planning your remote deployment - Codewind and Authentication Services
 
