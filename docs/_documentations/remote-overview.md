@@ -34,8 +34,8 @@ Before deploying Codewind to the cloud, you must:
 3. **Have an active Kubernetes context that points to your cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 4. **Have access to a keyring.** A keyring is a software application designed to store security credentials, such as user names, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
 5. **Enable privileged and root containers to run.** Codewind needs to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands, where `<codewind namespace>` is the namespace into which you installed Che.
-   - To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<codewind namespace>:che-workspace`.
-   - To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<codewind namespace>:che-workspace`.
+   - To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<codewind namespace>:codewind-workspace`.
+   - To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<codewind namespace>:codewind-workspace`.
 
 ## Planning your remote deployment - Codewind and Authentication Services
 
