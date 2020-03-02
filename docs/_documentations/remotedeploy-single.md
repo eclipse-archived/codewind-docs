@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Deploying Codewind components individually
-description: Deploying Codewind components individually
+title: Deploying remote Codewind components individually
+description: Deploying remote Codewind components individually
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remotedeploy-single
@@ -10,12 +10,12 @@ parent: installoncloud
 order: 2
 ---
 
-# Deploying Codewind components individually for a Codewind remote deployment
+# Deploying remote Codewind components individually
 Complete the prerequisites in the [overview](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
 
-If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind by instead following the instructions for [Deploying Codewind with an existing keycloak](remotedeloy-existingkeycloak)
+If you have an existing, suitable Keycloak installed on the cloud, you can skip the deploying of Keycloak using Codewind by instead following the instructions for [Deploying Codewind with an existing keycloak](remotedeploy-existingkeycloak.html)
 
 # Objectives
 

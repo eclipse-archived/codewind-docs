@@ -7,7 +7,6 @@ duration: 1 minute
 permalink: vsc-codechange
 type: document
 order: 1
-parent: mdt-vsc-overview
 ---
 # Making a code change with VS Code
 <br/>
@@ -15,29 +14,29 @@ Codewind automatically builds and redeploys your application whenever you make a
 
 To see this feature in action, make a change to the getting started example.
 
-1\. Edit the index.html file:
+1\. Edit the `index.html` file:
 
-![](dist/images/vsc-codechange.png){:width="800px"}
+![](images/vsc-codechange.png){:width="800px"}
 
-2\. Navigate to the bottom of the file to find the lines:
+2\. In the file, find the `Congratulations!` line.
 
-![](dist/images/vsc-codeline.png)
+![](images/vsc-codeline.png)
 
-3\. Change the heading from *Congratulations* to *I did this*:
+3\. Change the heading from `Congratulations` to `I did this`:
 
-![](dist/images/vsc-ididthis.png)
+![](images/vsc-ididthis.png)
 
-The status of the project changes to *stopped* while the project is rebuilt and deployed:
+The status of the project changes to **Stopped** while the project is rebuilt and deployed:
  
-![](dist/images/vsc-buildstopped.png)
+![](images/vsc-buildstopped.png)
 
-After a few moments, the status changes back to *running*:
+After a few moments, the status changes back to **Running**:
 
-![](dist/images/vsc-buildrunning.png)
+![](images/vsc-buildrunning.png)
 
-4\. Click the **Open App** icon to show your code change running:
-![](dist/images/launchicon.png)
+4\. Click the **Open Application** icon to show your code change running:
+![](images/launchicon.png)
 
-![](dist/images/vsc-screenchanged.png)
+![](images/vsc-screenchanged.png)
 
 Next step: [Buiding and deploying in a cloud environment](remote-overview.html)

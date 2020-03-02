@@ -40,6 +40,6 @@ The information in the **VS Code** section also applies to Eclipse but with thes
 - Templates are improved with added details about what a template is. Information is also included for managing templates, working with default templates, and adding your own templates. For more information, see [Working with templates](workingwithtemplates.html).
 
 #### VS Code output view
-- New to VS Code is the Codewind output stream, which logs `cwctl` commands and their output. In addition to providing status on all of your `cwctl` commands, it also helps you to debug unusual problems, especially when you start Codewind. For more information, see [Troubleshooting](mdt-vsc-troubleshooting.html).<br>
+- New to VS Code is the Codewind output stream, which logs `cwctl` commands and their output. In addition to providing status on all of your `cwctl` commands, it also helps you to debug unusual problems, especially when you start Codewind. For more information, see [Troubleshooting](troubleshooting.html).<br>
 
-![Image of VS Code output](dist/images/cdt-vsc/output_view.png)<br>
+![Image of VS Code output](images/cdt-vsc/output_view.png)<br>

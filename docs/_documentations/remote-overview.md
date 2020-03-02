@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: Deploying Codewind remotely overview
-description: Deploying Codewind remotely overview
+title: Overview Deploying Codewind remotely
+description: Overview Deploying Codewind remotely
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
 permalink: remote-overview
 type: document
 ---
 
-# Deploying Codewind remotely overview
+# Overview: Deploying Codewind remotely
 
-Codewind can be used in one of three ways - locally, [hosted](./mdt-che-installinfo.html) as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+Codewind can be used in one of three ways - locally, [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By deploying Codewind remotely, developers can develop their code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
 
-To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-jane-overview.html).
+To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-codewind-overview.html).
 
 ## What you will learn
 
@@ -39,8 +39,7 @@ Before deploying Codewind to the cloud, you must:
 
 ## Planning your remote deployment - Codewind and Authentication Services
 
-1. **Install your preferred IDE on your local machine.** 
-For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](mdt-eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](mdt-vsc-getting-started.html).
+1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
 
 2. **Ensure that you have access to the Codewind CLI `cwctl`.** To access the Codewind CLI, open a terminal window and navigate to the following hidden folder: `~/.codewind/<version>`. On Windows, navigate to the following folder: `%SystemDrive%\Users\<username>\.codewind\<version>`.
 
