@@ -34,7 +34,7 @@ To install Codewind for Eclipse, complete the following steps:
    
 ![image of Codewind once installed](images/eclipseinstall1.png){:width="800px"}
 
-6\. Once complete, you have a **Codewind** section in the IDE. 
+6\. After the installation completes, you have a running local connection in the Codewind Explorer view.
 
 ![image of Codewind once installed](images/eclipseinstall2.png){:width="800px"}
 
