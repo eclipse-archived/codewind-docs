@@ -43,7 +43,7 @@ Ensure you are in the correct directory for accessing the Codewind CLI:
 2.  Go to your home directory and then to the Codewind CLI:
 
 ```
-cd ~/.codewind/0.8.0
+cd ~/.codewind/<version>
 ```
 
 Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
@@ -88,7 +88,7 @@ Determine the following values for your cloud deployment:
  
 
 ## Run the Codewind CLI command
-To install Codewind AND AND ASSOCIATED KEYCLOAK?, enter the following example command:
+To install Codewind and an associated Keycloak, enter the following example command:
 
 ```
 ./cwctl --insecure install remote \
