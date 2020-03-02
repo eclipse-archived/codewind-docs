@@ -10,7 +10,7 @@ parent: installoncloud
 order: 2
 ---
 
-# Removing a remote deployment
+# Removing a remote Codewind deployment
 
 The Codewind CLI `cwctl` is designed to do almost all the steps required to remove a remote deployment of Codewind by chaining together a number of Kubernetes operations.
 
