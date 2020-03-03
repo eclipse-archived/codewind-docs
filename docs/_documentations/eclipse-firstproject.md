@@ -20,7 +20,7 @@ To create your first project:
 
 ![](images/eclipsecreateproject2.png){:width="800px"}
 
-3\. Enter a name for the project and change the location if you want. Scroll through the list of templates until you see **Node.js Express**. 
+3\. Enter a name for the project and change the location if you want. Scroll through the list of templates until you see **Node.js Express**. For more information about templates, see [Working with templates](workingwithtemplates.html).
 
 ![](images/eclipsecreateproject3.png){:width="800px"}
 
