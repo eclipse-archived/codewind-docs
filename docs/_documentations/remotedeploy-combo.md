@@ -32,8 +32,6 @@ You will use the following command to install both the keycloak and remote insta
 
 This command requires various flags to specify where and what to install which will be explained below.
 
-
-
 # Prerequisites
 
 Ensure you are in the correct directory for accessing the Codewind CLI:
@@ -106,10 +104,9 @@ Determine the following values for your cloud deployment:
 - `kdevuser` and `kdevpass`: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
 - `ingress`: The ingress domain for your cloud environment.
 
- 
-
 ## Run the Codewind CLI command
-To install Codewind AND AND ASSOCIATED KEYCLOAK?, enter the following example command:
+To install Codewind and an associated Keycloak, enter the following example command:  
+(^^^ Mark: `and an associated Keycloak`)
 
 ```
 ./cwctl --insecure install remote \

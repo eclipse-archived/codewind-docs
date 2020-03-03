@@ -36,6 +36,24 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites
 
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+
+  ```
+  $ kubectl get namespaces
+  ```
+
+  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
+- Ensure you are in the correct directory for accessing the Codewind CLI:
+
+  1.  Open a new terminal window on your local workstation.
+  2.  Go to your home directory and then to the Codewind CLI:
+
+      ```
+      cd ~/.codewind/<version>
+      ```
+
+<!-- Add OpenShift/IBM Public Cloud tabs here -->
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
     - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
@@ -48,24 +66,6 @@ This command requires various flags to specify where and what to install which w
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
-
-
-Ensure you are in the correct directory for accessing the Codewind CLI:
-
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
-
-```
-cd ~/.codewind/<version>
-```
-
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
-
-```
-$ kubectl get namespaces
-```
-
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 # 1. Deploy Authentication services (Keycloak)
 
