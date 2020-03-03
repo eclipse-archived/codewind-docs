@@ -32,6 +32,24 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites 
 
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+
+  ```
+  $ kubectl get namespaces
+  ```
+
+  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
+- Ensure you are in the correct directory for accessing the Codewind CLI:
+
+  1.  Open a new terminal window on your local workstation.
+  2.  Go to your home directory and then to the Codewind CLI:
+
+      ```
+      cd ~/.codewind/<version>
+      ```
+
+<!-- Add OpenShift/IBM Public Cloud tabs here -->
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     1. Create the namespace by entering: `oc create namespace <Codewind-namespace>`.
@@ -47,24 +65,6 @@ This command requires various flags to specify where and what to install which w
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
-
-Ensure you are in the correct directory for accessing the Codewind CLI:
-
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
-
-```
-cd ~/.codewind/0.8.0
-```
-
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
-
-```
-$ kubectl get namespaces
-```
-
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
-
 
 # 1. Deploy a remote Codewind service
 
@@ -93,8 +93,7 @@ Determine the following values for your cloud deployment:
 ## Run the Codewind CLI command
 
 *alter this based on existing keycloak*
-Deploy a new Codewind instance in Kubernetes/*the cloud* and configure security by pointing to your existing keycloak using the Codewind CLI `cwctl` command. You can use the CLI `cwctl` with additional options LIKE WHAT? WHICH ONES ARE REQUIRED?, for example: 
-
+Deploy a new Codewind instance in Kubernetes/*the cloud* and configure security by pointing to your existing keycloak using the Codewind CLI `cwctl` command, for example:
 ```
 ./cwctl --insecure install remote \
 --namespace codewind-0001 \
@@ -116,6 +115,7 @@ This command performs the following actions:
 - Creates an initial Codewind user called `developer` with password `passw0rd`.
 - Uses the ingress appropriate to the deployment environment.
 - Adds the Keycloak admin credentials of `admin` with password `passw0rd`.  
+- Specifies the Keycloak URL by using the optional `--kurl` parameter so your install picks up an existing keycloak deployment. 
 
 Running the command, you see the following example output:
 
@@ -148,9 +148,9 @@ Additional remote Codewind instances can be generated against the existing keycl
 
 *SWAP THESE PARAGRAPHS AROUND?*
 Each user can have several remote Codewind instances allocated to them. This can be achieved by either:
-1. re-running the `./cwctl --insecure install remote \` command
+1. Re-running the `./cwctl --insecure install remote \` command
 or
-2. assigning users through role-based acccess control. This is/can be? set up automatically using/by? the `cwctl` command - MORE DETAILS ARE WHERE?
+2. Assigning users through role-based acccess control. This is/can be? set up automatically using/by? the `cwctl` command - MORE DETAILS ARE WHERE?
 
 # Next Steps
 
