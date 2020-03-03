@@ -32,8 +32,6 @@
         url: che-createfirstproject.html
       - title: 'Configuring Codewind for Tekton pipelines'
         url: che-tektonpipelines.html
-      - title: 'Using Codewind from the Che Theia IDE'
-        url: che-usingtheia.html
       - title: 'OpenShift Do (odo) support in Codewind'
         url: che-odo-support.html         
       - title: 'Adding the OpenShift internal registry with Codewind'

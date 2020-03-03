@@ -9,6 +9,9 @@ type: document
 ---
 
 # Creating your first project with Codewind for Eclipse Che
+
+**Note:** If you already have projects in your Che workspace, such as from your devfile, add them to Codewind with the **Add Existing Project** command instead of the **Create New Project** command.
+
 1. To create a Codewind project in Che, click **Create New Project** in the Codewind Project Explorer or go to **View**>**Find Command...** and click **Codewind: Create New Project**.
 2. Click a template source to enable. Codewind on Che bundles **Default templates**, **Kabanero Collections**, **OpenShift Templates**, and **Appsody Stacks**.
    - **Note:** **OpenShift Templates** are visible only when Codewind is running on OpenShift clusters.
