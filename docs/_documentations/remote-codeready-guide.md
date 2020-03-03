@@ -7,7 +7,7 @@
 :permalink: remote-codeready-guide
 :type: guide 
 :parent: Using Codewind remotely 
-:order: 5 
+:order: 3 
 ---
 
 # Installing Codewind in CodeReady Workspaces 
