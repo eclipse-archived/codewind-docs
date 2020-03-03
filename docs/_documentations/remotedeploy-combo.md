@@ -42,25 +42,47 @@ Ensure you are in the correct directory for accessing the Codewind CLI:
 2.  Go to your home directory and then to the Codewind CLI:
 
 ```
-cd ~/.codewind/0.8.0
+cd ~/.codewind/<version>
 ```
 
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+Ensure that you are logged in to your cluster by running this command and observing the result:
 
-```
-$ kubectl get namespaces
-```
-or 
-```
-$ oc get namespaces
-```
+<!-- Tabs -->
+<ul class="nav nav-tabs mt-5" role="tablist">
+ <li class="nav-item">
+   <a class="nav-link active cw-tab-link" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true">Kubernetes</a>
+ </li>
+ <li class="nav-item"> 
+   <a class="nav-link cw-tab-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile" aria-selected="false">OpenShift</a>
+ </li>
+ <li class="nav-item">
+   <a class="nav-link cw-tab-link" data-toggle="tab" href="#tab3" role="tab" aria-controls="messages" aria-selected="false">Other</a>
+ </li>
+</ul>
 
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+<!-- Tab panes -->
+<div class="tab-content mt-3 mb-5">
+ <div class="tab-pane cw-tab-pane active" id="tab1" role="tabpanel" aria-labelledby="linux-tab" markdown="1">
+ ```
+ $ kubectl get namespaces
+ ```
 
+ If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes cluster.
 
+ </div>
+ <div class="tab-pane cw-tab-pane" id="tab2" role="tabpanel" aria-labelledby="windows-tab" markdown="1">
+ ```
+ $ oc get namespaces
+ ```
+
+ If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your OpenShift cluster.
+
+ </div>
+ <div class="tab-pane cw-tab-pane" id="tab3" role="tabpanel" aria-labelledby="mac-tab" markdown="1">
+ </div>
+</div>
 
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
-
 
 ## Determine your Cloud ingress domain
 

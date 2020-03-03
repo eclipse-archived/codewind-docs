@@ -26,7 +26,7 @@ In this topic you will learn how to:
 2. Deploy Codewind remotely.
 3. Use the same keycloak to install additional remote Codewind instances
 
-Codewind includes a CLI to simplify the installation process. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/{version}` path.
+Codewind includes a CLI to simplify the installation process. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
 
 You will use the following command to install a new keycloak first, and then use it to install a new remote Codewind service:
 
@@ -56,7 +56,7 @@ Ensure you are in the correct directory for accessing the Codewind CLI:
 2.  Go to your home directory and then to the Codewind CLI:
 
 ```
-cd ~/.codewind/0.8.0
+cd ~/.codewind/<version>
 ```
 
 Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
