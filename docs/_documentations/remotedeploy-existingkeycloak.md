@@ -115,7 +115,7 @@ This command performs the following actions:
 - Creates an initial Codewind user called `developer` with password `passw0rd`.
 - Uses the ingress appropriate to the deployment environment.
 - Adds the Keycloak admin credentials of `admin` with password `passw0rd`.  
-- Specifies the Keycloak URL by using the optional `--kurl` parameter so your install picks up an existing keycloak deployment. 
+- Specifies the Keycloak URL by using the optional `--kurl` parameter so that your install picks up an existing Keycloak deployment. 
 
 Running the command, you see the following example output:
 
@@ -137,7 +137,8 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind is successfully deployed and is available.
 
-### Save the address of the remote Codewind Service 
+## Save the address of the remote Codewind Service 
+
 Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
 
 # 2. Deploy additional remote Codewind services
