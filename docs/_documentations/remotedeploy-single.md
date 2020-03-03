@@ -69,7 +69,6 @@ This command requires various flags to specify where and what to install which w
 
 # 1. Deploy Authentication services (Keycloak)
 
-
 ## Determine your Cloud ingress domain
 
 The CLI command requires an ingress domain. Find yours based on any of the existing routes:
@@ -85,7 +84,9 @@ In the example the ingress domain is:
 ```
 mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
+
 ## Run the Codewind CLI command
+
 Determine the following values for your cloud deployment:
 
 - `namespace`: The `cwctl` command creates the namespace if it does not yet exist.
@@ -185,7 +186,6 @@ Each user can have several remote Codewind instances allocated to them. This can
 1. Re-running the `./cwctl --insecure install remote \` command
 or
 2. Assigning users through role-based acccess control. This can be set up automatically using the `cwctl` command.
-
 
 # Next Steps
 
