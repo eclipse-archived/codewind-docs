@@ -74,8 +74,8 @@
         url: remotedeploy-vscode.html
       - title: 'Connecting Eclipse to remote Codewind'
         url: remotedeploy-eclipse.html
-      - title: 'Creating and importing projects'
-        url: remotedeploy-projects-vscode.html
+    - title: 'Creating and importing projects'
+      url: remotedeploy-projects-vscode.html
        
 - title: 'Working with templates'
   url: workingwithtemplates.html
