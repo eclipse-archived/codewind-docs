@@ -61,8 +61,8 @@
         url: remotedeploy-single.html
       - title: 'Deploying remote Codewind with an existing keycloak'
         url: remotedeploy-existingkeycloak.html
-      - title: 'Removing a remote deployment'
-        url: remote-removing.html
+    - title: 'Removing a remote Codewind deployment'
+      url: remote-removing.html
 
 - title: 'Using Codewind remotely'
   children:
