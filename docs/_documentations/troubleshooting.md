@@ -130,7 +130,7 @@ Issue link: https://github.com/eclipse/codewind/issues/477
 0.4.0: Issue still present
 -->
 ## Project creation on macOS fails, and Codewind reports an error
-If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. You might encounter the same issue if you run `codewind-installer` from the Terminal. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
+If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
 
 **Workaround**
 As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), go to **Applications**>**Utilities**>**Keychain Access** and delete from the keychain the certificates that you no longer need. You might notice that some certificates are redundant. Then, restart Codewind.
