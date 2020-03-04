@@ -62,3 +62,5 @@ These examples show recommended values for common registries. The following depl
 
 ## Adding registries to OKD and OpenShift
 To use the OpenShift internal Docker registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
+
+Next step: [Creating a Codewind workspace in Che](che-createcodewindworkspace.html)
