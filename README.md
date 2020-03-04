@@ -9,7 +9,8 @@ Stores files to be part of the Eclipse Codewind landing and documentation pages.
 Store any pages to be part of the landing pages in the `docs/_documentations` folder.
 
 ## Support for Windows
-If you see a script ending in `.sh` use the equivalent `.bat` script instead. The Windows scripts will not have the correct "last updated" for the documentation. In Linux and Mac, a script is used to force the files to have a timestamp equal to the last git modification date. The equivalent library does not exist in Windows. As a result, all your "last updated" text will be the date the files were checked out from git on your local system. As a result, DO NOT use Windows for publishing the Codewind documentation website.
+- If you see a script ending in `.sh`, use the equivalent `.bat` script instead. The Windows scripts do not have the correct "last updated" for the documentation. In Linux and macOS, a script is used to force the files to have a timestamp equal to the last Git modification date. The equivalent library does not exist in Windows. As a result, all your "last updated" text will be the date the files were checked out from Git on your local system.
+- **Do not** use Windows for publishing the Codewind documentation website.
 
 ## Viewing the landing pages on your local machine
 View your changes before creating a pull request so you can fix problems before the changes are merged. Each time you merge or push to GitHub, GitHub runs Jekyll.
@@ -21,7 +22,7 @@ Prerequisites:
 2. View the page with this URL: `http://localhost:4321/codewind/`.
 
 ## Verifying broken links
-Run `build.sh` if you'd like to run a self container script that creates an instance of Codewind docs, checks the links, and terminates. If you have an intance of Codewind docs running on the default port 4321, you can run `linechecker.sh` to check for broken links
+Run `build.sh` to run a self-contained script that creates an instance of Codewind docs, checks the links, and terminates. If you have an intance of Codewind docs running on the default port 4321, you can run `linechecker.sh` to check for broken links.
 
 ## Pushing to the landing page
 See [Publishing.md](https://github.com/eclipse/codewind-docs/blob/master/Publishing.md) for instructions on publishing the landing pages.
