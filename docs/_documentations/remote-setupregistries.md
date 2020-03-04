@@ -35,12 +35,11 @@ After your IDE is started and running, add the container registry to be used wit
   - Registry server name, domain name, or address: `<registry-to-push-images-to>`
   - User name: `<Your user name>`
   - Password or API key: `<Your password or API key>`
-  - **In Eclipse:** In the **Add** dialog, select **Designate as push registry**.
 4. If you're using the newly added registry as a push registry, enter the namespace that you want to push your images to.
   - For recommended values for common registries, see the [examples](#examples).
 5. Determine which registry you use to push Codewind style projects to.
   - **In Eclipse:**
-    - In the **Add** dialog, enter a namespace. Or, in the **Manage Image Registries** window, select **Set as Push**.
+    - In the **Add** dialog, select **Designate as push registry** and enter a namespace.
     - If you already added the registry and want to make it a push registry later, from the **Manage Image Registries** dialog, select **Set as Push**.
   - **In VS Code:** Click **Select a Push Registry**.
 
