@@ -1,0 +1,1 @@
+docker run --rm -it --volume="%cd%/docs:/srv/jekyll" -p 4321:4321 jekyll/jekyll:3.8.5 /bin/bash -c "bundle install && jekyll serve --trace --port 4321 --host 0.0.0.0"
