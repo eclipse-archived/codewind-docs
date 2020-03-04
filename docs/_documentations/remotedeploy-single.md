@@ -21,7 +21,6 @@ If you have an existing, suitable Keycloak installed on the cloud, you can skip 
 
 In this topic you will learn how to:
 
-
 1. Deploy a Keycloak, the authentication service used for using Codewind remotely, using Codewind's CLI
 2. Deploy Codewind remotely.
 3. Use the same keycloak to install additional remote Codewind instances
@@ -36,14 +35,6 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites
 
-- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
-
-  ```
-  $ kubectl get namespaces
-  ```
-
-  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
-
 - Ensure you are in the correct directory for accessing the Codewind CLI:
 
   1.  Open a new terminal window on your local workstation.
@@ -53,7 +44,20 @@ This command requires various flags to specify where and what to install which w
       cd ~/.codewind/<version>
       ```
 
-<!-- Add OpenShift/IBM Public Cloud tabs here -->
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+
+  ```
+  $ kubectl get namespaces
+  ```
+
+  or
+
+  ```
+  $ oc get namespaces
+  ```
+
+  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
     - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.

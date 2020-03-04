@@ -34,26 +34,26 @@ This command requires various flags to specify where and what to install which w
 
 # Prerequisites
 
-Ensure you are in the correct directory for accessing the Codewind CLI:
+- Ensure you are in the correct directory for accessing the Codewind CLI:
 
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
+  1.  Open a new terminal window on your local workstation.
+  2.  Go to your home directory and then to the Codewind CLI:
 
-```
-cd ~/.codewind/<version>
-```
+      ```
+      cd ~/.codewind/<version>
+      ```
 
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
 
-```
-$ kubectl get namespaces
-```
+  ```
+  $ kubectl get namespaces
+  ```
 
-or
+  or
 
-```
-$ oc get namespaces
-```
+  ```
+  $ oc get namespaces
+  ```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
