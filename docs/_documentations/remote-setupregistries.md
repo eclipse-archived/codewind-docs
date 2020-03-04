@@ -26,7 +26,7 @@ If you do not develop any Codewind style projects, and you use an image registry
 ## Adding a container registry in Codewind
 After your IDE is started and running, add the container registry to be used with Codewind.
 1. Select **Image Registry Manager**.
-  - **In Eclipse:** Right-click a connection in the Codewind Explorer view.
+  - **In Eclipse:** Right-click a remote connection in the Codewind Explorer view and select **Manage Image Registries**.
   - **In VS Code:** From the Codewind Project Explorer view, right-click the remote connection or use the **Image Registry Manager** command on the command palette.
 2. Add your container registry.
   - **In Eclipse:** From **Manage Image Registries**, click **Add...**.
@@ -37,7 +37,11 @@ After your IDE is started and running, add the container registry to be used wit
   - Password or API key: `<Your password or API key>`
 4. If you're using the newly added registry as a push registry, enter the namespace that you want to push your images to.
   - For recommended values for common registries, see the [examples](#examples).
-5. Click **Designate as push registry** in Eclipse or **Select a Push Registry** in VS Code to determine which registry you use to push Codewind style projects to.
+5. Determine which registry you use to push Codewind style projects to.
+  - **In Eclipse:**
+    - In the **Add** dialog, select **Designate as push registry** and enter a namespace. Or, in the **Manage Image Registries** window, select **Set as Push**.
+    - If you already added the registry and want to make it a push registry later, from the **Manage Image Registries** dialog, select **Set as Push**.
+  - **In VS Code:** Click **Select a Push Registry**.
 
 ## Codewind Docker registry guidance
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
