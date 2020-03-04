@@ -65,8 +65,9 @@ The `_includes` folder has two header files. Use the `header.html` file in the `
 Steven Hung (@sghung) has permission to update the production page. Run `./build.sh` to generate the HTML files in the `_site` folder.
 
 ## Files in the root folder
-* `serve.sh` - Enter `./serve.sh` to launch the landing page on localhost. Requires Docker.
+* `serve.sh` / `serve.bat` - Enter `./serve.sh` to launch the landing page on localhost. Requires Docker.
 * `build.sh` - Enter `./build.sh` to generate the site HTML files and perform 404 checks.
+*  `linkchecker.sh` / `linkchecker.bat` - runs the link checker on a running instance of Codewind docs
 * `Publishing.md` - Instructions for launching the site on localhost and publishing to a production server.
 
 ## Q and A
