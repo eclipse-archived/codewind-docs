@@ -55,7 +55,7 @@ or
 $ oc get namespaces
 ```
 
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes cluster.
+If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
 
