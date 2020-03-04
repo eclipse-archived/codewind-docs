@@ -72,6 +72,8 @@
         url: remotedeploy-vscode.html
       - title: 'Connecting Eclipse to remote Codewind'
         url: remotedeploy-eclipse.html
+    - title: 'Adding a container registry in remote Codewind'
+      url: remote-setupregistries
     - title: 'Creating and importing projects'
       url: remotedeploy-projects-vscode.html
        
