@@ -43,7 +43,7 @@ Ensure you are in the correct directory for accessing the Codewind CLI:
 cd ~/.codewind/<version>
 ```
 
-Ensure that you are logged in to your Kubernetes or OpenShift cluster:
+Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
 
 ```
 $ kubectl get namespaces
