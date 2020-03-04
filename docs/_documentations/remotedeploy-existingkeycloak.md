@@ -32,14 +32,6 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites 
 
-- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
-
-  ```
-  $ kubectl get namespaces
-  ```
-
-  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
-
 - Ensure you are in the correct directory for accessing the Codewind CLI:
 
   1.  Open a new terminal window on your local workstation.
@@ -49,7 +41,20 @@ This command requires various flags to specify where and what to install which w
       cd ~/.codewind/<version>
       ```
 
-<!-- Add OpenShift/IBM Public Cloud tabs here -->
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+
+  ```
+  $ kubectl get namespaces
+  ```
+
+  or
+
+  ```
+  $ oc get namespaces
+  ```
+
+  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     1. Create the namespace by entering: `oc create namespace <Codewind-namespace>`.
