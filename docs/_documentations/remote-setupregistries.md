@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Adding a container registry in Codewind
-description: Adding a container registry in Codewind
+title: Adding a container registry in remote Codewind
+description: Adding a container registry in remote Codewind
 keywords: container, registry, IDE, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
 permalink: remote-setupregistries
 type: document
 ---
 
-# Adding a container registry in Codewind
+# Adding a container registry in remote Codewind
 
 ## Prerequisite: Determining if you need a container registry 
 1\. First, determine if you need to add a container registry. The following scenarios in Codewind require you to specify which image registry is in use:
@@ -25,23 +25,14 @@ If you do not develop any Codewind style projects, and you use an image registry
 
 ## Adding a container registry in Codewind
 After your IDE is started and running, add the container registry to be used with Codewind.
-1. Select **Image Registry Manager**.
+1. From your IDE, open the window for adding your container registry.
   - **In Eclipse:** Right-click a remote connection in the Codewind Explorer view and select **Manage Image Registries**.
   - **In VS Code:** From the Codewind Project Explorer view, right-click the remote connection or use the **Image Registry Manager** command on the command palette.
-2. Add your container registry.
-  - **In Eclipse:** From **Manage Image Registries**, click **Add...**.
-  - **In VS Code:** From the **Image Registry Manager**, click **Add New**.
-3. Enter the following information to add the registry:
+2. Then, follow the prompts and fill out the required information to add your container registry.
   - Registry server name, domain name, or address: `<registry-to-push-images-to>`
   - User name: `<Your user name>`
   - Password or API key: `<Your password or API key>`
-4. If you're using the newly added registry as a push registry:
-  - **In Eclipse:** Select **Designate as push registry** and enter a namespace.
-  - **In VS Code:** Enter the namespace that you want to push your images to.
   - For recommended values for common registries, see the [examples](#examples).
-5. If you want to make a registry a push registry after you created it:
-  - **In Eclipse:** Select the registry in the table and click **Set as Push**.
-  - **In VS Code:** Click **Select a Push Registry**.
 
 ## Codewind Docker registry guidance
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
