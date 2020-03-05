@@ -1,0 +1,160 @@
+{% include header-fixedtop.html %}
+{% assign t = site.blog %}
+
+<!-- BLOG -->
+<div id="background-container">
+    <div id="blog-container" class="container-fluid">
+        
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+
+                <!-- Show blog posts from the past 30 days as Latest Posts unless there are less than 3
+                     2592000 is 30 days in seconds (30 days * 24 hours * 60 minutes * 60 seconds) -->
+                {% assign past_month_count = 0 %}
+                {% for post in site.blog %}
+
+                    {% assign date_published = post.date | date:'%s' %}
+                    {% assign date_now = 'now' | date:'%s' %}
+                    {% assign date_difference = date_now | minus: date_published %}
+
+                    {% if date_difference < 2592000 %}
+                        {% assign past_month_count = past_month_count | plus: 1 %}
+                    {% endif %}
+
+                    {% assign latest_posts_count = 3 %}
+                    {% if past_month_count > 3 %}
+                        {% assign latest_posts_count = past_month_count %}
+                    {% endif %}
+
+                {% endfor %}
+
+                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                {% assign count = 1 %}
+                {% for post in site.blog %}
+
+                    {% assign additional_author_count = 0 %}
+                    {% for author in post.additional_authors %}
+                        {% assign additional_author_count = additional_author_count | plus: 1 %}
+                    {% endfor %}
+
+                    <div class="row blog-post-row">
+                        <div class="blog-post-column col">
+                            {% if count <= latest_posts_count %}
+                                <div class="blog-post-content blog-content">
+                                    {% if post.redirect_link %}
+                                        <h2 class="blog-post-title"><a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="blog-post-title-link">{{ post.title | escape }}</a>
+                                            <span class="continued_text">
+                                                {% assign continue_text = ' [Continued on ' %}
+                                                {% assign domain_name = post.redirect_link | remove: "https://" | remove: "http://" | remove: "www." | append: "]" %}
+                                                {{ continue_text | append: domain_name }}
+                                            </span>
+                                        </h2>
+                                    {% else %}
+                                        <h2 class="blog-post-title"><a href="{{ post.url | relative_url }}" class="blog-post-title-link">{{ post.title | escape }}</a></h2>
+                                    {% endif %}
+                                    <p class="blog-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}</p>
+                                    <p class="blog-post-paragraph">
+                                        {% if post.blog_description %}
+                                            {{ post.blog_description }}
+                                        {% else %}
+                                            {{ post.content | strip_html | truncatewords: 60 }}
+                                        {% endif %}
+                                    </p>
+                                    <div class="row">
+                                        <div class="blog-post-author-data-container col-md-7">
+                                            <div class="author-images-container">
+                                                <img src="{{ post.author_picture }}" class="blog-post-author-image" alt="Blog author picture">
+                                                {% for author in post.additional_authors %}
+                                                    <img src="{{ author.image }}" class="blog-post-author-image" alt="image of author">
+                                                {% endfor %}
+                                            </div>
+                                            <a class="blog-post-author-name" href="{{ post.author_github }}" target="_blank" rel="noopener">{{ post.author }}</a>
+                                            {% for author in post.additional_authors %}
+                                                {% if additional_author_count == 1 %}
+                                                    <span>and </span>
+                                                    <a class="blog-post-author-name" href="{{ author.github }}" target="_blank" rel="noopener">{{ author.name }}</a>
+                                                {% else %}
+                                                    <span>and {{ additional_author_count }} others</span>
+                                                    {% break %}
+                                                {% endif %}
+                                            {% endfor %}
+                                            <span class="blog-post-date" title="{{ post.date | date: date_format }}">on {{ post.date | date: date_format }}</span>
+                                        </div>
+                                        <div class="read-more-link-container col-sm-12 col-md-5">
+                                        {% if post.redirect_link %}
+                                            <a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="read-more-link read-more-link-external">Read more</a>
+                                        {% else %}
+                                            <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="blog-post-content blog-content">
+                                    {% if post.redirect_link %}
+                                        <h2 class="blog-post-title-condensed"><a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="blog-post-title-link-condensed">{{ post.title | escape }}</a>
+                                            <span class="continued_text">
+                                                {% assign continue_text = ' [Continued on ' %}
+                                                {% assign domain_name = post.redirect_link | remove: "https://" | remove: "http://" | remove: "www." | append: "]" %}
+                                                {{ continue_text | append: domain_name }}
+                                            </span>
+                                        </h2>
+                                    {% else %}
+                                        <h2 class="blog-post-title-condensed"><a href="{{ post.url | relative_url }}" class="blog-post-title-link-condensed">{{ post.title | escape }}</a></h2>
+                                    {% endif %}
+                                    <p class="blog-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}</p>
+                                    <p class="blog-post-paragraph">
+                                        {% if post.blog_description %}
+                                            {{ post.blog_description }}
+                                        {% else %}
+                                            {{ post.content | strip_html | truncatewords: 60 }}
+                                        {% endif %}
+                                    </p>
+                                    <div class="row">
+                                        <div class="blog-post-author-data-container col-md-7">
+                                            <div class="author-images-container">
+                                                <img src="{{ post.author_picture }}" class="blog-post-author-image" alt="Blog author picture">
+                                                {% for author in post.additional_authors %}
+                                                    <img src="{{ author.image }}" class="blog-post-author-image" alt="image of author">
+                                                {% endfor %}
+                                            </div>
+                                            <a class="blog-post-author-name" href="{{ post.author_github }}" target="_blank" rel="noopener">{{ post.author }}</a>
+
+
+                                            {% for author in post.additional_authors %}
+                                                {% if additional_author_count == 1 %}
+                                                    <span>and </span>
+                                                    <a class="blog-post-author-name" href="{{ author.github }}" target="_blank" rel="noopener">{{ author.name }}</a>
+                                                {% else %}
+                                                    <span>and {{ additional_author_count }} others</span>
+                                                    {% break %}
+                                                {% endif %}
+                                            {% endfor %}
+
+                                            <span class="blog-post-date" title="{{ post.date | date: date_format }}">on {{ post.date | date: date_format }}</span>
+                                        </div>
+                                        <div class="read-more-link-container col-sm-12 col-md-5">
+                                        {% if post.redirect_link %}
+                                            <a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="read-more-link read-more-link-external">Read more</a>
+                                        {% else %}
+                                            <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
+                                        {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% assign count = count | plus: 1 %}
+                {% endfor %}
+                
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+<!-- Main Col END -->
+ {% include body-end.html %}
