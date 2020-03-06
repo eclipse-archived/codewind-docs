@@ -24,7 +24,7 @@
       children:
       - title: 'Installing Eclipse Che for Codewind'
         url: che-installinfo.html
-      - title: 'Adding a container registry in Codewind'
+      - title: 'Adding an image registry in Codewind'
         url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: che-createcodewindworkspace.html
