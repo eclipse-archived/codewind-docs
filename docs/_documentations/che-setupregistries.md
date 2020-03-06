@@ -8,7 +8,7 @@ permalink: che-setupregistries
 type: document
 ---
 
-# Adding an image registry in Codewind
+# Adding an image registry in Codewind in Che
 
 ## Prerequisite: Determining if you need an image registry 
 1\. First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
