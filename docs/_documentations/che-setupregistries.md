@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Adding a container registry in Codewind
-description: Adding a container registry in Codewind
+title: Adding an image registry in Codewind
+description: Adding an image registry in Codewind
 keywords: container, registry, Che, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
 permalink: che-setupregistries
 type: document
 ---
 
-# Adding a container registry in Codewind
+# Adding an image registry in Codewind
 
-## Prerequisite: Determining if you need a container registry 
-1\. First, determine if you need to add a container registry. The following scenarios in Codewind require you to specify which image registry is in use:
+## Prerequisite: Determining if you need an image registry 
+1\. First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
 - In the following scenario, configure Codewind with an image registry to push the application image to that specific image registry:
     - Run Codewind on a remote Kubernetes cluster, including Che, to develop a Codewind style project.
 - In the following scenario, configure Codewind to use the credentials for a specific image registry:
@@ -21,10 +21,10 @@ type: document
     - Run Codewind locally to develop an Appsody style project.
     - The image registry for the Appsody stack requires credentials. 
 If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, you do not need to specify an image registry.
-2\. If you do need to add a container registry, start and run Che.
+2\. If you do need to add an image registry, start and run Che.
 
-## Adding a container registry in Codewind
-After Che is started and running, add the container registry to be used with Codewind.
+## Adding an image registry in Codewind
+After Che is started and running, add the image registry to be used with Codewind.
 1. From the Codewind Project Explorer view, right-click **Projects** and select **Image Registry Manager**.
 2. From the **Image Registry Manager**, click **Add New**.
 3. Enter the following information to add the registry:
@@ -35,7 +35,7 @@ After Che is started and running, add the container registry to be used with Cod
   - For recommended values for common registries, see the [examples](#examples).
 5. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
 
-## Codewind Docker registry guidance
+## Codewind image registry guidance
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
 
 Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
@@ -61,6 +61,6 @@ These examples show recommended values for common registries. The following depl
     - Credentials: OpenShift user name and access token
 
 ## Adding registries to OKD and OpenShift
-To use the OpenShift internal Docker registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
+To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 Next step: [Creating a Codewind workspace in Che](che-createcodewindworkspace.html)
