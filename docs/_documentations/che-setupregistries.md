@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Adding an image registry in Codewind
-description: Adding an image registry in Codewind
+title: Adding an image registry in Codewind in Che
+description: Adding an image registry in Codewind in Che
 keywords: container, registry, Che, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
 permalink: che-setupregistries
