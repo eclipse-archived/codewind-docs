@@ -34,7 +34,7 @@ In this topic you will:
 
 3\. Complete the three required fields: Gatekeeper URL, user name, and password. Then **Save**.
 
-![Required Fields](./images/remotevs/connectionCreds.png)
+![Required Fields](./images/remotevs/connectionCreds.png){:width="600"}
 
 The IDE validates the connection and adds it to the Codewind panel:
 
@@ -56,7 +56,7 @@ Before projects can be deployed on Kubernetes, you need to specify a Docker Regi
 
 3\. In the image registry screen, click **+ Add New**:
 
-![Adding Registry](./images/remotevs/ImageRegistries.png)
+![Adding Registry](./images/remotevs/ImageRegistries.png){:width="600"}
 
 4\. Complete the Docker connection details. For example, if you are using Docker Hub, enter `docker.io` and press **Enter**:
 
