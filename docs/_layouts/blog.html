@@ -12,7 +12,7 @@
                 <!-- Show blog posts from the past 30 days as Latest Posts unless there are less than 3
                      2592000 is 30 days in seconds (30 days * 24 hours * 60 minutes * 60 seconds) -->
                 {% assign past_month_count = 0 %}
-                {% for post in site.blog %}
+                {% for post in site.blog reversed %}
 
                     {% assign date_published = post.date | date:'%s' %}
                     {% assign date_now = 'now' | date:'%s' %}
@@ -31,7 +31,7 @@
 
                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
                 {% assign count = 1 %}
-                {% for post in site.blog %}
+                {% for post in site.blog reversed %}
 
                     {% assign additional_author_count = 0 %}
                     {% for author in post.additional_authors %}

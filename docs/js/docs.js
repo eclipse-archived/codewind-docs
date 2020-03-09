@@ -40,7 +40,7 @@ $(function() {
 	    var pos = id.offset().top - 131;
 	
 	    // animated top scrolling
-	    $('body, html').animate({scrollTop: pos});
+	    //$('body, html').animate({scrollTop: pos});
     });  
 	
 	activeOSInstruction();

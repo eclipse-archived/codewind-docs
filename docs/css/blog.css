@@ -28,6 +28,8 @@
 #blog-container {
     max-width: 1440px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media (max-width: 991.98px) {
         width: 100%;
@@ -220,8 +222,8 @@
 }
 
 .blog-post-author-image {
-    height: 32px;
-    width: 32px;
+    height: 64px;
+    width: 64px;
     border-radius: 100%;
     vertical-align: middle;
 }
@@ -236,6 +238,7 @@
     margin-left: 2px;
     color: #6f7878;
 }
+
 
 .read-more-link-container {
     text-align: right;
@@ -298,6 +301,11 @@
     &:hover {
         color: #cf3b06;
     }
+}
+
+.post {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #final-post {

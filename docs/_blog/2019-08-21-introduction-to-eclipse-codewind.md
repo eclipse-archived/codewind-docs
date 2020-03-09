@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Introduction to Eclipse Codewind: Build high-quality cloud-native applications faster"
+categories: blog
+author_picture: https://miro.medium.com/fit/c/96/96/2*DR-EtqqRvKfLAhv2iYe70A.jpeg
+author_github: https://github.com/Kabanero-io
+seo-title: "Introduction to Eclipse Codewind: Build high-quality cloud-native applications faster"
+
+seo-description: "Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. Codewind initially supports Visual Studio Code, Eclipse IDE and Eclipse Che."
+
+blog_description: "Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. Codewind initially supports Visual Studio Code, Eclipse IDE and Eclipse Che."
+permalink: introduction
+---
+<p xmlns="http://www.w3.org/1999/xhtml"><a href="https://www.eclipse.org/codewind/">Eclipse Codewind</a> is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. Codewind initially supports Visual Studio Code, Eclipse IDE and Eclipse Che. We&#8217;re working on adding support for additional editors in the coming months.</p>
+<h2 id="easy-to-get-started">Easy to get started</h2>
+<p>Once you&#8217;ve <a href="https://www.eclipse.org/codewind/gettingstarted.html">installed Codewind</a>, you can use common templates to quickly start using popular frameworks including Express (Node.js), Spring Boot (Java), Open Liberty (Java), and Kitura (SwiftLang). If you want to develop in other runtimes and frameworks, you can do that as well! Codewind enables you to bring your own templates to expand support to meet your own needs.</p>
+<h2 id="containerized-from-the-start">Containerized from the start</h2>
+<p>When you&#8217;re creating an application, Codewind immediately syncs and builds your application within its own container, pulling in application dependencies as appropriate. The best part? You don&#8217;t have to leave your editor to use dependent tools.</p>
+<p>Auto-rebuild capabilities ensure that changes you make to your application are immediately reflected in your container, which results in quick feedback on your code changes. Applications that you build using Codewind come with health endpoints and metrics so that you can make sure your microservices are responding like you expect them to.</p>
+<p>In addition, Codewind&#8217;s built-in performance tooling generates load on your microservice endpoint. This enables you to watch the metrics to compare changes between application levels and to identify hot spots that indicate potential application bottlenecks.</p>
+<h3 id="kabanero-connection">Kabanero connection</h3>
+<p>Codewind is used within <a href="https://kabanero.io/">Kabanero</a>, an open source project that brings together foundational open source technologies into a modern microservices-based framework. Kabanero uses Codewind to provide an integrated IDE experience.</p>
+<h2 id="see-codewind-in-action">See Codewind in action</h2>
+<p>Tim deBoer introduces Eclipse Codewind, an open Eclipse open source project to extend common IDE&#8217;s and assist rapid micro service application development with containers.</p>
+<p><iframe width="750" height="450" src="https://www.youtube-nocookie.com/embed/mjADP2_4FBg"></iframe></p>
+<h2 id="start-your-codewind-journey">Start your Codewind journey</h2>
+<ul>
+<li>Learn more: <a href="https://codewind.dev">Codewind.dev</a></li>
+<li>Contribute to the project: <a href="https://github.com/eclipse/codewind">Visit GitHub</a></li>
+<li>Follow us on EclipseCodewind@twitter</li>
+</ul>
