@@ -11,6 +11,7 @@ order: 2
 ---
 
 # Deploying remote Codewind components individually
+
 Complete the prerequisites in the [overview](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed separately, or installed at the same time. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
@@ -48,12 +49,6 @@ This command requires various flags to specify where and what to install which w
 
   ```
   $ kubectl get namespaces
-  ```
-
-  or
-  
-  ```
-  $ oc get namespaces
   ```
 
   If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
@@ -178,6 +173,7 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 Codewind is successfully deployed and is available.
 
 ### Save the address of the remote Codewind Service 
+
 Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
 
 # 3. Deploy additional remote Codewind services

@@ -47,12 +47,6 @@ This command requires various flags to specify where and what to install which w
   $ kubectl get namespaces
   ```
 
-  or
-
-  ```
-  $ oc get namespaces
-  ```
-
   If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
@@ -148,15 +142,9 @@ Make a note of the address provided because you need it for configuring your IDE
 
 # 2. Deploy additional remote Codewind services
 
-*WIP* You will now use the same keycloak to install multiple codewinds remotely.
+Each user can have several remote Codewind instances allocated to them. This can be achieved by re-running the `./cwctl --insecure install remote \` command.
 
-Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. You must have your own remote Codewind instance in order to generate additional remote codewind services.
-
-*SWAP THESE PARAGRAPHS AROUND?*
-Each user can have several remote Codewind instances allocated to them. This can be achieved by either:
-1. Re-running the `./cwctl --insecure install remote \` command
-or
-2. Assigning users through role-based acccess control. This is/can be? set up automatically using/by? the `cwctl` command - MORE DETAILS ARE WHERE?
+Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. Use the `--kurl` flag to point to the URL of the existing keycloak deployment. 
 
 # Next Steps
 

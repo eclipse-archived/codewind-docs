@@ -18,7 +18,6 @@ Keycloak and the remote instance of Codewind can be installed all-in-one simulta
 
 If you are using an IBM Public Cloud, you must install Codewind and Keycloak separately. For more information, see [Deploying Codewind components individually](remotedeploy-single.html). 
 
-
 # Objectives
 
 In this topic you will learn how to:
@@ -50,12 +49,6 @@ This command requires various flags to specify where and what to install which w
   $ kubectl get namespaces
   ```
 
-  or
-
-  ```
-  $ oc get namespaces
-  ```
-
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
@@ -83,6 +76,7 @@ Determine the following values for your cloud deployment:
 - `ingress`: The ingress domain for your cloud environment.
 
 ## Run the Codewind CLI command
+
 To install Codewind and an associated Keycloak, enter the following example command:  
 
 ```
