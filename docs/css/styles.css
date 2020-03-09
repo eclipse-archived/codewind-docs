@@ -68,6 +68,42 @@ code {
 	padding-right: 33px;
 }
 
+.cw-header-link-versions {
+	padding-right: 33px;
+}
+
+ul.global-nav li a .ui-icon {
+    filter: brightness(0) invert(1);
+}
+
+.ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.25em;
+    position: relative;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.ui-icon {
+    display: inline-block !important;
+}
+
+.ui-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url(../images/ui-icons_222222_256x240.png);
+}
+
+ul.global-nav li ul li {
+    display: block;
+    height: 28px;
+}
+
 .cw-header-link-docs {
 	padding-right:45px;
 }
@@ -84,6 +120,123 @@ code {
     display: table-cell;
     vertical-align: middle;
 }
+
+.nav-item {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0073ba;
+}
+
+.cw-navbar-nav li ul {
+    position: fixed;
+    top: 40px;
+    text-align: left;
+}
+
+#versionslist {
+    background-color: #000;
+}
+
+.btn-secondary {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    padding:0px;
+}
+
+
+.btn-secondary:hover  {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    padding:0px;
+}
+
+.btn-secondary  {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    padding:0px;
+}
+
+/*
+.btn-secondary.dropdown-toggle {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding:0px;
+    border-radius: 0;
+    border: 0;
+}
+
+.show>.btn-secondary.dropdown-toggle {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding:0px;
+    border-radius: 0;
+    border: 0;
+}
+
+.btn-secondary {
+    color: #0073ba;
+    background-color: #fff;
+    border-color: #fff;
+    border: 0px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #fff;
+    border-color: #fff;
+    border: 0px;
+}
+
+.dropdown-menu > li{
+    padding:0px
+}
+
+*/
+
+
+
 .cw-youtube-desc {
 	margin-top: auto;
     margin-bottom: auto;
