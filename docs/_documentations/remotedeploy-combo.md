@@ -11,6 +11,7 @@ order: 2
 ---
 
 # Deploying remote Codewind all-in-one
+
 Complete the prerequisites in the [overview](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed all-in-one simultaneously, or separately. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).

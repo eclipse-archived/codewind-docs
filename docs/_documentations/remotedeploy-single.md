@@ -51,7 +51,7 @@ This command requires various flags to specify where and what to install which w
   ```
 
   or
-
+  
   ```
   $ oc get namespaces
   ```
