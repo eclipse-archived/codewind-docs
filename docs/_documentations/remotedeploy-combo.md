@@ -84,7 +84,6 @@ Determine the following values for your cloud deployment:
 
 ## Run the Codewind CLI command
 To install Codewind and an associated Keycloak, enter the following example command:  
-(^^^ Mark: `and an associated Keycloak`)
 
 ```
 ./cwctl --insecure install remote \
