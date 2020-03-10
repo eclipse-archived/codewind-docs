@@ -24,7 +24,8 @@ type: document
 ## Checking the status of a project
 The Codewind Project Explorer view shows two statuses.
 - The first status is the application status, which tells you if the application is running, stopped, or starting.
-- The second status is the build status, which tells you what the most recent status of the build was, such as if the build succeeded, failed, or produced a specific error. For example, the build status can tell you if the deployment failed. Note: not all project types will display a build status.
+- The second status is the build status, which tells you what the most recent status of the build was, such as if the build succeeded, failed, or produced a specific error. For example, the build status can tell you if the deployment failed.
+- **Note:** Appsody projects do not display build status.
 
 1. After the project finishes building, its build status changes to **Build Succeeded**.
 2. After the application is built and deployed, the appliction status changes to **Starting**.
