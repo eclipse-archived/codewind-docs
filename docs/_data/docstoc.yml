@@ -30,18 +30,16 @@
         url: che-createcodewindworkspace.html
       - title: 'Creating your first project with Codewind for Eclipse Che'
         url: che-createfirstproject.html
-      - title: 'Configuring Codewind for Tekton pipelines'
-        url: che-tektonpipelines.html
-      - title: 'OpenShift Do (odo) support in Codewind'
-        url: che-odo-support.html         
-      - title: 'Adding the OpenShift internal registry with Codewind'
-        url: openshiftregistry.html
-      - title: 'Support for multiple users'
-        url: supportingmultipleusers.html
-      - title: 'Viewing logs using Kibana in IBM Cloud Private'
-        url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: che-uninstall.html
+      - title: 'Optional configurations for Codewind on Eclipse Che'
+        children:
+        - title: 'Configuring Codewind for Tekton pipelines'
+          url: che-tektonpipelines.html
+        - title: 'OpenShift Do (odo) support in Codewind'
+          url: che-odo-support.html
+        - title: 'Adding the OpenShift internal registry with Codewind'
+          url: openshiftregistry.html
     - title: 'IntelliJ'
       children:
       - title: 'Installing Codewind for IntelliJ'
