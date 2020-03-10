@@ -113,7 +113,7 @@ This command performs the following actions:
 - Adds a client prefix of `codewind`.
 - Creates an initial Codewind user called `developer` with password `passw0rd`.
 - Uses the ingress appropriate to the deployment environment.
-- Adds the Keycloak admin credentials of `admin` with password `passw0rd`.  
+- Supplies the Keycloak admin credentials of `admin` with password `passw0rd` to authenticate and complete the registration of the new deployment within Keycloak. 
 - Specifies the Keycloak URL by using the optional `--kurl` parameter so that your install picks up an existing Keycloak deployment. 
 
 Running the command, you see the following example output:
