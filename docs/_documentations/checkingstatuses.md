@@ -31,7 +31,7 @@ Troubleshooting the application status
 
 ## Build status
 
-The build status shows the current stage of your application in the build lifecycle.
+The build status shows the current stage of your application in the build lifecycle. Not all project types will display a build status.
 
 * When you create or import your application, the state is **Unknown**.
 * The application is then subsequently put on a waiting queue for its build to begin. The state when the application is on the waiting queue is **Queued**.
