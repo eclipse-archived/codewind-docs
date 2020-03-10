@@ -92,8 +92,8 @@
       url: project-settings.html 
     - title: 'Referencing files external to a project'
       url: referencing-files.html
-    - title: Accessing Codewind offline
-      url: offline-codewind.md
+    - title: Using Codewind offline
+      url: offline-codewind.html
       
 - title: 'Performance monitoring'
   children:
