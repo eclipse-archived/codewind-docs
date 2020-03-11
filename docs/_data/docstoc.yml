@@ -36,8 +36,6 @@
         url: che-odo-support.html         
       - title: 'Adding the OpenShift internal registry with Codewind'
         url: openshiftregistry.html
-      - title: 'Viewing logs using Kibana in IBM Cloud Private'
-        url: viewkibanalogs.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: che-uninstall.html
     - title: 'IntelliJ'
