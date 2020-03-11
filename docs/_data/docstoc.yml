@@ -46,6 +46,10 @@
       children:
       - title: 'Installing Codewind for IntelliJ'
         url: intellij-getting-started.html
+      - title: 'Creating your first IntelliJ Codewind project'
+        url: intellij-firstproject.html
+      - title: 'Making a code change with IntelliJ'
+        url: intellij-codechange.html
 
 - title: 'Deploying Codewind remotely'
   children:   
