@@ -130,7 +130,7 @@ Issue link: https://github.com/eclipse/codewind/issues/477
 0.4.0: Issue still present
 -->
 ## Project creation on macOS fails, and Codewind reports an error
-If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. You might encounter the same issue if you run `codewind-installer` from the Terminal. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
+If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
 
 **Workaround**
 As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), go to **Applications**>**Utilities**>**Keychain Access** and delete from the keychain the certificates that you no longer need. You might notice that some certificates are redundant. Then, restart Codewind.
@@ -332,7 +332,7 @@ Issue type: bug
 Issue link: https://github.ibm.com/dev-ex/theia/issues/3
 18.10: Still an issue
 -->
-## Theia editor might not work correctly in Microsoft Edge
+## Che editor might not work correctly in Microsoft Edge
 Theia, the open source code editor used by Che, currently has limited support for Microsoft Edge. The Theia team is aware of the issue and is working to fix it.
 
 **Workaround:** Use a different web browser.
@@ -343,7 +343,7 @@ Issue type: bug/info
 Issue link:
 18.10:
 -->
-## New projects sometimes do not show in Theia hierarchy view
+## New projects sometimes do not show in Che hierarchy view
 Sometimes when a new project is created, it doesn't show up in the hierarchy view within Eclipse Che.
 
 **Workaround:** Refresh the page in the browser.
@@ -355,9 +355,9 @@ Issue link:
 18.10:
 -->
 ## Context Root / Application Endpoint not correct
-If you create or bind a project which has a context root set in `.cw-settings`, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.
+If you create or bind a project that has a context root set in `.cw-settings`, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.
 
-**Workaround** For Eclipse. add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot` so type `mycontextroot`. For VS Code and Theia, edit and save the `.cw-settings` file, and the context root updates.
+**Workaround** For Eclipse, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`. For VS Code and Che, edit and save the `.cw-settings` file, and the context root updates.
 
 ***
 # Disabling development on specific projects

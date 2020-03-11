@@ -8,6 +8,10 @@ Stores files to be part of the Eclipse Codewind landing and documentation pages.
 # Landing pages UI repo
 Store any pages to be part of the landing pages in the `docs/_documentations` folder.
 
+## Support for Windows
+- If you see a script ending in `.sh`, use the equivalent `.bat` script instead. The Windows scripts do not have the correct "last updated" for the documentation. In Linux and macOS, a script is used to force the files to have a timestamp equal to the last Git modification date. The equivalent library does not exist in Windows. As a result, all your "last updated" text will be the date the files were checked out from Git on your local system.
+- **Do not** use Windows for publishing the Codewind documentation website.
+
 ## Viewing the landing pages on your local machine
 View your changes before creating a pull request so you can fix problems before the changes are merged. Each time you merge or push to GitHub, GitHub runs Jekyll.
 
@@ -16,15 +20,9 @@ Prerequisites:
 
 1. Run the following command: `./serve.sh`.
 2. View the page with this URL: `http://localhost:4321/codewind/`.
-3. Run the `./build.sh` command to check broken links.
 
-## Running the build locally
-Prerequisites:
-* Install Docker and make sure the Docker daemon is running.
-
-1. Run the following command: `./build.sh`.
-2. The HTML site content is generated in the `docs/_site/codewind` folder.
-3. Check the script result and make sure there are no broken links.
+## Verifying broken links
+Run `build.sh` to run a self-contained script that creates an instance of Codewind docs, checks the links, and terminates. If you have an intance of Codewind docs running on the default port 4321, you can run `linechecker.sh` to check for broken links.
 
 ## Pushing to the landing page
 See [Publishing.md](https://github.com/eclipse/codewind-docs/blob/master/Publishing.md) for instructions on publishing the landing pages.
@@ -68,8 +66,9 @@ The `_includes` folder has two header files. Use the `header.html` file in the `
 Steven Hung (@sghung) has permission to update the production page. Run `./build.sh` to generate the HTML files in the `_site` folder.
 
 ## Files in the root folder
-* `serve.sh` - Enter `./serve.sh` to launch the landing page on localhost. Requires Docker.
+* `serve.sh` / `serve.bat` - Enter `./serve.sh` to launch the landing page on localhost. Requires Docker.
 * `build.sh` - Enter `./build.sh` to generate the site HTML files and perform 404 checks.
+*  `linkchecker.sh` / `linkchecker.bat` - runs the link checker on a running instance of Codewind docs
 * `Publishing.md` - Instructions for launching the site on localhost and publishing to a production server.
 
 ## Q and A
