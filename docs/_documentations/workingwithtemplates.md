@@ -45,7 +45,7 @@ Use the **Template Source Manager** to perform the following actions:
 ## Adding your template sources to Codewind
 
 Add your template sources to use Codewind with the framework of your choice. 
-1. Ensure your template source has an `index.json` file containing information about your new templates. Follow the same format as the `index.json` file found in [https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json](https://github.com/kabanero-io/codewind-templates/blob/master/devfiles/index.json).
+1. Ensure your template source has an `index.json` file containing information about your new templates. Follow the same format as the `index.json` file found in [https://github.com/codewind-resources/codewind-templates/blob/master/devfiles/index.json](https://github.com/codewind-resources/codewind-templates/blob/master/devfiles/index.json).
 2. **VSCode:** In the **Template Source Manager**, click **Add New**. 
    **Eclipse:** Right click on the connection in the Codewind Explorer view, and select **Manage Template Sources...**. Once the **Manage Template Sources** wizard pops up, click **Add...**.
 3. **VSCode:** Enter the URL to your template source's index file and click `Enter` to confirm.
