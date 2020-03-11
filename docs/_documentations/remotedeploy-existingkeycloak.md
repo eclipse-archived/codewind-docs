@@ -32,6 +32,23 @@ This command requires various flags to specify where and what to install which w
 
 # Pre-requisites 
 
+- Ensure you are in the correct directory for accessing the Codewind CLI:
+
+  1.  Open a new terminal window on your local workstation.
+  2.  Go to your home directory and then to the Codewind CLI:
+
+      ```
+      cd ~/.codewind/<version>
+      ```
+
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+
+  ```
+  $ kubectl get namespaces
+  ```
+
+  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. In addition, you must create the namsepace first. 
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     1. Create the namespace by entering: `oc create namespace <Codewind-namespace>`.
@@ -47,24 +64,6 @@ This command requires various flags to specify where and what to install which w
         - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
-
-Ensure you are in the correct directory for accessing the Codewind CLI:
-
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
-
-```
-cd ~/.codewind/0.8.0
-```
-
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
-
-```
-$ kubectl get namespaces
-```
-
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
-
 
 # 1. Deploy a remote Codewind service
 
@@ -93,8 +92,7 @@ Determine the following values for your cloud deployment:
 ## Run the Codewind CLI command
 
 *alter this based on existing keycloak*
-Deploy a new Codewind instance in Kubernetes/*the cloud* and configure security by pointing to your existing keycloak using the Codewind CLI `cwctl` command. You can use the CLI `cwctl` with additional options LIKE WHAT? WHICH ONES ARE REQUIRED?, for example: 
-
+Deploy a new Codewind instance in Kubernetes/*the cloud* and configure security by pointing to your existing keycloak using the Codewind CLI `cwctl` command, for example:
 ```
 ./cwctl --insecure install remote \
 --namespace codewind-0001 \
@@ -115,7 +113,8 @@ This command performs the following actions:
 - Adds a client prefix of `codewind`.
 - Creates an initial Codewind user called `developer` with password `passw0rd`.
 - Uses the ingress appropriate to the deployment environment.
-- Adds the Keycloak admin credentials of `admin` with password `passw0rd`.  
+- Supplies the Keycloak admin credentials of `admin` with password `passw0rd` to authenticate and complete the registration of the new deployment within Keycloak. 
+- Specifies the Keycloak URL by using the optional `--kurl` parameter so that your install picks up an existing Keycloak deployment. 
 
 Running the command, you see the following example output:
 
@@ -137,20 +136,15 @@ INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.myclus
 
 Codewind is successfully deployed and is available.
 
-### Save the address of the remote Codewind Service 
+## Save the address of the remote Codewind Service 
+
 Make a note of the address provided because you need it for configuring your IDE in the next step, for example: `https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud`
 
 # 2. Deploy additional remote Codewind services
 
-*WIP* You will now use the same keycloak to install multiple codewinds remotely.
+Each user can have several remote Codewind instances allocated to them. This can be achieved by re-running the `./cwctl --insecure install remote \` command.
 
-Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. You must have your own remote Codewind instance in order to generate additional remote codewind services.
-
-*SWAP THESE PARAGRAPHS AROUND?*
-Each user can have several remote Codewind instances allocated to them. This can be achieved by either:
-1. re-running the `./cwctl --insecure install remote \` command
-or
-2. assigning users through role-based acccess control. This is/can be? set up automatically using/by? the `cwctl` command - MORE DETAILS ARE WHERE?
+Additional remote Codewind instances can be generated against the existing keycloak by re-runnning the `./cwctl --insecure install remote \` command detailed in the section [Deploy remote Codewind services].. Each time you re-run the command, a new remote Codewind service is generated against the existing Keycloak service. Use the `--kurl` flag to point to the URL of the existing keycloak deployment. 
 
 # Next Steps
 

@@ -11,12 +11,12 @@ order: 2
 ---
 
 # Deploying remote Codewind all-in-one
+
 Complete the prerequisites in the [overview](remote-overview.html).
 
 Keycloak and the remote instance of Codewind can be installed all-in-one simultaneously, or separately. If you are unsure which procedure suits your use case, see [Planning your Deployment](remote-overview.html).
 
 If you are using an IBM Public Cloud, you must install Codewind and Keycloak separately. For more information, see [Deploying Codewind components individually](remotedeploy-single.html). 
-
 
 # Objectives
 
@@ -32,35 +32,26 @@ You will use the following command to install both the keycloak and remote insta
 
 This command requires various flags to specify where and what to install which will be explained below.
 
-
-
 # Prerequisites
 
-Ensure you are in the correct directory for accessing the Codewind CLI:
+- Ensure you are in the correct directory for accessing the Codewind CLI:
 
-1.  Open a new terminal window on your local workstation.
-2.  Go to your home directory and then to the Codewind CLI:
+  1.  Open a new terminal window on your local workstation.
+  2.  Go to your home directory and then to the Codewind CLI:
 
-```
-cd ~/.codewind/0.8.0
-```
+      ```
+      cd ~/.codewind/<version>
+      ```
 
-Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
+- Ensure that you are logged in to your Kubernetes or OpenShift cluster by running this command and observing the result:
 
-```
-$ kubectl get namespaces
-```
-or 
-```
-$ oc get namespaces
-```
+  ```
+  $ kubectl get namespaces
+  ```
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
-
-
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
-
 
 ## Determine your Cloud ingress domain
 
@@ -84,10 +75,9 @@ Determine the following values for your cloud deployment:
 - `kdevuser` and `kdevpass`: A developer username and password that will be granted access to this deployment of Codewind. The `cwctl` command creates the user and adds it to the realm if it does not exist.
 - `ingress`: The ingress domain for your cloud environment.
 
- 
-
 ## Run the Codewind CLI command
-To install Codewind AND AND ASSOCIATED KEYCLOAK?, enter the following example command:
+
+To install Codewind and an associated Keycloak, enter the following example command:  
 
 ```
 ./cwctl --insecure install remote \
