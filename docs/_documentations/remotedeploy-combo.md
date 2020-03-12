@@ -51,6 +51,26 @@ This command requires various flags to specify where and what to install which w
 
 If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
+Ensure that you are logged in to your cluster by running this command and observing the result:
+<ul class="nav nav-tabs mt-5" role="tablist">
+<li class="nav-item">
+   <a class="nav-link cw-tab-link active" data-toggle="tab" href="#kubernetes-tab" role="tab" aria-controls="Kubernetes" aria-selected="true">Kubernetes</a>
+ </li>
+ <li class="nav-item"> 
+   <a class="nav-link cw-tab-link" data-toggle="tab" href="#openShift-tab" role="tab" aria-controls="Openshift" aria-selected="false">OpenShift</a>
+ </li>
+</ul>
+<div class="tab-content mt-3 mb-5">
+ <div class="tab-pane fade in active show" id="kubernetes-tab" role="tabpanel" aria-labelledby="kubernetes-tab">
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get namespaces</code></pre></div></div>
+<p>If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes cluster.</p>
+  </div>
+ <div class="tab-pane fade" id="openShift-tab" role="tabpanel" aria-labelledby="openShift-tab">
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ oc get namespaces</code></pre></div>    </div>
+<p>If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your OpenShift cluster.</p>
+</div>
+</div>
+
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
 
 ## Determine your Cloud ingress domain
