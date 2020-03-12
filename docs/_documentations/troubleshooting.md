@@ -490,6 +490,33 @@ For Codewind to work with an Appsody stack image on a private Docker registry, t
 **Remote scenario**
 Follow the instructions in [Adding a container registry in Codewind](che-setupregistries.html).
 
+<!--
+Codewind version: 0.9.0
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2455
+-->
+## Open Liberty projects do not start within the default timeout
+
+Occasionally, Appsody open liberty projects do not start and you see the following entries in the `appsody.log`:
+
+```
+[Container] [INFO] CWWKM2010I: Searching for CWWKF0011I: in /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log. This search will timeout after 120 seconds.
+[Container] [INFO] CWWKM2013I: The file /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log being validated does not exist.
+...
+[Container] [INFO] CWWKM2011E: Timed out searching for CWWKF0011I: in /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log.
+```
+
+By default, Open liberty projects are configured to wait 2 minutes (120 seconds) for the server to start up.  The messages above is an indication that the server did not start up within the default timeout period.
+
+**Workaround**
+
+You can increase the timeout value in the project's `pom.xml` file.  Look for the element below and increase the value:
+
+```
+<serverStartTimeout>120</serverStartTimeout>
+```
+
 ***
 # OpenShift Do (odo) with Codewind
 
