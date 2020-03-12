@@ -14,5 +14,3 @@ Codewind automatically builds and redeploys your application whenever you make a
 2. Edit your file.
 3. Save your changes. By default, IntelliJ automatically saves your changes. However, if you manually save your changes, you can help Codewind detect changes more quickly.
 4. Open the application again. Your changes appear.
-
-Next step: [Deploying Codewind remotely](remote-overview.html)
