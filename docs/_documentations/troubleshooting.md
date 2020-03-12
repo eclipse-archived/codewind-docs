@@ -507,7 +507,7 @@ Occasionally, Appsody Open Liberty projects do not start, and you see the follow
 [Container] [INFO] CWWKM2011E: Timed out searching for CWWKF0011I: in /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log.
 ```
 
-By default, Open liberty projects are configured to wait 2 minutes (120 seconds) for the server to start up.  The messages above is an indication that the server did not start up within the default timeout period.
+By default, Open Liberty projects are configured to wait 2 minutes (120 seconds) for the server to start. These messages are an indication that the server did not start within the default timeout period.
 
 **Workaround**
 
