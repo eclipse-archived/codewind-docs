@@ -511,7 +511,7 @@ By default, Open Liberty projects are configured to wait 2 minutes (120 seconds)
 
 **Workaround**
 
-You can increase the timeout value in the project's `pom.xml` file.  Look for the element below and increase the value:
+Increase the timeout value in the project's `pom.xml` file. Look for the following element and increase the value:
 
 ```
 <serverStartTimeout>120</serverStartTimeout>
