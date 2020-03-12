@@ -498,7 +498,7 @@ Issue link: https://github.com/eclipse/codewind/issues/2455
 -->
 ## Open Liberty projects do not start within the default timeout
 
-Occasionally, Appsody open liberty projects do not start and you see the following entries in the `appsody.log`:
+Occasionally, Appsody Open Liberty projects do not start, and you see the following entries in the `appsody.log`:
 
 ```
 [Container] [INFO] CWWKM2010I: Searching for CWWKF0011I: in /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log. This search will timeout after 120 seconds.
