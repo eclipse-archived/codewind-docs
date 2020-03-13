@@ -12,22 +12,17 @@ order: 2
 
 # Connecting Eclipse to remote Codewind
 
-Ensure you have [satisfied all prequisites](./remote-codewind-overview.html). 
+Complete the [prequisites](./remote-codewind-overview.html). 
 
-# Objectives
+## Objectives
 
 In this topic you will:
-
 1. Connect Codewind on Eclipse to the remote instance of Codewind in the cloud.
-
-
-2. Add a deployment registry.
-
+2. Add an image registry.
 3. Create a new project.
-
 4. Copy an existing project to your remote connection.
 
-# 1. Connect your IDE's Codewind extension to your remote instance of Codewind
+## 1. Connect your IDE's Codewind extension to your remote instance of Codewind.
 
 1\. Locate the Codewind Explorer view in Eclipse and click the cloud icon to launch the new connection wizard:
 
@@ -43,14 +38,13 @@ The IDE validates the connection and adds it to the Codewind panel:
 
 The IDE and Codewind are connected.
 
-# 2. Add a deployment registry
+## 2. Add a deployment registry.
 
-Before projects can be deployed on Kubernetes, you must specify a Docker push registry. This example uses Docker Hub. 
+Before projects can be deployed on Kubernetes, specify a Docker push registry. This example uses Docker Hub:
 
-1\. Right-click on your remote connection in the Codewind Explorer view, and select `Manage Image Registries`:
+1\. Right-click your remote connection in the Codewind Explorer view, and select `Manage Image Registries`:
 
 ![Docker Registry](./images/remoteeclipse/connectionSettings.png)
-
 
 2\. Locate and click **Add...** to create a new registry:
 
@@ -60,14 +54,14 @@ Before projects can be deployed on Kubernetes, you must specify a Docker push re
 
 ![New Registry](./images/remoteeclipse/newReg1.png)
 
-1. Add your Docker Hub username.
-2. Add your Docker Hub password.
-3. Click the checkbox to desigate this registry as push registry.
-4. Your Docker Hub namespace (which is usually the same as your user name).
+- Add your Docker Hub user name.
+- Add your Docker Hub password.
+- Click the checkbox to desigate this registry as a push registry.
+- Enter your Docker Hub namespace, which is usually the same as your user name.
 
-The connection is tested to validate your credentials, and these are then stored in a Kubernetes secret within the Codewind service.
+The connection is tested to validate your credentials, which are then stored in a Kubernetes secret within the Codewind service.
 
-# 3. Create a new project
+## 3. Create a new project.
 
 1\. In the Codewind Explorer view, right-click your remote connection and select **Create New Project...**:
 
@@ -77,7 +71,7 @@ The connection is tested to validate your credentials, and these are then stored
 
 ![Adding new remote project](./images/remoteeclipse/runningProject.png)
 
-# 4. Copying an existing local project to the cloud
+## 4. Copy an existing local project to the cloud.
 
 The following procedure copies an existing local project `myFirstNodeProject` to the remote Codewind deployment:
 
@@ -85,23 +79,23 @@ The following procedure copies an existing local project `myFirstNodeProject` to
 
 ![Add existing project](./images/remoteeclipse/addExistingProject.png)
 
-2\. Navigate to the folder containing your local project files, or choose the previously created `myFirstNodeProject` from the workspace. Click **Next** to proceed:
+2\. Go to the folder that contains your local project files, or choose the previously created `myFirstNodeProject` from the workspace. Click **Next**:
 
 ![Add to Codewind](./images/remoteeclipse/existingProject.png)
 
-3\. Codewind prompts you to confirm the project type identified as `Node.js`:
+3\. Codewind prompts you to confirm the project type identified as **Node.js**:
 
 ![Confirm Project Type](./images/remoteeclipse/confirmProjectType.png)
 
 4\. Click **Finish**.
 
-The project files are copied over to the Codewind server and the new `myFirstNodeProject` appears under your remote connection. Codewind builds your application code and Docker image, and moments later, the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
+The project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears under your remote connection. Codewind builds your application code and Docker image, and moments later, the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
 
 ![Build Success](./images/remoteeclipse/buildSuccess.png)
 
-`myFirstNodeProject` on `CloudName1` cluster is now running and ready.
+The `myFirstNodeProject` project on `CloudName1` cluster is now running and ready.
 
-# Next Steps
+## Next Steps
 
 You have now finished configuring Codewind to be used remotely. 
 
