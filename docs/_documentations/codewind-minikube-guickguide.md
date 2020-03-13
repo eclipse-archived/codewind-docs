@@ -4,7 +4,7 @@ title: Codewind on Minikube
 description: End-to-end instructions on how to deploy Codewind and projects on local Kube, specifically, Minikube. 
 keywords: users, projects, Kubernetes, Kube, Minikube, Codewind, deploy, hybrid
 duration: 5 minutes
-permalink: hybrid-codewind
+permalink: codewind-minikube
 type: document
 parent: Quick Guides 
 order: 3
@@ -17,13 +17,15 @@ order: 3
 * Install Codewind 
 * Develop a microservice with Codewind on Minikube 
 
-## Codewind on minikube
+## Overview
 Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, is an effective way to explore and learn to develop with Codewind. This tutorial assists and instructs you to deploy Codewind and projects on local Kube, specifically, Minikube. 
 
 * [Prerequisistes](##prerequisites)
 * [Preparing Minikube](##preparing-minikube)
 * [Installing Codewind](##installing-codewind)
-* [Developing a microservice](##developing-a-microservice) 
+* [Developing a microservice](##developing-a-microservice)
+* [What you have learned](##what-you-have-learned)
+* [Next steps](##next-steps) 
 
 ## Prerequisites
 * A Mac, Windows, or Linux host.
@@ -100,7 +102,7 @@ In this quick-guide, you have learned to:
 * Prepare Minikube and install Codewind
 * Develop a micorservice using Codewind on Minikube 
 
-## Next Steps 
+## Next steps 
 See other quick-guides to learn how to develop with Codewind. 
 
 
