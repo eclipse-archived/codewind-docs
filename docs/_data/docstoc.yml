@@ -107,3 +107,12 @@
  
 - title: 'Troubleshooting'
   url: troubleshooting.html
+
+- title: 'Quick Guides'
+  children:
+    - title: 'Getting Started with Codewind in VS Code'
+      url: 'codewind-vscode-quick-guide'
+    - title: 'Getting Started with Codewind in Eclipse'
+      url: codewind-eclipse-quick-guide
+    - title: 'Codewind on Minikube'
+      url: 'codewind-minikube'
