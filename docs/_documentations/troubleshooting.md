@@ -505,6 +505,8 @@ Occasionally, Appsody Open Liberty projects do not start, and you see the follow
 [Container] [INFO] CWWKM2013I: The file /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log being validated does not exist.
 ...
 [Container] [INFO] CWWKM2011E: Timed out searching for CWWKF0011I: in /opt/ol/wlp/usr/servers/defaultServer/logs/messages.log.
+...
+[Container] [ERROR] Failed to execute goal io.openliberty.tools:liberty-maven-plugin:3.2:dev (default-cli) on project starter-app: Unable to verify if the server was started after 120 seconds.  Consider increasing the serverStartTimeout value if this continues to occur. -> [Help 1]
 ```
 
 By default, Open Liberty projects are configured to wait 2 minutes (120 seconds) for the server to start. These messages are an indication that the server did not start within the default timeout period.
