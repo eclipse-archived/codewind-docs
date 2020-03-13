@@ -44,7 +44,9 @@ The IDE and Codewind are connected.
 
 # 2. Add a deployment registry
 
-Before projects can be deployed on Kubernetes, you need to specify a Docker Registry. Docker Hub is used in this example: 
+Before projects can be deployed on Kubernetes, you need to specify a Docker registry.
+For more information about registries, see [Adding an image registry in remote Codewind](remote-setupregistries.md).
+Docker Hub is used in this example: 
 
 1\. If it's not already open, go to the connection details page with the link:
 
