@@ -19,7 +19,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Creating a project](#creating-a-project)
 * [Importing a project](#importing-a-project)
 * [Understanding Application Metrics](#understanding-application-metrics)
-* [Checking the application and build statuses](#checking-the-application-and-build-statuses)
+* [Troubleshooting project application and build statuses](#troubleshooting-project-application-and-build-statuses)
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
@@ -171,70 +171,6 @@ The Codewind Che extension might lose connectivity to the Codewind pod during a 
 
 **Workaround:** Refresh the projects list to have the tree repopulate. If the issue persists, refresh the webpage.
 
-<!--
-Action/Topic: Creating a project and/or Checking the application and build statuses
-Issue type: bug/info
-Codewind version: 0.5.0
-OS: Windows
-IDE extension version: 0.5.0
-IDE version: Eclipse 2019-09
-Issue link: https://github.com/eclipse/codewind/issues/715
--->
-## Projects stuck in starting or stopped state
-You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
-
-**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
-1. In the **Codewind Explorer** view, right-click your project and select **Build**.
-2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
-
-<!--
-Action/Topic: Checking the application status 
-Issue type: bug/info
-Codewind version: 0.9.0
-Issue link: https://github.com/eclipse/codewind/issues/1269
--->
-## How to stop the app from continuously pinging 
-With all the stacks and templates Codewind offers, some template applications come with no server, like Appsody Node.js. The backend in PFE expects all applications to have a server. Thus, the backend continuously pings the port of the application retrieved from the application's container information. Since no server is available to ping on that port, the application times out and is stuck on `Starting`. 
-
-**Workaround** Disable the pinging of your application stuck on the `Starting` state:
-1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
-    - This key forces the application to stop, stops pinging the application, and bypasses the timeout error. 
-2. Once you implement the server into the application, resume the application ping and run it by setting `internalPort` to `""` for the default port of the container. Or you can choose a specific port you want to ping. 
-
-<!--
-Action/Topic: Checking the application status 
-Issue type: bug/info
-Codewind version: 0.9.0
-Issue link: https://github.com/eclipse/codewind/issues/1269
--->
-## How to create a .cw-settings file if it does not exist
-Prior to the 0.9.0 release, non-Codewind stacks, like Appsody and OpenShift Do (odo), did not come with a .cw-settings. If you have a project from those stacks from a previous release, you need to create the .cw-settings file. The file must reside under the project root directory. 
-
-**Workaround** Create a template .cw-settings file with the following contents: 
-
-```
-{
-"contextRoot": "",
-"internalPort": "",
-"healthCheck": "",
-"isHttps": false,
-"ignoredPaths": [
-""
-]
-}
-```
-
-<!--
-Action/Topic: Creating a project and/or Checking the application and build statuses
-Issue type: bug/info
-Codewind version: 0.6.0
-Issue link: https://github.com/eclipse/codewind/issues/1039
--->
-## Che and local projects build twice when you create a project
-If you are using Codewind on Eclipse and VS Code at the same time, local projects build twice during project creation, resulting in longer project creation time.
-
-**Workaround:** To reduce project creation time, do not use Codewind on Eclipse and Codewind on VS Code at the same time. Close either Eclipse or VS Code and then create your project.
-
 ***
 # Importing a project
 
@@ -306,7 +242,96 @@ If you have the Codewind Language Server for Node.js Profiling extension enabled
 **Workaround:** Review the preceding list and ensure that your project conforms to all of the items in the list.
 
 ***
-# Checking the application and build statuses
+# Troubleshooting project application and build statuses
+<!--
+Action/Topic: Checking the application and build statuses
+Issue type: bug
+Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
+18.10: Still an issue
+-->
+## Troubleshooting general application status problems
+If your application goes into the **Stopped** state unexpectedly or stays in the **Starting** state longer than expected, check the project logs to see whether something went wrong. Open the build and application logs from the project’s context menu. Problems with the build or project configuration can cause the application to fail to start. There are usually errors in the log files in this case.
+
+Even without errors, the **Stopped** state can occur if:
+  * The [health check endpoint](project-settings.html#health-check-endpoint) of the application is unreachable. Ensure it is set to an endpoint that is reachable.
+  * The [internal application port](#internal-application-port) is not correct.
+  * Your application uses HTTPS but the [HTTPS setting](project-settings.html#https-application) is not set.
+  * The time required for your application to start is longer than the [Project status ping timeout](#project-status-ping-timeout). Increase the timeout to a more sufficient time.
+
+<!--
+Action/Topic: Checking the application and build statuses
+Issue type: bug
+Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
+18.10: Still an issue
+-->
+## Troubleshooting general build status problems
+If your build fails, try the following:
+  * Inspect the build logs. The build logs can be opened from the project's context menu. In the build logs, you can view error messages that describe the type and cause of failure.
+  * If the build failure is related to the image build then view the docker build log and correct any errors in the project's Dockerfile.
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Codewind version: 0.5.0
+OS: Windows
+IDE extension version: 0.5.0
+IDE version: Eclipse 2019-09
+Issue link: https://github.com/eclipse/codewind/issues/715
+-->
+## Projects stuck in starting or stopped state
+You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
+
+**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
+1. In the **Codewind Explorer** view, right-click your project and select **Build**.
+2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
+
+<!--
+Action/Topic: Checking the application status 
+Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## Application stuck in Starting state 
+Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out and the state is stuck on `Starting`. 
+
+**Workaround** This is not inherently a problem but you can disable the status check for the project by taking the following steps:
+1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
+    - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error. 
+2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports. 
+
+<!--
+Action/Topic: Checking the application status 
+Issue type: bug/info
+Codewind version: 0.9.0
+Issue link: https://github.com/eclipse/codewind/issues/1269
+-->
+## How to create a .cw-settings file if it does not exist
+Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did not come with a `.cw-settings`. The `.cw-settings` file usually created automatically. It tells Codewind how to interact with a project. Things like application and build status are tied to these settings. If you have a project from those stacks from a previous release you need to create the .cw-settings file manually. The file must reside under the project root directory. 
+
+**Workaround** Create a template .cw-settings file with the following contents: 
+
+```
+{
+"contextRoot": "",
+"internalPort": "",
+"healthCheck": "",
+"isHttps": false,
+"ignoredPaths": [
+""
+]
+}
+```
+
+<!--
+Action/Topic: Creating a project and/or Checking the application and build statuses
+Issue type: bug/info
+Codewind version: 0.6.0
+Issue link: https://github.com/eclipse/codewind/issues/1039
+-->
+## Projects build twice upon creation
+If you are using Codewind on Eclipse and VS Code at the same time, projects build twice during project creation, resulting in longer project creation time.
+
+**Workaround:** To reduce project creation time, do not use Codewind on Eclipse and Codewind on VS Code at the same time. Close either Eclipse or VS Code and then create your project.
 
 <!--
 Action/Topic: Checking the application and build statuses
