@@ -9,7 +9,6 @@ type: document
 ---
 
 # Creating your first IntelliJ Codewind project
-To create a project:
 
 ## Creating your first project from a template
 1. Start IntelliJ. From the welcome page, click **Create New Project**. The **New Project** window opens.
