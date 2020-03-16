@@ -266,11 +266,11 @@ Issue link: https://github.ibm.com/dev-ex/iterative-dev/issues/459
 -->
 ## Troubleshooting general build status problems
 If your build fails, try the following:
-  * Inspect the build logs. The build logs can be opened from the project's context menu. In the build logs, you can view error messages that describe the type and cause of failure.
-  * If the build failure is related to the image build then view the docker build log and correct any errors in the project's Dockerfile.
+  * Inspect the build logs. Open the build logs from the project's context menu. In the build logs, you can view error messages that describe the type and cause of failure.
+  * If the build failure is related to the image build, then view the docker build log and correct any errors in the project's Dockerfile.
 
 <!--
-Action/Topic: Creating a project and/or Checking the application and build statuses
+Action/Topic: Creating a project or Checking the application and build statuses
 Issue type: bug/info
 Codewind version: 0.5.0
 OS: Windows
@@ -279,7 +279,7 @@ IDE version: Eclipse 2019-09
 Issue link: https://github.com/eclipse/codewind/issues/715
 -->
 ## Projects stuck in starting or stopped state
-You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This can happen when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
+You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This behavior can occur when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
 
 **Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
@@ -292,9 +292,9 @@ Codewind version: 0.9.0
 Issue link: https://github.com/eclipse/codewind/issues/1269
 -->
 ## Application stuck in Starting state 
-Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out and the state is stuck on `Starting`. 
+Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out, and the state is stuck on `Starting`. 
 
-**Workaround** This is not inherently a problem but you can disable the status check for the project by taking the following steps:
+**Workaround** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
 1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
     - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error. 
 2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports. 
@@ -306,7 +306,7 @@ Codewind version: 0.9.0
 Issue link: https://github.com/eclipse/codewind/issues/1269
 -->
 ## How to create a .cw-settings file if it does not exist
-Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did not come with a `.cw-settings`. The `.cw-settings` file usually created automatically. It tells Codewind how to interact with a project. Things like application and build status are tied to these settings. If you have a project from those stacks from a previous release you need to create the .cw-settings file manually. The file must reside under the project root directory. 
+Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did not come with a `.cw-settings`. The `.cw-settings` file is usually created automatically and tells Codewind how to interact with a project. Things like application and build status are tied to these settings. If you have a project from those stacks from a previous release, you must manually create the .cw-settings file. The file must reside under the project root directory. 
 
 **Workaround** Create a template .cw-settings file with the following contents: 
 
@@ -323,15 +323,23 @@ Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did no
 ```
 
 <!--
+Action/Topic: Changing the max number of concurrent builds
+Issue type: info
+Codewind version: 0.9.0
+-->
+## Adjusting the maximum number of concurrent builds
+It is not recommended to alter this value because there can be a significant impact on performance but in some cases it may be necessary. For example, if there aren't enough resources to run 3 builds concurrently, you can reduce the maximum number to 1 or 2. If you must adjust the maximum number of concurrent builds, you can set the `MC_MAX_BUILDS` environmental variable in the `codewind-pfe` container.
+
+<!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
 Issue type: bug/info
 Codewind version: 0.6.0
 Issue link: https://github.com/eclipse/codewind/issues/1039
 -->
 ## Projects build twice upon creation
-If you are using Codewind on Eclipse and VS Code at the same time, projects build twice during project creation, resulting in longer project creation time.
+If you use Codewind on Eclipse and VS Code at the same time, projects build twice during project creation, resulting in longer project creation time.
 
-**Workaround:** To reduce project creation time, do not use Codewind on Eclipse and Codewind on VS Code at the same time. Close either Eclipse or VS Code and then create your project.
+**Workaround:** To reduce project creation time, do not use Codewind on Eclipse and on VS Code at the same time. Close either Eclipse or VS Code, then create your project.
 
 <!--
 Action/Topic: Checking the application and build statuses
