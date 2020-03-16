@@ -56,7 +56,7 @@ Run the following command to install Che on OpenShift with Chectl:
 5. Generate a Kubernetes secret containing the certificate you generated in step 2:
    ```
    $ cp rootCA.crt ca.crt
-   $ kubectl create secret generic self-signed-cert --from-file=ca.crt -n che
+   $ kubectl create secret generic self-signed-certificate --from-file=ca.crt -n che
    ```
 6. Run the following command to install Che: 
    ```
@@ -69,7 +69,7 @@ If you already have a Che installation with TLS, you can update it for Codewind.
 
 After creating the Codewind ClusterRole from the [Prerequisites](#prerequisites), run the following command, where `$NAMESPACE` is the namespace that your Che workspaces run in. By default, this namespace is `che`.
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.9.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE
+$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.10.0/setup/install_che/codewind-rolebinding.yaml -n $NAMESPACE
 ```
 
 ## Adding Certificates for Che to your browser
