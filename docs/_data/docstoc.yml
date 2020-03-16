@@ -108,7 +108,7 @@
 - title: 'Troubleshooting'
   url: troubleshooting.html
 
-- title: 'Quick Guides'
+- title: 'Quick guides'
   children:
     - title: 'Getting Started with Codewind in VS Code'
       url: 'codewind-vscode-quick-guide'

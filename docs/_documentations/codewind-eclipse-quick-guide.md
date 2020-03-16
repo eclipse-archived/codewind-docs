@@ -1,12 +1,12 @@
 ---
-layout: guide
+layout: docs
 title: Getting Started with Codewind in Eclipse
 description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
 keywords: Codewind, VS Code, microservice
 duration: 5 minutes
 permalink: codewind-eclipse-quick-guide
 type: document
-parent: Quick Guides 
+parent: Quick guides 
 order: 2
 ---
 
@@ -22,11 +22,9 @@ Eclipse Codewind provides the ability to create application projects from these 
 Eclipse Codewind provides the ability to create projects based on a variety of different template types.  These include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Springboot, Node.js, Node.js with Express, Node.js with Loopback.
 
 ## Developing with Eclipse 
-
 If you use Eclipse, you can use Codewind for Eclipse to develop and debug your containerized projects from within a local Eclipse IDE.
 
 ### Prerequisite
-
 Before you can develop a microservice with Eclipse, you need to:
 
 * [Install Docker](https://docs.docker.com/install/) 
@@ -35,7 +33,6 @@ Before you can develop a microservice with Eclipse, you need to:
     * **Note:** Make sure to install or upgrade to mimimum Eclipse version 2019-09 R (4.13.0). 
 
 ### Installing Codewind for Eclipse
-
 The Codewind installation pulls the following images that form the Codewind backend:
 
 1. `eclipse/codewind-performance-amd64`
@@ -47,7 +44,6 @@ The Codewind installation includes two parts:
 2. The Codewind backend containers install after you click `Install`. Clicking `Install` downloads the Codewind backend containers, ~1GB. 
 
 ### Configuring Codewind to use application stacks
-
 Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include an Eclipse MicroProfile stack that you can use to follow this guide. Complete the following steps to select the Appsody templates:
 
 1. Click the `Codewind` tab. 
@@ -67,7 +63,6 @@ If your organization uses customized application stacks and has given you a URL 
 4. Add your URL in the `URL:` box in the pop up window and save your changes. 
 
 ### Creating an Appsody project
-
 Appsody helps you develop containerized applications and removes the burden of managing the full software development stack. If you want more context about Appsody, visit the https://appsody.dev/docs[Appsody welcome page]. 
 
 1. Right-click `Local [Running]` under `Codewind` in the `Codewind` tab.
@@ -88,14 +83,12 @@ Your project is displayed in the `Local [Running]` section. The progress for cre
 Your project is complete when you see your project is running and its build is successful. 
 
 ### Accessing the application endpoint in a browser
-
 1. Return to your project under the Codewind tab. 
 2. Right-click your project and select `Open Application`. 
 
 Your application is now opened in the browser, showing the welcome to your Appsody microservice page. 
 
 ### Adding a REST service to your application
-
 1. Go to your project's workspace under the Project Explorer tab. 
 2. Navigate to `Java Resources->src/main/java->dev.appsody.starter`. 
 3. Right-click `dev.appsody.starter` and select `New->Class`.
@@ -152,7 +145,6 @@ public class Calculator extends Application {
 Any changes you make to your code is automatically built and re-deployed by Codewind and viewed in your browser.
 
 ### Working with the microservice
-
 You now can work with your calculator. 
 
 * Use the port number you saw when you first opened the application.
@@ -170,10 +162,9 @@ You could also try a few of the sample calculator functions:
 * So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you should see: `10+3=13`. 
 
 ## What you have learned 
-Now that you have completed this quick-guide, you have:
-
+In this quick guide, you have learned to:
 1. Installed Codewind on Eclipse
 2. Developed your own microservice using Codewind
 
 ## Next Steps 
-See other quick-guides to learn how to develop with Codewind.
+See other quick guides to learn how to develop with Codewind.

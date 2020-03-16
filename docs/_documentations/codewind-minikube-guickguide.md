@@ -1,12 +1,12 @@
 ---
-layout: guide
+layout: docs
 title: Codewind on Minikube 
 description: End-to-end instructions on how to deploy Codewind and projects on local Kube, specifically, Minikube. 
 keywords: users, projects, Kubernetes, Kube, Minikube, Codewind, deploy, hybrid
 duration: 5 minutes
 permalink: codewind-minikube
 type: document
-parent: Quick Guides 
+parent: Quick guides 
 order: 3
 ---
 
@@ -64,7 +64,7 @@ Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, i
         --kdevuser developer \
         --kdevpass developer \
         --ingress <ingress-ip>.nip.io
-        ````    
+        ```   
     * **Note:** The `ingress-ip` value is the value you found in Step 4 of `Preparing Minikube`.
     * This command installs Codewind into the `Codewind` namespace with the default credentials.
 4. Open the Codewind view in your editor -> select `New Codewind Connection` -> enter the following details:   
@@ -98,12 +98,12 @@ public class Calculator extends Application {
 Instructions here on how to use the microservice. 
 
 ## What you have learned 
-In this quick-guide, you have learned to:
+In this quick guide, you have learned to:
 * Prepare Minikube and install Codewind
 * Develop a micorservice using Codewind on Minikube 
 
 ## Next steps 
-See other quick-guides to learn how to develop with Codewind. 
+See other quick guides to learn how to develop with Codewind. 
 
 
 

@@ -1,12 +1,12 @@
 ---
-layout: guide
+layout: docs
 title: Getting Started with Codewind in VS Code
 description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
 keywords: Codewind, VS Code, microservice
 duration: 5 minutes
 permalink: codewind-vscode-quick-guide
 type: document
-parent: Quick Guides 
+parent: Quick guides 
 order: 1
 ---
 
@@ -157,10 +157,10 @@ You could also try a few of the sample calculator functions:
 * So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you should see: `10+3=13`.
 
 ## What you have learned 
-Now that you have completed this quick-guide, you have:
+Now that you have completed this quick guide, you have:
 
 1. Installed Codewind on VS Code
 2. Developed your own microservice using Codewind
 
 ## Next Steps 
-See other quick-guides to learn how to develop with Codewind.
+See other quick guides to learn how to develop with Codewind.
