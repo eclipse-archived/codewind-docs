@@ -38,9 +38,9 @@ The IDE validates the connection and adds it to the Codewind panel:
 
 The IDE and Codewind are connected.
 
-## 2. Add a deployment registry.
+## 2. Add an image registry.
 
-Before projects can be deployed on Kubernetes, specify a Docker push registry. This example uses Docker Hub:
+Before projects can be deployed on Kubernetes, specify an image push registry. This example uses Docker Hub:
 
 1\. Right-click your remote connection in the Codewind Explorer view, and select `Manage Image Registries`:
 
