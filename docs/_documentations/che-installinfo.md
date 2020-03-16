@@ -45,7 +45,7 @@ Run the following command to install Che on OpenShift with Chectl:
 **Installing on Kubernetes:**
 
 1. Create the `che` namespace if it doesn't already exist: `kubectl create namespace che`
-2. If you're installing Che on a Kubernetes platform other than OpenShift, determine your Ingress domain.
+2. Determine your Ingress domain.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
     - If you're unsure of your Ingress domain, ask your cluster administrator.
 3. Generate TLS certificates and keys according to https://www.eclipse.org/che/docs/che-7/setup-che-in-tls-mode-with-self-signed-certificate/#generating-self-signed-certificates_setup-che-in-tls-mode-with-self-signed-certificate
