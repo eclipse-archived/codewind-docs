@@ -44,7 +44,7 @@ Run the following command to install Che on OpenShift with `chectl`:
 
 **Installing on Kubernetes:**
 
-1. Create the `che` namespace if it doesn't already exist: `kubectl create namespace che`
+1. Create the `che` namespace if it doesn't already exist: `kubectl create namespace che`.
 2. Determine your Ingress domain.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
     - If you're unsure of your Ingress domain, ask your cluster administrator.
@@ -59,7 +59,7 @@ Run the following command to install Che on OpenShift with `chectl`:
    $ kubectl create secret generic self-signed-certificate --from-file=ca.crt -n che
    ```
 6. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
-6. Run the following command to install Che: 
+7. Run the following command to install Che: 
    ```
    $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.0
    ```
@@ -75,7 +75,7 @@ $ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin
 
 ## Adding certificates for Che to your browser
 
-**Note**: If you configured Eclipse Che with self-signed certificates, you need to add the ca.crt for Eclipse Che to your browser. Examples of configuring Che with self-signed certificates include the following examples:
+**Note**: If you configured Eclipse Che with self-signed certificates, you need to add the `ca.crt` for Eclipse Che to your browser. Examples of configuring Che with self-signed certificates include the following examples:
   - Completing the previous steps for Kubernetes
   - Installing Che on an OpenShift cluster with self-signed-certificates
 
@@ -92,7 +92,7 @@ $ oc get secret router-ca -n openshift-ingress-operator -o jsonpath="{.data.tls\
 
 ### Adding the ca.crt to Google Chrome
 
-On MacOS, follow these steps:
+On macOS, follow these steps:
 
 1. Open **Keychain Access** and click **File**>**Import items**.
 2. Locate the `rootCa.crt` that you downloaded and import it.
@@ -102,7 +102,7 @@ On MacOS, follow these steps:
 
 On Windows, follow these steps:
 
-1. Open Google Chrome preferences, select **Privacy and Security**, and click on **Manage Certificates**.
+1. Open Google Chrome preferences, select **Privacy and Security**, and click **Manage Certificates**.
 2. In the window that appears, click the **Trusted Root Certificate Authorities** tab.
 3. Locate the `rootCa.crt` that you downloaded and import it.
 4. Restart Google Chrome and access the Eclipse Che URL.
@@ -110,7 +110,7 @@ On Windows, follow these steps:
 ### Adding the ca.crt to Firefox
 
 1. Go to **Preferences**>**Privacy and Security**>**View certificates**.
-2. Click  **Authorities** and click `Import`.
+2. Click **Authorities** and click **Import**.
 3. Locate the `rootCa.crt` that you downloaded and import it.
 4. Reload Eclipse Che in your browser.
 
