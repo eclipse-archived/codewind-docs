@@ -42,13 +42,13 @@ The IDE and Codewind are connected.
 
 ## 2. Add an image registry.
 
-Before projects can be deployed on Kubernetes, specify an image registry.
-For more information about registries, see [Adding an image registry in remote Codewind](remote-setupregistries.md).
+Before Codewind style projects can be deployed on Kubernetes, specify an image push registry.
+For more information about registries, see [Codewind container registry guidance](remote-setupregistries.md#codewind-container-registry-guidance).
 This example uses Docker Hub:
 
 1\. If it's not already open, go to the connection details page with the link:
 
-![Docker Registry](./images/remotevs/connectionSettings.png)
+![Image Registry](./images/remotevs/connectionSettings.png)
 
 2\. Locate and click **Open Container Registry Manager**:
 
