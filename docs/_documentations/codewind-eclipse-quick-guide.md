@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Getting Started with Codewind in Eclipse
+title: Codewind in Eclipse
 description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
 keywords: Codewind, VS Code, microservice
 duration: 5 minutes
