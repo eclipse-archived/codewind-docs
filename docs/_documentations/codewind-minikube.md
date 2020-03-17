@@ -1,30 +1,33 @@
 ---
 layout: docs
-title: Hybrid Codewind on Minikube 
+title: Codewind on Minikube 
 description: End-to-end instructions on how to deploy Codewind and projects on local Kube, specifically, Minikube. 
-keywords: users, projects, Kubernetes, Kube, Minikube, Codewind, deploy, hybrid
+keywords: Kubernetes, Kube, Minikube, Codewind, deploy, 
 duration: 5 minutes
-permalink: hybrid-codewind
+permalink: codewind-minikube
 type: document
-parent: Using Codewind remotely  
-order: 3
+parent: Developing projects  
 ---
 
-# Hybrid Codewind on Minikube
+# Codewind on Minikube 
+
+## Objectives 
+* Start Minikube on your local machine 
+* Install Codewind 
+
+## Overview
 Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, is an effective way to explore and learn to develop with Codewind. This tutorial assists and instructs you to deploy Codewind and projects on local Kube, specifically, Minikube. 
 
 * [Prerequisistes](##prerequisites)
-* [Preparing Minikub](###preparing-minikube)
-* [Installing Codewind](###installing-codewind) 
+* [Preparing Minikube](##preparing-minikube)
+* [Installing Codewind](##installing-codewind)
 
 ## Prerequisites
 * A Mac, Windows, or Linux host.
 * Install [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
 * At least 8Gb RAM. Minikube needs at least 4Gb of RAM for this tutorial. 
 
-## Setup
-
-### Preparing Minikube
+## Preparing Minikube
 1. To run the needed commands, open your terminal. 
 2. To start Minikube on your machine, run, `minikube start --memory=4096`.
     * Minikube creates a single-node Kubernetes cluster with 4GB of RAM available to it.
@@ -39,7 +42,7 @@ Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, i
      ```
      * Save this value for later.
  
-### Installing Codewind
+## Installing Codewind
 1. Choose your IDE and install the Codewind extension. 
     * Follow the install instructions for [Eclipse](https://www.eclipse.org/codewind/mdt-eclipse-getting-started.html) or [VS Code](https://www.eclipse.org/codewind/mdt-vsc-getting-started.html). 
 2. Locate the `cwctl` command line interface (CLI). 
@@ -56,7 +59,7 @@ Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, i
         --kdevuser developer \
         --kdevpass developer \
         --ingress <ingress-ip>.nip.io
-        ````    
+        ```   
     * **Note:** The `ingress-ip` value is the value you found in Step 4 of `Preparing Minikube`.
     * This command installs Codewind into the `Codewind` namespace with the default credentials.
 4. Open the Codewind view in your editor -> select `New Codewind Connection` -> enter the following details:   
