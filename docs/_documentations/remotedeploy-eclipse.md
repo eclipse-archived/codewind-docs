@@ -42,7 +42,7 @@ The IDE and Codewind are connected.
 
 Before projects can be deployed on Kubernetes, specify an image push registry. This example uses Docker Hub:
 
-1\. Right-click your remote connection in the Codewind Explorer view, and select `Manage Image Registries`:
+1\. Right-click your remote connection in the Codewind Explorer view and select `Manage Image Registries`:
 
 ![Docker Registry](./images/remoteeclipse/connectionSettings.png)
 
@@ -93,7 +93,7 @@ The project files are copied over to the Codewind server, and the new `myFirstNo
 
 ![Build Success](./images/remoteeclipse/buildSuccess.png)
 
-The `myFirstNodeProject` project on `CloudName1` cluster is now running and ready.
+The `myFirstNodeProject` project on the `CloudName1` cluster is now running and ready.
 
 ## Next Steps
 
