@@ -6,13 +6,17 @@ keywords: importing, directory, archive, configuring, cloud, microservices, appl
 duration: 1 minute
 permalink: importing-existing-projects
 type: document
-parent: importingaproject
-order: 0
 ---
 
 # Importing existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This tutorial covers the basics of configuring a project to run in Codewind.
+Configure a project to run in Codewind.
+
+## Importing projects from IDEs
+
+Add a project from an existing Git repository:
+1. Clone the repository to your local computer.
+2. Use the **Add Existing Project** command to add the project to Codewind.
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
