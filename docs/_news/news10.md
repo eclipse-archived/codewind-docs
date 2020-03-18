@@ -22,7 +22,6 @@ As promised, we've continue to work hard on getting the IntelliJ experience up a
 - Create a new project with the [`New Project` menu action](https://github.com/eclipse/codewind-intellij/pull/64)
 ![](images/imagesfornews/newprojintellij.gif){:width="800"}
 
-
 **IDEs (Both Eclipse and VS Code)**
 - The [Performance Dashboard will always be enabled](https://github.com/eclipse/codewind/issues/2299), even if the project does not have metrics available. 
     - Note that for [projects without metrics, running loads will fail](https://github.com/eclipse/codewind/issues/2384)
