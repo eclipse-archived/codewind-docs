@@ -73,7 +73,7 @@
       - title: 'Connecting Eclipse to remote Codewind'
         url: remotedeploy-eclipse.html
     - title: 'Adding an image registry in remote Codewind'
-      url: remote-setupregistries
+      url: remote-setupregistries.html
     - title: 'Creating and importing projects'
       url: remotedeploy-projects-vscode.html
        
