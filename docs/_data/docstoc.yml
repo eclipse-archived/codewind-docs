@@ -2,7 +2,6 @@
   url: overview.html
 
 - title: 'Getting started'
-  url: gettingstarted.html
   children:
     - title: 'VS Code'
       children:

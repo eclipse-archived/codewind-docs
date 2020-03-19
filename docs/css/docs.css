@@ -48,6 +48,10 @@ code {
 	text-decoration: none;
 }
 
+.collapsing {
+    transition: none !important;
+  }
+
 #sidebar-container {
     min-height: 100vh;
     padding: 0;
@@ -169,87 +173,6 @@ code {
 .cw-docs-spacer {
 	height: 115px;
 }
-
-.cs-gettingstarted-mobile-title {
-		display: none;
-	}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1320px) {
-    #cs-gettingstarted-block {
-    		width: 700px;
-    }
-    #cs-gettingstarted-block-2 {
-    		width: 700px;
-    }
-    .cw-gettingstarted-card {
-	    width: 200px;
-	    height: 270px;
-	    background-color: #3d7594;
-	}
-}
-
-@media only screen and (max-width: 1160px) {
-    #cs-gettingstarted-block {
-    		width: 550px;
-    }
-    #cs-gettingstarted-block-2 {
-    		width: 550px;
-    }
-    .cw-gettingstarted-card {
-	    width: 150px;
-	    height: 250px;
-	    background-color: #3d7594;
-	}
-	.cw-gettingstarted-card-link {
-		font-size: 14px;
-	}
-}
-
-@media only screen and (max-width: 992px) {
-	.cw-ggettingstarted-mobile-card-container {
-		padding-bottom: 50px;
-	}
-	.cw-gettingstarted-mobile-title-container {
-		height: 50px;
-	}
-	.cs-gettingstarted-mobile-title {
-		display: block;
-	}
-	.cw-gettingstarted-card img {
-		top: 20px;
-		width: 62px;
-    		left: -8px;
-	}
-	.cw-gettingstarted-card-link-container {
-    		top: 90px;
-	}
-    #cs-gettingstarted-block {
-    		display: none;
-    }
-    #cs-gettingstarted-block-2 {
-    		width: 80%;
-    }
-    .cw-gettingstarted-card {
-	    width: 100%;
-	    height: 200px;
-	    background-color: #3d7594;
-	}
-	.cw-gettingstarted-card-link {
-		font-size: 20px;
-	}
-	.cw-getting-started-text {
-	    position: absolute;
-	    top: -15px;
-	}
-	
-	#sidebar-container {
-        padding-top: 101px;
-    }
-}
-
-
-
 
 @media only screen and (max-width: 768px) {
 	.cw-docs-spacer {
