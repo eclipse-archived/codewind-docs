@@ -31,7 +31,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - [The **add to workspace** project command is reworked for multi-root workspaces](https://github.com/eclipse/codewind-vscode/pull/484). It no longer appears on projects that are already in the root workspace folder and gives an overrideable warning if run on a project that is in a subfolder of the workspace.
 - The homepage is updated so that [the **create** and **add** project creation steps are greyed out and unclickable until the actions are allowed](https://github.com/eclipse/codewind/issues/2255). On the **Local** tab, local Codewind must be started. On the **Remote** tab, a remote connection must exist.
 - The **Remote Connection** settings page layout is [improved and more responsive](https://github.com/eclipse/codewind-vscode/pull/476).
-- [Miscellaneous corrections were made to Webview links and buttons](https://github.com/eclipse/codewind-vscode/pull/473).
+- [Miscellaneous corrections were made to webview links and buttons](https://github.com/eclipse/codewind-vscode/pull/473).
 
 **Eclipse**
 - When you add an existing project to Codewind, [the project type is selected automatically if there is only one project available in the **Project Type Selection** page](https://github.com/eclipse/codewind-eclipse/issues/319).
