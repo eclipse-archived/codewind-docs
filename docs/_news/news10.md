@@ -8,7 +8,7 @@ permalink: news10
 ---
 
 ## Codewind 0.10.0
-Thursday, 19 March 2020
+Friday, 20 March 2020
 
 #### ✨ New Features and Highlights for 0.10.0 ✨
 **IntelliJ Tech Preview Updates**
