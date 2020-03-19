@@ -45,7 +45,7 @@ To create your first project:
 
 This icon launches your web browser and displays your application.
 
-![](images/runningapp.png)
+![](images/runningapp.svg)
 
 Congratulations, you have created your first application on Codewind.
 
