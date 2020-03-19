@@ -28,7 +28,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 
 **VS Code**
 - You can use the profiling extension for [remote connections](https://github.com/eclipse/codewind/pull/2123) and in [Che](https://github.com/eclipse/codewind-vscode/pull/457).
-- [The `add to workspace` project command is reworked for multi-root workspaces](https://github.com/eclipse/codewind-vscode/pull/484). It no longer appears on projects that are already in the root workspace folder and gives an overrideable warning if run on a project that is in a subfolder of the workspace.
+- [The **add to workspace** project command is reworked for multi-root workspaces](https://github.com/eclipse/codewind-vscode/pull/484). It no longer appears on projects that are already in the root workspace folder and gives an overrideable warning if run on a project that is in a subfolder of the workspace.
 - The homepage is updated so that [the **create** and **add** project creation steps are greyed out and unclickable until the actions are allowed](https://github.com/eclipse/codewind/issues/2255). On the **Local** tab, local codewind must be started. On the **Remote** tab, [a remote connection must exist](https://github.com/eclipse/codewind/issues/2279).
 - The **Remote Connection** settings page layout is [improved and more responsive](https://github.com/eclipse/codewind-vscode/pull/476).
 - [Miscellaneous corrections have been made to Webview links and buttons](https://github.com/eclipse/codewind-vscode/pull/473)
