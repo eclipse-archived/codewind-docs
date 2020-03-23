@@ -356,6 +356,17 @@ If you modify files in MicroProfile projects, sometimes the project gets double 
 <applicationMonitor pollingRate="1000ms" />
 ```
 
+<!--
+Action/Topic: Performance Dashboard UI presents the load test as stuck in Requested
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/2284
+0.10.0 New for 0.10.0
+-->
+## Performance Dashboard UI reports the load test as stuck in requested
+The Performance Dashboard UI reports the load test as stuck in `Requested`. If you try to cancel the request, you are not able to do so. However the load test does run successfully and if you open a new window you can see the test results. Also, if you attempt to run new load tests in the new window, you do not see the problem again.
+
+**Workaround:** Refresh your browser.
+
 ***
 # Editing your project
 
