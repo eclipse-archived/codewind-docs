@@ -37,6 +37,12 @@
     }
 }
 
+#post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .author-images-container {
     display: inline-block;
     margin-left: -15px;
