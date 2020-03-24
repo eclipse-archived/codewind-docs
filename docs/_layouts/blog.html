@@ -8,51 +8,15 @@
         <div class="row">
             
             <div class="col-lg-12">
-
-                <!-- Show blog posts from the past 30 days as Latest Posts unless there are less than 3
-                     2592000 is 30 days in seconds (30 days * 24 hours * 60 minutes * 60 seconds) -->
-                {% assign past_month_count = 0 %}
-                {% for post in site.blog reversed %}
-
-                    {% assign date_published = post.date | date:'%s' %}
-                    {% assign date_now = 'now' | date:'%s' %}
-                    {% assign date_difference = date_now | minus: date_published %}
-
-                    {% if date_difference < 2592000 %}
-                        {% assign past_month_count = past_month_count | plus: 1 %}
-                    {% endif %}
-
-                    {% assign latest_posts_count = 3 %}
-                    {% if past_month_count > 3 %}
-                        {% assign latest_posts_count = past_month_count %}
-                    {% endif %}
-
-                {% endfor %}
-
                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
                 {% assign count = 1 %}
                 {% for post in site.blog reversed %}
-
-                    {% assign additional_author_count = 0 %}
-                    {% for author in post.additional_authors %}
-                        {% assign additional_author_count = additional_author_count | plus: 1 %}
-                    {% endfor %}
 
                     <div class="row blog-post-row">
                         <div class="blog-post-column col">
                             
                                 <div class="blog-post-content blog-content">
-                                    {% if post.redirect_link %}
-                                        <h3 class="blog-post-title"><a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="blog-post-title-link">{{ post.title | escape }}</a>
-                                            <span class="continued_text">
-                                                {% assign continue_text = ' [Continued on ' %}
-                                                {% assign domain_name = post.redirect_link | remove: "https://" | remove: "http://" | remove: "www." | append: "]" %}
-                                                {{ continue_text | append: domain_name }}
-                                            </span>
-                                        </h3>
-                                    {% else %}
-                                        <h3 class="blog-post-title"><a href="{{ post.url | relative_url }}" class="blog-post-title-link">{{ post.title | escape }}</a></h3>
-                                    {% endif %}
+                                    <h2 class="blog-post-title"><a href="{{ post.url | relative_url }}" class="blog-post-title-link">{{ post.title | escape }}</a></h2>
                                     <p class="blog-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}</p>
                                     <p class="blog-post-paragraph">
                                         {% if post.blog_description %}
@@ -62,46 +26,24 @@
                                         {% endif %}
                                     </p>
 
-                                    
-                                        
                                         <div class="row">
                                             <!-- When the screen resolution goes to a phone size, the author container goes above the
                                             read more container -->
                                             <div class ="col-xs-12 col">
                                             <div class="author-images-container">
                                                 <img src="{{ post.author_picture }}" class="blog-post-author-image" alt="Blog author picture">
-                                                {% for author in post.additional_authors %}
-                                                    <img src="{{ author.image }}" class="blog-post-author-image" alt="image of author">
-                                                {% endfor %}
                                             </div>
-                                            <a class="blog-post-author-name" href="{{ post.author_github }}" target="_blank" rel="noopener">{{ post.author }}</a>
-                                            {% for author in post.additional_authors %}
-                                                {% if additional_author_count == 1 %}
-                                                    <span>and </span>
-                                                    <a class="blog-post-author-name" href="{{ author.github }}" target="_blank" rel="noopener">{{ author.name }}</a>
-                                                {% else %}
-                                                    <span>and {{ additional_author_count }} others</span>
-                                                    {% break %}
-                                                {% endif %}
-                                            {% endfor %}
+                                            <a class="blog-post-author-name" target="_blank" rel="noopener">{{ post.author }}</a>
+                                            
                                             <span class="blog-post-date" title="{{ post.date | date: date_format }}">on {{ post.date | date: date_format }}</span>
                                             </div>      
                                         
                                             <div class="col-xs-12">
                                             <div class="read-more-link-container ">
-                                                {% if post.redirect_link %}
-                                                    <a href="{{ post.redirect_link }}" target="_blank" rel="noopener" class="read-more-link read-more-link-external">Read more</a>
-                                                {% else %}
-                                                    <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
-                                                {% endif %}
+                                                <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-
-
-
-                                   
                                 </div>
                         </div>
                     </div>
@@ -115,5 +57,5 @@
 </div>
 
 {% include footer.html %}
-<!-- Main Col END -->
+
  {% include body-end.html %}
