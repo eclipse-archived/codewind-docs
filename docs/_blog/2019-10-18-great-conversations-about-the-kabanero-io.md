@@ -11,7 +11,7 @@ duration: 2 minutes
 tags: [Microservices, Cloud, Java, Nodejs]
 ---
 
-Developers and CTOs alike, shared both enthusiasm and validation for the microservice develop-deploy stories in [`Kabanero.io`](https://kabanero.io/){:target="_blank"} at IBM’s ThinkLondon summit yesterday.
+Developers and CTOs alike, shared both enthusiasm and validation for the microservice develop-deploy stories in [Kabanero.io](https://kabanero.io/){:target="_blank"} at IBM’s ThinkLondon summit yesterday.
 
 ![image of ThinkLondon 2019](images/blog/thinklondon2019_1.jpeg){:width="800px"}
 
@@ -27,3 +27,5 @@ Introducing some architect lead capabilities to provide localised opinionated so
 ![image of ThinkLondon 2019](images/blog/thinklondon2019_3.jpeg){:width="800px"}
 
 I was also able to share my own experiences as a user of Kabanero myself. As a Software Project Manager within IBM, with responsibility to execute some licensing/copyright notices processes for every release, I opted to automate a few labourious tasks as microservices using Kabanero. Despite not being deeply technical myself, but able to learn and use Node.js code as I need it, I’ve experienced first-hand the containerization magic promised on the box. Backed up by a quick demonstration, people were genuinely excited and keen to get started themselves. Find out more in: My first cloud-native Node.js microservice, from nothing to running, immediately.
+
+TODO SGHUNG: LINK HERE
