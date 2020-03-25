@@ -19,9 +19,7 @@ Reusing Node.js modules from NPM is technically easy, but understanding the comm
 
 Working as a software project manager for the last 2 years on an offering which uses 1000s of open source packages and releases every four weeks, I’ve spent considerable time discovering, understanding and manually working through several pain points regarding open source (OS) sub-dependency identification and licensing challenges.
 
-*Note: In my case I needed automation to keep up with both my project’s consumption of new OS packages, as well as the OS community’s appetite to continuously update their packages. A new microservice was developed for use by my team, which I’ve shared in a separate blog here: “A new microservice to provide Node.js sub-dependency license insights.”*
-
-TODO: sghung
+*Note: In my case I needed automation to keep up with both my project’s consumption of new OS packages, as well as the OS community’s appetite to continuously update their packages. A new microservice was developed for use by my team, which I’ve shared in a separate blog here: “[A new microservice to provide Node.js sub-dependency license insights](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights).”*
 
 ![image of license chcker](images/blog/npmdependencies_2.png){:width="800px"}
 *Enter a package name and version to check (left window) and license results (right window)*
@@ -49,24 +47,24 @@ There are several things to consider here:
 
 ### Pain point 3: Compile an accurate understanding of sub-dependency licenses and copyright notices
 Again this is not quite as easy as it sounds:
-1. The good news for Node.js is that the community is good at declaring the license for a module in the package.json. I used a ‘license-checker’ module on NPM, which does a great job reporting the declared license and in the absence of a declaration, it parses targeted files and guesses the license.
+1. The good news for Node.js is that the community is good at declaring the license for a module in the package.json. I used a ‘[license-checker](https://www.npmjs.com/package/license-checker){:target="_blank"}’ module on NPM, which does a great job reporting the declared license and in the absence of a declaration, it parses targeted files and guesses the license.
 1. However, it’s possible that code under less commercially redistribution friendly licenses lurks in package files, so it is advantageous to check all files for ‘risky keywords’ such as ‘GPL’.
 1. Some packages release under ‘dual’ license terms, so you need to do your due diligence to ensure that you can use a package under the accepted license terms for your offering.
 1. Each of the cases above can require manual investigation, so rediscovery of risks and issues can result in wasted time, especially when packages with trickier cases release frequently.
 
 ### Pain point 4: If you are required to follow a legal IP clearance process*, then ensuring only previously uncleared packages are checked and cleared
-*An example ‘legal IP clearance process’ is the Eclipse IP process, which is required for Eclipse projects.
+*An example ‘legal IP clearance process’ is the [Eclipse IP process](https://www.eclipse.org/projects/handbook/#ip){:target="_blank"}, which is required for Eclipse projects.
 I found the tricky parts here, are:
 - Maintaining a list of package versions previously cleared, then using it to help developers choose which open source packages to use in future and also when processing previously uncleared packages at release time.
 - When producing the final offering license and copyright notices for a release, then all the packages present should be included, not just the delta in the bullet above. You should also be able to exclude any packages no longer present since the last release.
 
 ### In summary
-As the use of open source continues to balloon with the exponential growth of sub-dependencies (see this 30 billion monthly downloads NPM blog), coupled with the need pick up the latest security vulnerability fixes in the latest package versions, automation is the obvious way to ensure any subsequent legal risks are consciously mitigated.
+As the use of open source continues to balloon with the exponential growth of sub-dependencies (see this 30 billion monthly downloads [NPM blog](https://blog.npmjs.org/post/180868064080/this-year-in-javascript-2018-in-review-and-npms){:target="_blank"}), coupled with the need pick up the latest security vulnerability fixes in the latest package versions, automation is the obvious way to ensure any subsequent legal risks are consciously mitigated.
 
 ![image of Codewind](images/blog/npmdependencies_3.png){:width="800px"}
 
-Using the Eclipse Codewind developer tools, the automation in this case was implemented as a microservice to enable the widest possible reuse within my company, either as-is or as part of other parties’ automation workflows. Find out more in this related blog: “A new microservice to provide Node.js sub-dependency license insights.”
-Node.js is not the only language with challenging sub-dependency package identification and licensing risks, so similar work drilling into other languages is in progress.
-As checking Node.js sub-dependency licenses and copyrights is only part of the legal work required for typical release (other work being to check for other language packages, as well as creating final license and notices files), further microservices are also in progress to automate many other legal and non-legal offering release steps.
+Using the Eclipse Codewind developer tools, the automation in this case was implemented as a microservice to enable the widest possible reuse within my company, either as-is or as part of other parties’ automation workflows. Find out more in this related blog: “[A new microservice to provide Node.js sub-dependency license insights.](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights)”
 
-TODO: sghung handle links here
+Node.js is not the only language with challenging sub-dependency package identification and licensing risks, so similar work drilling into other languages is in progress.
+
+As checking Node.js sub-dependency licenses and copyrights is only part of the legal work required for typical release (other work being to check for other language packages, as well as creating final license and notices files), further microservices are also in progress to automate many other legal and non-legal offering release steps.

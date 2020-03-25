@@ -22,14 +22,13 @@ Auto-rebuild capabilities ensure that changes you make to your application are i
 
 In addition, Codewind’s built-in performance tooling generates load on your microservice endpoint. This enables you to watch the metrics to compare changes between application levels and to identify hot spots that indicate potential application bottlenecks.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mjADP2_4FBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/mjADP2_4FBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 *Welcome to Eclipse Codewind*
+{: style="text-align: center;"}
 
 ### Start your Codewind journey
 - Learn more: [Codewind.dev](https://codewind.dev/)
-- Contribute to the project: [Visit GitHub](https://github.com/eclipse/codewind)
+- Contribute to the project: [Visit GitHub](https://github.com/eclipse/codewind){:target="_blank"}
 - Follow us on EclipseCodewind@twitter
 
-*Originally published at https://developer.ibm.com.*
-
-TODO: sghung fill in the links
+*Originally published at [https://developer.ibm.com](https://developer.ibm.com){:target="_blank"}.*

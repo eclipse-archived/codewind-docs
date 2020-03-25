@@ -11,20 +11,20 @@ duration: 3 minutes
 tags: [Nodejs, Licensing, Cloud Computing, Development]
 ---
 
-An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using Eclipse Codewind.
+An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using [Eclipse Codewind](http://ibm.biz/eclipse-cw01).
 
-*Note: I covered the pain points and manual remedies associated with Node.js sub-dependency identification and licensing in a previous blog. You may also be interested in a lower level technical autopsy of this containerized microservice in this next blog.*
+*Note: I covered the pain points and manual remedies associated with Node.js sub-dependency identification and licensing in a [previous blog](/codewind/checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution). You may also be interested in a lower level technical autopsy of this containerized microservice in this [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application).*
 
 ### What does the microservice do?
 Once the user has submitted the Node.js package name and version to check, as well as the NPM install type (clean or not), the microservice downloads the entire package dependency tree needed for production use.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zUiVekFCs-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/zUiVekFCs-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 *See it in action!*
 
 As the team initially using this microservice are releasing an Eclipse Project, they must follow the formal Eclipse IP usage clearance process. The first step to process the sub-dependencies, is to identify packages previously cleared for use, as no further action is required for those.
 
-The next step to identify which software license each package has declared, so for this an open source license-checker NPM module was reused. The licenses detected are then compared with a list of pre-approved licenses that the project may use.
+The next step to identify which software license each package has declared, so for this an open source [license-checker](https://www.npmjs.com/package/license-checker){:target="_blank"} NPM module was reused. The licenses detected are then compared with a list of pre-approved licenses that the project may use.
 
 An additional check is conducted at the package file level and scanning all the characters looking for risky keywords. This is to catch cases where the declared licenses not may have handled sub-licensed files within the package correctly. In our case we initially looked for instances ‘GPL’ strings, which was used to flag up commercial risks.
 
@@ -40,7 +40,7 @@ There were many benefits using a microservice to solve this problem, including:
 - Easy to deploy to any Cloud. I used an instance of OpenShift running internally within IBM (so currently only IBM employees can access this microservice).
 
 ### How was the microservice implemented?
-If you’re interested in a lower level technical autopsy of this containerized microservice then my next blog may be for you, but to keep things simple here’s a quick overview.
+If you’re interested in a lower level technical autopsy of this containerized microservice then my [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application) may be for you, but to keep things simple here’s a quick overview.
 
 Eclipse Codewind was used to instantly create and run an empty Express Node.js containerised microservice in one simple step.
 
@@ -51,7 +51,4 @@ The application logic was iteratively added in Node.js and as Codewind automatic
 Once complete, the containerised microservice was simply deployed to the Cloud of choice (an OpenShift instance within IBM in this case).
 
 ### Summary
-A previously laborious process of working out the software license legal risks for a Node.js package, has now been reduced to a simple self-service check for the Developers I work with on my offering. Eclispe Codewind enabled a fully containerised cloud native microservice, to be quickly created and efficiently iteratively updated until it was complete.
-
-
-TODO: sghung handle links here
+A previously laborious process of working out the software license legal risks for a Node.js package, has now been reduced to a simple self-service check for the Developers I work with on my offering. Eclipse Codewind enabled a fully containerised cloud native microservice, to be quickly created and efficiently iteratively updated until it was complete.

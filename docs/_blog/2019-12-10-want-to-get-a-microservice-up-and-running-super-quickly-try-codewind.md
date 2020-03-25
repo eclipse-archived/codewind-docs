@@ -19,9 +19,9 @@ Then there’s the **multiple commands you must run** to build images, create co
 
 ![image of developer](images/blog/microserviceupandrunningquickly_1.jpeg){:width="800px"}
 
-**Well, there’s an open source tool that’s been developed with you in mind. It’s called Codewind.**
+**Well, there’s an open source tool that’s been developed with you in mind. It’s called [Codewind](http://codewind.dev/).**
 
-Not only will you be able to choose your microservice from a list of pre-supplied project templates, you’ll have a fully integrated container development environment at your fingertips.
+<blockquote>Not only will you be able to choose your microservice from a list of pre-supplied project templates, you’ll have a fully integrated container development environment at your fingertips.</blockquote>
 
 Say what?
 
@@ -36,11 +36,13 @@ After getting our pre-requisites of Docker Desktop and Codewind for VS Code inst
 
 ![image of VS Code](images/blog/microserviceupandrunningquickly_2.jpeg)
 *Create a new project using Codewind’s project templates*
+{: style="text-align: center;"}
 
 A right-click on the Projects tree of the Codewind view in VS Code offers the option of creating a new project by selecting from a list of project templates. These templates cover several languages including Node.js, Java, Python and Swift, and several frameworks such as Express, Spring Boot and Open Liberty, with more on the way.
 
 ![image of VS Code](images/blog/microserviceupandrunningquickly_3.png)
 *Screenshot of Codewind for VS Code, showing a few of the many project templates available*
+{: style="text-align: center;"}
 
 As soon as you select the template, **Codewind will automatically build the project and run it in a container**, in this case hosted by your local Docker Desktop. And that’s it! You’ve got a running containerized application! Congratulations!
 
@@ -52,6 +54,7 @@ By integrating with VS Code’s terminal window and output panels, Codewind enab
 Taking a look inside your container couldn’t be easier — just right-click the project in the codewind project tree to open a shell into your container. Job done.
 
 **3. Want information on your microservice?**
+
 Use Codewind’s Project Overview feature to instantly view the location of the endpoint, the container ID, location on disk, build and run status, and ports.
 
 ![image of VS Code](images/blog/microserviceupandrunningquickly_4.png)
@@ -59,6 +62,7 @@ Use Codewind’s Project Overview feature to instantly view the location of the 
 You also have the option to build, remove, or disable your project from this panel. Simply click the information icon located next to your project listing in the Codewind view project tree to open your project’s overview window.
 
 **4. Viewing your microservice endpoint is also just a click away.**
+
 Navigating back to the project’s listing in the Codewind view project tree, this time click the Open External Site icon, and the endpoint is opened in your default browser.
 
 ![image of VS Code](images/blog/microserviceupandrunningquickly_5.png)
@@ -66,19 +70,20 @@ Navigating back to the project’s listing in the Codewind view project tree, th
 ![image of VS Code](images/blog/microserviceupandrunningquickly_6.jpeg)
 
 **5. Make a change to your code and watch Codewind implement these changes intelligently.**
+
 Codewind automatically rebuilds your code changes, redeploying as efficiently as possible. You can see the automatic restart in action by watching how the project’s build and run statuses change in the Codewind project listing view.
 
 **6. Additional features**
+
 Codewind has many other features that make for a smooth inner loop experience, which include:
 - application and performance dashboards that allow you to observe real-time changes and improve your code as you develop
 - full compatibility with the Debug functionality of VS Code.
 - ability to open your own containerised projects in Codewind and use Codewind’s development environment features
 
 **Fancy a go?**
+
 Experience what the Codewind integrated container development experience can do for you by downloading Codewind from the VS Code or Eclipse marketplace.
 
 Watch Codewind in action and subscribe on our Youtube Channel.
 
 Have questions or feedback? We’re all ears. Let us know what you think.
-
-TODO: sghung fill in the links
