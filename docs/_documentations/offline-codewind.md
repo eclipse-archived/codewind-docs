@@ -14,7 +14,7 @@ When you have limited or no internet access, you can continue to work on project
 - You make changes to your code without pulling in new dependencies.
 - You do not remove the project container images that Codewind built on your system.
 
-## You can work with these projects offline:
+## You can work with these projects offline
 - Appsody Kitura
 - Appsody LoopBack 4
 - Appsody Python Flask
