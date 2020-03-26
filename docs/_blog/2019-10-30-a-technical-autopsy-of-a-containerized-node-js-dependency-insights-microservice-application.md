@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "A technical autopsy of a containerized ‘Node.js dependency insights’ microservice application"
-
 categories: blog
 author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
