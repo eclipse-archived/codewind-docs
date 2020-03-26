@@ -51,14 +51,10 @@
   children:   
     - title: 'Overview: Deploying Codewind remotely'
       url: remote-overview.html
-    - title: 'Deploying your remote Codewind instance'
-      children:
-      - title: 'Deploying remote Codewind all-in-one'
-        url: remotedeploy-combo.html
-      - title: 'Deploying remote Codewind components individually'
-        url: remotedeploy-single.html
-      - title: 'Deploying remote Codewind with an existing keycloak'
-        url: remotedeploy-existingkeycloak.html
+    - title: 'Installing the remote operator'
+      url: remote-install-operator.html
+    - title: 'Deploying a Codewind instance'
+      url: remote-deploy-instance.html    
     - title: 'Removing a remote Codewind deployment'
       url: remote-removing.html
 
