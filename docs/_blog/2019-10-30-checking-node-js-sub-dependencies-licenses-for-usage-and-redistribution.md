@@ -39,18 +39,18 @@ Should the developer either directly or request management to investigate the po
 ### Pain point 2: Compile an accurate listing of ‘production’ sub-dependencies with versions
 There are several things to consider here:
 1. In a multi-person development team, don’t ask multiple people to manually provide listings of sub-dependencies being consumed, as you’ll likely get an inconsistent set of packages/versions (see the following bullets), so it’s often best to go directly to the source code, understand how it’s built and do it yourself. The learning curve for a non-technical project manager is pretty low, so don’t be afraid.
-1. If the offering is built, using ‘npm ci’ (clean install), then the sub-dependency tree used will exactly match the package names/versions listed in the project package-lock.json file.
-1. If the offering is not built using ‘npm ci’, then the actual versions used are generated at install time following semantic rules in the package.json instead. In this case, good automation is key to ensure when you release you can quickly provide the most current license and copyright notices possible.
-1. Also when doing the ‘npm install’, using the ‘-production’ flag will make sure only production dependencies (not development only dependencies) are installed, as those are the ones that commercial offering license and notices files need to cater for.
-1. If your offering spans multiple code repositiories (such as git repos), make sure you know which are the ones that will be used in the actual offering build. Large offerings with distributed agile development teams often spawn many repositories, which can easily become obsolete or even never contain final offering code.
-1. Delta processing (only handling what’s changed since the last release) is a common approach to minimise pain, however, this can all too easily result in missed packages never being picked up in the future.
+2. If the offering is built, using ‘npm ci’ (clean install), then the sub-dependency tree used will exactly match the package names/versions listed in the project package-lock.json file.
+3. If the offering is not built using ‘npm ci’, then the actual versions used are generated at install time following semantic rules in the package.json instead. In this case, good automation is key to ensure when you release you can quickly provide the most current license and copyright notices possible.
+4. Also when doing the ‘npm install’, using the ‘-production’ flag will make sure only production dependencies (not development only dependencies) are installed, as those are the ones that commercial offering license and notices files need to cater for.
+5. If your offering spans multiple code repositiories (such as git repos), make sure you know which are the ones that will be used in the actual offering build. Large offerings with distributed agile development teams often spawn many repositories, which can easily become obsolete or even never contain final offering code.
+6. Delta processing (only handling what’s changed since the last release) is a common approach to minimise pain, however, this can all too easily result in missed packages never being picked up in the future.
 
 ### Pain point 3: Compile an accurate understanding of sub-dependency licenses and copyright notices
 Again this is not quite as easy as it sounds:
 1. The good news for Node.js is that the community is good at declaring the license for a module in the package.json. I used a ‘[license-checker](https://www.npmjs.com/package/license-checker){:target="_blank"}’ module on NPM, which does a great job reporting the declared license and in the absence of a declaration, it parses targeted files and guesses the license.
-1. However, it’s possible that code under less commercially redistribution friendly licenses lurks in package files, so it is advantageous to check all files for ‘risky keywords’ such as ‘GPL’.
-1. Some packages release under ‘dual’ license terms, so you need to do your due diligence to ensure that you can use a package under the accepted license terms for your offering.
-1. Each of the cases above can require manual investigation, so rediscovery of risks and issues can result in wasted time, especially when packages with trickier cases release frequently.
+2. However, it’s possible that code under less commercially redistribution friendly licenses lurks in package files, so it is advantageous to check all files for ‘risky keywords’ such as ‘GPL’.
+3. Some packages release under ‘dual’ license terms, so you need to do your due diligence to ensure that you can use a package under the accepted license terms for your offering.
+4. Each of the cases above can require manual investigation, so rediscovery of risks and issues can result in wasted time, especially when packages with trickier cases release frequently.
 
 ### Pain point 4: If you are required to follow a legal IP clearance process*, then ensuring only previously uncleared packages are checked and cleared
 *An example ‘legal IP clearance process’ is the [Eclipse IP process](https://www.eclipse.org/projects/handbook/#ip){:target="_blank"}, which is required for Eclipse projects.

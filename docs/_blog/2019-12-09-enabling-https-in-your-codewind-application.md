@@ -82,6 +82,7 @@ For more information, see [Configuring SSL for Liberty profile](https://www.ibm.
 
 Note: To run the Python and MicroProfile HTTPS application on Kubernetes, update the chart `deployment.yaml` file to include the `scheme: HTTPS` value for the `livenessProbe` and `readinessProbe` probes.
 ```bash
+{% raw %}
 livenessProbe:
     httpGet:
         path: /
@@ -92,4 +93,5 @@ readinessProbe:
         path: /
         port: {{ .Values.service.servicePort }}
         scheme: HTTPS
+{% endraw %}
 ```
