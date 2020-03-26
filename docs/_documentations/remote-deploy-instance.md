@@ -72,7 +72,7 @@ NAME                USERNAME   NAMESPACE   AGE   KEYCLOAK   AUTHSTATUS   ACCESSU
 jane1               jane       codewind    23m   devex001   Completed    https://codewind-gatekeeper-jane1.10.98.117.7.nip.io
 ```
 
-The Access URL is what you use in your IDE to create a connection. 
+Use the Access URL in your IDE to create a connection. 
 
 ## Next Steps
 

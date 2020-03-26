@@ -35,12 +35,7 @@ Before deploying Codewind to the cloud, you must:
 
 3. **Have access to a keyring.** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
 
-## Planning your remote deployment
-
-<<Draft: Needs more about the operator here>>
-
-1. Your system adminstrator can install the Codewind operator in your cluster. The Codewind operator handles the deployment and management of new PFE, Gatekeeper, Keycloak and Performance containers on behalf of a user. It has knowledge of all the Kubernetes resources that are part of a typical Codewind remote deployment, configures them, and deploys each of the components on demand.
-2. Your users can then deploy a Codewind instance by applying a YAML file containing specific data pertinent to your cluster.
+4. **Clone the Codewind Operator repository.** For more information about the Codewind operator, see [https://github.com/eclipse/codewind-operator](https://github.com/eclipse/codewind-operator). Codewind remote connections are created and managed by the Codewind operator. Your system adminstrator installs the Codewind operator in your cluster. The Codewind operator handles the deployment and management of new PFE, Gatekeeper, Keycloak and Performance containers on behalf of a user. It has knowledge of all the Kubernetes resources that are part of a typical Codewind remote deployment, configures them, and deploys each of the components on demand. Your users then deploy a Codewind instance by applying a yaml file containing specific data pertinent to your cluster.
 
 ### Next Steps
 
