@@ -28,7 +28,7 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 To install the Codewind operator into your cluster, follow these steps:
 
-_MG: Do we need a login step here?  Ie `1. Log into your cluster. ` or is the `active Kubernetes context that points to your cluster` in the [prereqs](./remote-overview.html) sufficient??_
+_MG: Do we need a log in step here?  Ie `1. Log into your cluster. ` or is the `active Kubernetes context that points to your cluster` in the [prereqs](./remote-overview.html) sufficient??_
 
 1. Go to your cloned Codewind operator directory: `$ cd <path_to_cloned_codewind-operator_repo>`
 2. Create the `codewind` namespace: `$ kubectl create namespace codewind`
