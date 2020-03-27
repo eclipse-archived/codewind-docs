@@ -92,9 +92,9 @@
       url: project-settings.html 
     - title: 'Referencing files external to a project'
       url: referencing-files.html
-    - title: `Developing with packages from private registries and repositories` 
+    - title: 'Developing with packages from private registries and repositories'
       url: private-registries.html  
-    - title: Using Codewind offline
+    - title: 'Using Codewind offline'
       url: offline-codewind.html
       
 - title: 'Performance monitoring'
