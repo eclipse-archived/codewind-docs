@@ -12,19 +12,9 @@ type: document
 
 Ensure your system administrator has [installed the remote operator](./remote-install-operator.html), and has notified you of the Keycloak deployment name, and your log on details. 
 
-In this topic, you will:
-1. Change your password if you have been assigned a temporary one. 
-2. Deploy a Codewind instance
+In this topic you will deploy a Codewind instance.
 
-## 1. Change your password
-
-If you have been assigned a temporary password, log in to Codewind from a browser and complete the steps necessary to set a new password and activate your account:
-1. Open the gatekeeper URL for the Codewind deployment.
-2. Log in using the provided username and initial password.
-3. Follow the prompts to change the password.
-4. Set up the IDE connection using the newly changed password.
-
-## 2. Deploy a Codewind instance
+## Deploy a Codewind instance
 
 1\. To deploy a new Codewind instance, you must apply a yaml file, an example of which can be found here: [./deploy/crds/codewind.eclipseorg_v1alpha1_codewind_cr.yaml](./deploy/crds/codewind.eclipseorg_v1alpha1_codewind_cr.yaml). Save this file to your system. 
 
@@ -50,10 +40,10 @@ spec:
 
 Where:
 - The `name` field is the name of the deployment and must be unique within the cluster.
-- The `keycloakDeployment` field is the name of the Keycloak instance that will provide authentication services. It must have already been provisioned and running.
+- The `keycloakDeployment` field is the name of the Keycloak instance that will provide authentication services. It must have already been provisioned and be running.
 - The `username` field is the Keycloak registered user who will own this Codewind instance.
-- The `loglevel` can be used to increase log levels of the codewind pods.
-- The `storageSize` field sets the PVC size to 10GB.
+- The `loglevel` can be used to increase log levels of the Codewind pods. _MG: What other values are available for this?_
+- The `storageSize` field sets the PVC size to 10GB. _MG: Typical values? What's a good default?_
 
 3\. Apply this yaml file by issuing the following command: 
 
@@ -63,7 +53,9 @@ The operator creates and configures both Codewind and Keycloak. You see the foll
 
 `codewind.codewind.eclipse.org/codewind-k81235kj created`
 
-4\. To list all running Codewind deployments together with the username of the developer to which each deployment is assigned, enter `kubectl get codewinds`.
+4\. To list all running Codewind deployments together with the username of the developer to which each deployment is assigned, enter `kubectl get codewinds`. 
+
+Note:
 
 You see the following example output:
 
@@ -73,6 +65,13 @@ jane1               jane       codewind    23m   devex001   Completed    https:/
 ```
 
 Use the Access URL in your IDE to create a connection. 
+
+5\. If you were assigned a temporary password, you must log in to Codewind from a browser and complete the steps necessary to set a new password and to activate your account:
+    1. Open the gatekeeper URL for the Codewind deployment.
+    2. Log in using the provided username and initial password.
+    3. Follow the prompts to change the password.
+    4. Set up the IDE connection with the newly changed password.
+
 
 ## Next Steps
 

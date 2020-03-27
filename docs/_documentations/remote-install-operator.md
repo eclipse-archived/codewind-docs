@@ -12,7 +12,7 @@ type: document
 
 Installing the remote operator is usually performed by your system administrator. 
 
-Complete the [prequisites](./remote-codewind-overview.html). 
+Complete the [prequisites](./remote-overview.html#prerequisites). 
 
 ## Objectives
 In this topic you will:
@@ -20,27 +20,31 @@ In this topic you will:
 2. Configure the default configuration map.
 3. Create an initial Keycloak service.
 4. Prepare Keycloak for Codewind.
-5. Register Codewind users.
+5. Register your Codewind users.
 
 ## 1. Install the remote Codewind operator
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. There must only be one operator per cluster and it must be installed into the `codewind` namespace. 
 
-To install the Codewind operator into your cluster, run the following commands:
+To install the Codewind operator into your cluster, follow these steps:
 
-1. `$ cd <path_to_cloned_codewind-operator_repo>`
-2. `$ kubectl create namespace codewind`
-3. `$ kubectl create -f ./deploy/service_account.yaml;`
-4. `$ kubectl create -f ./deploy/role.yaml;`
-5. `$ kubectl create -f ./deploy/role_binding.yaml;`
-6. `$ kubectl create -f ./deploy/clusterroles.yaml;`
-7. `$ kubectl create -f ./deploy/cluster-role-binding.yaml;`
-8. `$ kubectl create -f ./deploy/operator.yaml;`
+_MG: Do we need a login step here?  Ie `1. Log into your cluster. ` or is the `active Kubernetes context that points to your cluster` in the [prereqs](./remote-overview.html) sufficient??_
+
+1. Go to your cloned Codewind operator directory: `$ cd <path_to_cloned_codewind-operator_repo>`
+2. Create the `codewind` namespace: `$ kubectl create namespace codewind`
+3. Create the service account for the operator: `$ kubectl create -f ./deploy/service_account.yaml;`
+4. Create the role-based access control (RBAC) for ingress, route, and so on: `$ kubectl create -f ./deploy/role.yaml;`
+5. Connect the service account to the role: `$ kubectl create -f ./deploy/role_binding.yaml;`
+6. Create the cluster roles because the permissions at the namespace level are not sufficient: `$ kubectl create -f ./deploy/cluster_roles.yaml `
+7. Connect the service account to the role: `$ kubectl create -f ./deploy/cluster_role_binding.yaml`
+8. Extend the Kube API to make it aware of Keycloak: `$ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd.yaml`
+9. Extend the Kube API to make it aware of Codewind: `$ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd.yaml `
+10. Download the images into your cluster: `$ kubectl create -f ./deploy/operator.yaml`
 
 ## 2. Configure the default configuration map
 1\. The Codewind operator default settings can be found in the `./deploy/codewind-configmap.yaml` file. Save this file to your system.
 
-2\. Modify the `./deploy/codewind-configmap.yaml` file setting the `ingressDomain` value to one specific to your cluster. The Ingress domain is appended to any routes and URLs created by the operator. It must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
+2\. Modify the `./deploy/codewind-configmap.yaml` file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. It must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
 
 ```yaml
 apiVersion: v1
@@ -148,7 +152,7 @@ By default, Keycloak is installed with an admin account where:
 
 5\. Switch back to the **Administration Console** using the link, or alternatively log out and log back in to Keycloak as the `admin` user with your new password.
 
-## 5. Register Codewind users
+## 5. Register your Codewind users
 1\. Ensure that the `Realm` is set to `Codewind` by clicking on the drop down arrow. Select `Codewind` if necessary. 
 
 2\. To add a new user, click **Users**>**Add user**. 
@@ -167,18 +171,18 @@ By default, Keycloak is installed with an admin account where:
 
 When the Codewind operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default, during deployment that secret has a username and password of `admin`. If you changed your `admin` password in a previous step, you must update the Keycloak secret to match.
 
-The secret is installed in the same namespace as the operator (codewind) and named secret-keycloak-user-`keycloakname`.
+The secret is installed in the same namespace as the operator (`codewind`) and named `secret-keycloak-user-<keycloakname>`.
 
-If you have an administration UI for you cluster, you can use it to locate the secret and edit the `keycloak-admin-password` field.
+If you have an administration UI for you cluster, you can use it to locate the secret and then edit the `keycloak-admin-password` field.
 
-Alternatively, you can use the command line and type `$ kubectl edit secret secret-keycloak-user-{keycloakname}` or `oc edit secret secret-keycloak-user-{keycloakname}`. Using the command line requires you to encode your password string in base64 before saving it into the secret. To do this, enter: 
+Alternatively, you can use the command line and type `$ kubectl edit secret secret-keycloak-user-<keycloakname>` or `oc edit secret secret-keycloak-user-<keycloakname>`. If you use the command line, you must encode your password string in base64 before saving it into the secret. To do this, enter: 
 
 ```
 $ echo -n 'myNewPassword' | base64
 bXlOZXdQYXNzd29yZA==
 ```
 
-Then save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than `myNewPassword`.
+Save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than `myNewPassword`.
 
 ## Next Steps
 
