@@ -62,7 +62,7 @@ This command requires various flags to specify where and what to install which w
     Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
     2. Run the following commands on only the Codewind namespace:
-        - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+        - Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
         - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
         - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
 
