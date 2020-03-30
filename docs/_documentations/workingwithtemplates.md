@@ -50,3 +50,16 @@ Add your template sources to use Codewind with the framework of your choice.
    **Eclipse:** Right click on the connection in the Codewind Explorer view, and select **Manage Template Sources...**. Once the **Manage Template Sources** wizard pops up, click **Add...**.
 3. **VSCode:** Enter the URL to your template source's index file and click `Enter` to confirm.
    **Eclipse:** Fill in the fields for URL, Name, and Description. Click the **OK** button once you are finished.
+
+## Modifying the template sources
+
+1. To edit the template sources, clone the [`codewind-resources`](https://github.com/Codewind-resources) repository.
+2. Ensure that the following repository structure and files exist:
+   ```
+   <Place file structure here and state which files can be edited.>
+   ```
+
+## Creating a template and adding it to your repository list
+1. To create a template...
+   - `<Place list of files here>`
+2. To add the new template to your repository list...
