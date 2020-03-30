@@ -115,7 +115,13 @@ INFO[0159] Waiting for Codewind PFE to start
 INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
 
-2\. For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
+2\. Run as priveleged and as root or install Keycloak.
+- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. The `<namespace>` variable is the namespace into which you plan to install Codewind:
+    - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+    - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
+    - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+
+- For IBM Public Cloud, install Keycloak and your remote Codewind in separate namespaces. 
 Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
     - Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
     - Run the following commands on only the Codewind namespace:
