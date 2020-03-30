@@ -11,7 +11,7 @@ duration: 10 minutes
 tags: [private, registry, registries, repository, repositories]
 ---
 
-Need a specific capability in your application? Chances are there's a code library or package out there that already does the job. Such is the norm for modern day application development, which is part writing your own code and part reusing code pulled from a registry or repository somewhere.
+Need a specific capability in your application? Chances are there's a code library or package out there that already does the job. Such is the norm for modern-day application development, which is part writing your own code and part reusing code pulled from a registry or repository somewhere.
 
 In most cases, these 3rd-party bits of code are hosted on well-known public registries and repositories, and build and package tools such as `Maven` and `npm` helps you manage these dependencies and makes pulling the code down for use simple. However, if you work in a medium or large-sized organization, you may be required to pull 3rd-party code from private servers within the organization--it's also simple to do, as long as you have proper configuration in place.
 
