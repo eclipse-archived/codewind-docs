@@ -12,6 +12,12 @@ type: document
 
 Configure a project to run in Codewind.
 
+## Generic Docker projects
+
+If you have a Dockerized application that does not fit an existing template, you can still add the project to Codewind by selecting the **Other (Basic Container)** option as the project type. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
+
+If you use Liberty, Spring, Node.js, and Swift, they all have build `smarts` that speed up the development of your application. 
+
 ## Importing projects from IDEs
 
 Add a project from an existing Git repository:
@@ -32,7 +38,6 @@ Codewind is designed to develop cloud-native microservices. Therefore, each proj
 * [Java Spring projects](#java-spring-projects)
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
-* [Generic Docker projects](#generic-docker-projects)
 * [Appsody projects](#appsody-projects) 
 
 ## MicroProfile/Java EE projects
@@ -197,10 +202,6 @@ Requirements:
 - Ensure the project can be built by using a `release` build configuration.
 
 For example, you can build the project by using the command: `swift build --configuration release`.
-
-## Generic Docker projects
-
-If you have a Dockerized application that does not fit an existing template, you can still add the project to Codewind by selecting the **Other (Basic Container)** option as the project type. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
 
 ## Appsody projects
 
