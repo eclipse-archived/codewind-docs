@@ -16,7 +16,7 @@ In this topic you will deploy a Codewind instance.
 
 ## Deploy a Codewind instance
 
-1\. To deploy a new Codewind instance, you must apply a yaml file, an example of which can be found here: [./deploy/crds/codewind.eclipseorg_v1alpha1_codewind_cr.yaml](./deploy/crds/codewind.eclipseorg_v1alpha1_codewind_cr.yaml). Save this file to your system. 
+1\. To deploy a new Codewind instance, you must apply a yaml file, an example of which can be found here: [`https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_codewind_cr.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_codewind_cr.yaml). Save this file to your system. 
 
 2\. Modify the file changing the following fields:
 - `name`: Change this to a unique name for this deployment.

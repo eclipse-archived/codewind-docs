@@ -42,9 +42,9 @@ _MG: Do we need a log in step here?  Ie `1. Log into your cluster. ` or is the `
 10. Download the images into your cluster: `$ kubectl create -f ./deploy/operator.yaml`
 
 ## 2. Configure the default configuration map
-1\. The Codewind operator default settings can be found in the `./deploy/codewind-configmap.yaml` file. Save this file to your system.
+1\. The Codewind operator default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml) file. Save this file to your system.
 
-2\. Modify the `./deploy/codewind-configmap.yaml` file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. It must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
+2\. Modify the file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. It must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
 
 ```yaml
 apiVersion: v1
@@ -65,7 +65,7 @@ data:
 ## 3. Create an initial Keycloak service
 Use the Codewind operator to deploy and set up Keycloak.
 
-1\. The Keycloak default settings can be found in the `./deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml` file. Save this file to your system. 
+1\. The Keycloak default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml) file. Save this file to your system. 
 
 2\. Modify the file setting the `name` to the name you have chosen for your Keycloak service, `namespace` to the namespace into which you are installing Keycloak, and optionally adjust the `storageSize` which by default is set to 1Gi.  In the following example, the `.yaml` file, when applied, creates a new Keycloak service called `devex001` in the namespace `codewind` with a PVC claim of 1GB: 
 
