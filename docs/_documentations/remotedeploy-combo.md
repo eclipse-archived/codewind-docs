@@ -77,8 +77,7 @@ Determine the following values for your cloud deployment:
 
 ## Run the Codewind CLI command
 
-To install Codewind and an associated Keycloak, enter the following example command:  
-
+1\. To install Codewind and an associated Keycloak, enter the following example command:  
 ```
 ./cwctl --insecure install remote \
 --namespace codewind-0001 \
@@ -92,7 +91,6 @@ To install Codewind and an associated Keycloak, enter the following example comm
 ```
 
 This command performs the following actions:
-
 - Deploys Codewind into the `codewind-0001 `namespace.
 - Configures Keycloak with a realm called `codewind`.
 - Configures a client prefix of `codewind`.
@@ -101,7 +99,6 @@ This command performs the following actions:
 - Uses the ingress appropriate to the deployment environment.
 
 Running the command, you see the following example output:
-
 ```
 INFO[0000] Checking namespace codewind-0001 exists
 INFO[0000] Creating codewind-0001 namespace
@@ -117,6 +114,14 @@ INFO[0156] Waiting for Codewind Gatekeeper to start on https://codewind-gatekeep
 INFO[0159] Waiting for Codewind PFE to start
 INFO[0159] Codewind is available at: https://codewind-gatekeeper-k55333j0.mycluster-12345-7674b4bd9abbdeea5be228236d5275c9-0001.eu-gb.containers.appdomain.cloud
 ```
+
+2\. For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
+Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+    - Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
+    - Run the following commands on only the Codewind namespace:
+        - Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
+        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
+        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
 
 Codewind is successfully deployed and is available.
 
