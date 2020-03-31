@@ -57,14 +57,6 @@ If the command is successful, you see a list of current namespaces. If not, ensu
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
     - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
-- For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
-    Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-    1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
-    2. Run the following commands on only the Codewind namespace:
-        - Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
-        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
-        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
-
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
 
 ## Determine your Cloud ingress domain
