@@ -53,14 +53,14 @@ This command requires various flags to specify where and what to install which w
 
   If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
-For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-- For Codewind on OpenShift, create the namespace first. Enter `oc create namespace <Codewind-namespace>`.
-- If you are on IBM Public Cloud, you must install Keycloak and Codewind in separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
+For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<project>` is the project into which you plan to install Codewind:
+- For Codewind on OpenShift, create the project first. Enter `oc create namespace <Codewind-project>`.
+- If you are on IBM Public Cloud, you must install Keycloak and Codewind in separate projects, for example, `oc create namespace <keycloak-project>` and then `oc create namespace <Codewind-project>`.
 
 For both IBM Public Cloud and OpenShift, run the following commands on only the Codewind namespace:
-- Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
-- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
-- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
+- Switch to your Codewind-only namespace with `oc project <Codewind-project>`.
+- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-project>`.
+- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-project>`.
 
 # 1. Deploy Authentication services (Keycloak)
 
@@ -141,7 +141,7 @@ Deploy a new Codewind instance in Kubernetes/*the cloud*, generate a user in Key
 
 This command performs the following actions:
 
-- Deploys Codewind into the `codewind-0001 `namespace.
+- Deploys Codewind into the `codewind-0001 ` namespace.
 - Configures the existing previously deployed Keycloak instance with a realm called `codewind`.
 - Adds a client prefix of `codewind`.
 - Creates an initial Codewind user called `developer` with password `passw0rd`.

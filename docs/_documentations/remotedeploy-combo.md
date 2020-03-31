@@ -49,13 +49,13 @@ This command requires various flags to specify where and what to install which w
   $ kubectl get namespaces
   ```
 
-If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+If the command is successful, you see a list of current projects. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
-- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
-  - If the namespace is not present with `oc create namespace <namespace>`, create the namespace.
-  - Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
-  - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
-  - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<project>` variable is the project into which you plan to install Codewind:
+  - If the project is not present with `oc create namespace <project>`, create the project.
+  - Switch to your Codewind-only project with `oc project <Codewind-project>`.
+  - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<project>`.
+  - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<project>`.
 
 # Deploy a remote Codewind service and keycloak using the Codewind CLI
 
@@ -97,7 +97,7 @@ To install Codewind and an associated Keycloak, enter the following example comm
 ```
 
 This command performs the following actions:
-- Deploys Codewind into the `codewind-0001 `namespace.
+- Deploys Codewind into the `codewind-0001 ` namespace.
 - Configures Keycloak with a realm called `codewind`.
 - Configures a client prefix of `codewind`.
 - Creates an initial Keycloak administrator user called `admin` with password `passw0rd`.
