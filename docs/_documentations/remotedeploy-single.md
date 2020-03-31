@@ -51,7 +51,7 @@ This command requires various flags to specify where and what to install which w
   $ kubectl get namespaces
   ```
 
-  If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
+  If the command is successful, you see a list of current projects. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<project>` is the project into which you plan to install Codewind:
 - For Codewind on OpenShift, create the project first. Enter `oc create namespace <Codewind-project>`.
