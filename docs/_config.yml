@@ -18,3 +18,5 @@ collections:
     output: true
   newsarchive:
     output: true
+  blog:
+    output: true
