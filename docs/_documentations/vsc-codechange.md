@@ -16,27 +16,27 @@ To see this feature in action, make a change to the getting started example.
 
 1\. Edit the `index.html` file:
 
-![](images/vsc-codechange.png){:width="800px"}
+![image of the index.html file as it appears in VS Code](images/vsc-codechange.png){:width="800px"}
 
 2\. In the file, find the `Congratulations!` line.
 
-![](images/vsc-codeline.png)
+![image of the congratulations line in the file](images/vsc-codeline.png)
 
 3\. Change the heading from `Congratulations` to `I did this`:
 
-![](images/vsc-ididthis.png)
+![image of the text change](images/vsc-ididthis.png)
 
 The status of the project changes to **Stopped** while the project is rebuilt and deployed:
  
-![](images/vsc-buildstopped.png)
+![image of the stopped project](images/vsc-buildstopped.png)
 
 After a few moments, the status changes back to **Running**:
 
-![](images/vsc-buildrunning.png)
+![image of the running project](images/vsc-buildrunning.png)
 
 4\. Click the **Open Application** icon to show your code change running:
-![](images/launchicon.png)
+![image of the Open Application icon](images/launchicon.png)
 
-![](images/vsc-screenchanged.png)
+![image of the application as it appears in a web browser](images/vsc-screenchanged.png){: .imageborder}
 
 Next step: [Buiding and deploying in a cloud environment](remote-overview.html)
