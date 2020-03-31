@@ -54,7 +54,7 @@ This command requires various flags to specify where and what to install which w
   If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
 - For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
-    - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
+    - Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
     - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
     - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
 
