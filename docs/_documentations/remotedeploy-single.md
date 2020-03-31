@@ -128,7 +128,7 @@ Keycloak has been sucessfully deployed and is available.
 
 # 2. Deploy a remote Codewind service
 
-Deploy a new Codewind instance in Kubernetes/*the cloud*, generate a user in Keycloak and configure security all using the following single Codewind CLI `cwctl` command. You can use the CLI `cwctl` with additional options LIKE WHAT? WHICH ONES ARE REQUIRED?, for example: 
+Deploy a new Codewind instance in Kubernetes/*the cloud*, generate a user in Keycloak and configure security all using the following single Codewind CLI `cwctl` command. You can use the CLI `cwctl` with additional options, for example: 
 
 ```
 ./cwctl --insecure install remote \
