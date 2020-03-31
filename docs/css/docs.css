@@ -4,8 +4,10 @@
 }
 
 #content-container img {
-	max-width: 100%;
+    max-width: 100%;
+    padding: 1px 1px 1px 1px;
 }
+
 h1, h2 {
 	padding-bottom: .3em;
     border-bottom: 1px solid #eaecef;
