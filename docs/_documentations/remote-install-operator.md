@@ -23,23 +23,57 @@ In this topic you will:
 5. Register your Codewind users.
 
 ## 1. Install the remote Codewind operator
-
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. There must only be one operator per cluster and it must be installed into the `codewind` namespace. 
 
 To install the Codewind operator into your cluster, follow these steps:
 
 _MG: Do we need a log in step here?  Ie `1. Log into your cluster. ` or is the `active Kubernetes context that points to your cluster` in the [prereqs](./remote-overview.html) sufficient??_
 
-1. Go to your cloned Codewind operator directory: `$ cd <path_to_cloned_codewind-operator_repo>`
-2. Create the `codewind` namespace: `$ kubectl create namespace codewind`
-3. Create the service account for the operator: `$ kubectl create -f ./deploy/service_account.yaml;`
-4. Create the role-based access control (RBAC) for ingress, route, and so on: `$ kubectl create -f ./deploy/role.yaml;`
-5. Connect the service account to the role: `$ kubectl create -f ./deploy/role_binding.yaml;`
-6. Create the cluster roles because the permissions at the namespace level are not sufficient: `$ kubectl create -f ./deploy/cluster_roles.yaml `
-7. Connect the service account to the role: `$ kubectl create -f ./deploy/cluster_role_binding.yaml`
-8. Extend the Kube API to make it aware of Keycloak: `$ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd.yaml`
-9. Extend the Kube API to make it aware of Codewind: `$ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd.yaml `
-10. Download the images into your cluster: `$ kubectl create -f ./deploy/operator.yaml`
+1\. Go to your cloned Codewind operator directory: 
+
+`$ cd <path_to_cloned_codewind-operator_repo>`
+
+2\. Create the `codewind` namespace: 
+
+`$ kubectl create namespace codewind`
+
+3\. Create the service account for the operator: 
+
+`$ kubectl create -f ./deploy/service_account.yaml;`
+
+4\. Create the role-based access control (RBAC) for ingress, route, and so on: 
+
+`$ kubectl create -f ./deploy/role.yaml;`
+
+5\. Connect the service account to the role: 
+
+`$ kubectl create -f ./deploy/role_binding.yaml;`
+
+6\. Create the cluster roles because the permissions at the namespace level are not sufficient: 
+
+`$ kubectl create -f ./deploy/cluster_roles.yaml `
+
+7\. Connect the service account to the role: 
+
+`$ kubectl create -f ./deploy/cluster_role_binding.yaml`
+
+8\. Create the CRD:
+
+For OpenShift 3.11.x clusters: 
+```
+$ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd-oc311.yaml 
+$ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd-oc311.yaml
+```
+
+For other versions of OpenShift and Kubernetes:
+```
+$ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd.yaml 
+$ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd.yaml 
+```
+
+9\. Deploy the operator (download the images into your cluster): 
+
+`$ kubectl create -f ./deploy/operator.yaml`
 
 ## 2. Configure the default configuration map
 1\. The Codewind operator default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml) file. Save this file to your system.
