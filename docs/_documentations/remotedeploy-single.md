@@ -53,18 +53,14 @@ This command requires various flags to specify where and what to install which w
 
   If the command is successful, you see a list of current namespaces. If not, ensure that you are logged into your Kubernetes or OpenShift cluster.
 
-- For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands on OpenShift and IBM Cloud only. The `<namespace>` variable is the namespace into which you plan to install Codewind:
-    - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
-    - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<namespace>`.
-    - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<namespace>`.
+For OpenShift, Codewind is required to run as privileged and as root because it builds container images. Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
+- For Codewind on OpenShift, create the namespace first. Enter `oc create namespace <Codewind-namespace>`.
+- If you are on IBM Public Cloud, you must install Keycloak and Codewind in separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
 
-- For IBM Public Cloud, you must install Keycloak and your remote Codewind in separate namespaces. 
-    Run the following commands where `<namespace>` is the namespace into which you plan to install Codewind:
-    1. Create the 2 separate namespaces, for example, `oc create namespace <keycloak-namespace>` and then `oc create namespace <Codewind-namespace>`.
-    2. Run the following commands on only the Codewind namespace:
-        - Switch to your Codewind-only namespace using: `oc project <Codewind-namespace>`.
-        - To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
-        - To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
+For both IBM Public Cloud and OpenShift, run the following commands on only the Codewind namespace:
+- Switch to your Codewind-only namespace with `oc project <Codewind-namespace>`.
+- To enable privileged containers, enter `oc adm policy add-scc-to-group privileged system:serviceaccounts:<Codewind-namespace>`.
+- To enable containers to run as root, enter `oc adm policy add-scc-to-group anyuid system:serviceaccounts:<Codewind-namespace>`.
 
 # 1. Deploy Authentication services (Keycloak)
 

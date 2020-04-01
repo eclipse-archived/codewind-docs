@@ -1,0 +1,151 @@
+/*******************************************************************************
+ * Copyright (c) 2017 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
+
+#background-container {
+    margin-top: 122px;
+
+    @media (max-width: 991.98px) {
+        margin-top: 46px;
+    }
+
+    @media (max-width: 767.98px) {
+        background: none;
+    }
+}
+
+#blog-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (max-width: 991.98px) {
+        width: 100%;
+        padding-top: 46px;
+    }
+
+    @media (max-width: 767.98px) {
+        padding-top: 24px;
+    }
+}
+
+#post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.author-images-container {
+    display: inline-block;
+    margin-left: -15px;
+}
+
+.blog-post-author-image {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.blog-post-column {
+    width: 100%;
+    color: #292828;
+}
+
+.blog-post-content {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 63px;
+    padding-right: 63px;
+    padding-bottom: 50px;
+
+    @media (max-width: 991.98px) {
+        padding-top: 30px;
+        padding-left: 33px;
+        padding-right: 33px;
+    }
+
+    @media (max-width: 767.98px) {
+        padding-top: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.blog-post-title-link {
+    font-family: 'IBM Plex Sans';
+    font-size: 30px;
+    color: #292828;
+    transition: color .2s;
+}
+
+.blog-post-paragraph {
+    text-align: justify;
+    overflow: hidden;
+    margin-top: 23px;
+    margin-bottom: 35px;
+}
+
+.blog-post-author-name {
+    font-size: 16px;
+    color: #24253A;
+}
+
+.blog-post-date {
+    font-size: 16px;
+    margin-left: 2px;
+    color: #6f7878;
+}
+
+
+.read-more-link-container {
+    text-align: right;
+    padding-left: 0px;
+
+    @media (max-width: 767.98px) {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.read-more-link {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all .2s;
+}
+
+.post {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.blog-content{
+    background-color:#f3f5f7 !important;
+    margin: 20px 0 20px 0;
+}
+
+.post-indent {
+    margin-left: 40px;
+}
+
+blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: rgba(0, 0, 0, 0.54);
+  }
