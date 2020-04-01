@@ -38,7 +38,7 @@ The message looks pretty bland doesn't it? Luckily, I happen to have a special p
 Now I can install the package to my project:
 
 ```bash
-cwNodeProj$ npm install @makandre/samplepkg --save
+cwNodeProj$ npm install @makandre/samplepkg
 ```
 {:style="margin: 30px;"}
 
@@ -62,7 +62,7 @@ module.exports = function (app) {
 ```
 {:style="margin: 30px;"}
 
-All is set so I force a full project build in Codewind--right-click project in Codewind view and select *Build*--and... the build fails. I check the build log and see the following:
+All is set so I force a full project build in Codewind--right-click project in Codewind view and select *Build*... and the build fails. I check the build log and see the following:
 
 ```bash
 npm ERR! code E404
@@ -70,6 +70,28 @@ npm ERR! 404 Not Found: @makandre/samplepkg@^1.0.0
 ```
 {:style="margin: 30px;"}
 
-To be continued...
+So what happened? Well it's true I had configured everything correctly on my system to pull from the private registry. However, that's just for my local environment. When Codewind builds the project into a Docker image, the Docker build does not have access to the same configuration. This can be easily remedied by adding a [reference](referencing-files.html) to the `~/.npmrc` file into my project. After adding the reference, my project built successfully and it shows the updated message:
+
+*Hello there, general Kenobi, this is codewind saying hi and thanks for using me*
+{:style="margin: 30px; text-align: center;"}
+
+Much better.
+
+At this point, I'd like to highlight the structure of the `Dockerfile` with respect to what is actually happening with the `.npmrc` file. The relevant lines in the `Dockerfile` are:
+
+```Dockerfile
+# Install npm production packages
+COPY package.json .npmrc ./
+RUN npm install --production
+
+# Copy application source
+COPY . ./
+RUN rm .npmrc
+```
+{:style="margin: 30px;"}
+
+This is the last piece of the puzzle--as you can see, the `.npmrc` file is copied to the Docker build for the `npm install` and removed afterwards. The build is also a multi-stage one, which ensures the `.npmrc` file is not leaked in an intermediate layer of the final Docker image. **Note:** if you are trying this exercise yourself, make sure you have the latest multi-stage version of the `Dockerfile` [here](https://github.com/codewind-resources/nodeExpressTemplate/blob/master/Dockerfile).
+
+
 
 ### A Java Example
