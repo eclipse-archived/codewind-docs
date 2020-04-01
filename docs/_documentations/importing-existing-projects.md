@@ -21,18 +21,28 @@ If you use Liberty, Spring, Node.js, and Swift, they all have build `smarts` tha
 ## Importing projects from IDEs
 
 Add a project from an existing Git repository:
+
 1. Clone the repository to your local computer.
 2. Use the **Add Existing Project** command to add the project to Codewind.
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
-Local projects are built and run on Docker. To import your project to a local Codewind instance, it must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
+Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
+**Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
 
-Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, it must include a Dockerfile and a Helm chart. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and for more information about Helm charts, see [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see: 
+
+* [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/)
+* [Helm chart documentation](https://helm.sh/docs/topics/charts/).
 
 ## What kind of projects can I add?
 
-Codewind is designed to develop cloud-native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. 
+
+To import your own project into Codewind, follow the requirements outlined in [Requirements for importing an existing project not created in Codewind or through Appsody or Odo](#Requirements-for-importing-an-existing-project-not-created-in-Codewind-or-through-Appsody-or-Odo).
+Make sure to select the **Other (Basic Container)** option as the project type.
+
+Codewind also contains a special build engine for the following languages. To utilize the build engine, see the following setup guides: 
 
 * [MicroProfile/Java EE projects](#microprofilejava-ee-projects)
 * [Java Spring projects](#java-spring-projects)
