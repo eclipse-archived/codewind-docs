@@ -27,35 +27,39 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 To install the Codewind operator into your cluster, follow these steps:
 
-1\. Go to your cloned Codewind operator directory: 
+1\. Clone the [https://github.com/eclipse/codewind-operator](https://github.com/eclipse/codewind-operator) repository. 
+
+2\. Go to your cloned Codewind operator directory: 
 
 `$ cd <path_to_cloned_codewind-operator_repository>`
 
-2\. Create the `codewind` namespace: 
+3\. Log in to your Kubernetes or Openshift cluster. 
+
+4\. Create the `codewind` namespace: 
 
 `$ kubectl create namespace codewind`
 
-3\. Create a service account for the operator: 
+5\. Create a service account for the operator: 
 
-`$ kubectl create -f ./deploy/service_account.yaml;`
+`$ kubectl create -f ./deploy/service_account.yaml`
 
-4\. Create the access roles in the `codewind` namespace:
+6\. Create the access roles in the `codewind` namespace:
 
-`$ kubectl create -f ./deploy/role.yaml;`
+`$ kubectl create -f ./deploy/role.yaml`
 
-5\. Connect the operator account to the access roles: 
+7\. Connect the operator account to the access roles: 
 
-`$ kubectl create -f ./deploy/role_binding.yaml;`
+`$ kubectl create -f ./deploy/role_binding.yaml`
 
-6\. Create the cluster roles. The Codewind operator needs some cluster permissions when querying outside of the installed namespace, for example, when discovering Tekton or other services:
+8\. Create the cluster roles. The Codewind operator needs some cluster permissions when querying outside of the installed namespace, for example, when discovering Tekton or other services:
 
 `$ kubectl create -f ./deploy/cluster_roles.yaml `
 
-7\. Connect the operator service account to the cluster roles: 
+9\. Connect the operator service account to the cluster roles: 
 
 `$ kubectl create -f ./deploy/cluster_role_binding.yaml`
 
-8\. Depending which version of Kubernetes or Openshift you using, create the Custom Resource Definitions (CRD) for your environment:
+10\. Depending which version of Kubernetes or Openshift you using, create the Custom Resource Definitions (CRD) for your environment:
 
 For OpenShift 3.11.x clusters: 
 ```
@@ -73,12 +77,12 @@ $ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd.yaml
 $ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd.yaml 
 ```
 
-9\. Deploy the Codewind operator into the cluster: 
+11\. Deploy the Codewind operator into the cluster: 
 
 `$ kubectl create -f ./deploy/operator.yaml`
 
 ## 2. Configure the default configuration map
-1\. The Codewind operator default settings can be found in the configuration map [`https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml) file. Save this file to your system.
+1\. The Codewind operator default settings can be found in the configuration map `./deploy/codewind-configmap.yaml` file.
 
 2\. Modify the file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. The ingress must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
 
@@ -117,7 +121,7 @@ Use the Codewind operator to deploy and set up Keycloak.
 
 To request a Keycloak service, import a yaml file as follows:
 
-1\. The Keycloak default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml) file. Save this file to your system. 
+1\. The Keycloak default settings can be found in the `./deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml` file. 
 
 2\. Modify the file setting the `name` to the name you have chosen for your Keycloak service, `namespace` to the namespace into which you are installing Keycloak, and optionally adjust the `storageSize` which by default is set to 1Gi.  In the following example, the `.yaml` file, when applied, creates a new Keycloak service called `devex001` in the namespace `codewind` with a PVC claim of 1GB: 
 
@@ -139,7 +143,7 @@ You see the following message:
 
 `keycloak.codewind.eclipse.org/devex001 created`
 
-4\. To view the Keycloak after it has been created, enter `$ kubectl get keycloaks`. You see the following example output: 
+4\. To view the Keycloak after it has been created, enter `$ kubectl get keycloaks -n codewind`. You see the following example output: 
 
 ```
 NAME       NAMESPACE   AGE   ACCESS

@@ -16,7 +16,7 @@ In this topic you will deploy a Codewind instance.
 
 ## Deploy a Codewind instance
 
-1\. To deploy a new Codewind instance, you must apply a yaml file, an example of which can be found here: [`https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_codewind_cr.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_codewind_cr.yaml). Save this file to your system. 
+1\. To deploy a new Codewind instance, apply the `./deploy/crds/codewind.eclipse.org_v1alpha1_codewind_cr.yaml` yaml file.
 
 2\. Modify the file changing the following fields:
 - `name`: Change this to a unique name for this deployment.
@@ -55,7 +55,7 @@ The operator creates and configures both Codewind and Keycloak. You see the foll
 
 4\. To list all running Codewind deployments together with the username of the developer to which each deployment is assigned, enter:
 
-`$ kubectl get codewinds`. 
+`$ kubectl get codewinds -n codewind`
 
 You see the following example output:
 
