@@ -35,10 +35,6 @@ Before deploying Codewind to the cloud, you must:
 
 3. **Have access to a keyring.** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
 
-4. **Clone the Codewind operator repository.** Cloning the Codewind operator repository enables you to access all the required `.yaml` deployment files. For more information about the Codewind operator, see [https://github.com/eclipse/codewind-operator](https://github.com/eclipse/codewind-operator). 
-
-5. **Log in to your Kubernetes or Openshift cluster.**
-
 ### Next Steps
 
 To install the Codewind operator in your cluster, see [Installing the remote operator](remote-install-operator.html).
