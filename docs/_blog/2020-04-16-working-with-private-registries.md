@@ -13,13 +13,13 @@ tags: [private, registry, registries, repository, repositories]
 
 Need a specific capability in your application? Chances are there's a code library or package out there that already does the job. Such is the norm for modern-day application development, which is part writing your own code and part reusing code pulled from a registry or repository somewhere.
 
-In most cases, these 3rd-party bits of code are hosted on well-known public registries and repositories, and build and package tools such as `npm` and `Maven` helps you manage these dependencies and makes pulling the code down for use simple. However, if you work in a medium or large-sized organization, you may be required to pull 3rd-party code from private servers within the organization--it's also simple to do, as long as you have proper configuration in place.
+In most cases, these 3rd-party bits of code are hosted on well-known public registries and repositories, and build and package tools such as `npm` and `mvn` (Maven) helps you manage these dependencies and makes pulling the code down for use simple. However, if you work in a medium or large-sized organization, you may be required to pull 3rd-party code from private servers within the organization--it's also simple to do, as long as you have proper configuration in place.
 
 ### Working with Private Registries in Codewind
 
-In this blog entry let's explore working with private `npm` registries and private `Maven` repositories in Codewind. Most developers should already be familiar with how to configure their enviroment to access private servers, but if you need a refresher, take a look at the [NPM documentation](https://docs.npmjs.com/configuring-npm/npmrc.html) or [Maven documentation](https://maven.apache.org/settings.html#Servers) on the steps involved. If you happen to be building your application by Docker (and who isn't these days?), then there is an added layer of complexity with the setup, such as making the configuration avaiable to the Docker build while ensuring you do not leak any sensitive data--your server username and password--in the final Docker image. Fortunately, Codewind provides mechanisms and project templates that makes this process simpler.
+In this blog entry let's explore working with private NPM registries and private Maven repositories in Codewind. Most developers should already be familiar with how to configure their enviroment to access private servers, but if you need a refresher, take a look at the [NPM documentation](https://docs.npmjs.com/configuring-npm/npmrc.html) or [Maven documentation](https://maven.apache.org/settings.html#Servers) on the steps involved. If you happen to be building your application by Docker (and who isn't these days?), then there is an added layer of complexity with the setup, such as making the configuration avaiable to the Docker build while ensuring you do not leak any sensitive data--your server username and password--in the final Docker image. Fortunately, Codewind provides mechanisms and project templates that makes this process simpler.
 
-### A Node.js Example
+### A Node.js NPM Example
 
 I'm starting with a Codewind project created using the Node.js Express project template. When I open the application and navigate to its `/codewind` endpoint, I'm greeted with:
 
@@ -92,6 +92,8 @@ RUN rm .npmrc
 
 This is the last piece of the puzzle--as you can see, the `.npmrc` file is copied to the Docker build for the `npm install` and removed afterwards. The build is also a multi-stage one, which ensures the `.npmrc` file is not leaked in an intermediate layer of the final Docker image. **Note:** if you are trying this exercise yourself, make sure you have the latest multi-stage version of the `Dockerfile` [here](https://github.com/codewind-resources/nodeExpressTemplate/blob/master/Dockerfile).
 
+### A Java Maven Example
 
+### More Information
 
-### A Java Example
+- Working with private registries in the Codewind [documentation](private-registries.html)
