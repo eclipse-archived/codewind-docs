@@ -27,37 +27,35 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 To install the Codewind operator into your cluster, follow these steps:
 
-_MG: Do we need a log in step here?  Ie `1. Log into your cluster. ` or is the `active Kubernetes context that points to your cluster` in the [prereqs](./remote-overview.html) sufficient??_
-
 1\. Go to your cloned Codewind operator directory: 
 
-`$ cd <path_to_cloned_codewind-operator_repo>`
+`$ cd <path_to_cloned_codewind-operator_repository>`
 
 2\. Create the `codewind` namespace: 
 
 `$ kubectl create namespace codewind`
 
-3\. Create the service account for the operator: 
+3\. Create a service account for the operator: 
 
 `$ kubectl create -f ./deploy/service_account.yaml;`
 
-4\. Create the role-based access control (RBAC) for ingress, route, and so on: 
+4\. Create the access roles in the `codewind` namespace:
 
 `$ kubectl create -f ./deploy/role.yaml;`
 
-5\. Connect the service account to the role: 
+5\. Connect the operator account to the access roles: 
 
 `$ kubectl create -f ./deploy/role_binding.yaml;`
 
-6\. Create the cluster roles because the permissions at the namespace level are not sufficient: 
+6\. Create the cluster roles. The Codewind operator needs some cluster permissions when querying outside of the installed namespace, for example, when discovering Tekton or other services:
 
 `$ kubectl create -f ./deploy/cluster_roles.yaml `
 
-7\. Connect the service account to the role: 
+7\. Connect the operator service account to the cluster roles: 
 
 `$ kubectl create -f ./deploy/cluster_role_binding.yaml`
 
-8\. Create the CRD:
+8\. Depending which version of Kubernetes or Openshift you using, create the Custom Resource Definitions (CRD) for your environment:
 
 For OpenShift 3.11.x clusters: 
 ```
@@ -65,20 +63,28 @@ $ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd-oc311.yaml
 $ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd-oc311.yaml
 ```
 
-For other versions of OpenShift and Kubernetes:
+For other versions of OpenShift and Kubernetes, including: 
+- Openshift 4.x
+- Code Ready Containers  1.16.2 BuildDate:2020-02-03T23:11:39Z
+- Kubernetes 1.16+
+
 ```
 $ kubectl create -f ./deploy/crds/codewind.eclipse.org_keycloaks_crd.yaml 
 $ kubectl create -f ./deploy/crds/codewind.eclipse.org_codewinds_crd.yaml 
 ```
 
-9\. Deploy the operator (download the images into your cluster): 
+9\. Deploy the Codewind operator into the cluster: 
 
 `$ kubectl create -f ./deploy/operator.yaml`
 
 ## 2. Configure the default configuration map
-1\. The Codewind operator default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml) file. Save this file to your system.
+1\. The Codewind operator default settings can be found in the configuration map [`https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/codewind-configmap.yaml) file. Save this file to your system.
 
-2\. Modify the file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. It must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
+2\. Modify the file setting the `ingressDomain` value to one specific to your cluster. The ingress domain is appended to any routes and URLs created by the operator. The ingress must already be registered in your DNS service and must resolve correctly from both inside and outside of the cluster.
+
+**Tip:** If you are installing into a hosted cloud platform the ingress domain is usually displayed on your cloud service dashboard.
+
+Here is an example configuration map file: 
 
 ```yaml
 apiVersion: v1
@@ -92,12 +98,24 @@ data:
   storageCodewindSize: 10Gi
 ```
 
-3\. Import the default configuration map file into your cluster: 
+3\. After making the necessary changes, you can either import the configuration map file into your cluster: 
 
 `$ kubectl apply -f ./deploy/codewind-configmap.yaml`
 
+Or you can edit the configuration map which the operator has already installed in your cluster:
+
+`$ kubectl edit configmap codewind-operator -n codewind`
+
+4\. To check the status of the operator, enter:
+
+`kubectl get pods -n codewind`
+
+If successful, you see the `codewind-operator` pod running and ready for work.
+
 ## 3. Create an initial Keycloak service
-Use the Codewind operator to deploy and set up Keycloak.
+Use the Codewind operator to deploy and set up Keycloak. 
+
+To request a Keycloak service, import a yaml file as follows:
 
 1\. The Keycloak default settings can be found in the [`https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml`](https://github.com/eclipse/codewind-operator/blob/master/deploy/crds/codewind.eclipse.org_v1alpha1_keycloak_cr.yaml) file. Save this file to your system. 
 
@@ -121,7 +139,14 @@ You see the following message:
 
 `keycloak.codewind.eclipse.org/devex001 created`
 
-During deployment, the operator creates:
+4\. To view the Keycloak after it has been created, enter `$ kubectl get keycloaks`. You see the following example output: 
+
+```
+NAME       NAMESPACE   AGE   ACCESS
+devex001   codewind    4s    https://codewind-keycloak-devex001.10.98.117.7.nip.io
+```
+
+5\. During deployment, the operator creates:
 - A service account.
 - A deployment.
 - A pod.
@@ -131,7 +156,14 @@ During deployment, the operator creates:
 - A storage claim.
 - Any secrets.
 
-For example:
+You can check these using standard Kubernetes commands, for example:
+
+`$ kubectl get serviceaccount -n codewind`
+`$ kubectl get deployments -n codewind`
+`$ kubectl get pods -n codewind`
+`$ kubectl get services -n codewind`
+
+You see the following example output:
 
 ```
 NAME                         SECRETS   AGE
@@ -150,19 +182,12 @@ NAME                                                    DESIRED   CURRENT   READ
 replicaset.apps/codewind-keycloak-devex001-7454d4ff6c   1         1         1       2m10s
 ```
 
-4\. To view the Keycloak after it has been created, enter `$ kubectl get keycloaks`. You see the following example output: 
-
-```
-NAME       NAMESPACE   AGE   ACCESS
-devex001   codewind    4s    https://codewind-keycloak-devex001.10.98.117.7.nip.io
-```
-
 ## 4. Prepare Keycloak for Codewind
 During deployment of the Keycloak service, the operator configures the security realm as specified by the defaults in the configuration map. Before Codewind services can be installed, you must add users to Keycloak by way of the Keycloak Admin web page. Each Codewind deployment must be tied to a existing user account.
 
-1\. To see the Keycloak Admin web page URL, enter:
+1\. To see the Keycloak deployment running in the codewind namespace and to capture its access URL, enter:
 
-`$ kubectl get keycloaks`
+`$ kubectl get keycloaks -n codewind`
 
 You see the following example output:
 
@@ -170,6 +195,7 @@ You see the following example output:
 NAME       NAMESPACE   AGE     ACCESS
 devex001   codewind    5m22s   https://codewind-keycloak-devex001.10.98.117.7.nip.io
 ```
+
 The Keycloak Admin web page URL is listed under the `ACCESS` field. 
 
 By default, Keycloak is installed with an admin account where:
@@ -203,20 +229,28 @@ By default, Keycloak is installed with an admin account where:
 
 6\. If you changed your `admin` password in a previous step, you must update the Keycloak password in the operator secret. 
 
-When the Codewind operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default, during deployment that secret has a username and password of `admin`. If you changed your `admin` password in a previous step, you must update the Keycloak secret to match.
+When the Codewind operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default during initial deployment, that secret has a user name and password of `admin`. If you changed your `admin` password in a previous step, you must update the Keycloak secret to match.
 
 The secret is installed in the same namespace as the operator (`codewind`) and named `secret-keycloak-user-<keycloakname>`.
 
 If you have an administration UI for you cluster, you can use it to locate the secret and then edit the `keycloak-admin-password` field.
 
-Alternatively, you can use the command line and type `$ kubectl edit secret secret-keycloak-user-<keycloakname>` or `oc edit secret secret-keycloak-user-<keycloakname>`. If you use the command line, you must encode your password string in base64 before saving it into the secret. To do this, enter: 
+Alternatively, you can use the command line and enter:
+
+ `$ kubectl edit secret secret-keycloak-user-<keycloakname>` 
+ 
+ or 
+
+ `$ oc edit secret secret-keycloak-user-<keycloakname>`
+ 
+ If you use the command line, you must encode your password string in base64 before saving it into the secret. To do this, enter: 
 
 ```
 $ echo -n 'myNewPassword' | base64
 bXlOZXdQYXNzd29yZA==
 ```
 
-Save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than `myNewPassword`.
+Save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than the clear text `myNewPassword`.
 
 ## Next Steps
 
