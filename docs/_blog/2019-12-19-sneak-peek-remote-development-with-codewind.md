@@ -30,6 +30,7 @@ Now, why is this so cool?
 
 ![image of the dependency microservice](images/blog/sneakpeakremotedevelopment.jpeg){:width="800px"}
 *You can have all your projects in one editor and still deploy to multiple clouds.*
+{: style="text-align: center;"}
 
 TL;DR:
 - Codewind now supports connecting your local IDE of choice to Codewind installed in a remote cloud.

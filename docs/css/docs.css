@@ -4,8 +4,10 @@
 }
 
 #content-container img {
-	max-width: 100%;
+    max-width: 100%;
+    padding: 1px 1px 1px 1px;
 }
+
 h1, h2 {
 	padding-bottom: .3em;
     border-bottom: 1px solid #eaecef;
@@ -249,8 +251,6 @@ code {
 }
 
 
-
-
 @media only screen and (max-width: 768px) {
 	.cw-docs-spacer {
         height: 0px;
@@ -289,4 +289,8 @@ code {
 
 .highlighter-rouge {
 	color: #123456;
+}
+
+.imageborder {
+    border: 1px solid #000;
 }
