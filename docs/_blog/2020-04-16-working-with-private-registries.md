@@ -13,11 +13,11 @@ tags: [private, registry, registries, repository, repositories]
 
 Need a specific capability in your application? Chances are there's a code library or package out there that already does the job. Such is the norm for modern-day application development, which is part writing your own code and part reusing code pulled from a registry or repository somewhere.
 
-In most cases, these 3rd-party bits of code are hosted on well-known public registries and repositories, and build and package tools such as `npm` and `mvn` (Maven) helps you manage these dependencies and makes pulling the code down for use simple. However, if you work in a medium or large-sized organization, you may be required to pull 3rd-party code from private servers within the organization--it's also simple to do, as long as you have proper configuration in place.
+In most cases, these 3rd-party bits of code are hosted on well-known public registries and repositories, and build and package tools such as `npm` (Node Package Manager) and `mvn` (Maven) help you manage these dependencies and make pulling the code down for use simple. However, if you work in a medium or large-sized organization, you might be required to pull 3rd-party code from private servers within the organization--it's also simple to do, as long as you have proper configuration in place.
 
 ### Working with Private Registries in Codewind
 
-In this blog entry let's explore working with private NPM registries and private Maven repositories in Codewind. Most developers should already be familiar with how to configure their environment to access private servers, but if you need a refresher, take a look at the [NPM documentation](https://docs.npmjs.com/configuring-npm/npmrc.html) or [Maven documentation](https://maven.apache.org/settings.html#Servers) on the steps involved. If you happen to be building your application by Docker (and who isn't these days?), then there is an added layer of complexity with the setup, such as making the configuration available to the Docker build while ensuring you do not leak any sensitive data--your server username and password--in the final Docker image. Fortunately, Codewind provides mechanisms and project templates that makes this process simpler.
+In this blog entry let's explore working with private NPM registries and private Maven repositories in Codewind. Most developers should already be familiar with how to configure their environment to access private servers, but if you need a refresher, take a look at the [NPM documentation](https://docs.npmjs.com/configuring-npm/npmrc.html) or [Maven documentation](https://maven.apache.org/settings.html#Servers) on the steps involved. If you happen to be building your application by Docker (and who isn't these days?), then there is an added layer of complexity with the setup, such as making the configuration available to the Docker build while ensuring you do not leak any sensitive data--your server username and password--in the final Docker image. Fortunately, Codewind provides mechanisms and project templates that make this process simpler.
 
 ### A Node.js NPM Example
 
@@ -62,7 +62,7 @@ module.exports = function (app) {
 ```
 {:style="margin: 30px;"}
 
-All is set so I force a full project build in Codewind--right-click project in Codewind view and select *Build*... and the build fails. I check the build log and see the following:
+All is set so I right-click the project in Codewind view and select **Build** to trigger a full project build...and it fails. I check the build log and see the following:
 
 ```bash
 npm ERR! code E404
@@ -132,7 +132,7 @@ And now to add the repository location and dependency I need to my project's `po
 ```
 {:style="margin: 30px;"}
 
-The last step is to add a [reference](referencing-files.html) to my `~/.m2/settings.xml` file. Now my project should be all set to pull the `sampleJar` dependency down from the configured private repository.
+The last step is to add a [reference](referencing-files.html) to my `~/.m2/settings.xml` file. Now my project should be all set to download the `sampleJar` dependency from the configured private repository.
 
 ### More Information
 
