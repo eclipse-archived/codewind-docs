@@ -24,7 +24,7 @@ In this blog entry let's explore working with private NPM registries and private
 I'm starting with a Codewind project created using the Node.js Express project template. When I open the application and navigate to its `/codewind` endpoint, I'm greeted with:
 
 ![image of Hey there, this is codewind saying hi and thanks for using me](images/blog/privateregnode01.png){:width="500px"}
-*Hey there, this is codewind saying hi and thanks for using me*
+*Hey there, this is Codewind saying hi and thanks for using me*
 {:style="margin: 30px; text-align: center;"}
 
 The message looks pretty bland doesn't it? Luckily, I happen to have a special package hosted on my private GitHub NPM registry that I can use to give this message some flair. First, I'll configure the credentials for the registry in my `~/.npmrc` configuration file:
@@ -72,7 +72,7 @@ npm ERR! 404 Not Found: @makandre/samplepkg@^1.0.0
 
 So what happened? Well it's true I had configured everything correctly on my system to pull from the private registry. However, that's just for my local environment. When Codewind builds the project into a Docker image, the Docker build does not have access to the same configuration. This can be easily remedied by adding a [reference](referencing-files.html) to the `~/.npmrc` file into my project--using a reference keeps sensitive information out of my project where it may get accidentally committed to source control. After adding the reference, my project built successfully and it shows the updated message:
 
-*Hello there, general Kenobi, this is codewind saying hi and thanks for using me*
+*Hello there, General Kenobi, this is Codewind saying hi and thanks for using me*
 {:style="margin: 30px; text-align: center;"}
 
 Much better.
