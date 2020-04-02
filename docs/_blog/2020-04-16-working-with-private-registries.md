@@ -62,7 +62,7 @@ module.exports = function (app) {
 ```
 {:style="margin: 30px;"}
 
-All is set so I right-click the project in Codewind view and select **Build** to trigger a full project build...and it fails. I check the build log and see the following:
+All is set so I right-click the project in Codewind view and select *Build* to trigger a full project build...and it fails. I check the build log and see the following:
 
 ```bash
 npm ERR! code E404
