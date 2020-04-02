@@ -94,7 +94,7 @@ This is the last piece of the puzzle--as you can see, the `.npmrc` file is copie
 
 ### A Java Maven Example
 
-The steps to configure and pull from a private Maven repository for Java projects is very similar to the NPM example I've described, so I won't go into too much detail here. Once again, I start by setting up the proper credentials to access the private server; for Maven, that means adding a `server` element to my `~/.m2/settings.xml` file:
+The steps to configure and pull from a private Maven repository for Java projects is very similar to the NPM example I've described, so I won't go into as much detail here. Once again, I start by setting up the proper credentials to access the private server; for Maven, that means adding a `server` element to my `~/.m2/settings.xml` file:
 
 ```xml
 <server>
@@ -105,12 +105,34 @@ The steps to configure and pull from a private Maven repository for Java project
 ```
 {:style="margin: 30px;"}
 
-And now to add the repository location and dependency I need to my project's `pom.xml`:
+And now to add the repository location and dependency I need to my project's `pom.xml` file:
 
 ```xml
+<repositories>
+  <repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/makandre/privateRegistry</url>
+  </repository>
+</repositories>
 
+<pluginRepositories>
+  <pluginRepository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/makandre/privateRegistry</url>
+  </pluginRepository>
+<pluginRepositories>
+
+<dependencies>
+  <dependency>
+    <groupId>org.eclipse.codewind</groupId>
+    <artifactId>sampleJar</artifactId>
+    <version>0.0.1</version>
+  </dependency>
+</dependencies>
 ```
 {:style="margin: 30px;"}
+
+The last step is to add a [reference](referencing-files.html) to my `~/.m2/settings.xml` file. Now my project should be all set to pull the `sampleJar` dependency down from the configured private repository.
 
 ### More Information
 
