@@ -51,15 +51,33 @@ Add your template sources to use Codewind with the framework of your choice.
 3. **VSCode:** Enter the URL to your template source's index file and click `Enter` to confirm.
    **Eclipse:** Fill in the fields for URL, Name, and Description. Click the **OK** button once you are finished.
 
-## Modifying the template sources
-
-1. To edit the template sources, clone the [`codewind-resources`](https://github.com/Codewind-resources) repository.
-2. Ensure that the following repository structure and files exist:
-   ```
-   <Place file structure here and state which files can be edited.>
-   ```
-
-## Creating a template and adding it to your repository list
-1. To create a template...
-   - `<Place list of files here>`
-2. To add the new template to your repository list...
+## Creating your own templates
+1. Choose a GitHub repository to contain all of your new template sources.
+   - Codewind uses [`codewind-templates/devfiles`](https://github.com/codewind-resources/codewind-templates/tree/master/devfiles).
+2. Within this repository, create a folder for each template source.
+   - For example, within the `devfiles` folder, Codewind has subfolders for template sources that include Go, MicroProfile, Lagom Java, and more.
+3. Each template source folder needs a `devfile.yaml` file with the following information:
+  ```
+  apiVersion: <The version of the API that you use>
+  metadata:
+  name: <The name of your template>
+  projects:
+    - name: <The name of your project>
+      source:
+        type: git
+        location: <"The GitHub URL of the template location">
+  ```
+4. In the same GitHub repository that you saved the template source folders, create an `index.json` file. In this file, add the following values for each of the templates that you want to work with in Codewind:
+  ```
+ {
+  "displayName":"<The name of your template>",
+  "description":"<The description of your template>",
+  "icon":"<The SVG graphic to be associated with your template>",
+  "language":"<The programming language that your template is written in>",
+  "projectType":"<The project type of your template>",
+  "location":"<The Git repository where the template itself is located>",
+  "links": {"self":"<The template devfile.yaml>" }
+ }
+  ```
+   - For an example `index.json` file, see the [`index-json` file](https://github.com/codewind-resources/codewind-templates/blob/master/devfiles/index.json) in the `codewind-templates` repository.
+5. Clone the [`codewind-templates` repository](https://github.com/codewind-resources/codewind-templates).
