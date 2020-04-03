@@ -48,15 +48,7 @@
         url: intellij-codechange.html
 
 - title: 'Deploying Codewind remotely'
-  children:   
-    - title: 'Overview: Deploying Codewind remotely'
-      url: remote-overview.html
-    - title: 'Installing the operator'
-      url: remote-installing-the-operator.html
-    - title: 'Deploying Codewind instances'
-      url: remote-deploying-codewind-instances.html
-    - title: 'Removing a remote Codewind deployment'
-      url: remote-removing-a-deployment.html
+  url: remote-deploying-codewind.html
 
 - title: 'Using Codewind remotely'
   children:
