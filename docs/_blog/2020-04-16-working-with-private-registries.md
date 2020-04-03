@@ -3,7 +3,7 @@ layout: post
 title: "Working with Private Registries"
 categories: blog
 author_picture: images/blog/author_icon_andrew_mak.jpeg
-author_url: 
+author_url: https://www.linkedin.com/in/andrew-mak-283792144/
 author: Andrew Mak
 blog_description: "Need a specific capability in your application? Chances are there's a code library or package out there that already does the job."
 permalink: working-with-private-registries
