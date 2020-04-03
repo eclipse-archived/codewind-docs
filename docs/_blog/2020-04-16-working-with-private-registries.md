@@ -23,7 +23,7 @@ In this blog entry let's explore working with private NPM registries and private
 
 I'm starting with a Codewind project created using the Node.js Express project template. When I open the application and navigate to its `/codewind` endpoint, I'm greeted with:
 
-![image of Hey there, this is codewind saying hi and thanks for using me](images/blog/privateregnode01.png){:width="500px"}
+![image of Hey there, this is Codewind saying hi and thanks for using me](images/blog/privateregnode01.png){:width="500px"}
 *Hey there, this is Codewind saying hi and thanks for using me*
 {:style="margin: 30px; text-align: center;"}
 
@@ -53,7 +53,7 @@ module.exports = function (app) {
 
   router.get('/', function (req, res, next) {
     // replaced "Hey there" with a call to hello()
-    const stringToReturn = hello() + ", this is codewind saying hi and thanks for using me"
+    const stringToReturn = hello() + ", this is Codewind saying hi and thanks for using me"
     res.status(200).send(stringToReturn);
   });
 
