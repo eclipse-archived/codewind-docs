@@ -13,12 +13,12 @@ order: 3
 # Codewind on Minikube 
 
 ## Objectives 
-* Start Minikube on your local machine 
+* Install Minikube 
 * Install Codewind 
 * Develop a microservice with Codewind on Minikube 
 
 ## Overview
-Local Kubernetes, like Minikube, Docker Desktop Kube, and CodeReadyContainers, is an effective way to explore and learn to develop with Codewind. This tutorial assists and instructs you to deploy Codewind and projects on local Kube, specifically, Minikube. 
+Minikube is essentially Kubernetes but on your local computer. Minikube supports the latest Kubernetes release, so you can configure Minikube on any container runtime. With Minikube, you can start your computer then utilize all Kubernetes' capabilities. Use Minikube to explore and learn to develop with Codewind. This quick guide assists and instructs you to deploy Codewind and projects on Minikube. 
 
 * [Prerequisistes](##prerequisites)
 * [Preparing Minikube](##preparing-minikube)
@@ -99,7 +99,7 @@ Instructions here on how to use the microservice.
 
 ## What you have learned 
 In this quick guide, you have learned to:
-* Prepare Minikube and install Codewind
+* Install Minikube and Codewind
 * Develop a micorservice using Codewind on Minikube 
 
 ## Next steps 
