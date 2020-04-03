@@ -49,9 +49,7 @@ To deploy a Codewind instance, see [Deploy a Codewind instance](https://github.c
 
 ## 3. Removing a Codewind instance
 
-To remove a Codewind instance, enter the following command where `<name>` is the name of the deployment: 
-
-`$ kubectl delete codewinds <name> -n codewind`
+To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
 
 ## Next steps
 
