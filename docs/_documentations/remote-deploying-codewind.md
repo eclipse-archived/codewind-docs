@@ -21,7 +21,7 @@ You will learn how to deploy Codewind to be used remotely.
 After you install your local IDE and configure Codewind for local use, you will:
 
 1. Install the Codewind operator in your cloud.
-2. Deploy Codewind instances. 
+2. Deploy your Codewind instances. 
 
 Finally, you will learn how to remove a remote deployment of Codewind.
 
