@@ -43,7 +43,7 @@ To install the Codewind operator in your cloud, follow the instructions in the [
 
 ## 2. Deploy your Codewind instances
 
-After your system administrator has installed the operator, you can deploy a Codewind instance. 
+After your system administrator has installed the operator, you can deploy your Codewind instances. 
 
 To deploy a Codewind instance, see [Deploy a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#deploy-a-codewind-instance) in the codewind-operator readme.
 
