@@ -31,9 +31,9 @@ Before deploying Codewind to the cloud, you must:
 
 1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
 
-2. **Have an active Kubernetes context that points to your cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
+2. **Log in to your cluster and have an active Kubernetes context that points to it.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 
-3. **Have access to a keyring** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+3. **Have a workstation that is set up to use a Keyring.** A Keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Windows or macOS computers include a Keychain by default, but for Linux desktops, you might need to download and install additional security packages. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux. 
 
 ## 1. Install the Codewind operator in your cloud
 
