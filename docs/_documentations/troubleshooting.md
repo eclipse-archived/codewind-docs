@@ -16,6 +16,7 @@ parent: root
 The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
+* [Upgrading Codewind](#upgrading-codewind)
 * [Creating a project](#creating-a-project)
 * [Importing a project](#importing-a-project)
 * [Understanding Application Metrics](#understanding-application-metrics)
@@ -119,6 +120,43 @@ This error occurs because the custom plug-in repository link contains an additio
 
 **Workaround**
 Remove the extra space from the custom plug-in repository link. 
+
+***
+# Upgrading Codewind
+
+<!--
+Action/Topic: Upgrading Codewind
+Issue type: bug/info
+Issue links: https://github.com/eclipse/codewind/issues/2604
+0.11.0: New for this release
+-->
+
+## Error upgrading Codewind to the latest
+When upgrading Codewind from 0.4, 0.5 or 0.8.1 to the latest version, you see the following error: 
+
+```
+==> Run cwctl --json remove -t 0.8.1
+Removing Codewind docker images..
+System architecture is:  amd64
+Host operating system is:  darwin
+Please wait whilst images are removed...  
+.FileNotFoundError: [Errno 2] No such file or directory: '/Users/stephenkinder/.codewind/docker-compose.yaml'
+{"error":"IMAGE_REMOVE_ERROR","error_description":"exit status 1"}
+```
+
+**Workaround:**
+
+1\. On macOS or Linux, remove the images by issuing this command: 
+`$ docker rmi $(docker images | grep eclipse/codewind | awk '{ print $3 }')`
+
+2\. Remove the Codewind network:
+`$ docker network rm <codewind_network>`
+
+Codewind starts. 
+
+3\. If Codewind does not start, prune your docker images. Enter: `$ docker system prune -a`. 
+
+**Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
 
 ***
 # Creating a project
