@@ -84,6 +84,8 @@
       url: private-registries.html  
     - title: 'Using Codewind offline'
       url: offline-codewind.html
+    - title: 'Debugging in Codewind'
+      url: debugging.html
       
 - title: 'Performance monitoring'
   children:
