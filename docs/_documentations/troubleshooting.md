@@ -16,6 +16,7 @@ parent: root
 The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
+* [Upgrading Codewind](#upgrading-codewind)
 * [Creating a project](#creating-a-project)
 * [Importing a project](#importing-a-project)
 * [Understanding Application Metrics](#understanding-application-metrics)
@@ -119,6 +120,47 @@ This error occurs because the custom plug-in repository link contains an additio
 
 **Workaround**
 Remove the extra space from the custom plug-in repository link. 
+
+***
+# Upgrading Codewind
+
+<!--
+Action/Topic: Upgrading Codewind
+Issue type: bug/info
+Issue links: https://github.com/eclipse/codewind/issues/2604
+0.11.0: New for this release
+-->
+
+## Error upgrading Codewind to the latest
+When upgrading Codewind from any version older than 0.9 to the latest, you see the following error: 
+
+```
+==> Run cwctl --json remove -t 0.8.1
+Removing Codewind docker images..
+System architecture is:  amd64
+Host operating system is:  darwin
+Please wait whilst images are removed...  
+.FileNotFoundError: [Errno 2] No such file or directory: '/Users/<username>/.codewind/docker-compose.yaml'
+{"error":"IMAGE_REMOVE_ERROR","error_description":"exit status 1"}
+```
+
+**Workaround:**
+
+1\. Remove the Codewind images by hand. On macOS or Linux, you can remove the images with the following command: 
+`$ docker rmi $(docker images | grep eclipse/codewind | awk '{ print $3 }')`
+
+2\. Remove the Codewind network:
+`$ docker network rm <codewind_network>`
+
+3\. Go to your IDE and click **Start Local Codewind**. Codewind starts. 
+
+4\. If Codewind fails to start, you can use Docker system prune.<br>
+**Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
+1. Enter the `$ docker system prune -a` command.
+2. Carefully review the list of items that Docker system prune removes. Preserve any items that you want to keep.
+   - To preserve containers, start all the containers that you want to save.
+   - To preserve images, start a container from the images that you want to save.
+3. After you ensure the preservation of any necessary items that Docker system prune removes, enter `y` to continue.
 
 ***
 # Creating a project
