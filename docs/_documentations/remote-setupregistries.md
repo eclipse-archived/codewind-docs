@@ -14,7 +14,10 @@ type: document
 You need to set credentials for an image registry if you:
 * Build a project with a dockerfile that pulls from a non-public image registry. 
 * Use Codewind remotely. Set at least one image registry that Codewind can push built project images to. If you have multiple registries configured, you can select one of them to be the push registry. 
-* Add an image registry then Codewind logs you into the image registry on your local machine as if you had locally run `docker login`. 
+
+When you add an image registry, Codewind logs you into the image registry on your local machine as if you had locally run `docker login`. 
+
+If you work with Appsody projects that pull stack images from a non-public image registry, you need to set credentials for an image registry. **Note:** the Appsody project does not actually have a Dockerfile; rather, the stack image ID is in the `.appsody-config.yaml`. 
 
 ## Adding an image registry in Codewind
 After your IDE is started and running, add the image registry to be used with Codewind.
