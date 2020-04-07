@@ -6,8 +6,6 @@ keywords: using, run, monitor, getting started,  builds, changes, status, state,
 duration: 1 minute
 permalink: checkingstatuses
 type: document
-parent: usingcodewind
-order: 7
 ---
 
 # Understanding application and build statuses
