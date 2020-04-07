@@ -29,6 +29,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
+* [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
 
 ***
 # Installing Codewind
@@ -119,7 +120,7 @@ When attempting to install Codewind in IntelliJ, you cannot locate the Codewind 
 This error occurs because the custom plug-in repository link contains an additional space.
 
 **Workaround**
-Remove the extra space from the custom plug-in repository link. 
+Remove the extra space from the custom plug-in repository link.
 
 ***
 # Upgrading Codewind
@@ -132,27 +133,27 @@ Issue links: https://github.com/eclipse/codewind/issues/2604
 -->
 
 ## Error upgrading Codewind to the latest
-When upgrading Codewind from any version older than 0.9 to the latest, you see the following error: 
+When upgrading Codewind from any version older than 0.9 to the latest, you see the following error:
 
 ```
 ==> Run cwctl --json remove -t 0.8.1
 Removing Codewind docker images..
 System architecture is:  amd64
 Host operating system is:  darwin
-Please wait whilst images are removed...  
+Please wait whilst images are removed...
 .FileNotFoundError: [Errno 2] No such file or directory: '/Users/<username>/.codewind/docker-compose.yaml'
 {"error":"IMAGE_REMOVE_ERROR","error_description":"exit status 1"}
 ```
 
 **Workaround:**
 
-1\. Remove the Codewind images by hand. On macOS or Linux, you can remove the images with the following command: 
+1\. Remove the Codewind images by hand. On macOS or Linux, you can remove the images with the following command:
 `$ docker rmi $(docker images | grep eclipse/codewind | awk '{ print $3 }')`
 
 2\. Remove the Codewind network:
 `$ docker network rm <codewind_network>`
 
-3\. Go to your IDE and click **Start Local Codewind**. Codewind starts. 
+3\. Go to your IDE and click **Start Local Codewind**. Codewind starts.
 
 4\. If Codewind fails to start, you can use Docker system prune.<br>
 **Caution:** Docker system prune removes more than just the Codewind Docker images. It can potentially remove all of your images.
@@ -200,7 +201,7 @@ Codewind cannot deploy Codewind style projects with remote Codewind on IKS and K
 Failed to pull image "<image>": rpc error: code = Unknown desc = failed to pull and unpack image "<image>": failed to unpack image on snapshotter overlayfs: failed to extract layer sha256:<hash>: mount callback failed on /var/lib/containerd/tmpmounts/containerd-mount799987480: archive/tar: invalid tar header: unknown
 ```
 
-**Workaround:** Upgrade to the latest version of IKS. IKS clusters that run Kubernetes 1.16 and later run a later version of containerd and are not affected by this issue. 
+**Workaround:** Upgrade to the latest version of IKS. IKS clusters that run Kubernetes 1.16 and later run a later version of containerd and are not affected by this issue.
 
 <!--
 Action/Topic: Creating a project and/or Checking the application and build statuses
@@ -321,36 +322,36 @@ IDE version: Eclipse 2019-09
 Issue link: https://github.com/eclipse/codewind/issues/715
 -->
 ## Projects stuck in starting or stopped state
-You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This behavior can occur when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0. 
+You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This behavior can occur when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0.
 
-**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this: 
+**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this:
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
 
 <!--
-Action/Topic: Checking the application status 
+Action/Topic: Checking the application status
 Issue type: bug/info
 Codewind version: 0.9.0
 Issue link: https://github.com/eclipse/codewind/issues/1269
 -->
-## Application stuck in Starting state 
-Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out, and the state is stuck on `Starting`. 
+## Application stuck in Starting state
+Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out, and the state is stuck on `Starting`.
 
 **Workaround** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
-1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`. 
-    - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error. 
-2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports. 
+1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`.
+    - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error.
+2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports.
 
 <!--
-Action/Topic: Checking the application status 
+Action/Topic: Checking the application status
 Issue type: bug/info
 Codewind version: 0.9.0
 Issue link: https://github.com/eclipse/codewind/issues/1269
 -->
 ## How to create a .cw-settings file if it does not exist
-Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did not come with a `.cw-settings`. The `.cw-settings` file is usually created automatically and tells Codewind how to interact with a project. Things like application and build status are tied to these settings. If you have a project from those stacks from a previous release, you must manually create the .cw-settings file. The file must reside under the project root directory. 
+Prior to the 0.9.0 release, some Appsody and OpenShift Do (odo) templates did not come with a `.cw-settings`. The `.cw-settings` file is usually created automatically and tells Codewind how to interact with a project. Things like application and build status are tied to these settings. If you have a project from those stacks from a previous release, you must manually create the .cw-settings file. The file must reside under the project root directory.
 
-**Workaround** Create a template .cw-settings file with the following contents: 
+**Workaround** Create a template .cw-settings file with the following contents:
 
 ```
 {
@@ -502,9 +503,9 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## Classpath warnings appear or the application classes are not on the classpath
 If you work with Appsody projects in Codewind for VS Code, you might encounter `Classpath is incomplete` warnings or notifications that application classes are not on the classpath.
 
-**Workaround** Add the project's parent folder to the VS Code workspace. 
-1. After you create an Appsody Java MicroProfile project, right-click and `Add Project to Workspace` if it is not already added. 
-2. Right-click on the project from the workspace view and select **Add Folder to Workspace...** and choose the parent folder of the project. Click `Add`. 
+**Workaround** Add the project's parent folder to the VS Code workspace.
+1. After you create an Appsody Java MicroProfile project, right-click and `Add Project to Workspace` if it is not already added.
+2. Right-click on the project from the workspace view and select **Add Folder to Workspace...** and choose the parent folder of the project. Click `Add`.
 3. Choose the project folder and click **Add**.
 
 <!--
@@ -541,7 +542,7 @@ These steps create the issue:
 ```
 Codewind displays an error. In VS Code, the error appears in the Codewind log:
 ```
-2019/11/08 11:07:29 Please wait while the command runs... 
+2019/11/08 11:07:29 Please wait while the command runs...
 2019/11/08 11:07:31 [Error] Repository 77b94c9b-0daf-5426-98b8-83eb8ee63e3c is not in configured list of repositories
 ```
 
@@ -623,18 +624,18 @@ Che version: 7.2.0
 IDE extension version: 0.5.0
 IDE version: 7.1.0
 Kubernetes cluster: OKD/OpenShift
-Action/Topic: 
+Action/Topic:
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/733
 -->
 ## Plugin runtime crashes unexpectedly and all plugins are not working
 With the latest Eclipse Che Version 7.2, you might see the following error when your user session expires for the Eclipse Che workspace: `Plugin runtime crashed unexpectedly, all plugins are not working, please reload ...`
 
-These steps reproduce the issue: 
+These steps reproduce the issue:
 1. Install Eclipse Che on an OKD cluster.
 2. Create your Codewind workspace from this [devfile](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/master/devfiles/0.5.0/devfile.yaml).
 3. After your session expires, you see a `Crash` message in the Codewind workspace.
-**Workaround** Go to the `Che workspace` dashboard, log out of the Che workspace, and then log back in to the Che workspace. Access the Codewind workspace. 
+**Workaround** Go to the `Che workspace` dashboard, log out of the Che workspace, and then log back in to the Che workspace. Access the Codewind workspace.
 
 <!--
 Codewind version: 0.8.0
@@ -643,7 +644,7 @@ Che version: 7.5.1
 IDE extension version: 0.8.0
 IDE version: 7.5.1
 Kubernetes cluster: Red Hat OpenShift on IBM Cloud
-Action/Topic: 
+Action/Topic:
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/1806
 -->
@@ -677,22 +678,22 @@ Issue link: https://github.com/eclipse/codewind/issues/309
 -->
 ## Codewind cannot access the Tekton dashboard URL
 
-If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message: 
+If you install Codewind before you install Tekton, Codewind cannot access the Tekton dashboard URL. In the logs, you see the following error message:
 
 ```sh
-Tekton dashboard does not appear to be installed on this cluster. Please install Tekton dashboard on your cluster, and restart your Codewind Che workspace. 
+Tekton dashboard does not appear to be installed on this cluster. Please install Tekton dashboard on your cluster, and restart your Codewind Che workspace.
 ```
 
 These steps reproduce the issue:
 1. Install Codewind on OpenShift.
 2. Install Tekton Pipelines.
-3. Click **Open Tekton dashboard URL**. Codewind does not access the Tekton dashboard URL. 
+3. Click **Open Tekton dashboard URL**. Codewind does not access the Tekton dashboard URL.
 
-**Workaround:** 
-1. Go to the Eclipse Che workspace console.  
-2. Select your workspace and stop it. 
-3. After 2 minutes, start your workspace again. 
-4. Now, access the Tekton dashboard URL from the Codewind palette. 
+**Workaround:**
+1. Go to the Eclipse Che workspace console.
+2. Select your workspace and stop it.
+3. After 2 minutes, start your workspace again.
+4. Now, access the Tekton dashboard URL from the Codewind palette.
 
 ***
 # OpenAPI tools
@@ -705,7 +706,7 @@ Version: 2019-06 (4.12.0)
 Build ID: 20190614-1200
 -->
 ## OpenAPI generation fails in Eclipse if the output path does not exist
-In Eclipse, OpenAPI generation fails if a path does not exist, and the wizard doesn't automatically create the folder tree hierarchy if the hierarchy doesn't already exist. 
+In Eclipse, OpenAPI generation fails if a path does not exist, and the wizard doesn't automatically create the folder tree hierarchy if the hierarchy doesn't already exist.
 
 These steps reproduce the issue:
 1. Install the latest version of Codewind.
@@ -718,7 +719,7 @@ These steps reproduce the issue:
 **Workaround:**
 For the VS Code extension, manually create the output folder before you start the OpenAPI generator wizard. In the wizard, you can also create the **Output folder** in the browse dialog. Ensure that the path points to a valid folder in the project.
 
-For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging. 
+For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging.
 
 For Eclipse, for Java-based code generators, the Open API wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
 
@@ -735,14 +736,14 @@ When generating a Java client or server stub into an existing Appsody or Codewin
 Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
 ```
 
-The build is successful even though the validator reports this issue. 
+The build is successful even though the validator reports this issue.
 
 **Workaround:** To resolve this in Eclipse, surround the plugins element under the `build` element of the `pom.xml` file with the `pluginManagement` element.
 
 ```xml
 <build>
     <pluginManagement>
-        <plugins>   
+        <plugins>
         ...
 ```
 
@@ -757,7 +758,7 @@ The following workaround applies to Eclipse. Add the configuration element to th
                 <configuration>
                     <mainClass>org.openapitools.OpenAPI2SpringBoot</mainClass>
                 </configuration>
-                ....             
+                ....
 ```
 
 ***
@@ -773,3 +774,31 @@ Info added in 0.10.0.
 To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
 - In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
 - In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
+
+# Executable file not found on PATH in VS Code
+<!--
+Action/Topic: Executable file not found on PATH in VS Code
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1682
+Solution: https://github.com/eclipse/codewind/issues/1682#issuecomment-572649328
+Info added in 0.11.0.
+-->
+Codewind will not work if it cannot find the `docker` executable in the [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)). You will see an error message like the following:
+```
+exec: "docker": executable file not found in $PATH
+```
+First, make sure `docker` is installed and can be run from the command line. The terminal used does not have to be a terminal within VS Code. Try running:
+```
+$ docker --version
+Docker version 19.03.8, build afacb8b
+```
+and make sure the output is similar to above.
+
+If you can run `docker` from the command line, but Codewind still fails to find `docker`, it's possible that VS Code is using a different `PATH` than the terminal you used. To make sure they are using the same `PATH`, perform the following steps:
+
+1. Make sure you can run VS Code (the executable is `code`) from the command line.
+  - On Windows and Linux, it should be possible immediately after installation by running `code`.
+  - For macOS, there is an additional step: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line.
+2. Close all instances of VS Code.
+3. Open the terminal you were able to run `docker` from, and run `code`.
+4. The new VS Code instance should share the terminal's `PATH`. Try and start Codewind again.
