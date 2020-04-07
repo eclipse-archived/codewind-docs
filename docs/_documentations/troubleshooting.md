@@ -783,7 +783,7 @@ Issue link: https://github.com/eclipse/codewind/issues/1682
 Solution: https://github.com/eclipse/codewind/issues/1682#issuecomment-572649328
 Info added in 0.11.0.
 -->
-Codewind will not work if it cannot find the `docker` executable in any of the paths specified in the `PATH` environment variable. You will see an error message like the following:
+Codewind will not work if it cannot find the `docker` executable in any of the paths specified in the `PATH` environment variable. The error message is similar to the following:
 ```
 exec: "docker": executable file not found in $PATH
 ```
@@ -797,7 +797,7 @@ Make sure the output is similar to this example.
 If you can run `docker` from the command line, but Codewind still fails to find `docker`, it's possible that VS Code is using a different `PATH` than the terminal you used. To make sure the terminal and VS Code are using the same `PATH`, perform the following steps:
 
 1. Make sure you can run VS Code from the command line. The executable is `code`.
-  - On Windows and Linux, it should be possible immediately after installation by running `code`.
+  - On Windows and Linux, you can run VS Code from the command line immediately after installation by running `code`.
   - For macOS, follow the additional step, [Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
 2. Close all instances of VS Code.
 3. Open the terminal you ran `docker` from and run `code`.
