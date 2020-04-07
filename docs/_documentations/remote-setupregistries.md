@@ -13,9 +13,8 @@ type: document
 ## Determining if you need to set an image registry 
 You need to set credentials for an image registry if you:
 * Build a project with a dockerfile that pulls from a non-public image registry. 
-* Use Codewind remotely to set at least one image registry that Codewind can push built project images to. If you have multiple registries configured, you can select one of them to be the push registry. 
-
-When you add an image registry, Codewind logs you into the image registry on your local machine as if you had run `docker login` locally. By logging you into your local image registry, Codewind supports Appsody style projects. 
+* Use Codewind remotely. Set at least one image registry that Codewind can push built project images to. If you have multiple registries configured, you can select one of them to be the push registry. 
+* Add an image registry then Codewind logs you into the image registry on your local machine as if you had locally run `docker login`. 
 
 ## Adding an image registry in Codewind
 After your IDE is started and running, add the image registry to be used with Codewind.
