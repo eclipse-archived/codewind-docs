@@ -35,15 +35,6 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
-
-<!-->
-1. git clone codewind-operator
-2. install keycloak (install.sh keycloak)
-3. Add Jane to keycloak (copy section from codewind-operator readme. Not a link)
-4. install Codewind (install.sh codewind). No readme link
--->
-
-
 ## 1. Clone the Codewind operator repository
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
@@ -61,12 +52,13 @@ Use the `install.sh` script in the Codewind operator repository to install Keycl
 ## 3. Add a new user to Keycloak
 
 1\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
-    1. Click **Users**.
-    2. Click **Add user**.
-    3. Complete the **username** field.
-    4. Complete the **email**, **Firstname**, and **Lastname** fields as required.
-    5. Ensure **user enabled** is **On**.
-    6. Click **Save**.
+
+- Click **Users**.
+- Click **Add user**.
+- Complete the **username** field.
+- Complete the **email**, **Firstname**, and **Lastname** fields as required.
+- Ensure **user enabled** is **On**.
+- Click **Save**.
 
 2\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
 
