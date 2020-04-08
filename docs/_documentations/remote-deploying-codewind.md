@@ -43,11 +43,15 @@ Clone the Codewind operator repository, for example:
 
 `$ git clone https://github.com/eclipse/codewind-operator`
 
-## 2. Install Keycloak
+## 2. Install the operator into your cluster and deploy Keycloak
 
-Use the `install.sh` script in the Codewind operator repository to install Keycloak into your cluster: 
+Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
 
-`$ install.sh keycloak`
+`$ install.sh operator -i <ingress_domain>`
+
+Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, for example: 
+
+`$ install.sh operator -i -o <ingress_domain>`
 
 ## 3. Add a new user to Keycloak
 
@@ -72,7 +76,15 @@ _MG: Do we need the `Updating the Keycloak password in the operator secret` sect
 
 Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance:
 
-`$ install.sh codewind`
+`$ install.sh codewind -n <instanceName> -u <registeredUsername>`
+
+Where:
+- `instanceName` is the unique name you specify for this Codewind instance.
+- `registeredUsername` is the name of the user added in [Step 3](#3-add-a-new-user-to-keycloak).
+
+## 5. Removing a Codewind instance
+
+To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
 
 ## Next steps
 
