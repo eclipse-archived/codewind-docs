@@ -35,21 +35,52 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
-## 1. Install the Codewind operator in your cloud
+
+<!-->
+1. git clone codewind-operator
+2. install keycloak (install.sh keycloak)
+3. Add Jane to keycloak (copy section from codewind-operator readme. Not a link)
+4. install Codewind (install.sh codewind). No readme link
+-->
+
+
+## 1. Clone the Codewind operator repository
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
 
-To install the Codewind operator in your cloud, follow the instructions in the [codewind-operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
+Clone the Codewind operator repository, for example: 
 
-## 2. Deploy your Codewind instances
+`$ git clone https://github.com/eclipse/codewind-operator`
 
-After your system administrator has installed the operator, you can deploy your Codewind instances. 
+## 2. Install Keycloak
 
-To deploy a Codewind instance, see [Deploy a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#deploy-a-codewind-instance) in the codewind-operator readme.
+Use the `install.sh` script in the Codewind operator repository to install Keycloak into your cluster: 
 
-## 3. Removing a Codewind instance
+`$ install.sh keycloak`
 
-To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
+## 3. Add a new user to Keycloak
+
+1\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
+    1. Click **Users**.
+    2. Click **Add user**.
+    3. Complete the **username** field.
+    4. Complete the **email**, **Firstname**, and **Lastname** fields as required.
+    5. Ensure **user enabled** is **On**.
+    6. Click **Save**.
+
+2\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
+
+3\. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** makes this password valid for continuous use and not require changing on first connect.
+
+4\. Click **Set Password** to save changes. Log out of the Keycloak admin page.
+
+_MG: Do we need the `Updating the Keycloak password in the operator secret` section in here also?_
+
+## 4. Deploy a Codewind instance
+
+Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance:
+
+`$ install.sh codewind`
 
 ## Next steps
 
