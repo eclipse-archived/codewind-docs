@@ -206,7 +206,7 @@ Issue link: https://github.com/eclipse/codewind/issues/243
 ## Adding an existing Open Liberty project fails to build because of missing files
 An Open Liberty project fails to build after it is added into Codewind with the **Add Existing Project** action, and the project fails to build because of missing files.
 
-**Workaround:** Bind the existing project again but this time, don't accept the detected type. Click **No** for VSCode, **Next** for Eclipse, and then choose **Other (Codewind Basic Container)** for the project type.
+**Workaround:** Bind the existing project again but this time for the project type, do not accept the detected type, but instead select **Other (Codewind Basic Container)**.
 
 ***
 # Understanding Application Metrics
@@ -390,7 +390,7 @@ Issue link: Updated in https://github.com/eclipse/codewind/issues/2613
 ## Context Root / Application Endpoint not correct
 If you create or bind a project that has a context root set in `.cw-settings`, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.
 
-**Workaround** For a permanent fix for all IDEs, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround for Eclipse, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`. 
+**Workaround** For a permanent fix, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`. 
 
 ***
 # Disabling development on specific projects
