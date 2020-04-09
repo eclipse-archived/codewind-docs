@@ -24,14 +24,11 @@ Add a project from an existing Git repository:
 Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
 **Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
 
-Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see: 
-
-* [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/)
-* [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and [Helm chart documentation](https://helm.sh/docs/topics/charts/).
 
 ## What kind of projects can I add?
 
-Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. 
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. 
 
 To import your own project into Codewind, follow the requirements outlined in [Requirements for importing an existing project not created in Codewind or through Appsody or Odo](#Requirements-for-importing-an-existing-project-not-created-in-Codewind-or-through-Appsody-or-Odo).
 Make sure to select the **Other (Basic Container)** option as the project type.
