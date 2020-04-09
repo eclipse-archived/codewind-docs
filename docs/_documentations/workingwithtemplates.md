@@ -31,13 +31,13 @@ GitHub repository. Three examples are included in Codewind for your reference:
 Use the **Template Source Manager** to perform the following actions:
 
 1. To add a new template source to the table, click **Add New**. For more information, see [Adding your template sources to Codewind](#adding-your-template-sources-to-codewind).
-2. **VSCode:** To remove non-default template sources, click the trash icon. 
+2. **VS Code:** To remove non-default template sources, click the trash icon. 
    **Eclipse:** To remove non-default template sources, first make sure you are in the **Manage Template Sources** wizard. Select the non-default templates you want to remove. Then click the **Remove** button.
-3. **VSCode:** Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
+3. **VS Code:** Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard. 
    **Eclipse:** In the Manage Template Sources wizard, check the check boxes for the template sources you want to enable. Once done, click the OK button. You should see a notification in the bottom right saying **Updating Template Sources: (0%)**. Once that message disappears, it has successfully set your preferred template sources. 
    * Use template sources to add style projects to Codewind. 
    * For example, before adding an Appsody project, enable at least one Appsody-style template source. 
-4. **VSCode:** To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
+4. **VS Code:** To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
    **Eclipse:** In the Manage Template Sources, simply uncheck the template sources you want to disable, and then click OK.
 
 ## Creating your own templates
@@ -78,7 +78,7 @@ Add your own template sources to use in the **Template Source Manager**.
 
 Add your template sources to Codewind with the **Template Source Manager**.
 
-1. **In VSCode:** In the **Template Source Manager**, click **Add New**. 
-   **In Eclipse:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
-2. **In VSCode:** Enter the URL to your template source `index` file and click **Enter** to confirm.
-   **In Eclipse:** Fill in the fields for **URL**, **Name**, and **Description**. Click **OK** when you're done.
+1. **VS Code:** In the **Template Source Manager**, click **Add New**. 
+   **Eclipse:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
+2. **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
+   **Eclipse:** Fill in the fields for **URL**, **Name**, and **Description**. Click **OK** when you're done.
