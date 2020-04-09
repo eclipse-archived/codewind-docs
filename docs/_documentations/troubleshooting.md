@@ -119,8 +119,29 @@ When attempting to install Codewind in IntelliJ, you cannot locate the Codewind 
 
 This error occurs because the custom plug-in repository link contains an additional space.
 
-**Workaround**
+**Workaround:**
 Remove the extra space from the custom plug-in repository link.
+
+<!--
+Action/Topic: Installing Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2563
+0.11.0: New
+-->
+## Without a keychain or keyring, local Codewind crashes when certain commands are used
+Local Codewind needs to use a keychain, also called a keyring, when certain commands are used.
+
+**Workaround:**
+Use any keyring compatible with `go-keyring`, which is what Codewind uses internally. These compatible keychains are included with the following operating systems:
+- MacOS has Keychain.
+- Windows 10 has Credential Store.
+- Some Linux systems include the `gnome-keyring` package.
+
+If your Linux computer doesn't have the `gnome-keyring` package, you can install [GNOME/Keyring](https://wiki.archlinux.org/index.php/GNOME/Keyring).
+
+If you cannot install a keychain, enable insecure keychain mode. If you enable this mode, your credentials are stored in a JSON text file in the `.codewind` directory in your user home directory. The credentials are base64 encoded, and anyone who has access to that file can decode the credentials.
+
+In the IDEs, enable insecure keyring mode through the IDE preferences. If you use `cwctl` directly, you can use the `--insecure-keyring` command line argument or set `INSECURE_KEYRING=true` in the environment.
 
 ***
 # Upgrading Codewind
