@@ -53,9 +53,13 @@ Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, f
 
 `$ install.sh operator -i -o <ingress_domain>`
 
+The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**.
+
 ## 3. Add a new user to Keycloak
 
-1\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
+1\. Copy the **Access URL** returned in the previous step and paste it into a browser.  
+
+2\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
 
 - Click **Users**.
 - Click **Add user**.
@@ -64,42 +68,23 @@ Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, f
 - Ensure **user enabled** is **On**.
 - Click **Save**.
 
-2\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
+3\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
 
-3\. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** makes this password valid for continuous use and not require changing on first connect.
+4\. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** makes this password valid for continuous use and not require changing on first connect.
 
-4\. Click **Set Password** to save changes. Log out of the Keycloak admin page.
-
-5\. When the Codewind operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default during initial deployment, that secret has a user name and password of **admin**. If you changed your admin password in a previous step, you need to update the Keycloak secret to match.
-
-The secret is installed in the same namespace as the `codewind` operator and is named `secret-keycloak-user-<keycloakname>`.
-
-If you have an administration UI for your cluster, you can use it to locate the secret and edit the `keycloak-admin-password field`, or you can use the command line tools:
-
-`$ kubectl edit secret secret-keycloak-user-{keycloakname} -n codewind`
-
-or
-
-`$ oc edit secret secret-keycloak-user-{keycloakname} -n codewind`
-
-**Note:** Using the command line tools requires an extra step to base64 encode your password string before saving it into the secret. You can base64 encode your new password using this command:
-
-```
-$ echo -n 'myNewPassword' | base64
-bXlOZXdQYXNzd29yZA==
-```
-
-Then, save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than the clear text `myNewPassword`.
+5\. Click **Set Password** to save changes. Log out of the Keycloak admin page.
 
 ## 4. Deploy a Codewind instance
 
-Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance:
+Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance. Enter:
 
 `$ install.sh codewind -n <instanceName> -u <registeredUsername>`
 
 Where:
 - `instanceName` is the unique name you specify for this Codewind instance.
 - `registeredUsername` is the name of the user added in [Step 3](#3-add-a-new-user-to-keycloak).
+
+Your Codewind instance is deployed. Access it by copying and pasting the **Access URL** returned by the script into a browser. 
 
 ## 5. Removing a Codewind instance
 
