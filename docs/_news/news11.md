@@ -10,7 +10,7 @@ permalink: news11
 ## Codewind 0.11.0
 Thursday, 16 April 2020
 
-You might have noticed we skipped 0.10.0, but it's because we are committed to making the best tooling available to you. There were a few kinks in our last development cycle that just needed a little more TLC. 💕
+You might have noticed we skipped 0.10.0, but it's because we are committed to making the best tooling available to you. Our last development cycle just needed a little more love. 💕
 
 #### ✨ New Features and Highlights for 0.11.0 ✨
 **IntelliJ Tech Preview Updates**
