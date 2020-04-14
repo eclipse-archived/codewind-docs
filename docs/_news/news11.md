@@ -25,7 +25,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 ![](images/imagesfornews/newprojintellij.gif){:width="800"}
 
 **Codewind Website**
-- We are pleased to announce that our blogs now have a [home](blog.html) on our website! 🏡
+- We are pleased to announce that our blogs now have a [home](https://www.eclipse.org/codewind/blog.html) on our website! 🏡
 
 **IDEs**
 ##### All IDEs (VS Code and Eclipse Che)
