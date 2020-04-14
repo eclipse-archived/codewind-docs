@@ -22,6 +22,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - [Enable and disable projects](https://github.com/eclipse/codewind/issues/987).
 - [Simultaneously select and remove multiple projects](https://github.com/eclipse/codewind/issues/2225).
 - Create a new project with the [**New Project** menu action](https://github.com/eclipse/codewind-intellij/pull/64).
+
 ![](images/imagesfornews/newprojintellij.gif){:width="800"}
 
 **Codewind Website**
