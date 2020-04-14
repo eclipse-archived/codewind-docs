@@ -10,7 +10,7 @@ permalink: news11
 ## Codewind 0.11.0
 Thursday, 16 April 2020
 
-You might have noticed we skipped 0.10.0, but it's because we are committed to making the best tooling available to you. There were a few kinks in our last development cycle that just needed a little more TLC 💕.
+You might have noticed we skipped 0.10.0, but it's because we are committed to making the best tooling available to you. There were a few kinks in our last development cycle that just needed a little more TLC. 💕
 
 #### ✨ New Features and Highlights for 0.11.0 ✨
 **IntelliJ Tech Preview Updates**
@@ -23,22 +23,22 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - [Simultaneously select and remove multiple projects](https://github.com/eclipse/codewind/issues/2225).
 - Create a new project with the [**New Project** menu action](https://github.com/eclipse/codewind-intellij/pull/64).
 
-![](images/imagesfornews/newprojintellij.gif){:width="800"}
+![video of new feature, creating a new project with IntelliJ](images/imagesfornews/newprojintellij.gif){:width="800"}
 
 **Codewind Website**
 - We are pleased to announce that our blogs now have a [home](https://www.eclipse.org/codewind/blog.html) on our website! 🏡
 
 **IDEs**
-##### All IDEs (VS Code and Eclipse Che)
+##### VS Code and Eclipse Che
 - The Codewind extension downloads and activates significantly faster. [The extension size is reduced by 98% to 1.6 MB](https://github.com/eclipse/codewind/issues/1060). 
-- Users will only need to download the `cwctl` and `Appsody` binaries one time. They are fetched from the internet when the [extension is activated for the first time](https://github.com/eclipse/codewind-vscode/pull/506). 
+- You only need to download the `cwctl` and `Appsody` binaries one time. They are fetched from the internet when the [extension is activated for the first time](https://github.com/eclipse/codewind-vscode/pull/506). 
 - The [Codewind extension starts up faster](https://github.com/eclipse/codewind/issues/2280) now that [the extension is bundled through Webpack](https://github.com/eclipse/codewind-vscode/pull/536).
 
 ##### VS Code and Eclipse
-- Image registeries are managed on the local connection.
+- Image registries are managed on the local connection.
     - [Projects that pull from private image registries can be created locally](https://github.com/eclipse/codewind/issues/1306). 
-    - There is no push registry for the local connection because [images are managed by Docker for Desktop and never leave the user's machine](https://github.com/eclipse/codewind/issues/2588).
-- [`Appsody` projects will no longer show a build status](https://github.com/eclipse/codewind/issues/2052). 
+    - There is no push registry for the local connection because [images are managed by Docker Desktop and never leave the user's machine](https://github.com/eclipse/codewind/issues/2588).
+- [Appsody projects will no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
 - The [Performance Dashboard is always enabled](https://github.com/eclipse/codewind/issues/2299) even if the project does not have metrics available. 
     - Note that for [projects without metrics, running loads fail](https://github.com/eclipse/codewind/issues/2384).
 
@@ -57,10 +57,10 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - You can [select multiple entries in the table of template sources in the **Manage Template Sources** wizard](https://github.com/eclipse/codewind/issues/2353).
 
 #### List of Fixes
-- [The VS Code webview font is fixed and will load properly](https://github.com/eclipse/codewind-vscode/pull/507).
-- In VS Code, the [`create project` wizard remembers the last used directory](https://github.com/eclipse/codewind/issues/2413) from the previous project added or created. 
-- The [input boxes for Project Name and Registry namespace will grab keyboard focus in VS Code](https://github.com/eclipse/codewind/issues/2330).
-- In Eclipse, [if the **project create** or **add a project** function times out or is cancelled, the process will be cleaned up, and the project create timeout is also increased](https://github.com/eclipse/codewind/issues/2601).
-- The `Codewind Appsody extension` binary is updated from [0.5.8 to 0.5.9](https://github.com/eclipse/codewind-appsody-extension/pull/91) to [0.6.0](https://github.com/eclipse/codewind-appsody-extension/pull/89/). At 0.6.0, `Appsody` is able to do multiple volume binding. 
+- [The VS Code webview font is fixed and loads properly](https://github.com/eclipse/codewind-vscode/pull/507).
+- In VS Code, the [**Create Project** wizard remembers the last used directory](https://github.com/eclipse/codewind/issues/2413) from the previous project added or created. 
+- The [input boxes for Project Name and Registry namespace grab keyboard focus in VS Code](https://github.com/eclipse/codewind/issues/2330).
+- In Eclipse, [if the **project create** or **add a project** function times out or is cancelled, the process is cleaned up, and the project create timeout is also increased](https://github.com/eclipse/codewind/issues/2601).
+- The Codewind Appsody extension binary is updated from [0.5.8 to 0.5.9](https://github.com/eclipse/codewind-appsody-extension/pull/91) to [0.6.0](https://github.com/eclipse/codewind-appsody-extension/pull/89/). At 0.6.0, Appsody is able to do multiple volume binding. 
 - [General improvements](https://github.com/eclipse/codewind-docs/pull/462) were made to the [Codewind website](https://www.eclipse.org/codewind/).
 - [General improvements were made to the remote connections page](https://github.com/eclipse/codewind/issues/2279).
