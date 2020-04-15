@@ -59,6 +59,4 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 
 # Next Steps
 
-For how to remove an existing Codewind deployment, see [Remove a remote deployment of Codewind](./remote-removing.html)
-
 To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)

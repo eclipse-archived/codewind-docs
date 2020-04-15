@@ -16,7 +16,7 @@ You can now develop your code locally and securely build and deploy your apps in
 - Free up local resources. 👏
 - It's secure! 🔐 We use [Keycloak](https://keycloak.org/) to secure the connection between your local editor and remote cloud deployment.
 
-Curious? [Learn more](remote-overview.html)!
+Curious? [Learn more](remote-deploying-codewind.html)!
 
 #### New Features and Highlights for 0.7.0
 

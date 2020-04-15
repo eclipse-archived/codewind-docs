@@ -39,4 +39,4 @@ After a few moments, the status changes back to **Running**:
 
 ![image of the application as it appears in a web browser](images/vsc-screenchanged.png){: .imageborder}
 
-Next step: [Buiding and deploying in a cloud environment](remote-overview.html)
+Next step: [Buiding and deploying in a cloud environment](remote-deploying-codewind.html)
