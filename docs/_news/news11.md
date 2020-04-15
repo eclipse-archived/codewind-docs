@@ -38,7 +38,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - Image registries are managed on the local connection.
     - [Projects that pull from private image registries can be created locally](https://github.com/eclipse/codewind/issues/1306). 
     - There is no push registry for the local connection because [images are managed by Docker Desktop and never leave the user's machine](https://github.com/eclipse/codewind/issues/2588).
-- [Appsody projects will no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
+- [Appsody projects no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
 - The [Performance Dashboard is always enabled](https://github.com/eclipse/codewind/issues/2299) even if the project does not have metrics available. 
     - Note that for [projects without metrics, running loads fail](https://github.com/eclipse/codewind/issues/2384).
 
@@ -47,10 +47,10 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - [The **Add to Workspace** project command is reworked for multi-root workspaces](https://github.com/eclipse/codewind-vscode/pull/484). It no longer appears on projects that are already in the root workspace folder and gives an overrideable warning if run on a project that is in a subfolder of the workspace.
 - The homepage is updated so that [the **Create** and **Add** project creation steps are greyed out and unclickable until the actions are allowed](https://github.com/eclipse/codewind/issues/2255). On the **Local** tab, local Codewind must be started. On the **Remote** tab, a remote connection must exist.
 - The **Remote Connection** settings page layout is [improved and more responsive](https://github.com/eclipse/codewind-vscode/pull/476).
-- [Miscellaneous corrections were made to webview links and buttons](https://github.com/eclipse/codewind-vscode/pull/473).
+- [Corrections were made to webview links and buttons](https://github.com/eclipse/codewind-vscode/pull/473).
 
 ##### Eclipse
-- After installing Codewind for Eclipse and restarting the Eclipse IDE, the Eclipse welcome page shows the Codewind for Eclipse link at the top. Clicking this link closes the Eclipse welcome page and opens the Codewind Explorer view and shows the Codewind welcome page in the editor view. 
+- After you install Codewind for Eclipse and restart the Eclipse IDE, the Eclipse welcome page shows the Codewind for Eclipse link. Clicking this link closes the Eclipse welcome page and opens the Codewind Explorer view and shows the Codewind welcome page in the editor view. 
 - When you add an existing project to Codewind, [the project type is selected automatically if there is only one project available in the **Project Type Selection** page](https://github.com/eclipse/codewind-eclipse/issues/319).
 - You can **Restart in Debug Mode** for projects that support this feature, even if Codewind does not support attaching a debugger for that project type. The debug port is exposed so you can [set up your own debug session](https://github.com/eclipse/codewind/issues/1252).
 - You can [view the pod name and namspace for remote projects in the **Project Overview** page](https://github.com/eclipse/codewind/issues/1525).
