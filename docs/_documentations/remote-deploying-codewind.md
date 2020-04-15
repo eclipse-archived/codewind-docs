@@ -35,7 +35,7 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
-4. **Have a Git command line client installed, for example, Git Bash for Windows.**
+4. **Have a Git command line client installed.**
 
 ## 1. Clone the Codewind operator repository
 
