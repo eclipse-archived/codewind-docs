@@ -128,20 +128,21 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/2563
 0.11.0: New
 -->
-## Without a keychain or keyring, local Codewind crashes when certain commands are used
-Local Codewind needs to use a keychain, also called a keyring, when certain commands are used.
+## Without a keychain or keyring, Codewind fails to run certain commands
+Local and remote Codewind need to use a keychain, also called a keyring, when certain commands are used. The following error messages appear on Linux:
+- `dbus: invalid bus address (invalid or unsupported transport)`
+- `The name org.freedesktop.secrets was not provided by any .service files`
 
 **Workaround:**
-Use any keyring compatible with `go-keyring`, which is what Codewind uses internally. These compatible keychains are included with the following operating systems:
-- MacOS has Keychain.
-- Windows 10 has Credential Store.
-- Some Linux systems include the `gnome-keyring` package.
+**Including compatible keychains**
+Use any keyring compatible with `go-keyring`, which is what Codewind uses internally. These compatible keychains are included with MacOS and Windows 10, and some Linux systems include the `gnome-keyring` package.
 
 If your Linux computer doesn't have the `gnome-keyring` package, you can install [GNOME/Keyring](https://wiki.archlinux.org/index.php/GNOME/Keyring).
 
+**Enabling insecure keychain mode**
 If you cannot install a keychain, enable insecure keychain mode. If you enable this mode, your credentials are stored in a JSON text file in the `.codewind` directory in your user home directory. The credentials are base64 encoded, and anyone who has access to that file can decode the credentials.
 
-In the IDEs, enable insecure keyring mode through the IDE preferences. If you use `cwctl` directly, you can use the `--insecure-keyring` command line argument or set `INSECURE_KEYRING=true` in the environment.
+If you use `cwctl` directly, use the `--insecure-keyring` command line argument or set `INSECURE_KEYRING=true` in the environment. To get the IDE plug-ins to use the insecure keyring, set `INSECURE_KEYRING=true` in the environment before launching the IDE from that same environment.
 
 ***
 # Upgrading Codewind
