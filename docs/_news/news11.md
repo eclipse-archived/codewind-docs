@@ -17,6 +17,7 @@ You might have noticed we skipped 0.10.0, but it's because we are committed to m
 
 We've continued to work hard on getting the IntelliJ experience up and consistent with our other IDEs. Here are the latest IntelliJ updates:
 
+- [IntelliJ supports **Restart in Debug Mode**](https://github.com/eclipse/codewind/issues/990)
 - [View project log files in IntelliJ](https://github.com/eclipse/codewind/issues/989).
 - Open and [view the performance dashboard](https://github.com/eclipse/codewind/issues/2038) for select project types.
 - [Enable and disable projects](https://github.com/eclipse/codewind/issues/987).
