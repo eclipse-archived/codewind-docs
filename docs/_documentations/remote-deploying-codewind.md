@@ -35,19 +35,82 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
-## 1. Install the Codewind operator in your cloud
+4. **For Windows, use Git Bash to execute the `install.sh` script.**
+
+## 1. Clone the Codewind operator repository
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
 
-To install the Codewind operator in your cloud, follow the instructions in the [codewind-operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
+Clone the Codewind operator repository, for example: 
 
-## 2. Deploy your Codewind instances
+`$ git clone https://github.com/eclipse/codewind-operator`
 
-After your system administrator has installed the operator, you can deploy your Codewind instances. 
+For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 
-To deploy a Codewind instance, see [Deploy a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#deploy-a-codewind-instance) in the codewind-operator readme.
+## 2. Install the operator into your cluster and deploy Keycloak
 
-## 3. Removing a Codewind instance
+Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
+
+`$ install.sh operator -i <ingress_domain>`
+
+Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, for example: 
+
+`$ install.sh operator -i -o <ingress_domain>`
+
+The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**.
+
+**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URLs for Keycloak and Codewind, enter the following commands:
+
+`$ kubectl get keycloak -n codewind`
+
+The command returns the following example output:
+
+```
+NAME       NAMESPACE   AGE    ACCESS
+devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain>
+```
+
+`$ kubectl get codewind -n codewind`
+
+This command returns, for example:
+
+```
+NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
+devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
+```
+
+## 3. Add a new user to Keycloak
+
+1\. Copy the **Access URL** returned in the previous step and paste it into a browser.  
+
+2\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
+
+- Click **Users**.
+- Click **Add user**.
+- Complete the **username** field.
+- Complete the **email**, **Firstname**, and **Lastname** fields as required.
+- Ensure **user enabled** is **On**.
+- Click **Save**.
+
+3\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
+
+4\. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** makes this password valid for continuous use and not require changing on first connect.
+
+5\. Click **Set Password** to save changes. Log out of the Keycloak admin page.
+
+## 4. Deploy a Codewind instance
+
+Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance. Enter:
+
+`$ install.sh codewind -n <instanceName> -u <registeredUsername>`
+
+Where:
+- `instanceName` is the unique name you specify for this Codewind instance.
+- `registeredUsername` is the name of the user added in [Step 3](#3-add-a-new-user-to-keycloak).
+
+Your Codewind instance is deployed. Access it by copying and pasting the **Access URL** returned by the script into a browser. 
+
+## 5. Removing a Codewind instance
 
 To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
 
