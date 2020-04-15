@@ -35,7 +35,7 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
-4. **For Windows, use Git Bash to execute the `install.sh` script.**
+4. **Have a Git command line client installed, for example, Git Bash for Windows.**
 
 ## 1. Clone the Codewind operator repository
 
@@ -43,7 +43,7 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 Clone the Codewind operator repository, for example: 
 
-`$ git clone https://github.com/eclipse/codewind-operator`
+`$ git clone https://github.com/eclipse/codewind-operator -b 0.11.0`
 
 For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 
@@ -59,7 +59,7 @@ Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, f
 
 The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**.
 
-**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URLs for Keycloak and Codewind, enter the following commands:
+**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URL for Keycloak, enter the following command:
 
 `$ kubectl get keycloak -n codewind`
 
@@ -68,15 +68,6 @@ The command returns the following example output:
 ```
 NAME       NAMESPACE   AGE    ACCESS
 devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain>
-```
-
-`$ kubectl get codewind -n codewind`
-
-This command returns, for example:
-
-```
-NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
-devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
 ```
 
 ## 3. Add a new user to Keycloak
@@ -109,6 +100,17 @@ Where:
 - `registeredUsername` is the name of the user added in [Step 3](#3-add-a-new-user-to-keycloak).
 
 Your Codewind instance is deployed. Access it by copying and pasting the **Access URL** returned by the script into a browser. 
+
+**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URLs for Codewind, enter the following command:
+
+`$ kubectl get codewind -n codewind`
+
+This command returns, for example:
+
+```
+NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
+devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
+```
 
 ## 5. Removing a Codewind instance
 
