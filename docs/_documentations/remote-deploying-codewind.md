@@ -43,6 +43,8 @@ Clone the Codewind operator repository, for example:
 
 `$ git clone https://github.com/eclipse/codewind-operator`
 
+For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
+
 ## 2. Install the operator into your cluster and deploy Keycloak
 
 Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
