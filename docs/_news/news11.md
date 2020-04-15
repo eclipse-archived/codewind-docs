@@ -29,6 +29,9 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - We are pleased to announce that our blogs now have a [home](https://www.eclipse.org/codewind/blog.html) on our website! 🏡
 
 **IDEs**
+##### VS Code, Eclipse, and IntelliJ
+- [Appsody projects no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
+
 ##### VS Code and Eclipse Che
 - The Codewind extension downloads and activates significantly faster. [The extension size is reduced by 98% to 1.6 MB](https://github.com/eclipse/codewind/issues/1060). 
 - You only need to download the `cwctl` and `Appsody` binaries one time. They are fetched from the internet when the [extension is activated for the first time](https://github.com/eclipse/codewind-vscode/pull/506). 
@@ -38,7 +41,6 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - Image registries are managed on the local connection.
     - [Projects that pull from private image registries can be created locally](https://github.com/eclipse/codewind/issues/1306). 
     - There is no push registry for the local connection because [images are managed by Docker Desktop and never leave the user's machine](https://github.com/eclipse/codewind/issues/2588).
-- [Appsody projects no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
 - The [Performance Dashboard is always enabled](https://github.com/eclipse/codewind/issues/2299) even if the project does not have metrics available. 
     - Note that for [projects without metrics, running loads fail](https://github.com/eclipse/codewind/issues/2384).
 
@@ -55,6 +57,9 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - You can **Restart in Debug Mode** for projects that support this feature, even if Codewind does not support attaching a debugger for that project type. The debug port is exposed so you can [set up your own debug session](https://github.com/eclipse/codewind/issues/1252).
 - You can [view the pod name and namspace for remote projects in the **Project Overview** page](https://github.com/eclipse/codewind/issues/1525).
 - You can [select multiple entries in the table of template sources in the **Manage Template Sources** wizard](https://github.com/eclipse/codewind/issues/2353).
+
+##### IntelliJ
+[The status representation indicator next to the project in the Codewind Explorer view is improved](https://github.com/eclipse/codewind/issues/159).
 
 #### List of Fixes
 - [The VS Code webview font is fixed and loads properly](https://github.com/eclipse/codewind-vscode/pull/507).
