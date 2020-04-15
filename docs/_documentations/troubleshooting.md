@@ -135,7 +135,7 @@ Local and remote Codewind need to use a keychain, also called a keyring, when ce
 
 **Workaround:**
 **Including compatible keychains**
-Use any keyring compatible with `go-keyring`, which is what Codewind uses internally. These compatible keychains are included with MacOS and Windows 10, and some Linux systems include the `gnome-keyring` package.
+Use any keyring compatible with `go-keyring`, which is what Codewind uses internally. These compatible keychains are included with macOS and Windows 10, and some Linux systems include the `gnome-keyring` package.
 
 If your Linux computer doesn't have the `gnome-keyring` package, you can install [GNOME/Keyring](https://wiki.archlinux.org/index.php/GNOME/Keyring).
 
