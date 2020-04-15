@@ -14,7 +14,7 @@ parent: managingprojects
 
 ## Project list
 
-After you create or import a project into Microclimate, you can view, administer, and modify it. In your Microclimate workspace, click the **Projects** tab to view the list of all of your projects and their statuses.
+After you create or import a project into Codewind, you can view, administer, and modify it. In your Codewind workspace, click the **Projects** tab to view the list of all of your projects and their statuses.
 
 To view details about a project, click the project name. You can also click the shortcut menu alongside a project name for the same options. To delete a project, click the `Delete project` option on the shortcut menu.
 
@@ -44,9 +44,9 @@ From this menu, you have seven options:
 
 1. **Overview** Provides you with project information including language, location of you project, status, and whether the project is set to automatically build on modification.
 
-2. **Edit code** After creating your project, Microclimate has already built your project and started it. Use the Theia editor to modify your code, and to redeploy it.
+2. **Edit code** After creating your project, Codewind has already built your project and started it. Use the Theia editor to modify your code, and to redeploy it.
 
-3. **Build logs** Click this tab to view the Microclimate project build logs.
+3. **Build logs** Click this tab to view the Codewind project build logs.
   - On the **Build logs** page, the **Log File** drop-down menu lists individual build logs. If a log file changed, an **Updated** icon appears next to the **Log File** menu. An asterisk appears next to the name of each changed log file in the list.
   - After you select any of the changed log files, the asterisk disappears from the log file entry in the menu. After you select all of the changed log files, the icon disappears from the **Log File** menu.
 

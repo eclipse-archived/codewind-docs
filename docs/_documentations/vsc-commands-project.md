@@ -110,14 +110,14 @@ The list of supported project settings are:
 `mavenProfiles: <string[]>`
 - Only applicable to Microprofile and Spring projects
 - A list of profiles can be set if a project requires additional Maven profiles to be used when Codewind issues Maven commands
-- It is not advised to overwrite or remove the microclimate profile
+- It is not advised to overwrite or remove the profile
 - Maven profiles can be used in conjunction with Maven properties
 
 #### **Maven properties**
 `mavenProperties: <string[]>`
 - Only for Microprofile and Spring projects
 - Maven properties can be entered in the form `key=value`
-- It is not advised to overwrite the microclimate property
+- It is not advised to overwrite the property
 - Maven properties can be used in conjunction with Maven profiles
 
 #### Project status ping timeout
