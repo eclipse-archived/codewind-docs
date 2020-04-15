@@ -60,7 +60,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - You can [select multiple entries in the table of template sources in the **Manage Template Sources** wizard](https://github.com/eclipse/codewind/issues/2353).
 
 ##### IntelliJ
-[The status representation indicator next to the project in the Codewind Explorer view is improved](https://github.com/eclipse/codewind/issues/159).
+[The status representation indicator in the Codewind Explorer view is improved](https://github.com/eclipse/codewind/issues/159).
 
 #### List of Fixes
 - [The VS Code webview font is fixed and loads properly](https://github.com/eclipse/codewind-vscode/pull/507).
