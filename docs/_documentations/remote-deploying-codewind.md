@@ -35,6 +35,8 @@ Before deploying Codewind to the cloud, you must:
 
 3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
+4. **For Windows, use Git Bash to execute the `install.sh` script.**
+
 ## 1. Clone the Codewind operator repository
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
@@ -56,6 +58,26 @@ Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, f
 `$ install.sh operator -i -o <ingress_domain>`
 
 The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**.
+
+**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URLs for Keycloak and Codewind, enter the following commands:
+
+`$ kubectl get keycloak -n codewind`
+
+The command returns the following example output:
+
+```
+NAME       NAMESPACE   AGE    ACCESS
+devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain>
+```
+
+`$ kubectl get codewind -n codewind`
+
+This command returns, for example:
+
+```
+NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
+devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
+```
 
 ## 3. Add a new user to Keycloak
 
