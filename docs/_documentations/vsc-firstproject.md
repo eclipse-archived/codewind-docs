@@ -12,7 +12,7 @@ order: 2
 <br/>
 To create your first project:
 
-1\. Click on the prompt in the **Codewind** window.
+1\. Click the prompt in the **Codewind** window.
 
 ![image of VS Code without any local Codewind projects](images/createproject.png)
 

@@ -17,20 +17,20 @@ To see this feature in action, make a change to the getting started example.
 
 1\. Edit the `index.html` file.
 
-![](images/eclipsechangeproject1.png){:width="800px"}
+![image of the index.html file as it appears in Eclipse](images/eclipsechangeproject1.png){:width="800px"}
 
 2\. In the file, find the `Congratulations!` line.
 
-![](images/eclipsechangeproject2.png)
+![image of the congratulations line in the file](images/eclipsechangeproject2.png)
 
 3\. Change the heading from `Congratulations` to `I did this` and save the file.
 
-![](images/eclipsechangeproject3.png)
+![image of the text change](images/eclipsechangeproject3.png)
 
 4\. Click the **Open Application**
-![](images/eclipseopenprojecticon.png)
+![image of the Open Application icon](images/eclipseopenprojecticon.png)
 icon to show your code change running.
 
-![](images/eclipsechangeproject4.png){:width="800px"}
+![image of the application with the code change](images/eclipsechangeproject4.png){:width="800px"}
 
 Next step: [Buiding and deploying in a cloud environment](remote-deploying-codewind.html)
