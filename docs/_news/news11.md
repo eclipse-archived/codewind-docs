@@ -39,7 +39,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - The [Codewind extension starts up faster](https://github.com/eclipse/codewind/issues/2280) now that [the extension is bundled through Webpack](https://github.com/eclipse/codewind-vscode/pull/536).
 
 ##### VS Code and Eclipse
-- Image registries are managed on the local connection.
+- Image registries can be managed on the local connection.
     - [Projects that pull from private image registries can be created locally](https://github.com/eclipse/codewind/issues/1306). 
     - There is no push registry for the local connection because [images are managed by Docker Desktop and never leave the user's machine](https://github.com/eclipse/codewind/issues/2588).
 - The [Performance Dashboard is always enabled](https://github.com/eclipse/codewind/issues/2299) even if the project does not have metrics available. 
