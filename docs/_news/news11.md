@@ -31,7 +31,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 
 **IDEs**
 ##### VS Code, Eclipse, and IntelliJ
-- [Appsody projects no longer show build status](https://github.com/eclipse/codewind/issues/2052). 
+- [Appsody projects no longer show build status since these projects do not have a build phase](https://github.com/eclipse/codewind/issues/2052). 
 
 ##### VS Code and Eclipse Che
 - The Codewind extension downloads and activates significantly faster. [The extension size is reduced by 98% to 1.6 MB](https://github.com/eclipse/codewind/issues/1060). 
@@ -63,7 +63,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - [The VS Code webview font is fixed and loads properly](https://github.com/eclipse/codewind-vscode/pull/507).
 - In VS Code, the [**Create Project** wizard remembers the last used directory](https://github.com/eclipse/codewind/issues/2413) from the previous project added or created. 
 - The [input boxes for Project Name and Registry namespace grab keyboard focus in VS Code](https://github.com/eclipse/codewind/issues/2330).
-- In Eclipse, [if the **project create** or **add a project** function times out or is cancelled, the process is cleaned up, and the project create timeout is also increased](https://github.com/eclipse/codewind/issues/2601).
+- In Eclipse, [if the **project create** or **add project** function times out or is cancelled, any project files created so far are cleaned up. The project create timeout is also increased](https://github.com/eclipse/codewind/issues/2601).
 - The Codewind Appsody extension binary is updated from [0.5.8 to 0.5.9](https://github.com/eclipse/codewind-appsody-extension/pull/91) to [0.6.0](https://github.com/eclipse/codewind-appsody-extension/pull/89/). At 0.6.0, Appsody is able to do multiple volume binding. 
 - [General improvements](https://github.com/eclipse/codewind-docs/pull/462) were made to the [Codewind website](https://www.eclipse.org/codewind/).
 - [General improvements were made to the remote connections page](https://github.com/eclipse/codewind/issues/2279).
