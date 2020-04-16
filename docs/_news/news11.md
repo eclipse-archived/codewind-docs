@@ -8,7 +8,7 @@ permalink: news11
 ---
 
 ## Codewind 0.11.0
-Thursday, 16 April 2020
+Friday, 17 April 2020
 
 You might have noticed we skipped 0.10.0, but it's because we are committed to making the best tooling available to you. Our last development cycle just needed a little more love. 💕
 
