@@ -17,7 +17,7 @@ You might have noticed we skipped 0.10.0, but it's because we are committed to m
 
 We've continued to work hard on getting the IntelliJ experience up and consistent with our other IDEs. Here are the latest IntelliJ updates:
 
-- [IntelliJ supports **Restart in Debug Mode**](https://github.com/eclipse/codewind/issues/990)
+- [IntelliJ supports debugging projects](https://github.com/eclipse/codewind/issues/990).
 - [View project log files in IntelliJ](https://github.com/eclipse/codewind/issues/989).
 - Open and [view the performance dashboard](https://github.com/eclipse/codewind/issues/2038) for select project types.
 - [Enable and disable projects](https://github.com/eclipse/codewind/issues/987).
@@ -35,7 +35,7 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 
 ##### VS Code and Eclipse Che
 - The Codewind extension downloads and activates significantly faster. [The extension size is reduced by 98% to 1.6 MB](https://github.com/eclipse/codewind/issues/1060). 
-- You only need to download the `cwctl` and `Appsody` binaries one time. They are fetched from the internet when the [extension is activated for the first time](https://github.com/eclipse/codewind-vscode/pull/506). 
+- The cwctl and appsody binaries are automatically downloaded from the internet when the [extension is activated for the first time](https://github.com/eclipse/codewind-vscode/pull/506). 
 - The [Codewind extension starts up faster](https://github.com/eclipse/codewind/issues/2280) now that [the extension is bundled through Webpack](https://github.com/eclipse/codewind-vscode/pull/536).
 
 ##### VS Code and Eclipse
@@ -58,9 +58,6 @@ We've continued to work hard on getting the IntelliJ experience up and consisten
 - You can **Restart in Debug Mode** for projects that support this feature, even if Codewind does not support attaching a debugger for that project type. The debug port is exposed so you can [set up your own debug session](https://github.com/eclipse/codewind/issues/1252).
 - You can [view the pod name and namspace for remote projects in the **Project Overview** page](https://github.com/eclipse/codewind/issues/1525).
 - You can [select multiple entries in the table of template sources in the **Manage Template Sources** wizard](https://github.com/eclipse/codewind/issues/2353).
-
-##### IntelliJ
-[The status representation indicator in the Codewind Explorer view is improved](https://github.com/eclipse/codewind/issues/159).
 
 #### List of Fixes
 - [The VS Code webview font is fixed and loads properly](https://github.com/eclipse/codewind-vscode/pull/507).
