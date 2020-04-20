@@ -6,14 +6,14 @@ author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
 blog_description: "An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using Eclipse Codewind. Note: I covered the pain points and manual..."
-permalink: a-new-microservice-to-provide-node-js-sub-dependency-license-insights
+permalink: a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html
 duration: 3 minutes
 tags: [Nodejs, Licensing, Cloud Computing, Development]
 ---
 
 An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using [Eclipse Codewind](http://ibm.biz/eclipse-cw01).
 
-*Note: I covered the pain points and manual remedies associated with Node.js sub-dependency identification and licensing in a [previous blog](/codewind/checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution). You may also be interested in a lower level technical autopsy of this containerized microservice in this [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application).*
+*Note: I covered the pain points and manual remedies associated with Node.js sub-dependency identification and licensing in a [previous blog](/codewind/checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution.html). You may also be interested in a lower level technical autopsy of this containerized microservice in this [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application.html).*
 
 ### What does the microservice do?
 Once the user has submitted the Node.js package name and version to check, as well as the NPM install type (clean or not), the microservice downloads the entire package dependency tree needed for production use.
@@ -40,7 +40,7 @@ There were many benefits using a microservice to solve this problem, including:
 - Easy to deploy to any Cloud. I used an instance of OpenShift running internally within IBM (so currently only IBM employees can access this microservice).
 
 ### How was the microservice implemented?
-If you’re interested in a lower level technical autopsy of this containerized microservice then my [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application) may be for you, but to keep things simple here’s a quick overview.
+If you’re interested in a lower level technical autopsy of this containerized microservice then my [next blog](/codewind/a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application.html) may be for you, but to keep things simple here’s a quick overview.
 
 Eclipse Codewind was used to instantly create and run an empty Express Node.js containerised microservice in one simple step.
 

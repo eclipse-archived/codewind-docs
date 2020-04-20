@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_andy_watson.jpeg
 author_url: 
 author: Andy Watson
 blog_description: "Eclipse Codewind is an open source project that makes it easier for developers to create cloud-native applications within their favorite IDE. Codewind initially supports Visual Studio Code, Eclipse..."
-permalink: introduction-to-eclipse-codewind-build-high-quality-cloud-native-applications-faster
+permalink: introduction-to-eclipse-codewind-build-high-quality-cloud-native-applications-faster.html
 duration: 2 minutes
 tags: [Microservices, Containers, Nodejs, Java, Cloud]
 ---
