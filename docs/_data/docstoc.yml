@@ -36,7 +36,7 @@
 - title: 'Using Codewind as a hosted application on the cloud'
   children:
     - title: 'Overview'
-      url: eclipseChe-codewind-overview.html
+      url: eclipseche-codewind-overview.html
     - title: 'Eclipse Che'
       children:
       - title: 'Installing Eclipse Che for Codewind'
