@@ -6,14 +6,14 @@ author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
 blog_description: "This blog focuses on the code to implement a cloud-native serverless Node.js microservice developed using Eclispe Codewind."
-permalink: a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application
+permalink: a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application.html
 duration: 5 minutes
 tags: [Nodejs, Cloud Computing, Microservices, Software Development, Licensing]
 
 ---
 This blog focuses on the code to implement a cloud-native serverless Node.js microservice developed using Eclispe Codewind.
 
-Note: To see a quick overview and demonstration of the running microservice from an end users point of view, you may like this [previous blog](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights).
+Note: To see a quick overview and demonstration of the running microservice from an end users point of view, you may like this [previous blog](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html).
 
 An overview of flow and microservice files:
 
@@ -60,7 +60,7 @@ A more in-depth look at the key files in the microservice:
 14. Else a ‘green’ bill of health informs the user that they may use their package without further action.
 15. Then in a collapsable format, first all the ‘red’ packages are displayed (with a drill to salient comments), then the ‘amber’ ones and finally the ‘green’ ones at the bottom.
 
-To get a new containerized microservice up and running immediately without any Kubernetes or Docker skills at all, I used Eclispe Codewind. See this [introduction](/codewind/introduction-to-eclipse-codewind-build-high-quality-cloud-native-applications-faster) to follow in my footsteps.
+To get a new containerized microservice up and running immediately without any Kubernetes or Docker skills at all, I used Eclispe Codewind. See this [introduction](/codewind/introduction-to-eclipse-codewind-build-high-quality-cloud-native-applications-faster.html) to follow in my footsteps.
 
 **All projects created using the Eclipse Codewind Express Node.js project template that I used, contain the following key files:**
 
@@ -98,4 +98,4 @@ Using the Eclipse Codewind develop tools instantly created a fully formed and st
 {: style="text-align: center;"}
 
 The application was completed by adding the code in files described above.
-To see the final microservice in action, you may like to visit this previous blog: [“A new microservice to provide ‘Node.js sub-dependency license insights’”](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights)
+To see the final microservice in action, you may like to visit this previous blog: [“A new microservice to provide ‘Node.js sub-dependency license insights’”](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html)

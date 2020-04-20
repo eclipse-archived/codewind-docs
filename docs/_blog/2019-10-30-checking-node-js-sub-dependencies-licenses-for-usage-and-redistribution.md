@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
 blog_description: "Reusing Node.js modules from NPM is technically easy, but understanding the commercial legal usage and redistribution implications can be a ‘black art’."
-permalink: checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution
+permalink: checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution.html
 duration: 5 minutes
 tags: [JavaScript, Nodejs, Licensing, Project Management, Software Development]
 ---
@@ -19,7 +19,7 @@ Reusing Node.js modules from NPM is technically easy, but understanding the comm
 
 Working as a software project manager for the last 2 years on an offering which uses 1000s of open source packages and releases every four weeks, I’ve spent considerable time discovering, understanding and manually working through several pain points regarding open source (OS) sub-dependency identification and licensing challenges.
 
-*Note: In my case I needed automation to keep up with both my project’s consumption of new OS packages, as well as the OS community’s appetite to continuously update their packages. A new microservice was developed for use by my team, which I’ve shared in a separate blog here: “[A new microservice to provide Node.js sub-dependency license insights](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights).”*
+*Note: In my case I needed automation to keep up with both my project’s consumption of new OS packages, as well as the OS community’s appetite to continuously update their packages. A new microservice was developed for use by my team, which I’ve shared in a separate blog here: “[A new microservice to provide Node.js sub-dependency license insights](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html).”*
 
 ![image of license chcker](images/blog/npmdependencies_2.png){:width="800px"}
 *Enter a package name and version to check (left window) and license results (right window)*
@@ -63,7 +63,7 @@ As the use of open source continues to balloon with the exponential growth of su
 
 ![image of Codewind](images/blog/npmdependencies_3.png){:width="800px"}
 
-Using the Eclipse Codewind developer tools, the automation in this case was implemented as a microservice to enable the widest possible reuse within my company, either as-is or as part of other parties’ automation workflows. Find out more in this related blog: “[A new microservice to provide Node.js sub-dependency license insights.](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights)”
+Using the Eclipse Codewind developer tools, the automation in this case was implemented as a microservice to enable the widest possible reuse within my company, either as-is or as part of other parties’ automation workflows. Find out more in this related blog: “[A new microservice to provide Node.js sub-dependency license insights.](/codewind/a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html)”
 
 Node.js is not the only language with challenging sub-dependency package identification and licensing risks, so similar work drilling into other languages is in progress.
 

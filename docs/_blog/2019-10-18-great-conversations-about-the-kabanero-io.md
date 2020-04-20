@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
 blog_description: "Developers and CTOs alike, shared both enthusiasm and validation for the microservice develop-deploy stories in Kabanero.io at IBM’s ThinkLondon summit yesterday..."
-permalink: great-conversations-about-the-kabanero-io
+permalink: great-conversations-about-the-kabanero-io.html
 duration: 2 minutes
 tags: [Microservices, Cloud, Java, Nodejs]
 ---
