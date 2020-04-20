@@ -7,7 +7,7 @@ duration: 5 minutes
 permalink: local-codewind-overview
 type: document
 ---
-
+ 
 # Overview: Using Codewind locally
 
 Codewind can be used in one of three ways - locally, [hosted](./eclipseche-codewind-overview.html) as an application on a cloud, or [remotely](./remote-codewind-overview.html). 
