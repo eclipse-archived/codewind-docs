@@ -14,8 +14,6 @@ Codewind can be used in one of three ways - [locally](./local-codewind-overview.
 
 By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind via a browser window from your local desktop.
 
-
-
 # What you will learn
 
 You will learn how to:
@@ -25,9 +23,6 @@ You will learn how to:
 3. Create a Codewind workspace in Eclipse Che
 4. Create your first Codewind project 
 
-
-
 ### Next Steps
 
 [Install Eclipse Che to use with Codewind](./che-installinfo.html), or [prepare to use Codewind with an existing Eclipse Che installation](./che-installinfo.html). 
-
