@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_becca_bau.jpeg
 author_url: 
 author: Becca Bau
 blog_description: "In our Codewind 0.7.0 release, we’re very excited to share with you a preview of our latest feature: a remote development scenario with Codewind! We can hear you asking, “Why should I even care?”..."
-permalink: sneak-peek-remote-development-with-codewind
+permalink: sneak-peek-remote-development-with-codewind.html
 duration: 2 minutes
 tags: [Docker, Kubernetes, Eclipse, Codewind, Remote Development]
 ---

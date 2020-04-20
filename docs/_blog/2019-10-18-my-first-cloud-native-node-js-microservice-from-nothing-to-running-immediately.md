@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
 blog_description: "Having read about the virtues of 12-factor Apps, I knew I wanted to develop a new microservice — something that would handle one task really well and be easy to deploy to any cloud, but did not have..."
-permalink: my-first-cloud-native-node-js-microservice-from-nothing-to-running-immediately
+permalink: my-first-cloud-native-node-js-microservice-from-nothing-to-running-immediately.html
 duration: 5 minutes
 tags: [Docker, Nodejs, Containers, Microservices, Development]
 ---
