@@ -20,7 +20,7 @@ Learn how to use the Metrics Dashboard to monitor Java, Node.js, and Swift proje
 
 ## Prerequisites
 
-* VS Code, Eclipse, or Eclipse Che
+* Eclipse, Eclipse Che, IntelliJ, or VS Code
 * A Codewind installation
 
 ## Metrics Dashboard types
