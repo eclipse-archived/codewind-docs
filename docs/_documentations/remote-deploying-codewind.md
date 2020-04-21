@@ -72,10 +72,16 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 
 ## 3. Add a new user to Keycloak
 
-1\. Copy the **Access URL** returned in the previous step and paste it into a browser.  
+1. Copy the **Access URL** and paste it into a browser.
 
-2\. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary, then:
+2. Click **Administration Console** and log in to Keycloak with `admin` as the default login user name and `admin` as the default password.
 
+3. Change the administrator password and return to the **Administration Console**.
+- Click the **Admin** link and choose **Manage Account/Password**.
+- Set a new administrator password.
+- To return to the admin console, use the **Admin** link or log out and log back in to Keycloak as the admin user with your new admin password.
+
+4. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary and complete these steps:
 - Click **Users**.
 - Click **Add user**.
 - Complete the **username** field.
@@ -83,11 +89,11 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 - Ensure **user enabled** is **On**.
 - Click **Save**.
 
-3\. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
+5. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
 
-4\. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** makes this password valid for continuous use and not require changing on first connect.
+6. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** to make this password valid for continuous use and to prevent the need to change it on first connection.
 
-5\. Click **Set Password** to save changes. Log out of the Keycloak admin page.
+7. Click **Set Password** to save the changes. Log out of the Keycloak admin page.
 
 ## 4. Deploy a Codewind instance
 
