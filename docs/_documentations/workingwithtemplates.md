@@ -51,17 +51,16 @@ Add your own template sources to use in the **Template Source Manager**.
    - Codewind uses [`codewind-templates/devfiles`](https://github.com/codewind-resources/codewind-templates/tree/master/devfiles).
 2. Within this repository, create a folder for each template source.
    - For example, within the `devfiles` folder, Codewind has subfolders for template sources that include Go, MicroProfile, Lagom Java, and more.
-3. Each template source folder needs a `devfile.yaml` file with the following information:
-  ```
-  apiVersion: <The version of the API that you use>
-  metadata:
-  name: <The name of your template>
-  projects:
-    - name: <The name of your project>
-      source:
-        type: git
-        location: "<The GitHub URL of the template location>"
-  ```
+3. Each template source folder needs a `devfile.yaml` file with the following information:<br />
+  `apiVersion: <The version of the API that you use>`<br />
+  `metadata:`<br />
+  `name: <The name of your template>`<br />
+  `projects:`<br />
+    `- name: <The name of your project>`<br />
+      `source:`<br />
+        `type: git`<br />
+        `location: "<The GitHub URL of the template location>"`<br />
+
 4. In the same GitHub repository where you saved the template source folders, create an `index.json` file. In this file, add the following values for each of the templates that you want to work with in Codewind:
   ```
   {
