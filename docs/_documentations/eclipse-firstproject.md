@@ -14,32 +14,32 @@ To create your first project:
 
 1\. Right-click the **Local [Running]** item and select **Create New Project...**.
 
-![](images/eclipsecreateproject1.png){:width="800px"}
+![image of the menu where you select Create New Project](images/eclipsecreateproject1.png){:width="800px"}
 
 2\. Creating a new project displays the project creation screen.
 
-![](images/eclipsecreateproject2.png){:width="800px"}
+![image of the project creation screen](images/eclipsecreateproject2.png){:width="800px"}
 
 3\. Enter a name for the project and change the location if you want. Scroll through the list of templates until you see **Node.js Express**. For more information about templates, see [Working with templates](workingwithtemplates.html).
 
-![](images/eclipsecreateproject3.png){:width="800px"}
+![image of the list of templates](images/eclipsecreateproject3.png){:width="800px"}
 
 4\. Select this template and click **Finish**. You now see the project overview screen.
 
-![](images/eclipsecreateproject4.png){:width="800px"}
+![image of the project overview screen](images/eclipsecreateproject4.png){:width="800px"}
 
 5\. Codewind now starts to build and run your very first project. This process initially takes several minutes, depending on the speed of your network and the selected project.
 
 Once complete, the following screen shows your application is built and running. 
 
-![](images/eclipsecreateproject5.png){:width="800px"}
+![image of the screen that shows the application is built and running](images/eclipsecreateproject5.png){:width="800px"}
 
 6\. To view your running application, select it in the Codewind Explorer view and click the **Open Application** icon.
-![](images/eclipseopenprojecticon.png)
+![image of the Open Application icon](images/eclipseopenprojecticon.png)
 
 This icon launches your web browser and displays your application.
 
-![](images/eclipsefirstprojectrunning.png){:width="800px"}
+![image of the application in the web browser](images/eclipsefirstprojectrunning.png){:width="800px"}
 
 Congratulations, you have created your first application on Codewind.
 
