@@ -3,7 +3,11 @@
 
 - title: 'Getting started'
   url: gettingstarted.html
+
+- title: 'Using Codewind Locally'
   children:
+    - title: 'Overview'
+      url: local-codewind-overview.html
     - title: 'VS Code'
       children:
       - title: 'Installing Codewind for VS Code'
@@ -20,6 +24,19 @@
         url: eclipse-firstproject.html
       - title: 'Making a code change with Eclipse'
         url: eclipse-codechange.html
+    - title: 'IntelliJ'
+      children:
+      - title: 'Installing Codewind for IntelliJ'
+        url: intellij-getting-started.html
+      - title: 'Creating your first IntelliJ Codewind project'
+        url: intellij-firstproject.html
+      - title: 'Making a code change with IntelliJ'
+        url: intellij-codechange.html
+
+- title: 'Using Codewind as a hosted application on the cloud'
+  children:
+    - title: 'Overview'
+      url: eclipseche-codewind-overview.html
     - title: 'Eclipse Che'
       children:
       - title: 'Installing Eclipse Che for Codewind'
@@ -38,14 +55,6 @@
         url: openshiftregistry.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: che-uninstall.html
-    - title: 'IntelliJ'
-      children:
-      - title: 'Installing Codewind for IntelliJ'
-        url: intellij-getting-started.html
-      - title: 'Creating your first IntelliJ Codewind project'
-        url: intellij-firstproject.html
-      - title: 'Making a code change with IntelliJ'
-        url: intellij-codechange.html
 
 - title: 'Deploying Codewind remotely'
   url: remote-deploying-codewind.html
