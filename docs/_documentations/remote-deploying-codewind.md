@@ -81,7 +81,7 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 - Set a new administrator password.
 - To return to the admin console, click **Back to Security Admin Console** or log out and log back in to Keycloak as the admin user with your new admin password.
 
-4. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary and complete these steps:
+4. Ensure that the Realm is set to **Codewind** by clicking on the dropdown arrow on the page. Select **Codewind** if necessary and complete these steps:
 - Click **Users**.
 - Click **Add user**.
 - Complete the **username** field.
@@ -89,9 +89,9 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 - Ensure **user enabled** is **On**.
 - Click **Save**.
 
-5. Assign an initial password to the user account by clicking **Credentials** and then add the initial password.
+5. Assign an initial password to the user account by clicking **Credentials**. Then, add the initial password.
 
-6. The field **Temporary = On** requires users to change their passwords during first connection. Set **Temporary = Off** to make this password valid for continuous use and to prevent the need to change it on first connection.
+6. The field **Temporary = On** requires you to change your password during first connection. Set **Temporary = Off** to make this password valid for continuous use and to prevent the need to change it on first connection.
 
 7. Click **Set Password** to save the changes. Log out of the Keycloak admin page.
 
