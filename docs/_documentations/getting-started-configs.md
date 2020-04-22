@@ -8,23 +8,48 @@ permalink: getting-started-configs
 type: document
 ---
 
-# Getting Started - different configurations for Codewind
-
-Codewind can be used in one of three ways - locally, [hosted](./che-installinfo.html) as an application on a cloud, or remotely. 
+# The 3 configurations of Codewind
 
 
-## Using Codewind Locally
+### Where do I develop my code? Where can I build and run my containers? How does Codewind support my development flow?
+Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both. 
 
-## Using Codewind as a hosted application on the cloud via a browser
+By using Codewind locally, you can get up and running immediately. 
 
-## Using Codewind remotely
+Or you can use the cloud's resources to build and run applications by using Codewind either as a hosted application on your cloud, or in the remote configuration. Using either of these configurations, Codewind can build and run your Docker-containerized applications on [Kubernetes](https://kubernetes.io/) container orchestration applications, including [OpenShift](https://www.openshift.com/).
 
-By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications. 
+### **1. Using Codewind locally:** 
+If you use Codewind locally, your IDE, with the Codewind extension installed, and Docker Desktop (or your local Docker Engine and Docker Compose installations if you're using Linux), is all you need to build and run containerized applications on your desktop.
+
+Choose from one of the following IDEs to use Codewind locally: 
+
+* [VS Code](./vsc-getting-started.html)
+* [IntelliJ](./intellij-getting-started.html)
+* [Eclipse](./eclipse-getting-started.html)
+
+### **2. Using Codewind as a hosted application on your cloud:** 
+If you use Codewind as a hosted application on your cloud, both your IDE, with the Codewind extension installed, and your containerized applications are located in your cloud environment. Specifically, you deploy [Codewind for Eclipse Che](./che-installinfo.html) to your cloud, and use a browser window on your local machine to connect to the [Codewind for Eclipse Che](./che-installinfo.html) development environment.
 
 
+### **3. Using Codewind remotely:** 
+If you use Codewind remotely, your IDE with the Codewind extension installed is hosted on your desktop, *but* the building and running of your microservice take place in your cloud environment. Using secure HTTPS connections, you connect to your multiple cloud-hosted microservices from the Codewind panel in your desktop-hosted IDE.
 
+You can use any of the following IDEs for the remote configuration:
+
+* [VS Code](./vsc-getting-started.html)
+* [IntelliJ](./intellij-getting-started.html)
+* [Eclipse](./eclipse-getting-started.html)
 
 
 ### Next Steps
 
-Select [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html) to configure your IDE to connect to Codewind in the cloud.
+To get started with using Codewind, choose from one of the following tutorials:
+
+* [Using Codewind Locally](./local-codewind-overview.html). 
+
+* [Using Codewind as a Hosted Application in your Cloud](./eclipseche-codewind-overview.html)
+
+* To use Codewind [remotely](./remote-codewind-overview.html), you must first install Codewind locally. Follow the Installing Codewind step of the tutorial [Using Codewind Locally](./local-codewind-overview.html) for your chosen IDE to set up Codewind on your local machine, and then proceed to either:
+  1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+  2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html). 
+
