@@ -12,7 +12,7 @@
       children:
       - title: 'Installing Codewind for VS Code'
         url: vsc-getting-started.html
-      - title: 'Creating your first VS Code Codewind project'
+      - title: 'Creating your first Codewind project with Codewind for VS Code'
         url: vsc-firstproject.html
       - title: 'Making a code change with VS Code'
         url: vsc-codechange.html
@@ -20,7 +20,7 @@
       children:
       - title: 'Installing Codewind for Eclipse'
         url: eclipse-getting-started.html
-      - title: 'Creating your first Eclipse Codewind project'
+      - title: 'Creating your first Codewind project with Codewind for Eclipse'
         url: eclipse-firstproject.html
       - title: 'Making a code change with Eclipse'
         url: eclipse-codechange.html
@@ -28,7 +28,7 @@
       children:
       - title: 'Installing Codewind for IntelliJ'
         url: intellij-getting-started.html
-      - title: 'Creating your first IntelliJ Codewind project'
+      - title: 'Creating your first Codewind project with Codewind for IntelliJ'
         url: intellij-firstproject.html
       - title: 'Making a code change with IntelliJ'
         url: intellij-codechange.html
@@ -45,7 +45,7 @@
         url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: che-createcodewindworkspace.html
-      - title: 'Creating your first project with Codewind for Eclipse Che'
+      - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
         url: che-createfirstproject.html
       - title: 'Configuring Codewind for Tekton pipelines'
         url: che-tektonpipelines.html
