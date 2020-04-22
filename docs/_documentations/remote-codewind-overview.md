@@ -26,7 +26,7 @@ Once you have connected your local Codewind to Codewind in the cloud, you will l
 1. Create a new project that builds and runs in the cloud
 2. Build and run an existing project in the cloud
 
-## Prerequisites
+### Prerequisites
 
 Before deploying Codewind to the cloud, you must:
 

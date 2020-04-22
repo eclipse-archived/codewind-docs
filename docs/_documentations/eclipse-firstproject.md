@@ -41,8 +41,16 @@ This icon launches your web browser and displays your application.
 
 ![image of the application in the web browser](images/eclipsefirstprojectrunning.png){:width="800px"}
 
-Congratulations, you have created your first application on Codewind.
-
-Next step: [Making a code change](eclipse-codechange.html)
+Congratulations, you have now created, built and run your first Codewind project using Codewind on your local machine.
 
 
+# Next Steps
+
+For next steps, choose from the following:
+
+* If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the pre-requisite step of installing Codewind on your local machine and can proceed to:
+
+1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
+
+ * To continue with this [Using Codewind Locally](./local-codewind-overview.html) tutorial, continue to the next step [Making a Code change with Eclipse](./eclipse-codechange.html) to see the auto-build-and-run feature in action.

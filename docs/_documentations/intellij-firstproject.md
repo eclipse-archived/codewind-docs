@@ -33,4 +33,16 @@ If you have an IntelliJ project already open, you can create more projects.
 1. If you delete a project, it is removed from Codewind.
 2. However, the files remain in the file system, and you need to manually delete them.
 
-Next step: [Making a code change with IntelliJ](intellij-codechange.html)
+Congratulations, you have now created, built and run your first Codewind project using Codewind on your local machine.
+
+# Next Steps
+
+For next steps, choose from the following:
+
+* If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the pre-requisite step of installing Codewind on your local machine and can proceed to:
+
+1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
+
+ * To continue with this [Using Codewind Locally](./local-codewind-overview.html) tutorial, continue to the next step [Making a code change with IntelliJ](intellij-codechange.html) to see the auto-build-and-run feature in action.
+

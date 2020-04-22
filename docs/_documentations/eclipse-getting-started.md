@@ -39,4 +39,15 @@ To install Codewind for Eclipse, complete the following steps:
 
 ![image of Codewind once installed](images/eclipseinstall2.png){:width="800px"}
 
-Next step: [Create your first project](eclipse-firstproject.html)
+# Next Steps
+
+You have now installed Codewind on your local machine.
+
+For next steps, choose from the following:
+
+* If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the pre-requisite step of installing Codewind on your local machine and can proceed to:
+
+1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
+
+ * To continue with this [Using Codewind Locally](./local-codewind-overview.html) tutorial, continue to the next step [Creating your first Eclipse Codewind Project](./eclipse-firstproject.html). 

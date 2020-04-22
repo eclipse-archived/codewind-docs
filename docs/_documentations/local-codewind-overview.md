@@ -14,20 +14,21 @@ Codewind can be used in one of three ways - locally, [hosted](./eclipseche-codew
 
 By using Codewind locally, you can develop, build and run your code all on your local machine using your local IDE.
 
-To use Codewind [remotely](./remote-codewind-overview.html), you must first follow this tutorial to set up Codewind on your local machine and then proceed to either:
+## Setting up Codewind locally as a prerequisite to using Codewind Remotely
+To use Codewind [remotely](./remote-codewind-overview.html), you must first follow this tutorial _Using Codewind Locally_ to set up Codewind on your local machine and then proceed to either:
 
-1. Deploy Codewind to your cloud (if not already done so by you or a sysadmin/DevOps engineer) by following the tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html)).
-2. Follow the tutorial [Using Codewind Remotely](./remote-codewind-overview.html) to connect your Codewind extension of your local desktop IDE to Codewind in your cloud
+1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
 
 # What you will learn
 
-You will learn how to:
+In this tutorial you will learn how to use Codewind locally. Specifically, you will:
 
 1. Install Codewind into your IDE on your local machine
 2. Create your first Codewind project using Codewind's standardised, containerised project templates
 3. Use Codewind's auto-build-and run feature by making a code change in your project
 
-### Next Steps
+# Next Steps
 
 Select your IDE to proceed with the installation of Codewind to your local machine:
 1. [VS Code](./vsc-getting-started.html)
