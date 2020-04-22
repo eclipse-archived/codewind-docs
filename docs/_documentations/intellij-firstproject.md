@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Creating your first IntelliJ Codewind project
-description: Creating your first IntelliJ Codewind project
+title: Creating your first Codewind project with Codewind for IntelliJ
+description: Creating your first Codewind project with Codewind for IntelliJ
 keywords: start, starting, template, templates, install, installed, Java, location, locations, field, name, file, files, notification, notifications, pom.xml, structure, Maven, view, views, application, open, build, local, remove, removing, delete, deleting, system, change, changes, changing
 duration: 1 minute
 permalink: intellij-firstproject
 type: document
 ---
 
-# Creating your first IntelliJ Codewind project
+# Creating your first Codewind project with Codewind for IntelliJ
 
 ## Creating your first project from a template
 1. Start IntelliJ. From the welcome page, click **Create New Project**. The **New Project** window opens.
