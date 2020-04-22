@@ -79,7 +79,7 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 3. Change the administrator password and return to the **Administration Console**.
 - Click the **Admin** link and choose **Manage Account/Password**.
 - Set a new administrator password.
-- To return to the admin console, use the **Admin** link or log out and log back in to Keycloak as the admin user with your new admin password.
+- To return to the admin console, click **Back to Security Admin Console** or log out and log back in to Keycloak as the admin user with your new admin password.
 
 4. Ensure that the Realm is set to `Codewind` by clicking on the dropdown arrow on the page. Select **Codewind** if necessary and complete these steps:
 - Click **Users**.
