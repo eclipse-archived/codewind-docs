@@ -45,7 +45,7 @@
         url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: che-createcodewindworkspace.html
-      - title: Making a code change with Codewind for Eclipse Che
+      - title: 'Making a code change with Codewind for Eclipse Che'
         url: che-codechange.html
       - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
         url: che-createfirstproject.html
