@@ -21,17 +21,19 @@ Add a project from an existing Git repository:
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
-Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
-**Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
+Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/). **Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
 
 Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and [Helm chart documentation](https://helm.sh/docs/topics/charts/).
 
+To import your own project into Codewind, follow these same requirements. Make sure to select the **Other (Basic Container)** option as the project type.
+
 ## What kind of projects can I add?
 
-Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. 
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. Learn more about projects you can undertake by using:
 
-To import your own project into Codewind, follow the requirements outlined in [Requirements for importing an existing project not created in Codewind or through Appsody or Odo](#Requirements-for-importing-an-existing-project-not-created-in-Codewind-or-through-Appsody-or-Odo).
-Make sure to select the **Other (Basic Container)** option as the project type.
+* [Codewind](https://www.eclipse.org/codewind/overview.html) to simplify enhancement in containers and deploy cloud-native applications. 
+* [Appsoy](https://appsody.dev/docs) to control the stacks that deploy cloud applications to Kubernetes. 
+* [OpenShift Do (odo)](https://www.eclipse.org/codewind/che-odo-support.html) to deploy applications on an OpenShift or OKD cluster. 
 
 Codewind also contains a special build engine for the following languages. To utilize the build engine, see the following setup guides: 
 
