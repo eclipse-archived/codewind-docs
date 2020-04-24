@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Troubleshooting
+title: Known issues
 description: Troubleshooting Codewind
 keywords: troubleshooting, issues, workaround, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs
 duration: 1 minute
@@ -11,44 +11,9 @@ parent: root
 ---
 <!-- NOTE: The '***' before each level one title adds a line to the final output, which helps this topic to be more readable and easier to consume. -->
 
-# Feedback and community
-Have any questions or comments on Codewind? Want to get involved? You can get in touch with the team:
-- **Support:** Ask questions, report bugs, and request features with [GitHub issues](https://github.com/eclipse/codewind/issues).
-- **Public chat:** Join the public [eclipse-codewind](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind) and [eclipse-codewind-dev](https://mattermost.eclipse.org/eclipse/channels/eclipse-codewind-dev) Mattermost channels.
-- **Twitter:** Follow Codewind on Twitter at [@EclipseCodewind](https://twitter.com/EclipseCodewind).
-- **Mailing list:** Join the mailing list from [codewind-dev@eclipse.org](https://accounts.eclipse.org/mailing-list/codewind-dev).
-- **Weekly meetings:** The Codewind team holds [weekly calls](https://github.com/eclipse/codewind/wiki/Codewind-Calls) every Tuesday and Thursday at 9:00 AM Eastern Time / 14:00 UTC.
+# Troubleshooting
 
-# Contributing
-We welcome submitting issues and contributions.
-- :bug: [Submit bugs.](https://github.com/eclipse/codewind/issues)
-- :pencil2: [Contribute.](CONTRIBUTING.md)
-- :mag_right: [View the API documentation.](https://eclipse.github.io/codewind/)
-- :memo: [Improve the docs.](https://github.com/eclipse/codewind-docs)
-- :building_construction: [View the Codewind architecture.](https://github.com/codewind-resources/design-documentation)
-- :octocat: [See the Codewind repositories.](https://github.com/eclipse?utf8=%E2%9C%93&q=codewind&type=&language=)
-- :sparkles: [Check out good first issues for new contributors.](https://github.com/eclipse/codewind/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-
-# Mustgather
-
-Collect logs from your installation quickly and easily using the `cwctl mustgather/mg` command.
-
-You can specify the following additional options:
-`--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE (default: "")
-`--quiet/-q` - Turn off console messages
-`--projects/-p` - Collect project containers information
-`--nozip/-n` - Does not create collection zip and leaves individual collected files in place
-`--clean` - Removes the mustgather directory and all its contents from the Codewind home directory
-
-For more information about the `cwctl mustgather` command, see the [mustgatherCli documentation](https://github.com/mattcolegate/codewind-installer/tree/mustgatherCli#mustgathermg).
-
-# Frequently asked questions
-
-_MRG: Populate with the most popular issues from below but rewrite in a question/answer format._
-
-# Troubleshooting issues
-
-The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
+The following sections contain workarounds for known issues that you might encounter when you use Codewind. If you don't see your issue here, check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
 * [Upgrading Codewind](#upgrading-codewind)
