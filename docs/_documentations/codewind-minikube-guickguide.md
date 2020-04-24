@@ -77,11 +77,27 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
 ## Developing a microservice
 Now that you have prepared Minikube and installed Codewind, develop a microservice so you learn to work with Codewind on Minikube. 
 
+### Configuring Codewind to use application stacks 
+Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include stacks that you can use to follow this guide. Complete the following steps to select the Appsody templates:
+
+1. Under the Explorer pane, select `Codewind`.
+2. Right-click `Local`.
+3. Select `Template Source Manager`.
+4. Enable `Appsody Stacks - incubator`.
+
+You now have configured Codewind to Appsody templates and can proceed to develop your microservice within Codewind.
+
+If your organization uses customized application stacks and has given you a URL that points to an index.json file, you can add it to Codewind:
+
+1. Return to `Codewind` and right-click `Local`.
+2. Select `Template Source Manager`.
+3. Click the `Add New +` button to add your URL.
+4. Add your URL in the pop up window and save your changes.
+
 ### Creating an Appsody project 
 1. Under the Explorer pane, select `Codewind`.
-2. Expand `Codewind` by clicking the drop-down arrow.
+2. Find the name of the remote connection created earlier and expand it. 
 3. Hover over the `Projects` entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
-    * **Note:** Make sure Docker is running. Otherwise, you get an error.
 4. Choose the `Open Liberty (Default templates)`.
 5. Name your project `appsody-calculator`.
     * If you don’t see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - appsodyhub`. The templates are refreshed, and the Appsody templates are available.
@@ -158,9 +174,9 @@ Any changes you make to your code is automatically built and re-deployed by Code
 
 You now can work with your calculator.
 
-1. Use the port number you saw when you first opened the application.
+1. Use the URL you saw when you first opened the application. 
 2. Make sure to remove the `< >` symbol in the URL.
-3. `http://127.0.0.1:<port>/starter/calculator/aboutme`
+3. `<url>/starter/calculator/aboutme`
 4. You should see the following response:
 
 ```
@@ -169,8 +185,8 @@ You can add (+), subtract (-), and multiply (*) with this simple calculator.
 
 You could also try a few of the sample calculator functions:
 
-* `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
-* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you should see: `10+3=13`.
+* `<url>/starter/calculator/aboutme`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
+* So for ``<url>/starter/calculator/aboutme/+/10/3` you should see: `10+3=13`.
 
 ## What you have learned 
 In this quick guide, you have learned to:
