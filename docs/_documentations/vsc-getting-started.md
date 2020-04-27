@@ -10,7 +10,7 @@ order: 1
 ---
 # Getting Started with Codewind
 
-There are 3 ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, **you can try out Codewind by using the local configuration**. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
+There are three ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, **you can try out Codewind by using the local configuration**. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
 
 Follow the instructions to get started with using Codewind locally. This will guide you through:
 
