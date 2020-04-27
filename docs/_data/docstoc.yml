@@ -3,11 +3,7 @@
 
 - title: 'Getting started'
   url: gettingstarted.html
-
-- title: 'Using Codewind Locally'
   children:
-    - title: 'Overview'
-      url: local-codewind-overview.html
     - title: 'VS Code'
       children:
       - title: 'Installing Codewind for VS Code'
