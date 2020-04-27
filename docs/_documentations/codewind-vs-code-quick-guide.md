@@ -5,9 +5,6 @@ description: Take advantage of Codewind's tools to help build high quality cloud
 keywords: Codewind, VS Code, microservice
 duration: 5 minutes
 permalink: codewind-vscode-quick-guide
-type: document
-parent: Quick guides 
-order: 1
 ---
 
 # Getting Started with Codewind in VS Code
