@@ -110,7 +110,7 @@
     - title: 'Codewind OpenAPI Tools for Eclipse'
       url: open-api-tools-for-eclipse.html
  
-- title: 'Get support'
+- title: 'Support'
   children: 
     - title: 'Known issues'
       url: https://github.com/eclipse/codewind/labels/kind%2Fbug

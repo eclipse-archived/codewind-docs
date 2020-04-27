@@ -2,7 +2,7 @@
 layout: docs
 title: Known issues
 description: Troubleshooting Codewind
-keywords: troubleshooting, issues, workaround, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs
+keywords: troubleshooting, issues, workaround, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs, mustgather, environment
 duration: 1 minute
 permalink: troubleshooting
 type: document
@@ -15,7 +15,7 @@ parent: root
 
 Use the following information to help you to isolate and resolve issues with Codewind. 
 
-## Using MustGather to collect environment data
+## Collecting log files and environment data
 
 Use the `cwctl mustgather` CLI command to collect all available log files and environment information from your installation for diagnostic purposes. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
 
