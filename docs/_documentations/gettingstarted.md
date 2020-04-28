@@ -16,6 +16,6 @@ type: document
 * [Eclipse](./eclipse-getting-started.html) 
 * [IntelliJ](./intellij-getting-started.html)
 
-**Codewind as a hosted application in the cloud** If you want to go straight to using codewind as a hosted application in the cloud, select the [Eclipse Che instructions](./eclipseche-codewind-overview.html)
+**Codewind as a hosted application in the cloud** If you want to go straight to using codewind as a hosted application in the cloud, select the [Eclipse Che instructions](./che-installinfo.html)
 
 **The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).

@@ -29,31 +29,6 @@
       - title: 'Making a code change with IntelliJ'
         url: intellij-codechange.html
 
-- title: 'Using Codewind as a hosted application on the cloud'
-  children:
-    - title: 'Overview'
-      url: eclipseche-codewind-overview.html
-    - title: 'Eclipse Che'
-      children:
-      - title: 'Installing Eclipse Che for Codewind'
-        url: che-installinfo.html
-      - title: 'Adding an image registry in Codewind in Che'
-        url: che-setupregistries.html
-      - title: 'Creating a Codewind workspace in Che'
-        url: che-createcodewindworkspace.html
-      - title: 'Making a code change with Codewind for Eclipse Che'
-        url: che-codechange.html
-      - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
-        url: che-createfirstproject.html
-      - title: 'Configuring Codewind for Tekton pipelines'
-        url: che-tektonpipelines.html
-      - title: 'OpenShift Do (odo) support in Codewind'
-        url: che-odo-support.html         
-      - title: 'Adding the OpenShift internal registry with Codewind'
-        url: openshiftregistry.html
-      - title: 'Uninstalling Codewind for Eclipse Che'
-        url: che-uninstall.html
-
 - title: 'Deploying Codewind remotely'
   url: remote-deploying-codewind.html
 
@@ -71,6 +46,34 @@
       url: remote-setupregistries.html
     - title: 'Creating and importing projects'
       url: remotedeploy-projects-vscode.html
+
+- title: 'Using Codewind on Eclipse Che'
+  children:
+  - title: 'Installing Eclipse Che for Codewind'
+    url: che-installinfo.html
+  - title: 'Configuring Codewind with your browser and cluster'  
+    url: che-browserconfig.html
+  - title: 'Adding an image registry in Codewind in Che'
+    url: che-setupregistries.html 
+  - title: 'Creating a Codewind workspace in Che'
+    url: che-createcodewindworkspace.html
+  - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
+    url: che-createfirstproject.html
+  - title: 'Making a code change with Codewind for Eclipse Che'
+    url: che-codechange.html
+  - title: 'Uninstalling Codewind for Eclipse Che'
+    url: che-uninstall.html
+  - title: 'Optional Configurations'
+    children:
+    - title: 'Configuring Codewind for Tekton pipelines'
+      url: che-tektonpipelines.html
+    - title: 'OpenShift Do (odo) support in Codewind'
+      url: che-odo-support.html         
+    - title: 'Adding the OpenShift internal registry with Codewind'
+      url: openshiftregistry.html
+
+
+
        
 - title: 'Working with templates'
   url: workingwithtemplates.html

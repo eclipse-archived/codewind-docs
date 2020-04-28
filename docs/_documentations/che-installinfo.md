@@ -7,12 +7,29 @@ duration: 1 minute
 permalink: che-installinfo
 type: document
 ---
+# Using Codewind as a hosted application on the cloud
+
+Codewind can be used in one of three ways - [locally](./vsc-getting-started.html), [remotely](./remote-codewind-overview.html), or **hosted as an application on the cloud**. By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind via a browser window from your local desktop.
+
+Follow the instructions to get started with using Codewind as an application hosted on the cloud. This will guide you through:
+
+1. Installing Eclipse Che to use with Codewind or update an existing Eclipse Che installation to use Codewind
+2. Configuring Codewind on Eclipse Che to work with your browser and cluster.
+2. Creating a Codewind connection by:
+- adding an image registry
+- Creating a Codewind workspace in Eclipse Che
+4. Creating your first Codewind project 
+5. Making a code change to try out the inner loop experience 
+
+### Other Codewind configurations
+
+**A quick way to try out Codewind before installing Codewind as a hosted application in your cloud is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by- step instructions.
+
+**Using Codewind Remotely** If you want to use the other cloud-based configuration of Codewind, **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. 
 
 # Installing Eclipse Che for Codewind
 
-Install Che to use with Codewind or prepare to use Codewind with an existing Che installation.
-
-## Prerequisites
+### Prerequisites
 
 1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and each have a minimum of 5 Gi storage.
    - One volume is required for Che, and two volumes are required for each Codewind workspace.
@@ -24,15 +41,26 @@ Install Che to use with Codewind or prepare to use Codewind with an existing Che
 3. Set up the ClusterRole for Codewind:
 `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml`
 
-## Installing Che with chectl
+### Choose from the following instructions:
 
-Install Eclipse Che with HTTPS so that Codewind functions properly. See the [Installing Che](#installing-che) section to set up Eclipse Che with TLS certificates.
+- [Install Eclipse Che to use with Codewind](./che-installinfo.html#installing-che-to-use-with-codewind)
 
-### Installing Che
-The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. To install the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
+or
 
-After you install `chectl`, download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
- - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+- [Update an existing Eclipse Che installation to use Codewind](./che-installinfo.html#updating-an-existing-che-installation-to-use-codewind)
+
+#### Installing Che to use with Codewind 
+
+Install Eclipse Che with HTTPS so that Codewind functions properly. 
+
+The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. Perform the following:
+
+1. Install the `chectl` CLI tool. see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
+
+2. Download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
+ - **note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+
+3. Use the following instructions to install Codewind on your Openshift or Kubernetes cluster:
 
 **Installing on OpenShift:**
 
@@ -43,6 +71,8 @@ Run the following command to install Che on OpenShift with `chectl`:
    ```
 
 **Installing on Kubernetes:**
+
+Set up Eclipse Che with TLS certificates.
 
 1. Create the `che` namespace if it doesn't already exist: `kubectl create namespace che`.
 2. Determine your Ingress domain.
@@ -64,7 +94,7 @@ Run the following command to install Che on OpenShift with `chectl`:
    $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
    ```
 
-## Updating an existing Che installation
+#### Updating an existing Che installation to use Codewind
 
 If you already have a Che installation with TLS, you can update it for Codewind.
 
@@ -72,52 +102,6 @@ Run the following command, where `$NAMESPACE` is the namespace that your Che wor
 ```
 $ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
 ```
+### After Installation
 
-## Adding certificates for Che to your browser
-
-**Note**: If you configured Eclipse Che with self-signed certificates, you need to add the `ca.crt` for Eclipse Che to your browser. Examples of configuring Che with self-signed certificates include the following examples:
-  - Completing the previous steps for Kubernetes
-  - Installing Che on an OpenShift cluster with self-signed-certificates
-
-The following steps for adding certificates are not necessary if you installed Che with publicly signed certificates, such as on OpenShift on IBM Cloud.
-
-### Download the OpenShift router ca.crt
-If running on OpenShift with self-signed certificates, follow these instructions:
-
-1. Authenticate against your OpenShift cluster, or ask your cluster administrator to do so.
-2. Run the following command to download the router's `ca.crt`:
-```
-$ oc get secret router-ca -n openshift-ingress-operator -o jsonpath="{.data.tls\.crt}" | base64 -d > rootCa.crt
-```
-
-### Adding the ca.crt to Google Chrome
-
-On macOS, follow these steps:
-
-1. Open **Keychain Access** and click **File**>**Import items**.
-2. Locate the `rootCa.crt` that you downloaded and import it.
-3. Find and click the certificate in Keychain.
-4. In the window that opens, expand the **Trust section**. Under **When using this certificate**, select **Always trust**. Click **save**.
-5. Reload Eclipse Che in your browser.
-
-On Windows, follow these steps:
-
-1. Open Google Chrome preferences, select **Privacy and Security**, and click **Manage Certificates**.
-2. In the window that appears, click the **Trusted Root Certificate Authorities** tab.
-3. Locate the `rootCa.crt` that you downloaded and import it.
-4. Restart Google Chrome and access the Eclipse Che URL.
-
-### Adding the ca.crt to Firefox
-
-1. Go to **Preferences**>**Privacy and Security**>**View certificates**.
-2. Click **Authorities** and click **Import**.
-3. Locate the `rootCa.crt` that you downloaded and import it.
-4. Reload Eclipse Che in your browser.
-
-## Enabling privileged and root containers to run
-
-Codewind needs to run as privileged and as root because it builds container images. If your cluster is running OpenShift, run the following commands, where `<che namespace>` is the namespace into which you installed Che.
-1. To enable privileged containers, enter `oc adm policy add-scc-to-user privileged system:serviceaccount:<che namespace>:che-workspace`.
-2. To enable containers to run as root, enter `oc adm policy add-scc-to-user anyuid system:serviceaccount:<che namespace>:che-workspace`.
-
-Next step: [Adding registries in Che](che-createcodewindworkspace.html)
+**Getting started with Codewind for Eclipse Che - next steps** Continue to instructions for [configuring codewind for Eclipse Che to your browser and cluster](./che-browserconfig.html).

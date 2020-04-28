@@ -11,29 +11,27 @@ type: document
 # Adding an image registry in Codewind in Che
 
 ## Prerequisite: Determining if you need an image registry 
-1\. First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
-- In the following scenario, configure Codewind with an image registry to push the application image to that specific image registry:
-    - Run Codewind on a remote Kubernetes cluster, including Che, to develop a Codewind style project.
-- In the following scenario, configure Codewind to use the credentials for a specific image registry:
-    - Run Codewind on a remote Kubernetes cluster, including Che, to develop an Appsody style project.
-    - The image registry for the Appsody stack requires credentials.
-- In the following scenario, from the command line, enter the `docker login` command in the registry before you create the Appsody project:
-    - Run Codewind locally to develop an Appsody style project.
-    - The image registry for the Appsody stack requires credentials. 
-If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, you do not need to specify an image registry.
-2\. If you do need to add an image registry, start and run Che.
+
+First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
+
+**Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry:
+
+**Codewind for Eclipse Che running on a remote Kubernetes cluster to develop an Appsody style project** Configure Codewind to use the credentials for a specific image registry. 
+
+**Using Codewind locally to develop an Appsody-style project** From the command line, enter the `docker login` command in the registry before you create the Appsody project
 
 ## Adding an image registry in Codewind
-After Che is started and running, add the image registry to be used with Codewind.
-1. From the Codewind Project Explorer view, right-click **Projects** and select **Image Registry Manager**.
-2. From the **Image Registry Manager**, click **Add New**.
-3. Enter the following information to add the registry:
+
+1. Start Codewind for Eclipse Che and ensure the project is running
+2. From the Codewind Project Explorer view, right-click **Projects** and select **Image Registry Manager**.
+3. From the **Image Registry Manager**, click **Add New**.
+4. Enter the following information to add the registry:
   - Registry server name or domain name: `<registry-to-push-images-to>`
   - User name: `<Your username>`
   - Password or API key: `<Your password or API key>`
-4. If you're using the newly added registry as a push registry, enter the namespace that you want to push your images to.
+5. If you're using the newly added registry as a push registry, enter the namespace that you want to push your images to.
   - For recommended values for common registries, see the [examples](#examples).
-5. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
+6. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
 
 ## Codewind image registry guidance
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
@@ -63,4 +61,6 @@ These examples show recommended values for common registries. The following depl
 ## Adding registries to OKD and OpenShift
 To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
-Next step: [Creating a Codewind workspace in Che](che-createcodewindworkspace.html)
+## Next step: 
+
+**Getting started with Codewind for Eclipse Che** Continue to instructions for [creating a Codewind workspace in Che](che-createcodewindworkspace.html)
