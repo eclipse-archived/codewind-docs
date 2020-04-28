@@ -17,21 +17,21 @@ Use the following information to help you to isolate and resolve issues with Cod
 
 ## Collecting log files and environment data
 
-Use the `cwctl mustgather` CLI command to collect all available log files and environment information from your installation for diagnostic purposes. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
+You can use the `cwctl diagnostics` CLI command to collect all available log files and environment information from your installation for diagnostic purposes. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
 
 The format of the command is: 
-`cwctl mustgather [command options] [arguments...]`
+`cwctl diagnostics [command options] [arguments...]`
 
 Command options are:
 * --`eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE (default: "")
 * --`quiet/-q` - Turn off console messages
 * --`projects/-p` - Collect project containers information
 * --`nozip/-n` - Does not create collection zip and leaves individual collected files in place
-* --`clean` - Removes the mustgather directory and all its contents from the Codewind home directory
+* --`clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
 
-For more information about the `cwctl mustgather` command, type `cwctl help mustgather`, or see the [mustgatherCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#mustgathermg).
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#mustgathermg).
 
-# Known issues and workarounds
+# Workarounds
 
 The following sections contain workarounds for known issues that you might encounter when you use Codewind. If you don't see your issue here, check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
