@@ -29,11 +29,11 @@ To import your own project into Codewind, follow these same requirements. Make s
 
 ## What kind of projects can I add?
 
-Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. Learn more about projects you can undertake by using:
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. To determine the projects you want to develop, see the following:
 
-* [Codewind](https://www.eclipse.org/codewind/overview.html) to simplify enhancement in containers and deploy cloud-native applications. 
-* [Appsoy](https://appsody.dev/docs) to control the stacks that deploy cloud applications to Kubernetes. 
-* [OpenShift Do (odo)](https://www.eclipse.org/codewind/che-odo-support.html) to deploy applications on an OpenShift or OKD cluster. 
+* To simplify enhancement in containers and deploy cloud-native applications, work with [Codewind](https://www.eclipse.org/codewind/overview.html). 
+* To control the stacks that deploy cloud applications to Kubernetes, work with[Appsody](https://appsody.dev/docs). 
+* To deploy applications on an OpenShift or OKD cluster,[OpenShift Do (odo)](https://www.eclipse.org/codewind/che-odo-support.html). 
 
 Codewind also contains a special build engine for the following languages. To utilize the build engine, see the following setup guides: 
 
