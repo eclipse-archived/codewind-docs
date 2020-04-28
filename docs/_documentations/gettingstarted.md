@@ -2,53 +2,20 @@
 layout: docs
 title: Getting Started
 description: Getting Started
-keywords: install, standalone, cloud
+keywords: install, Codewind, remote, hosted, cloud, standalone, get started, getting started, IDE, VS Code, Eclipse, Eclipse Che, IntelliJ
 duration: 1 minute
 permalink: gettingstarted
 type: document
 ---
 
+# Getting Started with Codewind
 
-# Select your IDE to continue
+**You can try out Codewind by using the local configuration**. For local use of Codewind, and also the pre-requisite steps for **remote use of Codewind**, select from:
 
-<div class="container">
- 
-  <div class="row" id="cs-gettingstarted-block-2">
-    <div class="col-lg-4 cw-ggettingstarted-mobile-card-container">
-      <div class="cw-gettingstarted-mobile-title-container">
-      <img alt=""  title="" class="cs-gettingstarted-mobile-title" src="images/gettingstarted-line-bg.gif" width="100%" height="1px"/>
-      <span class=" cs-gettingstarted-mobile-title cw-getting-started-text">Cloud &nbsp;</span>
-      </div>
-      <div class="cw-gettingstarted-card">
-        <a href="che-installinfo.html"><img alt="Install on cloud"  title="Install on cloud"  src="images/card/che.svg"/></a>
-      	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="che-installinfo.html">Codewind for Eclipse Che</a>
-      	</div>
-      </div>
-    </div>
-    <div class="col-lg-4 cw-ggettingstarted-mobile-card-container">
-    <div class="cw-gettingstarted-mobile-title-container">
-      <img alt=""  title=""  class="cs-gettingstarted-mobile-title" src="images/gettingstarted-line-bg.gif" width="100%" height="1px"/>
-      <span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
-      </div>
-      <div class="cw-gettingstarted-card">
-        <a href="vsc-getting-started.html"><img alt="VSCode getting started"  title="VSCode getting started"  src="images/card/vscode.svg"/></a>
-      	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="vsc-getting-started.html">Codewind for VS Code</a>
-      	</div>
-      </div>
-    </div>
-    <div class="col-lg-4 cw-ggettingstarted-mobile-card-container">
-    		<div class="cw-gettingstarted-mobile-title-container">
-    		<img alt=""  title=""  class="cs-gettingstarted-mobile-title" src="images/gettingstarted-line-bg.gif" width="100%" height="1px"/>
-      	<span class="cs-gettingstarted-mobile-title cw-getting-started-text">Local &nbsp;</span>
-      	</div>
-      <div class="cw-gettingstarted-card">
-        <a href="eclipse-getting-started.html"><img alt="Eclipse che getting started"  title="Eclipse che getting started"  src="images/card/eclipse.svg"/></a>
-      	<div class="cw-gettingstarted-card-link-container">
-      		<a class="cw-gettingstarted-card-link" href="eclipse-getting-started.html">Codewind for Eclipse</a>
-      	</div>
-      </div>
-    </div>
-  </div>
-</div>
+* [VS Code](./vsc-getting-started.html)
+* [Eclipse](./eclipse-getting-started.html) 
+* [IntelliJ](./intellij-getting-started.html)
+
+**Codewind as a hosted application in the cloud** If you want to go straight to using codewind as a hosted application in the cloud, select the [Eclipse Che instructions](./eclipseche-codewind-overview.html)
+
+**The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).
