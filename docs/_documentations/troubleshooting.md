@@ -796,6 +796,7 @@ Info added in 0.10.0.
 ## Assisting with problem determination by raising the default Codewind server log level
 To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
 - In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
+- In IntelliJ, go to the **Debug Log Settings** dialog and enable the `org.eclipse.codewind` category so the program can write the messages to the log. The `#org.eclipse.codewind` method turns on debug level messages, and the `#org.eclipse.codewind:trace` method turns on trace level messages.
 - In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
 # Executable file not found on PATH in VS Code
