@@ -10,16 +10,17 @@ permalink: codewind-eclipse-quick-guide
 # Getting Started with Codewind in Eclipse 
 
 ## Objectives
-* Develop a simple microservice, using Eclipse Codewind on Eclipse
-* Install VS Code and Codewind 
+* Install Eclipse and Codewind 
+* Develop a simple microservice, using Eclipse Codewind in Eclipse
+
 
 ## Overview 
-Eclipse Codewind provides the ability to create application projects from these `Application Stacks` that your company has built, enabling developers to focus on their code and not infrastructure and Kubernetes.  Application deployments to Kubernetes occur via pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.    
+Eclipse Codewind provides the ability to create application projects from `Application Stacks` that your company has built, enabling developers to focus on their code and not infrastructure and Kubernetes.  Application deployments to Kubernetes occur via pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.    
 
-Eclipse Codewind provides the ability to create projects based on a variety of different template types.  These include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Springboot, Node.js, Node.js with Express, Node.js with Loopback.
+Eclipse Codewind provides the ability to create projects based on a variety of different template types.  These include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Springboot, Node.js, Node.js with Express, and Node.js with Loopback.
 
 ## Developing with Eclipse 
-If you use Eclipse, you can use Codewind for Eclipse to develop and debug your containerized projects from within a local Eclipse IDE.
+You can use Codewind for Eclipse to develop and debug your containerized projects from within a local Eclipse IDE.
 
 ### Prerequisite
 Before you can develop a microservice with Eclipse, you need to:
@@ -147,21 +148,21 @@ You now can work with your calculator.
 * Use the port number you saw when you first opened the application.
 * Make sure to remove the `< >` symbol in the URL. 
 * `http://127.0.0.1:<port>/starter/calculator/aboutme` 
-* You should see the following response:
+* You see the following response:
 
 ```
 You can add (+), subtract (-), and multiply (*) with this simple calculator.
 ```
 
-You could also try a few of the sample calculator functions:
+You can try a few of the sample calculator functions:
 
 * `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
 * So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you should see: `10+3=13`. 
 
 ## What you have learned 
 In this quick guide, you have learned to:
-1. Installed Codewind on Eclipse
-2. Developed your own microservice using Codewind
+1. Install Codewind on Eclipse
+2. Develop your own microservice using Codewind
 
 ## Next Steps 
 See other quick guides to learn how to develop with Codewind.
