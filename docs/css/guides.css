@@ -25,13 +25,6 @@
     }
 }
 
-.guides-post-author-image {
-    height: 32px;
-    width: 32px;
-    border-radius: 100%;
-    vertical-align: middle;
-}
-
 .guides-post-column {
     width: 100%;
     color: #292828;
@@ -69,11 +62,6 @@
     overflow: hidden;
     margin-top: 23px;
     margin-bottom: 35px;
-}
-
-.guides-post-author-name {
-    font-size: 16px;
-    color: #24253A;
 }
 
 .guides-post-date {

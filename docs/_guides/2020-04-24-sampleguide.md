@@ -2,9 +2,6 @@
 layout: post
 title: "Sample guide"
 categories: guides
-author_picture: images/guides/author_sample.png
-author_url: 
-author: Fake Author Name
 guide_description: "Guide description"
 permalink: sampleguide
 duration: 10 minutes

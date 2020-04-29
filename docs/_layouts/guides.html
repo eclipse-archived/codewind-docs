@@ -25,25 +25,11 @@
                                             {{ post.content | strip_html | truncatewords: 60 }}
                                         {% endif %}
                                     </p>
-
-                                        <div class="row">
-                                            <!-- When the screen resolution goes to a phone size, the author container goes above the
-                                            read more container -->
-                                            <div class ="col-xs-12 col">
-                                            <div class="author-images-container">
-                                                <img src="{{ post.author_picture }}" class="guides-post-author-image" alt="Guide author picture">
-                                            </div>
-                                            <a class="guides-post-author-name" target="_blank" rel="noopener">{{ post.author }}</a>
-                                            
-                                            <span class="guides-post-date" title="{{ post.date | date: date_format }}">on {{ post.date | date: date_format }}</span>
-                                            </div>      
-                                        
-                                            <div class="col-xs-12">
-                                            <div class="read-more-link-container ">
-                                                <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
-                                                </div>
-                                            </div>
+   
+                                    <div class="read-more-link-container ">
+                                        <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
                                         </div>
+                                    </div>
                                 </div>
                         </div>
                     </div>
