@@ -19,8 +19,12 @@ Complete the following steps to debug in Codewind applications:
 5. To switch back to run mode, right-click your project and select **Restart in Run Mode** from the menu.
 
 ## Debugging remotely
-- To issue commands against the same cluster that you have Codewind running on, configure `kubectl` or `oc` before you debug a remote project.
-- After the project restarts in debug mode, the plug-in runs `kubectl port-forward` to forward a port on the local system to the debug port in the project pod. Then, the plug-in connects the debugger to the forwarded local port.
+Remote debugging is the same as local debugging but with the following exceptions:
+- Install `kubectl` or `oc` and make sure you are logged in to your cluster.
+- After the project restarts in debug mode, Codewind automatically sets up a port forward from the application's debug port to a port on your local machine.
+   - In Eclipse, this port forward process shows in the Debug view. If you end the port forward, Codewind ends your debug session.
+   - For Java projects, if you detach the debugger or restart the application in run mode, both the debug session and the port forward are removed automatically.
+   - For Node.js applications where you use a Chromium-based browser for debugging, manually end the associated port forwarding process in the Debug view of Eclipse if you end the debug session in your browser.
 
 ## Using Java hot code replace while debugging
 If you want to use Java hot code replace and change your code while you debug, disable automatic builds.
