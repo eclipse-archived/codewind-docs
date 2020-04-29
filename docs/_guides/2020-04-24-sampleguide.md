@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: guide
 title: "Sample guide"
 categories: guides
 guide_description: "Guide description"
