@@ -29,14 +29,14 @@ If you want to use Java hot code replace and change your code while you debug, d
 - When you debug initialization code, wait for the project state to change to **Debugging** or for the debugger to stop at a breakpoint.
 - Normally you can reload your application multiple times to isolate a problem. However, when you debug initialization code, restart your project in debug mode to stop in the code again.
 
-## Debugging Node.js projects
-To restart your Node.js application in debug mode, the tools help you launch a debug session in a Chromium based web browser.
+## Debugging Node.js projects in Eclipse
+In Eclipse, to restart your Node.js application in debug mode, the tools help you launch a debug session in a Chromium-based web browser.
 1. Right-click the project in the Codewind Explorer view and select **Restart in Debug Mode**.
-2. If you are prompted to select a Chromium based web browser for launching the debug session:
-    - Select a Chromium based browser from the list of browsers or use the **Manage** link to add one.
+2. Follow these steps if you're prompted to select a Chromium-based web browser for launching the debug session:
+    - Select a Chromium-based browser from the list of browsers or use the **Manage** link to add one.
     - Optionally, select to always use this browser for Node.js debugging.
 	- Click **OK** to continue.
 3. Launch a debug session using the information on the **Node.js Debug Inspector URL** dialog:
-    - Click **Copy URL to Clipboard** to copy the debug URL.
-	- Click **Open Browser** to open the browser you selected in the previous dialog.
+    - To copy the debug URL, click **Copy URL to Clipboard**.
+	- To open the browser you selected in the previous dialog, click **Open Browser**.
 	- Paste the URL into the address bar of the browser to start the debug session.
