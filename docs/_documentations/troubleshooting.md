@@ -847,4 +847,6 @@ Command options are:
 * `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
 * `--clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
 
-For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnostics).
+After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
+
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
