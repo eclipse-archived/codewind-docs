@@ -840,10 +840,11 @@ The format of the command is:
 `cwctl diagnostics [command options] [arguments...]`
 
 Command options are:
-* --`eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE (default: "")
-* --`quiet/-q` - Turn off console messages
-* --`projects/-p` - Collect project containers information
-* --`nozip/-n` - Does not create collection zip and leaves individual collected files in place
-* --`clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
+* `--conid remote` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
+* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
+* `--quiet/-q` - Turn off console messages
+* `--projects/-p` - Collect project containers information
+* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
+* `--clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
 
-For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#mustgathermg).
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnostics).
