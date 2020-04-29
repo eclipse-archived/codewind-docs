@@ -18,6 +18,10 @@ Complete the following steps to debug in Codewind applications:
 4. While the project is still in Debugging mode, if the debug process is detached, right-click your project and select **Attach Debugger** from the menu. This action reattaches the debugger to the debug process, and you can continue with debugging your application.
 5. To switch back to run mode, right-click your project and select **Restart in Run Mode** from the menu.
 
+## Debugging remotely
+- To issue commands against the same cluster that you have Codewind running on, configure `kubectl` or `oc` before you debug a remote project.
+- After the project restarts in debug mode, the plug-in runs `kubectl port-forward` to forward a port on the local system to the debug port in the project pod. Then, the plug-in connects the debugger to the forwarded local port.
+
 ## Using Java hot code replace while debugging
 If you want to use Java hot code replace and change your code while you debug, disable automatic builds.
 1. To disable automatic builds, right-click your project in the Codewind Explorer view and select **Disable Auto Build**.
