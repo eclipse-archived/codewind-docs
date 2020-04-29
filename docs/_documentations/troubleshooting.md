@@ -834,7 +834,7 @@ Info added in 0.12.0.
 -->
 # Collecting log files and environment data
 
-If you would like to capture diagnostics from your installation, you can use the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
+You can capture diagnostics from your installation by using the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
 
 The format of the command is: 
 `cwctl diagnostics [command options] [arguments...]`
