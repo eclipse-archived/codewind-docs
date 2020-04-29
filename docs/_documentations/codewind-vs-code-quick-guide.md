@@ -10,16 +10,16 @@ permalink: codewind-vscode-quick-guide
 # Getting Started with Codewind in VS Code
 
 ## Objectives
-* Develop a simple microservice, using Eclipse Codewind on Visual Studio Code (VS Code)
-* Install VS Code and Codewind 
+* Install Visual Studio Code (VS Code) and Codewind 
+* Develop a simple microservice, using Eclipse Codewind on VS Code
 
 ## Overview 
-Eclipse Codewind provides the ability to create application projects from these `Application Stacks` that your company has built, enabling developers to focus on their code and not infrastructure and Kubernetes.  Application deployments to Kubernetes occur via pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.    
+Eclipse Codewind provides the ability to create application projects from `Application Stacks` that your company has built, enabling developers to focus on their code and not infrastructure and Kubernetes. Application deployments to Kubernetes occur via pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.    
 
-Eclipse Codewind provides the ability to create projects based on a variety of different template types.  These include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Springboot, Node.js, Node.js with Express, Node.js with Loopback.
+Eclipse Codewind provides the ability to create projects based on a variety of different template types.  These include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Springboot, Node.js, Node.js with Express, and Node.js with Loopback.
 
 ## Developing with VS Code
-If you use Visual Studio Code (VS Code), you can use Codewind for VS Code to develop and debug your containerized projects from within VS Code using the workflow you already use today.
+You can use Codewind for VS Code to develop and debug your containerized projects from within VS Code using the workflow you already use today.
 
 ### Prerequisite 
 Before you can develop a microservice with VS Code, you need to:
@@ -142,22 +142,22 @@ You now can work with your calculator.
 1. Use the port number you saw when you first opened the application.
 2. Make sure to remove the `< >` symbol in the URL. 
 3. `http://127.0.0.1:<port>/starter/calculator/aboutme` 
-4. You should see the following response:
+4. You see the following response:
 
 ```
 You can add (+), subtract (-), and multiply (*) with this simple calculator.
 ```
 
-You could also try a few of the sample calculator functions: 
+You can also try a few of the sample calculator functions: 
 
 * `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
-* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you should see: `10+3=13`.
+* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you see: `10+3=13`.
 
 ## What you have learned 
-Now that you have completed this quick guide, you have:
+Now that you have completed this quick guide, you have learned to:
 
-1. Installed Codewind on VS Code
-2. Developed your own microservice using Codewind
+1. Install Codewind on VS Code
+2. Develop your own microservice using Codewind
 
 ## Next Steps 
 See other quick guides to learn how to develop with Codewind.
