@@ -30,6 +30,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
+* [Collecting log files and environment data](#collecting-log-files-and-environment-data)
 
 ***
 # Installing Codewind
@@ -824,3 +825,28 @@ If you can run `docker` from the command line, but Codewind still fails to find 
 2. Close all instances of VS Code.
 3. Open the terminal you ran `docker` from and run `code`.
 4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
+
+<!--
+Action/Topic: Collecting log files and environment data
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/2766
+Info added in 0.12.0.
+-->
+# Collecting log files and environment data
+
+You can capture diagnostics from your installation by using the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
+
+The format of the command is: 
+`cwctl diagnostics [command options] [arguments...]`
+
+Command options are:
+* `--conid remote` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
+* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
+* `--quiet/-q` - Turn off console messages
+* `--projects/-p` - Collect project containers information
+* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
+* `--clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
+
+After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
+
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
