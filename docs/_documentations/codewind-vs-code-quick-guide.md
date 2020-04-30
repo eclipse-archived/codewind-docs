@@ -49,7 +49,7 @@ Configure Codewind to use Appsody templates so you can focus exclusively on your
 3. Select `Template Source Manager`. 
 4. Enable `Appsody Stacks - incubator`. 
 
-You now have configured Codewind to Appsody templates and can proceed to develop your microservice within Codewind.
+You have now configured Codewind to use Appsody templates and can proceed to develop your microservice within Codewind.
 
 If your organization uses customized application stacks and has given you a URL that points to an `index.json` file, you can add it to Codewind: 
 
@@ -78,14 +78,14 @@ Your project is complete when you see your application status is running and you
 1. Return to your project under the Explorer pane. 
 2. Select the Open App icon next to your project's name, or right-click your project and select `Open App`. 
 
-Your application is now opened in the browser, showing the welcome to your Appsody microservice page.
+Your application is now opened in a browser, showing the welcome to your Appsody microservice page.
 
 ### Adding a REST service to your application
  1. Go to your project's workspace under the Explorer tab. 
  2. Navigate to `src->main->java->dev->appsody->starter`.
  3. Right-click `starter` and select `New File`.
  4. Create a file, name it `Calculator.java`, and press `Enter`. This file is your JAX-RS resource. 
- 5. Populate the file with the following code then **save** the file: 
+ 5. Populate the file with the following code and then **save** the file: 
 
 ```
 package dev.appsody.starter;
@@ -134,10 +134,10 @@ public class Calculator extends Application {
     }
 }
 ```
-Any changes you make to your code is automatically built and re-deployed by Codewind and viewable in your browser. 
+Any changes you make to your code are automatically built and re-deployed by Codewind and you can view them in your browser.  
 
-### Working with the microservice
-You now can work with your calculator.
+### Working with the example calculator microservice
+You now can work with the example calculator microservice.
 
 1. Use the port number you saw when you first opened the application.
 2. Make sure to remove the `< >` symbol in the URL. 
