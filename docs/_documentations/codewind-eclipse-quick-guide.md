@@ -38,7 +38,7 @@ The Codewind installation pulls the following images that form the Codewind back
 
 The Codewind installation includes two parts:
 
-1. The Eclipse plug-in installs when you install Codewind from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind)or when you install by searching in the `Eclipse Extensions` view.
+1. The Eclipse plug-in installs when you install Codewind from the [Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind) or when you install by searching in the `Eclipse Extensions` view.
 2. The Codewind backend containers install after you click `Install`. Clicking `Install` downloads the Codewind backend containers, ~1GB. 
 
 ### Configuring Codewind to use application stacks
@@ -51,7 +51,7 @@ Configure Codewind to use Appsody templates so you can focus exclusively on your
 5. Select `Appsody Stacks - incubator`.
 6. Click the `OK` button. 
 
-You now have configured Codewind to Appsody templates and can proceed to develop your microservice within Codewind.
+You have now configured Codewind to use Appsody templates and can proceed to develop your microservice within Codewind.
 
 If your organization uses customized application stacks and has given you a URL that points to an `index.json` file, you can add it to Codewind: 
 
@@ -61,7 +61,7 @@ If your organization uses customized application stacks and has given you a URL 
 4. Add your URL in the `URL:` box in the pop up window and save your changes. 
 
 ### Creating an Appsody project
-Appsody helps you develop containerized applications and removes the burden of managing the full software development stack. If you want more context about Appsody, visit the https://appsody.dev/docs[Appsody welcome page]. 
+Appsody helps you develop containerized applications and removes the burden of managing the full software development stack. If you want more context about Appsody, visit the [Appsody welcome page](https://appsody.dev/docs). 
 
 1. Right-click `Local [Running]` under `Codewind` in the `Codewind` tab.
 2. Select `+ Create New Project...`
@@ -84,14 +84,14 @@ Your project is complete when you see your project is running and its build is s
 1. Return to your project under the Codewind tab. 
 2. Right-click your project and select `Open Application`. 
 
-Your application is now opened in the browser, showing the welcome to your Appsody microservice page. 
+Your application is now opened in a browser, showing the welcome to your Appsody microservice page. 
 
 ### Adding a REST service to your application
 1. Go to your project's workspace under the Project Explorer tab. 
 2. Navigate to `Java Resources->src/main/java->dev.appsody.starter`. 
 3. Right-click `dev.appsody.starter` and select `New->Class`.
 4. Create a Class file, name it `Calculator.java`, and select `Finish`. This file is your JAX-RS resource. 
-5. Populate the file with the following code then **save** the file: 
+5. Populate the file with the following code and then **save** the file: 
 
 ```
 package dev.appsody.starter;
@@ -140,10 +140,10 @@ public class Calculator extends Application {
     }
 }
 ```
-Any changes you make to your code is automatically built and re-deployed by Codewind and viewed in your browser.
+Any changes you make to your code are automatically built and re-deployed by Codewind and you can view them in your browser. 
 
-### Working with the microservice
-You now can work with your calculator. 
+### Working with the example calculator microservice
+You now can work with the example calculator microservice. 
 
 * Use the port number you saw when you first opened the application.
 * Make sure to remove the `< >` symbol in the URL. 
