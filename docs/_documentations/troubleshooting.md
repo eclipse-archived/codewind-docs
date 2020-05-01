@@ -38,7 +38,6 @@ The following sections contain workarounds for issues that you might encounter w
 
 * [Eclipse troubleshooting](#eclipse-troubleshooting)
 * [VS Code troubleshooting](#vs-code-troubleshooting)
-* [Che troubleshooting](#che-troubleshooting)
 
 ***
 # Installing Codewind
@@ -906,10 +905,10 @@ If the application is not waiting for the debugger to connect, try restarting th
 To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**. 
 
 ## Correct project list is not being shown
-Try refreshing by right-clicking on the **Local Projects** item in the **Codewind Explorer** view and selecting **Refresh**. 
+Refresh the project list by right-clicking the connection in the **Codewind Explorer** view and selecting **Refresh**.
 
 ## Application is not showing the correct status
-Try refreshing the application by right-clicking on it in the **Codewind Explorer** view and selecting **Refresh**. 
+Refresh the application by right-clicking it in the **Codewind Explorer** view and selecting **Refresh**. 
 
 ***
 # VS Code troubleshooting
@@ -958,48 +957,3 @@ Liberty servers started in **Debug** mode do not start until the debugger attach
 Install and enable the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 ### Debugger fails to attach after restarting project into Debug mode
 Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
-
-***
-# Che troubleshooting
-
-When troubleshooting, check the project in Codewind to make sure the status is what you expect. For Codewind specific problem solving tips when using Che, see the following information.
-
-* [Check the Che logs](#check-the-che-logs)
-* [Solving common Che problems](#solving-common-che-problems)
-
-## Check the Che logs
-The logs are found in your Eclipse workspace under *.metadata/.log*.
-
-## Solving common Che problems
-The following list describes common problems that might affect Codewind.
-
-- [Che - Open application fails](#che---open-application-fails)
-- [Che - Debugger fails to connect](#che---debugger-fails-to-connect)
-- [Che - Application stuck in Starting state](#che---application-stuck-in-starting-state)
-- [Che - Application does not rebuild after making a change](#che---application-does-not-rebuild-after-making-a-change)
-- [Che - Correct project list is not being shown](#che---correct-project-list-is-not-being-shown)
-- [Che - Application is not showing the correct status](#che---application-is-not-showing-the-correct-status)
-
-## Che - Open application fails
-The default browser in Eclipse might not be able to handle the content of your application.  Try using a different browser by clicking on **Window** > **Web Browser**.  Select a browser from the list and try to open the application again.
-
-## Che - Debugger fails to connect
-If the debugger fails to connect, you might need to increase the connection timeout:
-1. Open the Eclipse preferences and select **Codewind**.
-2. Increase the debug connection timeout value and click **Apply and Close**.
-
-## Che - Application stuck in Starting state
-The application might be waiting for the debugger to connect. You can resolve this by right-clicking on the project in the **Codewind Explorer** view and selecting **Attach Debugger**.  If the problem occurred because the debugger failed to connect when restarting in debug mode, make sure to increase the debug connection timeout in the Codewind preferences before trying to debug again. For more information see [Debugger fails to connect](#che---debugger-fails-to-connect).
-
-If the debugger is connected but stopped on a ClassNotFoundException, click on the run button to get past the exception. You might need to click run several times as the exception occurs more than once. To avoid stopping on the exception in the future, open the Eclipse preferences and navigate to **Java** > **Debug**. Uncheck **Suspend execution on uncaught exceptions** and click **Apply and Close**.
-
-If the application is not waiting for the debugger to connect, try restarting the application again. If this does not work, use Codewind to disable the application and then re-enable it.
-
-## Che - Application does not rebuild after making a change
-To start a build manually, right click on the application in the **Codewind Explorer** view, and select **Build**.  
-
-## Che - Correct project list is not being shown
-Try refreshing by right-clicking on the **Local Projects** item in the **Codewind Explorer** view and selecting **Refresh**. 
-
-## Che - Application is not showing the correct status
-Try refreshing the application by right-clicking on it in the **Codewind Explorer** view and selecting **Refresh**. 
