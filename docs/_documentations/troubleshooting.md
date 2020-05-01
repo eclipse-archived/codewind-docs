@@ -868,7 +868,7 @@ Information reinstated in 0.12.0.
 ***
 # Eclipse troubleshooting
 
-When troubleshooting, check the project in Codewind to make sure the status is what you expect. For Codewind specific problem solving tips when using Eclipse, see the following information.
+For Codewind specific problem solving tips when using Eclipse, see the following information.
 
 * [Check the Eclipse logs](#check-the-eclipse-logs)
 * [Solving common Eclipse problems](#solving-common-eclipse-problems)
@@ -913,7 +913,7 @@ Refresh the application by right-clicking it in the **Codewind Explorer** view a
 ***
 # VS Code troubleshooting
 
-When troubleshooting, check the project in Codewind to make sure the status is what you expect. For Codewind specific problem solving tips when using VS Code, see the following information.
+For Codewind specific problem solving tips when using VS Code, see the following information.
 
 ## Solving common VS Code problems
 The following list describes common problems that might affect Codewind.
