@@ -12,7 +12,7 @@ type: document
 
 ## Prerequisite: Determining if you need an image registry 
 
-First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
+ The following scenarios in Codewind require you to specify which image registry is in use:
 
 **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry:
 
