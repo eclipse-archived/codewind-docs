@@ -12,13 +12,20 @@ type: document
 
 ## Prerequisite: Determining if you need an image registry 
 
- The following scenarios in Codewind require you to specify which image registry is in use:
+ The following scenarios in Codewind require you have an image specify which image registry is in use. Choose from the following:
 
-**Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry:
+- **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry. When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. 
+ 
+ -- Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
+ -- Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
 
-**Codewind for Eclipse Che running on a remote Kubernetes cluster to develop an Appsody style project** Configure Codewind to use the credentials for a specific image registry. 
+- **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop an Appsody style project** Configure Codewind to use the credentials for a specific image registry. 
 
-**Using Codewind locally to develop an Appsody-style project** From the command line, enter the `docker login` command in the registry before you create the Appsody project
+- **Codewind running locally to develop an Appsody-style project** From the command line, enter the `docker login` command in the registry before you create the Appsody project
+
+## Image Registry Specifics
+
+- **Using OKD Codewind with OKD or Openshift** To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 ## Adding an image registry in Codewind
 
@@ -33,10 +40,6 @@ type: document
   - For recommended values for common registries, see the [examples](#examples).
 6. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
 
-## Codewind image registry guidance
-When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
-
-Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
 
 ## Examples:
 These examples show recommended values for common registries. The following deployment registries are tested and verified with Codewind:
@@ -57,9 +60,6 @@ These examples show recommended values for common registries. The following depl
     - Address: `docker-registry.default.svc:5000`
     - Namespace: `<project>`
     - Credentials: OpenShift user name and access token
-
-## Adding registries to OKD and OpenShift
-To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 ## Next step: 
 

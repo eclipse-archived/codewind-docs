@@ -9,7 +9,7 @@ type: document
 ---
 # Configuring Codewind on Eclipse Che with your browser and cluster
 
-Ensure you have completed both the [prerequisites](./che-installinfo.html#prerequisites) and [installed Codewind on Eclipse Che](./che-installinfo.html#choose-from-the-following-instructions).
+Ensure you have completed the [prerequisites to installing Codewind on Eclipse Che](./che-installinfo.html#prerequisites) and also [installed Codewind on Eclipse Che](./che-installinfo.html#choose-from-the-following-instructions).
 
 If you did not install Eclipse Che with **publicly signed certificates**, you must now follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser).
 
