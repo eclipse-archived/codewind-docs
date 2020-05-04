@@ -29,7 +29,11 @@ Finally, you will learn how to remove a remote deployment of Codewind.
 
 Before deploying Codewind to the cloud, you must:
 
-1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
+1. **Install Codewind into your preferred IDE on your local machine.** 
+For more information, select from the following IDEs:
+- [Getting started with Codewind for Eclipse](./eclipse-getting-started.html)
+- [Getting started with Codewind for VS Code](./vsc-getting-started.html)
+- [Getting started with Codewind for IntelliJ](./intellij-getting-started.html)
 
 2. **Have an active Kubernetes context and log in to the cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 
