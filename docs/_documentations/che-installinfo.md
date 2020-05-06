@@ -64,7 +64,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 
 **Installing on OpenShift:**
 
-Eclipse Che on OpenShift makes use of the router's existing certificates. 
+Eclipse Che on OpenShift makes use of the Openshiftrouter's existing certificates. 
 Run the following command to install Che on OpenShift with `chectl`: 
    ```
    $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
@@ -78,7 +78,7 @@ Set up Eclipse Che with TLS certificates.
 2. Determine your Ingress domain.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
     - If you're unsure of your Ingress domain, ask your cluster administrator.
-3. Generate TLS certificates and keys. For more information, see [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/setup-che-in-tls-mode-with-self-signed-certificate/#generating-self-signed-certificates_setup-che-in-tls-mode-with-self-signed-certificate).
+3. Generate TLS certificates and keys. For more information, see_ADD_ or_  [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **important: do not use self-signed certificates in production**
 4. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
    ```
    $ kubectl create secret tls che-tls --key=domain.key --cert=domain.crt -n che

@@ -10,22 +10,24 @@ type: document
 
 # Adding an image registry in Codewind in Che
 
-## Prerequisite: Determining if you need an image registry 
+## Prerequisite: Determining if you need an image registry for building your projects in the cloud
 
- The following scenarios in Codewind require you have an image specify which image registry is in use:
+ Codewind uses image registries for the following purposes:
 
-- **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry. When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. 
+ 1. working with templates that are hosted on non-public image registries.
+ 2. building projects in the cloud.
  
- -- Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
- -- Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
+When building projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a deployment image registry on your Kubernetes cluster. 
 
-- **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop an Appsody style project** Configure Codewind to use the credentials for a specific image registry. 
+You must [add the image registry](#adding-an-image-registry-in-codewind) to Codewind if your deployment image registry requires credentials.
 
-- **Codewind running locally to develop an Appsody-style project** From the command line, enter the `docker login` command in the registry before you create the Appsody project
+**If you are developing a Codewind or Appsody style project** the image deployment registry that Codewind can use is based on the style of project you are developing on your cloud: 
 
-## Image Registry Specifics
+- **Codewind style project** Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
 
-- **Using OKD Codewind with OKD or Openshift** To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
+- **Appsody style project** The image registry for the Appsody stacks ADD LINK TO REGISTRY requires credentials. 
+
+**If you are using Codewind with OKD or Openshift** To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 ## Adding an image registry in Codewind
 
@@ -42,7 +44,8 @@ type: document
 
 
 ## Examples:
-These examples show recommended values for common registries. The following deployment registries are tested and verified with Codewind:
+These examples show recommended values for common registries and have been tested and verified for use with Codewind:
+
 - Docker Hub:
     - Address: `docker.io`
     - Namespace: `<namespace>`
