@@ -12,7 +12,7 @@ type: document
 
 ## Prerequisite: Determining if you need an image registry 
 
- The following scenarios in Codewind require you have an image specify which image registry is in use. Choose from the following:
+ The following scenarios in Codewind require you have an image specify which image registry is in use:
 
 - **Codewind for Eclipse Che running on a remote Kubernetes cluster to develop a Codewind style project** Configure Codewind with an image registry to push the application image to that specific image registry. When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. 
  
