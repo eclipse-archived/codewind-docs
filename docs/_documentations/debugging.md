@@ -26,7 +26,8 @@ Remote debugging is the same as local debugging with the following exceptions:
    - In VS Code, the port forward is run as a VS Code task, which appears in the Terminal view.
    - In Eclipse, for Node.js applications where you use a Chromium-based browser for debugging, manually end the associated port forwarding process in the Debug view if you end the debug session in your browser.
    - In Eclipse, for Java projects, if you detach the debugger or restart the application in run mode, both the debug session and the port forward are terminated automatically.
-   - In VS Code, for Java projects, if you close the debug session, the port forward stays active. If you close the port forward, the debug session terminates because the debug port has closed.
+   - In VS Code, if you close the debug session, the port forward task stays active in the Terminal view.
+   - In Eclipse and VS Code, if you close the port forward, the debug session terminates because the debug port has closed.
 
 ## Using Java hot code replace while debugging
 If you want to use Java hot code replace and change your code while you debug, disable automatic builds.
