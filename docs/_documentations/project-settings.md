@@ -6,8 +6,6 @@ keywords: project, settings, Codewind, application, configuring, workspace
 duration: 1 minute
 permalink: project-settings
 type: document
-order: 4
-parent: developing-projects
 ---
 
 # Project settings
@@ -55,7 +53,7 @@ Supported project settings include:
 
 ## Internal debug port
 `internalDebugPort: <string>`
-- Only applicable to Microprofile, Spring, and Node.js projects.
+- Only applicable to MicroProfile, Spring, and Node.js projects.
 - Only applicable to a local installation of Codewind.
 - Can be assigned to a non-exposed port, then Codewind helps expose the port for you.
 - If the project is already in debug mode, restart the project in debug mode in order to pick up the new debug port.
@@ -63,15 +61,15 @@ Supported project settings include:
 
 ## Maven profiles
 `mavenProfiles: <string[]>`
-- Only applicable to Microprofile and Spring projects.
+- Only applicable to MicroProfile and Spring projects.
 - Set a list of profiles if your project requires to use additional Maven profiles when Codewind issues Maven commands.
 - Do not overwrite nor remove the profile.
 - Maven profiles can be used in conjunction with Maven properties.
 
 ## Maven properties
 `mavenProperties: <string[]>`
-- Only for Microprofile and Spring projects.
-- Maven properties can be entered in the form `key=value`.
+- Only for MicroProfile and Spring projects.
+- Use the form `key=value` to enter Maven properties.
 - Do not overwrite the property.
 - Maven properties can be used in conjunction with Maven profiles.
 
@@ -84,4 +82,4 @@ Supported project settings include:
 `statusPingTimeout: <string>`
 - This value is the total number of pings used by Codewind to determine if the project has timeout issues during the starting state.
 - Each ping takes 2 seconds. For example, if the value is set to 30 seconds, the timeout is 60 seconds.
-- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects and `30` (1 minute) for all other project types.  
+- If the value is not set, the default value is set to `90` (3 minutes) for Appsody projects and `30` (1 minute) for all other project types.
