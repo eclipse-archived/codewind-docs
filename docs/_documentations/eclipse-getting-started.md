@@ -26,7 +26,7 @@ Select your IDE to get started:
 
 **Codewind on Eclipse Che** If you want to go straight to using Codewind as a hosted application in the cloud, follow [these instructions](./che-installinfo.html).
 
-**Using Codewind Remotely** If you want to use Codewind remotely, **you must first [follow the step to install Codewind locally](##installing-codewind-for-vs-code)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. Once you have installed Codewind remotely, you can proceed to either:
+**Using Codewind Remotely** If you want to use Codewind remotely, you must first [follow the step to install Codewind locally](#installing-codewind-for-vs-code). By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. Once you have installed Codewind remotely, you can proceed to either:
 
 1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
 2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
@@ -41,7 +41,7 @@ To install Codewind for Eclipse, complete the following steps:
 
 1. Download and install the latest [Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/) or use an existing installation.
     - Install Eclipse IDE Version 2019-09 R (4.13.0) or later to avoid [Bug 541220](https://bugs.eclipse.org/bugs/show_bug.cgi?id=541220).
-    - **Note:** the earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
+    - **Note:** The earliest supported version of the Eclipse IDE is Version 2019-03 (4.11).
 2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you must also install [Docker Compose](https://docs.docker.com/compose/install/).
 3. If you are installing Codewind on Windows, enable your local drive for sharing in Docker. To do this, open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Codewind. 
 4. Install [Codewind from Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
@@ -63,7 +63,7 @@ To install Codewind for Eclipse, complete the following steps:
 
 ![image of Codewind once installed](images/eclipseinstall2.png){:width="800px"}
 
-### After Installation
+### After installation
 
 **Getting started with Codewind - next steps** Continue to instructions for [creating your first Eclipse Codewind Project](./eclipse-firstproject.html).
 
