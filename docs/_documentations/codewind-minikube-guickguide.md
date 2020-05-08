@@ -21,7 +21,7 @@ order: 3
 Minikube is essentially Kubernetes but on your local computer. Minikube supports the latest Kubernetes release, so you can configure Minikube on any container runtime. With Minikube, you can start your computer then utilize all Kubernetes' capabilities. Use Minikube to explore and learn to develop with Codewind. This quick guide assists and instructs you to deploy Codewind and projects on Minikube. 
 
 * [Prerequisistes](##prerequisites)
-* [Preparing Minikube](##preparing-minikube)
+* [Installing Minikube](##installing-minikube)
 * [Installing Codewind](##installing-codewind)
 * [Developing a microservice](##developing-a-microservice)
 * [What you have learned](##what-you-have-learned)
@@ -30,9 +30,9 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
 ## Prerequisites
 * A Mac, Windows, or Linux host.
 * Install [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
-* At least 8Gb RAM. Minikube needs at least 4Gb of RAM for this tutorial. 
+* At least 8Gb RAM. Minikube needs at least 4Gb of RAM for this quick guide. 
 
-## Preparing Minikube
+## Installing Minikube
 1. To run the needed commands, open your terminal. 
 2. To start Minikube on your machine, run, `minikube start --memory=4096`.
     * Minikube creates a single-node Kubernetes cluster with 4GB of RAM available to it.
@@ -42,8 +42,8 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
 4. To determine your Ingress IP, run `minikube ip`. 
     * Example:
      ```
-     johns-mbp-3:~ johncollier$ minikube ip
-     192.168.64.46
+    $ minikube ip
+    192.168.64.46
      ```
      * Save this value for later.
  
@@ -72,24 +72,24 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
     * **Codewind Gatekeeper URL:** In step 3, cwctl gives you the Gatekeeper URL. 
     * **Username:** In step 3, developer username is given to cwctl in the value of `kdevuser`. 
     * **Password:** In step 3, developer password given to cwctl in the value of `kdevpass`.
-6. To save and create the connection to the Codewind instance on Minikube, click `Save`. 
+6. To save and create the remote connection to the Codewind instance on Minikube, click `Save`. 
 
 ## Developing a microservice
-Now that you have prepared Minikube and installed Codewind, develop a microservice so you learn to work with Codewind on Minikube. 
+Now that you have installed Minikube and Codewind, develop a microservice so you learn to work with Codewind on Minikube. 
 
 ### Configuring Codewind to use application stacks 
 Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include stacks that you can use to follow this guide. Complete the following steps to select the Appsody templates:
 
 1. Under the Explorer pane, select `Codewind`.
-2. Right-click `Local`.
+2. Right-click the remote connection you saved when you completed the `Installing Codewind` instructions.
 3. Select `Template Source Manager`.
 4. Enable `Appsody Stacks - incubator`.
 
-You now have configured Codewind to Appsody templates and can proceed to develop your microservice within Codewind.
+You now have configured Codewind to Appsody templates and can proceed to develop your microservice with Codewind.
 
 If your organization uses customized application stacks and has given you a URL that points to an index.json file, you can add it to Codewind:
 
-1. Return to `Codewind` and right-click `Local`.
+1. Return to `Codewind` and right-click the remote connection.
 2. Select `Template Source Manager`.
 3. Click the `Add New +` button to add your URL.
 4. Add your URL in the pop up window and save your changes.
@@ -98,7 +98,7 @@ If your organization uses customized application stacks and has given you a URL 
 1. Under the Explorer pane, select `Codewind`.
 2. Find the name of the remote connection created earlier and expand it. 
 3. Hover over the `Projects` entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
-4. Choose the `Open Liberty (Default templates)`.
+4. Choose the `Appsody Open Liberty default template (Appsody Stacks- incubator)`.
 5. Name your project `appsody-calculator`.
     * If you don’t see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - appsodyhub`. The templates are refreshed, and the Appsody templates are available.
 6. Press Enter.
@@ -186,7 +186,7 @@ You can add (+), subtract (-), and multiply (*) with this simple calculator.
 You could also try a few of the sample calculator functions:
 
 * `<url>/starter/calculator/aboutme`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
-* So for ``<url>/starter/calculator/aboutme/+/10/3` you should see: `10+3=13`.
+* So for `<url>/starter/calculator/aboutme/+/10/3`  you should see: `10+3=13`.
 
 ## What you have learned 
 In this quick guide, you have learned to:
