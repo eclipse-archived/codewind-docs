@@ -49,7 +49,7 @@ This icon launches your web browser and displays your application.
 
 Congratulations, you have now created, built and run your first Codewind project using Codewind on your local machine.
 
-# Next Steps
+## Next Steps
 
 Choose from the following:
 

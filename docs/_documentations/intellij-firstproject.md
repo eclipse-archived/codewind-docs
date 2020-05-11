@@ -35,7 +35,7 @@ If you have an IntelliJ project already open, you can create more projects.
 
 Congratulations, you have now created, built and run your first Codewind project using Codewind on your local machine.
 
-# Next Steps
+## Next Steps
 
 Choose from the following:
 
