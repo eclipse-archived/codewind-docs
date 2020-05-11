@@ -951,9 +951,12 @@ If the error persists, you can reset the project by disabling and re-enabling th
 You see no ESLint warning or errors for Node.js projects. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.
 
 ## Debug
+
 ### Liberty project remains in the Starting - Debug state
 Liberty servers started in **Debug** mode do not start until the debugger attaches. Run the `attach debugger` command] and the server starts. You can check the application logs to see if the server is starting.
+
 ### Debugger attach fails with the message "Configured debug type "java" is not supported"
 Install and enable the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+
 ### Debugger fails to attach after restarting project into Debug mode
 Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
