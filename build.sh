@@ -46,7 +46,7 @@ docker run --rm -it \
 docker run -dit --name my-apache-app -p 8765:80 -v "$PWD/docs/_site":/usr/local/apache2/htdocs/codewind/ httpd:2.4
 
 # Check link 
-docker run --network="host" --rm -it -u $(id -u):$(id -g) linkchecker/linkchecker http://localhost:8765/codewind/
+docker run --network="host" --rm -it -u $(id -u):$(id -g) codewinddocs/linkchecker:1.0 http://localhost:8765/codewind/
 rc=$?
 
 # Shut down apache
