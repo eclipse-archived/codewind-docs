@@ -1,10 +1,11 @@
 ---
-layout: docs
+layout: guide
 title: Codewind in VS Code
-description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
-keywords: Codewind, VS Code, microservice
-duration: 5 minutes
+categories: guides 
+guide_description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
 permalink: codewind-vscode-quick-guide
+duration: 5 minutes
+keywords: Codewind, VS Code, microservice
 ---
 
 # Getting Started with Codewind in VS Code
@@ -160,4 +161,7 @@ Now that you have completed this quick guide, you have learned to:
 2. Develop your own microservice using Codewind
 
 ## Next Steps 
-See other quick guides to learn how to develop with Codewind.
+See other quick guides to learn how to develop with Codewind:
+
+* [Codewind in Eclipse](codewind-eclipse-quick-guide.html) 
+* [Codewind in Minikube](codewind-minikube-quick-guide.html) 
