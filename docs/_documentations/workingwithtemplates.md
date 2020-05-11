@@ -47,6 +47,8 @@ Use the **Template Source Manager** to perform the following actions:
 
 Add your own template sources to use in the **Template Source Manager**.
 
+- **Prerequisites:** Build and run templates that use languages and frameworks that are compatible with Codewind. Appsody, Maven, and Node.js styles built with Docker are supported.
+
 1. Choose a GitHub repository to contain all of your new template sources.
    - Codewind uses [`codewind-templates/devfiles`](https://github.com/codewind-resources/codewind-templates/tree/master/devfiles).
 2. Within this repository, create a folder for each template source.
