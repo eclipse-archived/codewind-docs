@@ -55,6 +55,9 @@
     url: che-browserconfig.html
   - title: 'Adding an image registry in Codewind in Che'
     url: che-setupregistries.html 
+  - title: 'Adding the OpenShift internal registry with Codewind'
+    url: openshiftregistry.html
+
   - title: 'Creating a Codewind workspace in Che'
     url: che-createcodewindworkspace.html
   - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
@@ -69,8 +72,7 @@
       url: che-tektonpipelines.html
     - title: 'OpenShift Do (odo) support in Codewind'
       url: che-odo-support.html         
-    - title: 'Adding the OpenShift internal registry with Codewind'
-      url: openshiftregistry.html
+
 
 
 

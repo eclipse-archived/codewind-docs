@@ -27,7 +27,7 @@ You must [add the image registry](#adding-an-image-registry-in-codewind) to Code
 
 - **Appsody style project** The image registry for the Appsody stacks ADD LINK TO REGISTRY requires credentials. 
 
-**If you are using Codewind with OKD or Openshift** To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
+**If you are using Codewind with OKD or Openshift** You can use the OpenShift internal container registry with Codewind. For instructions, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 ## Adding an image registry in Codewind
 
