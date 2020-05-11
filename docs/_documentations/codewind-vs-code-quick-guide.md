@@ -68,7 +68,7 @@ Throughout the application lifestyle, Appsody helps you develop containerized ap
 4. Choose the `Open Liberty (Default templates)`. 
 5. Name your project `appsody-calculator`.
     * If you don't see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - appsodyhub`. 
-** The templates are refreshed, and the Appsody templates are available. 
+    * The templates are refreshed, and the Appsody templates are available. 
 6. Press `Enter`. 
     * To monitor your project's progress, right-click your project, and select `Show all logs`. Then an `Output` tab is displayed where you see your project's build logs. 
 
