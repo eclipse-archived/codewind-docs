@@ -19,16 +19,11 @@ Some actions open the default browser. If the default browser cannot handle the 
 - **Metrics Dashboard**: In Java, Node.js, and Swift applications, this action opens the Metrics Dashboard in the default browser. Use this action to monitor the activity and health of your application. This action is available only when the application is running or debugging.
 - **Performance Dashboard**: In Java, Node.js, and Swift applications, this action opens the Performance Dashboard in the default browser, where you can then monitor and improve application performance. This action functions only when the application is running or debugging. If you try to access it before running the application, a warning message appears.
 - **Open Container Shell**: Opens a shell into your application container. This action is available only when the container is active.
-- **Show Log Files**: If log files are available, this action displays a list of log files. Click a log file to open it, or click **Show All** to open all available log files. The individual log files are toggle actions. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
-- **Show all logs**: If log files are available, this action opens all available log files.  
-   - In Eclipse, this action is **Show Log Files>Show All**.
-   - In Eclipse Che and VS Code, this action is **Show all logs**.
-   - In IntelliJ, this action is **Log Files>Show All**.
-- **Hide all logs**: Remove all log files from the **Console** view.
-   - In Eclipse, this action is **Show Log Files>Hide All**.
-   - In Eclipse Che and VS Code, this action is **Hide all logs**.
-   - In IntelliJ, this action is **Log Files>Hide All**.
-- **Manage logs**: In VS Code, this action opens the Command Palette, where you can select which logs you want to see.
+- Log file actions display or hide available log files.
+  - **Show Log Files**: In Eclipse, this action displays a list of available log files. Click a log file to open it, or click **Show All** to open all available log files. The individual log files are toggle actions. Click the log file again to remove the log file, or click **Hide All** to remove all log files from the **Console** view.
+  - **Show all logs** and **Hide all logs**: In Eclipse Che and VS Code, these actions open or hide available log files from the **Console** view. View or hide all of the log files, or use the menu to choose individual logs.
+  - **Log Files**: In IntelliJ, this action displays a list of available log files. Click **Show All** to open all available log files, **Hide All** to remove all log files from view, or use the menu to choose individual logs.
+  - **Manage logs**: In VS Code, this action opens the Command Palette, where you can select which logs you want to see.
 - **Restart in Run Mode**: Restarts the application in run mode. This action is available only on projects that support restart in run mode. 
 - **Restart in Debug Mode**: Restarts the application in debug mode and attaches the debugger. This action is available only on projects that support it. For MicroProfile and Spring projects, a debug session is started automatically. For Node.js projects, you are guided in the setup of a debug session in a Chromium-based browser. For all other project types that support debug, set up a debug session manually. 
 - **Attach Debugger**:  If you accidentally detached the Java debugger or restarted your IDE, use this action to set up a new debug session. This action is available only for Java applications that support restart in debug mode.
