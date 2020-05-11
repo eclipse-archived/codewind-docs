@@ -113,7 +113,7 @@ Configure your `pom.xml` file as follows:
   
 3\. Add the required Liberty Maven plug-in configuration:
 
-- Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
+- Add the `server.xml` Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
 
   ```xml
   <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
