@@ -805,13 +805,14 @@ To assist with problem determination, raise the default Codewind server log leve
 - In IntelliJ, go to the **Debug Log Settings** dialog and enable the `org.eclipse.codewind` category so Codewind diagnostic debug and trace messages are written to the log. The `#org.eclipse.codewind` method turns on debug level messages, and the `#org.eclipse.codewind:trace` method turns on trace level messages.
 - In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
+***
+# Collecting log files and environment data
 <!--
 Action/Topic: Collecting log files and environment data
 Issue type: info
 Issue link: https://github.com/eclipse/codewind/issues/2766
 Info added in 0.12.0.
 -->
-# Collecting log files and environment data
 
 You can capture diagnostics from your installation by using the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
 
@@ -819,8 +820,9 @@ The format of the command is:
 `cwctl diagnostics [command options] [arguments...]`
 
 Command options are:
-* `--conid remote` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
+* `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
 * `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
+* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if using the IntelliJ IDE (default: "")
 * `--quiet/-q` - Turn off console messages
 * `--projects/-p` - Collect project containers information
 * `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
@@ -961,29 +963,3 @@ Install and enable the [Java Extension Pack](https://marketplace.visualstudio.co
 
 ### Debugger fails to attach after restarting project into Debug mode
 Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
-=======
-<!--
-Action/Topic: Collecting log files and environment data
-Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/2766
-Info added in 0.12.0.
--->
-# Collecting log files and environment data
-
-You can capture diagnostics from your installation by using the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
-
-The format of the command is: 
-`cwctl diagnostics [command options] [arguments...]`
-
-Command options are:
-* `--conid remote` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
-* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
-* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if using the IntelliJ IDE (default: "")
-* `--quiet/-q` - Turn off console messages
-* `--projects/-p` - Collect project containers information
-* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
-* `--clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
-
-After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
-
-For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
