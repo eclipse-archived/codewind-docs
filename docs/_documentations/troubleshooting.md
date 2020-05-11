@@ -29,7 +29,6 @@ The following sections contain workarounds for issues that you might encounter w
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
-* [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
 
 ## IDE Troubleshooting
@@ -805,34 +804,6 @@ To assist with problem determination, raise the default Codewind server log leve
 - In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
 - In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
-# Executable file not found on PATH in VS Code
-<!--
-Action/Topic: Executable file not found on PATH in VS Code
-Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/1682
-Solution: https://github.com/eclipse/codewind/issues/1682#issuecomment-572649328
-Info added in 0.11.0.
--->
-Codewind will not work if it cannot find the `docker` executable in any of the paths specified in the `PATH` environment variable. The error message is similar to the following:
-```
-exec: "docker": executable file not found in $PATH
-```
-First, make sure `docker` is installed and that you can run it from the command line. The terminal used does not have to be a terminal within VS Code. Run the following command:
-```
-$ docker --version
-Docker version 19.03.8, build afacb8b
-```
-Make sure the output is similar to this example.
-
-If you can run `docker` from the command line, but Codewind still fails to find `docker`, it's possible that VS Code is using a different `PATH` than the terminal you used. To make sure the terminal and VS Code are using the same `PATH`, perform the following steps:
-
-1. Make sure you can run VS Code from the command line. The executable is `code`.
-  - On Windows and Linux, you can run VS Code from the command line immediately after installation by running `code`.
-  - For macOS, follow the additional step, [Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
-2. Close all instances of VS Code.
-3. Open the terminal you ran `docker` from and run `code`.
-4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
-
 <!--
 Action/Topic: Collecting log files and environment data
 Issue type: info
@@ -920,6 +891,7 @@ The following list describes common problems that might affect Codewind.
 
 - [Codewind output stream](#codewind-output-stream)
 - [Finding the extension logs](#finding-the-extension-logs)
+- [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
 - [Build succeeded, but project is stuck in the Stopped state](#build-succeeded-but-project-is-stuck-in-the-stopped-state)
 - [No ESLint warnings or errors](#no-eslint-warnings-or-errors)
 - [Debug](#debug)
@@ -941,6 +913,34 @@ If you report an issue, you will be asked to upload your logs.
 3. Enter *codewind.log* in the **Filter** box:
 <br>![Log location](images/cdt-vsc/logs-location.png)
 4. Upload the contents of the log file with your issue report.
+
+## Executable file not found on PATH in VS Code
+<!--
+Action/Topic: Executable file not found on PATH in VS Code
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/1682
+Solution: https://github.com/eclipse/codewind/issues/1682#issuecomment-572649328
+Info added in 0.11.0.
+-->
+Codewind will not work if it cannot find the `docker` executable in any of the paths specified in the `PATH` environment variable. The error message is similar to the following:
+```
+exec: "docker": executable file not found in $PATH
+```
+First, make sure `docker` is installed and that you can run it from the command line. The terminal used does not have to be a terminal within VS Code. Run the following command:
+```
+$ docker --version
+Docker version 19.03.8, build afacb8b
+```
+Make sure the output is similar to this example.
+
+If you can run `docker` from the command line, but Codewind still fails to find `docker`, it's possible that VS Code is using a different `PATH` than the terminal you used. To make sure the terminal and VS Code are using the same `PATH`, perform the following steps:
+
+1. Make sure you can run VS Code from the command line. The executable is `code`.
+  - On Windows and Linux, you can run VS Code from the command line immediately after installation by running `code`.
+  - For macOS, follow the additional step, [Launching from the command line](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
+2. Close all instances of VS Code.
+3. Open the terminal you ran `docker` from and run `code`.
+4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
 
 ## Build succeeded but project is stuck in the Stopped state
 If your project fails to start, check the application logs for anything that might indicate the failure.
