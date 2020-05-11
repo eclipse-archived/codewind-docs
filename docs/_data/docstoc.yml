@@ -37,10 +37,10 @@
       children:
       - title: 'Installing Eclipse Che for Codewind'
         url: che-installinfo.html
-      - title: 'Adding an image registry in Codewind in Che'
-        url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: che-createcodewindworkspace.html
+      - title: 'Adding an image registry in Codewind in Che'
+        url: che-setupregistries.html
       - title: 'Making a code change with Codewind for Eclipse Che'
         url: che-codechange.html
       - title: 'Creating your first Codewind project with Codewind for Eclipse Che'

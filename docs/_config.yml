@@ -20,3 +20,5 @@ collections:
     output: true
   blog:
     output: true
+  guides:
+    output: true
