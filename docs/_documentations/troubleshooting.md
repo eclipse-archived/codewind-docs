@@ -504,7 +504,25 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 ## Node.js and Swift templates remain in the starting state
 The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, its status cannot be detected. These templates do not have a server and are intended to help you implement your own server.
 
-**Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continueously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
+**Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link:
+-->
+## Kafka templates remain in the starting state
+
+The `Kafka` templates for the Appsody `Quarkus` and `Spring Boot` application stacks remain in the starting state when you create a project using them. These projects require users to configure a Kafka instance to connect to in order to run correctly. Additionally, these templates do not expose an endpoint at the `/` path that Codewind attempts to ping, since these projects are not meant to be REST-style applications.
+
+**Workaround** Refer to the documentation for the respective stacks to find out how to configure a Kafka to work with the applications:
+
+- [Quarkus](https://github.com/appsody/stacks/tree/master/incubator/quarkus#kafka-template)
+- [Spring Boot](https://github.com/appsody/stacks/tree/master/incubator/java-spring-boot2/templates/kafka)
+
+You should also [configure the project's health check endpoint](project-settings.html#health-check-endpoint) for Codewind to ping instead of the `/` path. 
+
+Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
 <!--
 Action/Topic: Appsody with Codewind
