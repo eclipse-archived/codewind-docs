@@ -1,8 +1,8 @@
 ---
 layout: guide
-title: Codewind in Eclipse
+title: "Codewind in Eclipse"
 categories: guides 
-guide_description: Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use.
+guide_description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
 permalink: codewind-eclipse-quick-guide
 duration: 5 minutes
 tags: Codewind, Eclipse, microservice
