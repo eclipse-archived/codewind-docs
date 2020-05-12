@@ -145,6 +145,20 @@ If you cannot install a keychain, enable insecure keychain mode. If you enable t
 
 If you use `cwctl` directly, use the `--insecure-keyring` command line argument or set `INSECURE_KEYRING=true` in the environment. To get the IDE plug-ins to use the insecure keyring, set `INSECURE_KEYRING=true` in the environment before launching the IDE from that same environment.
 
+<!--
+Action/Topic: Failed to connect to remote Codewind instance
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2863
+0.12.0: New
+-->
+##  Operator install failed to connect to remote Codewind instance
+When installing Codewind remotely, you get a `Account is not fully set up` error message. 
+
+**Workaround**
+If you have set a temporary password by clicking the `Temporary` check box to `On`, log in to Keycloak to set a new one.
+
+For more information, see [Add a new user to Keycloak](remote-deploying-codewind.html#3-add-a-new-user-to-keycloak).
+
 ***
 # Upgrading Codewind
 
