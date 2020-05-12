@@ -1,0 +1,47 @@
+{% include header-fixedtop.html %}
+{% assign t = site.guides %}
+
+<!-- GUIDES -->
+<div id="background-container">
+    <div id="guides-container" class="container-fluid">
+        
+        <div class="row">
+            
+            <div class="col-lg-12">
+                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                {% assign count = 1 %}
+                {% for post in site.guides reversed %}
+
+                    <div class="row guides-post-row">
+                        <div class="guides-post-column col">
+                            
+                                <div class="guides-post-content guides-content">
+                                    <h2 class="guides-post-title"><a href="{{ post.url | relative_url }}" class="guides-post-title-link">{{ post.title | escape }}</a></h2>
+                                    <p class="guides-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}</p>
+                                    <p class="guides-post-paragraph">
+                                        {% if post.guide_description %}
+                                            {{ post.guide_description }}
+                                        {% else %}
+                                            {{ post.content | strip_html | truncatewords: 60 }}
+                                        {% endif %}
+                                    </p>
+   
+                                    <div class="read-more-link-container ">
+                                        <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    {% assign count = count | plus: 1 %}
+                {% endfor %}
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+
+{% include body-end.html %}

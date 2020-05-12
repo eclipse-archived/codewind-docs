@@ -3,7 +3,7 @@ email: codewind-dev@eclipse.org
 description: Eclipse Codewind
 keywords: Eclipse, docker, container, devops, applications, development, iteration, microservices, cloud, services, rapid, integrated
 baseurl: "/codewind"
-
+future: true
 # Build settings
 markdown: kramdown
 theme: minima
@@ -17,4 +17,8 @@ collections:
   news:
     output: true
   newsarchive:
+    output: true
+  blog:
+    output: true
+  guides:
     output: true

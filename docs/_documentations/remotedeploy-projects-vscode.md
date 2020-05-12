@@ -49,16 +49,14 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 
 `myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
-# Congratulations! In this tutorial you:
+# Next Steps
+
+You have now:
 
 1. Deployed a new Codewind install into OpenShift.
 2. Configured your IDE to use this new deployment.
 3. Registered all the necessary security parameters.
 4. Created a new project that builds and runs in the cloud.
 5. Copied an existing local project to build and run in the cloud.
-
-# Next Steps
-
-For how to remove an existing Codewind deployment, see [Remove a remote deployment of Codewind](./remote-removing.html)
 
 To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)

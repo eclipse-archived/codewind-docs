@@ -7,7 +7,7 @@
       children:
       - title: 'Installing Codewind for VS Code'
         url: vsc-getting-started.html
-      - title: 'Creating your first VS Code Codewind project'
+      - title: 'Creating your first Codewind project with Codewind for VS Code'
         url: vsc-firstproject.html
       - title: 'Making a code change with VS Code'
         url: vsc-codechange.html
@@ -15,19 +15,34 @@
       children:
       - title: 'Installing Codewind for Eclipse'
         url: eclipse-getting-started.html
-      - title: 'Creating your first Eclipse Codewind project'
+      - title: 'Creating your first Codewind project with Codewind for Eclipse'
         url: eclipse-firstproject.html
       - title: 'Making a code change with Eclipse'
         url: eclipse-codechange.html
+    - title: 'IntelliJ'
+      children:
+      - title: 'Installing Codewind for IntelliJ'
+        url: intellij-getting-started.html
+      - title: 'Creating your first Codewind project with Codewind for IntelliJ'
+        url: intellij-firstproject.html
+      - title: 'Making a code change with IntelliJ'
+        url: intellij-codechange.html
+
+- title: 'Using Codewind as a hosted application on the cloud'
+  children:
+    - title: 'Overview'
+      url: eclipseche-codewind-overview.html
     - title: 'Eclipse Che'
       children:
       - title: 'Installing Eclipse Che for Codewind'
         url: che-installinfo.html
-      - title: 'Adding an image registry in Codewind in Che'
-        url: che-setupregistries.html
       - title: 'Creating a Codewind workspace in Che'
         url: che-createcodewindworkspace.html
-      - title: 'Creating your first project with Codewind for Eclipse Che'
+      - title: 'Adding an image registry in Codewind in Che'
+        url: che-setupregistries.html
+      - title: 'Making a code change with Codewind for Eclipse Che'
+        url: che-codechange.html
+      - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
         url: che-createfirstproject.html
       - title: 'Configuring Codewind for Tekton pipelines'
         url: che-tektonpipelines.html
@@ -37,29 +52,9 @@
         url: openshiftregistry.html
       - title: 'Uninstalling Codewind for Eclipse Che'
         url: che-uninstall.html
-    - title: 'IntelliJ'
-      children:
-      - title: 'Installing Codewind for IntelliJ'
-        url: intellij-getting-started.html
-      - title: 'Creating your first IntelliJ Codewind project'
-        url: intellij-firstproject.html
-      - title: 'Making a code change with IntelliJ'
-        url: intellij-codechange.html
 
 - title: 'Deploying Codewind remotely'
-  children:   
-    - title: 'Overview: Deploying Codewind remotely'
-      url: remote-overview.html
-    - title: 'Deploying your remote Codewind instance'
-      children:
-      - title: 'Deploying remote Codewind all-in-one'
-        url: remotedeploy-combo.html
-      - title: 'Deploying remote Codewind components individually'
-        url: remotedeploy-single.html
-      - title: 'Deploying remote Codewind with an existing keycloak'
-        url: remotedeploy-existingkeycloak.html
-    - title: 'Removing a remote Codewind deployment'
-      url: remote-removing.html
+  url: remote-deploying-codewind.html
 
 - title: 'Using Codewind remotely'
   children:
@@ -91,8 +86,12 @@
       url: project-settings.html 
     - title: 'Referencing files external to a project'
       url: referencing-files.html
-    - title: Using Codewind offline
+    - title: 'Developing with packages from private registries and repositories'
+      url: private-registries.html  
+    - title: 'Using Codewind offline'
       url: offline-codewind.html
+    - title: 'Debugging in Codewind'
+      url: debugging.html
       
 - title: 'Performance monitoring'
   children:

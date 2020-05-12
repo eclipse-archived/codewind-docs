@@ -10,30 +10,28 @@ type: document
 
 # Overview: Using Codewind remotely
 
-Codewind can be used in one of three ways - locally, [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications. 
+Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications.  
 
-# What you will learn
+Follow the instructions to get started with using Codewind remotely. This will guide you through: 
 
-You will learn how to configure your local Codewind to connect to an instance of Codewind in the cloud and then build and run a project in the cloud. 
+1. Configuring your local IDE's Codewind extension to connect to Codewind in the cloud
+2. Registering all necessary security parameters
+3. Creating a new project that builds and runs in the cloud
+4. Building and running an existing project in the cloud
 
-After you install your local IDE and configure Codewind for local use, you will follow these steps to deploy Codewind to the cloud:
+### Prerequisites
 
-1. Configure your IDE to connect to Codewind in the cloud
-2. Register all necessary security parameters
+Before using Codewind remotely, you must:
 
-Once you have connected your local Codewind to Codewind in the cloud, you will learn how to:
-
-1. Create a new project that builds and runs in the cloud
-2. Build and run an existing project in the cloud
-
-## Prerequisites
-
-Before deploying Codewind to the cloud, you must:
-
-1. **Install your preferred IDE on your local machine.** 
-For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
+1. **Install Codewind into your preferred IDE on your local machine.** 
+For more information, select from the following IDEs:
+- [Getting started with Codewind for Eclipse](./eclipse-getting-started.html)
+- [Getting started with Codewind for VS Code](./vsc-getting-started.html)
+- [Getting started with Codewind for IntelliJ](./intellij-getting-started.html)
 
 2. **Have access to a keyring** A keyring is a software application designed to store security credentials, such as usernames, passwords, and keys, together with a small amount of relevant metadata. Examples of a keyring are Keychain on macOS, Credential Manager on Windows, and Secret Service on Linux.
+
+3. **Deploy Codewind to the cloud** If Codewind has not been deployed to your cluster, follow these instructions to [deploy Codewind remotely](./remote-deploying-codewind.html).
 
 ### Next Steps
 

@@ -6,8 +6,6 @@ keywords: using, run, monitor, getting started,  builds, changes, status, state,
 duration: 1 minute
 permalink: checkingstatuses
 type: document
-parent: usingcodewind
-order: 7
 ---
 
 # Understanding application and build statuses
@@ -28,6 +26,7 @@ The application status shows the current state of your application.
 ## Build status
 
 The build status shows the current stage of your application in the build lifecycle.
+* **Note:** Appsody projects do not display build status.
 * When you create or import your application, the state is **Unknown**.
 * The project is then subsequently put in a build queue. When a project is in the build queue, its build state is **Queued**. The default maximum number of builds that can be run concurrently is three.
 * If your build fails, inspect the build logs. Open the build logs from the project's context menu. In the build logs, you can view error messages that describe the type and cause of failure.

@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "name": "Debug stats",
+            "request": "attach",
+            "address": "127.0.0.1",
+            "localRoot": "/Users/stevenhung/git/stats/stats",
+            "remoteRoot": "/app",
+            "restart": true
+        }
+    ]
+}

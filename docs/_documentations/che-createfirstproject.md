@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Creating your first project with Codewind for Eclipse Che
-description: Creating your first project with Codewind for Eclipse Che
+title: Creating your first Codewind project with Codewind for Eclipse Che
+description: Creating your first Codewind project with Codewind for Eclipse Che
 keywords: build, deploy, install, installing, installation, chart, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
 permalink: che-createfirstproject
 type: document
 ---
 
-# Creating your first project with Codewind for Eclipse Che
+# Creating your first Codewind project with Codewind for Eclipse Che
 
 **Note:** If you already have projects in your Che workspace, such as from your devfile, add them to Codewind with the **Add Existing Project** command instead of the **Create New Project** command.
 
@@ -25,6 +25,7 @@ type: document
 The Codewind Project Explorer view shows two statuses.
 - The first status is the application status, which tells you if the application is running, stopped, or starting.
 - The second status is the build status, which tells you what the most recent status of the build was, such as if the build succeeded, failed, or produced a specific error. For example, the build status can tell you if the deployment failed.
+- **Note:** Appsody projects do not display build status.
 
 1. After the project finishes building, its build status changes to **Build Succeeded**.
 2. After the application is built and deployed, the appliction status changes to **Starting**.

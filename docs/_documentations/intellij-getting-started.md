@@ -8,7 +8,30 @@ permalink: intellij-getting-started
 type: document
 ---
 
-# Installing Codewind for IntelliJ: Tech Preview
+# Getting Started with Codewind
+
+**Important:** Codewind for Intellij is currently a Tech Preview
+
+There are three ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, **you can try out Codewind by using the local configuration**. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
+
+Follow the instructions to get started with using Codewind locally. This will guide you through:
+
+1. Installing Codewind into your IDE on your local machine
+2. Creating your first project
+3. Making a code change to try out the inner loop experience
+
+Select your IDE to get started:
+
+* [VS Code](./vsc-getting-started.html#installing-codewind-for-vs-code)
+* [Eclipse](./eclipse-getting-started.html#installing-codewind-for-eclipse) 
+* [IntelliJ](./intellij-getting-started.html#installing-codewind-for-intellij)
+
+**The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).
+
+### Installing Codewind for IntelliJ
+
+**Important:** Codewind for Intellij is currently a Tech Preview
+
 Install Codewind for IntelliJ to develop your containerized projects from within IntelliJ.
 
 To install Codewind for IntelliJ, complete the following steps:
@@ -26,4 +49,6 @@ To install Codewind for IntelliJ, complete the following steps:
 3. Click the **Marketplace** tab.
 4. In the search field, type `codewind`.  The `Codewind` plug-in appears. Click **Install**.
 
-Next step: [Creating your first IntelliJ Codewind project](intellij-firstproject.html)
+### After Installation
+
+**Getting started with Codewind - next steps** Continue to instructions for [create your first IntelliJ Codewind Project](./intellij-firstproject.html).

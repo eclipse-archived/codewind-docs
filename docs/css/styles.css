@@ -68,6 +68,14 @@ code {
 	padding-right: 33px;
 }
 
+.cw-header-link-blog {
+	padding-right: 33px;
+}
+
+.cw-header-link-guides {
+	padding-right: 33px;
+}
+
 .cw-header-link-docs {
 	padding-right:45px;
 }
@@ -572,7 +580,15 @@ code {
 	.cw-header-link-news {
 	    padding-right: 18px;
 	}
-	
+    
+    .cw-header-link-blog {
+	    padding-right: 18px;
+    }
+    
+    .cw-header-link-guides {
+	    padding-right: 18px;
+	}
+    
 	.cw-header-link-docs {
 		padding-right: 26px;
 	}

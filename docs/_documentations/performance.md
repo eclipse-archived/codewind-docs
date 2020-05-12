@@ -20,7 +20,7 @@ You will learn how to add and enable monitoring to your application. Then, you c
 
 ## Prerequisites
 
-- VS Code, Eclipse, or Eclipse Che
+- Eclipse, Eclipse Che, IntelliJ, or VS Code
 - A Codewind installation
 
 ## Accessing the Performance Dashboard

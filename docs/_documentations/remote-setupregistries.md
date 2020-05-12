@@ -10,18 +10,14 @@ type: document
 
 # Adding an image registry in remote Codewind
 
-## Prerequisite: Determining if you need an image registry 
-1\. First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
-- In the following scenario, configure Codewind with an image registry to push the application image to that specific image registry:
-    - Run Codewind on a remote Kubernetes cluster to develop a Codewind style project.
-- In the following scenario, configure Codewind to use the credentials for a specific image registry:
-    - Run Codewind on a remote Kubernetes cluster to develop an Appsody style project.
-    - The image registry for the Appsody stack requires credentials.
-- In the following scenario, from the command line, enter the `docker login` command in the registry before you create the Appsody project:
-    - Run Codewind locally to develop an Appsody style project.
-    - The container registry for the Appsody stack requires credentials. 
-If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, you do not need to specify an image registry.
-2\. If you do need to add an image registry, start and run your IDE.
+## Determining if you need to set an image registry 
+You need to set credentials for an image registry if you:
+* Build a project with a dockerfile that pulls from a non-public image registry. 
+* Work with Appsody projects that pull stack images from a non-public image registry. 
+* Use Codewind remotely. Set at least one image registry that Codewind can push built project images to. If you have multiple registries configured, you can select one of them to be the push registry. 
+
+
+When you add an image registry, Codewind logs you into the image registry on your local machine as if you had locally run `docker login`. 
 
 ## Adding an image registry in Codewind
 After your IDE is started and running, add the image registry to be used with Codewind.

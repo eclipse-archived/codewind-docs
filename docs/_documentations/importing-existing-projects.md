@@ -6,29 +6,41 @@ keywords: importing, directory, archive, configuring, cloud, microservices, appl
 duration: 1 minute
 permalink: importing-existing-projects
 type: document
-parent: importingaproject
-order: 0
 ---
 
 # Importing existing projects
 
-Modifications are usually required to successfully add and deploy projects that have never been run in Codewind before. This tutorial covers the basics of configuring a project to run in Codewind.
+Configure a project to run in Codewind.
+
+## Importing projects from IDEs
+
+Add a project from an existing Git repository:
+
+1. Clone the repository to your local computer.
+2. Use the **Add Existing Project** command to add the project to Codewind.
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
-Local projects are built and run on Docker. To import your project to a local Codewind instance, it must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
+Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/). **Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
 
-Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, it must include a Dockerfile and a Helm chart. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and for more information about Helm charts, see [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and [Helm chart documentation](https://helm.sh/docs/topics/charts/).
+
+To import your own project into Codewind, follow these same requirements. Make sure to select the **Other (Basic Container)** option as the project type.
 
 ## What kind of projects can I add?
 
-Codewind is designed to develop cloud-native microservices. Therefore, each project must be self-sufficient, so not reliant on other projects to build. The requirements to add projects for each of the supported application types are outlined in the following sections:
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. When using Codewind and determining the projects you want to develop, consider:
+
+* To simplify enhancement in containers and deploy cloud-native applications, work with [Codewind-style projects](https://www.eclipse.org/codewind/overview.html). 
+* To work with application stacks that deploy cloud applications to Kubernetes, work with [Appsody-style projects](https://appsody.dev/docs). 
+* To deploy applications on an OpenShift or OKD cluster, work with [OpenShift Do (odo)-style projects](https://www.eclipse.org/codewind/che-odo-support.html). 
+
+Codewind also contains a special build engine for the following languages. To utilize the build engine, see the following setup guides: 
 
 * [MicroProfile/Java EE projects](#microprofilejava-ee-projects)
 * [Java Spring projects](#java-spring-projects)
 * [Node.js projects](#nodejs-projects)
 * [Swift projects](#swift-projects)
-* [Generic Docker projects](#generic-docker-projects)
 * [Appsody projects](#appsody-projects) 
 
 ## MicroProfile/Java EE projects
@@ -101,7 +113,7 @@ Configure your `pom.xml` file as follows:
   
 3\. Add the required Liberty Maven plug-in configuration:
 
-- Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
+- Add the `server.xml` Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
 
   ```xml
   <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>
@@ -193,10 +205,6 @@ Requirements:
 - Ensure the project can be built by using a `release` build configuration.
 
 For example, you can build the project by using the command: `swift build --configuration release`.
-
-## Generic Docker projects
-
-If you have a Dockerized application that does not fit an existing template, you can still add the project to Codewind by selecting the **Other (Basic Container)** option as the project type. For the application state detection to work, the Dockerfile needs to include an `EXPOSE` instruction to point to the port that is used to determine whether the project is running.
 
 ## Appsody projects
 
