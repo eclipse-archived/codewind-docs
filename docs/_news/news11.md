@@ -2,7 +2,7 @@
 layout: news
 title: New for Codewind 0.11.0
 description: New for Codewind 0.11.0
-keywords: news, new, updates, update, version, hybrid
+keywords: news, new, updates, update, version, IntelliJ
 duration: 1 minute
 permalink: news11
 ---
