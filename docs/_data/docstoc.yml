@@ -2,10 +2,11 @@
   url: overview.html
 
 - title: 'Getting started'
-  url: gettingstarted.html
   children:
+    - title: 'Getting started'
+      url: gettingstarted.html
     - title: 'VS Code'
-      children:
+      children:        
       - title: 'Installing Codewind for VS Code'
         url: vsc-getting-started.html
       - title: 'Creating your first Codewind project with Codewind for VS Code'
