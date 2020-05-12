@@ -10,7 +10,7 @@ type: document
 
 # Getting Started with Codewind
 
-**Important** Codewind for Intellij is currently a Tech Preview
+**Important:** Codewind for Intellij is currently a Tech Preview
 
 There are three ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, **you can try out Codewind by using the local configuration**. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
 
@@ -25,13 +25,6 @@ Select your IDE to get started:
 * [VS Code](./vsc-getting-started.html#installing-codewind-for-vs-code)
 * [Eclipse](./eclipse-getting-started.html#installing-codewind-for-eclipse) 
 * [IntelliJ](./intellij-getting-started.html#installing-codewind-for-intellij)
-
-**Codewind on Eclipse Che** if you want to go straight to using codewind as a hosted application in the cloud, follow [these instructions](./che-installinfo.html).
-
-**Using Codewind Remotely** If you want to use codewind remotely, **you must first [follow the step to install codewind locally](##installing-codewind-for-vs-code)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. Once you have installed Codewind remotely, you can proceed to either:
-
-1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
-2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
 
 **The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).
 
@@ -59,8 +52,3 @@ To install Codewind for IntelliJ, complete the following steps:
 ### After Installation
 
 **Getting started with Codewind - next steps** Continue to instructions for [create your first IntelliJ Codewind Project](./intellij-firstproject.html).
-
-**Installing Codewind for remote use** If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the pre-requisite step of installing Codewind on your local machine and can proceed to:
-
-1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
-2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).

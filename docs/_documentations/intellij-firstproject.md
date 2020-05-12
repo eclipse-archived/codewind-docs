@@ -40,8 +40,3 @@ Congratulations, you have now created, built and run your first Codewind project
 Choose from the following:
 
 **Getting started with Codewind - next steps** Continue to instructions for [making a code change with IntelliJ](./intellij-codechange.html) to see the auto-build-and-run feature in action.
-
-**Installing Codewind for remote use** If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the prerequisite step of installing Codewind on your local machine and can now proceed: 
-
-1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
-2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).

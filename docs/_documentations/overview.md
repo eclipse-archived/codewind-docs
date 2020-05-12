@@ -59,7 +59,7 @@ Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://w
 
 Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both:
 
-1. **Use Codewind locally:** Your IDE, with the Codewind extension installed, and Docker Desktop or your local Docker Engine and Docker Compose installations if you're using Linux, is all you need to build and run containerized applications on your desktop.
+1. **[Use Codewind locally:](gettingstarted.html)** Your IDE, with the Codewind extension installed, and Docker Desktop or your local Docker Engine and Docker Compose installations if you're using Linux, is all you need to build and run containerized applications on your desktop.
 
 2. **Use Codewind as a hosted application on your cloud:** Both your IDE with the Codewind extension installed and your containerized applications are located in your cloud environment.
 
