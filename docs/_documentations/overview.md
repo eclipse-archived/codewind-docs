@@ -59,11 +59,11 @@ Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://w
 
 Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both:
 
-1. **Use Codewind locally:** Your IDE, with the Codewind extension installed, and Docker Desktop or your local Docker Engine and Docker Compose installations if you're using Linux, is all you need to build and run containerized applications on your desktop.
+1. **[Use Codewind locally:](gettingstarted.html)** Your IDE, with the Codewind extension installed, and Docker Desktop or your local Docker Engine and Docker Compose installations if you're using Linux, is all you need to build and run containerized applications on your desktop.
 
-2. **Use Codewind as a hosted application on your cloud:** Both your IDE with the Codewind extension installed and your containerized applications are located in your cloud environment.
+2. **[Use Codewind as a hosted application on your cloud:](./che-installinfo.html)** Both your IDE with the Codewind extension installed and your containerized applications are located in your cloud environment.
 
-3. **Use Codewind remotely:** Your IDE with the Codewind extension installed is hosted on your desktop, but the building and running of your microservice take place in your cloud environment. Using secure HTTPS connections, you connect to your multiple cloud-hosted microservices from the Codewind panel in your desktop-hosted IDE.
+3. **[Use Codewind remotely:](./remote-codewind-overview.html)** Your IDE with the Codewind extension installed is hosted on your desktop, but the building and running of your microservice take place in your cloud environment. Using secure HTTPS connections, you connect to your multiple cloud-hosted microservices from the Codewind panel in your desktop-hosted IDE.
 
 ### What preconfigured containerized projects does Codewind provide?
 Codewind provides preconfigured [project templates](workingwithtemplates.html) covering several languages, including [Node.js](https://nodejs.dev/), [Java](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/) and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/).
