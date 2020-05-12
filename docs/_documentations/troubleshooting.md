@@ -151,7 +151,7 @@ Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/2863
 0.12.0: New
 -->
-##  Operator install failed to connect to remote Codewind
+##  Operator install failed to connect to remote Codewind instance
 When installing Codewind remotely, you get a `Account is not fully set up` error message. 
 
 **Workaround**
