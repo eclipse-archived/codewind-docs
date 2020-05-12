@@ -5,7 +5,7 @@
     <div id="sidebar-container" class="bg-light"  role="navigation" aria-label="sidebar">
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top bg-light cw-sticky-offset">
-            
+
             {% for levelone in site.data.docstoc %}
 
 				{% if levelone.children %}
@@ -17,7 +17,7 @@
 				<div class="cw-sidebar-div cw-sidebar-submenu collapse" id="{{ hash }}">
 
 					{% for leveltwo in levelone.children %}
-					
+
 						{% if leveltwo.children %}
 
 							{% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" %}
@@ -25,7 +25,7 @@
 							<a href="#{{ hashtwo }}" id="#{{ hashtwo }}" class="bg-light list-group-item list-group-item-action flex-column align-items-start" data-toggle="collapse" data-parent="#{{ hash }}" aria-expanded="false">{{ leveltwo.title }}<span class="submenu-icon"></span></a>
 
 							<div class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" id="{{ hashtwo }}">
-								
+
 									{% for levelthree in leveltwo.children %}
 										<a href="{{ levelthree.url }}" class="bg-light list-group-item" data-parent="#{{ hashtwo }}" data-url="{{ levelthree.url }}">{{ levelthree.title }}</a>
 									{% endfor %}
@@ -33,17 +33,18 @@
 						{% else %}
 							<a href="{{ leveltwo.url }}" class="bg-light list-group-item" data-parent="#{{ hash }}" data-url="{{ leveltwo.url }}">{{ leveltwo.title }}</a>
 						{% endif %}
-					
+
 					{% endfor %}
 				</div>
 				{% else %}
 				<a href="{{ levelone.url }}" class="bg-light list-group-item list-group-item-action flex-column align-items-start" data-url="{{ levelone.url }}">
 					{{ levelone.title }}
 				</a>
+
 				{% endif %}
 
 			{% endfor %}
-            
+
         </ul>
         <!-- List Group END-->
     </div>
@@ -54,29 +55,25 @@
     		    <div class="cw-docs-spacer"></div>
         		<div role="main">{{ content }}</div>
         </div>
-        
+
         <div class="py-5 px-5 text-right">
         Last update: {{ page.last_modified_at| date: '%b %d, %Y'}}
         </div>
-        
+
     </div>
-    
+  </div>
 </div>
 {% include footer.html %}
 <!-- Main Col END -->
- {% include body-end.html %}
- 
- 
- 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
- <script>
-$(document).ready(function(){
-	
-    anchors.options.placement = 'left';
-    anchors.add('h1');
-    anchors.add('h2');
-    anchors.add('h3');
-    anchors.add('h4');
-});
+{% include body-end.html %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+  $(document).ready(function () {
+    anchors.options.placement = "left";
+    anchors.add("h1");
+    anchors.add("h2");
+    anchors.add("h3");
+    anchors.add("h4");
+  });
 </script>
- 

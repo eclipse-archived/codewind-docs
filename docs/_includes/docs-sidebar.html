@@ -1,0 +1,88 @@
+<div id="sidebar-container" class="bg-light" role="navigation" aria-label="sidebar">
+    <!-- Bootstrap List Group -->
+    <ul class="list-group sticky-top bg-light cw-sticky-offset">
+
+        <!-- Start single page getting started -->
+
+
+        {% for entry in site.data.docstoc %}
+        {% if entry.children %}
+
+        {% assign children1 = entry.children %}
+
+
+
+        {% assign hash = '#' | append: entry.title | downcase | replace: " ", "_" %}
+        {% assign anchor = entry.title | downcase | replace: " ", "_" %}
+
+        <a href="{{ hash }}" data-url="{{entry.url}}" data-toggle="collapse" aria-expanded="false"
+            class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="menu-collapsed">{{ entry.title }}</span>
+                <span class="submenu-icon"></span>
+            </div>
+        </a>
+
+        <div id="{{ anchor }}" class="cw-sidebar-div cw-sidebar-submenu collapse" style="">
+            {% for entry1 in children1 %}
+            {% if entry1.children %}
+
+            {% assign children2 = entry1.children %}
+
+
+
+            {% assign hash2 = '#' | append: entry1.title | downcase | replace: " ", "_" %}
+            {% assign anchor2 = entry1.title | downcase | replace: " ", "_" %}
+
+            <a href="{{ hash2 }}" data-toggle="collapse" aria-expanded="false"
+                class="bg-light list-group-item list-group-item-action flex-column align-items-start collapsed">
+                {{ entry1.title }}
+                <span class="submenu-icon"></span>
+            </a>
+
+            <!-- 3d level - eclipse -->
+            <div id="{{ anchor2 }}" class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" style="">
+
+
+                {% for entry2 in children2 %}
+
+
+                <a href="{{ entry2.url }}" {% assign cls2 = "bg-light list-group-item list-group-item-action" %}
+                    {% assign url2 = '/' | append: entry2.url | remove: ".html" %} {% if url2 == page.url %}
+                    {% assign cls2 = "cw-current-page bg-light list-group-item list-group-item-action" %} {% endif %}
+                    class="{{cls2}}">
+                    {{entry2.title}}
+                </a>
+                {% endfor %}
+
+            </div>
+
+            {% else %}
+
+            <a href="{{ entry1.url }}" {% assign cls1 = "bg-light list-group-item list-group-item-action" %}
+                {% assign url1 = '/' | append: entry1.url | remove: ".html" %} {% if url1 == page.url %}
+                {% assign cls1 = "cw-current-page bg-light list-group-item list-group-item-action" %} {% endif %}
+                class="{{cls1}}">
+                {{ entry1.title }}
+            </a>
+
+            {% endif %}
+
+
+            {% endfor %}
+        </div>
+        {% else %}
+
+        <a href="{{ entry.url }}" {% assign cls = "bg-light list-group-item list-group-item-action" %}
+            {% assign url = '/' | append: entry.url | remove: ".html" %} {% if url == page.url %}
+            {% assign cls = "cw-current-page bg-light list-group-item list-group-item-action" %} {% endif %}
+            class="{{cls}}">
+            {{ entry.title}}
+        </a>
+
+        {% endif %}
+        {% endfor %}
+
+    </ul>
+    <!-- List Group END-->
+</div>
