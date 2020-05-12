@@ -17,7 +17,7 @@ type: document
  1. working with templates that are hosted on non-public image registries.
  2. building projects in the cloud.
  
-When building projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a deployment image registry on your Kubernetes cluster. 
+When building Dockerfile-based projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a deployment image registry.
 
 You must [add the image registry](#adding-an-image-registry-in-codewind) to Codewind if your deployment image registry requires credentials.
 

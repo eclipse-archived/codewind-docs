@@ -9,23 +9,24 @@ type: document
 ---
 # Using Codewind as a hosted application on the cloud
 
-Codewind can be used in one of three ways - [locally](./vsc-getting-started.html), [remotely](./remote-codewind-overview.html), or **hosted as an application on the cloud**. By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind via a browser window from your local desktop.
+Codewind can be used in one of three ways - [locally](./vsc-getting-started.html), [remotely](./remote-codewind-overview.html), or **hosted as an IDE extension on the cloud**. By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind via a browser window from your local desktop.
 
 Follow the instructions to get started with using Codewind as an application hosted on the cloud. This will guide you through:
 
 1. Installing Eclipse Che to use with Codewind or update an existing Eclipse Che installation to use Codewind
 2. Configuring Codewind on Eclipse Che to work with your browser and cluster.
-2. Creating a Codewind connection by:
-- adding an image registry
+2. Creating and configuring a Codewind workspace:
 - Creating a Codewind workspace in Eclipse Che
+- Adding an image registry in Eclipse Che (optional)
+
 4. Creating your first Codewind project 
 5. Making a code change to try out the inner loop experience 
 
 ### Other Codewind configurations
 
-**A quick way to try out Codewind before installing Codewind as a hosted application in your cloud is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by- step instructions.
+**A quick way to try out Codewind before installing Codewind on Eclipse Che is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by- step instructions.
 
-**Using Codewind Remotely** If you want to use the other cloud-based configuration of Codewind, **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. 
+**Using Codewind Remotely** For an alternative way of using  cloud-based configuration of Codewind, **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. 
 
 # Installing Eclipse Che for Codewind
 
@@ -102,6 +103,6 @@ Run the following command, where `$NAMESPACE` is the namespace that your Che wor
 ```
 $ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
 ```
-### After Installation
+### Next steps
 
-**Getting started with Codewind for Eclipse Che - next steps** Continue to instructions for [configuring codewind for Eclipse Che to your browser and cluster](./che-browserconfig.html).
+**Getting started with Codewind for Eclipse Che - next steps** Continue to instructions for [configuring codewind for Eclipse Che for your browser and cluster](./che-browserconfig.html).

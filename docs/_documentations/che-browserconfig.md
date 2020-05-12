@@ -9,7 +9,7 @@ type: document
 ---
 # Configuring Codewind on Eclipse Che with your browser and cluster
 
-Ensure you have completed the [prerequisites to installing Codewind on Eclipse Che](./che-installinfo.html#prerequisites) and also [installed Codewind on Eclipse Che](./che-installinfo.html#choose-from-the-following-instructions).
+Ensure you have completed the [prerequisites to installing Codewind on Eclipse Che](./che-installinfo.html#prerequisites).
 
 If you installed Eclipse Che with **self-signed certificates**, or if self-signed certificates are being used for communication between your browser and your cluster, follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser). **important: do not use self-signed certificates in production**
 
@@ -54,7 +54,7 @@ On Windows, follow these steps:
 
 ### Additional instructions for Openshift
 
-**Running on OpenShift with self-signed certificates** If you are running with self-signed certificates, follow these instructions to download the router's ca.crt / _follow these steps to export the router certificate from your cluster and import it into your browser_ :
+**Running on OpenShift with self-signed certificates** If you are running with self-signed certificates, follow these instructions to export the router certificate from your cluster and import it into your browser:
 
 1. Authenticate against your OpenShift cluster, or ask your cluster administrator to do so.
 2. Run the following command to download the router's `ca.crt`:
