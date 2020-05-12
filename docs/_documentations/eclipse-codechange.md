@@ -42,7 +42,7 @@ icon to show your code change running.
  
 If you would like to use Codewind with your cloud, choose from the following:
 
-**Using Codewind as a hosted application in the cloud** See the [Codewind on Eclipse Che instrcutions](./eclipseche-codewind-overview.html)
+**Using Codewind as a hosted application in the cloud** See the [Codewind on Eclipse Che instructions](./eclipseche-codewind-overview.html)
 
 **Installing Codewind for remote use** You have now completed all the steps to get started with Codewind. If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the prerequisite step of installing Codewind on your local machine  and can now proceed:
 
