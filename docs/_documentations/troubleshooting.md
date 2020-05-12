@@ -515,7 +515,7 @@ Issue link:
 
 The `Kafka` templates for the Appsody `Quarkus` and `Spring Boot` application stacks remain in the starting state when you create a project using them. These projects require users to configure a Kafka instance to connect to in order to run correctly. Additionally, these templates do not expose an endpoint at the `/` path that Codewind attempts to ping, since these projects are not meant to be REST-style applications.
 
-**Workaround** Refer to the documentation for the respective stacks to find out how to configure a Kafka to work with the applications:
+**Workaround** Refer to the documentation for the respective stacks to find out how to configure a Kafka instance to work with the applications:
 
 - [Quarkus](https://github.com/appsody/stacks/tree/master/incubator/quarkus#kafka-template)
 - [Spring Boot](https://github.com/appsody/stacks/tree/master/incubator/java-spring-boot2/templates/kafka)
