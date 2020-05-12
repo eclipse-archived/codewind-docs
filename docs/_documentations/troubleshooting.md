@@ -502,7 +502,7 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
 ## Node.js and Swift templates remain in the starting state
-The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, its status cannot be detected. These templates do not have a server and are intended to help you implement your own server.
+The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, their statuses cannot be detected. These templates do not have a server and are intended to help you implement your own server.
 
 **Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
