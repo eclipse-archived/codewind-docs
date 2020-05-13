@@ -11,9 +11,9 @@ duration: 2 minutes
 tags: [IntelliJ]
 ---
 
-Over the past few months we've been hard at work creating a plugin for IntelliJ IDEA to add support for Codewind. This is a tech preview, because there are still some fundamental features to be implemented, but we have made significant progress.
+Over the past few months, we've been hard at work creating a Codewind plugin for IntelliJ IDEA. This is a tech preview, because there are still some fundamental features to be implemented, but we have made significant progress.
 
-Our first tech-preview release included basic support for Codewind, and last month we added the ability to show the log files, open the performance dashboard, and debug projects.
+Our [first tech-preview release](https://www.eclipse.org/codewind/introducing-eclipse-codewind-on-intellij.html){:target="_blank"} included basic support for Codewind, and last month we added the ability to show the log files, open the performance dashboard, and debug projects.
 
 This month, we've added the support for opening the application metrics dashboard, and the ability to open a shell into the application container.  Stay tuned for more function to be delivered next month.
 
