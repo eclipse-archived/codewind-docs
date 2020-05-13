@@ -15,15 +15,15 @@ Thursday 14, May 2020
 We're working to bring you a true Codewind experience with IntelliJ and are pleased to present:
 
 - Codewind for IntelliJ [supports the application metrics dashboard and the **Inject metrics** function](https://github.com/eclipse/codewind/issues/2386).
-- You can [open a shell into the running application container](https://github.com/eclipse/codewind/issues/2030)
+- You can [open a shell into the running application container](https://github.com/eclipse/codewind/issues/2030).
 - You will be [notified of log changes, even when the log is not currently selected](https://github.com/eclipse/codewind/issues/2269).
 - When a project is opened in a new window, via actions such as reload due to new projoect creation or restart in debug mode (etc), [the project will be pre-selected in the Codewind view](https://github.com/eclipse/codewind/issues/2037).
 
 **Codewind Quick Guides**
 
-Introducing... Quick Guides! Now that we have [this framework in place](https://github.com/eclipse/codewind-docs/pull/553), we hope to make it easier for you to get started. Check out our first two available [guides](https://www.eclipse.org/codewind/guides.html) today!
+Introducing quick guides! Now that we have [this framework in place](https://github.com/eclipse/codewind-docs/pull/553), we hope to make it easier for you to get started. Check out our first two available [guides](https://www.eclipse.org/codewind/guides.html) today!
 
-Need a quick guide to help you with a particular project? Let us know or help write one by contributing in [Github](https://github.com/eclipse/codewind). 
+Need a quick guide to help you with a particular project? Let us know or help write one by contributing in [GitHub](https://github.com/eclipse/codewind). 
 
 **IDEs**
 ##### VS Code and Eclipse
@@ -41,14 +41,14 @@ Need a quick guide to help you with a particular project? Let us know or help wr
 
 #### List of Fixes
 - In Codewind for Eclipse:
-    - A timeout error was shown when cancelling the debug attach job. This is fixed, and it [no longer clears out the launches when the debug job is terminated so you can still view the console output for the launch](https://github.com/eclipse/codewind/issues/2790). 
-    - In the **Add Existing Project** wizard, [if the browse button is used to select a project from the file system, the radio button no longer switches back to selecting a project from the workspace](https://github.com/eclipse/codewind/issues/2704).
+    - A timeout error was shown when canceling the debug attach job. This is fixed, and it [no longer clears out the launch when a debug job is terminated, so you can still view the console output for the launch](https://github.com/eclipse/codewind/issues/2790). 
+    - In the **Add Existing Project** wizard, [if you use the **Browse** button to select a project from the file system, the radio button no longer switches back to selecting a project from the workspace](https://github.com/eclipse/codewind/issues/2704).
     - [The **New Connection** wizard is visually enhanced to fit with the dark mode setting in Linux](https://github.com/eclipse/codewind/issues/2645).
 - In Codewind for VS Code:
-    - [You will see a warning when no template sources are enabled](https://github.com/eclipse/codewind-vscode/pull/563). 
+    - [A warning appears when no template sources are enabled](https://github.com/eclipse/codewind-vscode/pull/563). 
     - [Accidentally inputting the wrong credentials no longer sends the remote connection into an authentication loop](https://github.com/eclipse/codewind-vscode/pull/566).
-    - [The error messaging is improved when trying to restart a project in an invalid state](https://github.com/eclipse/codewind-vscode/pull/568).
-    - [You will see an error message if a problem is encountered when fetching the build properties](https://github.com/eclipse/codewind/issues/2610).
+    - [An improved error message appears when trying to restart a project in an invalid state](https://github.com/eclipse/codewind-vscode/pull/568).
+    - [An error message appears if a problem is encountered when fetching the build properties](https://github.com/eclipse/codewind/issues/2610).
     - [The two broken links in the VS Code Welcome Page are fixed](https://github.com/eclipse/codewind/issues/2843).
     - [If Docker is stopped, Codewind will go into stopped state](https://github.com/eclipse/codewind/issues/2840).
 - The [`Appsody-extension` is updated from 0.6.0 to 0.6.1](https://github.com/eclipse/codewind-appsody-extension/pull/103).
