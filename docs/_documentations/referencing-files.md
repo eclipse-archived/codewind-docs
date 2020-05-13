@@ -14,11 +14,11 @@ order: 0
 
 You can define references to files that reside outside of a project.
 
-To do this: 
+To do this:
 1. Create a file called `.cw-refpaths.json` in your project
 2. Define the references as follows:
 
-```
+```json
 {
     "refPaths": [
         {
@@ -30,7 +30,7 @@ To do this:
 ```
 
 Where:
-- `refPaths` is an array of references. A reference's `from` property is an absolute or relative path to the file you are referencing. Note that you cannot reference directories. 
+- `refPaths` is an array of references. A reference's `from` property is an absolute or relative path to the file you are referencing. Note that you cannot reference directories.
 - The reference's `to` property is a path relative to the root of the project.
 
 Codewind copies the contents of the file that is being referenced, and places it in the file specified by the `to` path when building and running the project.
