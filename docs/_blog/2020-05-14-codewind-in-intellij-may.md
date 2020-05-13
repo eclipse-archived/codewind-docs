@@ -6,7 +6,7 @@ author_picture: images/blog/author_icon_john_pitman.png
 author_url:
 author: John Pitman
 blog_description: "Update on support for Codewind in IntelliJ IDEA"
-permalink: codewind-in-intellij-may
+permalink: codewind-in-intellij-may.html
 duration: 2 minutes
 tags: [IntelliJ]
 ---
