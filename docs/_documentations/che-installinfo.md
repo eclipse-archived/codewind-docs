@@ -26,7 +26,7 @@ Follow the instructions to get started with using Codewind as an application hos
 
 **A quick way to try out Codewind before installing Codewind on Eclipse Che is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by- step instructions.
 
-**Using Codewind Remotely** For an alternative way of using  cloud-based configuration of Codewind, **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. 
+**Using Codewind Remotely** Rather than using an IDE hosted in the cloud to make code changes, Codewind can also be configured for making code changes on your **local IDE** before building and running on your cloud. To [configure Codewind to be used remotely](./remote-codewind-overview.html), **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. 
 
 # Installing Eclipse Che for Codewind
 

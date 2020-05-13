@@ -11,19 +11,21 @@ type: document
 
 Ensure you have completed the [prerequisites to installing Codewind on Eclipse Che](./che-installinfo.html#prerequisites).
 
-If you installed Eclipse Che with **self-signed certificates**, or if self-signed certificates are being used for communication between your browser and your cluster, follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser). **important: do not use self-signed certificates in production**
+If you installed Eclipse Che with **self-signed certificates**, or if self-signed certificates are being used for communication between your browser and your cluster, follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser). **Caution: do not use self-signed certificates in production**
 
-**note:** If you completed the [Codewind for Eclipse Che prerequisites and installation steps](./che-installinfo.html) for Kubernetes then you have installed Eclipse Che with self-signed certificates.
+**Note:** If you completed the [Codewind for Eclipse Che prerequisites and installation steps](./che-installinfo.html) for Kubernetes then you have installed Eclipse Che with self-signed certificates.
 
-**If you installed Eclipse Che with certificates signed by a certificate authority** for example with publicly-signed certificates, proceed to the next step [adding an image registry in Codewind on Che](./che-setupregistries.html)
+**You may skip this step and proceed to [adding an image registry in Codewind on Che](./che-setupregistries.html) if**:
 
-**If you are running on Openshift** and installed Eclipse Che with self-signed certificates, then you must also perform [additional steps](./che-browserconfig.html#additional-instructions-for-openshift) to:
+- you installed Eclipse Che with certificates signed by a certificate authority For more information about how to *install Eclipse Che with a certificate signed by a certificate authority' see [ADD LINK](). 
+- your cluster uses publicly-signed certificates for example, Openshit on IBM Cloud
+- you are not using certificates **Caution: this is not advised**
+
+**If you are running on Openshift** then you must also perform [additional steps](./che-browserconfig.html#additional-instructions-for-openshift) to:
 - Download the Openshift router's Certificate Authority certificates and import into your browser
 - Enable Codewind to run as privileged and as root
 
-For more information about *installing Eclipse Che with a certificate signed by a certificate authority' see [ADD LINK]().
-
-For more information about how to test whether your Eclipse Che installation is secure [ADD LINK](hhtp://myserver.com)
+For more information about how to test whether your Eclipse Che installation is secure you can use [ADD LINK](hhtp://myserver.com)
 
 ### Adding certificates for Che to your browser
 
