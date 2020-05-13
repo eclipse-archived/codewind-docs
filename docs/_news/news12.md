@@ -50,7 +50,7 @@ Need a quick guide to help you with a particular project? Let us know or help wr
     - [An improved error message appears when trying to restart a project in an invalid state](https://github.com/eclipse/codewind-vscode/pull/568).
     - [An error message appears if a problem is encountered when fetching the build properties](https://github.com/eclipse/codewind/issues/2610).
     - [The two broken links in the VS Code Welcome Page are fixed](https://github.com/eclipse/codewind/issues/2843).
-    - [If Docker is stopped, Codewind will go into stopped state](https://github.com/eclipse/codewind/issues/2840).
+    - [If Docker is not running, Codewind goes into stopped state](https://github.com/eclipse/codewind/issues/2840).
 - The [`Appsody-extension` is updated from 0.6.0 to 0.6.1](https://github.com/eclipse/codewind-appsody-extension/pull/103).
 - The [`codewind-openapi-eclipse` version is updated](https://github.com/eclipse/codewind-openapi-eclipse/pull/149).
 - The [`codewind-openapi-vscode` version is updated](https://github.com/eclipse/codewind-openapi-vscode/pull/96).
