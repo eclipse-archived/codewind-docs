@@ -47,7 +47,7 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 Clone the Codewind operator repository, for example: 
 
-`$ git clone https://github.com/eclipse/codewind-operator -b 0.11.0`
+`$ git clone https://github.com/eclipse/codewind-operator -b 0.12.0`
 
 For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 
