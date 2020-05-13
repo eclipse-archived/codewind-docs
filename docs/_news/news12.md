@@ -17,7 +17,7 @@ We're working to bring you a true Codewind experience with IntelliJ and are plea
 - Codewind for IntelliJ [supports the application metrics dashboard and the **Inject metrics** function](https://github.com/eclipse/codewind/issues/2386).
 - You can [open a shell into the running application container](https://github.com/eclipse/codewind/issues/2030).
 - You will be [notified of log changes, even when the log is not currently selected](https://github.com/eclipse/codewind/issues/2269).
-- When a project is opened in a new window, via actions such as reload due to new projoect creation or restart in debug mode (etc), [the project will be pre-selected in the Codewind view](https://github.com/eclipse/codewind/issues/2037).
+- If you open a project in a new window with certain actions, [the project is pre-selected in the Codewind view](https://github.com/eclipse/codewind/issues/2037).
 
 **Codewind Quick Guides**
 
@@ -41,7 +41,7 @@ Need a quick guide to help you with a particular project? Let us know or help wr
 
 #### List of Fixes
 - In Codewind for Eclipse:
-    - A timeout error was shown when canceling the debug attach job. This is fixed, and it [no longer clears out the launch when a debug job is terminated, so you can still view the console output for the launch](https://github.com/eclipse/codewind/issues/2790). 
+    - A timeout error was shown when canceling the debug attach job. This is fixed, and it [no longer clears out the launch when a debug session is terminated, so you can still view the console output for the launch](https://github.com/eclipse/codewind/issues/2790). 
     - In the **Add Existing Project** wizard, [if you use the **Browse** button to select a project from the file system, the radio button no longer switches back to selecting a project from the workspace](https://github.com/eclipse/codewind/issues/2704).
     - [The **New Connection** wizard is visually enhanced to fit with the dark mode setting in Linux](https://github.com/eclipse/codewind/issues/2645).
 - In Codewind for VS Code:
