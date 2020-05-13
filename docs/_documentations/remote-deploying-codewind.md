@@ -10,20 +10,18 @@ type: document
 
 # Deploying Codewind remotely
 
-Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By deploying Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on the cloud, or remotely. 
 
-To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-codewind-overview.html).
+By **deploying and using Codewind remotely**, you can **develop your code locally** using your local Codewind installation, but **build and run your application in the cloud**. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
 
-## What you will learn
-
-You will learn how to deploy Codewind to be used remotely. 
-
-After you install your local IDE and configure Codewind for local use, you will:
+Follow the instructions to deploy Codewind remotely. After you install your local IDE and configure Codewind for local use, you will:
 
 1. Install the Codewind operator in your cloud.
 2. Deploy your Codewind instances. 
 
-Finally, you will learn how to remove a remote deployment of Codewind.
+**Note: To learn how to connect your local IDE to your remote deployment of Codewind once it has been deployed remotely** see [Using Codewind remotely](remote-codewind-overview.html).
+
+**Note: To remove a remote deployment of Codewind** See [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
 
 ## Prerequisites
 
