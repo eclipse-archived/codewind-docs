@@ -30,6 +30,10 @@
     color: #292828;
 }
 
+.guides-post-row {
+    width: 100%;
+}
+
 .guides-post-content {
     width: 100%;
     padding-top: 5px;
