@@ -17,7 +17,7 @@ We're working to bring you a true Codewind experience with IntelliJ and are plea
 - Codewind for IntelliJ [supports the application metrics dashboard and the **Inject metrics** function](https://github.com/eclipse/codewind/issues/2386).
 - You can [open a shell into the running application container](https://github.com/eclipse/codewind/issues/2030).
 - You will be [notified of log changes, even when the log is not currently selected](https://github.com/eclipse/codewind/issues/2269).
-- If you open a project in a new window with certain actions, [the project is pre-selected in the Codewind view](https://github.com/eclipse/codewind/issues/2037).
+- If you open a project in a new window with certain actions, [the project is preselected in the Codewind view](https://github.com/eclipse/codewind/issues/2037).
 
 **Codewind Quick Guides**
 
