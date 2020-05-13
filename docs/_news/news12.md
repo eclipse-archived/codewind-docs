@@ -46,7 +46,7 @@ Need a quick guide to help you with a particular project? Let us know or help wr
     - [The **New Connection** wizard is visually enhanced to fit with the dark mode setting in Linux](https://github.com/eclipse/codewind/issues/2645).
 - In Codewind for VS Code:
     - [A warning appears when no template sources are enabled](https://github.com/eclipse/codewind-vscode/pull/563). 
-    - [Accidentally inputting the wrong credentials no longer sends the remote connection into an authentication loop](https://github.com/eclipse/codewind-vscode/pull/566).
+    - [Accidentally inputting the wrong credentials no longer sends the remote connection into a loop](https://github.com/eclipse/codewind-vscode/pull/566).
     - [An improved error message appears when trying to restart a project in an invalid state](https://github.com/eclipse/codewind-vscode/pull/568).
     - [An error message appears if a problem is encountered when fetching the build properties](https://github.com/eclipse/codewind/issues/2610).
     - [The two broken links in the VS Code Welcome Page are fixed](https://github.com/eclipse/codewind/issues/2843).
