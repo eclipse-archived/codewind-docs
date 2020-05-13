@@ -3,7 +3,7 @@
 
 - title: 'Getting started'
   children:
-    - title: 'Getting started'
+    - title: 'Overview: Getting started'
       url: gettingstarted.html
     - title: 'VS Code'
       children:        
@@ -32,7 +32,7 @@
 
 - title: 'Using Codewind as a hosted application on the cloud'
   children:
-    - title: 'Overview'
+    - title: 'Overview: Using Codewind as a hosted application on the cloud'
       url: eclipseche-codewind-overview.html
     - title: 'Eclipse Che'
       children:

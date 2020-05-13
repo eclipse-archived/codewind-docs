@@ -8,7 +8,9 @@ permalink: overview
 type: document
 ---
 
-# What is Codewind?
+# Overview: Getting started
+
+### What is Codewind?
 
 Developing and building a cloud-native, containerized application can be challenging. 
 
