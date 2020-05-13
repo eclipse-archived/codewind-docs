@@ -45,7 +45,7 @@ Use the **Template Source Manager** to perform the following actions:
 
 ## Creating your own templates
 
-Add your own template sources to use in the **Template Source Manager**.
+Add your own template sources to use in the **Template Source Manager**. These instructions are generally performed by an application architect.
 
 - **Prerequisites:** Build and run templates that use languages and frameworks that are compatible with Codewind. Appsody, Maven, and Node.js styles built with Docker are supported.
 
