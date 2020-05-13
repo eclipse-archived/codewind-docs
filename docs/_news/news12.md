@@ -25,6 +25,11 @@ Introducing quick guides! Now that we have [this framework in place](https://git
 
 Need a quick guide to help you with a particular project? Let us know or help write one by contributing in [GitHub](https://github.com/eclipse/codewind). 
 
+**Offline Support**
+Sometimes you need to use internal-only resources or are restricted by factors outside your control. Codewind supports these types of development modes by [providing offline support](https://github.com/eclipse/codewind/issues/1991), and you won't lose your work if you [lose internet connection](https://github.com/eclipse/codewind/issues/2080).
+
+To read more about Codewind offline support, visit our [documentation](https://www.eclipse.org/codewind/offline-codewind.html). You can also read our [blog about working with private registries](https://www.eclipse.org/codewind/working-with-private-registries.html). 
+
 **IDEs**
 ##### VS Code and Eclipse
 - [The **Open Container Shell** action is available for Remote/Kubernetes projects](https://github.com/eclipse/codewind/issues/822).
