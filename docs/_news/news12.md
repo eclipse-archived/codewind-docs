@@ -47,10 +47,10 @@ Need a quick guide to help you with a particular project? Let us know or help wr
 - In Codewind for VS Code:
     - [A warning appears when no template sources are enabled](https://github.com/eclipse/codewind-vscode/pull/563). 
     - [Accidentally inputting the wrong credentials no longer sends the remote connection into a loop](https://github.com/eclipse/codewind-vscode/pull/566).
-    - [An improved error message appears when trying to restart a project in an invalid state](https://github.com/eclipse/codewind-vscode/pull/568).
-    - [An error message appears if a problem is encountered when fetching the build properties](https://github.com/eclipse/codewind/issues/2610).
+    - [An improved error message appears when trying to restart a project that currently can't be restarted](https://github.com/eclipse/codewind-vscode/pull/568).
+    - [An error message appears if a problem is encountered when fetching the build properties while checking if `cwctl` is up-to-date](https://github.com/eclipse/codewind/issues/2610).
     - [The two broken links in the VS Code Welcome Page are fixed](https://github.com/eclipse/codewind/issues/2843).
-    - [If Docker is not running, Codewind goes into stopped state](https://github.com/eclipse/codewind/issues/2840).
+    - [If Docker is stopped while Codewind is running, Codewind goes into a stopped state](https://github.com/eclipse/codewind/issues/2840).
 - The [`Appsody-extension` is updated from 0.6.0 to 0.6.1](https://github.com/eclipse/codewind-appsody-extension/pull/103).
 - The [`codewind-openapi-eclipse` version is updated](https://github.com/eclipse/codewind-openapi-eclipse/pull/149).
 - The [`codewind-openapi-vscode` version is updated](https://github.com/eclipse/codewind-openapi-vscode/pull/96).
