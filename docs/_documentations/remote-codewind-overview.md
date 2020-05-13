@@ -10,14 +10,18 @@ type: document
 
 # Overview: Using Codewind remotely
 
-Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on a cloud, or remotely. By using Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up your desktop resources, using the cloud's resources to build and run applications.  
+Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on the cloud, or remotely. 
 
-Follow the instructions to get started with using Codewind remotely. This will guide you through: 
+By **deploying and using Codewind remotely**, you can **develop your code locally** using your local Codewind installation, but **build and run your application in the cloud**. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+
+Follow the instructions to get started with **using Codewind remotely**. This will guide you through: 
 
 1. Configuring your local IDE's Codewind extension to connect to Codewind in the cloud
 2. Registering all necessary security parameters
 3. Creating a new project that builds and runs in the cloud
 4. Building and running an existing project in the cloud
+
+**Note: Deploying Codewind remotely** Before using Codewind remotely, Codewind must be deployed to the cloud. If you do not have a remote deployment of Codewind you must follow instructions to [deploy Codewind remotely](./remote-deploying-codewind.html) before [connecting your local Codewind to the cloud](./remote-codewind-overview.html).
 
 ### Prerequisites
 
