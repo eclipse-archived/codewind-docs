@@ -21,7 +21,7 @@ We're working to bring you a true Codewind experience with IntelliJ and are plea
 
 **Codewind Quick Guides**
 
-Introducing quick guides! Now that we have [this framework in place](https://github.com/eclipse/codewind-docs/pull/553), we hope to make it easier for you to get started. Check out our first two available [guides](https://www.eclipse.org/codewind/guides.html) today!
+Introducing quick guides! Now that we have [this framework in place](https://github.com/eclipse/codewind-docs/pull/553), we hope to make it easier for you to get started. Check out our first two available [guides](./guides.html) today!
 
 Need a quick guide to help you with a particular project? Let us know or help write one by contributing in [GitHub](https://github.com/eclipse/codewind). 
 
