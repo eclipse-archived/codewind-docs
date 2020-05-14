@@ -170,4 +170,3 @@ In this quick guide, you have learned to:
 See other quick guides to learn how to develop with Codewind:
 
 * [Codewind in VS Code](codewind-vscode-quick-guide.html)
-* [Codewind in Minikube](codewind-minikube-quick-guide.html)
