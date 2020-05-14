@@ -37,7 +37,7 @@ Install Codewind for IntelliJ to develop your containerized projects from within
 To install Codewind for IntelliJ, complete the following steps:
 
 ### Prerequisites
-- Install [IntelliJ](https://www.jetbrains.com/idea/download/#section=mac)  version 2019.3.5.
+- Install [IntelliJ](https://www.jetbrains.com/idea/download/#section=mac) version 2019.3.5.
 - Install Docker.
 - If you use Linux, also install Docker Compose.
 
