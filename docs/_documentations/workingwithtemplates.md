@@ -66,7 +66,7 @@ projects:
       location: <The GitHub URL of the template location>
 ```
 
-4. In the same GitHub repository where you saved the template source folders, create an `index.json` file. In this file, add the following values for each of the templates that you want to work with in Codewind:
+4\. In the same GitHub repository where you saved the template source folders, create an `index.json` file. In this file, add the following values for each of the templates that you want to work with in Codewind:
 
 ```json
 {
@@ -80,8 +80,9 @@ projects:
 }
 ```
 
-- For an example `index.json` file, see the [`index-json` file](https://github.com/codewind-resources/codewind-templates/blob/master/devfiles/index.json) in the `codewind-templates` repository.
-5. To add the templates to Codewind, open your IDE and access the **Template Source Manager**.
+For an example `index.json` file, see the [`index-json` file](https://github.com/codewind-resources/codewind-templates/blob/master/devfiles/index.json) in the `codewind-templates` repository.
+
+5\. To add the templates to Codewind, open your IDE and access the **Template Source Manager**.
 
 ## Adding your template sources to Codewind
 
