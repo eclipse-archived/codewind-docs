@@ -51,6 +51,12 @@ For more detailed information about the Codewind operator and the install proces
 
 ## 2. Install the operator into your cluster and deploy Keycloak
 
+Installing the operator into your cluster is a three step process comprising:
+1. Installing the operator.
+2. Changing the admin password for the admin user.
+3. Updating the Keycloak password in the operator secret.
+
+### 2a. Installing the operator
 Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
 
 `$ install.sh operator -i <ingress_domain>`
@@ -63,7 +69,7 @@ The script installs the operator into your cluster, deploys Keycloak, and return
 
 **Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URL for Keycloak, enter the following command:
 
-`$ kubectl get keycloak -n codewind`
+`$ kubectl get keycloaks -n codewind`
 
 The command returns the following example output:
 
@@ -72,9 +78,48 @@ NAME       NAMESPACE   AGE    ACCESS
 devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain>
 ```
 
+### 2b. Changing the admin password for the admin user
+
+You must prepare Keycloak for Codewind by changing the admin password given to the `admin` user in the previous step. 
+
+1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. If you cannot locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
+
+2. Log in to Keycloak using the Keycloak admin credentials.
+        username: `admin`
+        password: `admin`
+
+3. **Important:**: After you log in, change the admin password by clicking the **Admin** link on the page. Then choose **Manage Account / Password** and set a new replacement administrator password.
+
+4. Switch back to the admin console using the link or log out and log back in to Keycloak as the admin user with your new admin password.
+
+You have updated the Keycloak password. The next step updates the Keycloak secret to match it. 
+
+### 2c. Updating the Keycloak password in the operator secret
+
+When the Codewind Operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default during initial deployment, that secret has a user name and password of **admin**. If you changed your admin password in a previous step, you need to update the Keycloak secret to match.
+
+The secret is installed in the same namespace as the codewind operator and is named `secret-keycloak-user-{keycloakname}`.
+
+If you have an administration UI for your cluster, you can use it to locate the secret and edit the `keycloak-admin-password` field, or you can use the command line tools:
+
+`$ kubectl edit secret secret-keycloak-user-{keycloakname} -n codewind`
+
+or
+
+`$ oc edit secret secret-keycloak-user-{keycloakname} -n codewind`
+
+Note: Using the command line tools requires an extra step to base64 encode your password string before saving it into the secret. You can base64 encode your new password using this command:
+
+```bash
+$ echo -n 'myNewPassword' | base64
+bXlOZXdQYXNzd29yZA==
+```
+
+Then, save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rather than the clear text `myNewPassword`.
+
 ## 3. Add a new user to Keycloak
 
-1. Copy the **Access URL** and paste it into a browser.
+1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. If you cannot locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
 
 2. Click **Administration Console** and log in to Keycloak with `admin` as the default login user name and `admin` as the default password.
 
