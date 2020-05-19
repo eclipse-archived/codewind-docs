@@ -23,7 +23,7 @@ Remote debugging is the same as local debugging with the following exceptions:
 - Install `kubectl` or `oc` and make sure you are logged in to your cluster.
 - After the project restarts in debug mode, Codewind automatically sets up a port forward from the application's debug port to a port on your local machine.
 **Starting a debug session**
-   - In Eclipse, for Node.js projects, a launch is created for the port forward that appears in the Debug view. In Eclipse, for Java projects, the port forward is added as a process to the debug launch instead of a separate port forward launch.
+   - In Eclipse, for Node.js projects, a launch is created for the port forward that appears in the Debug view. For Java projects, the port forward is added as a process to the debug launch.
    - In VS Code, the port forward is run as a VS Code task, which appears in the Terminal view.
 **Ending a debug session**
    - In Eclipse, for Node.js applications where you use a Chromium-based browser for debugging, manually end the associated port forwarding process in the Debug view if you end the debug session in your browser.
