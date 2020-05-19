@@ -1,52 +1,3 @@
-$(function() {
-    $( "a[class*='cw-current-page']" ).each ( function() {
-        $(this).parentsUntil( $( "ul" ), ".cw-sidebar-div" ).each( function () {
-            $(this).prev("a[data-toggle='collapse']" ).each( function () {
-                $(this).trigger("click");
-            })
-        });
-    });
-    
-    var location = window.location;
-    var pathname = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
-
-    
-    var clicked = false;
-    $(':not(a[data-url=""])').each ( function() {
-        
-        if ($(this).data('url') == pathname) {
-        		clicked = true;
-            $(this).trigger("click");
-        }
-        
-    });
-    
-    $(':not(a[data-url=""])').on("click", function(e) {
-
-		if ($(this).data("url") && !clicked) {
-			window.location.replace($(this).data("url"));
-		}
-	});
-    
-	$('a[href^="#"]').not('.list-group-item').on("click", function(e) {
-	    	
-			e.preventDefault();
-			var id = $($(this).attr('href'));
-	   
-	    if (id.length === 0) {
-	        return;
-	    }
-	    
-	    var pos = id.offset().top - 131;
-	
-	    // animated top scrolling
-	    $('body, html').animate({scrollTop: pos});
-    });  
-	
-	activeOSInstruction();
-   
-});
-
 function detectOS() {
 	var os="windows";
 	if (navigator.appVersion.indexOf("Mac")!=-1) os="mac";
@@ -62,3 +13,37 @@ function activeOSInstruction() {
 	$('.cw-tab-link[data-os="'+os+'"]').addClass('active');
 	$('.cw-tab-pane[data-os="'+os+'"]').addClass('active');
 }
+
+$( document ).ready(function() {
+    var location = window.location;
+	var pathname = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+	
+	// Syncs the sidebar to the current page
+	$('#sidebar-container a').each(function( i ) {
+		if ($(this)[0].hasAttribute("data-url")){			
+
+
+			if($(this).attr('data-url') === pathname){
+				// Add the class to highlight the selected item in the sidebar
+				$(this).addClass("cw-current-page");
+				
+				// Our sidebar supports three levels, so need to iterate up to open up
+				// the menus so the selected item can be shown
+				var parentID = $(this).attr("data-parent");
+				if (parentID && parentID != ""){
+					$(parentID).collapse();
+
+					var grandparentID = "[id=\"" + parentID + "\"]";
+					if (grandparentID && grandparentID != ""){
+						var grandparent =  $(grandparentID).attr("data-parent");
+						$(grandparent).collapse();
+					}
+				}
+				// Stop the .each as we found the required URL
+				return false;
+			}
+		}
+	});
+
+	activeOSInstruction();
+});

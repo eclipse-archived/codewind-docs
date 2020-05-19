@@ -10,26 +10,28 @@ type: document
 
 # Deploying Codewind remotely
 
-Codewind can be used in one of three ways - [locally](./local-codewind-overview), [hosted](./eclipseche-codewind-overview.html) as an application on a cloud, or remotely. By deploying Codewind remotely, you can develop your code locally, but build and run your application in the cloud. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
+Codewind can be used in one of three ways - [locally](./gettingstarted.html), [hosted](./che-installinfo.html) as an application on the cloud, or remotely. 
 
-To learn how to use Codewind once it has been deployed remotely, see [Using Codewind remotely](remote-codewind-overview.html).
+By **deploying and using Codewind remotely**, you can **develop your code locally** using your local Codewind installation, but **build and run your application in the cloud**. Remote use of Codewind frees up desktop resources, using the cloud's resources to build and run applications. 
 
-## What you will learn
-
-You will learn how to deploy Codewind to be used remotely. 
-
-After you install your local IDE and configure Codewind for local use, you will:
+Follow the instructions to deploy Codewind remotely. After you install your local IDE and configure Codewind for local use, you will:
 
 1. Install the Codewind operator in your cloud.
 2. Deploy your Codewind instances. 
 
-Finally, you will learn how to remove a remote deployment of Codewind.
+**Note: To learn how to connect your local IDE to your remote deployment of Codewind once it has been deployed remotely** see [Using Codewind remotely](remote-codewind-overview.html).
+
+**Note: To remove a remote deployment of Codewind** See [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
 
 ## Prerequisites
 
 Before deploying Codewind to the cloud, you must:
 
-1. **Install your preferred IDE on your local machine.** For more information about installing Eclipse, see [Getting started with Codewind for Eclipse](eclipse-getting-started.html), or for more information about installing VS Code, see [Getting started with Codewind for VS Code](vsc-getting-started.html).
+1. **Install Codewind into your preferred IDE on your local machine.** 
+For more information, select from the following IDEs:
+- [Getting started with Codewind for Eclipse](./eclipse-getting-started.html)
+- [Getting started with Codewind for VS Code](./vsc-getting-started.html)
+- [Getting started with Codewind for IntelliJ](./intellij-getting-started.html)
 
 2. **Have an active Kubernetes context and log in to the cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 
@@ -43,7 +45,7 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 Clone the Codewind operator repository, for example: 
 
-`$ git clone https://github.com/eclipse/codewind-operator -b 0.11.0`
+`$ git clone https://github.com/eclipse/codewind-operator -b 0.12.0`
 
 For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 

@@ -21,17 +21,19 @@ Add a project from an existing Git repository:
 
 ## Requirements for importing an existing project not created in Codewind or through Appsody or Odo
 
-Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/).
-**Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
+Local projects are built and run on Docker. To import your project to a local Codewind instance, you must include a Dockerfile. For more information about Dockerfiles, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/). **Note:** The Dockerfile must contain an `EXPOSE` instruction to point to the port that the project runs on.
 
 Remote projects are built and run on Kubernetes. To import your project to a remote Codewind instance, you must include a Dockerfile and a Helm chart. For more information about Dockerfiles and Helm charts, see [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/) and [Helm chart documentation](https://helm.sh/docs/topics/charts/).
 
+To import your own project into Codewind, follow these same requirements. Make sure to select the **Other (Basic Container)** option as the project type.
+
 ## What kind of projects can I add?
 
-Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. 
+Codewind develops cloud-native microservices. Therefore, each project must be self-sufficient, not reliant on other projects to build. When using Codewind and determining the projects you want to develop, consider:
 
-To import your own project into Codewind, follow the requirements outlined in [Requirements for importing an existing project not created in Codewind or through Appsody or Odo](#Requirements-for-importing-an-existing-project-not-created-in-Codewind-or-through-Appsody-or-Odo).
-Make sure to select the **Other (Basic Container)** option as the project type.
+* To simplify enhancement in containers and deploy cloud-native applications, work with [Codewind-style projects](https://www.eclipse.org/codewind/overview.html). 
+* To work with application stacks that deploy cloud applications to Kubernetes, work with [Appsody-style projects](https://appsody.dev/docs). 
+* To deploy applications on an OpenShift or OKD cluster, work with [OpenShift Do (odo)-style projects](https://www.eclipse.org/codewind/che-odo-support.html). 
 
 Codewind also contains a special build engine for the following languages. To utilize the build engine, see the following setup guides: 
 
@@ -111,7 +113,7 @@ Configure your `pom.xml` file as follows:
   
 3\. Add the required Liberty Maven plug-in configuration:
 
-- Add the `server.xml`Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
+- Add the `server.xml` Liberty server configuration file located in the source folder that is referenced in the `pom.xml` file.
 
   ```xml
   <configFile>${basedir}/src/main/liberty/config/server.xml</configFile>

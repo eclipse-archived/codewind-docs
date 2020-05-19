@@ -22,7 +22,7 @@ Install Che to use with Codewind or prepare to use Codewind with an existing Che
    - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
    - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
 3. Set up the ClusterRole for Codewind:
-`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml`
+`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml`
 
 ## Installing Che with chectl
 
@@ -31,7 +31,7 @@ Install Eclipse Che with HTTPS so that Codewind functions properly. See the [Ins
 ### Installing Che
 The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. To install the `chectl` CLI tool, see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
-After you install `chectl`, download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
+After you install `chectl`, download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
  - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
 
 **Installing on OpenShift:**
@@ -70,7 +70,7 @@ If you already have a Che installation with TLS, you can update it for Codewind.
 
 Run the following command, where `$NAMESPACE` is the namespace that your Che workspaces run in. By default, this namespace is `che`.
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
+$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
 ```
 
 ## Adding certificates for Che to your browser
