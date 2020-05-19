@@ -10,20 +10,22 @@ type: document
 
 # Adding an image registry in Codewind in Che
 
-## Prerequisite: Determining if you need an image registry for building your projects in the cloud
+## Prerequisite: Determining if you need an image registry for building your Docker-based projects in the cloud
 
  Codewind uses image registries for the following purposes:
 
  1. working with templates that are hosted on non-public image registries.
  2. building projects in the cloud.
  
-When building Dockerfile-based projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a deployment image registry.
+When building Dockerfile-based projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a container image registry.
 
-You must [add the image registry](#adding-an-image-registry-in-codewind) to Codewind if your deployment image registry requires credentials.
+You must [add the image registry](#adding-an-image-registry-in-codewind) to Codewind if your container image registry requires credentials.
 
 **If you are developing a Codewind or Appsody style project** the image deployment registry that Codewind can use is based on the style of project you are developing on your cloud: 
 
-- **Codewind style project** Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
+- **Codewind style project** Codewind needs an image registry and an account on that image registry. 
+
+Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
 
 - **Appsody style project** The image registry for the Appsody stacks ADD LINK TO REGISTRY requires credentials. 
 

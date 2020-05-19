@@ -65,7 +65,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 
 **Installing on OpenShift:**
 
-Eclipse Che on OpenShift makes use of the Openshiftrouter's existing certificates. 
+Eclipse Che on OpenShift makes use of the Openshift router's existing certificates. 
 Run the following command to install Che on OpenShift with `chectl`: 
    ```
    $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
