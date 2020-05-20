@@ -79,7 +79,7 @@ Set up Eclipse Che with TLS certificates.
 2. Determine your Ingress domain.
     - Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain.
     - If you're unsure of your Ingress domain, ask your cluster administrator.
-3. Generate TLS certificates and keys. For more information, see_ADD_ or_  [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **important: do not use self-signed certificates in production**
+3. Generate TLS certificates and keys. To use self-signed certificates for your cluster setup, see [Installing Che in TLS mode with self-signed certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **important:** do not use self-signed certificates in production
 4. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
    ```
    $ kubectl create secret tls che-tls --key=domain.key --cert=domain.crt -n che

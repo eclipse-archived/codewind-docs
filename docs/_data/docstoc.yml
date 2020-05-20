@@ -51,9 +51,9 @@
   children:
   - title: '1. Installing Eclipse Che for Codewind'
     url: che-installinfo.html
-  - title: '2a. Configuring Codewind with your browser and cluster'  
+  - title: '2a Configuring Codewind with your browser and cluster'  
     url: che-browserconfig.html
-  - title: '2b. Downloading Openshift certificates' 
+  - title: '2a. Downloading Openshift certificates' 
     url: che-openshift-certs
   - title: '3. Adding an image registry in Codewind in Che'
     url: che-setupregistries.html 

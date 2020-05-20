@@ -22,7 +22,7 @@ or
 
 - you are using an **Openshift** cluster
 
-follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser). **Caution: do not use self-signed certificates in production**
+follow instructions to [add certificates for Che to your browser](./che-browserconfig.html#adding-certificates-for-che-to-your-browser). **Caution:** do not use self-signed certificates in production
 
 **Note:** If you completed the [Codewind for Eclipse Che prerequisites and installation steps](./che-installinfo.html) for Kubernetes then you have installed Eclipse Che with self-signed certificates.
 
@@ -30,9 +30,7 @@ follow instructions to [add certificates for Che to your browser](./che-browserc
 
 - you installed Eclipse Che with certificates signed by a certificate authority. For more information about how to install Eclipse Che with a certificate signed by a certificate authority, see [ADD LINK](./). 
 - your cluster uses publicly-signed certificates, for example, Openshit on IBM Cloud
-- you are not using certificates **Caution: this is not advised**
-
-For more information about how to test whether your Eclipse Che installation is secure you can use [ADD LINK](hhtp://myserver.com)
+- you are not using certificates **Caution:** this is not advised.
 
 ## Adding certificates for Che to your browser
 

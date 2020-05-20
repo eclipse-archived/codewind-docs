@@ -1,37 +1,36 @@
 ---
 layout: docs
-title: Adding an image registry in Codewind in Che
-description: Adding an image registry in Codewind in Che
+title: Adding image registries in Codewind for Che
+description: AAdding image registries in Codewind for Che
 keywords: container, registry, Che, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
 permalink: che-setupregistries
 type: document
 ---
 
-# Adding an image registry in Codewind in Che
-
-## Prerequisite: Determining if you need an image registry for building your Docker-based projects in the cloud
+# Adding image registries in Codewind in Che
 
  Codewind uses image registries for the following purposes:
 
  1. working with templates that are hosted on non-public image registries.
- 2. building projects in the cloud.
- 
-When building Dockerfile-based projects in the cloud, Codewind on Eclipse Che pushes an image of your built project to a container image registry.
+ 2. building containers in the cloud.
 
-You must [add the image registry](#adding-an-image-registry-in-codewind) to Codewind if your container image registry requires credentials.
+ Determine whether you need to add any image registries to Codewind on Eclipse Che from the following information:
 
-**If you are developing a Codewind or Appsody style project** the image deployment registry that Codewind can use is based on the style of project you are developing on your cloud: 
+## Image registries containing your project templates
+If the container image registry hosting the project templates you are working with requires credentials, you must [add the container image registry](#adding-an-image-registry-in-codewind).
 
-- **Codewind style project** Codewind needs an image registry and an account on that image registry. 
+**Appsody style projects** The image container registry containing the Appsody project templates/APPSODY STACKS? requires credentials. You must therefore add the image registry containing your Appsody-style projects / PROJECT TEMPLATES / STACKS to Codewind.
 
-Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use any registry as long as `buildah` and the node that Codewind is running on can resolve the registry hostname. If `buildah` cannot resolve the registry hostname, `buildah` cannot push your projects to the registry, and deployment on Kubernetes is prevented.
+## Image registries for pushing images to the cloud
 
-- **Appsody style project** The image registry for the Appsody stacks ADD LINK TO REGISTRY requires credentials. 
+When building **Codewind-style projects** in the cloud, Codewind on Eclipse Che pushes an image of your built project to a container image registry located on your cluster. If you are working with Codewind-style projects, SET UP A REGISTRY? CHOOSE A REGISTRY? [add the container image registry](#adding-an-image-registry-in-codewind) located on you cluster.
+
+## Adding an image registry in Codewind
 
 **If you are using Codewind with OKD or Openshift** You can use the OpenShift internal container registry with Codewind. For instructions, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
-## Adding an image registry in Codewind
+To add a non-Openshift image registry to Codewind:
 
 1. Start Codewind for Eclipse Che and ensure the project is running
 2. From the Codewind Project Explorer view, right-click **Projects** and select **Image Registry Manager**.
