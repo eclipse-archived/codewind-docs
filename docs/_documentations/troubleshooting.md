@@ -842,14 +842,14 @@ To assist with problem determination, raise the default Codewind server log leve
 <!--
 Action/Topic: Collecting log files and environment data
 Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/2766
-Info added in 0.12.0.
+Issue link: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930
+Info added in 0.12.0, updated in 0.13.0.
 -->
 
-You can capture diagnostics from your installation by using the `cwctl diagnostics` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.  
+You can capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
 
-The format of the command is: 
-`cwctl diagnostics [command options] [arguments...]`
+The format of the command is:
+`cwctl diagnostics collect [command options] [arguments...]`
 
 Command options are:
 * `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
@@ -858,7 +858,6 @@ Command options are:
 * `--quiet/-q` - Turn off console messages
 * `--projects/-p` - Collect project containers information
 * `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
-* `--clean` - Removes the `diagnostics` directory and all its contents from the Codewind home directory
 
 After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
 
