@@ -19,9 +19,9 @@ Follow the instructions to deploy Codewind remotely. After you install your loca
 1. Install the Codewind operator in your cloud.
 2. Deploy your Codewind instances. 
 
-**Note: To learn how to connect your local IDE to your remote deployment of Codewind once it has been deployed remotely** see [Using Codewind remotely](remote-codewind-overview.html).
+**Note: To learn how to connect your local IDE to your remote deployment of Codewind after it has been deployed remotely**, see [Using Codewind remotely](remote-codewind-overview.html).
 
-**Note: To remove a remote deployment of Codewind** See [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
+**Note: To remove a remote deployment of Codewind**, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme file.
 
 ## Prerequisites
 
@@ -39,24 +39,24 @@ For more information, select from the following IDEs:
 
 4. **Have a Git command line client installed.** To download the latest Git command line client, see [https://git-scm.com/download](https://git-scm.com/download).
 
-## 1. Clone the Codewind operator repository
+## 1. Clone or download the Codewind operator repository
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
 
-Clone the Codewind operator repository, for example: 
+Download the Codewind operator from [this link](https://github.com/eclipse/codewind-operator), or if you have Git installed, clone the Codewind operator repository, for example: 
 
 `$ git clone https://github.com/eclipse/codewind-operator -b 0.12.0`
 
-For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme](https://github.com/eclipse/codewind-operator/blob/master/README.md).
+For more detailed information about the Codewind operator and the install process, see the [Codewind operator readme file](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 
 ## 2. Install the operator into your cluster and deploy Keycloak
 
-Installing the operator into your cluster is a three step process comprising:
-1. Installing the operator.
-2. Changing the admin password for the admin user.
-3. Updating the Keycloak password in the operator secret.
+Installing the operator into your cluster and deploying Keycloak is a three step process comprising:
+1. [Install the operator](#2a-install-the-operator).
+2. [Change the admin password for the admin user](#2b-change-the-admin-password-for-the-admin-user).
+3. [Update the Keycloak password in the operator secret with the new password](#2c-update-the-keycloak-password-in-the-operator-secret-with-the-new-password).
 
-### 2a. Installing the operator
+### 2a. Install the operator
 Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
 
 `$ install.sh operator -i <ingress_domain>`
@@ -65,20 +65,14 @@ Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, f
 
 `$ install.sh operator -i -o <ingress_domain>`
 
-The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**.
-
-**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URL for Keycloak, enter the following command:
-
-`$ kubectl get keycloaks -n codewind`
-
-The command returns the following example output:
+The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**. The command returns the following example output:
 
 ```
 NAME       NAMESPACE   AGE    ACCESS
 devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain>
 ```
 
-### 2b. Changing the admin password for the admin user
+### 2b. Change the admin password for the admin user
 
 You must prepare Keycloak for Codewind by changing the admin password given to the `admin` user in the previous step. 
 
@@ -92,9 +86,9 @@ You must prepare Keycloak for Codewind by changing the admin password given to t
 
 4. Switch back to the admin console using the link or log out and log back in to Keycloak as the admin user with your new admin password.
 
-You have updated the Keycloak password. The next step updates the Keycloak secret to match it. 
+You have updated the Keycloak password. The next step updates the Keycloak password in the operator secret to match it. 
 
-### 2c. Updating the Keycloak password in the operator secret
+### 2c. Update the Keycloak password in the operator secret with the new password
 
 When the Codewind Operator needs to update Keycloak, it uses login credentials saved in a Kubernetes secret. By default during initial deployment, that secret has a user name and password of **admin**. If you changed your admin password in a previous step, you need to update the Keycloak secret to match.
 
@@ -149,12 +143,12 @@ Use the `install.sh` script in the Codewind operator repository to deploy a Code
 `$ install.sh codewind -n <instanceName> -u <registeredUsername>`
 
 Where:
-- `instanceName` is the unique name you specify for this Codewind instance.
-- `registeredUsername` is the name of the user added in [Step 3](#3-add-a-new-user-to-keycloak).
+- `instanceName` is the unique name that you specify for this Codewind instance.
+- `registeredUsername` is the name of the user that you added in [Step 3](#3-add-a-new-user-to-keycloak).
 
-Your Codewind instance is deployed. Access it by copying and pasting the **Access URL** returned by the script into a browser. 
+Your Codewind instance is deployed. Access it by way of the **Access URL** returned by the script in a browser or by copying the URL into a new connection in your IDE.
 
-**Note:** When installing on Windows, the script executes and then closes the Git Bash popup. To retrieve the Access URLs for Codewind, enter the following command:
+**Note:** When you are installing on Windows, the script runs and then closes the Git Bash pop-up. To retrieve the Access URLs for Codewind, enter the following command:
 
 `$ kubectl get codewind -n codewind`
 
@@ -167,7 +161,7 @@ devex001   jane       codewind    119m   devex001   Complete       https://codew
 
 ## 5. Removing a Codewind instance
 
-To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme.
+To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance) in the codewind-operator readme file.
 
 ## Next steps
 
