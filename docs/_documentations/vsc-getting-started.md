@@ -12,7 +12,15 @@ order: 1
 
 There are three ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, you can try out Codewind by using the local configuration. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
 
+<div class="callout">
+    <h4>
+        Callout with header
+    </h4>
+    This is a HTML element
+</div>
+
 Follow the instructions to get started with using Codewind locally. This will guide you through:
+{:.callout}
 
 1. Installing Codewind into your IDE on your local machine
 2. Creating your first project
@@ -21,7 +29,7 @@ Follow the instructions to get started with using Codewind locally. This will gu
 Select your IDE to get started:
 
 * [VS Code](./vsc-getting-started.html#installing-codewind-for-vs-code)
-* [Eclipse](./eclipse-getting-started.html#installing-codewind-for-eclipse) 
+* [Eclipse](./eclipse-getting-started.html#installing-codewind-for-eclipse)
 * [IntelliJ](./intellij-getting-started.html#installing-codewind-for-intellij)
 
 **Codewind on Eclipse Che** If you want to go straight to using Codewind as a hosted application in the cloud, follow [these instructions](./che-installinfo.html).
@@ -35,20 +43,20 @@ Select your IDE to get started:
 
 ### Installing Codewind for VS Code
 
- Install Codewind for Visual Studio Code (VS Code) to develop your containerized projects from within VS Code. 
+ Install Codewind for Visual Studio Code (VS Code) to develop your containerized projects from within VS Code.
 
  To install Codewind for VS Code, complete the following steps:
 
 1. Install [VS Code version 1.41.0 or later](https://code.visualstudio.com/download).
 2. Install [Docker](https://docs.docker.com/install/) 17.06 or later. If you use Linux, you must also install [Docker Compose](https://docs.docker.com/compose/install/).
-3. If you are installing Codewind on Windows, enable your local drive for sharing in Docker. To do this, open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Codewind. 
+3. If you are installing Codewind on Windows, enable your local drive for sharing in Docker. To do this, open the **Docker Settings** window, click the **Shared Drives** tab, and select the drive on which you are installing Codewind.
 4. Install Codewind by clicking [this link](vscode:extension/IBM.codewind) to install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) or by searching for `Codewind` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
     - If you're going to work on Java projects, install the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 5. Open the Codewind view in the [Explorer view group](https://code.visualstudio.com/docs/getstarted/userinterface) or enter `Focus on Codewind View` into the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
     - If you do not see the Codewind view in either the Explorer or the Command Palette, the extension did not install correctly.
 6. Codewind requires the installation of additional Docker images to run. Choose **Install** when prompted to complete the installation. The installation might take a few minutes to complete.
-7. Once complete, you have a **Codewind** section in the IDE. 
-   
+7. Once complete, you have a **Codewind** section in the IDE.
+
 ![image of Codewind once installed](images/installed.png){:width="800px"}
 
 ### After Installation
