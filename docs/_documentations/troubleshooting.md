@@ -853,9 +853,9 @@ The format of the command is:
 
 Command options are:
 * `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
-* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
-* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if using the IntelliJ IDE (default: "")
-* `--quiet/-q` - Turn off console messages
+* `--all/-a` - Collects diagnostics for all defined connections, remote and local
+* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE
+* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if not using the IntelliJ IDE default location
 * `--projects/-p` - Collect project containers information
 * `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
 
