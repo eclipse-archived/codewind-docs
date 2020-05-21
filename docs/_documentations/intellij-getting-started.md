@@ -10,8 +10,6 @@ type: document
 
 # Getting Started with Codewind
 
-**Important:** Codewind for Intellij is currently a Tech Preview
-
 There are three ways of using Codewind - locally, remotely or as a hosted application on the cloud. To get started, **you can try out Codewind by using the local configuration**. In this configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE.
 
 Follow the instructions to get started with using Codewind locally. This will guide you through:
@@ -29,8 +27,6 @@ Select your IDE to get started:
 **The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).
 
 ### Installing Codewind for IntelliJ
-
-**Important:** Codewind for Intellij is currently a Tech Preview
 
 Install Codewind for IntelliJ to develop your containerized projects from within IntelliJ.
 
