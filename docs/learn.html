@@ -168,6 +168,7 @@ redirect_from: gettingstarted
   <div class="row learn-row p-5">
     <div class="row w-100">
       {% assign blog = site.blog | where: "title", "Sneak Peek: Remote Development with Codewind" | first %}
+      {% assign video = site.data.videos | first %}
       <div class="col-lg-6">
         <h2>
           Blogs
@@ -205,30 +206,26 @@ redirect_from: gettingstarted
         </h2>
         <div class="card learn-media-card">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe title="Codewind youtube video" src="https://www.youtube.com/embed/nhW7Qb4ojH8"
-              class="embed-responsive-item"
+            <iframe title="Codewind youtube video" src="{{ video.embed_link }}" class="embed-responsive-item"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div style class="card-body">
             <p class="card-text text-right">
               <small class="text-muted lead">
-                April 07, 2020
+                {{ video.date }}
               </small>
             </p>
             <h5 class="card-title">
-              <a href="https://www.youtube.com/watch?v=nhW7Qb4ojH8&t=5s">
-                Codewind Node.js code profiler
+              <a href="{{ video.link }}">
+                {{ video.title }}
               </a>
             </h5>
             <p class="card-text lead">
-              In this video you can see how the Eclipse Codewind Node.js profiler plugin for VS Code allows a cloud
-              native
-              developer to profile their Node.js applications, and quickly identify potential bottlenecks and where most
-              of the time is spent executing their code.
+              {{ video.description }}
             </p>
           </div>
           <div class="card-footer text-right lead">
-            <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ">
+            <a href="{{ video.link }}">
               ...more videos
             </a>
           </div>
