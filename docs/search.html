@@ -25,7 +25,8 @@ window.store = {
         "author": "{{ doc.author | xml_escape }}",
         "category": "{{ doc.category | xml_escape }}",
         "content": {{ doc.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ doc.url | xml_escape }}"
+        "url": "{{ doc.url | xml_escape }}",
+        "layout": "{{ doc.layout | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -36,7 +37,8 @@ window.store = {
         "author": "{{ blog.author | xml_escape }}",
         "category": "{{ blog.category | xml_escape }}",
         "content": {{ blog.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ blog.url | xml_escape }}"
+        "url": "{{ blog.url | xml_escape }}",
+        "layout": "{{ blog.layout | xml_escape }}"
     }
     {% endfor %}
 
@@ -46,7 +48,19 @@ window.store = {
         "author": "{{ guide.author | xml_escape }}",
         "category": "{{ guide.category | xml_escape }}",
         "content": {{ guide.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ guide.url | xml_escape }}"
+        "url": "{{ guide.url | xml_escape }}",
+        "layout": "{{ guide.layout | xml_escape }}"
+    }
+    {% endfor %}
+
+    {% for news in site.news %}
+    ,"{{ news.url | slugify }}": {
+        "title": "{{ news.title | xml_escape }}",
+        "author": "{{ news.author | xml_escape }}",
+        "category": "{{ news.category | xml_escape }}",
+        "content": {{ news.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ news.url | xml_escape }}",
+        "layout": "{{ news.layout | xml_escape }}"
     }
     {% endfor %}
 };

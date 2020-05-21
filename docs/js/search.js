@@ -15,6 +15,9 @@
               <p class="card-text">${item.content.substring(0, 150)}</p>
               <a href="${baseURL}${item.url}" class="btn btn-primary">Read More</a>
             </div>
+            <div class="card-footer">
+              <small class="text-muted">${item.layout[0].toUpperCase() + item.layout.substring(1)}</small>
+            </div>
           </div>`;
           // appendString += '<li class="list-group-item"><a href="' + baseURL + item.url + '"><h3>' + item.title + '</h3></a>';
           // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
