@@ -218,7 +218,7 @@ Issue link: https://github.com/eclipse/codewind/issues/477
 ## Project creation on macOS fails, and Codewind reports an error
 If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
 
-**Workaround**
+**Workaround:**
 As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), go to **Applications**>**Utilities**>**Keychain Access** and delete from the keychain the certificates that you no longer need. You might notice that some certificates are redundant. Then, restart Codewind.
 
 <!--
@@ -367,7 +367,7 @@ Issue link: https://github.com/eclipse/codewind/issues/715
 ## Projects stuck in starting or stopped state
 You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This behavior can occur when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0.
 
-**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this:
+**Workaround:** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this:
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
 
@@ -380,7 +380,7 @@ Issue link: https://github.com/eclipse/codewind/issues/1269
 ## Application stuck in Starting state
 Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out, and the state is stuck on `Starting`.
 
-**Workaround** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
+**Workaround:** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
 1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`.
     - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error.
 2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports.
