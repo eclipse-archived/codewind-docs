@@ -1,4 +1,4 @@
-.getting-started-container {
+.learn-container {
   width: 100%;
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -8,7 +8,11 @@
   background-color: #EDF4FF;
 }
 
-.getting-started-card {
+.learn-container h2 {
+  border-bottom: none;
+}
+
+.learn-card {
   height: 100%;
   border: 1px solid #c1bcbb;
   background-color: #fbfbfb;
@@ -17,7 +21,7 @@
   -moz-box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
 }
 
-.getting-started-media-card {
+.learn-media-card {
   border: 1px solid #c1bcbb;
   background-color: #fbfbfb;
   box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);

@@ -1,11 +1,11 @@
 ---
 layout: learn
-redirect_from: /gettingstarted
+redirect_from: gettingstarted
 ---
 
-<div class="getting-started-container container-fluid">
+<div class="learn-container container-fluid">
   <div class="row blue-row p-5">
-    <h2>Getting started</h2>
+    <h2 class="text-decoration-none">Getting started</h2>
     <div class="pb-3 lead">
       Built from the ground up, Codewind, an <a href="https://github.com/eclipse/codewind">open source project</a>,
       helps both
@@ -16,15 +16,15 @@ redirect_from: /gettingstarted
         href="want-to-get-a-microservice-up-and-running-super-quickly-try-codewind.html">see it in action</a>.
     </div>
     <div class="card-deck w-100">
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-header">
           <div class="d-flex align-items-center justify-content-between">
             <h4>
               Desktop and remote
             </h4>
             <div>
-              <img alt="cloud icon" title="cloud icon" src="images/getting-started/icon_cloud.svg" />
-              <img alt="desktop icon" title="desktop icon" src="images/getting-started/icon_desktop.svg" />
+              <img alt="cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
+              <img alt="desktop icon" title="desktop icon" src="images/learn/icon_desktop.svg" />
             </div>
           </div>
         </div>
@@ -53,13 +53,13 @@ redirect_from: /gettingstarted
           </div>
         </div>
       </div>
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-header">
           <div class="d-flex align-items-center justify-content-between">
             <h4>
               Browser based
             </h4>
-            <img alt="cloud icon" title="cloud icon" src="images/getting-started/icon_cloud.svg" />
+            <img alt="cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
           </div>
         </div>
         <div class="card-body d-flex flex-column justify-content-between">
@@ -82,10 +82,10 @@ redirect_from: /gettingstarted
   <div class="row p-5">
     <h2>Get started by job role</h2>
     <div class="card-deck w-100">
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <img alt="developer icon" title="developer icon" src="images/getting-started/icon_roleDeveloper.svg" />
+            <img alt="developer icon" title="developer icon" src="images/learn/icon_roleDeveloper.svg" />
             <h4>
               Developer
             </h4>
@@ -99,10 +99,10 @@ redirect_from: /gettingstarted
           </p>
         </div>
       </div>
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <img alt="sysAdmin icon" title="sysAdmin icon" src="images/getting-started/icon_roleSysAdmin.svg" />
+            <img alt="sysAdmin icon" title="sysAdmin icon" src="images/learn/icon_roleSysAdmin.svg" />
             <h4>
               SysAdmin or Devops
             </h4>
@@ -113,10 +113,10 @@ redirect_from: /gettingstarted
           </p>
         </div>
       </div>
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <img alt="architect icon" title="architect icon" src="images/getting-started/icon_roleArchitect.svg" />
+            <img alt="architect icon" title="architect icon" src="images/learn/icon_roleArchitect.svg" />
             <h4>
               Solution Architect
             </h4>
@@ -135,7 +135,7 @@ redirect_from: /gettingstarted
     <h2>Quick guides</h2>
     <div class="card-deck w-100">
       {% for post in site.guides  limit:3 %}
-      <div class="card getting-started-card">
+      <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center">
             <h4>
@@ -165,65 +165,73 @@ redirect_from: /gettingstarted
     </div>
   </div>
 
-  <div class="row getting-started-row p-5">
-    <h2>
-      Media
-    </h2>
-    <div class="card-deck w-100">
+  <div class="row learn-row p-5">
+    <div class="row w-100">
       {% assign blog = site.blog | where: "title", "Sneak Peek: Remote Development with Codewind" | first %}
-      <div class="card getting-started-media-card">
-        <div class="embed-responsive embed-responsive-16by9">
-          <img class="blog-image" alt="blog-image" title="blog-image" src="{{ blog.title_img }}" />
-        </div>
-        <div class="card-body">
-          <p class="card-text text-right">
-            <small class="text-muted lead">
-              {{ blog.date | date_to_string }},
-              length: {{ blog.duration}}
-            </small>
-          </p>
-          <h5 class="card-title">
-            <a href="{{ blog.permalink }}">
-              {{ blog.title }}
+      <div class="col-lg-6">
+        <h2>
+          Blogs
+        </h2>
+        <div class="card learn-media-card">
+          <div class="embed-responsive embed-responsive-16by9">
+            <img class="blog-image" alt="blog-image" title="blog-image" src="{{ blog.title_img }}" />
+          </div>
+          <div class="card-body">
+            <p class="card-text text-right">
+              <small class="text-muted lead">
+                {{ blog.date | date_to_string }},
+                length: {{ blog.duration}}
+              </small>
+            </p>
+            <h5 class="card-title">
+              <a href="{{ blog.permalink }}">
+                {{ blog.title }}
+              </a>
+            </h5>
+            <p class="card-text lead">
+              {{ blog.blog_description }}
+            </p>
+          </div>
+          <div class="card-footer text-right lead">
+            <a href="blog.html">
+              ...more blogs
             </a>
-          </h5>
-          <p class="card-text lead">
-            {{ blog.blog_description }}
-          </p>
-        </div>
-        <div class="card-footer text-right lead">
-          <a href="blog.html">
-            ...more blogs
-          </a>
+          </div>
         </div>
       </div>
-      <div class="card getting-started-media-card">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe title="Codewind youtube video" src="https://www.youtube.com/embed/nhW7Qb4ojH8"
-            class="embed-responsive-item"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div style class="card-body">
-          <p class="card-text text-right">
-            <small class="text-muted lead">
-              April 07, 2020
-            </small>
-          </p>
-          <h5 class="card-title">
-            <a href="https://www.youtube.com/watch?v=nhW7Qb4ojH8&t=5s">
-              Codewind Node.js code profiler
+      <div class="col-lg-6">
+        <h2>
+          Videos
+        </h2>
+        <div class="card learn-media-card">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe title="Codewind youtube video" src="https://www.youtube.com/embed/nhW7Qb4ojH8"
+              class="embed-responsive-item"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style class="card-body">
+            <p class="card-text text-right">
+              <small class="text-muted lead">
+                April 07, 2020
+              </small>
+            </p>
+            <h5 class="card-title">
+              <a href="https://www.youtube.com/watch?v=nhW7Qb4ojH8&t=5s">
+                Codewind Node.js code profiler
+              </a>
+            </h5>
+            <p class="card-text lead">
+              In this video you can see how the Eclipse Codewind Node.js profiler plugin for VS Code allows a cloud
+              native
+              developer to profile their Node.js applications, and quickly identify potential bottlenecks and where most
+              of the time is spent executing their code.
+            </p>
+          </div>
+          <div class="card-footer text-right lead">
+            <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ">
+              ...more videos
             </a>
-          </h5>
-          <p class="card-text lead">
-            In this video you can see how the Eclipse Codewind Node.js profiler plugin for VS Code allows a cloud native
-            developer to profile their Node.js applications, and quickly identify potential bottlenecks and where most
-            of the time is spent executing their code.
-          </p>
-        </div>
-        <div class="card-footer text-right lead">
-          <a href="https://www.youtube.com/channel/UCnKCVK6RFDyHFqUmXlAhCHQ">
-            ...more videos
-          </a>
+          </div>
         </div>
       </div>
     </div>

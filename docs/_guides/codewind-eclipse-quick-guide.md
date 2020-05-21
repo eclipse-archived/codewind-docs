@@ -8,7 +8,7 @@ permalink: codewind-eclipse-quick-guide.html
 duration: 5 minutes
 tags: Codewind, Eclipse, microservice
 objectives: ["Install Eclipse and Codewind", "Develop a simple microservice, using Eclipse Codewind in Eclipse"]
-icon: images/getting-started/icon_logoEclipse.svg
+icon: images/learn/icon_logoEclipse.svg
 ---
 
 ## Overview
