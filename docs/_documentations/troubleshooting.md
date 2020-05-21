@@ -861,6 +861,8 @@ Command options are:
 
 After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
 
+To remove all collected diagnostics from your system, issue the command `cwctl diagnostics remove`.
+
 For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
 
 <!--
