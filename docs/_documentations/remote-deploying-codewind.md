@@ -35,7 +35,7 @@ For more information, select from the following IDEs:
 
 2. **Have an active Kubernetes context and log in to the cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
 
-3. **For Linux desktop, ensure your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
+3. **For Linux desktop, ensure that your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
 4. **Have a Git command line client installed.** To download the latest Git command line client, see [https://git-scm.com/download](https://git-scm.com/download).
 
@@ -76,7 +76,7 @@ devex001   codewind    122m   https://codewind-keycloak-devex001.<ingress-domain
 
 You must prepare Keycloak for Codewind by changing the admin password given to the `admin` user in the previous step. 
 
-1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. If you cannot locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
+1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. To locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
 
 2. Log in to Keycloak using the Keycloak admin credentials.
         username: `admin`
@@ -113,9 +113,9 @@ Then, save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rat
 
 ## 3. Add a new user to Keycloak
 
-1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. If you cannot locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
+1. Access the Administration Console by clicking the **Access URL** link provided by Step 2a. To locate the **Access URL** link, enter the `$ kubectl get keycloaks -n codewind` command. 
 
-2. Click **Administration Console** and log in to Keycloak with `admin` as the default login user name and `admin` as the default password.
+2. Click **Administration Console** and log in to Keycloak with `admin` as the default login user name and `password` which is the new password that you set in Step 2b.
 
 3. Change the administrator password and return to the **Administration Console**.
 - Click the **Admin** link and choose **Manage Account/Password**.
