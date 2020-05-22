@@ -58,11 +58,11 @@ For more detailed information about the Codewind operator and the install proces
 ### 2a. Install the operator
 Use the `install.sh` script located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
 
-`$ install.sh operator -i <ingress_domain>`
+`$ ./install.sh operator -i <ingress_domain>`
 
 Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, for example: 
 
-`$ install.sh operator -i -o <ingress_domain>`
+`$ ./install.sh operator -i <ingress_domain> -o`
 
 The script installs the operator into your cluster, deploys Keycloak, and returns the Keycloak **Access URL**. The command returns the following example output:
 
@@ -81,7 +81,9 @@ You must prepare Keycloak for Codewind by changing the admin password given to t
         username: `admin`
         password: `admin`
 
-3. **Important:** After you log in, change the admin password by clicking the **Admin** link on the page. Then choose **Manage Account / Password** and set a new replacement administrator password.
+3. **Important:** After you log in, change the admin password by clicking the **Admin** link on the page. Then click **Manage Account**>**Password** and set a new replacement administrator password:
+
+    ![Admin link](./images/remote/admin_link_manage_account.png)
 
 4. Switch back to the admin console using the link or log out and log back in to Keycloak as the admin user with your new admin password.
 
@@ -116,24 +118,23 @@ Then, save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rat
 
 2. Click **Administration Console** and log in to Keycloak with `admin` as the default login user name and `password`, which is the new password that you set in Step 2b.
 
-3. Change the administrator password and return to the **Administration Console**.
-- Click the **Admin** link and choose **Manage Account/Password**.
-- Set a new administrator password.
-- To return to the admin console, click **Back to Security Admin Console** or log out and log back in to Keycloak as the admin user with your new admin password.
+3. Ensure that the `Realm` is set to **Codewind** by clicking on the Codewind dropdown arrow on the **Administration Console** page:
 
-4. Ensure that the Realm is set to **Codewind** by clicking on the dropdown arrow on the page. Select **Codewind** if necessary and complete these steps:
-- Click **Users**.
-- Click **Add user**.
-- Complete the **username** field.
-- Complete the **email**, **Firstname**, and **Lastname** fields as required.
-- Ensure **user enabled** is **On**.
-- Click **Save**.
+    ![Codewind dropdown arrow](./images/remote/codewind_dropdown.png)
 
-5. Assign an initial password to the user account by clicking **Credentials**. Then, add the initial password.
+    Select **Codewind** if necessary and complete these steps:
+    - Click **Users**.
+    - Click **Add user**.
+    - Complete the **username** field.
+    - Complete the **email**, **Firstname**, and **Lastname** fields as required.
+    - Ensure **user enabled** is **On**.
+    - Click **Save**.
 
-6. The field **Temporary = On** requires you to change your password during first connection. Set **Temporary = Off** to make this password valid for continuous use and to prevent the need to change it on first connection.
+4. Assign an initial password to the user account by clicking **Credentials**. Then, add the initial password.
 
-7. Click **Set Password** to save the changes. Log out of the Keycloak admin page.
+5. The field **Temporary = On** requires you to change your password during first connection. Set **Temporary = Off** to make this password valid for continuous use and to prevent the need to change it on first connection.
+
+6. Click **Set Password** to save the changes. Log out of the Keycloak admin page.
 
 ## 4. Deploy a Codewind instance
 
@@ -158,12 +159,12 @@ NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
 devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
 ```
 
-## 5. Removing a Codewind instance
-
-To remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance).
-
 ## Next steps
 
 You have now finished installing the Codewind operator, and you have deployed a Codewind instance.
 
-In the next topic, you will learn how to [use Codewind remotely](./remote-codewind-overview.html).
+In the next topic, you will learn how to [use Codewind remotely](./remote-codewind-overview.html). 
+
+You will configure your IDE to connect to Codewind in the cloud, for more information, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
+
+If you want to remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance).
