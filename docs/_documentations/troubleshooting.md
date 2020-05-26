@@ -158,7 +158,7 @@ Issue link: https://github.com/eclipse/codewind/issues/2863
 0.12.0: New
 -->
 ##  Operator install failed to connect to remote Codewind instance
-When installing Codewind remotely, you get a `Account is not fully set up` error message. 
+When installing Codewind remotely, you get a `Account is not fully set up` error message.
 
 **Workaround**
 If you have set a temporary password by clicking the `Temporary` check box to `On`, log in to Keycloak to set a new one.
@@ -476,7 +476,7 @@ Issue link: Updated in https://github.com/eclipse/codewind/issues/2613
 ## Context Root / Application Endpoint not correct
 If you create or bind a project that has a context root set in `.cw-settings`, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.
 
-**Workaround** For a permanent fix, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`. 
+**Workaround** For a permanent fix, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`.
 
 ***
 # Disabling development on specific projects
@@ -540,7 +540,7 @@ The `Kafka` templates for the Appsody `Quarkus` and `Spring Boot` application st
 - [Quarkus](https://github.com/appsody/stacks/tree/master/incubator/quarkus#kafka-template)
 - [Spring Boot](https://github.com/appsody/stacks/tree/master/incubator/java-spring-boot2/templates/kafka)
 
-You should also [configure the project's health check endpoint](project-settings.html#health-check-endpoint) for Codewind to ping instead of the `/` path. 
+You should also [configure the project's health check endpoint](project-settings.html#health-check-endpoint) for Codewind to ping instead of the `/` path.
 
 Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
@@ -907,13 +907,13 @@ If the debugger is connected but stopped on a ClassNotFoundException, click on t
 If the application is not waiting for the debugger to connect, try restarting the application again. If this does not work, use Codewind to disable the application and then re-enable it.
 
 ## Application does not rebuild after making a change
-To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**. 
+To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**.
 
 ## Correct project list is not being shown
 Refresh the project list by right-clicking the connection in the **Codewind Explorer** view and selecting **Refresh**.
 
 ## Application is not showing the correct status
-Refresh the application by right-clicking it in the **Codewind Explorer** view and selecting **Refresh**. 
+Refresh the application by right-clicking it in the **Codewind Explorer** view and selecting **Refresh**.
 
 ***
 # VS Code troubleshooting
@@ -941,11 +941,14 @@ Check the Codewind output stream first when troubleshooting because it is partic
 
 If you report an issue, you will be asked to upload your logs.
 
-1. In VS Code, open **Help** > **Toggle Developer Tools**.
-2. Go to the **Console** tab.
-3. Enter *codewind.log* in the **Filter** box:
-<br>![Log location](images/cdt-vsc/logs-location.png)
-4. Upload the contents of the log file with your issue report.
+1. In VS Code, open the **Output** view.
+2. Select the Codewind output stream. The first line of the Codewind output stream is the location of the Codewind extension logs.
+<br><br>
+![Codewind output stream with log location](images/cdt-vsc/output_with_logpath.png)
+<br>
+3. Upload the contents of the log file with your issue report.
+
+Also see [Collecting log files and environment data](#collecting-log-files-and-environment-data).
 
 ## Executable file not found on PATH in VS Code
 <!--
