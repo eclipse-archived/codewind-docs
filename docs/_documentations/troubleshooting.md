@@ -942,14 +942,13 @@ Check the Codewind output stream first when troubleshooting because it is partic
 If you report an issue, you will be asked to upload your logs.
 
 1. In VS Code, open the **Output** view.
-2. Select the Codewind output stream.
-3. The first line of the Codewind output stream is the location of the Codewind extension logs.
+2. Select the Codewind output stream. The first line of the Codewind output stream is the location of the Codewind extension logs.
 <br><br>
 ![Codewind output stream with log location](images/cdt-vsc/output_with_logpath.png)
 <br>
-4. Upload the contents of the log file with your issue report.
+3. Upload the contents of the log file with your issue report.
 
-Also see [Collecting Log Files and Environment Data](#collecting-log-files-and-environment-data). In VS Code this is accessible through the `Codewind: Capture Diagnostics` command.
+Also see [Collecting log files and environment data](#collecting-log-files-and-environment-data).
 
 ## Executable file not found on PATH in VS Code
 <!--
