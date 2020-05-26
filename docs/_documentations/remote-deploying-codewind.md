@@ -43,7 +43,7 @@ For more information, select from the following IDEs:
 
 The Codewind operator helps with the deployment of Codewind instances in an Openshift or Kubernetes cluster. Installing the Codewind operator is usually performed by your system administrator. 
 
-Download the Codewind operator from the [codewind-operator repository](https://github.com/eclipse/codewind-operator) or if you have Git installed, clone the `codewind-operator` repository, for example: 
+Download the Codewind operator from the [codewind-operator repository](https://github.com/eclipse/codewind-operator), or if you have Git installed, clone the `codewind-operator` repository, for example: 
 
 `$ git clone https://github.com/eclipse/codewind-operator -b 0.12.0`
 
@@ -165,6 +165,6 @@ You have now finished installing the Codewind operator, and you have deployed a 
 
 In the next topic, you will learn how to [use Codewind remotely](./remote-codewind-overview.html). 
 
-You will configure your IDE to connect to Codewind in the cloud, for more information, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
+You will configure your IDE to connect to Codewind in the cloud. For more information, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
 
 If you want to remove a Codewind instance, see [Removing a Codewind instance](https://github.com/eclipse/codewind-operator/blob/master/README.md#removing-a-codewind-instance).
