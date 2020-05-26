@@ -20,7 +20,7 @@ Codewind provides preconfigured, containerized project templates covering severa
 
 The **Template Source Manager** provides template management in Codewind. To open the **Template Source Manager**, right-click a Codewind connection, then **Manage Template Sources**. The **Template Source Manager** appears.
 
-- **Note:** **Template Source Manager** is the name used in VS Code. Eclipse uses the name **Manage Template Sources**.
+- **Note:** **Template Source Manager** is the name used in VS Code. Eclipse and IntelliJ use the name **Manage Template Sources**.
 
 Codewind templates are stored in the [codewind-resources/codewind-templates](https://github.com/codewind-resources/codewind-templates)
 GitHub repository. Three examples are included in Codewind for your reference:
@@ -91,6 +91,8 @@ Add your template sources to Codewind with the **Template Source Manager**.
 1. Add the template.
    - **VS Code:** In the **Template Source Manager**, click **Add New**.
    - **Eclipse:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
+   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
 2. Enter the URL and any other information.
    - **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
    - **Eclipse:** Fill in the fields for **URL**, **Name**, and **Description**. Click **OK** when you're done.
+   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
