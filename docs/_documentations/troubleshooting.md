@@ -842,26 +842,29 @@ To assist with problem determination, raise the default Codewind server log leve
 <!--
 Action/Topic: Collecting log files and environment data
 Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930
-Info added in 0.12.0, updated in 0.13.0.
+Issue links: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930 https://github.com/eclipse/codewind/issues/2851
+Info added in 0.12.0 and updated in 0.13.0.
 -->
 
-You can capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
+In Eclipse and VS Code, capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information. Find the `cwctl` CLI in your HOME directory in the `~/.codewind/<version>` path.
+
+- **In VS Code:** Capture diagnostics with the **Codewind: Capture Diagnostics** command.
+- **In Eclipse:** Go to **Preferences**>**Codewind** and select **Enable support features**. Then, go to **Codewind Explorer**, right-click the connection, and click **Collect Diagnostics**.
 
 The format of the command is:
-`cwctl diagnostics collect [command options] [arguments...]`
+`cwctl diagnostics collect <command options> <arguments...>`
 
 Command options are:
-* `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
-* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE, default:"")
-* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if using the IntelliJ IDE (default: "")
-* `--quiet/-q` - Turn off console messages
-* `--projects/-p` - Collect project containers information
-* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
+* `--conid <value>` - Triggers diagnostics collection for the remote Codewind instance. You need to have a currently configured Kubectl connection. The default value is `"local"`.
+* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if you use the Eclipse IDE. The default value is `""`.
+* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if you use the IntelliJ IDE. The default value is `""`.
+* `--quiet/-q` - Turn off console messages.
+* `--projects/-p` - Collect project containers information.
+* `--nozip/-n` - Does not create a collection `.zip` file and leaves individual collected files in place.
 
-After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
+After you run the command, find the captured diagnostics files in your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
 
-For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnostics CLI documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
 
 <!--
 Action/Topic: Reinstate IDE specific troubleshooting help (Eclipse, VS Code and Che)
