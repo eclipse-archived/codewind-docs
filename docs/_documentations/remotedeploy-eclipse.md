@@ -12,7 +12,7 @@ order: 2
 
 # Connecting Eclipse to remote Codewind
 
-Complete the [prequisites](./remote-codewind-overview.html). 
+Complete the [prerequisites](./remote-codewind-overview.html). 
 
 ## Objectives
 
@@ -24,11 +24,11 @@ In this topic you will:
 
 ## 1. Connect your IDE's Codewind extension to your remote instance of Codewind.
 
-1\. Locate the Codewind Explorer view in Eclipse and click the cloud icon to launch the new connection wizard:
+1\. Locate the Codewind Explorer view in Eclipse and click the cloud icon to start the new connection wizard:
 
 ![New Connection](./images/remoteeclipse/newConnection.png)
 
-2\. Add a connection name, the connection URL of your deployment, user name, and password:
+2\. Add a connection name, the connection URL of your deployment, username, and password:
 
 ![Required Fields](./images/remoteeclipse/connectionCreds.png)
 
@@ -56,10 +56,10 @@ This example uses Docker Hub:
 
 ![New Registry](./images/remoteeclipse/newReg1.png)
 
-- Add your Docker Hub user name.
+- Add your Docker Hub username.
 - Add your Docker Hub password.
-- Click the checkbox to desigate this registry as a push registry.
-- Enter your Docker Hub namespace, which is usually the same as your user name.
+- Click the checkbox to designate this registry as a push registry.
+- Enter your Docker Hub namespace, which is usually the same as your username.
 
 The connection is tested to validate your credentials, which are then stored in a Kubernetes secret within the Codewind service.
 
@@ -85,7 +85,7 @@ The following procedure copies an existing local project `myFirstNodeProject` to
 
 ![Add to Codewind](./images/remoteeclipse/existingProject.png)
 
-3\. Codewind prompts you to confirm the project type identified as **Node.js**:
+3\. Codewind prompts you to confirm that the project type is identified as **Node.js**:
 
 ![Confirm Project Type](./images/remoteeclipse/confirmProjectType.png)
 

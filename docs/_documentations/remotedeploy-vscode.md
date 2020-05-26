@@ -12,7 +12,7 @@ order: 2
 
 # Connecting VS Code to remote Codewind
 
-Complete the [prequisites](./remote-codewind-overview.html). 
+Complete the [prerequisites](./remote-codewind-overview.html). 
 
 ## Objectives
 
@@ -22,7 +22,7 @@ In this topic you will:
 
 ## 1. Connect your IDE's Codewind extension to your remote instance of Codewind.
 
-1\. Locate the Codewind view in VS Code and click the cloud icon to launch the new connection wizard:
+1\. Locate the Codewind view in VS Code and click the cloud icon to start the new connection wizard:
 
 ![New Connection](./images/remotevs/newConnection.png)
 
@@ -30,11 +30,11 @@ In this topic you will:
 
 ![Name Connection](./images/remotevs/connectionName.png)
 
-3\. Complete the three required fields: Gatekeeper URL, user name, and password. Then **Save**.
+3\. Complete the three required fields: Gatekeeper URL, username, and password. Then, click **Save**.
 
 ![Required Fields](./images/remotevs/connectionCreds.png){:width="600"}
 
-The IDE validates the connection and adds it to the Codewind panel:
+The IDE validates the connection and adds it to the Codewind pane:
 
 ![Validate settings](./images/remotevs/connectionAdded.png)
 
@@ -64,14 +64,14 @@ This example uses Docker Hub:
 
 Enter:
 
-- Your Docker Hub user name
+- Your Docker Hub username
 - Your Docker Hub password
-- Your namespace, which is usually the same as your user name
+- Your namespace, which is usually the same as your username
 
 The connection is tested to validate your credentials and stored in a Kubernetes secret within the Codewind service.
 
 ## Next Steps
 
-You have now finshed configuring Codewind to be used remotely. 
+You have now finished configuring Codewind to be used remotely. 
 
 In the next topic, you will learn how to [use Codewind remotely to create and import projects](./remotedeploy-projects-vscode.html).
