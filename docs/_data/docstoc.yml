@@ -47,9 +47,7 @@
       - title: 'Creating your first Codewind project with Codewind for Eclipse Che'
         url: che-createfirstproject.html
       - title: 'Configuring Codewind for Tekton pipelines'
-        url: che-tektonpipelines.html
-      - title: 'OpenShift Do (odo) support in Codewind'
-        url: che-odo-support.html         
+        url: che-tektonpipelines.html       
       - title: 'Adding the OpenShift internal registry with Codewind'
         url: openshiftregistry.html
       - title: 'Uninstalling Codewind for Eclipse Che'
@@ -89,7 +87,9 @@
     - title: 'Referencing files external to a project'
       url: referencing-files.html
     - title: 'Developing with packages from private registries and repositories'
-      url: private-registries.html  
+      url: private-registries.html
+    - title: 'OpenShift Do (odo) support in Codewind'
+      url: che-odo-support.html
     - title: 'Using Codewind offline'
       url: offline-codewind.html
     - title: 'Debugging in Codewind'
