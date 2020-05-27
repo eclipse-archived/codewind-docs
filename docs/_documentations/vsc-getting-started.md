@@ -26,7 +26,7 @@ Select your IDE to get started:
 
 **Codewind on Eclipse Che** If you want to go straight to using Codewind as a hosted application in the cloud, follow [these instructions](./che-installinfo.html).
 
-**Using Codewind Remotely** To use Codewind remotely, first [follow the step to install Codewind locally](#installing-codewind-for-vs-code). By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. Once you have installed Codewind remotely, you can proceed to either:
+**Using Codewind remotely** To use Codewind remotely, first [follow the step to install Codewind locally](#installing-codewind-for-vs-code). By [using Codewind remotely](./remote-codewind-overview.html), Codewind is configured for making code changes on your local IDE but building and running your application in the cloud. Once you have installed Codewind remotely, you can proceed to either:
 
 1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
 2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
