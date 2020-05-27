@@ -33,7 +33,18 @@ For more information, select from the following IDEs:
 - [Getting started with Codewind for VS Code](./vsc-getting-started.html)
 - [Getting started with Codewind for IntelliJ](./intellij-getting-started.html)
 
-2. **Have an active Kubernetes context and log in to the cluster.** Codewind can run in OpenShift 3.11, OpenShift 4.3, OpenShift in IBM Public Cloud, standalone Kubernetes, and Kubernetes in Docker.
+2. **Have an active Kubernetes context and log in to the cluster.**
+- Codewind is validated on the following Kubernetes distributions:
+  - IBM Cloud Kubernetes Service
+  - OpenShift 3.11
+  - OpenShift 4.3
+  - OpenShift in IBM Public Cloud
+  - Standalone Kubernetes
+  - Kubernetes in Docker
+- However, Codewind runs on any Kubernetes distribution that meets the following requirements:
+  - Includes Kube 1.11 or later
+  - Supports RWX volumes
+- If you want to test and document support for other clouds, you can [contribute in GitHub](https://github.com/eclipse/codewind).
 
 3. **For Linux desktop, ensure that your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
 
