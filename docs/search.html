@@ -26,7 +26,8 @@ window.store = {
         "category": "{{ doc.category | xml_escape }}",
         "content": {{ doc.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ doc.url | xml_escape }}",
-        "layout": "{{ doc.layout | xml_escape }}"
+        "layout": "{{ doc.layout | xml_escape }}",
+        "description": "{{ doc.description | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -38,7 +39,8 @@ window.store = {
         "category": "{{ blog.category | xml_escape }}",
         "content": {{ blog.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ blog.url | xml_escape }}",
-        "layout": "{{ blog.layout | xml_escape }}"
+        "layout": "{{ blog.layout | xml_escape }}",
+        "description": "{{ blog.description | xml_escape }}"
     }
     {% endfor %}
 
@@ -49,7 +51,8 @@ window.store = {
         "category": "{{ guide.category | xml_escape }}",
         "content": {{ guide.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ guide.url | xml_escape }}",
-        "layout": "{{ guide.layout | xml_escape }}"
+        "layout": "{{ guide.layout | xml_escape }}",
+        "description": "{{ guide.description | xml_escape }}"
     }
     {% endfor %}
 
@@ -60,7 +63,8 @@ window.store = {
         "category": "{{ news.category | xml_escape }}",
         "content": {{ news.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ news.url | xml_escape }}",
-        "layout": "{{ news.layout | xml_escape }}"
+        "layout": "{{ news.layout | xml_escape }}",
+        "description": "{{ news.description | xml_escape }}"
     }
     {% endfor %}
 };

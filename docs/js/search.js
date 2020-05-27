@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
-              <p class="card-text">${item.content.substring(0, 150)}</p>
+              <p class="card-text">${item.description.substring(0, 150)}</p>
               <a href="${baseURL}${item.url}" class="btn btn-primary">Read More</a>
             </div>
           </div>`;
