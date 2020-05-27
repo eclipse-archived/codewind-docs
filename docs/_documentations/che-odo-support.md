@@ -11,7 +11,7 @@ order: 1
 
 # OpenShift Do (odo) support in Codewind
 
-The Codewind Odo extension provides support for [OpenShift Do (odo)](https://github.com/openshift/odo). You can use the extension to efficiently write, build, and deploy components on an OpenShift or OKD cluster.
+The Codewind Odo extension supports [OpenShift Do (odo)](https://github.com/openshift/odo). You can use the extension to efficiently write, build, and deploy components on an OpenShift or OKD cluster.
 
 1. [Extension overview](#extension-overview)
 2. [Setting up the extension](#setting-up-the-extension)
@@ -19,6 +19,7 @@ The Codewind Odo extension provides support for [OpenShift Do (odo)](https://git
 
 ## Extension overview
 
+- Compatible with Eclipse Che for Codewind and using Codewind remotely.
 - Supports Java, Node.js, Python, and Perl components.
 - Provides OpenShift templates to help you create components with different supported languages.
 - Imports and enables continued development of your existing components.
@@ -51,7 +52,7 @@ git clone https://github.com/eclipse/codewind-odo-extension &&\
 
 ## Current limitations
 
-- Only supports Codewind for Eclipse Che on an OpenShift or OKD cluster.
+- Supports only Codewind for Eclipse Che on an OpenShift or OKD cluster.
 - Does not support project configuration.
 - Does not support debug mode.
 - Does not have HTTPS protocol support for accessing applications.
