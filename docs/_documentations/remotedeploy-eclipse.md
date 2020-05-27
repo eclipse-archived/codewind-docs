@@ -54,14 +54,14 @@ This example uses Docker Hub:
 
 ![Open Registry Manager](./images/remoteeclipse/registryManager.png)
 
-3\. Complete the image registry connection details:
+3\. Complete the container registry connection details:
 
 ![New Registry](./images/remoteeclipse/newReg1.png)
 
-- Add your Docker Hub username.
-- Add your Docker Hub password.
+- Add your container registry username.
+- Add your container registry password.
 - Click the checkbox to designate this registry as a push registry.
-- Enter your Docker Hub namespace, which is usually the same as your username.
+- Enter your container registry namespace, which is usually the same as your username.
 
 The connection is tested to validate your credentials, which are then stored in a Kubernetes secret within the Codewind service.
 

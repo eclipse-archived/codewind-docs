@@ -60,15 +60,15 @@ This example uses Docker Hub:
 
 ![Adding Registry](./images/remotevs/ImageRegistries.png){:width="600"}
 
-4\. Complete the Docker connection details. For example, if you are using Docker Hub, enter `docker.io` and press **Enter**:
+4\. Complete the container registry connection details. For example, if you are using Docker Hub, enter `docker.io` and press **Enter**:
 
 ![New Registry](./images/remotevs/newReg1.png)
 
 Enter:
 
-- Your Docker Hub username
-- Your Docker Hub password
-- Your namespace, which is usually the same as your username
+- Your container registry username.
+- Your container registry password.
+- Your container registry namespace, which is usually the same as your username.
 
 The connection is tested to validate your credentials and stored in a Kubernetes secret within the Codewind service.
 
