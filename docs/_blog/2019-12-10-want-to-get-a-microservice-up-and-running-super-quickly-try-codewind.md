@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_melanie_hopper.jpeg
 author_url: 
 author: Dr Melanie Hopper
-blog_description: "With Codewind, not only will you be able to choose your microservice from a list of templates, you’ll have a fully integrated container development environment for a smooth inner loop experience."
+description: "With Codewind, not only will you be able to choose your microservice from a list of templates, you’ll have a fully integrated container development environment for a smooth inner loop experience."
 permalink: want-to-get-a-microservice-up-and-running-super-quickly-try-codewind.html
 duration: 4 minutes
 tags: [Docker, Microservices, Containers, Development, VS Code]

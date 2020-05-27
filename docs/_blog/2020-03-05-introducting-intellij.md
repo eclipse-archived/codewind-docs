@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_becca_bau.jpeg
 author_url: 
 author: Becca Bau
-blog_description: "We recently announced the tech preview of Eclipse Codewind on the IntelliJ IDE. Many people have asked about IntelliJ, as it is a popular..."
+description: "We recently announced the tech preview of Eclipse Codewind on the IntelliJ IDE. Many people have asked about IntelliJ, as it is a popular..."
 permalink: introducing-eclipse-codewind-on-intellij.html
 duration: 3 minutes
 tags: [Microservices, IDE, Intellij, Open Source]

@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_becca_bau.jpeg
 author_url: 
 author: Becca Bau
-blog_description: "HTTPS is becoming increasingly common as the internet shifts to an HTTPS-only environment. In an unencrypted HTTP session, data is transferred in clear text, meaning anyone can eavesdrop on your..."
+description: "HTTPS is becoming increasingly common as the internet shifts to an HTTPS-only environment. In an unencrypted HTTP session, data is transferred in clear text, meaning anyone can eavesdrop on your..."
 permalink: enabling-https-in-your-codewind-application.html
 duration: 2 minutes
 tags: [Https, Python, Microprofile]
