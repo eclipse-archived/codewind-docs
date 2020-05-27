@@ -11,7 +11,7 @@ order: 1
 
 # OpenShift Do (odo) support in Codewind
 
-The Codewind Odo extension supports [OpenShift Do (odo)](https://github.com/openshift/odo). You can use the extension to efficiently write, build, and deploy components on an OpenShift or OKD cluster.
+The Codewind odo extension supports [OpenShift Do (odo)](https://github.com/openshift/odo). You can use the extension to efficiently write, build, and deploy components on an OpenShift or OKD cluster.
 
 1. [Extension overview](#extension-overview)
 2. [Setting up the extension](#setting-up-the-extension)
@@ -36,7 +36,7 @@ The extension needs additional roles for accessing OpenShift resources. Use the 
 
 ### Importing the Java image stream to your OpenShift or OKD cluster
 
-To create or import a Java component, you must import the Java image stream to your OpenShift or OKD cluster so that Odo can build the component image.
+To create or import a Java component, you must import the Java image stream to your OpenShift or OKD cluster so that odo can build the component image.
 
 ### Adding the roles and importing the Java image stream
 
