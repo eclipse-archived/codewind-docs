@@ -32,6 +32,8 @@ In this topic you will:
 
 ![Required Fields](./images/remoteeclipse/connectionCreds.png)
 
+If you do not know these values, ask your system administrator or see [Deploying Codewind remotely](./remote-deploying-codewind.html).
+
 The IDE validates the connection and adds it to the Codewind panel:
 
 ![Validate settings](./images/remoteeclipse/connectionAdded.png)

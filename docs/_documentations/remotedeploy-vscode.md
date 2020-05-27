@@ -34,6 +34,8 @@ In this topic you will:
 
 ![Required Fields](./images/remotevs/connectionCreds.png){:width="600"}
 
+If you do not know these values, ask your system administrator or see [Deploying Codewind remotely](./remote-deploying-codewind.html).
+
 The IDE validates the connection and adds it to the Codewind pane:
 
 ![Validate settings](./images/remotevs/connectionAdded.png)
