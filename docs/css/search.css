@@ -9,6 +9,7 @@
 .bi-search {
     position: absolute;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 #nav-search.form-control {
