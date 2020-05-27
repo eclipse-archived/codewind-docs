@@ -24,6 +24,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [Eclipse Che with Codewind](#eclipse-che-with-codewind)
 * [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
@@ -655,6 +656,20 @@ Increase the timeout value in the project's `pom.xml` file. Look for the followi
 ```
 <serverStartTimeout>120</serverStartTimeout>
 ```
+
+***
+# Eclipse Che with Codewind
+
+<!--
+Action/Topic: Eclipse Che with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2828
+-->
+## A Codewind workspace fails to start on a new cluster when images are not present in the local cache
+Workspaces that don't start within the allotted time might get terminated. This error occurs if a hosted image registry network is slow or if it is slow within the cluster environment.
+
+**Workaround:** Change the workspace timeout of your Che installation. Enter the following command and increase the default value of `8` minutes:
+`kubectl patch checluster/eclipse-che --patch "{\"spec\":{\"server\":{\"customCheProperties\": {\"CHE_INFRA_KUBERNETES_WORKSPACE__START__TIMEOUT__MIN\": \"8\"}}}}" --type=merge -n che`
 
 ***
 # OpenShift Do (odo) with Codewind
