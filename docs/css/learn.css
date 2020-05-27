@@ -12,6 +12,11 @@
   border-bottom: none;
 }
 
+/* Fixes a known bug for columns in safari */
+.learn-container .col {
+  flex-basis: auto;
+}
+
 .learn-card {
   height: 100%;
   border: 1px solid #c1bcbb;
