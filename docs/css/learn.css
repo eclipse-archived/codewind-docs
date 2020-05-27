@@ -12,13 +12,16 @@
   border-bottom: none;
 }
 
+.learn-container .btn {
+  background-color: #0073BA;
+}
+
 /* Fixes a known bug for columns in safari */
 .learn-container .col {
   flex-basis: auto;
 }
 
 .learn-card {
-  height: 100%;
   border: 1px solid #c1bcbb;
   background-color: #fbfbfb;
   box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
