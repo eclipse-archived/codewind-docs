@@ -1,14 +1,16 @@
 ---
 layout: guide
-title: Codewind in Minikube 
+summary-title: "Codewind in Minikube" 
+title: "Getting Started with Codewind in Minikube"
 categories: guides 
-guide_description: End-to-end instructions on how to deploy Codewind and projects on local Kube, specifically, Minikube. 
-permalink: codewind-minikube-quick-guide
-duration: 5 minutes
+guide_description: "End-to-end instructions on how to deploy Codewind and projects on local Kube, specifically, Minikube." 
+permalink: codewind-minikube-quick-guide.html
+duration: 10 minutes
 tags: Codewind, Minikube, microservice
 ---
 
 # Codewind in Minikube 
+**Note:** This guide contains a limitation. When you install Codewind on Minikube, Kubernetes might break Minikube's storage provisioner, meaning Codewind cannot install. As a workaround, you need to upgrade Minikube.  
 
 ## Objectives 
 * Install Minikube 
@@ -16,9 +18,9 @@ tags: Codewind, Minikube, microservice
 * Develop a microservice with Codewind on Minikube 
 
 ## Overview
-Minikube is essentially Kubernetes but on your local computer. Minikube supports the latest Kubernetes release, so you can configure Minikube on any container runtime. With Minikube, you can start your computer then utilize all Kubernetes' capabilities. Use Minikube to explore and learn to develop with Codewind. This quick guide assists and instructs you to deploy Codewind and projects on Minikube. 
+Minikube is essentially Kubernetes but on your local computer. Minikube supports the latest Kubernetes release, so you can configure Minikube on any container runtime. With Minikube, you can start your computer then utilize all Kubernetes' capabilities. Use Minikube to explore and learn to develop with Codewind. This guide assists and instructs you to deploy Codewind and projects on Minikube. 
 
-* [Prerequisistes](##prerequisites)
+* [Prerequisites](##prerequisites)
 * [Installing Minikube](##installing-minikube)
 * [Installing Codewind](##installing-codewind)
 * [Developing a microservice](##developing-a-microservice)
@@ -36,7 +38,7 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
     * Minikube creates a single-node Kubernetes cluster with 4GB of RAM available to it.
     * If this command fails, refer to [Minikube installation docs](https://kubernetes.io/docs/tasks/tools/install-minikube) and ensure you have enough memory on your system. 
 3. To install [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) on Minikube, run, `minikube addons enable ingress`. 
-    * Codewind makes use of Ingress to expose its endpoints.
+    * Codewind makes use of Ingress to display its endpoints.
 4. To determine your Ingress IP, run `minikube ip`. 
     * Example:
      ```
@@ -47,7 +49,7 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
  
 ## Installing Codewind
 1. Choose your IDE and install the Codewind extension. 
-    * Follow the install instructions for [Eclipse](https://www.eclipse.org/codewind/mdt-eclipse-getting-started.html) or [VS Code](https://www.eclipse.org/codewind/mdt-vsc-getting-started.html). 
+    * Follow the installation instructions for [Eclipse](https://www.eclipse.org/downloads/packages/release/) or [VS Code](https://code.visualstudio.com/download). 
 2. Locate the `cwctl` command line interface (CLI). 
     * On Mac and Linux, the cwctl is `~/.codewind/<version>/cwctl`. 
     * On Windows, the cwctl is `C:\Users\(your user name)\.codewind\<version>\cwctl`. 
@@ -69,17 +71,17 @@ Minikube is essentially Kubernetes but on your local computer. Minikube supports
 5. Open the Codewind view in your editor -> select `New Codewind Connection` -> enter the following details:   
     * **Codewind Gatekeeper URL:** In step 3, cwctl gives you the Gatekeeper URL. 
     * **Username:** In step 3, developer username is given to cwctl in the value of `kdevuser`. 
-    * **Password:** In step 3, developer password given to cwctl in the value of `kdevpass`.
+    * **Password:** In step 3, developer password is given to cwctl in the value of `kdevpass`.
 6. To save and create the remote connection to the Codewind instance on Minikube, click `Save`. 
 
 ## Developing a microservice
-Now that you have installed Minikube and Codewind, develop a microservice so you learn to work with Codewind on Minikube. 
+After you install Minikube and Codewind, develop a microservice so you learn to work with Codewind on Minikube. 
 
 ### Configuring Codewind to use application stacks 
 Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include stacks that you can use to follow this guide. Complete the following steps to select the Appsody templates:
 
 1. Under the Explorer pane, select `Codewind`.
-2. Right-click the remote connection you saved when you completed the `Installing Codewind` instructions.
+2. Right-click the remote connection that you saved when you completed the `Installing Codewind` instructions.
 3. Select `Template Source Manager`.
 4. Enable `Appsody Stacks - incubator`.
 
@@ -98,7 +100,7 @@ If your organization uses customized application stacks and has given you a URL 
 3. Hover over the `Projects` entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
 4. Choose the `Appsody Open Liberty default template (Appsody Stacks- incubator)`.
 5. Name your project `appsody-calculator`.
-    * If you don’t see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - appsodyhub`. The templates are refreshed, and the Appsody templates are available.
+    * If you don’t see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - incubator`. The templates are refreshed, and the Appsody templates are available.
 6. Press Enter.
     * To monitor your project’s progress, right-click your project, and select `Show all logs`. Then an `Output` tab is displayed where you see your project’s build logs.
 
@@ -117,7 +119,8 @@ Your application is now opened in the browser, showing the welcome to your Appso
  2. Navigate to `src->main->java->dev->appsody->starter`.
  3. Right-click `starter` and select `New File`.
  4. Create a file, name it `Calculator.java`, and press `Enter`. This file is your JAX-RS resource.
- 5. Populate the file with the following code then **save** the file:
+ 5. Before you input any code, make sure the file is empty. 
+ 6. Populate the file with the following code then **save** the file:
 
 ```
 package dev.appsody.starter;
@@ -166,7 +169,7 @@ public class Calculator extends Application {
     }
 }
 ```
-Any changes you make to your code is automatically built and re-deployed by Codewind and viewable in your browser.
+Any changes you make to your code is automatically built and redeployed by Codewind and viewable in your browser.
 
 ### Working with the microservice
 
@@ -175,16 +178,16 @@ You now can work with your calculator.
 1. Use the URL you saw when you first opened the application. 
 2. Make sure to remove the `< >` symbol in the URL.
 3. `<url>/starter/calculator/aboutme`
-4. You should see the following response:
+4. You now see the following response:
 
 ```
 You can add (+), subtract (-), and multiply (*) with this simple calculator.
 ```
 
-You could also try a few of the sample calculator functions:
+You might also try a few of the sample calculator functions:
 
 * `<url>/starter/calculator/aboutme`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
-* So for `<url>/starter/calculator/aboutme/+/10/3`  you should see: `10+3=13`.
+* So for `<url>/starter/calculator/aboutme/+/10/3` you see: `10+3=13`.
 
 ## What you have learned 
 In this quick guide, you have learned to:
@@ -194,5 +197,5 @@ In this quick guide, you have learned to:
 ## Next steps 
 See other quick guides to learn how to develop with Codewind: 
 
-* [Codewind in Eclipse](codewind-eclipse-quick-guide.html)
-* [Codewind in VS Code](codewind-vscode-quick-guide.html)
+* [Codewind in Eclipse](https://www.eclipse.org/codewind/codewind-eclipse-quick-guide.html)
+* [Codewind in VS Code](https://www.eclipse.org/codewind/codewind-vscode-quick-guide.html)
