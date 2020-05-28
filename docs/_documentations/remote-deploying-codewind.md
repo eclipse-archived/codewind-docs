@@ -171,7 +171,7 @@ devex001   jane       codewind    119m   devex001   Complete       https://codew
 
 ## Next steps
 
-You finished installing the Codewind operator, and deployed a Codewind instance.
+You finished installing the Codewind operator and deployed a Codewind instance.
 
 In the next topic, you learn how to [use Codewind remotely](./remote-codewind-overview.html). 
 
