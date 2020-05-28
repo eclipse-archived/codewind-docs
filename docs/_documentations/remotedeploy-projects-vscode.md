@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Creating and importing projects
+title: VS Code
 description: Creating and importing projects
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
