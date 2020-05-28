@@ -19,8 +19,8 @@
                                     <h2 class="blog-post-title"><a href="{{ post.url | relative_url }}" class="blog-post-title-link">{{ post.title | escape }}</a></h2>
                                     <p class="blog-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}</p>
                                     <p class="blog-post-paragraph">
-                                        {% if post.blog_description %}
-                                            {{ post.blog_description }}
+                                        {% if post.description %}
+                                            {{ post.description }}
                                         {% else %}
                                             {{ post.content | strip_html | truncatewords: 60 }}
                                         {% endif %}
