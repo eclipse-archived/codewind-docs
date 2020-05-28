@@ -34,7 +34,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 
 After you install `chectl`, download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
  - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
-
+ - If you're installing Che with publicly signed certificates, you must set `spec.server.selfSignedCert` to false.
 **Installing on OpenShift:**
 
 Eclipse Che on OpenShift makes use of the router's existing certificates. 
