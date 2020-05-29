@@ -23,7 +23,7 @@ else
   }
 fi
 
-git ls-tree -r --name-only HEAD | while read filename; do 
+git ls-tree -r --name-only HEAD | while read filename; do
   unixtime=$(git log -1 --format="%at" -- "${filename}")
   touchtime=$(get_touch_time)
   touch -t ${touchtime} "${filename}"
@@ -40,12 +40,11 @@ docker run --rm -it \
   -p 4321:4321 jekyll/jekyll:3.8.5 \
   /bin/bash -c "bundle install && jekyll build"
 
-  
 # Launch the site in apache
 
 docker run -dit --name my-apache-app -p 8765:80 -v "$PWD/docs/_site":/usr/local/apache2/htdocs/codewind/ httpd:2.4
 
-# Check link 
+# Check link
 docker run --network="host" --rm -it -u $(id -u):$(id -g) codewinddocs/linkchecker:1.0 http://localhost:8765/codewind/
 rc=$?
 
@@ -56,10 +55,10 @@ docker stop my-apache-app >/dev/null 2>&1
 echo "Removing apache container..."
 docker container rm my-apache-app >/dev/null 2>&1
 
-if [[ $rc != 0 ]]; 
-then 
+if [[ $rc != 0 ]];
+then
 	printf "${RED}Find bad link(s), please fix them!${NC}\n"
-	exit $rc; 
+	exit $rc;
 else
 	printf "${GREEN}No errors found. Safe to check in.${NC}\n"
 fi
