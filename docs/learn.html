@@ -24,8 +24,8 @@ redirect_from: gettingstarted
               Desktop and remote
             </h5>
             <div>
-              <img alt="cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
-              <img alt="desktop icon" title="desktop icon" src="images/learn/icon_desktop.svg" />
+              <img alt="Cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
+              <img alt="Desktop icon" title="desktop icon" src="images/learn/icon_desktop.svg" />
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ redirect_from: gettingstarted
             <h5 class="my-2">
               Browser based
             </h5>
-            <img alt="cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
+            <img alt="Cloud icon" title="cloud icon" src="images/learn/icon_cloud.svg" />
           </div>
         </div>
         <div class="card-body d-flex flex-column justify-content-between">
@@ -71,7 +71,7 @@ redirect_from: gettingstarted
             <a href="eclipseche-codewind-overview.html">step-by-step instructions</a>.
           </p>
           <div class="col d-flex justify-content-start flex-column flex-xl-row">
-            <a href="https://github.com/eclipse/codewind-che-plugin/blob/0.9.0/setup/install_che/che-operator/codewind-checluster.yaml"
+            <a href="https://github.com/eclipse/codewind-che-plugin/blob/0.13.0/setup/install_che/che-operator/codewind-checluster.yaml"
               class="mt-auto btn btn-primary m-2" role="button">
               Eclipse Che
               <i class="fa fa-download button-icon"></i>
@@ -88,7 +88,7 @@ redirect_from: gettingstarted
       <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center mb-2">
-            <img alt="developer icon" title="developer icon" src="images/learn/icon_roleDeveloper.svg" />
+            <img alt="Developer icon" title="developer icon" src="images/learn/icon_roleDeveloper.svg" />
             <h5 class="my-2">
               Developer
             </h5>
@@ -105,21 +105,21 @@ redirect_from: gettingstarted
       <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center mb-2">
-            <img alt="sysAdmin icon" title="sysAdmin icon" src="images/learn/icon_roleSysAdmin.svg" />
+            <img alt="SysAdmin icon" title="sysAdmin icon" src="images/learn/icon_roleSysAdmin.svg" />
             <h5 class="my-2">
               SysAdmin or Devops
             </h5>
           </div>
           <p>
             If you are a sysadmin or DevOps engineer, learn how to
-            <a href="remote-deploying-codewind">deploy Codewind remotely</a>.
+            <a href="remote-deploying-codewind.html">deploy Codewind remotely</a>.
           </p>
         </div>
       </div>
       <div class="card learn-card">
         <div class="card-body">
           <div class="d-flex align-items-center mb-2">
-            <img alt="architect icon" title="architect icon" src="images/learn/icon_roleArchitect.svg" />
+            <img alt="Architect icon" title="architect icon" src="images/learn/icon_roleArchitect.svg" />
             <h5 class="my-2">
               Solution Architect
             </h5>
@@ -135,7 +135,7 @@ redirect_from: gettingstarted
   </div>
 
   <div class="row blue-row p-5">
-    <a href="guides">
+    <a href="guides.html">
       <h3 class="mt-0 mb-4">Quick guides</h3>
     </a>
     <div class="card-deck w-100">
@@ -148,7 +148,7 @@ redirect_from: gettingstarted
                 {{ post.title }}
               </a>
             </h5>
-            <img alt="guide icon" class="pl-2" title="guide icon" src="{{ post.icon }}" />
+            <img alt="Guide icon" class="pl-2" title="guide icon" src="{{ post.icon }}" />
           </div>
           <ul>
             {% for obj in post.objectives %}
@@ -168,14 +168,14 @@ redirect_from: gettingstarted
       {% assign blog = site.blog | where: "title", "Sneak Peek: Remote Development with Codewind" | first %}
       {% assign video = site.data.videos | first %}
       <div class="col-lg-6">
-        <a href="blog">
+        <a href="blog.html">
           <h3 class="mt-0 mb-4">
             Blogs
           </h3>
         </a>
         <div class="card learn-media-card">
           <div class="embed-responsive embed-responsive-16by9">
-            <img class="blog-image" alt="blog-image" title="blog-image" src="{{ blog.title_img }}" />
+            <img class="blog-image" alt="Blog image" title="blog-image" src="{{ blog.title_img }}" />
           </div>
           <div class="card-body">
             <p class="card-text text-right">
