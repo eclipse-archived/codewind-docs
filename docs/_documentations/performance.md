@@ -36,7 +36,7 @@ When the Performance Dashboard opens, the **Project Capabilities Overview** pane
 
 The **Project Capabilities Overview** pane provides the current running state of your project and a summary of load test and metrics-related capabilities that your project can support:
 
-![Performance dashboard project capabilities](images/performanceguide/performance_dashboard_capabilities.png)
+![Performance dashboard project capabilities](images/performanceguide/performance_dashboard_capabilities.png){:height="375px" width="800px"}<br>
 
 - **Project status:** Provides current project status.
 - **Run Load Feature:** Provides information about whether load pressure can be applied to your project.
