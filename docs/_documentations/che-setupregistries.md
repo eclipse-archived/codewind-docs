@@ -12,10 +12,10 @@ type: document
 
 Ensure you have completed the [prerequisites to installing Codewind on Eclipse Che](./che-installinfo.html#prerequisites).
 
-**Note:** If you completed the [Codewind for Eclipse Che prerequisites and installation steps](./che-installinfo.html#installing-che-to-use-with-codewind) for Kubernetes then you have installed Eclipse Che with self-signed certificates. To proceed, you must either select 'accept the certificates' in your browser or add the certificates to your browser. Please refer to your DevOps or sysadmin engineer for further information. **Caution:** do not use self-signed certificates in production
+**Note:** If you completed the [Codewind for Eclipse Che prerequisites and installation steps](./che-installinfo.html#installing-che-to-use-with-codewind) for Kubernetes, then you have installed Eclipse Che with self-signed certificates. To proceed, you must either select 'accept the certificates' in your browser or add the certificates to your browser. Refer to your DevOps or sysadmin engineer for further information. **Caution:** do not use self-signed certificates in production
 
 ## Prerequisite: Determining if you need an image registry 
-1\. First, determine if you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
+1\. First, determine whether you need to add an image registry. The following scenarios in Codewind require you to specify which image registry is in use:
 - In the following scenario, configure Codewind with an image registry to push the application image to that specific image registry:
     - Run Codewind on a remote Kubernetes cluster, including Che, to develop a Codewind style project.
 - In the following scenario, configure Codewind to use the credentials for a specific image registry:

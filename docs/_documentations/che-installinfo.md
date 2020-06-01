@@ -9,9 +9,9 @@ type: document
 ---
 # Using Codewind as a hosted application on the cloud
 
-Codewind can be used in one of three ways - [locally](./vsc-getting-started.html), [remotely](./remote-codewind-overview.html), or **hosted as an IDE extension on the cloud**. By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind via a browser window from your local desktop.
+Codewind can be used in one of three ways - [locally](./vsc-getting-started.html), [remotely](./remote-codewind-overview.html), or **hosted as an IDE extension on the cloud**. By using Codewind hosted as an application on the cloud, you can develop, build and run your code all by accessing Codewind from a browser window from your local desktop.
 
-Follow the instructions to get started with using Codewind as an application hosted on the cloud. This will guide you through:
+Follow the instructions to get started with using Codewind as an application hosted on the cloud, which guides you through:
 
 1. Installing Eclipse Che to use with Codewind or update an existing Eclipse Che installation to use Codewind
 2. Configuring Codewind on Eclipse Che to work with your browser and cluster.
@@ -24,7 +24,7 @@ Follow the instructions to get started with using Codewind as an application hos
 
 ### Other Codewind configurations
 
-**A quick way to try out Codewind before installing Codewind on Eclipse Che is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerised applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by- step instructions.
+**A quick way to try out Codewind before installing Codewind on Eclipse Che is to use Codewind locally** In this fully-local configuration, you create, develop, build and run your containerized applications on your local machine using your local IDE. See [Getting Started with Codewind](./gettingstarted.html) for local IDE options and step-by-step instructions.
 
 **Using Codewind Remotely** Rather than using an IDE hosted in the cloud to make code changes, Codewind can also be configured for making code changes on your **local IDE** before building and running on your cloud. To [configure Codewind to be used remotely](./remote-codewind-overview.html), **you must first follow the steps to [install codewind locally](./gettingstarted.html)**. 
 
@@ -32,7 +32,7 @@ Follow the instructions to get started with using Codewind as an application hos
 
 ### Prerequisites
 
-1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and each have a minimum of 5 Gi storage.
+1. Set up PersistentVolumes (PVs) that support both `ReadWriteOnce` (RWO) and `ReadWriteMany` (RWX) access modes and each have a minimum of five Gi storage.
    - One volume is required for Che, and two volumes are required for each Codewind workspace.
    - For Network File System (NFS) shares, set 777 permissions for the exported folders and ownership of `nobody:nogroup`.
    - Because Codewind uses `ReadWriteMany` (RWX) volumes to provide persistent storage, use NFS for storage on OpenShift 4.
@@ -56,10 +56,10 @@ Install Eclipse Che with HTTPS so that Codewind functions properly.
 
 The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. Perform the following:
 
-1. Install the `chectl` CLI tool. see [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
+1. Install the `chectl` CLI tool. See [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
 2. Download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
- - **note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+ - **Note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
 
 3. Use the following instructions to install Codewind on your Openshift or Kubernetes cluster:
 

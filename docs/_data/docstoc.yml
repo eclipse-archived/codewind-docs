@@ -70,9 +70,6 @@
     - title: 'OpenShift Do (odo) support in Codewind'
       url: che-odo-support.html         
 
-
-
-
        
 - title: 'Working with templates'
   url: workingwithtemplates.html
