@@ -41,10 +41,10 @@ For more information, select from the following IDEs:
   - OpenShift in IBM Public Cloud
   - Stand-alone Kubernetes
   - Kubernetes in Docker
-- However, Codewind can run on any Kubernetes distribution if the following requirements are met:
-  - The Kubernetes version is 1.11 or later.
-  - Each Codewind workspace requires at least one 1Gi ReadWriteMany (RWX) persistent volume.
-  - Install the NGINX Ingress Controller.
+- However, Codewind can run on any Kubernetes distribution that meets the following requirements:
+  - Kubernetes 1.11 or later is included.
+  - ReadWriteMany (RWX) persistent volumes are supported.
+  - The Nginx Ingress Controller is installed.
 - If you want to test and document support for other clouds, you can [contribute in GitHub](https://github.com/eclipse/codewind).
 
 3. **For Linux desktop, ensure that your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
