@@ -51,22 +51,17 @@
   children:
   - title: '1. Installing Eclipse Che for Codewind'
     url: che-installinfo.html
-  - title: '2a Configuring Codewind with your browser and cluster'  
-    url: che-browserconfig.html
-  - title: '2a. Downloading Openshift certificates' 
-    url: che-openshift-certs
-  - title: '3. Adding an image registry in Codewind in Che'
+  - title: '2. Adding an image registry in Codewind on Eclipse Che'
     url: che-setupregistries.html 
-  - title: '3a. Adding the OpenShift internal registry with Codewind'
+  - title: '2a. Adding the OpenShift internal registry with Codewind'
     url: openshiftregistry.html
-
-  - title: '4. Creating a Codewind workspace in Che'
+  - title: '3. Creating a Codewind workspace in Eclipse Che'
     url: che-createcodewindworkspace.html
-  - title: '5. Creating your first Codewind project with Codewind for Eclipse Che'
+  - title: '4. Creating your first Codewind project with Codewind for Eclipse Che'
     url: che-createfirstproject.html
-  - title: '6. Making a code change with Codewind for Eclipse Che'
+  - title: '5. Making a code change with Codewind for Eclipse Che'
     url: che-codechange.html
-  - title: '7. Uninstalling Codewind for Eclipse Che'
+  - title: '6. Uninstalling Codewind for Eclipse Che'
     url: che-uninstall.html
   - title: 'Optional Configurations'
     children:

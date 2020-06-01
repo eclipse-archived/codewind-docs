@@ -105,4 +105,4 @@ $ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin
 ```
 ### Next steps
 
-**Getting started with Codewind for Eclipse Che - next steps** Continue to instructions for [configuring codewind for Eclipse Che for your browser and cluster](./che-browserconfig.html).
+**Getting started with Codewind for Eclipse Che - next steps** Continue to instructions for [adding an image registry in Codewind](./che-setupregistries.html).
