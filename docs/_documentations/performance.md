@@ -43,9 +43,7 @@ The **Project Capabilities Overview** pane provides the current running state of
 - **Live monitoring:** Use this information to determine whether you can view live metrics. For example, Appsody projects, by default, protect the metrics endpoints and require authenticated user access. For Codewind to connect to the project and retrieve performance metrics, anonymous access must be granted to the metrics endpoint. Click **Allow anonymous connections** to enable Codewind to grant anonymous access to the metrics endpoint. This action restarts the project, and you see that the project status updates and messages appear in the **Notification** pane. You can stack the notifications, remove them after a few seconds, or close them. 
 - **Benchmarks:** Benchmarks are a collection of completed load test results displayed on a chart and in a table.
 
-You can close and reopen the pane at any time by clicking the **Project Capabilities Overview** button in the main page navigation bar:
-
-![Performance dashboard nav bar icon](images/performanceguide/performance_dashboard_navbar_icon.png)
+You can close and reopen the pane at any time by clicking the **Project Capabilities Overview** button in the main page navigation bar: ![Performance dashboard nav bar icon](images/performanceguide/performance_dashboard_navbar_icon.png){:height="60px" width="60px"}<br>
 
 ## Running a load test
 
