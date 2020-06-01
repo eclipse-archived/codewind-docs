@@ -14,7 +14,7 @@ order: 30
 The Codewind OpenAPI Tools for Eclipse includes wizards that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for Eclipse, but they also work with a base Eclipse IDE for Java EE Developers installation.
 
 ## Installing
-1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. If you use Codewind OpenAPI Tools with Codewind, the earliest supported version of the Eclipse IDE is 4.11.0 (2019-03).
+1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. If you use Codewind OpenAPI Tools with Codewind, the earliest supported version of the Eclipse IDE for Codewind is Version 2019-06 (4.12).
 2. [Optional] Install [Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 3. Install the [Codewind OpenAPI Tools from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 

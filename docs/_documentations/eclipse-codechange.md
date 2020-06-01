@@ -33,4 +33,21 @@ icon to show your code change running.
 
 ![image of the application with the code change](images/eclipsechangeproject4.png){:width="800px"}
 
+## Next Steps
+
+**Getting started with Codewind** You have now completed all the steps to get started with Codewind. To learn more about how you can develop using Codewind, choose from the following:
+
+- [Working with templates](./workingwithtemplates.html)
+- [Using the Metrics Dashboard for performance monitoring](./metrics-dashboard.html)
+ 
+If you would like to use Codewind with your cloud, choose from the following:
+
+**Using Codewind as a hosted application in the cloud** See the [Codewind on Eclipse Che instructions](./eclipseche-codewind-overview.html)
+
+**Installing Codewind for remote use** You have now completed all the steps to get started with Codewind. If you intend to use Codewind [remotely](./remote-codewind-overview.html), you have now completed the prerequisite step of installing Codewind on your local machine  and can now proceed:
+
+1. Deploy Codewind to your cloud if not already done so by you or a sysadmin/DevOps engineer. See tutorial [Deploying Codewind Remotely](./remote-deploying-codewind.html).
+2. Connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following the tutorial [Using Codewind Remotely](./remote-codewind-overview.html).
 Next step: [Buiding and deploying in a cloud environment](remote-deploying-codewind.html)
+
+To learn more about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).

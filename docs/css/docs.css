@@ -37,7 +37,7 @@ code {
 :target:before {
     content: "";
     display: block;
-    margin-top: -115x;
+    margin-top: -115px;
     height: 115px;
     width: 1px;
 }
@@ -49,6 +49,10 @@ code {
 *:hover > .anchorjs-link {
 	text-decoration: none;
 }
+
+.collapsing {
+    transition: none !important;
+  }
 
 #sidebar-container {
     min-height: 100vh;
@@ -84,12 +88,10 @@ code {
 
 /* Separators */
 .cw-sidebar-separator-title {
-    
     height: 35px;
 }
 
 .cw-sidebar-separator {
-    
     height: 25px;
 }
 
@@ -244,12 +246,11 @@ code {
 	    position: absolute;
 	    top: -15px;
 	}
-	
+
 	#sidebar-container {
         padding-top: 101px;
     }
 }
-
 
 @media only screen and (max-width: 768px) {
 	.cw-docs-spacer {
@@ -263,8 +264,6 @@ code {
         width: 100vw;
         	min-height: 0;
     }
-    
-    
 }
 
 /* code formatter overrides for accessibility */

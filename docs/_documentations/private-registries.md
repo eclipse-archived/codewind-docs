@@ -32,4 +32,7 @@ You can apply all the preceding instructions to these project types:
 
 * Lagom Java
 * Node.js Express
-* Open Liberty 
+* Open Liberty
+* Spring Boot
+* WebSphere Liberty MicroProfile
+ 

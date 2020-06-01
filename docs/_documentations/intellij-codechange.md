@@ -14,3 +14,12 @@ Codewind automatically builds and redeploys your application whenever you make a
 2. Edit your file.
 3. Save your changes. By default, IntelliJ automatically saves your changes. However, if you manually save your changes, you can help Codewind detect changes more quickly.
 4. Open the application again. Your changes appear.
+
+## Next Steps
+
+**Getting started with Codewind** You have now completed all the steps to get started with Codewind. To learn more about how you can develop using Codewind, choose from the following:
+
+- [Working with templates](./workingwithtemplates.html)
+- [Using the Metrics Dashboard for performance monitoring](./metrics-dashboard.html)
+
+**The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).

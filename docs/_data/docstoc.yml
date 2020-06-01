@@ -2,10 +2,11 @@
   url: overview.html
 
 - title: 'Getting started'
-  url: gettingstarted.html
   children:
+    - title: 'Overview: Getting started'
+      url: gettingstarted.html
     - title: 'VS Code'
-      children:
+      children:        
       - title: 'Installing Codewind for VS Code'
         url: vsc-getting-started.html
       - title: 'Creating your first Codewind project with Codewind for VS Code'
@@ -87,7 +88,9 @@
     - title: 'Referencing files external to a project'
       url: referencing-files.html
     - title: 'Developing with packages from private registries and repositories'
-      url: private-registries.html  
+      url: private-registries.html
+    - title: 'OpenShift Do (odo) support in Codewind'
+      url: che-odo-support.html
     - title: 'Using Codewind offline'
       url: offline-codewind.html
     - title: 'Debugging in Codewind'
