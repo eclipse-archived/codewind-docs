@@ -30,20 +30,22 @@ You will learn how to add and enable monitoring to your application. Then, you c
 
 ![Performance dashboard](images/performanceguide/performancedash_window.png){:height="375px" width="800px"}<br>
 
-## Project Capabilities overview
+## Project Capabilities Overview
 
-When the Performance Dashboard opens, the **Project Capabilities** overview pane is displayed.
+When the Performance Dashboard opens, the **Project Capabilities Overview** pane is displayed. 
 
-The **Project Capabilities** overview pane provides the current running state of your project and a summary of load test and metrics-related capabilities your project can support.
+The **Project Capabilities Overview** pane provides the current running state of your project and a summary of load test and metrics-related capabilities that your project can support:
 
-The pane can be closed and reopened at any time by using the **Action** button in the main page navigation bar.
-
-![Performance dashboard capabilities](images/performanceguide/performance_dashboard_capabilities.png)
+![Performance dashboard project capabilities](images/performanceguide/performance_dashboard_capabilities.png)
 
 - **Project status:** Provides current project status.
 - **Run Load Feature:** Provides information about whether load pressure can be applied to your project.
-- **Live monitoring:** Use this information to determine whether you can view live metrics. For example, Appsody projects, by default, protect the metrics endpoints and require authenticated user access. For Codewind to connect to the project and retrieve performance metrics, anonymous access must be granted to the metrics endpoint. Click **Disable authentication** to enable Codewind to grant anonymous access to the metrics endpoint. This action restarts the project, and you see that the project status updates and messages appear in the **Notification** pane. You can stack the notifications, remove them after a few seconds, or close them. 
+- **Live monitoring:** Use this information to determine whether you can view live metrics. For example, Appsody projects, by default, protect the metrics endpoints and require authenticated user access. For Codewind to connect to the project and retrieve performance metrics, anonymous access must be granted to the metrics endpoint. Click **Allow anonymous connections** to enable Codewind to grant anonymous access to the metrics endpoint. This action restarts the project, and you see that the project status updates and messages appear in the **Notification** pane. You can stack the notifications, remove them after a few seconds, or close them. 
 - **Benchmarks:** Benchmarks are a collection of completed load test results displayed on a chart and in a table.
+
+You can close and reopen the pane at any time by clicking the **Project Capabilities Overview** button in the main page navigation bar:
+
+![Performance dashboard nav bar icon](images/performanceguide/performance_dashboard_navbar_icon.png)
 
 ## Running a load test
 
