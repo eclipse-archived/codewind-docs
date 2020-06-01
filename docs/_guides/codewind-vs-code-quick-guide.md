@@ -10,16 +10,16 @@ keywords: Codewind, VS Code, microservice
 ---
 
 ## Objectives
-* Install Visual Studio Code (VS Code) and Codewind
-* Develop a simple microservice that uses Eclipse Codewind on VS Code
+* Install Visual Studio Code (VS Code) and Codewind.
+* Develop a simple microservice that uses Eclipse Codewind on VS Code.
 
 ## Overview
-Use Eclipse Codewind to create application projects from `Application Stacks` that your company builds. With Codewind, you can focus on your code and not on infrastructure and Kubernetes. Application deployments to Kubernetes occur through pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.
+Use Eclipse Codewind to create application projects from Application Stacks that your company builds. With Codewind, you can focus on your code and not on infrastructure and Kubernetes. Application deployments to Kubernetes occur through pipelines when developers commit their local code to the correct Git repos Kabanero is managing via webhooks.
 
-Use Codewind to create projects based on different template types. These projects include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for: IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Spring Boot, Node.js, Node.js with Express, and Node.js with Loopback.
+Use Codewind to create projects based on different template types. These projects include IBM Cloud starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Spring Boot, Node.js, Node.js with Express, and Node.js with Loopback.
 
 ## Developing with VS Code
-You can use Codewind for VS Code to develop and debug your containerized projects from within VS Code that uses the workflow that you already use today.
+Keep your current workflow and use Codewind for VS Code to develop and debug your containerized projects from within the IDE.
 
 ### Prerequisite
 Before you can develop a microservice with VS Code, you need to:
@@ -39,7 +39,7 @@ The Codewind installation includes two parts:
 1. The VS Code extension installs when you install Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and click `Install`.
     * Or, go to `View->Extensions`, search for Codewind, and click `Install`.
 2. The Codewind backend containers install after you click `Install` when you are prompted. Clicking `Install` downloads the Codewind backend containers, ~1GB.
-    * **Optional:** If you don’t click `Install` when the notification window first appears, you can access the notification again. Go to `View->Explorer`. Then, click `Codewind` and hover the cursor over `Codewind` where there is a switch to turn Codewind on or off. Click the switch so that it is `On`. The notification window is displayed.
+    * **Optional:** If you don’t click **Install** when the notification window appears, access the notification again. Go to **View**>**Explorer**. Then, click **Codewind** and hover the cursor over **Codewind** where there is a switch to turn Codewind on or off. Click the switch so that it is **On**. The notification window is displayed.
 
 ### Configuring Codewind to use application stacks
 Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include an Eclipse MicroProfile stack that you can use to follow this guide. Complete the following steps to select the Appsody templates:
@@ -61,28 +61,28 @@ If your organization uses customized application stacks and gives you a URL that
 ### Creating an Appsody project
 Throughout the application lifestyle, Appsody helps you develop containerized applications and maximize containers curated for your usage. If you want more context about Appsody, see the [Appsody welcome page](https://appsody.dev/docs).
 
-1. Under the Explorer pane, select `Codewind`.
-2. Expand `Codewind` by clicking the drop-down arrow.
-3. Hover over the `Projects` entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
+1. Under the Explorer pane, select **Codewind**.
+2. Expand **Codewind** by clicking the drop-down arrow.
+3. Hover over the **Projects** entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
     * **Note:** Make sure that Docker is running. Otherwise, you get an error.
-4. Choose the `Appsody Open Liberty default template (Appsody Stacks - incubator)`.
-5. Name your project `appsody-calculator`.
-    * If you don't see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - incubator`.
+4. Choose the **Appsody Open Liberty default template (Appsody Stacks - incubator)**.
+5. Name your project **appsody-calculator**.
+    * If you don't see Appsody templates, find and select **Template Source Manager** and enable **Appsody Stacks - incubator**.
     * The templates are refreshed, and the Appsody templates are available.
 6. Press `Enter`.
-    * To monitor your project's progress, right-click your project, and select `Show all logs`. Then, an `Output` tab is displayed where you see your project's build logs.
+    * To monitor your project's progress, right-click your project and select **Show all logs**. Then, an **Output** tab is displayed where you see your project's build logs.
 
 Your project is complete when you see that your application status is running and your build status is successful.
 
 ### Accessing the application endpoint in a browser
 1. Return to your project under the Explorer pane.
-2. Select the Open App icon next to your project's name, or right-click your project and select `Open App`.
+2. Select the Open App icon next to your project's name, or right-click your project and select **Open App**.
 
 Your application is now opened in a browser, showing the welcome to your Appsody microservice page.
 
 ### Adding a REST service to your application
  1. Go to your project's workspace under the Explorer tab.
- 2. Go to `src->main->java->dev->appsody->starter`.
+ 2. Go to `src>main>java>dev>appsody>starter`.
  3. Right-click `starter` and select `New File`.
  4. Create a file, name it `Calculator.java`, and press `Enter`. This file is your JAX-RS resource.
  5. Before you input any code, make sure that the file is empty. 
@@ -134,7 +134,7 @@ public class Calculator extends Application {
 }
 ```
 
-Any changes that you make to your code are automatically built and redeployed by Codewind and you can view them in your browser.
+Any changes that you make to your code are automatically built and redeployed by Codewind, and you can view them in your browser.
 
 ### Working with the example calculator microservice
 You now can work with the example calculator microservice.
