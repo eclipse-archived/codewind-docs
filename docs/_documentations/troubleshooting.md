@@ -858,7 +858,7 @@ In Eclipse and VS Code, capture diagnostics from your installation by using the 
 - The format of the command is `cwctl diagnostics collect <command options> <arguments...>`.
 
 Command options are:
-* `--conid <value>` - This option triggers diagnostics collection for the remote Codewind instance. You need to have a currently configured Kubectl connection. The default value is `"local"`.
+* `--conid <value>` - This option triggers diagnostics collection for the remote Codewind instance. You need to have a currently configured kubectl connection. The default value is `"local"`.
 * `--all/-a` - This option collects diagnostics for all defined connections, remote and local.
 * `--eclipseWorkspaceDir/-e <value>` - This option is the location of your Eclipse workspace directory if you use the Eclipse IDE.
 * `--intellijLogsDir/-i <value>` - This option is the location of your IntelliJ logs directory if you are not using the IntelliJ IDE default location.
@@ -870,7 +870,7 @@ After you run the command, find the captured diagnostics files in your `HOME` di
 
 For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnostics CLI documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
 
-To remove all collected diagnostics from your system, issue the command `cwctl diagnostics remove`.
+To remove all collected diagnostics from your system, issue the `cwctl diagnostics remove` command.
 
 <!--
 Action/Topic: Reinstate IDE specific troubleshooting help (Eclipse, VS Code and Che)
