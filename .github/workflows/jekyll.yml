@@ -1,0 +1,45 @@
+name: Build and check links are valid
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile files
+        run: |
+          mkdir -p _jekyllHome
+          docker run --rm \
+            --volume="$PWD/docs:/srv/jekyll" \
+            --volume="$PWD/_jekyllHome:/home/jekyll" \
+            --volume="$PWD/vendor/bundle:/usr/local/bundle" \
+            jekyll/jekyll:3.8 \
+            /bin/bash -c "chmod a+w /home/jekyll /var/jekyll /srv/jekyll && bundle install && jekyll build"
+      - name: Build Apache container and copy in files
+        run: docker run -dit --name my-apache-app -p 8765:80 -v "$PWD/docs/_site":/usr/local/apache2/htdocs/codewind/ httpd:2.4
+
+      - name: Run Linkchecker
+        run: |
+          RED='\033[0;31m'
+          NC='\033[0m'
+          GREEN='\033[0;32m'
+          docker run --network="host" --rm  -u $(id -u):$(id -g) codewinddocs/linkchecker:1.0 http://localhost:8765/codewind/
+          rc=$?
+          if [[ $rc != 0 ]];
+          then
+            printf "${RED}Find bad link(s), please fix them!${NC}\n"
+            exit $rc;
+          else
+            printf "${GREEN}No errors found. Safe to check in.${NC}\n"
+          fi
+      - name: Remove container
+        run: |
+          echo "Shutting down apache server..."
+          docker stop my-apache-app >/dev/null 2>&1
+          echo "Removing apache container..."
+          docker container rm my-apache-app >/dev/null 2>&1
