@@ -40,7 +40,7 @@ After you install `chectl`, download the [codewind-checluster.yaml](https://raw.
 Eclipse Che on OpenShift makes use of the router's existing certificates. 
 Run the following command to install Che on OpenShift with `chectl`: 
    ```
-   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
+   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
 
 **Installing on Kubernetes:**
@@ -62,7 +62,7 @@ Run the following command to install Che on OpenShift with `chectl`:
 6. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
 7. Run the following command to install Che: 
    ```
-   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
+   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
 
 ## Updating an existing Che installation
