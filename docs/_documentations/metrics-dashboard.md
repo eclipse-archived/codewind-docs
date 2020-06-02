@@ -101,7 +101,7 @@ If profiling markers do not appear, check to see if your project and load run co
 
 ## Interpreting the annotation tooltip
 
-After you start the load test and the test completes, view the source code. Theia and VS Code display an annotation tooltip with a specified message in a similar format to the following example:
+After you start the load test, and the test completes, view the source code. Theia and VS Code display an annotation tooltip with a specified message in a similar format to the following example:
 
 ```
 Function app.get() was the running function in 0.58% of samples.
