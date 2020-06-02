@@ -70,8 +70,10 @@ For more information about the Codewind operator and the installation process, s
 ### 2a. Install the operator
 Use the `install.sh` script that is located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak. If you use Windows, use a Unix-like shell such as Windows Subsystem for Linux, Git Bash, or MinGW to run the operator installer shell script. For example:
 
+```bash
 `$ cd deploy`
 `$ ./install.sh operator -i <ingress_domain>`
+```
 
 Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, for example: 
 
