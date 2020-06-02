@@ -41,9 +41,10 @@ For more information, select from the following IDEs:
   - OpenShift in IBM Public Cloud
   - Stand-alone Kubernetes
   - Kubernetes in Docker
-- However, Codewind runs on any Kubernetes distribution that meets the following requirements:
-  - Includes Kube 1.11 or later
-  - Supports RWX volumes
+- However, Codewind can run on any Kubernetes distribution that meets the following requirements:
+  - Kubernetes 1.11 or later is included.
+  - ReadWriteMany (RWX) persistent volumes are supported.
+  - The Nginx Ingress Controller is installed.
 - If you want to test and document support for other clouds, you can [contribute in GitHub](https://github.com/eclipse/codewind).
 
 3. **For Linux desktop, ensure that your workstation is set up to use a Keyring.** An example of a Keyring on Linux is Secret Service. 
@@ -67,9 +68,12 @@ For more information about the Codewind operator and the installation process, s
 3. [Update the Keycloak password in the operator secret with the new password](#2c-update-the-keycloak-password-in-the-operator-secret-with-the-new-password).
 
 ### 2a. Install the operator
-Use the `install.sh` script that is located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak, for example:
+Use the `install.sh` script that is located in your cloned Codewind operator repository `deploy` folder to install the operator into your cluster and deploy Keycloak. If you use Windows, use a Unix-like shell such as Windows Subsystem for Linux, Git Bash, or MinGW to run the operator installer shell script. For example:
 
-`$ ./install.sh operator -i <ingress_domain>`
+```bash
+$ cd deploy
+$ ./install.sh operator -i <ingress_domain>
+```
 
 Add the option `-o` flag if you are installing into an OpenShift 3.11 cluster, for example: 
 
@@ -151,7 +155,7 @@ Then, save `bXlOZXdQYXNzd29yZA==` as the value for `keycloak-admin-password` rat
 
 Use the `install.sh` script in the Codewind operator repository to deploy a Codewind instance:
 
-`$ install.sh codewind -n <instanceName> -u <registeredUsername>`
+`$ ./install.sh codewind -n <instanceName> -u <registeredUsername>`
 
 - `instanceName` is the unique name that you specify for this Codewind instance.
 - `registeredUsername` is the name of the user that you added in [Step 3](#3-add-a-new-user-to-keycloak).
