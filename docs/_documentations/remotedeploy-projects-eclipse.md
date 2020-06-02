@@ -10,10 +10,9 @@ type: document
 
 # Creating and importing projects
 
-When you configure Codewind to be used remotely, you are ready to:
+When you configure Codewind to be used remotely, you are ready to create a project that you can build and run remotely. 
 
-1. Create a new project
-2. Import a project from your local Codewind instance to your remote Codewind instance on the cloud
+If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](##import-an-existing-local-project-to-the-cloud).
 
 ## Create a new project
 
@@ -31,21 +30,25 @@ Copy an existing local project, for example `myFirstNodeProject`, over to the re
 
 ![Add existing project](./images/remotedeploy-projects-eclipse/eclipse_add-project.png){:width="366"}
 
-2\. Go to the folder containing the local project files, click `Select a project from the workspace`, and select your project: 
+2\. Go to the folder that contains the local project files, click `Select a project from the workspace`, and select your project: 
 
 ![Add to Codewind](./images/remotedeploy-projects-eclipse/eclipse_select-project.png){:width="654"}
 
 Codewind prompts you to confirm the project type, in this case, identified as `NodeJS`:
 
-![Confirm Project Type](./images/remotedeploy-projects-eclipse/eclipse_confirm-project-type.png){:width="654"}
+![Confirm Project Type](./images/remotedeploy-projects-eclipse/eclipse_confirm-project.png){:width="654"}
+
+If you add a project to the remote connection that is already deployed on the local connection, the **Project Already Deployed** page appears: 
+
+![Project Already Deployed](./images/remotedeploy-projects-eclipse/eclipse_project-deployed.png){:width="524"}
 
 3\. Click `Finish`. Project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears in the Codewind pane:
 
-![Project Added](./images/remotedeploy-projects-eclipse/eclipse_build-python-project.png){:width="196"}
+![Project Added](./images/remotedeploy-projects-eclipse/eclipse_build-project.png){:width="175"}
 
 4\. Codewind begins building the code and the Docker image. Moments later the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
 
-![Build Success](./images/remotedeploy-projects-eclipse/eclipse_build-python-project-successful.png){:width="189"}
+![Build Success](./images/remotedeploy-projects-eclipse/eclipse_build-project-successful.png){:width="180"}
 
 `myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
@@ -55,11 +58,11 @@ With the Eclipse IDE, you can drag and drop projects from one connection to anot
 
 Select the project in one connection and drag it into another connection: 
 
-![Drag NODEJS Project](./images/remotedeploy-projects-eclipse/eclipse_move-node-project-from-local-folder.png){:width="193"}
+![Drag NODEJS Project](./images/remotedeploy-projects-eclipse/eclipse_move-node-project.png){:width="177"}
 
-When you remove the project from the first connection, you add it to the second connection:
+This action removes the project from the first connection and adds it to the second connection:
 
-![Drop NODEJS Project](./images/remotedeploy-projects-eclipse/eclipse_place-node-project-in-cloudname-folder.png){:width="189"}
+![Drop NODEJS Project](./images/remotedeploy-projects-eclipse/eclipse_place-node-project.png){:width="175"}
 
 # Next Steps
 
