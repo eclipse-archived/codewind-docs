@@ -117,20 +117,6 @@ If installing and starting Codewind still fails, you can use Docker system prune
 <!--
 Action/Topic: Installing Codewind
 Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind/issues/2239
-0.9.0: New
--->
-## Cannot find Codewind in the Marketplace when attempting to install in IntelliJ
-When you try to install Codewind in IntelliJ, the Codewind plug-in does not appear in the Marketplace. Attempts to verify the custom plug-in repository link result in a `Connection failed` error message.
-
-This error occurs because the custom plug-in repository link contains an extra space.
-
-**Workaround:**
-Remove the extra space from the custom plug-in repository link.
-
-<!--
-Action/Topic: Installing Codewind
-Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/2563
 0.11.0: New
 -->
