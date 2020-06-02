@@ -6,8 +6,6 @@ keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, a
 duration: 1 minute
 permalink: metrics-dashboard
 type: document
-parent:
-order:
 ---
 
 # Understanding the Metrics Dashboard
@@ -105,12 +103,12 @@ If profiling markers do not appear, check to see if your project and load run co
 
 After you start the load test and the test completes, view the source code. Theia and VS Code display an annotation tooltip with a specified message in a similar format to the following example:
 
-`Function app.get() was the running function in 0.58% of samples.`
-
-- `(1,1): <anonymous function> made 66.67% of sampled calls.`
-- `layer.js(86,1): handle() made 33.33% of sampled calls.`
-
-`function(req: any, res: any, next: any): Promise<any>`
+```
+Function app.get() was the running function in 0.58% of samples.
+- (1,1): <anonymous function> made 66.67% of sampled calls.
+- layer.js(86,1): handle() made 33.33% of sampled calls.
+function(req: any, res: any, next: any): Promise<any>
+```
 
 - The bullet points indicate the parent callers of the function. The percentages equal the number of times that a parent caller called a function. In this example, `<anonymous function>` probably made 2 calls to the `app.get()` function, and the `handle()` function probably made 1 call.
 - The numbers in the parenthesis indicate the position of the parent function in the file, such as the line and character number. This position information is ambiguous for anonymous functions, but the message includes the information regardless.
