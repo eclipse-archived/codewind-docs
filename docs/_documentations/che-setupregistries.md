@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Adding image registries in Codewind for Che
-description: AAdding image registries in Codewind for Che
+description: Adding image registries in Codewind for Che
 keywords: container, registry, Che, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
 permalink: che-setupregistries
@@ -33,13 +33,13 @@ After Che is started and running, add the image registry to be used with Codewin
 2. From the **Image Registry Manager**, click **Add New**.
 3. Enter the following information to add the registry:
   - Registry server name or domain name: `<registry-to-push-images-to>`
-  - User name: `<Your username>`
+  - Username: `<Your username>`
   - Password or API key: `<Your password or API key>`
 4. If you're using the newly added registry as a push registry, enter the namespace that you want to push your images to.
   - For recommended values for common registries, see the [examples](#examples).
 5. Click **Select a Push Registry** to determine which registry you use to push Codewind style projects to.
 
-**If you are using Codewind with OKD or Openshift** You can use the OpenShift internal container registry with Codewind. For instructions, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
+**If you are using Codewind with OKD or OpenShift** You can use the OpenShift internal container registry with Codewind. For instructions, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
 ## Codewind image registry guidance
 When you run Codewind on Kubernetes for Codewind style projects, Codewind uses [`buildah`](https://github.com/containers/buildah) to build container images from Dockerfiles and to push the images to an image registry that you specify. Use the **Image Registry Manager** in your Codewind IDE to configure the registry to use. 
@@ -51,20 +51,20 @@ These examples show recommended values for common registries. The following depl
 - Docker Hub:
     - Address: `docker.io`
     - Namespace: `<namespace>`
-    - Credentials: Docker Hub user name and password or access token
-    - **Note:** For Docker Hub, the `Namespace` value is likely to be your user name. 
+    - Credentials: Docker Hub username and password or access token
+    - **Note:** For Docker Hub, the `Namespace` value is likely to be your username. 
 - Quay.io:
     - Address: `https://quay.io`
     - Namespace: `<namespace>`
-    - Credentials: Quay.io user name and encrypted password
+    - Credentials: Quay.io username and encrypted password
 - Artifactory
     - Address: `<artifactory-hostname>`
     - Namespace: `<namespace>`
-    - Credentials: Artifactory user name and access token
+    - Credentials: Artifactory username and access token
 - OpenShift Registry
     - Address: `docker-registry.default.svc:5000`
     - Namespace: `<project>`
-    - Credentials: OpenShift user name and access token
+    - Credentials: OpenShift username and access token
 
 ## Next step: 
 
