@@ -22,4 +22,6 @@ Codewind includes a ready-to-use devfile with its plug-ins. Complete the followi
 
 For more sample devfiles, see [`codewind-templates/devfiles/`](https://github.com/kabanero-io/codewind-templates/tree/master/devfiles).
 
-Next step: [Creating your first project with Codewind for Eclipse Che](che-createfirstproject.html)
+### Next Step
+
+**Getting started with Codewind for Eclipse Che** Continue to instructions for [Creating your first project with Codewind for Eclipse Che](che-createfirstproject.html)
