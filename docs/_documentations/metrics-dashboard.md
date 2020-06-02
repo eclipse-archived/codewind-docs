@@ -82,7 +82,7 @@ Code highlighting is available for Node.js or Java projects on VS Code that are 
 
 To enable code highlighting, install the appropriate VS Code extension:
 - For Node.js projects, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
-- For Java projects, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler). Java is supported, however, if the Metrics Dashboard does not show profiling data, use the editor plug-in to display it instead.
+- For Java projects, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler). Java is supported. However, if the Metrics Dashboard does not show profiling data, use the editor plug-in to display it instead.
 
 ### Running a load test and load run
 - To execute a load test, see the **Running a load test** section of the [Performance Dashboard](performance.html).
