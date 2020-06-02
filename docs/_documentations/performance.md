@@ -28,7 +28,22 @@ You will learn how to add and enable monitoring to your application. Then, you c
 1. From your IDE, go to the Codewind plug-in and right-click on a project.
 2. Then, select **Performance Dashboard**. A window appears that displays the Performance Dashboard.<br>
 
-![performance dashboard](images/performanceguide/performancedash_window.png){:height="375px" width="800px"}<br>
+![Performance dashboard](images/performanceguide/performancedash_window.png){:height="375px" width="800px"}<br>
+
+## Project Capabilities Overview
+
+When the Performance Dashboard opens, the **Project Capabilities Overview** pane is displayed. 
+
+The **Project Capabilities Overview** pane provides the current running state of your project and a summary of load test and metrics-related capabilities that your project can support:
+
+![Performance dashboard project capabilities](images/performanceguide/performance_dashboard_capabilities.png){:height="375px" width="800px"}<br>
+
+- **Project status:** Provides current project status.
+- **Run Load Feature:** Provides information about whether load pressure can be applied to your project.
+- **Live monitoring:** Use this information to determine whether you can view live metrics. For example, Appsody projects, by default, protect the metrics endpoints and require authenticated user access. Codewind can automatically configure your project and grant anonymous access to the metrics endpoint to read metrics data. Click **Allow anonymous connections** to make the required changes to the container and restart the project. You can then use the metrics capabilities. To reprotect the metrics endpoint in your project, revisit the capabilities pane and turn off anonymous access. While the project is being restarted, notifications appear in the dashboard during each phase of the restart.
+- **Benchmarks:** Benchmarks are a collection of completed load test results displayed on a chart and in a table.
+
+You can close and reopen the pane at any time by clicking the **Project Capabilities Overview** button in the main page navigation bar: ![Performance dashboard nav bar icon](images/performanceguide/performance_dashboard_navbar_icon.png){:height="25px" width="25px"}<br>
 
 ## Running a load test
 
