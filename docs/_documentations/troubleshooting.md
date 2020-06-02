@@ -13,7 +13,7 @@ parent: root
 
 # Troubleshooting
 
-The following sections contain workarounds for issues that you might encounter when you use Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
+The following sections contain workarounds for issues that you might encounter when using Codewind. If you don't see your issue here, please check our [GitHub repository](https://github.com/eclipse/codewind/issues). If you still don't see your issue, you can open a new issue in the repository.
 
 * [Installing Codewind](#installing-codewind)
 * [Upgrading Codewind](#upgrading-codewind)
@@ -24,12 +24,20 @@ The following sections contain workarounds for issues that you might encounter w
 * [Editing your project](#editing-your-project)
 * [Disabling development on specific projects](#disabling-development-on-specific-projects)
 * [Appsody with Codewind](#appsody-with-codewind)
+* [Eclipse Che with Codewind](#eclipse-che-with-codewind)
 * [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
-* [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
+* [Collecting log files and environment data](#collecting-log-files-and-environment-data)
+
+## IDE Troubleshooting
+
+The following sections contain workarounds for issues that you might encounter when using Codewind in a particular IDE.
+
+* [Eclipse troubleshooting](#eclipse-troubleshooting)
+* [VS Code troubleshooting](#vs-code-troubleshooting)
 
 ***
 # Installing Codewind
@@ -144,6 +152,20 @@ If you cannot install a keychain, enable insecure keychain mode. If you enable t
 
 If you use `cwctl` directly, use the `--insecure-keyring` command line argument or set `INSECURE_KEYRING=true` in the environment. To get the IDE plug-ins to use the insecure keyring, set `INSECURE_KEYRING=true` in the environment before launching the IDE from that same environment.
 
+<!--
+Action/Topic: Failed to connect to remote Codewind instance
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2863
+0.12.0: New
+-->
+##  Operator install failed to connect to remote Codewind instance
+When installing Codewind remotely, you get a `Account is not fully set up` error message.
+
+**Workaround**
+If you have set a temporary password by clicking the `Temporary` check box to `On`, log in to Keycloak to set a new one.
+
+For more information, see [Add a new user to Keycloak](remote-deploying-codewind.html#3-add-a-new-user-to-keycloak).
+
 ***
 # Upgrading Codewind
 
@@ -197,7 +219,7 @@ Issue link: https://github.com/eclipse/codewind/issues/477
 ## Project creation on macOS fails, and Codewind reports an error
 If creating a Codewind project on macOS fails, Codewind might report the `net/http: TLS handshake timeout` error. For a similar issue, see the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout).
 
-**Workaround**
+**Workaround:**
 As noted in the report [Error "net/http: TLS handshake timeout"](https://discussions.agilebits.com/discussion/99219/error-net-http-tls-handshake-timeout), go to **Applications**>**Utilities**>**Keychain Access** and delete from the keychain the certificates that you no longer need. You might notice that some certificates are redundant. Then, restart Codewind.
 
 <!--
@@ -346,7 +368,7 @@ Issue link: https://github.com/eclipse/codewind/issues/715
 ## Projects stuck in starting or stopped state
 You might occasionally see projects stuck in the `Starting` or `Stopped` state even though the container logs say the projects are up and running. This behavior can occur when you create a number of projects, for example, using the default and Appsody templates with Codewind 0.5.0.
 
-**Workaround** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this:
+**Workaround:** Manually rebuild the projects that are stuck in `Starting` or `Stopped` state. To do this:
 1. In the **Codewind Explorer** view, right-click your project and select **Build**.
 2. Wait for the project state to return to **Running** or **Debugging** in the **Codewind Explorer** view.
 
@@ -359,7 +381,7 @@ Issue link: https://github.com/eclipse/codewind/issues/1269
 ## Application stuck in Starting state
 Some project templates come with no server configured by default, like Appsody Node.js. The application status cannot be determined for these types of projects because Codewind relies on application endpoints for status. Codewind determines the port of the application by inspecting the project's container information. The container may have a port exposed but since no server is available to ping on that port, the status check times out, and the state is stuck on `Starting`.
 
-**Workaround** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
+**Workaround:** The constant state is not inherently a problem; nonetheless, you can disable the status check for the project by taking the following steps:
 1. Edit the `.cw-settings` file under the application, and set the key `internalPort` to `-1`.
     - This forces the project state to `Stopped`, stops pinging the project's health check endpoint, and ignores the timeout error.
 2. Once you implement the project's server, revert the setting by setting `internalPort` to `""` to allow Codewind to use the default port of the container. Alternatively, choose a specific port if your container exposes multiple ports.
@@ -455,7 +477,7 @@ Issue link: Updated in https://github.com/eclipse/codewind/issues/2613
 ## Context Root / Application Endpoint not correct
 If you create or bind a project that has a context root set in `.cw-settings`, such as a project using the Lagom template, the context root is not picked up initially. This also happens after restarting Codewind.
 
-**Workaround** For a permanent fix, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`. 
+**Workaround** For a permanent fix, edit and save the `.cw-settings` file, and the context root updates. For a temporary workaround, add the context root to the URL in your browser. For example, the browser might open with `localhost:34567` instead of `localhost:34567/mycontextroot`, so type `mycontextroot`.
 
 ***
 # Disabling development on specific projects
@@ -501,9 +523,27 @@ Issue link: https://github.com/eclipse/codewind-docs/issues/64
 18.10:
 -->
 ## Node.js and Swift templates remain in the starting state
-The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, its status cannot be detected. These templates do not have a server and are intended to help you implement your own server.
+The templates `Appsody Node.js template` and `Appsody Swift template` remain in the starting state by default because these templates do not have a server implemented, and therefore, their statuses cannot be detected. These templates do not have a server and are intended to help you implement your own server.
 
-**Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind can monitor the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continueously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
+**Workaround** To get the application into a **Started** state, use a server for the application. After the application has a server, Codewind monitors the server, and the status turns to **Started** if the server is running. Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
+
+<!--
+Action/Topic: Appsody with Codewind
+Issue type: bug/info
+Issue link:
+-->
+## Kafka templates remain in the starting state
+
+The `Kafka` templates for the Appsody `Quarkus` and `Spring Boot` application stacks remain in the starting state when you create a project using them. These projects require users to configure a Kafka instance to connect to in order to run correctly. Additionally, these projects do not expose an endpoint at the `/` path that Codewind attempts to ping because these projects are not meant to be REST-style applications.
+
+**Workaround** Refer to the documentation for the respective stacks to find out how to configure a Kafka instance to work with the applications:
+
+- [Quarkus](https://github.com/appsody/stacks/tree/master/incubator/quarkus#kafka-template)
+- [Spring Boot](https://github.com/appsody/stacks/tree/master/incubator/java-spring-boot2/templates/kafka)
+
+You should also [configure the project's health check endpoint](project-settings.html#health-check-endpoint) for Codewind to ping instead of the `/` path.
+
+Alternatively, you can also temporarily [stop Codewind from continuously pinging the application](#how-to-stop-the-app-from-continuously-pinging).
 
 <!--
 Action/Topic: Appsody with Codewind
@@ -616,6 +656,20 @@ Increase the timeout value in the project's `pom.xml` file. Look for the followi
 ```
 <serverStartTimeout>120</serverStartTimeout>
 ```
+
+***
+# Eclipse Che with Codewind
+
+<!--
+Action/Topic: Eclipse Che with Codewind
+Issue type: bug/info
+Issue link: https://github.com/eclipse/codewind/issues/2828
+-->
+## A Codewind workspace fails to start on a new cluster when images are not present in the local cache
+Workspaces that don't start within the allotted time might get terminated. This error occurs if a hosted image registry network is slow or if it is slow within the cluster environment.
+
+**Workaround:** Change the workspace timeout of your Che installation. Enter the following command and increase the default value of `8` minutes:
+`kubectl patch checluster/eclipse-che --patch "{\"spec\":{\"server\":{\"customCheProperties\": {\"CHE_INFRA_KUBERNETES_WORKSPACE__START__TIMEOUT__MIN\": \"8\"}}}}" --type=merge -n che`
 
 ***
 # OpenShift Do (odo) with Codewind
@@ -795,9 +849,125 @@ Info added in 0.10.0.
 ## Assisting with problem determination by raising the default Codewind server log level
 To assist with problem determination, raise the default Codewind server log level to **Debug** or **Trace**. Use the `cwctl loglevels` command or follow the instructions for an IDE:
 - In Eclipse, enable support features in the Codewind preferences, then right-click the connection in the Codewind Explorer view and click **Codewind server log level**.
+- In IntelliJ, go to the **Debug Log Settings** dialog and enable the `org.eclipse.codewind` category so Codewind diagnostic debug and trace messages are written to the log. The `#org.eclipse.codewind` method turns on debug level messages, and the `#org.eclipse.codewind:trace` method turns on trace level messages.
 - In VS Code, use the **Codewind: Set Codewind Server Logging Level** command in the Command Palette.
 
-# Executable file not found on PATH in VS Code
+***
+# Collecting log files and environment data
+<!--
+Action/Topic: Collecting log files and environment data
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930
+Info added in 0.12.0, updated in 0.13.0.
+-->
+
+You can capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
+
+The format of the command is:
+`cwctl diagnostics collect [command options] [arguments...]`
+
+Command options are:
+* `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
+* `--all/-a` - Collects diagnostics for all defined connections, remote and local
+* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE
+* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if not using the IntelliJ IDE default location
+* `--projects/-p` - Collect project containers information
+* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
+
+After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
+
+To remove all collected diagnostics from your system, issue the command `cwctl diagnostics remove`.
+
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
+
+<!--
+Action/Topic: Reinstate IDE specific troubleshooting help (Eclipse, VS Code and Che)
+Issue type: info
+Issue link: https://github.com/eclipse/codewind/issues/2633
+Information reinstated in 0.12.0.
+-->
+
+***
+# Eclipse troubleshooting
+
+For Codewind specific problem solving tips when using Eclipse, see the following information.
+
+* [Check the Eclipse logs](#check-the-eclipse-logs)
+* [Solving common Eclipse problems](#solving-common-eclipse-problems)
+
+## Check the Eclipse logs
+The logs are found in your Eclipse workspace under *.metadata/.log*.
+
+## Solving common Eclipse problems
+The following list describes common problems that might affect Codewind.
+
+- [Open application fails](#open-application-fails)
+- [Debugger fails to connect](#debugger-fails-to-connect)
+- [Application stuck in Starting state](#application-stuck-in-starting-state-in-eclipse)
+- [Application does not rebuild after making a change](#application-does-not-rebuild-after-making-a-change)
+- [Correct project list is not being shown](#correct-project-list-is-not-being-shown)
+- [Application is not showing the correct status](#application-is-not-showing-the-correct-status)
+
+## Open application fails
+The default browser in Eclipse might not be able to handle the content of your application.  Try using a different browser by clicking on **Window** > **Web Browser**.  Select a browser from the list and try to open the application again.
+
+## Debugger fails to connect
+If the debugger fails to connect, you might need to increase the connection timeout:
+1. Open the Eclipse preferences and select **Codewind**.
+2. Increase the debug connection timeout value and click **Apply and Close**.
+
+## Application stuck in Starting state in Eclipse
+The application might be waiting for the debugger to connect. You can resolve this by right-clicking on the project in the **Codewind Explorer** view and selecting **Attach Debugger**.  If the problem occurred because the debugger failed to connect when restarting in debug mode, make sure to increase the debug connection timeout in the Codewind preferences before trying to debug again. For more information see [Debugger fails to connect](#debugger-fails-to-connect).
+
+If the debugger is connected but stopped on a ClassNotFoundException, click on the run button to get past the exception. You might need to click run several times as the exception occurs more than once. To avoid stopping on the exception in the future, open the Eclipse preferences and navigate to **Java** > **Debug**. Uncheck **Suspend execution on uncaught exceptions** and click **Apply and Close**.
+
+If the application is not waiting for the debugger to connect, try restarting the application again. If this does not work, use Codewind to disable the application and then re-enable it.
+
+## Application does not rebuild after making a change
+To start a build manually, right click on the application in the **Codewind Explorer** view, and selecting **Build**.
+
+## Correct project list is not being shown
+Refresh the project list by right-clicking the connection in the **Codewind Explorer** view and selecting **Refresh**.
+
+## Application is not showing the correct status
+Refresh the application by right-clicking it in the **Codewind Explorer** view and selecting **Refresh**.
+
+***
+# VS Code troubleshooting
+
+For Codewind specific problem solving tips when using VS Code, see the following information.
+
+## Solving common VS Code problems
+The following list describes common problems that might affect Codewind.
+
+- [Codewind output stream](#codewind-output-stream)
+- [Finding the extension logs](#finding-the-extension-logs)
+- [Executable file not found on PATH in VS Code](#executable-file-not-found-on-path-in-vs-code)
+- [No ESLint warnings or errors](#no-eslint-warnings-or-errors)
+- [Debug](#debug)
+
+## Codewind output stream
+
+The Codewind output stream is available in the VS Code editor. It logs `cwctl` commands together with their output.
+
+Check the Codewind output stream first when troubleshooting because it is particularly useful in helping you to debug unusual problems especially when starting Codewind. Some errors will also provide you with a button to open the Codewind output stream, for example:
+
+![Image of VS Code output with View button](images/cdt-vsc/output_view.png)<br>
+
+## Finding the extension logs
+
+If you report an issue, you will be asked to upload your logs.
+
+1. In VS Code, open the **Output** view.
+2. Select the Codewind output stream. The first line of the Codewind output stream is the location of the Codewind extension logs.
+<br><br>
+![Codewind output stream with log location](images/cdt-vsc/output_with_logpath.png)
+<br>
+3. Upload the contents of the log file with your issue report.
+
+Also see [Collecting log files and environment data](#collecting-log-files-and-environment-data).
+
+## Executable file not found on PATH in VS Code
 <!--
 Action/Topic: Executable file not found on PATH in VS Code
 Issue type: info
@@ -824,3 +994,14 @@ If you can run `docker` from the command line, but Codewind still fails to find 
 2. Close all instances of VS Code.
 3. Open the terminal you ran `docker` from and run `code`.
 4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
+
+## No ESLint warnings or errors
+You see no ESLint warning or errors for Node.js projects. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.
+
+## Debug
+
+### Debugger attach fails with the message "Configured debug type "java" is not supported"
+Install and enable the [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+
+### Debugger fails to attach after restarting project into Debug mode
+Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.

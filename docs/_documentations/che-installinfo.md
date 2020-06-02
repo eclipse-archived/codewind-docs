@@ -41,7 +41,7 @@ Codewind can be used in one of three ways - [hosted as an IDE extension on the c
    - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
    - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
 3. Set up the ClusterRole for Codewind:
-`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml`
+`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml`
 
 ### Choose from the following instructions:
 
@@ -59,7 +59,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 
 1. Install the `chectl` CLI tool. See [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
 
-2. Download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
+2. Download the [codewind-checluster.yaml]https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
 
 3. Use the following instructions to install Codewind on your Openshift or Kubernetes cluster:
 
@@ -100,7 +100,7 @@ If you already have an Eclipse Che installation with TLS, you can update it for 
 
 Run the following command, where `$NAMESPACE` is the namespace that your Che workspaces run in. By default, this namespace is `che`.
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.11.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
+$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
 ```
 ### Next steps
 
