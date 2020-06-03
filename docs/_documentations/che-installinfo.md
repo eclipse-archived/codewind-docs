@@ -80,7 +80,7 @@ Set up Eclipse Che with TLS certificates.
 
 2. Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
    - **Note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
-    - If you install Che with publicly signed certificates, such as on OpenShift on IBM Cloud, set the `spec.server.selfSignedCert` to **false**.
+   - If you install Che with publicly signed certificates, such as on OpenShift on IBM Cloud, set the `spec.server.selfSignedCert` to **false**.
 3. Generate TLS certificates and keys. For more information, see [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates).To use self-signed certificates for your cluster setup, see [Installing Che in TLS mode with self-signed certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **Important:** do not use self-signed certificates in production
 
 4. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
