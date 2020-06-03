@@ -146,7 +146,7 @@ Any changes that you make to your code are automatically built and redeployed by
 You now can work with the example calculator microservice.
 
 * Use the **Exposed Application Port** number from the Application overview tab.
-* Make sure to remove the **< >** symbol in the URL.
+* Make sure to remove the `< >` symbol in the URL.
 * `http://127.0.0.1:<port>/starter/calculator/aboutme`
 * You see the following response:
 
@@ -156,8 +156,8 @@ You can add (+), subtract (-), and multiply (*) with this simple calculator.
 
 You can try a few of the sample calculator functions:
 
-* `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations **(+, _, *)**, and an integer a, and an integer b.
-* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you see: **10+3=13**.
+* `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *`, and an integer a, and an integer b.
+* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you see: `10+3=13`.
 
 ## What you have learned
 In this quick guide, you have learned to:
