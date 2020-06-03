@@ -40,8 +40,9 @@ Codewind can be used in one of three ways - [hosted as an IDE extension on the c
 2. Ensure that the cluster can pull images from the `docker.io/eclipse` and `quay.io/eclipse` registries.
    - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
    - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
-3. Set up the ClusterRole for Codewind:
-`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml`
+3. Create the `che` namespace to install Che with the `kubectl create namespace che` command.
+4. Set up the ClusterRole for Codewind:
+`kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/codewind-clusterrole.yaml`
 
 ### Choose from the following instructions:
 
@@ -68,7 +69,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 Eclipse Che on OpenShift makes use of the Openshift router's existing certificates. 
 Run the following command to install Che on OpenShift with `chectl`: 
    ```
-   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
+   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
 
 **Installing on Kubernetes:**
@@ -79,6 +80,7 @@ Set up Eclipse Che with TLS certificates.
 
 2. Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
    - **Note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
+   - If you install Che with publicly signed certificates, such as on OpenShift on IBM Cloud, set the `spec.server.selfSignedCert` to **false**.
 3. Generate TLS certificates and keys. For more information, see [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates).To use self-signed certificates for your cluster setup, see [Installing Che in TLS mode with self-signed certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **Important:** do not use self-signed certificates in production
 
 4. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
@@ -93,7 +95,7 @@ Set up Eclipse Che with TLS certificates.
 6. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
 7. Run the following command to install Che: 
    ```
-   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.9.2
+   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
 
 #### Installing Codewind onto an existing Eclipse Che cluster
@@ -102,7 +104,7 @@ If you already have an Eclipse Che installation with TLS, you can update it for 
 
 Run the following command, where `$NAMESPACE` is the namespace that your Che workspaces run in. By default, this namespace is `che`.
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
+$ kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/codewind-clusterrole.yaml -n $NAMESPACE
 ```
 ### Next steps
 
