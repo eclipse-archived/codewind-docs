@@ -34,7 +34,7 @@
 .guides-post-row {
     width: 100%;
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 40px;
     margin: 15px;
 }
 
@@ -83,14 +83,18 @@
     margin: 20px 0 20px 0;
 }
 
-.mr-3 {
-    height: 64px;
-}
-
 .guides-objective-header {
     margin-bottom: .5em;
 }
 
+.guide-image {
+    height: 64px;
+}
+
+.media-body {
+    margin-left: 15px;
+}
+
 .objective-item {
-    margin-bottom: 20px;
+    margin-bottom: .25em;
 }
