@@ -91,5 +91,6 @@
     margin-bottom: .5em;
 }
 
-.guides-objective-list {
+.objective-item {
+    margin-bottom: 20px;
 }
