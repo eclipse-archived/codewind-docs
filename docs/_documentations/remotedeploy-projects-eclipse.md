@@ -16,7 +16,7 @@ If you have projects that currently exist on your local computer that you would 
 
 ## Create a new project
 
-Go to the Codewind pane and click the Plus (+) icon on the new cloud deployment:
+Go to the **Codewind Explorer** view, right-click on your remote connection, and select **Create New Project**. 
 
 ![Creating new remote project](./images/remotedeploy-projects-eclipse/eclipse_create-new-project.png){:width="380"}
 
@@ -26,23 +26,24 @@ Select the template type and enter a project name. Your new project is built and
 
 Copy an existing local project, for example `myFirstNodeProject`, over to the remote Codewind deployment:
 
-1\. Select the remote deployment and click `Add Existing Project`:
+1\. Right-click on your remote connection and select **Add Existing Project**:
 
 ![Add existing project](./images/remotedeploy-projects-eclipse/eclipse_add-project.png){:width="366"}
 
-2\. Go to the folder that contains the local project files, click `Select a project from the workspace`, and select your project: 
+2\. Click **Select a project from the workspace**, and select your project: 
 
 ![Add to Codewind](./images/remotedeploy-projects-eclipse/eclipse_select-project.png){:width="654"}
 
-Codewind prompts you to confirm the project type, in this case, identified as `NodeJS`:
+Codewind prompts you to confirm the project type, in this case, identified as `Node.js`. Confirm the project type and click **Finish**:
 
 ![Confirm Project Type](./images/remotedeploy-projects-eclipse/eclipse_confirm-project.png){:width="654"}
 
-If you add a project to the remote connection that is already deployed on the local connection, the **Project Already Deployed** page appears: 
+If you add a project to the remote connection that is already deployed on the local connection, the **Project Already Deployed** dialogue appears: 
 
 ![Project Already Deployed](./images/remotedeploy-projects-eclipse/eclipse_project-deployed.png){:width="524"}
 
-3\. Click `Finish`. Project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears in the Codewind pane:
+3\. Leave the **Remove** button selected to remove the project from the 
+local connection and click **OK**: 
 
 ![Project Added](./images/remotedeploy-projects-eclipse/eclipse_build-project.png){:width="175"}
 
@@ -56,7 +57,7 @@ If you add a project to the remote connection that is already deployed on the lo
 
 With the Eclipse IDE, you can drag and drop projects from one connection to another. 
 
-Select the project in one connection and drag it into another connection: 
+Select the project in one connection and drag it onto another connection: 
 
 ![Drag NODEJS Project](./images/remotedeploy-projects-eclipse/eclipse_move-node-project.png){:width="177"}
 
