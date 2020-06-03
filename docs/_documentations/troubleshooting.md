@@ -1002,6 +1002,20 @@ If you can run `docker` from the command line, but Codewind still fails to find 
 3. Open the terminal you ran `docker` from and run `code`.
 4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
 
+## VS Code extension fails to start on Ubuntu
+<!--
+Action/Topic: VS Code extension fails to start on Ubuntu
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/2738
+Solution: https://github.com/eclipse/codewind/issues/2738#issuecomment-618909203
+Info added in 0.13.0.
+-->
+You install VS Code on Ubuntu, it fails to start, and reports a `Version in "/home/ibmuser/.codewind/docker-compose.yaml" is unsupported` error message. The main symptom of this issue is that the `~/codewind/docker-compose.yaml` file is not created when you are installing Codewind. 
+
+**Workaround:**
+1. To fix your Ubuntu VM, update the `docker-compose` version to the latest, and then uninstall and reinstall Codewind.
+2. For macOS, remove the Codewind container that shows when you enter the `$ docker ps -all` command, and then uninstall and reinstall Codewind. 
+
 ## No ESLint warnings or errors
 You see no ESLint warning or errors for Node.js projects. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.
 
