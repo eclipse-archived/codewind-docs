@@ -27,7 +27,7 @@ Follow the instructions to get started with using Codewind remotely:
 
 Before you use Codewind remotely, complete these steps:
 
-1. **Install Codewind into your preferred IDE on your local computer.** 
+1. **Install Codewind into your preferred IDE on your local machine.** 
 For more information, select from the following IDEs:
 - [Getting started with Codewind for Eclipse](./eclipse-getting-started.html)
 - [Getting started with Codewind for VS Code](./vsc-getting-started.html)
