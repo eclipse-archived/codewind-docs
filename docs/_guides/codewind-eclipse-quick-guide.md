@@ -3,10 +3,12 @@ layout: guide
 summary_title: "Codewind in Eclipse"
 title: "Getting Started with Codewind in Eclipse"
 categories: guides
-guide_description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
+description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
 permalink: codewind-eclipse-quick-guide.html
 duration: 5 minutes
 tags: Codewind, Eclipse, microservice
+image: "https://cdn.freebiesupply.com/logos/large/2x/eclipse-11-logo-png-transparent.png"
+objectives: ["Install Eclipse and Codewind", "Develop a simple microservice, using Eclipse Codewind in Eclipse"]
 ---
 
 # Getting Started with Codewind in Eclipse

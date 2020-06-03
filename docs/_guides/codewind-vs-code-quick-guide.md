@@ -3,10 +3,12 @@ layout: guide
 summary_title: "Codewind in VS Code"
 title: "Getting Started with Codewind in VS Code"
 categories: guides
-guide_description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
+description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
 permalink: codewind-vscode-quick-guide.html
 duration: 5 minutes
 keywords: Codewind, VS Code, microservice
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png"
+objectives: ["Install Visual Studio Code (VS Code) and Codewind", "Develop a simple microservice, using Eclipse Codewind on VS Code"]
 ---
 
 ## Objectives

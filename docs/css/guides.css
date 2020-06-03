@@ -14,6 +14,7 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    
 
     @media (max-width: 991.98px) {
         width: 100%;
@@ -32,6 +33,9 @@
 
 .guides-post-row {
     width: 100%;
+    background-color: #f7f7f7;
+    padding: 40px;
+    margin: 15px;
 }
 
 .guides-post-content {
@@ -57,7 +61,7 @@
 .guides-post-title-link {
     font-family: 'IBM Plex Sans';
     font-size: 30px;
-    color: #292828;
+    color: #0073ba;
     transition: color .2s;
 }
 
@@ -77,4 +81,32 @@
 .guides-content{
     background-color:#f3f5f7 !important;
     margin: 20px 0 20px 0;
+}
+
+.guides-objective-header {
+    margin-bottom: .5em;
+}
+
+.guide-image {
+    height: 64px;
+    align-self: flex-start;
+}
+
+.media-body {
+    margin-left: 15px;
+}
+
+.objective-item {
+    margin-bottom: .25em;
+}
+
+@media screen and (max-width: 600px) {
+    .media {
+        flex-direction: column;
+    }
+
+    .guide-image {
+        margin-bottom: 1.2em;
+        align-self: center;
+    }
 }
