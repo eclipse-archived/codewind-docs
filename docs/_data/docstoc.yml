@@ -4,7 +4,7 @@
 - title: 'Getting started'
   children:
     - title: 'Overview: Getting started'
-      url: gettingstarted-overview.html
+      url: gettingstarted.html
     - title: 'VS Code'
       children:        
       - title: '1. Installing Codewind for VS Code'
@@ -104,11 +104,8 @@
     - title: 'Codewind OpenAPI Tools for Eclipse'
       url: open-api-tools-for-eclipse.html
 
-<<<<<<< HEAD
 - title: 'Configuring Codewind for Tekton pipelines'
   url: che-tektonpipelines.html       
  
-=======
->>>>>>> change docs to learn
 - title: 'Troubleshooting'
   url: troubleshooting.html
