@@ -35,17 +35,17 @@
 
 - title: 'Using Codewind remotely'
   children:
-    - title: '1. Overview: Using Codewind remotely'
+    - title: 'Overview: Using Codewind remotely'
       url: remote-codewind-overview.html
-    - title: '2. Connecting your IDE to remote Codewind'
+    - title: 'Connecting your IDE to remote Codewind'
       children:
       - title: 'Connecting VS Code to remote Codewind'
         url: remotedeploy-vscode.html
       - title: 'Connecting Eclipse to remote Codewind'
         url: remotedeploy-eclipse.html
-    - title: '3. Adding an image registry in remote Codewind'
+    - title: 'Adding an image registry in remote Codewind'
       url: remote-setupregistries.html
-    - title: '4. Creating and importing projects'
+    - title: 'Creating and importing projects'
       url: remotedeploy-projects-vscode.html
 
 - title: 'Using Codewind on Eclipse Che'
