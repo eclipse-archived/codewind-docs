@@ -9,8 +9,6 @@ duration: 5 minutes
 tags: Codewind, Eclipse, microservice
 ---
 
-# Getting Started with Codewind in Eclipse
-
 ## Objectives
 * Install Eclipse and Codewind
 * Develop a simple microservice, using Eclipse Codewind in Eclipse
