@@ -461,7 +461,7 @@ code {
     color: #fff;
     height: 225px;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 1.5em;
 }
 
 .cw-footer-col {
@@ -838,7 +838,8 @@ code {
 	}
 	
 	#footer-div-mobile {
-		padding-top: 20px;
+        padding-top: 20px;
+        margin-top: 1.5em;
 	}
 }
 
