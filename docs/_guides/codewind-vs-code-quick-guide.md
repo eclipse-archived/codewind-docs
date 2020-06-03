@@ -38,7 +38,7 @@ The Codewind installation includes two parts:
 
 1. The VS Code extension installs when you install Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) and click **Install**.
     * Or, go to **View**>**Extensions**, search for Codewind, and click **Install**.
-2. The Codewind backend containers install after you click **Install** when you are prompted. Clicking **Install** downloads the Codewind backend containers, ~1GB.
+2. The Codewind backend containers install after you click **Install** when you are prompted. Clicking **Install** downloads the Codewind backend containers, approximately 1GB.
     * **Optional:** If you don’t click **Install** when the notification window appears, access the notification again. Go to **View**>**Explorer**. Then, click **Codewind** and hover the cursor over **Codewind** where there is a switch to turn Codewind on or off. Click the switch so that it is **On**. The notification window is displayed.
 
 ### Configuring Codewind to use application stacks
@@ -53,7 +53,7 @@ After you configure Codewind to use Appsody templates, continue to develop your 
 
 If your organization uses customized application stacks and gives you a URL that points to an `index.json` file, you can add it to Codewind:
 
-1. Return to **Codewin**` and right-click **Local**.
+1. Return to **Codewind**` and right-click **Local**.
 2. Select **Template Source Manager**.
 3. Click **Add New +** to add your URL.
 4. Add your URL in the pop-up window and save your changes.
@@ -140,7 +140,7 @@ Any changes that you make to your code are automatically built and redeployed by
 You now can work with the example calculator microservice.
 
 1. Use the port number that you saw when you first opened the application.
-2. Make sure to remove the **< >** symbol in the URL.
+2. Make sure to remove the `< >` symbol in the URL.
 3. `http://127.0.0.1:<port>/starter/calculator/aboutme`
 4. You see the following response:
 
@@ -150,8 +150,8 @@ You can add (+), subtract (-), and multiply (*) with this simple calculator.
 
 You can also try a few of the sample calculator functions:
 
-* `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations **(+, _, *)**, and an integer a, and an integer b.
-* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you see: **10+3=13**.
+* `http://127.0.0.1:<port>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *`, and an integer a, and an integer b.
+* So for `http://127.0.0.1:<port>/starter/calculator/+/10/3` you see: `10+3=13`.
 
 ## What you have learned
 Now that you have completed this quick guide, you have learned to:
