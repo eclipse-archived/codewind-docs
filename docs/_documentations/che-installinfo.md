@@ -40,7 +40,7 @@ Codewind can be used in one of three ways - [hosted as an IDE extension on the c
 2. Ensure that the cluster can pull images from the `docker.io/eclipse` and `quay.io/eclipse` registries.
    - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
    - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
-3. Create the `che` namespace to install Che with the: `kubectl create namespace che` command
+3. Create the `che` namespace to install Che with the `kubectl create namespace che` command.
 4. Set up the ClusterRole for Codewind:
 `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/codewind-clusterrole.yaml`
 
