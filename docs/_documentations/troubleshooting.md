@@ -1013,8 +1013,8 @@ Info added in 0.13.0.
 You install VS Code, it fails to start, and reports a `Version in "/home/ibmuser/.codewind/docker-compose.yaml" is unsupported` error message. The main symptom of this issue is that the `~/codewind/docker-compose.yaml` file is not created when you are installing Codewind. 
 
 **Workaround:**
-1. To fix your Ubuntu VM, update the `docker-compose` version to the latest, and then uninstall and reinstall Codewind.
-2. For macOS, remove the Codewind container that shows when you enter the `$ docker ps -all` command, and then uninstall and reinstall Codewind. 
+1. Check your `docker-compose version` is the latest, and then uninstall and reinstall Codewind.
+2. If there is a Codewind container showing in the output of the `$ docker ps -all` command, remove the container, and then uninstall and reinstall Codewind.
 
 ## No ESLint warnings or errors
 You see no ESLint warning or errors for Node.js projects. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.
