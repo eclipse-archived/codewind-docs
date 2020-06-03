@@ -10,13 +10,13 @@ type: document
 
 # Creating and importing projects
 
-When you configure Codewind to be used remotely, you are ready to create a project that you can build and run remotely. 
+Now that you have configured Codewind to be used remotely, you are ready to create a project that you can develop locally but build and run remotely.  
 
-If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](##import-an-existing-local-project-to-the-cloud).
+**Note:** If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](#import-an-existing-local-project-to-the-cloud).
 
 ## Create a new project
 
-Go to the **Codewind Explorer** view, right-click on your remote connection, and select **Create New Project**. 
+Go to the **Codewind Explorer** view, right-click your remote connection, and select **Create New Project**. 
 
 ![Creating new remote project](./images/remotedeploy-projects-eclipse/eclipse_create-new-project.png){:width="380"}
 
@@ -26,11 +26,11 @@ Select the template type and enter a project name. Your new project is built and
 
 Copy an existing local project, for example `myFirstNodeProject`, over to the remote Codewind deployment:
 
-1\. Right-click on your remote connection and select **Add Existing Project**:
+1\. Right-click your remote connection and select **Add Existing Project**:
 
 ![Add existing project](./images/remotedeploy-projects-eclipse/eclipse_add-project.png){:width="366"}
 
-2\. Click **Select a project from the workspace**, and select your project: 
+2\. Click **Select a project from the workspace** and select your project: 
 
 ![Add to Codewind](./images/remotedeploy-projects-eclipse/eclipse_select-project.png){:width="654"}
 
@@ -38,7 +38,7 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 
 ![Confirm Project Type](./images/remotedeploy-projects-eclipse/eclipse_confirm-project.png){:width="654"}
 
-If you add a project to the remote connection that is already deployed on the local connection, the **Project Already Deployed** dialogue appears: 
+If you add a project to the remote connection that is already deployed on the local connection, the **Project Already Deployed** window appears: 
 
 ![Project Already Deployed](./images/remotedeploy-projects-eclipse/eclipse_project-deployed.png){:width="524"}
 
@@ -75,4 +75,4 @@ You have now:
 4. Created a new project that builds and runs in the cloud.
 5. Copied an existing local project to build and run in the cloud.
 
-To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)
+To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with templates](./workingwithtemplates.html)

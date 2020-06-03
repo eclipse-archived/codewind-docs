@@ -10,9 +10,9 @@ type: document
 
 # Creating and importing projects
 
-When you configure Codewind to be used remotely, you are ready to create a project that you can build and run remotely. 
+Now that you have configured Codewind to be used remotely, you are ready to create a project that you can develop locally but build and run remotely.   
 
-If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](##import-an-existing-local-project-to-the-cloud).
+**Note:** If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](#import-an-existing-local-project-to-the-cloud).
 
 ## Create a new project
 
