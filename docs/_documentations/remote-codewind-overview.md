@@ -21,7 +21,7 @@ Follow the instructions to get started with using Codewind remotely:
 3. Creating a project that builds and runs in the cloud
 4. Building and running an existing project in the cloud
 
-**Note:** Before you use Codewind remotely, Codewind must be deployed to the cloud. If you do not have a remote deployment of Codewind, follow instructions to [deploy Codewind remotely](./remote-deploying-codewind.html) before you [connect your local Codewind to the cloud](./remote-codewind-overview.html).
+**Note: Deploying Codewind remotely** Before you use Codewind remotely, Codewind must be deployed to the cloud. If you do not have a remote deployment of Codewind, follow instructions to [deploy Codewind remotely](./remote-deploying-codewind.html) before you [connect your local Codewind to the cloud](./remote-codewind-overview.html).
 
 ### Prerequisites
 
