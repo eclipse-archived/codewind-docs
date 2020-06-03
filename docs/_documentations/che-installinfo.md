@@ -21,7 +21,7 @@ Install Che to use with Codewind or prepare to use Codewind with an existing Che
 2. Ensure that the cluster can pull images from the `docker.io/eclipse` and `quay.io/eclipse` registries.
    - Both Eclipse Che and Eclipse Codewind host Docker images at these locations.
    - Many clusters have image policies that control which registries you can use to pull images. Check your cluster documentation and ensure that the cluster image pull policies permit both of these registries.
-3. Create the `che` namespace to install Che into: `kubectl create namespace che`
+3. Create the `che` namespace to install Che with the `kubectl create namespace che` command.
 4. Set up the ClusterRole for Codewind:
 `kubectl apply -f https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/codewind-clusterrole.yaml`
 
@@ -34,7 +34,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 
 After you install `chectl`, download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
  - You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
- - If you are installing Che with publicly signed certificates (such as on OpenShift on IBM Cloud), you must set `spec.server.selfSignedCert` to false.
+ - If you install Che with publicly signed certificates, such as on OpenShift on IBM Cloud, set the `spec.server.selfSignedCert` value to **false**.
 
 **Installing on OpenShift:**
 
