@@ -9,7 +9,6 @@ duration: 5 minutes
 keywords: Codewind, VS Code, microservice
 objectives: ["Install Visual Studio Code (VS Code) and Codewind", "Develop a simple microservice, using Eclipse Codewind on VS Code"]
 icon: images/learn/icon_logoVScode.svg
-image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png
 ---
 
 
