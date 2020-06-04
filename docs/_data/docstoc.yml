@@ -69,7 +69,7 @@
     - title: 'Adding an image registry in remote Codewind'
       url: remote-setupregistries.html
     - title: 'Creating and importing projects'
-        url: remotedeploy-projects-vscode.html
+      url: remotedeploy-projects-vscode.html
 
 - title: 'Working with templates'
   url: workingwithtemplates.html
