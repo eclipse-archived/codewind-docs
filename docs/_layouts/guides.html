@@ -13,29 +13,8 @@
                 {% for post in site.guides reversed %}
 
                 <div class="row guides-post-row">
-                    <!-- <div class="guides-post-column col">
-
-                        <div class="guides-post-content guides-content">
-                            <h2 class="guides-post-title"><a href="{{ post.url | relative_url }}"
-                                    class="guides-post-title-link">{{ post.summary_title | escape }}</a></h2>
-                            <p class="guides-post-date-mobile d-sm-block d-md-none">{{ post.date | date: date_format }}
-                            </p>
-                            <p class="guides-post-paragraph">
-                                {% if post.guide_description %}
-                                {{ post.guide_description }}
-                                {% else %}
-                                {{ post.content | strip_html | truncatewords: 60 }}
-                                {% endif %}
-                            </p>
-
-                            <div class="read-more-link-container ">
-                                <a href="{{ post.url | relative_url }}" class="read-more-link">Read more</a>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <div class="media">
-                        <img src="{{ post.image }}" class="guide-image" alt="...">
+                        <img src="{{ post.icon }}" class="guide-image" alt="...">
                         <div class="media-body">
                             <h5 class="mt-0">
                                 <a href="{{ post.url | relative_url }}" class="guides-post-title-link">

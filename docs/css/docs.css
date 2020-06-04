@@ -135,7 +135,7 @@ code {
 }
 
 #content-container > div {
-    padding-top: 131px;
+    padding-top: 100px;
 }
 
 
@@ -249,6 +249,9 @@ code {
 
 	#sidebar-container {
         padding-top: 101px;
+    }
+    #content-container > div {
+        padding-top: 0px;
     }
 }
 

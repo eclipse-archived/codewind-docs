@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="28px" viewBox="0 0 36 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Mobile</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.8333333,21 L7.16666667,21 C5.97054477,20.9988975 5.00119433,20.1041125 5,19 L5,5 C5.00119433,3.89588748 5.97054477,3.00110246 7.16666667,3 L28.8333333,3 C30.0294552,3.00110246 30.9988057,3.89588748 31,5 L31,19 C30.9982102,20.1038844 30.0292082,20.9983479 28.8333333,21 L28.8333333,21 Z M7,5 L7,19 L29,19 L29,5 L7,5 Z M2,23 L33,23 L33,25 L2,25 L2,23 Z" id="Fill" fill="#282828"></path>
+    </g>
+</svg>
