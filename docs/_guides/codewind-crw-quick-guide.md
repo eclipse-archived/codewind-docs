@@ -1,9 +1,9 @@
 ---
 layout: guide
-summary-title: "Codewind in CodeReady Workspaces"
+summary_title: "Codewind in CodeReady Workspaces"
 title: "Getting Started with Codewind in CodeReady Workspaces"
 categories: guides 
-guide_description: "Take advantage of Codewind's tools to help build high quality cloud native applications regardless of which IDE or language you use."
+guide_description: "Use Codewind in CodeReady Workspaces to build high quality cloud native applications."
 permalink: codewind-crw-quick-guide.html
 duration: 10 minutes
 tags: Codewind, CodeReady Workspaces, Openshift, Kubernetes, containers, microservice
@@ -17,21 +17,21 @@ tags: Codewind, CodeReady Workspaces, Openshift, Kubernetes, containers, microse
 Use Eclipse Codewind to develop microservice applications from application stacks in an integrated developer environment (IDE). CodeReady Workspaces provides a containerized IDE for cloud native application development on an OpenShift cluster. 
 
 ## Developing with CodeReady Workspaces 
-CodeReady Workspaces uses Kubernetes and containers to provide a preconfigured environment. Use CodeReady Workspaces to create, build, and test your code in OpenShift containers but feel like you are working on an IDE on your local computer.  
+CodeReady Workspaces uses Kubernetes and containers to provide a preconfigured environment. Use CodeReady Workspaces to create, build, and test your code in OpenShift containers but feel like you are working on an IDE on your local machine.  
 
 ### Prerequisite
-CodeReady Workspaces requires at least two 1Gi ReadWriteOnce (RWO) persistent volumes on the cluster to install and a 1Gi RWO volume for each created workspace.
+CodeReady Workspaces require at least two 5Gi ReadWriteOnce (RWO) persistent volumes on the cluster to install and a 5Gi RWO volume for each created workspace.
 
-Each Codewind workspace also requires at least on 1Gi ReadWriteMany (RWX) persistent volume.
+Each Codewind workspace also requires at least on 5Gi ReadWriteMany (RWX) persistent volume.
+
+Before you can use Codewind with CodeReady Workspaces, apply the Codewind cluster role with `oc apply -f`. 
 
 ### Installing CodeReady Workspaces
 1. Subscribe to the CodeReady Workspaces operator then install it.
-  * To manually install CodeReady Workspaces, apply the CodeReady Workspaces OperatorHub subscription. 
-2. After the CodeReady Workspaces operator is installed, create the CheCluster resources. 
-  * If you have not set up an auth provider, set `openShiftoAuth` to `false`. 
+  * If you did not set up an auth provider, set `openShiftoAuth` to `false`. 
   * To enable HTTPS, set `tlsSupport` to `true`.
   * If you use a self-signed certificate, set `selfSignedCert` to `true`. 
-3. If you install Codewind alongside CodeReady Workspaces, use the following yaml:  
+2. Use the following yaml:  
 ```yaml
 apiVersion: org.eclipse.che/v1
 kind: CheCluster
@@ -70,63 +70,61 @@ spec:
     preCreateSubPaths: true
 ```
   * To manually install Codewind alongside Codewind Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
-4. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL.  
+3. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL.  
 
 ### Setting up Codewind
-Before you can use Codewind with CodeReady Workspaces or Che, complete the following steps, either before or after you install Codewind: 
-
-1. Apply the Codewind cluster role with `oc apply -f`. 
-2. Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands: 
+Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands: 
   * `oc adm policy add-scc-to-user anyuid system:serviceaccounts:<namespace>:che-workspace` 
   * `oc adm policy add-scc-to-user privileged system:serviceaccounts:<namespace>:che-workspace` 
 
 CodeReady Workspaces starts Codewind and installs the Codewind plug-ins. This process might take a couple of minutes for all of the necessary components to be pulled and started.
 
 ### Configuring Codewind to use application stacks
-Configure Codewind to use Appsody templates so you can focus exclusively on your code. These templates include an Eclipse MicroProfile stack that you can use to follow this guide. Complete the following steps to select the Appsody templates:
+Configure Codewind to use Appsody templates so you can focus exclusively on your code. Complete the following steps to select the Appsody templates:
 
-1. Under the Explorer pane, select `Codewind`.
-2. Right-click `Local`.
-3. Select `Template Source Manager`.
-4. Enable `Appsody Stacks - incubator` and `Default templates`. 
+1. Under the Explorer pane, select **Codewind**.
+2. Right-click **Local**.
+3. Select **Template Source Manager**.
+4. Enable **Appsody Stacks - incubator** and **Default templates**. 
 
 After you configured Codewind to use Appsody templates, continue to develop your microservice within Codewind.
 
 If your organization uses customized application stacks and gives you a URL that points to an `index.json` file, you can add it to Codewind:
 
-1. Return to  `Codewind` and right-click `Local`.
-2. Select `Template Source Manager`.
-3. Click `Add New +` to add your URL.
+1. Return to **Codewind** and right-click **Local**.
+2. Select **Template Source Manager**.
+3. Click **Add New +** to add your URL.
 4. Add your URL in the pop-up window and save your changes.
 
 ### Creating an Appsody project
 Throughout the application lifestyle, Appsody helps you develop containerized applications and maximize containers curated for your usage. If you want more context about Appsody, see [Appsody welcome page](https://appsody.dev/docs).
 
-1. Under the Explorer pane, select `Codewind`.
-2. Expand `Codewind` by clicking the drop-down arrow.
-3. Hover over the `Projects` entry underneath Codewind in the Explorer pane, and press the `+` icon to create a project.
+1. Under the Explorer pane, select **Codewind**.
+2. Expand **Codewind** by clicking the drop-down arrow.
+3. Hover over the **Projects** entry underneath Codewind in the Explorer pane, and press the **+** icon to create a project.
     * **Note:** Make sure that Docker is running. Otherwise, you get an error.
-4. Choose the `Appsody Open Liberty default template (Appsody Stacks - incubator)`.
-5. Name your project `appsody-calculator`.
-    * If you don't see Appsody templates, find and select `Template Source Manager` and enable `Appsody Stacks - incubator`.
+4. Choose the **Appsody Open Liberty default template (Appsody Stacks - incubator)**.
+5. Name your project **appsody-calculator**.
+    * If you don't see Appsody templates, find and select **Template Source Manager** and enable **Appsody Stacks - incubator**.
     * The templates are refreshed, and the Appsody templates are available.
-6. Press `Enter`.
-    * To monitor your project's progress, right-click your project, and select `Show all logs`. Then, an `Output` tab is displayed where you see your project's build logs.
+6. Press **Enter**.
+    * To monitor your project's progress, right-click your project, and select **Show all logs**. Then, an **Output** tab is displayed where you see your project's build logs.
 
 Your project is complete when you see that your application status is running and your build status is successful.
 
 ### Accessing the application endpoint in a browser
-1. Return to your project under the Explorer pane.
-2. Select the Open App icon next to your project's name, or right-click your project and select `Open App`.
+1. Return to your project under the **Explorer** pane.
+2. Select the Open App icon next to your project's name, or right-click your project and select **Open App**.
 
 Your application is now opened in a browser, showing the welcome to your Appsody microservice page.
 
 ### Adding a REST service to your application
- 1. Go to your project's workspace under the Explorer tab.
- 2. Go to `src->main->java->dev->appsody->starter`.
- 3. Right-click `starter` and select `New File`.
- 4. Create a file, name it `Calculator.java`, and press `Enter`. This file is your JAX-RS resource.
- 5. Populate the file with the following code and then **save** the file:
+ 1. Go to your project's workspace under the **Explorer** pane.
+ 2. Go to `src>main>java>dev>appsody>starter`.
+ 3. Right-click **starter** and select **New File**.
+ 4. Create a file, name it `Calculator.java`, and press **Enter**. This file is your JAX-RS resource.
+ 5. Before you input any code, make sure that the file is empty. 
+ 6. Populate the file with the following code and then **save** the file:
 
 ```java
 package dev.appsody.starter;
@@ -174,7 +172,7 @@ public class Calculator extends Application {
 }
 ```
 
-Any changes that you make to your code are automatically built and redeployed by Codewind and you can view them in your browser.
+Any changes that you make to your code are automatically built and redeployed by Codewind, and you can view them in your browser.
 
 ### Working with the example calculator microservice
 You now can work with the example calculator microservice.
