@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Working with Private Registries"
+title_img: images/blog/privateregnode01.png
 categories: blog
 author_picture: images/blog/author_icon_andrew_mak.jpeg
 author_url: https://www.linkedin.com/in/andrew-mak-283792144/

@@ -6,8 +6,6 @@ keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, a
 duration: 1 minute
 permalink: metrics-dashboard
 type: document
-parent:
-order:
 ---
 
 # Understanding the Metrics Dashboard
@@ -40,7 +38,7 @@ The Metrics Dashboard is available for Java, Node.js, and Swift. You can monitor
 
 ## Enabling Application Metrics
 
-If you import a project that does not include Application Metrics monitoring data associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/).
+If you import a project that does not include Application Metrics monitoring data that is associated with it, you can add Application Metrics by including the appropriate resource or performance monitoring application. For more information, see [RuntimeTools](https://github.com/RuntimeTools/).
 
 ## Understanding performance metrics in the **Dashboard** tab
 
@@ -75,18 +73,23 @@ The **Profiling** tab is available only in Node.js projects. This tab pulls info
 
 ## Code highlighting for profiling data
 
-Code highlighting for profiling data highlights the most heavily used functions based on profiling data gathered through [load testing](performance.html). Support for code highlighting is available for Node.js or Java projects that are created through Codewind and then profiled.
+Code highlighting for profiling data highlights the most heavily used functions based on profiling data that is gathered through [load testing](performance.html).
 
-To enable code highlighting, you must install the appropriate VS Code extension:
+### Prerequisites
+Code highlighting is available for Node.js or Java projects on VS Code that are created through Codewind and then profiled.
+
+To enable code highlighting, install the appropriate VS Code extension:
 - For Node.js projects, install the [Codewind Node Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-node-profiler).
-- For Java projects, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler). Java is supported, however, if the Metrics Dashboard does not show profiling data, use the editor plug-in to display it instead. 
-- To execute a load test, please refer to **Running a load test** section of the [Performance Dashboard](performance.html).
+- For Java projects, install the [Codewind Java Profiler](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-java-profiler). Java is supported. However, if the Metrics Dashboard does not show profiling data, use the editor plug-in to display it instead.
+
+### Running a load test and load run
+- To execute a load test, see the **Running a load test** section of the [Performance Dashboard](performance.html).
 - Profiling data is written to the workspace only on a successfully completed load run. If the load run is cancelled, it won't be written to the workspace.
 - Run the load run for a minimum of 45 seconds for enough profiling data to be gathered.
-- You can configure the load run time in the  **Edit load run settings** window. Please, refer to the [Performance Dashboard](performance.html) for additional information. The default time is 3 minutes.
-- Out of all the `load-test` folders that contain profiling data, the most up-to-date `.hcd` file for Java projects or .json file for Node.js projects is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
+- You can configure the load run time in the **Edit load run settings** window. See [Performance Dashboard](performance.html) for more information. The default time is 3 minutes.
+- Out of all the `load-test` folders that contain profiling data, the most up-to-date `.hcd` file for Java projects or `.json` file for Node.js projects is the one that is displayed. The code for the older profiling data might be out of date, such as pointing to lines that have been moved.
 
-To display code highlighting:
+### Displaying code highlighting
 1. Open a project created with Codewind and profiled using the [load testing](performance.html) feature of Codewind. 
 - For Java, the profiling data is created in a `load-test/[timestamp]/xxxx.hcd` file in your Codewind project.
 - For Node.js, the profiling data is created in a `load-test/[timestamp]/profiling.json` file in your Codewind project.
@@ -98,9 +101,14 @@ If profiling markers do not appear, check to see if your project and load run co
 
 ## Interpreting the annotation tooltip
 
-After you start the load test and the test completes, view the source code. Theia displays an annotation tooltip with a specified message in a similar format to the following example:
+After you start the load test, and the test completes, view the source code. Theia and VS Code display an annotation tooltip with a specified message in a similar format to the following example:
 
-![image of Theia annotation tooltip](images/theia-annotation-tooltip.png)
+```
+Function app.get() was the running function in 0.58% of samples.
+- (1,1): <anonymous function> made 66.67% of sampled calls.
+- layer.js(86,1): handle() made 33.33% of sampled calls.
+function(req: any, res: any, next: any): Promise<any>
+```
 
 - The bullet points indicate the parent callers of the function. The percentages equal the number of times that a parent caller called a function. In this example, `<anonymous function>` probably made 2 calls to the `app.get()` function, and the `handle()` function probably made 1 call.
 - The numbers in the parenthesis indicate the position of the parent function in the file, such as the line and character number. This position information is ambiguous for anonymous functions, but the message includes the information regardless.

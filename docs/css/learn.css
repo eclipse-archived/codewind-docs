@@ -1,0 +1,47 @@
+.learn-container {
+  width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.blue-row {
+  background-color: #EDF4FF;
+}
+
+.learn-container h2 {
+  border-bottom: none;
+}
+
+.learn-container .btn {
+  background-color: #0073BA;
+}
+
+/* Fixes a known bug for columns in safari */
+.learn-container .col {
+  flex-basis: auto;
+}
+
+.learn-card {
+  border: 1px solid #c1bcbb;
+  background-color: #fbfbfb;
+  box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+}
+
+.learn-media-card {
+  border: 1px solid #c1bcbb;
+  background-color: #fbfbfb;
+  box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -7px -7px 7px -6px rgba(0, 0, 0, 0.07);
+}
+
+.blog-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
