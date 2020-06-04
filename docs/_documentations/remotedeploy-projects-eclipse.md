@@ -16,7 +16,7 @@ Now that you have configured Codewind to be used remotely, you are ready to crea
 
 ## Create a project
 
-Go to the **Codewind Explorer** view, right-click your remote connection, and select **Create Project**. 
+Go to the **Codewind Explorer** view, right-click your remote connection, and select **Create New Project**. 
 
 ![Creating new remote project](./images/remotedeploy-projects-eclipse/Eclipse_Create-new-project.png){:width="380"}
 
