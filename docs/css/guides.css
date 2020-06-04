@@ -35,7 +35,8 @@
     width: 100%;
     background-color: #f7f7f7;
     padding: 40px;
-    margin: 15px 0px;
+    margin: 40px 0px;
+    border-radius: 5px;
 }
 
 .guides-post-content {
@@ -61,7 +62,6 @@
 .guides-post-title-link {
     font-family: 'IBM Plex Sans';
     font-size: 30px;
-    color: #0073ba;
     transition: color .2s;
 }
 
