@@ -59,11 +59,11 @@ With the Eclipse IDE, you can drag and drop projects from one connection to anot
 
 Select the project in one connection and drag it onto another connection: 
 
-![Drag node.js project](./images/remotedeploy-projects-eclipse/Eclipse_Move-node-project.png){:width="177"}
+![Drag Node.js project](./images/remotedeploy-projects-eclipse/Eclipse_Move-node-project.png){:width="177"}
 
 This action removes the project from the first connection and adds it to the second connection:
 
-![Drop node.js project](./images/remotedeploy-projects-eclipse/Eclipse_Place-node-project.png){:width="175"}
+![Drop Node.js project](./images/remotedeploy-projects-eclipse/Eclipse_Place-node-project.png){:width="175"}
 
 # Next Steps
 
