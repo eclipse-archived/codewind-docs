@@ -117,22 +117,6 @@ If installing and starting Codewind still fails, you can use Docker system prune
 <!--
 Action/Topic: Installing Codewind
 Issue type: bug/info
-Issue link: https://github.com/eclipse/codewind/issues/2239
-0.9.0: New
--->
-## Cannot find Codewind in Marketplace when attempting to install in IntelliJ
-When attempting to install Codewind in IntelliJ, you cannot locate the Codewind plug-in in Marketplace, and if you verify the custom plug-in repository link, you get a `Connection failed` error message:
-
-![intellij install error](images/intellij/custom-plugin-repo-connection-failed-error.png)
-
-This error occurs because the custom plug-in repository link contains an additional space.
-
-**Workaround:**
-Remove the extra space from the custom plug-in repository link.
-
-<!--
-Action/Topic: Installing Codewind
-Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/2563
 0.11.0: New
 -->
@@ -857,28 +841,35 @@ To assist with problem determination, raise the default Codewind server log leve
 <!--
 Action/Topic: Collecting log files and environment data
 Issue type: info
-Issue link: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930
-Info added in 0.12.0, updated in 0.13.0.
+Issue links: https://github.com/eclipse/codewind/issues/2766 https://github.com/eclipse/codewind/issues/2930 https://github.com/eclipse/codewind/issues/2851
+Info added in 0.12.0 and updated in 0.13.0.
 -->
 
-You can capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information. You can find the `cwctl` CLI in your HOME directory under the `~/.codewind/<version>` path.
+## Collecting diagnostics with IDEs
+In Eclipse and VS Code, use the IDEs to collect all available log files and environment information.
+- **In VS Code:** Capture diagnostics with the **Codewind: Capture Diagnostics** command.
+- **In Eclipse:** Go to **Preferences**>**Codewind** and select **Enable support features**. Then, go to **Codewind Explorer**, right-click the connection, and click **Collect Diagnostics**.
 
-The format of the command is:
-`cwctl diagnostics collect [command options] [arguments...]`
+## Collecting diagnostics with the `cwctl diagnostics collect` CLI command
+In Eclipse and VS Code, capture diagnostics from your installation by using the `cwctl diagnostics collect` CLI command to collect all available log files and environment information.
+
+- Find the `cwctl` CLI in your HOME directory in the `~/.codewind/<version>` path.
+- The format of the command is `cwctl diagnostics collect <command options> <arguments...>`.
 
 Command options are:
-* `--conid <value>` - Triggers diagnostics collection for the remote codewind instance (_must_ have currently configured Kubectl connection, default:"local")
-* `--all/-a` - Collects diagnostics for all defined connections, remote and local
-* `--eclipseWorkspaceDir/-e <value>` - The location of your Eclipse workspace directory if using the Eclipse IDE
-* `--intellijLogsDir/-i <value>` - The location of your IntelliJ logs directory if not using the IntelliJ IDE default location
-* `--projects/-p` - Collect project containers information
-* `--nozip/-n` - Does not create collection zip and leaves individual collected files in place
+* `--conid <value>` - This option triggers diagnostics collection for the remote Codewind instance. You need to have a currently configured kubectl connection. The default value is `"local"`.
+* `--all/-a` - This option collects diagnostics for all defined connections, remote and local.
+* `--eclipseWorkspaceDir/-e <value>` - This option is the location of your Eclipse workspace directory if you use the Eclipse IDE.
+* `--intellijLogsDir/-i <value>` - This option is the location of your IntelliJ logs directory if you are not using the IntelliJ IDE default location.
+* `--quiet/-q` - Turn off console messages.
+* `--projects/-p` - Collect project containers information.
+* `--nozip/-n` - This option does not create a collection `.zip` file and leaves individual collected files in place.
 
-After you run the command, you can find the captured diagnostics files under your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
+After you run the command, find the captured diagnostics files in your `HOME` directory in the `~/.codewind/diagnostics/<timestamp>` folder.
 
-To remove all collected diagnostics from your system, issue the command `cwctl diagnostics remove`.
+For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnostics CLI documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
 
-For more information about the `cwctl diagnostics` command, type `cwctl help diagnostics`, or see the [diagnosticsCli documentation](https://github.com/eclipse/codewind-installer/blob/master/README.md#diagnosticsdg).
+To remove all collected diagnostics from your system, issue the `cwctl diagnostics remove` command.
 
 <!--
 Action/Topic: Reinstate IDE specific troubleshooting help (Eclipse, VS Code and Che)
@@ -994,6 +985,20 @@ If you can run `docker` from the command line, but Codewind still fails to find 
 2. Close all instances of VS Code.
 3. Open the terminal you ran `docker` from and run `code`.
 4. Now, the new VS Code instance shares the terminal's `PATH`. Start Codewind again.
+
+## VS Code extension fails to start
+<!--
+Action/Topic: VS Code extension fails to start
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/2738
+Solution: https://github.com/eclipse/codewind/issues/2738#issuecomment-618909203
+Info added in 0.13.0.
+-->
+You install VS Code, it fails to start, and reports a `Version in "/home/ibmuser/.codewind/docker-compose.yaml" is unsupported` error message. The main symptom of this issue is that the `~/codewind/docker-compose.yaml` file is not created when you are installing Codewind. 
+
+**Workaround:**
+1. Check your `docker-compose version` is the latest, and then uninstall and reinstall Codewind.
+2. If there is a Codewind container showing in the output of the `$ docker ps -all` command, remove the container, and then uninstall and reinstall Codewind.
 
 ## No ESLint warnings or errors
 You see no ESLint warning or errors for Node.js projects. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and follow the instructions to activate the extension.

@@ -7,6 +7,8 @@ guide_description: "Take advantage of Codewind's tools to help build high qualit
 permalink: codewind-vscode-quick-guide.html
 duration: 5 minutes
 keywords: Codewind, VS Code, microservice
+objectives: ["Install Visual Studio Code (VS Code) and Codewind", "Develop a simple microservice, using Eclipse Codewind on VS Code"]
+icon: images/learn/icon_logoVScode.svg
 ---
 
 ## Objectives

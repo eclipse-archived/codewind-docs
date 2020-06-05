@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Creating and importing projects
+title: VS Code
 description: Creating and importing projects
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
@@ -10,10 +10,9 @@ type: document
 
 # Creating and importing projects
 
-Now that you have configured Codewind to be used remotely, you are now ready to:
+Now that you have configured Codewind to be used remotely, you are ready to create a project that you can develop locally but build and run remotely.   
 
-1. Create a new project
-2. Import a project from your local Codewind instance to your remote Codewind instance on the cloud
+**Note:** If you have projects that currently exist on your local computer that you would like to continue to develop remotely, follow [Import an existing local project to the cloud](#import-an-existing-local-project-to-the-cloud).
 
 ## Create a new project
 
@@ -27,19 +26,19 @@ Select the template type and enter a project name. Your new project is built and
 
 Copy an existing local project, for example `myFirstNodeProject`, over to the remote Codewind deployment:
 
-1\. Select the remote deployment and click the `Add existing project` button:
+1\. Select the remote deployment and click the **Add existing project** button:
 
 ![Add existing project](./images/remotevs/addExistingProject.png)
 
-2\. Go to the folder containing the local project files and click `Add to Codewind`:
+2\. Go to the folder containing the local project files and click **Add to Codewind**:
 
 ![Add to Codewind](./images/remotevs/existingProject.png)
 
-Codewind prompts you to confirm the project type, in this case, identified as `NodeJS`:
+Codewind prompts you to confirm the project type, in this case, identified as `Node.js`:
 
 ![Confirm Project Type](./images/remotevs/confirmProjectType.png)
 
-3\. Click `Yes`. Project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears in the Codewind panel:
+3\. Click **Yes**. Project files are copied over to the Codewind server, and the new `myFirstNodeProject` appears in the Codewind panel:
 
 ![Project Added](./images/remotevs/projectAdded.png)
 
