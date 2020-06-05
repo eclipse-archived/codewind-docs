@@ -27,11 +27,17 @@ Each Codewind workspace also requires at least on 5Gi ReadWriteMany (RWX) persis
 Before you can use Codewind with CodeReady Workspaces, apply the Codewind cluster role with `oc apply -f`. 
 
 ### Installing CodeReady Workspaces
-1. Subscribe to the CodeReady Workspaces operator then install it.
+1\. Subscribe to the CodeReady Workspaces OperatorHub then install CodeReady Workspaces:
+
+![Subscribe to OperatorHub](./images/codereadyworkspaces-images/CRW-OperatorHub.png){:width="1684"}. 
+
+![Install CodeReady Workspaces](./images/codereadyworkspaces-images/CRW-install.png){:width="1626"}. 
+
   * If you did not set up an auth provider, set `openShiftoAuth` to `false`. 
   * To enable HTTPS, set `tlsSupport` to `true`.
   * If you use a self-signed certificate, set `selfSignedCert` to `true`. 
-2. Use the following yaml:  
+
+2\. Use the following yaml:  
 ```yaml
 apiVersion: org.eclipse.che/v1
 kind: CheCluster
@@ -69,8 +75,11 @@ spec:
     pvcClaimSize: 1Gi
     preCreateSubPaths: true
 ```
-  * To manually install Codewind alongside Codewind Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
-3. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL.  
+  * To manually install Codewind along with Codewind Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
+
+3\. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL:
+
+![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="1482"}. 
 
 ### Setting up Codewind
 Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands: 
