@@ -7,13 +7,9 @@ guide_description: "Take advantage of Codewind's tools to help build high qualit
 permalink: codewind-vscode-quick-guide.html
 duration: 5 minutes
 keywords: Codewind, VS Code, microservice
-objectives: ["Install Visual Studio Code (VS Code) and Codewind", "Develop a simple microservice, using Eclipse Codewind on VS Code"]
+objectives: ["Install Visual Studio Code (VS Code) and Codewind.", "Develop a simple microservice that uses Eclipse Codewind in VS Code."]
 icon: images/learn/icon_logoVScode.svg
 ---
-
-## Objectives
-* Install Visual Studio Code (VS Code) and Codewind.
-* Develop a simple microservice that uses Eclipse Codewind on VS Code.
 
 ## Overview
 Use Eclipse Codewind to create application projects from Application Stacks that your company builds. With Codewind, you can focus on your code and not on infrastructure and Kubernetes. Application deployments to Kubernetes occur through pipelines when developers commit their local code to the correct Git repos Kabanero is managing through webhooks.
