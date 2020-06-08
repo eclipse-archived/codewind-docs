@@ -255,6 +255,33 @@ code {
     }
 }
 
+.callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+
+    border-left: 4px solid #0073ba;
+    background-color: #EDF4FF;
+}
+
+.callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.callout p:last-child {
+    margin-bottom: 0;
+}
+
+.callout code {
+    border-radius: 3px;
+}
+
+.callout+.callout {
+    margin-top: -5px;
+}
+
 @media only screen and (max-width: 768px) {
 	.cw-docs-spacer {
         height: 0px;
