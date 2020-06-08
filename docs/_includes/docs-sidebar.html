@@ -7,7 +7,8 @@
         {% if levelone.children %}
 
 
-        {% assign hash = levelone.title | downcase | replace: " ", "_" %}
+        <!-- must be a valid css selector, or will break collapse function -->
+        {% assign hash = levelone.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
 
         <a href="#{{ hash }}" id="#{{ hash }}"
             class="bg-light list-group-item list-group-item-action flex-column align-items-start" data-toggle="collapse"
@@ -18,7 +19,7 @@
 
             {% if leveltwo.children %}
 
-            {% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" %}
+            {% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
 
             <a href="#{{ hashtwo }}" id="#{{ hashtwo }}"
                 class="bg-light list-group-item list-group-item-action flex-column align-items-start"
