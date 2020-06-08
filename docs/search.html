@@ -20,11 +20,12 @@ title: Search
 <script>
 window.store = {
     {% for doc in site.documentations %}
+    {% assign content = doc.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
     "{{ doc.url | slugify }}": {
         "title": "{{ doc.title | xml_escape }}",
         "author": "{{ doc.author | xml_escape }}",
         "category": "{{ doc.category | xml_escape }}",
-        "content": {{ doc.content | strip_html | strip_newlines | jsonify }},
+        "content": "{{ content[2] }}",
         "url": "{{ doc.url | xml_escape }}",
         "layout": "{{ doc.layout | xml_escape }}",
         "description": "{{ doc.description | xml_escape }}"
@@ -33,11 +34,12 @@ window.store = {
     {% endfor %}
 
     {% for blog in site.blog %}
+    {% assign content = blog.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
     ,"{{ blog.url | slugify }}": {
         "title": "{{ blog.title | xml_escape }}",
         "author": "{{ blog.author | xml_escape }}",
         "category": "{{ blog.category | xml_escape }}",
-        "content": {{ blog.content | strip_html | strip_newlines | jsonify }},
+        "content": "{{ content[2] }}",
         "url": "{{ blog.url | xml_escape }}",
         "layout": "{{ blog.layout | xml_escape }}",
         "description": "{{ blog.description | xml_escape }}"
@@ -45,11 +47,12 @@ window.store = {
     {% endfor %}
 
     {% for guide in site.guides %}
+    {% assign content = guide.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
     ,"{{ guide.url | slugify }}": {
         "title": "{{ guide.title | xml_escape }}",
         "author": "{{ guide.author | xml_escape }}",
         "category": "{{ guide.category | xml_escape }}",
-        "content": {{ guide.content | strip_html | strip_newlines | jsonify }},
+        "content": "{{ content[2] }}",
         "url": "{{ guide.url | xml_escape }}",
         "layout": "{{ guide.layout | xml_escape }}",
         "description": "{{ guide.description | xml_escape }}"
@@ -57,11 +60,12 @@ window.store = {
     {% endfor %}
 
     {% for news in site.news %}
+    {% assign content = news.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
     ,"{{ news.url | slugify }}": {
         "title": "{{ news.title | xml_escape }}",
         "author": "{{ news.author | xml_escape }}",
         "category": "{{ news.category | xml_escape }}",
-        "content": {{ news.content | strip_html | strip_newlines | jsonify }},
+        "content": "{{ content[2] }}",
         "url": "{{ news.url | xml_escape }}",
         "layout": "{{ news.layout | xml_escape }}",
         "description": "{{ news.description | xml_escape }}"
