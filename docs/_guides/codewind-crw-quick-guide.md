@@ -27,7 +27,13 @@ Each Codewind workspace also requires at least on 5Gi ReadWriteMany (RWX) persis
 Before you can use Codewind with CodeReady Workspaces, apply the Codewind cluster role with `oc apply -f`. 
 
 ### Installing CodeReady Workspaces
-1\. Subscribe to the CodeReady Workspaces OperatorHub then install CodeReady Workspaces:
+1\. Log in to your OpenShift cluster. 
+
+2\. From the sidebar, click **Operators** then **OperatorHub**.
+
+3\. Search for `CodeReady Workspaces`. 
+
+4\. Select **Red Hat CodeReady Workspaces** and click **Install**: 
 
 ![Subscribe to OperatorHub](./images/codereadyworkspaces-images/CRW-OperatorHub.png){:width="1684"}. 
 
@@ -37,47 +43,58 @@ Before you can use Codewind with CodeReady Workspaces, apply the Codewind cluste
   * To enable HTTPS, set `tlsSupport` to `true`.
   * If you use a self-signed certificate, set `selfSignedCert` to `true`. 
 
-2\. Use the following yaml:  
+After you install the operator, continue to install CodeReady Workspaces:
+
+1\. From the OpenShift dashboard, go to `Operators`>`Installed Operators`. 
+
+2\. Select **CodeReady Workspaces**. 
+
+3\. Select the **CodeReady Workspaces** cluster then **Create CheCluster**. 
+
+4\. Configure the fields, like `tlsSupport`, as needed. 
+
+5\. Copy and paste the following yaml into the provided text box: 
+
 ```yaml
 apiVersion: org.eclipse.che/v1
 kind: CheCluster
 metadata:
-  name: codeready-workspaces
+  name: codeready-workspaces
 spec:
-  server:
-    cheImageTag: ''
-    cheFlavor: codeready
-    devfileRegistryImage: ''
-    pluginRegistryImage: ''
-    tlsSupport: false
-    selfSignedCert: false
-    cheWorkspaceClusterRole: 'eclipse-codewind'
-    customCheProperties:
-      CHE_INFRA_KUBERNETES_WORKSPACE__START__TIMEOUT__MIN: "15"
-      CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "0"
-      CHE_WORKSPACE_PLUGIN__BROKER_WAIT__TIMEOUT__MIN: "15"
-  database:
-    externalDb: false
-    chePostgresHostName: ''
-    chePostgresPort: ''
-    chePostgresUser: ''
-    chePostgresPassword: ''
-    chePostgresDb: ''
-  auth:
-    openShiftoAuth: false
-    identityProviderImage: ''
-    externalIdentityProvider: false
-    identityProviderURL: ''
-    identityProviderRealm: ''
-    identityProviderClientId: ''
-  storage:
-    pvcStrategy: per-workspace
-    pvcClaimSize: 1Gi
-    preCreateSubPaths: true
+  server:
+    cheImageTag: ''
+    cheFlavor: codeready
+    devfileRegistryImage: ''
+    pluginRegistryImage: ''
+    tlsSupport: true
+    selfSignedCert: true
+    cheWorkspaceClusterRole: 'eclipse-codewind'
+    customCheProperties:
+      CHE_INFRA_KUBERNETES_WORKSPACE__START__TIMEOUT__MIN: "15"
+      CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "0"
+      CHE_WORKSPACE_PLUGIN__BROKER_WAIT__TIMEOUT__MIN: "15"
+  database:
+    externalDb: false
+    chePostgresHostName: ''
+    chePostgresPort: ''
+    chePostgresUser: ''
+    chePostgresPassword: ''
+    chePostgresDb: ''
+  auth:
+    openShiftoAuth: false
+    identityProviderImage: ''
+    externalIdentityProvider: false
+    identityProviderURL: ''
+    identityProviderRealm: ''
+    identityProviderClientId: ''
+  storage:
+    pvcStrategy: per-workspace
+    pvcClaimSize: 1Gi
+    preCreateSubPaths: true
 ```
-  * To manually install Codewind along with Codewind Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
+  * To manually install Codewind with CodeReady Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
 
-3\. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL:
+6\. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL:
 
 ![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="1482"}. 
 
@@ -129,7 +146,7 @@ Your application is now opened in a browser, showing the welcome to your Appsody
 
 ### Adding a REST service to your application
  1. Go to your project's workspace under the **Explorer** pane.
- 2. Go to `src>main>java>dev>appsody>starter`.
+ 2. Go to `src`>`main`>`java`>`dev`>`appsody`>`starter`.
  3. Right-click **starter** and select **New File**.
  4. Create a file, name it `Calculator.java`, and press **Enter**. This file is your JAX-RS resource.
  5. Before you input any code, make sure that the file is empty. 
