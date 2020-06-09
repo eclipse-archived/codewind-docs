@@ -45,11 +45,11 @@ If you add a project to the remote connection that is already deployed on the lo
 3\. Leave the **Remove** button selected to remove the project from the 
 local connection and click **OK**: 
 
-![Project added](./images/remotedeploy-projects-eclipse/eclipse_build-project.png){:width="175"}
+![Project added](./images/remotedeploy-projects-eclipse/eclipse_build-project.png){:width="654"}
 
 4\. Codewind begins building the code and the Docker image. Moments later the project image is uploaded to Docker Hub and used by your cloud deployment to provision a new pod:
 
-![Build success](./images/remotedeploy-projects-eclipse/eclipse_build-project-successful.png){:width="180"}
+![Build success](./images/remotedeploy-projects-eclipse/eclipse_build-project-successful.png){:width="654"}
 
 `myFirstNodeProject` on `CloudName1` cluster is now running and ready.
 
@@ -59,11 +59,11 @@ With the Eclipse IDE, you can drag and drop projects from one connection to anot
 
 Select the project in one connection and drag it onto another connection: 
 
-![Drag Node.js project](./images/remotedeploy-projects-eclipse/eclipse_move-node-project.png){:width="177"}
+![Drag Node.js project](./images/remotedeploy-projects-eclipse/eclipse_move-node-project.png){:width="654"}
 
 This action removes the project from the first connection and adds it to the second connection:
 
-![Drop Node.js project](./images/remotedeploy-projects-eclipse/eclipse_place-node-project.png){:width="175"}
+![Drop Node.js project](./images/remotedeploy-projects-eclipse/eclipse_place-node-project.png){:width="654"}
 
 # Next Steps
 
