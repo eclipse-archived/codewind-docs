@@ -4,9 +4,9 @@
 - title: 'Getting started'
   children:
     - title: 'Overview: Getting started'
-      url: gettingstarted.html
+      url: gettingstarted-overview.html
     - title: 'VS Code'
-      children:        
+      children:
       - title: '1. Installing Codewind for VS Code'
         url: vsc-getting-started.html
       - title: '2. Creating your first Codewind project with Codewind for VS Code'
@@ -47,9 +47,9 @@
       url: remote-setupregistries.html
     - title: '4. Creating and importing projects'
       children:
-      - title: 'VS Code' 
+      - title: 'VS Code'
         url: remotedeploy-projects-vscode.html
-      - title: 'Eclipse' 
+      - title: 'Eclipse'
         url: remotedeploy-projects-eclipse.html
 
 
@@ -58,7 +58,7 @@
   - title: '1. Installing Eclipse Che for Codewind'
     url: che-installinfo.html
   - title: '2. Adding an image registry in Codewind on Eclipse Che'
-    url: che-setupregistries.html 
+    url: che-setupregistries.html
   - title: '2a. Adding the OpenShift internal registry with Codewind'
     url: openshiftregistry.html
   - title: '3. Creating a Codewind workspace in Eclipse Che'
@@ -71,7 +71,7 @@
     url: che-uninstall.html
 
 - title: 'OpenShift Do (odo) support in Codewind'
-  url: che-odo-support.html 
+  url: che-odo-support.html
 
 - title: 'Working with templates'
   url: workingwithtemplates.html
@@ -110,7 +110,7 @@
       url: open-api-tools-for-eclipse.html
 
 - title: 'Configuring Codewind for Tekton pipelines'
-  url: che-tektonpipelines.html       
- 
+  url: che-tektonpipelines.html
+
 - title: 'Troubleshooting'
   url: troubleshooting.html
