@@ -5,7 +5,7 @@ title: "Getting Started with Codewind in CodeReady Workspaces"
 categories: guides 
 guide_description: "Use Codewind in CodeReady Workspaces to build high quality cloud native applications."
 permalink: codewind-crw-quick-guide.html
-duration: 10 minutes
+duration: 15 minutes
 tags: Codewind, CodeReady Workspaces, Openshift, Kubernetes, containers, microservice
 --- 
 
@@ -35,13 +35,13 @@ Before you can use Codewind with CodeReady Workspaces, apply the Codewind cluste
 
 4\. Select **Red Hat CodeReady Workspaces** and click **Install**: 
 
-![Subscribe to OperatorHub](./images/codereadyworkspaces-images/CRW-OperatorHub.png){:width="1684"}. 
+![Subscribe to OperatorHub](./images/codereadyworkspaces-images/CRW-OperatorHub.png){:width="900"}. 
 
-![Install CodeReady Workspaces](./images/codereadyworkspaces-images/CRW-install.png){:width="1626"}. 
+![Install CodeReady Workspaces](./images/codereadyworkspaces-images/CRW-Install.png){:width="800"}. 
 
-  * If you did not set up an auth provider, set `openShiftoAuth` to `false`. 
-  * To enable HTTPS, set `tlsSupport` to `true`.
-  * If you use a self-signed certificate, set `selfSignedCert` to `true`. 
+  * If you did not set up an auth provider, set **openShiftoAuth** to **false**. 
+  * To enable HTTPS, set **tlsSupport** to **true**.
+  * If you use a self-signed certificate, set **selfSignedCert** to **true**. 
 
 After you install the operator, continue to install CodeReady Workspaces:
 
@@ -51,7 +51,7 @@ After you install the operator, continue to install CodeReady Workspaces:
 
 3\. Select the **CodeReady Workspaces** cluster then **Create CheCluster**. 
 
-4\. Configure the fields, like `tlsSupport`, as needed. 
+4\. Configure the fields, like **tlsSupport**, as needed. 
 
 5\. Copy and paste the following yaml into the provided text box: 
 
@@ -96,7 +96,21 @@ spec:
 
 6\. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL:
 
-![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="1482"}. 
+![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="900"}. 
+
+After you install CodeReady Workspaces, log in and create a Codewind workspace from the Codewind devfile: 
+
+1\. Log in to Che. Che loads. 
+
+2\. Go to **Workspaces** then click **Add Workspace**. 
+
+3\. Click **Import Devfile**. 
+
+4\. From **Source**, click **YAML**. 
+
+5\. Go to the link, [codewind-che-plugin/0.12.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.12.0/devfiles/0.12.0/devfile.yaml), then copy and paste the contents into the YAML text box in your Codewind workspace. 
+
+6\. Click **Create & Open**.
 
 ### Setting up Codewind
 Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands: 
