@@ -8,20 +8,29 @@
 
       for (let i = 0; i < results.length; i++) {  // Iterate over the results
         let item = store[results[i].ref];
-        appendString += `
-        <div class="card">
-          <div class="card-header">
-            ${item.layout[0].toUpperCase() + item.layout.substring(1)}
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">${item.title}</h5>
-            <!--<p class="card-text">${item.description.substring(0, 150)}</p>-->
-            <p class="card-text">${item.content.substring(0, 147)}...</p>
-            <a href="${baseURL}${item.url}" class="btn btn-primary">Read More</a>
-          </div>
-        </div>`;
-        // appendString += '<li class="list-group-item"><a href="' + baseURL + item.url + '"><h3>' + item.title + '</h3></a>';
-        // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        if (item.layout == "newsredirect") {
+          appendString += `
+          <div class="card">
+            <div class="card-header">
+              News
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="${baseURL}${item.url}">Latest News</a></h5>
+              <p class="card-text">Want to keep up with the latest in codewind? See the latest news...</p>
+            </div>
+          </div>`;
+        } else {
+          appendString += `
+          <div class="card">
+            <div class="card-header">
+              ${item.layout[0].toUpperCase() + item.layout.substring(1)}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="${baseURL}${item.url}">${item.title}</a></h5>
+              <p class="card-text">${item.content.substring(0, 147)}...</p>
+            </div>
+          </div>`;
+        }
       }
 
       searchResults.innerHTML = appendString;
