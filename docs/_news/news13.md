@@ -17,7 +17,7 @@ Thursday 11, June 2020
 **IDEs**
 ##### Eclipse and VS Code
 - Codewind includes support for [debugging remote projects](https://github.com/eclipse/codewind/issues/1990).
-- The [`Codewind: Capture Diagnostics` command](https://github.com/eclipse/codewind/issues/2851) executes `cwctl diagnostics` to capture VS Code and Codewind logs. Then, with bug reports, you can upload the `.zip` file that this command creates.
+- [Use the IDEs to collect all available log files and environment information](https://github.com/eclipse/codewind/issues/1579). For more information, see [Collecting diagnostics with IDEs](troubleshooting.html#collecting-diagnostics-with-ides).
 - Codewind remembers the state of remote connections, whether connected or disconnected, when you [restart Eclipse or VS Code](https://github.com/eclipse/codewind/issues/2823).
 - Manage and view project log files that are currently available in the project overview page in [Eclipse](https://github.com/eclipse/codewind/issues/3020) and in [VS Code](https://github.com/eclipse/codewind/issues/2755).
 
@@ -45,7 +45,6 @@ Thursday 11, June 2020
 #### List of Fixes
 - In Codewind for Eclipse and VS Code:
   - When you use the IDE to upgrade Codewind, the IDE [removes the old version of the Codewind CLI](https://github.com/eclipse/codewind/issues/2869) from the disk to save space.
-  - In Eclipse and VS Code, [use the IDEs to collect all available log files and environment information](https://github.com/eclipse/codewind/issues/1579). For more information, see [Collecting diagnostics with IDEs](troubleshooting.html#collecting-diagnostics-with-ides).
 - In Codewind for Eclipse:
   - [A progress monitor appears when certain actions are selected](https://github.com/eclipse/codewind/issues/2997). For example, a progress monitor appears while Manage Template Sources retrieves data from a connection.
   - The local connection [no longer shows a disconnected error when Eclipse is restarted](https://github.com/eclipse/codewind/issues/2963).
