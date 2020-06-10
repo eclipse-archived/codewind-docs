@@ -14,7 +14,7 @@ tags: Codewind, CodeReady Workspaces, Openshift, Kubernetes, containers, microse
 * Develop a simple microservice that uses Eclipse Codewind on CodeReady Workspaces
 
 ## Overview
-Use Eclipse Codewind to develop microservice applications from application stacks in an integrated developer environment (IDE).CodeReady Workspaces provides a containerized IDE for cloud native application development on an OpenShift cluster. 
+Use Eclipse Codewind to develop microservice applications from application stacks in an integrated developer environment (IDE). CodeReady Workspaces provides a containerized IDE for cloud native application development on an OpenShift cluster. 
 
 ## Developing with CodeReady Workspaces 
 CodeReady Workspaces uses Kubernetes and containers to provide a preconfigured environment. Use CodeReady Workspaces to create, build, and test your code in OpenShift containers but feel like you are working on an IDE on your local machine.  
@@ -24,21 +24,22 @@ CodeReady Workspaces require at least two 5Gi ReadWriteOnce (RWO) persistent vol
 
 Each Codewind workspace also requires at least one 5Gi ReadWriteMany (RWX) persistent volume.
 
-Before you can use Codewind with CodeReady Workspaces, you must:
-
-1. Install an OpenShift cluster. 
-2. Apply the Codewind cluster by going to your command line and inputting `oc apply -f`.
+Before you can use Codewind with CodeReady Workspaces, you must have an OpenShift cluster available. 
 
 ### Installing CodeReady Workspaces
-1\. Log in to your OpenShift cluster. 
+1\. Log in to your OpenShift console's dashboard. 
 
 2\. From the sidebar, click **Operators** then **OperatorHub**.
 
 3\. Search for `CodeReady Workspaces`. 
 
-4\. Select **Red Hat CodeReady Workspaces** and click **Install**: 
+4\. Select **Red Hat CodeReady Workspaces**:
 
 ![Subscribe to OperatorHub](./images/codereadyworkspaces-images/CRW-OperatorHub.png){:width="900"}. 
+
+5\. Click **Install**: 
+
+![Install CodeReady Workspaces](./images/codereadyworkspaces-images/CRW-Install.png){:width="800"}.
 
 After you install the operator, continue to install CodeReady Workspaces:
 
@@ -90,18 +91,27 @@ spec:
     preCreateSubPaths: true
 ```
 
-![Install CodeReady Workspaces](./images/codereadyworkspaces-images/CRW-Install.png){:width="800"}. 
+ ![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="900"}. 
 
-  * To manually install Codewind with CodeReady Workspaces, save this yaml to a disk and run `oc apply -f <yaml>`. 
-  * If you did not set up an auth provider, set **openShiftoAuth** to **false**. 
-  * To enable HTTPS, set **tlsSupport** to **true**.
-  * If you use a self-signed certificate, set **selfSignedCert** to **true**. 
+  * **Note:** If you install CodeReady Workspaces on an OpenShift cluster with publicly signed certificates, such as on IBM Cloud, set **selfSignedCert** to **false**. 
   
-6\. CodeReady Workspaces now installs and you can access the CodeReady Workspaces URL and Red Hat SSO Admin Console URL:
+6\. After CodeReady Workspaces installs, click the **CodeReady Workspaces URL**.
 
-![Install CheCluster](./images/codereadyworkspaces-images/CRW-CheCluster.png){:width="900"}. 
+7\. A new window appears that prompts you to log in. If you have not made a CodeReady Workspaces account, do so by clicking **Register**:
 
-After you install CodeReady Workspaces, log in and create a Codewind workspace from the Codewind devfile: 
+![Register an account](./images/codereadyworkspaces-images/CRW-Register.png){:width="900"}. 
+
+8\. After you make a CodeReady Workspaces account, you can start to create a Codewind workspace. 
+
+### Setting up Codewind
+Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands from your command line: 
+  * `oc adm policy add-scc-to-user anyuid system:serviceaccounts:<namespace where you installed CodeReady Workspaces>:che-workspace` 
+  * `oc adm policy add-scc-to-user privileged system:serviceaccounts:<namespace where you installed CodeReady Workspaces>:che-workspace` 
+
+CodeReady Workspaces starts Codewind and installs the Codewind plug-ins. This process might take a couple of minutes for all of the necessary components to be pulled and started.
+
+### Creating the Codewind workspace
+After you set up Codewind, log in to your CodeReady Workspaces account and create a Codewind workspace from the Codewind devfile: 
 
 1\. Log in to CodeReady Workspaces. 
 
@@ -111,16 +121,9 @@ After you install CodeReady Workspaces, log in and create a Codewind workspace f
 
 4\. From **Source**, click **YAML**. 
 
-5\. Go to the link, [codewind-che-plugin/0.12.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/devfiles/0.13.0/devfile.yaml), then copy and paste the contents into the YAML text box in your Codewind workspace. 
+5\. Go to the link, [codewind-che-plugin/0.13.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/devfiles/0.13.0/devfile.yaml), then copy and paste the contents into the YAML text box in your Codewind workspace. 
 
 6\. Click **Create & Open**.
-
-### Setting up Codewind
-Because of its dependency on `buildah`, Codewind needs to run as root and privileged. To enable Codewind, run the following commands: 
-  * `oc adm policy add-scc-to-user anyuid system:serviceaccounts:<namespace where you installed CodeReady Workspaces>:che-workspace` 
-  * `oc adm policy add-scc-to-user privileged system:serviceaccounts:<namespace where you installed CodeReady Workspaces>:che-workspace` 
-
-CodeReady Workspaces starts Codewind and installs the Codewind plug-ins. This process might take a couple of minutes for all of the necessary components to be pulled and started.
 
 ### Configuring Codewind to use application stacks
 Configure Codewind to use Appsody templates so you can focus exclusively on your code. Complete the following steps to select the Appsody templates:
@@ -215,7 +218,7 @@ You now can work with the example calculator microservice.
 
 1. Use the URL that you saw when you first opened the application.
 2. Make sure to remove the `< >` symbol in the URL.
-3. `http://127.0.0.1:<url>/starter/calculator/aboutme`
+3. `<url>/starter/calculator/aboutme`
 4. You see the following response:
 
 ```
@@ -224,8 +227,8 @@ You can add (+), subtract (-), and multiply (*) with this simple calculator.
 
 You can also try a few of the sample calculator functions:
 
-* `http://127.0.0.1:<url>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
-* So for `http://127.0.0.1:<url>/starter/calculator/+/10/3` you see: `10+3=13`.
+* `<url>/starter/calculator/{op}/{a}/{b}`, where you can input one of the available operations `(+, _, *)`, and an integer a, and an integer b.
+* So for `<url>/starter/calculator/+/10/3` you see: `10+3=13`.
 
 ## What you have learned
 Now that you have completed this quick guide, you have learned to:
