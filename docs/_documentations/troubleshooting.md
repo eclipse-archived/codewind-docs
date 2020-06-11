@@ -31,6 +31,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
+* [Restoring lost connections](#restoring-lost-connections)
 
 ## IDE Troubleshooting
 
@@ -1010,3 +1011,20 @@ Install and enable the [Java Extension Pack](https://marketplace.visualstudio.co
 
 ### Debugger fails to attach after restarting project into Debug mode
 Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
+
+***
+# Restoring lost connections
+
+<!--
+Action/Topic: Restoring lost connections
+Issue type: bug
+Issue link: https://github.com/eclipse/codewind/issues/3118
+Codewind version: 0.13.0
+-->
+## Node.js remote debugging disconnects
+The connection might be lost when debugging Node.js projects remotely.
+
+**Workaround:** To reconnect if the remote debugger disconnects, right-click the project and select **Attach Debugger**.
+If the remote debugger disconnects too frequently, modify the `streaming-connection-idle-timeout` parameter on the kubelet.
+- For information on setting kubelet parameters, see [Set Kubelet parameters via a config file] (https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/).
+- For information on the `streaming-connection-idle-timeout` parameter, see the [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) reference page.
