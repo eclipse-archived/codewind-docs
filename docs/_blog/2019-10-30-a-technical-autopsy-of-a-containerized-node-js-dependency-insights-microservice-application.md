@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
-blog_description: "This blog focuses on the code to implement a cloud-native serverless Node.js microservice developed using Eclispe Codewind."
+description: "This blog focuses on the code to implement a cloud-native serverless Node.js microservice developed using Eclispe Codewind."
 permalink: a-technical-autopsy-of-a-containerized-node-js-dependency-insights-microservice-application.html
 duration: 5 minutes
 tags: [Nodejs, Cloud Computing, Microservices, Software Development, Licensing]

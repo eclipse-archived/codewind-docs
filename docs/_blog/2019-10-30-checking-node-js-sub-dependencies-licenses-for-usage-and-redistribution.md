@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
-blog_description: "Reusing Node.js modules from NPM is technically easy, but understanding the commercial legal usage and redistribution implications can be a ‘black art’."
+description: "Reusing Node.js modules from NPM is technically easy, but understanding the commercial legal usage and redistribution implications can be a ‘black art’."
 permalink: checking-node-js-sub-dependencies-licenses-for-usage-and-redistribution.html
 duration: 5 minutes
 tags: [JavaScript, Nodejs, Licensing, Project Management, Software Development]

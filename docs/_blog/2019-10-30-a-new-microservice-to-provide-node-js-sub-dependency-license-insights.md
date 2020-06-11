@@ -5,7 +5,7 @@ categories: blog
 author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin
-blog_description: "An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using Eclipse Codewind. Note: I covered the pain points and manual..."
+description: "An overview and demonstration of a microservice that automates some Node.js sub-dependency management pain-points, developed using Eclipse Codewind. Note: I covered the pain points and manual..."
 permalink: a-new-microservice-to-provide-node-js-sub-dependency-license-insights.html
 duration: 3 minutes
 tags: [Nodejs, Licensing, Cloud Computing, Development]
