@@ -8,11 +8,9 @@ permalink: news13
 ---
 
 ## Codewind 0.13.0
-Thursday 11, June 2020
+Friday 12, June 2020
 
 #### ✨ New Features and Highlights for 0.13.0 ✨
-
-**Codewind Quick Guides**
 
 **IDEs**
 ##### Eclipse and VS Code
@@ -55,7 +53,7 @@ Thursday 11, June 2020
 - In Codewind for VS Code:
   - [An issue is fixed with deleting project files on Windows](https://github.com/eclipse/codewind/issues/2456). Also, a warning message appears if the extension is going to reload because the workspace folders are changed.
   - [Some of the colors in the webviews are updated because they changed in VS Code 1.45](https://github.com/eclipse/codewind-vscode/pull/596). Also, the table header in the Template Sources and Image Registry pages is fixed.
-  - [An issue is fixed with cancelling connection setup after you restart VS Code](https://github.com/eclipse/codewind/issues/2824).
+  - [An issue is fixed with canceling connection setup after you restart VS Code](https://github.com/eclipse/codewind/issues/2824).
   - [Webviews close when the extension is deactivated](https://github.com/eclipse/codewind/issues/2878).
 - The Performance Dashboard includes [new capabilities paneling](https://github.com/eclipse/codewind/pull/3037).
 - [Run load concurrently against multiple projects](https://github.com/eclipse/codewind/issues/2825).
