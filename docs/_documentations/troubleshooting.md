@@ -31,7 +31,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenAPI tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
-* [Restoring lost connections](#restoring-lost-connections)
+* [Restoring lost debug connections](#restoring-lost-debug-connections)
 
 ## IDE Troubleshooting
 
@@ -1013,16 +1013,16 @@ Install and enable the [Java Extension Pack](https://marketplace.visualstudio.co
 Run the `attach debugger` command again. If the issue persists after a few attempts, restart the project in **Debug** mode a second time.
 
 ***
-# Restoring lost connections
+# Restoring lost debug connections
 
 <!--
-Action/Topic: Restoring lost connections
+Action/Topic: Restoring lost debug connections
 Issue type: bug
 Issue link: https://github.com/eclipse/codewind/issues/3118
 Codewind version: 0.13.0
 -->
-## Node.js remote debugging disconnects
-The connection might be lost when debugging Node.js projects remotely.
+## Remote debugging disconnects
+The debug connection might be lost when debugging projects remotely.
 
 **Workaround:** To reconnect if the remote debugger disconnects, right-click the project and select **Attach Debugger**.
 If the remote debugger disconnects too frequently, modify the `streaming-connection-idle-timeout` parameter on the kubelet.
