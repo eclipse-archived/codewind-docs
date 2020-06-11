@@ -18,11 +18,11 @@ Use Eclipse Codewind to develop microservice applications from application stack
 CodeReady Workspaces uses Kubernetes and containers to provide a preconfigured environment. Use CodeReady Workspaces to create, build, and test your code in OpenShift containers but feel like you are working on an IDE on your local machine.  
 
 ### Prerequisite
+Before you can use Codewind with CodeReady Workspaces, you must have an OpenShift cluster available. To install OpenShift clusters, see [CodeReady Containers](https://code-ready.github.io/crc/). 
+
 CodeReady Workspaces require at least two 5Gi ReadWriteOnce (RWO) persistent volumes on the cluster to install and a 5Gi RWO volume for each created workspace.
 
 Each Codewind workspace also requires at least one 5Gi ReadWriteMany (RWX) persistent volume.
-
-Before you can use Codewind with CodeReady Workspaces, you must have an OpenShift cluster available. 
 
 ### Installing CodeReady Workspaces
 1\. Log in to your OpenShift cluster's dashboard. 
