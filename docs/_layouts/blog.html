@@ -16,7 +16,13 @@
                         <div class="blog-post-column col">
                             
                                 <div class="media">
-                                    <img src="{{ post.author_picture }}" class="blog-image">
+                                    <img src="
+                                        {% if post.featured_image %}
+                                            {{ post.featured_image }}
+                                        {% else %}
+                                           {{ post.author_picture }}
+                                        {% endif %}
+                                        " class="blog-image">
                                     <div class="media-body">
                                         <h2 class="mt-0 blog-post-title">
                                             <a href="{{ post.url | relative_url }}" class="blog-post-title-link">

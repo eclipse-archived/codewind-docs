@@ -59,7 +59,7 @@
 .blog-post-column {
     width: 100%;
     color: #292828;
-    background-color: #f7f7f7;
+    background-color: #f3f5f7;
     padding: 40px;
     margin: 15px;
     border-radius: 5px;
@@ -153,10 +153,16 @@ blockquote {
   }
 
 .blog-image {
-    height: 72px;
+    height: 96px;
+    width: 96px;
+    object-fit: cover;
     align-self: flex-start;
     position: relative;
     border-radius: 2px;
+}
+
+.blog-post-title {
+    margin-bottom: 0.25em;
 }
 
 @media screen and (max-width: 600px) {
