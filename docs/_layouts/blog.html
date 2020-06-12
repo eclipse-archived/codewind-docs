@@ -20,15 +20,15 @@
                                         {% if post.featured_image %}
                                             {{ post.featured_image }}
                                         {% else %}
-                                           {{ post.author_picture }}
+                                            {{ post.author_picture }}
                                         {% endif %}
-                                        " class="blog-card-image">
+                                        " class="blog-card-image rounded-circle">
                                     <div class="media-body">
-                                        <h2 class="mt-0 blog-post-title">
+                                        <h5 class="mt-0">
                                             <a href="{{ post.url | relative_url }}" class="blog-post-title-link">
                                                 {{ post.title | escape }}
                                             </a>
-                                        </h2>
+                                        </h5>
                                         <p>
                                             {% if post.description %}
                                             {{ post.description }}
