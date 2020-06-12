@@ -170,7 +170,7 @@ blockquote {
         flex-direction: column;
     }
 
-    .blog-image {
+    .blog-card-image {
         margin-bottom: 1.2em;
         align-self: center;
     }
