@@ -25,7 +25,7 @@ Friday 12, June 2020
 - To learn more about why a push registry is required for remote Codewind style projects, [a link to the documentation is included in related dialogs](https://github.com/eclipse/codewind/issues/2992).
 - The Codewind Explorer view displays an indication of project errors and warnings. [Hover over the project to get the details](https://github.com/eclipse/codewind/issues/655).
 
-#### IntelliJ
+##### IntelliJ
 - The Codewind plug-in requires IntelliJ IDEA 2020.1.1 as the minimum version.
 
 ##### VS Code
@@ -39,6 +39,10 @@ Friday 12, June 2020
 - [A warning appears if a project directory is added to multiple connections](https://github.com/eclipse/codewind/issues/2922). Adding a project directory to multiple connections is still allowed.
 - The location of the Codewind extension logs is [reported at the beginning of the Codewind output stream](https://github.com/eclipse/codewind-vscode/pull/600).
 - The Codewind output stream [logs timestamps and time that is elapsed for each command](https://github.com/eclipse/codewind-vscode/pull/607/commits/bb55fe7f2c5ea5fc5e92962f5a83ce960d768e0e).
+
+**New Codewind Quick Guide**
+
+Looking to use CodeReady Workspaces to develop cloud-native applications from an OpenShift cluster? Checkout our new [Getting started with Codewind in CodeReady Workspaces quick guide](./codewind-crw-quick-guide.html). 
 
 #### List of Fixes
 - In Codewind for Eclipse and VS Code:
