@@ -42,7 +42,7 @@ Friday 12, June 2020
 
 **New Codewind Quick Guide**
 
-Looking to use CodeReady Workspaces to develop cloud-native applications from an OpenShift cluster? Checkout our new [Getting started with Codewind in CodeReady Workspaces quick guide](./codewind-crw-quick-guide.html). 
+Looking to use Codewind in CodeReady Workspaces to develop cloud-native applications from an OpenShift cluster? Checkout our new [Getting started with Codewind in CodeReady Workspaces quick guide](./codewind-crw-quick-guide.html). 
 
 #### List of Fixes
 - In Codewind for Eclipse and VS Code:
