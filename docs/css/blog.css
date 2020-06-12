@@ -152,7 +152,7 @@ blockquote {
     color: rgba(0, 0, 0, 0.54);
   }
 
-.blog-image {
+.blog-card-image {
     height: 96px;
     width: 96px;
     object-fit: cover;
