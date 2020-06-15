@@ -9,19 +9,19 @@ type: document
 order: 70
 ---
 
-# Uninstalling Codewind from Eclipse
+# Uninstalling Codewind for Eclipse
 
-Remove the Codewind containers and images
+To uninstall Codewind for Eclipse, follow these instructions:
 
-1. Bring up the context menu of the **Codewind** item in the **Codewind Explorer**
-2. Click on **Uninstall**
-3. If your application containers are running, you will be prompted whether you want to stop them.
+## Remove the Codewind containers and images
+1. Open the context menu of the **Codewind** item in the **Codewind Explorer**.
+2. Click **Uninstall**.
+3. If your application containers are running, you are prompted whether you want to stop them.
 
-Use the Eclipse uninstall support to uninstall Codewind for Eclipse:
-
+## Uninstall Codewind
 1. Navigate to **Help** > **About Eclipse IDE**.
-2. Click on **Installation Details**.
+2. Click **Installation Details**.
 3. Search for *Codewind*.
 4. Select **Codewind** and click **Uninstall**.
-5. On the **Uninstall Details** page click **Finish**.
+5. On the **Uninstall Details** page, click **Finish**.
 6. When the uninstall is complete, restart Eclipse.

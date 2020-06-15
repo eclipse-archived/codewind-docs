@@ -13,6 +13,9 @@
         url: vsc-firstproject.html
       - title: '3. Making a code change with VS Code'
         url: vsc-codechange.html
+      - title: '4. Uninstalling Codewind for VS Code'
+        url: vsc-uninstall.html
+
     - title: 'Eclipse'
       children:
       - title: '1. Installing Codewind for Eclipse'
@@ -21,6 +24,9 @@
         url: eclipse-firstproject.html
       - title: '3. Making a code change with Eclipse'
         url: eclipse-codechange.html
+      - title: '4. Uninstalling Codewind for Eclipse'
+        url: eclipse-uninstall.html
+        
     - title: 'IntelliJ'
       children:
       - title: '1. Installing Codewind for IntelliJ'
