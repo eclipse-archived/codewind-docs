@@ -2,6 +2,7 @@
 layout: post
 title: "JDK 14 is now here, but will my Java application run on it?"
 categories: blog
+featured_image: https://i1.wp.com/softwareengineeringdaily.com/wp-content/uploads/2020/01/Java-Debugging-Tips-881x441.jpg?resize=730%2C389&ssl=1
 author_picture: images/blog/author_icon_nik_canvin.jpg
 author_url: https://www.linkedin.com/in/nik-canvin-110326/
 author: Nik Canvin

@@ -59,6 +59,10 @@
 .blog-post-column {
     width: 100%;
     color: #292828;
+    background-color: #f3f5f7;
+    padding: 40px;
+    margin: 15px;
+    border-radius: 5px;
 }
 
 .blog-post-content {
@@ -84,7 +88,6 @@
 .blog-post-title-link {
     font-family: 'IBM Plex Sans';
     font-size: 30px;
-    color: #292828;
     transition: color .2s;
 }
 
@@ -148,3 +151,27 @@ blockquote {
     margin-right: 40px;
     color: rgba(0, 0, 0, 0.54);
   }
+
+.blog-card-image {
+    height: 96px;
+    width: 96px;
+    object-fit: cover;
+    align-self: flex-start;
+    position: relative;
+    border-radius: 2px;
+}
+
+.blog-post-title {
+    margin-bottom: 0.25em;
+}
+
+@media screen and (max-width: 600px) {
+    .media {
+        flex-direction: column;
+    }
+
+    .blog-card-image {
+        margin-bottom: 1.2em;
+        align-self: center;
+    }
+}

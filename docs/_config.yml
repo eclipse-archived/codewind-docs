@@ -10,6 +10,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-redirect-from
 exclude: [node_modules]
 collections:
   documentations:
