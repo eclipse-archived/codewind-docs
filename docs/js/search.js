@@ -15,7 +15,7 @@
               News
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="${baseURL}${item.url}.html">Latest News</a></h5>
+              <h5 class="card-title"><a href="${baseURL}${item.url}">Latest News</a></h5>
               <p class="card-text">Want to keep up with the latest in codewind? See the latest news...</p>
             </div>
           </div>`;
@@ -26,7 +26,7 @@
               ${item.layout[0].toUpperCase() + item.layout.substring(1)}
             </div>
             <div class="card-body">
-              <h5 class="card-title"><a href="${baseURL}${item.url}.html">${item.title}</a></h5>
+              <h5 class="card-title"><a href="${baseURL}${item.url}">${item.title}</a></h5>
               <p class="card-text">${item.content.substring(0, 147)}...</p>
             </div>
           </div>`;
