@@ -251,9 +251,6 @@ code {
 	#sidebar-container {
         padding-top: 101px;
     }
-    #content-container > div {
-        padding-top: 0px;
-    }
 }
 
 .callout {
@@ -290,7 +287,9 @@ code {
     #content-container {
         width: 100vw;
     }
-
+    #content-container > div {
+        padding-top: 0px;
+    }
     #sidebar-container {
         width: 100vw;
         	min-height: 0;
