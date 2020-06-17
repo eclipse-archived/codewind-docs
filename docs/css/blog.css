@@ -165,6 +165,10 @@ blockquote {
     margin-bottom: 0.25em;
 }
 
+.cw-blog-spacer {
+    height: 115px;
+}
+
 @media screen and (max-width: 600px) {
     .media {
         flex-direction: column;
