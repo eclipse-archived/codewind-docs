@@ -1,5 +1,9 @@
 #!/bin/sh
 
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+GREEN='\033[0;32m'
+
 # Fix the timestamp
 # https://stackoverflow.com/questions/21735435/git-clone-changes-file-modification-time
 # https://gist.github.com/HackingGate/9e8169c7645b074b2f40c959ca20d738
@@ -41,6 +45,21 @@ docker run --rm -it \
 
 docker run -dit --name my-apache-app -p 8765:80 -v "$PWD/docs/_site":/usr/local/apache2/htdocs/codewind/ httpd:2.4
 
-echo "Site running on http://0.0.0.0:8765/codewind"
+# Check link
+docker run --network="host" --rm -it -u $(id -u):$(id -g) codewinddocs/linkchecker:1.0 http://localhost:8765/codewind/
+rc=$?
 
-echo "Stop and remove containers by running removeBuild.sh..."
+# Shut down apache
+echo "Shutting down apache server..."
+docker stop my-apache-app >/dev/null 2>&1
+
+echo "Removing apache container..."
+docker container rm my-apache-app >/dev/null 2>&1
+
+if [[ $rc != 0 ]];
+then
+	printf "${RED}Find bad link(s), please fix them!${NC}\n"
+	exit $rc;
+else
+	printf "${GREEN}No errors found. Safe to check in.${NC}\n"
+fi
