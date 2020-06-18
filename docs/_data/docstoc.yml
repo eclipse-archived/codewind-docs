@@ -1,6 +1,9 @@
 - title: 'What is Codewind?'
   url: overview.html
 
+- title: 'The 3 configurations of Codewind'
+  url: getting-started-configs.html 
+
 - title: 'Getting started'
   children:
     - title: 'Overview: Getting started'
