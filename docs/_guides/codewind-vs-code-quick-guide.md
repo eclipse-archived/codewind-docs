@@ -12,6 +12,7 @@ icon: images/learn/icon_logoVScode.svg
 ---
 
 ## Overview
+
 Use Eclipse Codewind to create application projects from Application Stacks that your company builds. With Codewind, you can focus on your code and not on infrastructure and Kubernetes. Application deployments to Kubernetes occur through pipelines when developers commit their local code to the correct Git repos Kabanero is managing through webhooks.
 
 Use Codewind to create projects based on different template types. These projects include IBM Cloud Starters, OpenShift Do (odo), and Appsody templates. Today, there are templates for IBM Cloud Starters, odo, Eclipse MicroProfile/Java EE, Spring Boot, Node.js, Node.js with Express, and Node.js with Loopback.
