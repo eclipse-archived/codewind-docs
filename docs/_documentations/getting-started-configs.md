@@ -15,7 +15,7 @@ type: document
 ### Where do I develop my code? Where can I build and run my containers?
 Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both. 
 
-![3 configurations of Codewind](./images/configs/browser-based.png)
+![3 configurations of Codewind](./images/configs/BrowserBasedConfiguration.png)
 
 By using Codewind locally, you can get up and running immediately. 
 
