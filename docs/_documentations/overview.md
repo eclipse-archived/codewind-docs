@@ -65,7 +65,7 @@ Codewind is available as a desktop IDE extension for [**VS Code**](https://marke
 Codewind supports [Kubernetes](https://kubernetes.io/) and [OpenShift](https://www.openshift.com/) for container orchestration. 
 
 ### Where do I develop my code? Where can I build and run my containers? How does Codewind support my development flow?
-Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both. To find out more about the three ways of using Codewind - locally, remotely, or as a hosted application on your cloud - see [The three configurations of Codewind](./getting-started-configs.html).
+Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose. You can develop containerized applications on your desktop, directly in the cloud, or a combination of both. To find out more about the three ways of using Codewind - locally, remotely, or as a hosted application on your cloud - see [Getting Started](./gettingstarted-overview.html).
 
 ### What preconfigured containerized projects does Codewind provide?
 * Codewind provides preconfigured [project templates](workingwithtemplates.html) covering several languages, including [Node.js](https://nodejs.dev/), [Java<sup>TM</sup>](https://www.java.com/), [Python](https://www.python.org/), and [Swift](https://swift.org/) and several frameworks, such as [Express](https://expressjs.com/), [Spring Boot](https://spring.io/projects/spring-boot), and [Open Liberty](https://openliberty.io/).
