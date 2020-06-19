@@ -52,10 +52,9 @@ Codewind prompts you to confirm the project type, in this case, identified as `N
 
 You have now:
 
-1. Deployed a new Codewind install into OpenShift.
-2. Configured your IDE to use this new deployment.
-3. Registered all the necessary security parameters.
-4. Created a new project that builds and runs in the cloud.
-5. Copied an existing local project to build and run in the cloud.
+1. Configured your local IDE’s Codewind extension to connect to Codewind in the cloud.
+2. Registered all necessary security parameters.
+3. Created a project that builds and runs in the cloud.
+4. Built and run an existing project in the cloud.
 
 To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with Templates](./workingwithtemplates.html)

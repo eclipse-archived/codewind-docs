@@ -225,12 +225,23 @@ code {
     width: 100%
 }
 
+#hero-main-hero-intellij {
+    position: absolute;
+    top: 41px;
+    left: 561px;
+}
+
 #hero-main-hero-vscode img {
     max-width: 545px;
     -moz-box-shadow: -5px 5px 15px 0px #3a3a3a;
     -webkit-box-shadow: -5px 5px 15px 0px #3a3a3a;
     box-shadow: -5px 5px 15px 0px #3a3a3a;
     width: 100%;
+}
+
+#hero-main-hero-intellij img {
+    max-width: 378px;
+    width: 100%
 }
 
 #hero-main-headline {
@@ -240,7 +251,7 @@ code {
 #hero-main-hero {
     left: 50px;
     position: relative;
-    max-width: 784px;
+    max-width: 950px;
     width: 100%;
     top: 129px;
     font-size: 12px;
@@ -332,7 +343,7 @@ code {
 }
 
 .cw-logo-separator {
-    
+
     height: 60px;
 }
 
@@ -503,7 +514,7 @@ code {
 	position: relative;
 }
 .cw-footer-eclipse-img img {
-	
+
 }
 /* end footer */
 
@@ -542,15 +553,25 @@ code {
     }
 
     #hero-main-hero-eclipse {
+        top: 50px;
         left: 100px;
     }
 
     #hero-main-hero-che {
-        top: 150px;
+        top: 100px;
         left: 200px;
     }
 
+    #hero-main-hero-intellij {
+        top: 150px;
+        left: 300px;
+    }
+
     #hero-main-hero-eclipse>div {
+        text-align: right;
+    }
+
+    #hero-main-hero-intellij>div {
         text-align: right;
     }
 
@@ -564,7 +585,7 @@ code {
         margin-right: calc(50% - 500px);
     }
     #hero-turbine-svg {
-        
+
         margin-left: calc(50% - 550px);
     }
 
@@ -577,23 +598,23 @@ code {
 	.cw-header-link {
         padding-left: 18px;
 	}
-	
+
 	.cw-header-link-news {
 	    padding-right: 18px;
 	}
-    
+
     .cw-header-link-blog {
 	    padding-right: 18px;
     }
-    
+
     .cw-header-link-guides {
 	    padding-right: 18px;
 	}
-    
+
 	.cw-header-link-docs {
 		padding-right: 26px;
 	}
-	
+
     /* hero section */
     #hero-main-text {
         max-width: 400px;
@@ -604,12 +625,18 @@ code {
     }
 
     #hero-main-hero-eclipse {
-        left: 80px;
+        top: 60px;
+        left: 60px;
     }
 
     #hero-main-hero-che {
-        top: 150px;
-        left: 160px;
+        top: 120px;
+        left: 120px;
+    }
+
+    #hero-main-hero-intellij {
+        top: 180px;
+        left: 180px;
     }
 
     #hero-main-hero {
@@ -623,7 +650,7 @@ code {
     }
 
     #hero-turbine-svg {
-        
+
         margin-left: calc(50% - 480px);
     }
 
@@ -639,7 +666,7 @@ code {
     }
 
     #hero-main img {
-        width: calc(100% - 160px);
+        width: calc(100% - 180px);
     }
 
     #hero-main-hero-eclipse {
@@ -649,20 +676,36 @@ code {
 
     #hero-main-hero-eclipse img {
         max-width: unset;
-        width: calc(100% - 80px);
+        width: calc(100% - 130px);
     }
 
     #hero-main-hero-che {
-        top: 180px;
         left: 160px;
+        top: 180px;
     }
 
     #hero-main-hero-che img {
+        max-width: unset;
+        width: calc(100% - 80px);
+    }
+
+
+    #hero-main-hero-intellij {
+        left: 240px;
+        top: 270px;
+    }
+
+
+    #hero-main-hero-intellij img {
         max-width: unset;
         width: 100%;
     }
 
     #hero-main-hero-eclipse>div {
+        text-align: left;
+    }
+
+    #hero-main-hero-intellij>div {
         text-align: left;
     }
 
@@ -683,7 +726,7 @@ code {
     }
 
     #hero-turbine-svg {
-        
+
         margin-left: calc(50% - 100px);
     }
     /* end hero section */
@@ -705,7 +748,7 @@ code {
 
     }
 
-    /* nav bar*/ 
+    /* nav bar*/
     #github-stars-button {
         display: none;
     }
@@ -738,7 +781,7 @@ code {
 	.cw-logo-mm {
     		max-height: 45px;
 	}
-    
+
     /* end footer */
 }
 
@@ -752,21 +795,21 @@ code {
     }
 
     /* end hero */
-    
+
     /* side bar */
-    
-    
-    
+
+
+
     /* end side bar */
     /* footer */
     .cw-footer-col {
     		padding: 10px;
     }
-    
+
     .cw-footer-border-right {
 	    display: none;
 	}
-	
+
 	#footer-div-mobile {
 	background: #0073ba;
 	padding-bottom: 30px;
@@ -788,7 +831,7 @@ code {
     .cw-footer-eclipse-img img {
     		padding-bottom: 0px;
     }
-    
+
     .cw-logo {
     		max-height: 30px;
     		margin-top: 30px;
@@ -800,9 +843,9 @@ code {
 	.cw-logo-eclipse-mobile {
 		margin-top: 30px;
 	}
-	
-	
-	
+
+
+
     /* end footer */
     #value-props-div {
     		padding-top: 40px;
@@ -810,33 +853,33 @@ code {
     		padding-left: 0px;
     		padding-right: 0px;
     }
-    
+
     #key-features-div {
 	    padding-top: 20px;
 	    padding-bottom: 40px;
 	    padding-left: 0;
 	    padding-right: 0;
 	}
-	
+
 	.cw-value-props-col-header {
-	
+
     		padding-left: 0;
     		padding-right: 0;
     	}
-    	
+
     	.cw-value-props-div-text {
-	
+
     		padding-left: 0;
     		padding-right: 0;
     	}
-    	
+
     	.cw-youtube-view-font {
 	    font-size: unset;
 	}
 	.cw-smile-icon {
 		width: 22px;
 	}
-	
+
 	#footer-div-mobile {
         padding-top: 20px;
         margin-top: 1.5em;
@@ -852,28 +895,38 @@ code {
     }
 
     #hero-main img {
-        width: calc(100% - 60px);
+        width: calc(100% - 80px);
     }
 
     #hero-main-hero {
         top: 50px;
     }
     #hero-main-hero-eclipse {
-        left: 80px;
-        top: 100px;
+        left: 60px;
+        top: 70px;
     }
 
     #hero-main-hero-eclipse img {
         max-width: unset;
-        width: calc(100% - 30px);
+        width: calc(100% - 60px);
     }
 
     #hero-main-hero-che {
-        top: 200px;
-        left: 160px;
+        left: 120px;
+        top: 140px;
     }
 
     #hero-main-hero-che img {
+        max-width: unset;
+        width: calc(100% - 40px);
+    }
+
+    #hero-main-hero-intellij {
+        left: 180px;
+        top: 210px;
+    }
+
+    #hero-main-hero-intellij img {
         max-width: unset;
         width: 100%;
     }
@@ -888,8 +941,6 @@ code {
 /* Small devices (portrait tablets and large phones, 500px and below) */
 @media only screen and (max-width: 500px) {
 
-    
-
     #hero-main-hero {
         top: 10px;
     }
@@ -898,15 +949,15 @@ code {
 /* Small devices (portrait tablets and large phones, 440px and below) */
 @media only screen and (max-width: 440px) {
 
-    
+
 
     #hero-main-hero {
         top: 10px;
     }
-    
+
     #hero-main-hero-eclipse {
-       
-        top: 70px;
+
+        top: 40px;
     }
 
     #hero-main-hero-eclipse img {
@@ -914,7 +965,21 @@ code {
         width: calc(100% - 30px);
     }
 
+    #hero-main-hero-che img {
+        max-width: unset;
+        width: calc(100% - 15px);
+    }
+
+    #hero-main-hero-intellij img {
+        max-width: unset;
+        width: 100%;
+    }
+
     #hero-main-hero-che {
+        top: 80px;
+    }
+
+    #hero-main-hero-intellij{
         top: 120px;
     }
 }

@@ -10,9 +10,14 @@
         <!-- must be a valid css selector, or will break collapse function -->
         {% assign hash = levelone.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
 
-        <a href="#{{ hash }}" id="#{{ hash }}"
-            class="bg-light list-group-item list-group-item-action flex-column align-items-start" data-toggle="collapse"
-            aria-expanded="false">{{ levelone.title }}<span class="submenu-icon"></span></a>
+        <a href="#{{ hash }}" id="#{{ hash }}" class="bg-light list-group-item list-group-item-action"
+            data-toggle="collapse" aria-expanded="false">
+            <div class="d-flex align-items-center">
+                {{ levelone.title }}
+                <span class="submenu-icon"></span>
+            </div>
+        </a>
+
         <div class="cw-sidebar-div cw-sidebar-submenu collapse" id="{{ hash }}">
 
             {% for leveltwo in levelone.children %}
@@ -21,10 +26,13 @@
 
             {% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
 
-            <a href="#{{ hashtwo }}" id="#{{ hashtwo }}"
-                class="bg-light list-group-item list-group-item-action flex-column align-items-start"
-                data-toggle="collapse" data-parent="#{{ hash }}" aria-expanded="false">{{ leveltwo.title }}<span
-                    class="submenu-icon"></span></a>
+            <a href="#{{ hashtwo }}" id="#{{ hashtwo }}" class="bg-light list-group-item list-group-item-action"
+                data-toggle="collapse" data-parent="#{{ hash }}" aria-expanded="false">
+                <div class="d-flex align-items-center">
+                    {{ leveltwo.title }}
+                    <span class="submenu-icon"></span>
+                </div>
+            </a>
 
             <div class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" id="{{ hashtwo }}">
 

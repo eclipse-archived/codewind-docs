@@ -1,8 +1,7 @@
-- title: 'What is Codewind?'
-  url: overview.html
-
 - title: 'Getting started'
   children:
+    - title: 'What is Codewind?'
+      url: overview.html 
     - title: 'Overview: Getting started'
       url: gettingstarted-overview.html
     - title: 'VS Code'
@@ -13,6 +12,9 @@
         url: vsc-firstproject.html
       - title: '3. Making a code change with VS Code'
         url: vsc-codechange.html
+      - title: '4. Uninstalling Codewind for VS Code'
+        url: vsc-uninstall.html
+
     - title: 'Eclipse'
       children:
       - title: '1. Installing Codewind for Eclipse'
@@ -21,6 +23,9 @@
         url: eclipse-firstproject.html
       - title: '3. Making a code change with Eclipse'
         url: eclipse-codechange.html
+      - title: '4. Uninstalling Codewind for Eclipse'
+        url: eclipse-uninstall.html
+        
     - title: 'IntelliJ'
       children:
       - title: '1. Installing Codewind for IntelliJ'
@@ -59,7 +64,7 @@
     url: che-installinfo.html
   - title: '2. Adding an image registry in Codewind on Eclipse Che'
     url: che-setupregistries.html
-  - title: '2a. Adding the OpenShift internal registry with Codewind'
+  - title: 'Optional: Adding the OpenShift internal registry with Codewind'
     url: openshiftregistry.html
   - title: '3. Creating a Codewind workspace in Eclipse Che'
     url: che-createcodewindworkspace.html
