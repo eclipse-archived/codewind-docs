@@ -1,8 +1,7 @@
-- title: 'What is Codewind?'
-  url: overview.html
-
 - title: 'Getting started'
   children:
+    - title: 'What is Codewind?'
+      url: overview.html 
     - title: 'Overview: Getting started'
       url: gettingstarted-overview.html
     - title: 'VS Code'
