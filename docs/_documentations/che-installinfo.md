@@ -71,7 +71,6 @@ Run the following `chectl` command to install the latest compatible version of C
    ```
    $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
-**Note:** Previous versions of Che cannot be used to create Codewind projects.
 
 **Installing on Kubernetes:**
 
