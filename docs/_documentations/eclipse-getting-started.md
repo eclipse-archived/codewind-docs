@@ -4,7 +4,7 @@ title: "Installing Codewind for Eclipse"
 description: "Installing Codewind for Eclipse"
 keywords: introducing, introduction, overview, what is, tools, eclipse, getting started, Codewind for Eclipse, work within Eclipse
 duration: 1 minute
-permalink: eclipse-getting-started
+permalink: eclipse-getting-started.html
 type: document
 ---
 # Getting Started with Codewind

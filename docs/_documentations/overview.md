@@ -4,7 +4,7 @@ title: What is Codewind?
 description: What is Codewind?
 keywords: IDE, cloud native, Kubernetes, cloud, development, VS Code, Eclipse, Eclipse Che, templates, local, remote, hosted, overview, prerequisites
 duration: 2 minute
-permalink: overview
+permalink: overview.html
 type: document
 ---
 

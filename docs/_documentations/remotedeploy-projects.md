@@ -4,7 +4,7 @@ title: Projects in the cloud
 description: Projects in the cloud
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: remotedeploy-projects
+permalink: remotedeploy-projects.html
 type: document
 ---
 

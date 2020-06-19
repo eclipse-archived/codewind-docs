@@ -4,7 +4,7 @@ title: Developing with packages from private registries and repositories
 description: Developing with packages from private registries and repositories 
 keywords: install, installing, IntelliJ, Eclipse, Codewind, IDE, plugin, plug-in, settings, creating, project, projects, template, code change, edit, edits, application, removing, private, registry, registries, repository, repositories, package, package 
 duration: 5 minutes 
-permalink: private-registries  
+permalink: private-registries.html
 type: document 
 ---
 

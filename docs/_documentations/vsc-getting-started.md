@@ -4,7 +4,7 @@ title: "Installing Codewind for VS Code"
 description: "Installing Codewind for VS Code"
 keywords: introducing, introduction, overview, tools, get, getting, start, started, install, vscode, visual, studio, code, Codewind for VS Code getting started, VS Code Marketplace, VS Code Extensions view, VS Code workspace,installing Codewind for VS Code
 duration: 1 minute
-permalink: vsc-getting-started
+permalink: vsc-getting-started.html
 type: document
 order: 1
 ---

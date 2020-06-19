@@ -4,7 +4,7 @@ title: Deploying Codewind remotely
 description: Deploying Codewind remotely
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: remote-deploying-codewind
+permalink: remote-deploying-codewind.html
 type: document
 ---
 

@@ -4,7 +4,7 @@ title: Codewind OpenAPI Tools for VS Code
 description: How to work with the OpenAPI tools in VS Code
 keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind OpenAPI tools for VS Code
 duration: 1 minute
-permalink: open-api-tools-for-vscode
+permalink: open-api-tools-for-vscode.html
 type: document
 order: 30
 ---

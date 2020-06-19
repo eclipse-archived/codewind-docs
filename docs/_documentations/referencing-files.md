@@ -4,7 +4,7 @@ title: Referencing files external to a project
 description: Referencing files external to a project
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 1 minute
-permalink: referencing-files
+permalink: referencing-files.html
 type: document
 parent: installoncloud
 order: 0

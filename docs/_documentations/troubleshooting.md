@@ -4,7 +4,7 @@ title: Troubleshooting
 description: Troubleshooting Codewind
 keywords: troubleshooting, issues, workaround, logs, common problems, Mac, Windows, Linux, Theia, Docker, help, open a new issue, contact us, help, check the logs
 duration: 1 minute
-permalink: troubleshooting
+permalink: troubleshooting.html
 type: document
 order: 60
 parent: root

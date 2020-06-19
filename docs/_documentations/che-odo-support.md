@@ -4,7 +4,7 @@ title: OpenShift Do (odo) support in Codewind
 description: OpenShift Do (odo) support in Codewind
 keywords: build, develop, deploy, install, installing, installation, Codewind for Eclipse Che, cloud, public cloud, services, command line, cli, command, devops, OpenShift, OKD, odo
 duration: 1 minute
-permalink: che-odo-support
+permalink: che-odo-support.html
 type: document
 order: 1
 ---

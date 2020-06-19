@@ -4,7 +4,7 @@ title: Debugging in Codewind
 description: Debugging in Codewind
 keywords: debug, mode, applications, application, project, menu, view, attaching, attach, actions, action, run, restart in debug mode, attach debugger, debug process, debugging process
 duration: 1 minute
-permalink: debugging
+permalink: debugging.html
 type: document
 ---
 

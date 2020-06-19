@@ -4,7 +4,7 @@ title: Uninstalling Codewind for VS Code
 description: Uninstalling Codewind for VS Code
 keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for VS Code
 duration: 1 minute
-permalink: vsc-uninstall
+permalink: vsc-uninstall.html
 type: document
 ---
 

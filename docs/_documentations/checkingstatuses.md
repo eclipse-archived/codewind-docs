@@ -4,7 +4,7 @@ title: Understanding application and build statuses
 description: Understanding application and build statuses
 keywords: using, run, monitor, getting started,  builds, changes, status, state, help, troubleshooting, stopped, starting, unknown, failed, logs, app, error, message, messages, application, build
 duration: 1 minute
-permalink: checkingstatuses
+permalink: checkingstatuses.html
 type: document
 ---
 

@@ -4,7 +4,7 @@ title: Adding an image registry in remote Codewind
 description: Adding an image registry in remote Codewind
 keywords: container, registry, IDE, guidance, image registry, Appsody, Docker, name, push registry, Kubernetes
 duration: 1 minute
-permalink: remote-setupregistries
+permalink: remote-setupregistries.html
 type: document
 ---
 

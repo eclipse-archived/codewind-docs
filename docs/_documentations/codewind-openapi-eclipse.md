@@ -4,7 +4,7 @@ title: Codewind OpenAPI Tools for Eclipse
 description: How to work with the OpenAPI tools in Eclipse
 keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Codewind OpenAPI tools for Eclipse
 duration: 1 minute
-permalink: open-api-tools-for-eclipse
+permalink: open-api-tools-for-eclipse.html
 type: document
 order: 30
 ---

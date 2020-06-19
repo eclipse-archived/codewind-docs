@@ -4,7 +4,7 @@ title: Getting Started
 description: Getting Started
 keywords: install, Codewind, remote, hosted, cloud, standalone, get started, getting started, IDE, VS Code, Eclipse, Eclipse Che, IntelliJ
 duration: 1 minute
-permalink: gettingstarted-overview
+permalink: gettingstarted-overview.html
 type: document
 ---
 
