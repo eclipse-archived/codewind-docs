@@ -45,3 +45,16 @@
   right: 0;
 }
 
+.row.equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.equal-height>[class*='col'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1;
+}
