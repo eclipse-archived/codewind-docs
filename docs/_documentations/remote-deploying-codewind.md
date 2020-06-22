@@ -179,7 +179,7 @@ To help you to determine the unique resources for your deployment, you can use t
 
 Also, new for 0.14.0, the namespace appears in the `ACCESSURL`. The namespace label is to enable the Codewind Operator to deploy into different namespaces. In the example, the namespace is `codewind` and it appears just before `<ingress-domain>`. 
 
-If you deployed remote Codewind instances before the Codewind 0.14.0 release, you have to regenerate the connections to the deployments. To do this, delete your namespace, create your deployments again, and then configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
+If you deployed remote Codewind instances before the Codewind 0.14.0 release, you must regenerate the connections to the deployments. To do this, delete your namespace, create your deployments again, and then configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
 
 ## Next steps
 
