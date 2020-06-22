@@ -19,7 +19,7 @@ type: document
 
 **The different configurations of Codewind** To find out about the different ways of using Codewind - locally, remotely, or as an application hosted on the cloud - see [Codewind Architecture](./overview.html#architecture).
 
-### Which configuration do I need?
+## Which configuration do I need?
 
 Codewind supports different configurations for developing your containerized applications, so you can use Codewind with whichever development flow you choose.
 
@@ -27,7 +27,13 @@ You can do your development work in an IDE on your desktop, or in an IDE hosted 
 
 You can choose to build and run your application locally, or use the cloud's resources by using Codewind remotely or as an application hosted on the cloud. Codewind uses [Kubernetes](https://kubernetes.io/) container orchestration applications, including [OpenShift](https://www.openshift.com/) when building and run your Docker-containerised applications.
 
-### **1. Using Codewind locally**
+Continue to learn about each of these configurations by selecting the relevant section:
+
+1. [Using Codewind locally](./gettingstarted-overview.html#usingcodewindlocally)
+2. [Using Codewind remotely](./gettingstarted-overview.html#usingcodewindremotely) 
+3. [Using Codewind as a hosted application in the cloud (browser-based Codewind)](./gettingstarted-overview.html#usingcodewindasahostedapplicationonyourcloud)
+
+## Using Codewind locally
 
 By using Codewind locally, you can get up and running immediately. To build and run containerized applications on your desktop, all you need is:
 * An installation of Docker Desktop
@@ -35,26 +41,34 @@ By using Codewind locally, you can get up and running immediately. To build and 
 
 **Note** if you're using Linux<sup>TM</sup>, you need to install Docker engine and Docker compose.
 
-To us Codewind locally, choose from one of the following IDEs:
+![Using Codewind Locally](./images/configs/LocalConfiguration.png)
+
+To use Codewind locally, choose from one of the following IDEs:
 
 * [VS Code](./vsc-getting-started.html)
 * [IntelliJ](./intellij-getting-started.html)
 * [Eclipse](./eclipse-getting-started.html)
 
-### **2. Using Codewind as a hosted application on your cloud** 
+## Using Codewind remotely
+Deploy and use Codewind remotely to develop your code locally, but build and run your application in the cloud. Use the cloud’s resources to build and run applications and free desktop resources.
+
+Using secure HTTPS connections, you connect to your multiple cloud-hosted microservices from the Codewind panel in your desktop-hosted IDE.
+
+You can use VS Code, Intellij or Eclipse for the [remote configuration](./remote-codewind-overview.html). 
+
+ ![Using Codewind remotely](./images/configs/RemoteConfiguration.png)
+
+## Using Codewind as a hosted application on your cloud
 Codewind is supported on Eclipse Che, removing the need to install an IDE on your local machine to develop your microservices.
+
+![Browser-based Codewind](./images/configs/BrowserBasedConfiguration.png)
 
 By using Codewind as a hosted application on the cloud, you can develop, build, and run your code all by accessing Codewind from a browser window from your local desktop. Your IDE, with the Codewind extension installed, and your containerized applications, are both located in your cloud environment. 
 
 Specifically, you [deploy Codewind for Eclipse Che](./che-installinfo.html) to your cloud, and use a browser window on your local machine to [connect to the Codewind for Eclipse Che development environment](./che-setupregistries.html).
 
 
-### **3. Using Codewind remotely** 
-Deploy and use Codewind remotely to develop your code locally, but build and run your application in the cloud. Use the cloud’s resources to build and run applications and free desktop resources.
 
-Using secure HTTPS connections, you connect to your multiple cloud-hosted microservices from the Codewind panel in your desktop-hosted IDE.
-
-You can use VS Code, Intellij or Eclipse for the [remote configuration](./remote-codewind-overview.html). 
 
 
 ### Next Steps
