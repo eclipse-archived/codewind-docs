@@ -4,7 +4,7 @@ title: Getting Started Overview
 description: Get started with Codewind by selecting the configuration of Codewind you want to install. Understand the different configurations available - local, remote or browser-based - and select the most appropriate instructions.
 keywords: install, Codewind, remote, hosted, cloud, standalone, get started, getting started, IDE, VS Code, Eclipse, Eclipse Che, IntelliJ, configuration, browser-based, browser
 duration: 10 minutes
-permalink: gettingstarted-overview
+permalink: gettingstarted-overview.html
 type: document
 ---
 # Overview: Getting Started

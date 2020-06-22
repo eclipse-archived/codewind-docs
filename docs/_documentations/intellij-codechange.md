@@ -4,7 +4,7 @@ title: Making a code change with IntelliJ
 description: Making a code change with IntelliJ
 keywords: changing, build, building, builds, automatic, redeploy, redeploying, redeploys, application, applications, save, saving, saves, file, feature, edit, editing, edits
 duration: 1 minute
-permalink: intellij-codechange
+permalink: intellij-codechange.html
 type: document
 ---
 

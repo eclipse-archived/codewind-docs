@@ -4,7 +4,7 @@ title: Creating your first Codewind project with Codewind for Eclipse Che
 description: Creating your first Codewind project with Codewind for Eclipse Che
 keywords: build, deploy, install, installing, installation, chart, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops
 duration: 1 minute
-permalink: che-createfirstproject
+permalink: che-createfirstproject.html
 type: document
 ---
 

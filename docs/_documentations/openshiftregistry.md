@@ -4,7 +4,7 @@ title: Adding the OpenShift internal registry with Codewind
 description: Adding the OpenShift internal registry with Codewind
 keywords: OpenShift, registry, Codewind, Che, Docker, OKD, cluster, project, push
 duration: 5 minutes
-permalink: openshiftregistry
+permalink: openshiftregistry.html
 type: document
 parent:
 order:

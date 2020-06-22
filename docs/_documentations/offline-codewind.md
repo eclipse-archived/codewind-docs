@@ -4,7 +4,7 @@ title: Using Codewind offline
 description: Using Codewind offline
 keywords: install, installing, IntelliJ, Eclipse, Codewind, IDE, plugin, plug-in, settings, creating, project, projects, template, code change, edit, edits, application, removing
 duration: 1 minute
-permalink: offline-codewind
+permalink: offline-codewind.html
 type: document
 ---
 

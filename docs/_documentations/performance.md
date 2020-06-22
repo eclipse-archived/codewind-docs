@@ -4,7 +4,7 @@ title: Monitoring your applications with the performance dashboard
 description: Monitoring your applications with the performance dashboard
 keywords: guide, help, performance, dashboard, monitoring, applications, VS Code, Codewind, Eclipse, graph, graphs, load, test, load test, test comparison
 duration: 1 minute
-permalink: performance
+permalink: performance.html
 type: document
 parent:
 order:

@@ -4,7 +4,7 @@ title: Uninstalling Codewind for Eclipse Che
 description: How to uninstall Codewind from Eclipse Che. Uninstalling Codewind comprises two steps. First, uninstall Codewind. Then, proceed to uninstall Che.
 keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for Eclipse Che, restart Eclipse
 duration: 1 minute
-permalink: che-uninstall
+permalink: che-uninstall.html
 type: document
 order: 70
 parent: eclipseoverview

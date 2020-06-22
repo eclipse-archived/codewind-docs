@@ -1,0 +1,78 @@
+---
+layout: search
+title: Search
+---
+
+<h1 class="header">Search</h1>
+                
+
+<form class="form-inline my-2 my-lg-0 page-search" action="{{ site.baseurl | append:  '/' }}search.html" method="get">
+    <input class="form-control mr-sm-2" type="text" id="search-box" name="query" placeholder="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" value="search">Search</button>
+</form>
+  
+
+<br>
+
+<div id="search-results">
+</div>
+
+<script>
+window.store = {
+    {% for doc in site.documentations %}
+    {% assign content = doc.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
+    "{{ doc.url | slugify }}": {
+        "title": "{{ doc.title | xml_escape }}",
+        "author": "{{ doc.author | xml_escape }}",
+        "category": "{{ doc.category | xml_escape }}",
+        "content": "{{ content[2] }}",
+        "url": "{{ doc.url | xml_escape }}",
+        "layout": "{{ doc.layout | xml_escape }}",
+        "description": "{{ doc.description | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+
+    {% for blog in site.blog %}
+    {% assign content = blog.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
+    ,"{{ blog.url | slugify }}": {
+        "title": "{{ blog.title | xml_escape }}",
+        "author": "{{ blog.author | xml_escape }}",
+        "category": "{{ blog.category | xml_escape }}",
+        "content": "{{ content[2] }}",
+        "url": "{{ blog.url | xml_escape }}",
+        "layout": "{{ blog.layout | xml_escape }}",
+        "description": "{{ blog.description | xml_escape }}"
+    }
+    {% endfor %}
+
+    {% for guide in site.guides %}
+    {% assign content = guide.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
+    ,"{{ guide.url | slugify }}": {
+        "title": "{{ guide.title | xml_escape }}",
+        "author": "{{ guide.author | xml_escape }}",
+        "category": "{{ guide.category | xml_escape }}",
+        "content": "{{ content[2] }}",
+        "url": "{{ guide.url | xml_escape }}",
+        "layout": "{{ guide.layout | xml_escape }}",
+        "description": "{{ guide.description | xml_escape }}"
+    }
+    {% endfor %}
+
+    {% for news in site.news %}
+    {% assign content = news.content | strip_html | newline_to_br | strip_newlines | split: '<br />' %}
+    ,"{{ news.url | slugify }}": {
+        "title": "{{ news.title | xml_escape }}",
+        "author": "{{ news.author | xml_escape }}",
+        "category": "{{ news.category | xml_escape }}",
+        "content": "{{ content[2] }}",
+        "url": "{{ news.url | xml_escape }}",
+        "layout": "{{ news.layout | xml_escape }}",
+        "description": "{{ news.description | xml_escape }}"
+    }
+    {% endfor %}
+};
+</script>
+
+<script src="{{ site.baseurl | append:  '/' }}js/lunr.min.js"></script>
+<script src="{{ site.baseurl | append:  '/' }}js/search.js"></script>

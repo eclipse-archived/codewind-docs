@@ -4,7 +4,7 @@ title: Uninstalling Codewind for VS Code
 description: How to uninstall Codewind from VS Code. Uninstalling Codewind comprises two steps. First, remove the Codewind containers and images. Then, proceed to uninstall Codewind.
 keywords: uninstall, remove, delete, tools, eclipse, uninstalling Codewind for VS Code
 duration: 1 minute
-permalink: vsc-uninstall
+permalink: vsc-uninstall.html
 type: document
 ---
 

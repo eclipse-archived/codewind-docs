@@ -4,7 +4,7 @@ title: Installing Codewind for Eclipse Che
 description: Installing Codewind for Eclipse Che
 keywords: build, deploy, install, installing, installation, chart, Helm, develop, cloud, public cloud, services, command line, cli, command, start, stop, update, open, delete, options, operation, devops, OpenShift, OKD
 duration: 1 minute
-permalink: che-installinfo
+permalink: che-installinfo.html
 type: document
 ---
 # Installing Codewind for Eclipse Che

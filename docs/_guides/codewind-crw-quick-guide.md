@@ -12,6 +12,7 @@ icon: images/learn/icon_cloud.svg
 ---
 
 ## Overview
+
 Use Eclipse Codewind to develop microservice applications from application stacks in an integrated developer environment (IDE). CodeReady Workspaces provides a containerized IDE for cloud-native application development on an OpenShift cluster. 
 
 ## Developing with CodeReady Workspaces 

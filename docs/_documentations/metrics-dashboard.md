@@ -4,7 +4,7 @@ title: Understanding the Metrics Dashboard
 description: Understanding the Metrics Dashboard
 keywords: import, help, metrics, Swift, Node.js, Java, performance monitoring, app monitor, dashboard, CPU, HTTP incoming requests, memory, HTTP throughput, Heap, HTTP outbound requests, loop times, other requests, run load, HTTP Requests, environment, resource usage, profiling, enabling, graph
 duration: 1 minute
-permalink: metrics-dashboard
+permalink: metrics-dashboard.html
 type: document
 ---
 

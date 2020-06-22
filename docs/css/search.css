@@ -1,0 +1,21 @@
+.card {
+    margin: 25px 10px;
+}
+
+.header {
+    margin: 10px;
+}
+
+.bi-search {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#nav-search.form-control {
+    padding-left: 35px;
+}
+
+.page-search {
+    margin: 10px;
+}

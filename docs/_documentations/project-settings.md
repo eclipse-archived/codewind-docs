@@ -4,7 +4,7 @@ title: Project settings
 description: Project settings tell Codewind the specifics of your project and application 
 keywords: project, settings, Codewind, application, configuring, workspace
 duration: 1 minute
-permalink: project-settings
+permalink: project-settings.html
 type: document
 ---
 

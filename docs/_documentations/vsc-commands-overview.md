@@ -4,7 +4,7 @@ title: "Commands overview: Tools for VS Code"
 description: "Commands Overview: Tools for VS Code"
 keywords: overview, tools, vscode, visual, studio, code, commands, Codewind for VS Code commands overview, connection commands, project commands, restart, debug
 duration: 1 minute
-permalink: vsc-commands-overview
+permalink: vsc-commands-overview.html
 type: document
 order: 3
 parent: vsc-overview

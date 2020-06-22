@@ -4,7 +4,7 @@ title: Eclipse
 description: Creating and importing projects
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: remotedeploy-projects-eclipse
+permalink: remotedeploy-projects-eclipse.html
 type: document
 ---
 

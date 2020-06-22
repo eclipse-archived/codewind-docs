@@ -4,7 +4,7 @@ title: Project actions
 description: Project actions
 keywords: run, open, import, show, restart, edit, build, logs, tools, project actions, attach, build, disable, enable, validate, refresh
 duration: 1 minute
-permalink: project-actions
+permalink: project-actions.html
 type: document
 ---
 

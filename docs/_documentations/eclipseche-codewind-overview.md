@@ -4,7 +4,7 @@ title: Overview Using Codewind with Eclipse Che
 description: Overview Using Codewind with Eclipse Che
 keywords: users, projects, Kubernetes, LDAP, user management, access management, login, deployment, pod, security, securing cloud connection, remote deployment of Codewind
 duration: 5 minutes
-permalink: eclipseche-codewind-overview
+permalink: eclipseche-codewind-overview.html
 type: document
 ---
 

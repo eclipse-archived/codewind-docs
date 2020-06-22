@@ -4,8 +4,10 @@
     <div class="py-5 px-5 col-xs-12 col-lg-10">
         <div class="cw-docs-spacer"></div>
         <div id="post-content">
+            
             <h1>{{ page.title }}</h1>
-            <p>{{ page.date | date_to_string }}</p>
+            <!--<p>{{ page.date | date_to_string }}</p>-->
+            <p>{{ page.description }}</p>
             <h2>Objectives</h2>
             <ul>
                 {% for obj in page.objectives %}
@@ -14,6 +16,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            
             <div role="main">{{ content }}</div>
         </div>
     </div>

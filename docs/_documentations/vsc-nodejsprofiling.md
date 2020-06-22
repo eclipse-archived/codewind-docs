@@ -4,7 +4,7 @@ title: Installing and running the Codewind language server for Node.js profiling
 description: Installing and running the Codewind language server for Node.js profiling
 keywords: Node.js, Codewind, server, language, languages, code, code highlighting, highlighting, profiling, Visual Studio Code, VS Code, JavaScript
 duration: 1 minute
-permalink: vsc-nodejsprofiling
+permalink: vsc-nodejsprofiling.html
 type: document
 ---
 

@@ -4,7 +4,7 @@ title: Importing existing projects
 description: Importing existing projects
 keywords: importing, directory, archive, configuring, cloud, microservices, application, Eclipse, MicroProfile, Java, Spring, Node.js, Swift, Maven, Dockerfile, GitHub, container, Liberty, Helm, Dockerfile-lang, local directory, add existing project, pre-import, pom.xml, server.xml, Maven, Docker, Helm chart
 duration: 1 minute
-permalink: importing-existing-projects
+permalink: importing-existing-projects.html
 type: document
 ---
 
