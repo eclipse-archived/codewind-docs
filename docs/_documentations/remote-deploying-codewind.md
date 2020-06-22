@@ -179,7 +179,11 @@ To help you to determine the unique resources for your deployment, you can use t
 
 Also, new for 0.14.0, the namespace appears in the `ACCESSURL`. The namespace label is to enable the Codewind Operator to deploy into different namespaces. In the example, the namespace is `codewind` and it appears just before `<ingress-domain>`. 
 
-If you deployed remote Codewind instances before the Codewind 0.14.0 release, you must regenerate the connections to the deployments. To do this, delete your namespace, create your deployments again, and then configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote codewind](./remotedeploy-eclipse.html).
+If you deployed remote Codewind instances before the Codewind 0.14.0 release, you must regenerate the connections to the deployments:
+1. Delete your deployments. **Important:** You must do this action before you delete the Codewind namespace. If you do not, your Codewind deployments might go into pending state and not be removed. If you delete the Codewind namespace before you delete your deployments, you can run the following command to clear them manually: `$ kubectl patch codewind {codewindName}  -p '{"metadata":{"finalizers": []}}' --type=merge`.
+2. Delete the Codewind namespace. 
+3. Re-create your deployments.
+4. Configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote Codewind](./remotedeploy-eclipse.html).
 
 ## Next steps
 
