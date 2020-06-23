@@ -54,7 +54,7 @@ code {
 
 .cw-header-logo {
     position: relative;
-    left: 70px;
+    padding-left: 20px;
 }
 .cw-header-link-text {
 	font-size: 16px;
@@ -65,22 +65,23 @@ code {
 	font-weight: 600;
 }
 .cw-header-link-news {
-	padding-right: 33px;
+	padding-right: 24px;
 }
 
 .cw-header-link-blog {
-	padding-right: 33px;
+	padding-right: 24px;
 }
 
 .cw-header-link-guides {
-	padding-right: 33px;
+	padding-right: 24px;
 }
 
 .cw-header-link-docs {
-	padding-right:45px;
+	padding-right:24px;
 }
+
 .cw-navbar-padding {
-    padding-right: 70px;
+    padding-right: 20px;
 }
 
 .cw-navbar-nav {
@@ -165,11 +166,11 @@ code {
 }
 
 #github-stars-button {
-    padding-left: 32px;
+    padding-left: 24px;
 }
 
 .cw-header-link {
-    padding-left: 32px;
+    padding-left: 24px;
 }
 
 #download-li {
@@ -655,6 +656,20 @@ code {
     }
 
     /* end hero section */
+
+    .cw-navbar-nav {
+        display: flex;
+    }
+
+    /* topbar logo */
+    .cw-header-logo {
+        position: unset;
+        left: unset;
+    }
+
+    .cw-banner {
+        height: unset;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and below) */
@@ -741,23 +756,10 @@ code {
     .cw-getting-started-col {
         padding-bottom: 40px;
     }
-    /* topbar logo */
-    .cw-header-logo {
-        position: unset;
-        left: unset;
-
-    }
 
     /* nav bar*/
     #github-stars-button {
         display: none;
-    }
-    .cw-banner {
-        height: unset;
-    }
-
-    .cw-navbar-nav {
-        display: flex;
     }
 
     .cw-header-link {
