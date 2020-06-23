@@ -76,24 +76,22 @@ Run the following `chectl` command to install the latest compatible version of C
 
 Set up Eclipse Che with TLS certificates.
 
-1. Create the `che` namespace if it doesn't already exist: `kubectl create namespace che`.
-
-2. Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
+1. Set the `spec.server.ingressDomain` field in the Che `.yaml` file to the Ingress domain. If you're unsure of your Ingress domain, ask your cluster administrator.
    - **Note:** You can modify this file, but leave the `spec.server.cheWorkspaceClusterRole` field set to `eclipse-codewind` and the `spec.storage.preCreateSubPaths` field set to `true`.
    - If you install Che with publicly signed certificates, such as on OpenShift on IBM Cloud, set the `spec.server.selfSignedCert` to **false**.
-3. Generate TLS certificates and keys. For more information, see [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates).To use self-signed certificates for your cluster setup, see [Installing Che in TLS mode with self-signed certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **Important:** do not use self-signed certificates in production
+2. Generate TLS certificates and keys. For more information, see [Generating self-signed TLS certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates).To use self-signed certificates for your cluster setup, see [Installing Che in TLS mode with self-signed certificates](https://www.eclipse.org/che/docs/che-7/installing-che-in-tls-mode-with-self-signed-certificates/#generating-self-signed-certificates_installing-che-in-tls-mode-with-self-signed-certificates) **Important:** do not use self-signed certificates in production
 
-4. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
+3. Generate a Kubernetes secret containing the TLS secret and key you generated in the previous set:
    ```
    $ kubectl create secret tls che-tls --key=domain.key --cert=domain.crt -n che
    ```
-5. Generate a Kubernetes secret containing the certificate you generated in step 2:
+4. Generate a Kubernetes secret containing the certificate you generated in step 2:
    ```
    $ cp rootCA.crt ca.crt
    $ kubectl create secret generic self-signed-certificate --from-file=ca.crt -n che
    ```
-6. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
-7. Run the following command to install Che: 
+5. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
+6. Run the following command to install Che: 
    ```
    $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
    ```
