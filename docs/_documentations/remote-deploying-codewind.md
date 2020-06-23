@@ -173,14 +173,14 @@ NAME    USERNAME   NAMESPACE   WORKSPACE      AGE    KEYCLOAK   REGISTRATION   A
 jane1   jane       codewind    kbc3b0x2qins   119m   devex001   Complete       https://codewind-gatekeeper-kbc3b0x2qins.codewind.<ingress-domain>
 ```
 
-For the 0.14.0 release of Codewind, a new `WORKSPACE` field appears in the output. This field is a randomly generated set of characters that are used in both the URL of the Gatekeeper and the name of the pods and resources that you create. 
+For the 0.14.0 release of Codewind, a new `WORKSPACE` field appears in the output. This field is a randomly generated set of characters that are used in both the URL of the Gatekeeper and the names of the pods and resources. 
 
 To help you to determine the unique resources for your deployment, you can use the `NAME` field or you can use the new workspace ID given in the `WORKSPACE` field. All of your Codewind deployments have both the `NAME` and `WORKSPACE` as labels for you to use. 
 
-Also, new for 0.14.0, the namespace appears in the `ACCESSURL`. The namespace label is to enable the Codewind Operator to deploy into different namespaces. In the example, the namespace is `codewind` and it appears just before `<ingress-domain>`. 
+Also, new for 0.14.0, the `codewind` namespace appears in the `ACCESSURL`. In the example, it appears just before `<ingress-domain>`. 
 
 If you deployed remote Codewind instances before the Codewind 0.14.0 release, you must regenerate the connections to the deployments:
-1. Delete your deployments. **Important:** You must do this action before you delete the Codewind namespace. If you do not, your Codewind deployments might go into pending state and not be removed. If you delete the Codewind namespace before you delete your deployments, you can run the following command to clear them manually: `$ kubectl patch codewind {codewindName}  -p '{"metadata":{"finalizers": []}}' --type=merge`.
+1. Delete all the Codewind deployments in the Codewind namespace. **Important:** You must do this action before you delete the Codewind namespace. If you do not, your Codewind deployments might go into pending state and not be removed. If you delete the Codewind namespace before you delete your deployments, you can run the following command to clear them manually: `$ kubectl patch codewind {codewindName}  -p '{"metadata":{"finalizers": []}}' --type=merge`.
 2. Delete the Codewind namespace. 
 3. Re-create your deployments.
 4. Configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote Codewind](./remotedeploy-eclipse.html).
