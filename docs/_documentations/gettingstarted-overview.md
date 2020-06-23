@@ -10,11 +10,11 @@ type: document
 # Getting Started - Overview
 
 <div class="callout">
-	<b>Getting started quickly with Codewind</b> You can try out Codewind by using the local configuration. For local use of Codewind, and also the prerequisite steps for remote use of Codewind, select from <a href="./vsc-getting-started.html">VS Code,</a> <a href="./eclipse-getting-started.html">Eclipse,</a> or <a href="./intellij-getting-started.html">Intellij.</a>
+	<b>Getting started quickly with Codewind</b> You can try out Codewind by using the local configuration. For local use of Codewind, and also the prerequisite steps for remote use of Codewind, select from <a href="./vsc-getting-started.html">VS Code,</a> <a href="./eclipse-getting-started.html">Eclipse,</a> or <a href="./intellij-getting-started.html">Intellij</a>.
 </div>
 
 <div class="callout">
-	<b>Browser-based Codewind</b> If you want to go straight to using codewind as a hosted application in the cloud, select the <a href="./eclipseche-codewind-overview.html">Eclipse Che instructions. </a>
+	<b>Browser-based Codewind</b> If you want to go straight to using codewind as a hosted application in the cloud, select the <a href="./eclipseche-codewind-overview.html">Eclipse Che instructions</a>.
 </div>
 
 ## Which configuration do I need?
@@ -27,7 +27,7 @@ You can choose to build and run your application locally, or build and run your 
 
 Both the remote configuration and browser-based configuration of Codewind use the cloud's resources to build and run your application. Codewind uses [Kubernetes](https://kubernetes.io/) container orchestration applications, including [OpenShift](https://www.openshift.com/), to build and run your Docker-containerised applications on the cloud.
 
-Continue to learn about each of these configurations by selecting the relevant section:
+Continue to learn about each of these configurations by clicking one of the following options:
 
 * [Using Codewind locally](./gettingstarted-overview.html#using-codewind-locally)
 * [Using Codewind remotely](./gettingstarted-overview.html#using-codewind-remotely)
@@ -76,5 +76,5 @@ To get started with using Codewind, choose from one of the following configurati
 **To use Codewind for Eclipse Che** select [Using Codewind as a Hosted Application in your Cloud](./eclipseche-codewind-overview.html)
 
 <div class="callout">
-	<b>Note:</b> To use Codewind remotely, you must first install Codewind locally. For more information, see instructions for <a href="./remote-deploying-codewind.html"> deploying Codewind Remotely</a> . After Codewind is deployed remotely, you can connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following instructions for <a href="./remote-codewind-overview.html">using Codewind remotely.</a>
+	<b>Note:</b> To use Codewind remotely, you must first install Codewind locally. For more information, see instructions for <a href="./remote-deploying-codewind.html">deploying Codewind Remotely</a>. After Codewind is deployed remotely, you can connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following instructions for <a href="./remote-codewind-overview.html">using Codewind remotely</a>.
 </div>
