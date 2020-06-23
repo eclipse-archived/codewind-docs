@@ -164,14 +164,26 @@ Your Codewind instance is deployed. Access it by way of the **Access URL** retur
 
 **Note:** When you are installing on Windows, the script runs and then closes the Git Bash window. To retrieve the Access URLs for Codewind, enter the following command:
 
-`$ kubectl get codewind -n codewind`
+`$ kubectl get codewinds -n codewind`
 
 This command returns output in the format of the following example:
 
 ```
-NAME       USERNAME   NAMESPACE   AGE    KEYCLOAK   REGISTRATION   ACCESSURL
-devex001   jane       codewind    119m   devex001   Complete       https://codewind-gatekeeper-devex001.<ingress-domain>
+NAME    USERNAME   NAMESPACE   WORKSPACE      AGE    KEYCLOAK   REGISTRATION   ACCESSURL
+jane1   jane       codewind    kbc3b0x2qins   119m   devex001   Complete       https://codewind-gatekeeper-kbc3b0x2qins.codewind.<ingress-domain>
 ```
+
+For the 0.14.0 release of Codewind, a new `WORKSPACE` field appears in the output. This field is a randomly generated set of characters that are used in both the URL of the Gatekeeper and the names of the pods and resources. 
+
+To help you to determine the unique resources for your deployment, you can use the `NAME` field or you can use the new workspace ID given in the `WORKSPACE` field. All of your Codewind deployments have both the `NAME` and `WORKSPACE` as labels for you to use. 
+
+Also, new for 0.14.0, the `codewind` namespace appears in the `ACCESSURL`. In the example, it appears just before `<ingress-domain>`. 
+
+If you deployed remote Codewind instances before the Codewind 0.14.0 release, you must regenerate the connections to the deployments:
+1. Delete all the Codewind deployments in the Codewind namespace. **Important:** You must do this action before you delete the Codewind namespace. If you do not, your Codewind deployments might go into pending state and not be removed. If you delete the Codewind namespace before you delete your deployments, you can run the following command to clear them manually: `$ kubectl patch codewind {codewindName}  -p '{"metadata":{"finalizers": []}}' --type=merge`.
+2. Delete the Codewind namespace. 
+3. Re-create your deployments.
+4. Configure your IDE to connect to Codewind in the cloud. For more information about configuring your IDE, see [Connecting your VS Code to remote Codewind](remotedeploy-vscode.html) or [Connecting your Eclipse to remote Codewind](./remotedeploy-eclipse.html).
 
 ## Next steps
 
