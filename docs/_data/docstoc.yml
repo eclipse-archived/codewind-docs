@@ -2,7 +2,7 @@
   children:
     - title: 'What is Codewind?'
       url: overview.html 
-    - title: 'Overview: Getting started'
+    - title: 'Getting started - Overview'
       url: gettingstarted-overview.html
     - title: 'VS Code'
       children:
