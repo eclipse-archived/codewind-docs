@@ -33,15 +33,15 @@ Use the **Template Source Manager** to perform the following actions:
 1. To add a new template source to the table, click **Add New**. For more information, see [Adding your template sources to Codewind](#adding-your-template-sources-to-codewind).
 2. Remove non-default template sources.
    - **VS Code:** Click the trash icon.
-   - **Eclipse:** First make sure you are in the **Manage Template Sources** wizard. Select the non-default templates you want to remove. Then click **Remove**.
+   - **Eclipse and IntelliJ:** First make sure you are in the **Manage Template Sources** wizard. Select the non-default templates you want to remove. Then click **Remove**.
 3. Add templates to the wizard.
    - **VS Code:** Toggle the **Enabled** slide to **On** so template source templates appear in the **Create Project** wizard.
-   - **Eclipse:** In the **Manage Template Sources** wizard, check the check boxes for the template sources you want to enable. After you're done, click **OK**. A notification appears that says, **Updating Template Sources: (0%)**. The message disappears after the wizard successfully sets your preferred template sources.
+   - **Eclipse and IntelliJ:** In the **Manage Template Sources** wizard, check the check boxes for the template sources you want to enable. After you're done, click **OK**. A notification appears that says, **Updating Template Sources: (0%)**. The message disappears after the wizard successfully sets your preferred template sources.
    - Use template sources to add style projects to Codewind.
    - For example, before adding an Appsody project, enable at least one Appsody-style template source.
 4. Disable templates to prevent them from appearing in the wizard.
    - **VS Code:** To disable a set of templates so they do not appear in the **Create Project** wizard, toggle the **Enabled** slide to **Off**.
-   - **Eclipse:** In **Manage Template Sources**, deselect the template sources you want to disable and click **OK**.
+   - **Eclipse and IntelliJ:** In **Manage Template Sources**, deselect the template sources you want to disable and click **OK**.
 
 ## Creating your own templates
 
@@ -91,8 +91,8 @@ Add your template sources to Codewind with the **Template Source Manager**.
 1. Add the template.
    - **VS Code:** In the **Template Source Manager**, click **Add New**.
    - **Eclipse:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
-   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
+   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, select **My Private Template Repository** and click **OK**.
 2. Enter the URL and any other information.
    - **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
    - **Eclipse:** Fill in the fields for **URL**, **Name**, and **Description**. Click **OK** when you're done.
-   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
+   - **IntelliJ:** Fill in the field for **URL**, select an authentication method, and fill in the required authentication information. Click **Next** when you're done. An **Authentication Tests** message appears to inform you of a successful test. Click **OK**.
