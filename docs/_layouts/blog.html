@@ -4,9 +4,9 @@
 <!-- BLOG -->
 <div id="background-container">
     <div id="blog-container" class="container-fluid">
-        
+
         <div class="row">
-            
+
             <div class="col-lg-12">
                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
                 {% assign count = 1 %}
@@ -14,15 +14,9 @@
 
                     <div class="row blog-post-row">
                         <div class="blog-post-column col">
-                            
+
                                 <div class="media">
-                                    <img src="
-                                        {% if post.featured_image %}
-                                            {{ post.featured_image }}
-                                        {% else %}
-                                            {{ post.author_picture }}
-                                        {% endif %}
-                                        " class="blog-card-image rounded-circle">
+                                    <img src="{{ post.featured_image | default: post.author_picture }}" class="blog-card-image rounded-circle">
                                     <div class="media-body">
                                         <h5 class="mt-0">
                                             <a href="{{ post.url | relative_url }}" class="blog-post-title-link">
@@ -38,18 +32,18 @@
                                         </p>
 
                                         <a class="blog-post-author-name" target="_blank" rel="noopener">{{ post.author }}</a>
-                                            
+
                                         <span class="blog-post-date" title="{{ post.date | date: date_format }}">on {{ post.date | date: date_format }}</span>
-                                        
+
                                     </div>
                                 </div>
                         </div>
                     </div>
                     {% assign count = count | plus: 1 %}
                 {% endfor %}
-                
+
             </div>
-            
+
         </div>
     </div>
 </div>
