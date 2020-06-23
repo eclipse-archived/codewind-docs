@@ -61,9 +61,9 @@ You can use VS Code, Intellij or Eclipse for the [remote configuration](./remote
 
 To get started with using Codewind, choose from one of the following configurations:
 
-**To use Codewind locally** select instructions for [Using Codewind Locally](./local-codewind-overview.html). 
+**To use Codewind locally** select instructions for getting started with [VS Code](./vsc-getting-started.html), [Eclipse](./eclipse-getting-started.html), or [IntelliJ](./intellij-getting-started.html).
 
-**To use Codewind for Eclipse Che** select [Using Codewind as a Hosted Application in your Cloud](./eclipseche-codewind-overview.html)
+**To use Codewind for Eclipse Che** select [Using Codewind as a Hosted Application in your Cloud](./eclipseche-codewind-overview.html).
 
 **To use Codewind remotely** you must first install Codewind locally by selecting from:
 
