@@ -76,5 +76,5 @@ To get started with using Codewind, choose from one of the following configurati
 **To use Codewind for Eclipse Che** select [Using Codewind as a Hosted Application in your Cloud](./eclipseche-codewind-overview.html)
 
 <div class="callout">
-	<b>Note:</b> To use Codewind remotely, you must first install Codewind locally. For more information, see instructions for <a href="././remote-deploying-codewind.html"</a>deploying Codewind Remotely. After Codewind is deployed remotely, you can connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following instructions for <a href="./remote-codewind-overview.html">using Codewind remotely </a>
+	<b>Note:</b> To use Codewind remotely, you must first install Codewind locally. For more information, see instructions for <a href="./remote-deploying-codewind.html"> deploying Codewind Remotely</a> . After Codewind is deployed remotely, you can connect your Codewind extension of your local desktop IDE to Codewind in your cloud by following instructions for <a href="./remote-codewind-overview.html">using Codewind remotely.</a>
 </div>
