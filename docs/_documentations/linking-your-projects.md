@@ -10,7 +10,15 @@ type: document
 
 # Linking your projects
 
-You can link your projects when you are using Codewind. For example, if you have a front-end project and a back-end project, use this feature to link the two together. This feature is available in the VS Code and Eclipse IDEs.
+You can link your projects when you are using Codewind. This feature is available in the [VS Code](#linking-your-projects-in-vs-code) and [Eclipse](#linking-your-projects-in-eclipse) IDEs.
+
+For example, use this feature to link a front-end Node.js project to a back-end database. You have a web page front-end Node.js project without a link:
+
+![Image of unlinked project](images/linking-feature/unlinked_project.png){:width="650px"}
+
+You then link it to a back-end Node.js database project:
+
+![Image of linked project](images/linking-feature/linked_project.png){:width="650px"}
 
 ## Linking your projects in VS Code
 
