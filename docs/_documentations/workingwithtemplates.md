@@ -90,9 +90,13 @@ Add your template sources to Codewind with the **Template Source Manager**.
 
 1. Add the template.
    - **VS Code:** In the **Template Source Manager**, click **Add New**.
-   - **Eclipse:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, click **Add...**.
-   - **IntelliJ:** Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**. After the **Manage Template Sources** wizard appears, select **My Private Template Repository** and click **OK**.
-2. Enter the URL and any other information.
+   - **Eclipse and IntelliJ:**
+     - Right-click the connection in the Codewind Explorer view and select **Manage Template Sources...**.
+     - After the **Manage Template Sources** wizard appears, click **Add...**.
+2. Enter the URL and other information.
    - **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
-   - **Eclipse:** Complete the fields for **URL**, **Name**, and **Description**. Click **OK** when you're done.
-   - **IntelliJ:** Complete the field for **URL**, select an authentication method, and enter the required authentication information. Click **Next** when you're done. An **Authentication Tests** message appears to inform you of a successful test. Click **OK**.
+   - **Eclipse and IntelliJ:**
+     - In the **Add a Template Source** window, provide authentication information.
+     - To test the authentication information with the secured template repository, click **Test Template Source**.
+     - When you receive the message for the successful test, click **OK**.
+     - Then, click **Next** to reach the **Details** page. Complete the fields and click **Finish**.
