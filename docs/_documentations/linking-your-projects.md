@@ -22,25 +22,51 @@ You then link it to a back-end Node.js database project:
 
 ## Linking your projects in VS Code
 
-To link your projects in VS Code:
+To link your projects in VS Code, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running in order to create a link.
 
-_Instructions_
+1\. Right-click on project `frontend-nodejs` in the **Codewind** view, select **Project Overview**, and then select the **Links** tab.
+
+2\. Click **Create Link** to add a new project link:
+
+![Image of managing VS Code project links](images/linking-feature/vscode_add_project_link.png){:width="650px"}
+
+3\. Select the target project and press **Enter**. 
+
+![Image of selecting VS Code target project](images/linking-feature/vscode_select_target_project.png){:width="650px"}
+
+4\. Enter a name for the environment variable and press **Enter**:
+
+![Image of entering VS Code environment variable](images/linking-feature/vscode_enter_environment_variable.png){:width="650px"}
+
+5\. The link is created and is shown in the **Project Links** section of the **Project Overview**:
+
+![Image of VS Code project links section](images/linking-feature/vscode_manage_project_links_step_4.png){:width="650px"}
+
+6\. Use the environment variable in your code as needed, for example:
+
+`axios.get(http://${process.env.DATABASE}/api/v1/populations);`
+
+7\. If you choose to remove the target project of a link, the **Remove Projects** dialog prompts you with the following warning:
+
+![Image of removing projects](images/linking-feature/vscode_remove_projects.png){:width="650px"}
+
+If you go ahead and remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
 
 ## Linking your projects in Eclipse
 
 To link your projects in Eclipse, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running in order to create a link.
 
-1\. Right-click on project `frontend-nodejs` in the Codewind Explorer view and select **Manage Project Links**:
+1\. Right-click on project `frontend-nodejs` in the **Codewind Explorer** view and select **Manage Project Links**.
 
 2\. Click **Add** to add a new project link:
 
-![Image of managing project links](images/linking-feature/eclipse_manage_project_links.png){:height="550px" width="650px"}
+![Image of managing Eclipse project links](images/linking-feature/eclipse_manage_project_links.png){:height="550px" width="650px"}
 
-3\. Select the target project and enter a name for the **Environment variable**. Then click **OK**:
+3\. Select the target project, enter a name for the **Environment variable**, and then click **OK**:
 
 ![Image of selecting target project](images/linking-feature/eclipse_add_project_link.png){:width="650px"}
 
-4\. The link shows in the **Manage Project Links** dialog. Click **OK** to create the link:
+4\. The link is displayed in the **Manage Project Links** dialog. Click **OK** to create the link:
 
 ![Image of managing links for the front end project](images/linking-feature/eclipse_manage_project_links_step_4.png){:height="550px" width="650px"}
 
@@ -48,12 +74,12 @@ To link your projects in Eclipse, follow these steps where project `frontend-nod
 
 `axios.get(http://${process.env.DATABASE}/api/v1/populations);`
 
-6\. If the target project of a link is selected for removal, the **Remove Projects** dialog indicates this as a warning:
+6\. For convenience, project links are displayed in the **Project Overview** page:
+
+![Image of Eclipse application overview](images/linking-feature/eclipse_application_overview.png){:width="650px"}
+
+7\. If you choose to remove the target project of a link, the **Remove Projects** dialog prompts you with the following warning:
 
 ![Image of removing projects](images/linking-feature/eclipse_remove_projects.png){:width="650px"}
 
-If you choose to go ahead and remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
-
-7\. For convenience, project links are displayed in the **Project Overview** page:
-
-![Image of removing projects](images/linking-feature/eclipse_application_overview.png){:width="650px"}
+If you remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
