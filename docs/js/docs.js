@@ -14,10 +14,16 @@ function activeOSInstruction() {
 	$('.cw-tab-pane[data-os="'+os+'"]').addClass('active');
 }
 
-$('#sidebar-toggle').click(function () {
-	$('#content-container').toggleClass('full-width')
-	$('#sidebar-toggle').toggleClass('offcanvas')
-	$('#sidebar-icon').toggleClass('flipped')
+$('#sidebar-container').on('hide.bs.collapse', function () {
+	$('#content-container').addClass('full-width')
+	$('#sidebar-toggle').addClass('offcanvas')
+	$('#sidebar-icon').addClass('flipped')
+})
+
+$('#sidebar-container').on('show.bs.collapse', function () {
+	$('#content-container').removeClass('full-width')
+	$('#sidebar-toggle').removeClass('offcanvas')
+	$('#sidebar-icon').removeClass('flipped')
 })
 
 $( document ).ready(function() {

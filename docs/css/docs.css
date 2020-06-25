@@ -350,10 +350,6 @@ code {
     .full-width {
         padding-top: 80px !important;
     }
-
-    .flipped {
-        transform: rotate(180deg);
-    }
 }
 
 @media only screen and (max-width: 410px) {
