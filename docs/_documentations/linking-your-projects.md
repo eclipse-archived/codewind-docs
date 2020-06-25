@@ -22,11 +22,11 @@ You then link it to a back-end Node.js database project:
 
 ## Linking your projects in VS Code
 
-To link your projects in VS Code, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running in order to create a link.
+To link your projects in VS Code, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running to create a link.
 
 1\. Right-click on project `frontend-nodejs` in the **Codewind** view, select **Project Overview**, and then select the **Links** tab.
 
-2\. Click **Create Link** to add a new project link:
+2\. Click **Create Link**:
 
 ![Image of managing VS Code project links](images/linking-feature/vscode_add_project_link.png){:width="650px"}
 
@@ -54,11 +54,11 @@ If you go ahead and remove the project, the link is also removed. If the source 
 
 ## Linking your projects in Eclipse
 
-To link your projects in Eclipse, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running in order to create a link.
+To link your projects in Eclipse, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running to create a link.
 
 1\. Right-click on project `frontend-nodejs` in the **Codewind Explorer** view and select **Manage Project Links**.
 
-2\. Click **Add** to add a new project link:
+2\. Click **Add**:
 
 ![Image of managing Eclipse project links](images/linking-feature/eclipse_manage_project_links.png){:height="550px" width="650px"}
 
@@ -68,7 +68,7 @@ To link your projects in Eclipse, follow these steps where project `frontend-nod
 
 4\. The link is displayed in the **Manage Project Links** dialog. Click **OK** to create the link:
 
-![Image of managing links for the front end project](images/linking-feature/eclipse_manage_project_links_step_4.png){:height="550px" width="650px"}
+![Image of managing links for the front-end project](images/linking-feature/eclipse_manage_project_links_step_4.png){:height="550px" width="650px"}
 
 5\. Use the environment variable in your code as needed, for example:
 
