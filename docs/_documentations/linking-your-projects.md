@@ -24,7 +24,7 @@ You then link it to a back-end Node.js database project:
 
 To link your projects in VS Code, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running to create a link.
 
-1\. Right-click on project `frontend-nodejs` in the **Codewind** view, select **Project Overview**, and then select the **Links** tab.
+1\. Right-click project `frontend-nodejs` in the **Codewind** view, select **Project Overview**, and then select the **Links** tab.
 
 2\. Click **Create Link**:
 
@@ -46,17 +46,15 @@ To link your projects in VS Code, follow these steps where project `frontend-nod
 
 `axios.get(http://${process.env.DATABASE}/api/v1/populations);`
 
-7\. If you choose to remove the target project of a link, the **Remove Projects** dialog prompts you with the following warning:
+7\. If you choose to remove the target project of a link, the **Remove Projects** dialog reminds you that if you remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
 
 ![Image of removing projects](images/linking-feature/vscode_remove_projects.png){:width="650px"}
-
-If you go ahead and remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
 
 ## Linking your projects in Eclipse
 
 To link your projects in Eclipse, follow these steps where project `frontend-nodejs` is the source project and project `database-nodejs` is the target project. Both projects must be running to create a link.
 
-1\. Right-click on project `frontend-nodejs` in the **Codewind Explorer** view and select **Manage Project Links**.
+1\. Right-click project `frontend-nodejs` in the **Codewind Explorer** view and select **Manage Project Links**.
 
 2\. Click **Add**:
 
@@ -78,8 +76,6 @@ To link your projects in Eclipse, follow these steps where project `frontend-nod
 
 ![Image of Eclipse application overview](images/linking-feature/eclipse_application_overview.png){:width="650px"}
 
-7\. If you choose to remove the target project of a link, the **Remove Projects** dialog prompts you with the following warning:
+7\. If you choose to remove the target project of a link, the **Remove Projects** dialog reminds you that if you remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
 
 ![Image of removing projects](images/linking-feature/eclipse_remove_projects.png){:width="650px"}
-
-If you remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
