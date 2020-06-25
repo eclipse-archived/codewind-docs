@@ -92,11 +92,30 @@ Add your template sources to Codewind with the **Template Source Manager**.
    - **VS Code:** In the **Template Source Manager**, click **Add New**.
    - **Eclipse and IntelliJ:**
      - Right-click the connection in the Codewind Explorer view in Eclipse or the Codewind view in IntelliJ. Then, select **Manage Template Sources...**.
-     - After the **Manage Template Sources** wizard appears, click **Add...**.
+     - After the **Manage Template Sources** window appears, click **Add...**.
 2. Enter the URL and other information.
-   - **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
+   - **VS Code:**
+     - Enter the URL to your template source `index` file and click **Enter** to confirm.
    - **Eclipse and IntelliJ:**
+     - In the **Add a Template Source** window, enter the template source URL.
+3. If you receive message that states the source cannot be accessed, provide authentication.
+   - **VS Code:**
+     - Click **Authenticate**.
+     - Select whether to authenticate with a username and password or with an access token and enter the information.
+        - For GitHub, tokens used in Codewind must have the repo permission scope.
+     - Codewind tests the new source to make sure it can access it. After a successful test, enter a name and description for the new source if the source does not already have them. The new source appears in the Manage Sources page.
+   - **Eclipse:**
+     - If the template source requires authentication, select **Authentication required for this URL**, choose the authentication method, and complete the authentication details.
+        - **Logon authentication** requires a username and password.
+        - **Access token authentication** requires an access token.
+     - To validate that the authentication works, click **Test Template Source**. After you view the test results, click **OK**.
+     - Click **Next**.
+     - Enter the **Name** and **Description** for the template source.
+     - **Optional:** Change the values that are automatically filled from the template source URL.
+     - Click **Finish**. The template source shows in the **Manage Template Sources** window.
+     - Click **OK** to add the template source to the connection.
+   - **IntelliJ:**
      - In the **Add a Template Source** window, provide authentication information if necessary.
      - To test the authentication information with the secured template repository, click **Test Template Source**.
-     - When you receive the message for the successful test, click **OK**.
+     - After you view the test results, click **OK**.
      - Then, click **Next** to reach the **Details** page. Complete the fields and click **Finish**.
