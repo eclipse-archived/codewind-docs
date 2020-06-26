@@ -14,12 +14,12 @@ function activeOSInstruction() {
 	$('.cw-tab-pane[data-os="'+os+'"]').addClass('active');
 }
 
-function collapseSidebar() {
+function makeSidebarCollapsibleOnMobile() {
 	const collapsible = $('#sidebar-container').hasClass('collapse')
-	if ($(document).width() < 768 & ! collapsible) {
+	if ($(document).width() <= 767 & ! collapsible) {
 		$('#sidebar-container').addClass('collapse');
 	}
-	else if ($(document).width() > 768 & collapsible) {
+	else if ($(document).width() > 767 & collapsible) {
 		$('#sidebar-container').removeClass('collapse');
 	}
 }
@@ -29,7 +29,7 @@ $( document ).ready(function() {
 	var location = window.location;
 	var pathname = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
 
-	collapseSidebar()
+	makeSidebarCollapsibleOnMobile()
 
 	// Syncs the sidebar to the current page
 	$('#sidebar-container a').each(function( i ) {
@@ -62,7 +62,7 @@ $( document ).ready(function() {
 	});
 
 	$( window ).resize(function(){
-		collapseSidebar()
+		makeSidebarCollapsibleOnMobile()
 	})
 
 	activeOSInstruction();

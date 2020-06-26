@@ -788,7 +788,7 @@ code {
 }
 
 /* Medium devices (landscape tablets, 768px and below) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     /*hero*/
 
 

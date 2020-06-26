@@ -275,7 +275,7 @@ code {
     margin-top: -5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 	.cw-docs-spacer {
         height: 0px;
     }
