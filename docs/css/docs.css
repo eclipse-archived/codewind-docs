@@ -275,6 +275,10 @@ code {
     margin-top: -5px;
 }
 
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+
 @media only screen and (max-width: 767px) {
 	.cw-docs-spacer {
         height: 0px;
