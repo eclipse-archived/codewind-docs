@@ -14,21 +14,22 @@ function activeOSInstruction() {
 	$('.cw-tab-pane[data-os="'+os+'"]').addClass('active');
 }
 
-$('#sidebar-container').on('hide.bs.collapse', function () {
-	$('#content-container').addClass('full-width')
-	$('#sidebar-toggle').addClass('offcanvas')
-	$('#sidebar-icon').addClass('flipped')
-})
+function collapseSidebar() {
+	const collapsible = $('#sidebar-container').hasClass('collapse')
+	if ($(document).width() < 768 & ! collapsible) {
+		$('#sidebar-container').addClass('collapse');
+	}
+	else if ($(document).width() > 768 & collapsible) {
+		$('#sidebar-container').removeClass('collapse');
+	}
+}
 
-$('#sidebar-container').on('show.bs.collapse', function () {
-	$('#content-container').removeClass('full-width')
-	$('#sidebar-toggle').removeClass('offcanvas')
-	$('#sidebar-icon').removeClass('flipped')
-})
 
 $( document ).ready(function() {
-  var location = window.location;
+	var location = window.location;
 	var pathname = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+
+	collapseSidebar()
 
 	// Syncs the sidebar to the current page
 	$('#sidebar-container a').each(function( i ) {
@@ -59,6 +60,10 @@ $( document ).ready(function() {
 			}
 		}
 	});
+
+	$( window ).resize(function(){
+		collapseSidebar()
+	})
 
 	activeOSInstruction();
 });
