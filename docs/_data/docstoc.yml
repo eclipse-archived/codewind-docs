@@ -64,8 +64,6 @@
     url: che-installinfo.html
   - title: '2. Adding an image registry in Codewind on Eclipse Che'
     url: che-setupregistries.html
-  - title: 'Optional: Adding the OpenShift internal registry with Codewind'
-    url: openshiftregistry.html
   - title: '3. Creating a Codewind workspace in Eclipse Che'
     url: che-createcodewindworkspace.html
   - title: '4. Creating your first Codewind project with Codewind for Eclipse Che'
@@ -93,6 +91,8 @@
       url: project-settings.html
     - title: 'Referencing files external to a project'
       url: referencing-files.html
+    - title: 'Adding the OpenShift internal registry with Codewind'
+      url: openshiftregistry.html
     - title: 'Developing with packages from private registries and repositories'
       url: private-registries.html
     - title: 'Linking your projects'

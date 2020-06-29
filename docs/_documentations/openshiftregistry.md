@@ -74,3 +74,11 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
 5. Enter the token retrieved from the service account token secret as the `password`. 
 6. Enter `<project>` as `namespace`, where `<project>` is the OpenShift project where you created the service account. 
 7. Click **Enter**.
+
+### Next Steps
+
+You have added the OpenShift internal registry with Codewind. 
+
+Continue to instructions for how to use Codewind with Che workspaces to develop your application in a single location. For more information see [Creating a Codewind workspace in Che](che-createcodewindworkspace.html).
+
+Or create a project in VS Code or Eclipse that you can develop locally but build and run remotely. For more information, see [Creating and importing projects in VS Code](remotedeploy-projects-vscode.html) or [Creating and importing projects in Eclipse](remotedeploy-projects-eclipse.html).
