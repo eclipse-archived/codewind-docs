@@ -216,5 +216,5 @@ Complete the following steps to define environment variables that take effect in
 1. Create an `env.properties` file in the root of the Appsody project.
    - **Caution:** Do not commit the `env.properties` file to your source repository if it contains confidential information, such as passwords. To avoid including sensitive information in your project, you can include the `env.properties` file as a reference, for more information, see [Referencing files external to a project](referencing-files.html).
 2. Define your environment variables in this file by using the standard properties format. This format features one `name=value` entry per line.
-3. Set `CW_NETWORKS` environment variables for Appsody projects. 
-4. If autobuild is enabled, Codewind automatically rebuilds the project to pick up the environment values. If autobuild is not enabled, new values take effect the next time you rebuild the project.
+    * One of the environment variables you can set is `CW_NETWORKS`, a space delimited list of docker networks the Appsody application can join. 
+3. If autobuild is enabled, Codewind automatically rebuilds the project to pick up the environment values. If autobuild is not enabled, new values take effect the next time you rebuild the project.
