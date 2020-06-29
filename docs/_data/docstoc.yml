@@ -95,6 +95,8 @@
       url: referencing-files.html
     - title: 'Developing with packages from private registries and repositories'
       url: private-registries.html
+    - title: 'Linking your projects'
+      url: linking-your-projects.html
     - title: 'Using Codewind offline'
       url: offline-codewind.html
     - title: 'Debugging in Codewind'
