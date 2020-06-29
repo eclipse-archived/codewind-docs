@@ -55,7 +55,7 @@ code {
     transition: none !important;
   }
 
-#docs-sidebar {
+#sidebar {
     border-right: 2px solid #d8d8d8;
 }
 
@@ -297,7 +297,7 @@ code {
         min-height: 0;
     }
 
-    #docs-sidebar {
+    #sidebar {
         width: 100vw;
     }
 }
