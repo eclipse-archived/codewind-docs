@@ -45,10 +45,10 @@ To link your projects in VS Code, follow these steps where project `frontend-nod
 6\. Use the environment variable in your code as needed, for example:
 
 ```
-axios.get(`http://$<process.env.DATABASE>/api/v1/populations`);
+axios.get(`http://$<DATABASE>/api/v1/populations`);
 ```
 
-Where `<process.env.DATABASE>` is the name of the environment variable that you added in step 4. 
+Where `<DATABASE>` is the name of the environment variable that you added in step 4. 
 
 7\. If you choose to remove the target project of a link, the **Remove Projects** dialog reminds you that if you remove the project, the link is also removed. If the source project for a link is removed, the link is also removed.
 
@@ -75,10 +75,10 @@ To link your projects in Eclipse, follow these steps where project `frontend-nod
 5\. Use the environment variable in your code as needed, for example:
 
 ```
-axios.get(`http://$<process.env.DATABASE>/api/v1/populations`);
+axios.get(`http://$<DATABASE>/api/v1/populations`);
 ```
 
-Where `<process.env.DATABASE>` is the name of the environment variable that you added in step 3. 
+Where `<DATABASE>` is the name of the environment variable that you added in step 3. 
 
 6\. For convenience, project links are displayed in the **Project Overview** page:
 
