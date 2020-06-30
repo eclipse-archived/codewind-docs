@@ -1,63 +1,68 @@
-<div id="sidebar-container" class="bg-light" role="navigation" aria-label="sidebar">
-    <!-- Bootstrap List Group -->
-    <ul class="list-group bg-light">
+<div id="sidebar" class="bg-light">
+    <button class="btn btn-secondary dropdown-toggle btn-block d-md-none" type="button" id="contents-expander" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" data-target="#sidebar-container">
+        Contents
+      </button>
+    <div id="sidebar-container" class="bg-light" role="navigation" aria-label="sidebar">
+        <!-- Bootstrap List Group -->
+        <ul class="list-group bg-light">
 
-        {% for levelone in site.data.docstoc %}
+            {% for levelone in site.data.docstoc %}
 
-        {% if levelone.children %}
+            {% if levelone.children %}
 
 
-        <!-- must be a valid css selector, or will break collapse function -->
-        {% assign hash = levelone.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
+            <!-- must be a valid css selector, or will break collapse function -->
+            {% assign hash = levelone.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
 
-        <a href="#{{ hash }}" id="#{{ hash }}" class="bg-light list-group-item list-group-item-action"
-            data-toggle="collapse" aria-expanded="false">
-            <div class="d-flex align-items-center">
-                {{ levelone.title }}
-                <span class="submenu-icon"></span>
-            </div>
-        </a>
-
-        <div class="cw-sidebar-div cw-sidebar-submenu collapse" id="{{ hash }}">
-
-            {% for leveltwo in levelone.children %}
-
-            {% if leveltwo.children %}
-
-            {% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
-
-            <a href="#{{ hashtwo }}" id="#{{ hashtwo }}" class="bg-light list-group-item list-group-item-action"
-                data-toggle="collapse" data-parent="#{{ hash }}" aria-expanded="false">
+            <a href="#{{ hash }}" id="#{{ hash }}" class="bg-light list-group-item list-group-item-action"
+                data-toggle="collapse" aria-expanded="false">
                 <div class="d-flex align-items-center">
-                    {{ leveltwo.title }}
+                    {{ levelone.title }}
                     <span class="submenu-icon"></span>
                 </div>
             </a>
 
-            <div class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" id="{{ hashtwo }}">
+            <div class="cw-sidebar-div cw-sidebar-submenu collapse" id="{{ hash }}">
 
-                {% for levelthree in leveltwo.children %}
-                <a href="{{ levelthree.url }}" class="bg-light list-group-item" data-parent="#{{ hashtwo }}"
-                    data-url="{{ levelthree.url }}">{{ levelthree.title }}</a>
+                {% for leveltwo in levelone.children %}
+
+                {% if leveltwo.children %}
+
+                {% assign hashtwo = leveltwo.title | downcase | replace: " ", "_" | replace: ".", "" | prepend: "_" %}
+
+                <a href="#{{ hashtwo }}" id="#{{ hashtwo }}" class="bg-light list-group-item list-group-item-action"
+                    data-toggle="collapse" data-parent="#{{ hash }}" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        {{ leveltwo.title }}
+                        <span class="submenu-icon"></span>
+                    </div>
+                </a>
+
+                <div class="cw-sidebar-div cw-sidebar-submenu-submenu collapse" id="{{ hashtwo }}">
+
+                    {% for levelthree in leveltwo.children %}
+                    <a href="{{ levelthree.url }}" class="bg-light list-group-item" data-parent="#{{ hashtwo }}"
+                        data-url="{{ levelthree.url }}">{{ levelthree.title }}</a>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <a href="{{ leveltwo.url }}" class="bg-light list-group-item" data-parent="#{{ hash }}"
+                    data-url="{{ leveltwo.url }}">{{ leveltwo.title }}</a>
+                {% endif %}
+
                 {% endfor %}
             </div>
             {% else %}
-            <a href="{{ leveltwo.url }}" class="bg-light list-group-item" data-parent="#{{ hash }}"
-                data-url="{{ leveltwo.url }}">{{ leveltwo.title }}</a>
+            <a href="{{ levelone.url }}"
+                class="bg-light list-group-item list-group-item-action flex-column align-items-start"
+                data-url="{{ levelone.url }}">
+                {{ levelone.title }}
+            </a>
             {% endif %}
 
             {% endfor %}
-        </div>
-        {% else %}
-        <a href="{{ levelone.url }}"
-            class="bg-light list-group-item list-group-item-action flex-column align-items-start"
-            data-url="{{ levelone.url }}">
-            {{ levelone.title }}
-        </a>
-        {% endif %}
 
-        {% endfor %}
-
-    </ul>
-    <!-- List Group END-->
+        </ul>
+        <!-- List Group END-->
+    </div>
 </div>
