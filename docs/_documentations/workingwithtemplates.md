@@ -109,9 +109,10 @@ Add your template sources to Codewind with the **Template Source Manager**.
       - If the template source requires authentication, select **Authentication required for this URL**, choose the authentication method, and complete the authentication details.
         - **Logon authentication** requires a username and password.
         - **Access token authentication** requires an access token.
+        - For GitHub, tokens that are used in Codewind must have the repo permission scope.
       - Click **Test Template Source** to check that the URL and, if included, the credentials are working.
       - After you view the test results, click **OK**.
       - Click **Next**.
-      - Enter a **Name** and **Description** for the template source.
+      - Enter a **Name** and **Description** for the new source if the source does not already have them.
       - Click **Finish**. The template source appears in the **Manage Template Sources** window.
       - Click **OK** to add the template source to the connection.
