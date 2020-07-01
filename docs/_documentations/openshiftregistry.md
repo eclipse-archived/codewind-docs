@@ -27,7 +27,7 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
 3. Grant push access to the registry to the new service account.
     - Run: `oc policy add-role-to-user system:image-builder system:serviceaccount:<project>:<serviceaccount>`
     - Example: `oc policy add-role-to-user system:image-builder system:serviceaccount:pushed:pusher`
-4. Retrieve the secret containing the service account token.
+4. Retrieve the secret that contains the service account token.
     - Run: `oc describe sa <serviceaccount>`
     - Example output:
        ```
@@ -42,7 +42,7 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
                             pusher-token-zfqbv
        Events:              <none>
        ```
-    - In this example, `pusher-token-hhd2g` and `pusher-token-zfqbv` are the secrets containing the service account token.
+    - In this example, `pusher-token-hhd2g` and `pusher-token-zfqbv` are the secrets that contain the service account token.
 5. Select one of the token secrets and retrieve the token from it.
     - Run: `oc describe secret <secret>`
     - Example output:
@@ -71,6 +71,14 @@ Some of the following instructions were adapted from [Remotely Push and Pull Con
 2. Run the command, `Codewind: Image Registry Manager`. 
 3. Enter `docker-registry.default.svc:5000` as the `Address` (`image-registry.openshift-image-registry.svc:5000` for OCP version 4). 
 4. Enter the service account name as the `username`.
-5. Enter the token retrieved from the service account token secret as the `password`. 
+5. Enter the token that is retrieved from the service account token secret as the `password`. 
 6. Enter `<project>` as `namespace`, where `<project>` is the OpenShift project where you created the service account. 
 7. Click **Enter**.
+
+### Next Steps
+
+You have added the OpenShift internal registry with Codewind. 
+
+Continue to instructions for how to use Codewind with Che workspaces to develop your application in a single location. For more information, see [Creating a Codewind workspace in Che](che-createcodewindworkspace.html).
+
+Or create a project in VS Code or Eclipse that you can develop locally but build and run remotely. For more information, see [Creating and importing projects in VS Code](remotedeploy-projects-vscode.html) or [Creating and importing projects in Eclipse](remotedeploy-projects-eclipse.html).
