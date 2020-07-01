@@ -8,18 +8,24 @@ permalink: remote-setupregistries.html
 type: document
 ---
 
-# Adding an image registry in remote Codewind
+# About image registries
 
-## Determining if you need to set an image registry 
-You need to set credentials for an image registry if you:
-* Build a project with a dockerfile that pulls from a non-public image registry. 
-* Work with Appsody projects that pull stack images from a non-public image registry. 
-* Use Codewind remotely. Set at least one image registry that Codewind can push built project images to. If you have multiple registries configured, you can select one of them to be the push registry. 
+An image registry is an online service that stores Docker images. Docker images are either images that you build yourself, or images from third parties that you want to consume, for example, a base image of Node.js or a base image of Java. The image registry is also the place where Kubernetes and OpenShift download from when they deploy the application for ongoing development or testing within each of those environments.
 
+Some registries are protected and limit access to authenticated users only. You might use one or multiple image registries each having different credentials. In the following section we'll discuss when you'll need a registry configured within Codewind, and how to store your credentials for use when the registry has been secured. 
+
+## When you need to define an image registry
+You need to enter configuration details for the image registry for any of the following conditions:
+- Building a project with a Dockerfile that pulls from a protected image registry that requires authentication.
+- Working with Appsody projects that pull stack images from a protected image registry that requires authentication.
+- When you are using Codewind remotely
+- When you are using Che to build Codewind style projects
 
 When you add an image registry, Codewind logs you into the image registry on your local machine as if you had locally run `docker login`. 
 
-## Adding an image registry in Codewind
+## Adding your first image registry entry to Codewind
+Adding an image registry and connection details is done using your IDE (local/remote) or by way of the Che IDE when running in Che. 
+
 After your IDE is started and running, add the image registry to be used with Codewind.
 1. From your IDE, open the window for adding your image registry.
   - **In Eclipse:** Right-click a remote connection in the Codewind Explorer view and select **Manage Image Registries**.
@@ -58,4 +64,4 @@ These examples show recommended values for common registries. The following imag
 ## Adding registries to OKD and OpenShift
 To use the OpenShift internal container registry with Codewind, see [Adding the OpenShift internal registry with Codewind](openshiftregistry.html).
 
-Next step: [Creating and importing projects](remotedeploy-projects-vscode.html)
+Next step: Continue to instructions for [Creating and importing projects](remotedeploy-projects-vscode.html).
