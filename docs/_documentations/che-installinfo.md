@@ -58,7 +58,7 @@ Follow these instructions to install Eclipse Che with HTTPS so that Codewind fun
 
 The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. Perform the following:
 
-1. Install the `chectl` CLI tool. See [Installing the chectl management tool](https://www.eclipse.org/che/docs/che-7/installing-the-chectl-management-tool/).
+1. Install the `chectl` CLI tool. See [Using the chectl management tool](https://www.eclipse.org/che/docs/che-7/using-the-chectl-management-tool/).
 
 2. Download the [codewind-checluster.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/setup/install_che/che-operator/codewind-checluster.yaml) file.
 
