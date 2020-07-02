@@ -23,11 +23,8 @@ You need to enter configuration details for the image registry for any of the fo
 
 ### Determining whether you need an image registry for Che
 You need an image registry for Che if:
-- In the following scenario, you want to configure Codewind with an image registry to push the application image to that specific image registry:
-    - Run Codewind on a remote Kubernetes cluster, including Che, to develop a Codewind style project.
-- In the following scenario, you want to configure Codewind to use the credentials for a specific image registry:
-    - Run Codewind on a remote Kubernetes cluster, including Che, to develop an Appsody style project.
-    - The image registry for the Appsody stack requires credentials.
+- You are developing Codewind style projects.
+- When developing Appsody style projects, the image registry for the Appsody stack requires credentials.
 
 If you do not develop any Codewind style projects, and you use an image registry that does not require credentials, you do not need to specify an image registry.
 
