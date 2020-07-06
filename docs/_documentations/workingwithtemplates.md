@@ -94,8 +94,7 @@ Add your template sources to Codewind with the **Template Source Manager**.
      - Right-click the connection in the Codewind Explorer view in Eclipse or the Codewind view in IntelliJ. Then, select **Manage Template Sources...**.
      - After the **Manage Template Sources** window appears, click **Add...**.
 2. Enter the URL and other information.
-   - **VS Code:**
-     - Enter the URL to your template source `index` file and click **Enter** to confirm.
+   - **VS Code:** Enter the URL to your template source `index` file and click **Enter** to confirm.
    - **Eclipse and IntelliJ:**
      - In the **Add a Template Source** window, enter the template source URL.
 3. Provide authentication if necessary.
