@@ -20,9 +20,7 @@ Thursday 9, July 2020
 ##### Eclipse and VS Code
 - Link Codewind projects together with [project linking](https://github.com/eclipse/codewind/issues/2852).
   - When you link a project to another project, the project that is the link target has the other project's hostname exposed in an environment variable that you define.
-  - For example, linking **Project A** to **Project B** through the `PROJECT_A` environment variable means that **Project B** can access the code of the `PROJECT_A` environment variable to get the current hostname of **Project B**. Then, **Project A** can use **Project B**.
-  - Right-click your project and click **Manage Project Links**. Use **Add**, **Edit**, and **Remove** to manage links.
-  - The project overview page for each project displays links to and from other projects.
+  - For more information, see [Linking your projects](./linking-your-projects.html)
 
 ##### IntelliJ
 - [Manage template sources in IntelliJ](https://github.com/eclipse/codewind/issues/985).
@@ -35,3 +33,4 @@ Thursday 9, July 2020
 #### List of Fixes
 - In Codewind for VS Code:
     - [After you manually edit the template sources in the Template Source Manager, you won't be prompted to select one in the Command Palette](https://github.com/eclipse/codewind/issues/3165).
+    - [The error no longer occurs if you create a remote Node.js Express application in Codewind 0.13.0](https://github.com/eclipse/codewind/issues/3158).
