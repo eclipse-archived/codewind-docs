@@ -7,7 +7,7 @@ description: "Use CodeReady Workspaces to develop cloud-native applications from
 permalink: codewind-crw-quick-guide.html
 duration: 15 minutes
 keywords: Codewind, CodeReady Workspaces, OpenShift
-objectives: ["Install CodeReady Workspaces and Codewind.", "Create a Codewind workspace within CodeReady Workspaces.", Develop a simple microservice with the Codewind workspace."]
+objectives: ["Install CodeReady Workspaces and Codewind.", "Create a Codewind workspace within CodeReady Workspaces.", "Develop a simple microservice with the Codewind workspace."]
 icon: images/learn/icon_cloud.svg  
 ---
 
