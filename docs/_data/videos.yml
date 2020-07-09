@@ -1,8 +1,9 @@
-- title: Codewind Node.js code profiler
-  date: April 07, 2020
+- title: Codewind Project Linking
+  date: July 09, 2020
   description: >
-              In this video you can see how the Eclipse Codewind Node.js profiler plugin for VS Code allows a cloud native
-              developer to profile their Node.js applications, and quickly identify potential bottlenecks and where most
-              of the time is spent executing their code.
-  link: https://www.youtube.com/watch?v=nhW7Qb4ojH8
-  embed_link: https://www.youtube.com/embed/nhW7Qb4ojH8
+              In this feature in under a minute video for Project Linking you can see
+              how Eclipse Codewind provides the ability to
+              simply allow two separate microservices to communicate with each other
+              with no complicated setup or service discovery.
+  link: https://www.youtube.com/watch?v=kNmGYDvgXZ8
+  embed_link: https://www.youtube.com/embed/kNmGYDvgXZ8
