@@ -1,8 +1,9 @@
 - title: Codewind Project Linking
   date: July 09, 2020
   description: >
-              In this feature in under a minute video for Project Linking you can see how Eclipse Codewind provides the ability to
-              simply allow two separate microservices to commuinicate with each other
+              In this feature in under a minute video for Project Linking you can see
+              how Eclipse Codewind provides the ability to
+              simply allow two separate microservices to communicate with each other
               with no complicated setup or service discovery.
   link: https://www.youtube.com/watch?v=kNmGYDvgXZ8
   embed_link: https://www.youtube.com/embed/kNmGYDvgXZ8
