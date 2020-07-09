@@ -57,4 +57,4 @@ You have now:
 3. Created a project that builds and runs in the cloud.
 4. Built and run an existing project in the cloud.
 
-To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with templates](./workingwithtemplates.html)./
+To understand more about how you can use project templates in Codewind, including using pre-supplied templates and creating your own, see [Working with templates](./workingwithtemplates.html).
