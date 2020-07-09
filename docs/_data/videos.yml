@@ -1,5 +1,5 @@
-- title: Codewind Node.js code profiler
-  date: April 07, 2020
+- title: Codewind Project Linking
+  date: July 09, 2020
   description: >
               In this video you can see how the Eclipse Codewind Node.js profiler plugin for VS Code allows a cloud native
               developer to profile their Node.js applications, and quickly identify potential bottlenecks and where most
