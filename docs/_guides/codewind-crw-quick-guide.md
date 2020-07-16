@@ -119,7 +119,7 @@ After you set up Codewind, log in to your CodeReady Workspaces account and creat
 
 4\. From **Source**, click **YAML**. 
 
-5\. Go to the link, [codewind-che-plugin/0.13.0/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.13.0/devfiles/0.13.0/devfile.yaml), then copy and paste the contents into the YAML text box in your Codewind workspace. 
+5\. Go to the link, [codewind-che-plugin/0.14.1/devfile.yaml](https://raw.githubusercontent.com/eclipse/codewind-che-plugin/0.14.1/devfiles/0.14.1/devfile.yaml), then copy and paste the contents into the YAML text box in your Codewind workspace. 
 
 6\. Click **Create & Open**.
 
