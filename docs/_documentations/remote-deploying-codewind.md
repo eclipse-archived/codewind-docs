@@ -57,7 +57,7 @@ The Codewind operator helps with the deployment of Codewind instances in an Open
 
 Download the Codewind operator from the [codewind-operator repository](https://github.com/eclipse/codewind-operator), or if you installed Git, clone the `codewind-operator` repository, for example: 
 
-`$ git clone https://github.com/eclipse/codewind-operator -b 0.12.0`
+`$ git clone https://github.com/eclipse/codewind-operator -b 0.14.1`
 
 For more information about the Codewind operator and the installation process, see the [Codewind operator readme file](https://github.com/eclipse/codewind-operator/blob/master/README.md).
 
