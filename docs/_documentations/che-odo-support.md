@@ -29,7 +29,7 @@ The Codewind odo extension supports [OpenShift Do (odo)](https://github.com/open
 ### Prerequisites
 
 - [Install](che-installinfo.html) Codewind on Che on an OpenShift cluster.
-- [Run the setup script](https://github.com/eclipse/codewind-odo-extension/blob/0.14.1-devfile/setup/setup.sh).
+- [Download and run the setup script](https://github.com/eclipse/codewind-odo-extension/blob/0.14.1-devfile/setup/setup.sh).
 
 ### Adding roles to support the extension
 
