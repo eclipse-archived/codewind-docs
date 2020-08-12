@@ -69,7 +69,7 @@ The fastest way to install Eclipse Che for Codewind is to use the `chectl` CLI. 
 Eclipse Che on OpenShift makes use of the Openshift router's existing certificates. 
 Run the following `chectl` command to install the latest compatible version of Che on OpenShift: 
    ```
-   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
+   $ chectl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.16.1
    ```
 
 **Installing on Kubernetes:**
@@ -93,7 +93,7 @@ Set up Eclipse Che with TLS certificates.
 5. In the `codewind-checluster.yaml` file, set `tlsSecretName: 'che-tls'`
 6. Run the following command to install Che: 
    ```
-   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.12.2
+   $ chectl server:start --platform=k8s --installer=operator --domain=<ingress-domain> --che-operator-cr-yaml=codewind-checluster.yaml --che-operator-image=quay.io/eclipse/che-operator:7.16.1
    ```
 
 #### Installing Codewind onto an existing Eclipse Che cluster
