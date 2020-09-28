@@ -28,7 +28,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
-* [OpenAPI tools](#openapi-tools)
+* [Open API Tools for Eclipse Codewind](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
 * [Restoring lost debug connections](#restoring-lost-debug-connections)
@@ -757,10 +757,10 @@ These steps reproduce the issue:
 4. Now, access the Tekton dashboard URL from the Codewind palette.
 
 ***
-# OpenAPI tools
+# Open API Tools for Eclipse Codewind
 
 <!--
-Action/Topic: OpenAPI tools
+Action/Topic: Open API Tools for Eclipse Codewind
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/275
 Version: 2019-06 (4.12.0)
