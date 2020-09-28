@@ -33,7 +33,7 @@ The Open API Tools for Eclipse Codewind in VS Code provides commands that invoke
 8. Now, you can customize the application logic. Choose one of the two methods in the **Generating and building code in an existing Java Spring project** section.
 
 ## Generating and building code in an existing Java Spring project
-When you generate a Spring server stub into a Spring project, the Open API Tools for Eclipse Codewind in VS Code don't override the main class that is already implicitly or explicitly configured in the project. Complete one of the following steps to expose the OpenAPI endpoints:
+When you generate a Spring server stub into a Spring project, Open API Tools for Eclipse Codewind doesn't override the main class that is already implicitly or explicitly configured in the project. Complete one of the following steps to expose the OpenAPI endpoints:
 - To use the generated class, uncomment the main method in the `OpenAPI2SpringBoot.java` Java class file and explicitly configure the project to use this main class.
 - To continue to use the currently configured main class, copy the base packages that are listed in the `@ComponentScan` component scan annotation from the `OpenAPI2SpringBoot.java` file. Then, add the packages to the currently configured main class. For example, if you use the Codewind Spring Boot project, the implicit main class is the `SBApplication.java` file.
 
