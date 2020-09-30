@@ -28,7 +28,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
-* [Open API Tools for Eclipse Codewind](#openapi-tools)
+* [OpenAPI Tools for Eclipse Codewind](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
 * [Restoring lost debug connections](#restoring-lost-debug-connections)
@@ -757,10 +757,10 @@ These steps reproduce the issue:
 4. Now, access the Tekton dashboard URL from the Codewind palette.
 
 ***
-# Open API Tools for Eclipse Codewind
+# OpenAPI Tools for Eclipse Codewind
 
 <!--
-Action/Topic: Open API Tools for Eclipse Codewind
+Action/Topic: OpenAPI Tools for Eclipse Codewind
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/275
 Version: 2019-06 (4.12.0)
@@ -782,10 +782,10 @@ For the VS Code extension, manually create the output folder before you start th
 
 For post-client or post-server stub generation, use a separate output folder for code generation. Depending on the language and the generator type, the OpenAPI generator generates both source code files and build-related files. Some refactoring might be necessary. For example, move the generated source code to the proper source folder that already exists in the project. However, if your project is empty, the target output folder can be the root of the project, and you don’t need to do as much refactoring and merging.
 
-For Eclipse, for Java-based code generators, the Open API wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
+For Eclipse, for Java-based code generators, the OpenAPI wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
 
 <!--
-Action/Topic: Plugin execution validation error in the pom.xml file for Open API tools
+Action/Topic: Plugin execution validation error in the pom.xml file for OpenAPI Tools for Eclipse Codewind
 Issue type: bug
 Issue link: https://github.com/eclipse/codewind/issues/650
 0.5.0: New issue
