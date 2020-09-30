@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: Open API Tools for Eclipse Codewind in Eclipse
-description: How to work with the Open API Tools for Eclipse Codewind in Eclipse
-keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Open API Tools for Eclipse Codewind
+title: OpenAPI Tools for Eclipse Codewind in Eclipse
+description: How to work with the Open APITools for Eclipse Codewind in Eclipse
+keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, OpenAPI Tools for Eclipse Codewind
 duration: 1 minute
 permalink: open-api-tools-for-eclipse.html
 type: document
 order: 30
 ---
 
-# Open API Tools for Eclipse Codewind in Eclipse
+# OpenAPI Tools for Eclipse Codewind in Eclipse
 
-The Open API Tools for Eclipse Codewind includes wizards that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for Eclipse, but they also work with a base Eclipse IDE for Java EE Developers installation.
+The OpenAPI Tools for Eclipse Codewind includes wizards that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for Eclipse, but they also work with a base Eclipse IDE for Java EE Developers installation.
 
 ## Installing
-1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. If you use Open API Tools for Eclipse Codewind, the earliest supported version of the Eclipse IDE for Codewind is Version 2019-06 (4.12).
+1. Download and install the latest [Eclipse IDE for Java EE Developers](https://www.eclipse.org/downloads/packages/release/) or use an existing installation. If you use OpenAPI Tools for Eclipse Codewind, the earliest supported version of the Eclipse IDE for Codewind is Version 2019-06 (4.12).
 2. [Optional] Install [Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
-3. Install the [Open API Tools for Eclipse Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
+3. Install the [OpenAPI Tools for Eclipse Codewind from the Eclipse Marketplace](https://marketplace.eclipse.org/content/codewind).
 
 ## Generating HTML and client and server stubs by using the OpenAPI wizard
 1. Launch the context menu on any existing workspace projects or any `openapi.yaml` workspace OpenAPI definition files from the **Package Explorer** or **Project Explorer** views.
