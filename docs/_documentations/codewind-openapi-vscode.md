@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Open API Tools for Eclipse Codewind in VS Code
-description: How to work with the Open API Tools for Eclipse Codewind in VS Code
-keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Open API Tools for Eclipse Codewind in VS Code
+title: Eclipse Codewind OpenAPI Tools in VS Code
+description: How to work with the Eclipse Codewind OpenAPI Tools in VS Code
+keywords: install, run, open, import, show, restart, edit, build, logs, tools, eclipse, Eclipse Codewind OpenAPI Tools in VS Code
 duration: 1 minute
 permalink: open-api-tools-for-vscode.html
 type: document
 order: 30
 ---
 
-# Open API Tools for Eclipse Codewind in VS Code
+# Eclipse Codewind OpenAPI Tools in VS Code
 
-The Open API Tools for Eclipse Codewind in VS Code provides commands that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for VS Code, but they can also work without the Codewind extension.
+The Eclipse Codewind OpenAPI Tools in VS Code provide commands that invoke the OpenAPI Generator to create API clients, server stubs, and HTML documentation from OpenAPI definitions. The tools are integrated and customized to work with Codewind for VS Code, but they can also work without the Codewind extension.
 
 ## Prerequisites
 - Install Docker before you run the generator. In VS Code, the plug-in pulls in the OpenAPI generator image from [Docker](https://github.com/OpenAPITools/openapi-generator#16---docker).
@@ -20,9 +20,9 @@ The Open API Tools for Eclipse Codewind in VS Code provides commands that invoke
 1. Install [VS Code version 1.27 or later](https://code.visualstudio.com/download).
 2. (OPTIONAL) Install Codewind for VS Code from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind) or by searching for `Codewind` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
 3. This extension pulls the [OpenAPI Generator CLI Docker Image](https://github.com/OpenAPITools/openapi-generator#16---docker) and runs the OpenAPI Generator in a Docker container. Install Docker if necessary.
-4. Install the Open API Tools for Eclipse Codewind from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-openapi-tools) or by searching for `Codewind OpenAPI` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
+4. Install the Eclipse Codewind OpenAPI Tools from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.codewind-openapi-tools) or by searching for `Codewind OpenAPI` in the [VS Code Extensions view](https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions).
 
-## Generating and building client and server stubs by using the Open API Tools for Eclipse Codewind
+## Generating and building client and server stubs by using the Eclipse Codewind OpenAPI Tools
 1. Right-click your Codewind project from the Codewind view and select either the **Generate Server from OpenAPI Definition** menu or **Generate Client from OpenAPI Definition** action. You are then prompted to provide options to the OpenAPI generator.
 2. Select your OpenAPI document file. The file must be a valid OpenAPI 3.0 `.yaml` or `.json` file that is in the project.
 3. Select the client or server generator type.
@@ -33,7 +33,7 @@ The Open API Tools for Eclipse Codewind in VS Code provides commands that invoke
 8. Now, you can customize the application logic. Choose one of the two methods in the **Generating and building code in an existing Java Spring project** section.
 
 ## Generating and building code in an existing Java Spring project
-When you generate a Spring server stub into a Spring project, Open API Tools for Eclipse Codewind doesn't override the main class that is already implicitly or explicitly configured in the project. Complete one of the following steps to expose the OpenAPI endpoints:
+When you generate a Spring server stub into a Spring project, Eclipse Codewind OpenAPI Tools don't override the main class that is already implicitly or explicitly configured in the project. Complete one of the following steps to expose the OpenAPI endpoints:
 - To use the generated class, uncomment the main method in the `OpenAPI2SpringBoot.java` Java class file and explicitly configure the project to use this main class.
 - To continue to use the currently configured main class, copy the base packages that are listed in the `@ComponentScan` component scan annotation from the `OpenAPI2SpringBoot.java` file. Then, add the packages to the currently configured main class. For example, if you use the Codewind Spring Boot project, the implicit main class is the `SBApplication.java` file.
 

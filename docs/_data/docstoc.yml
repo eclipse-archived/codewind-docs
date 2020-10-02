@@ -109,11 +109,11 @@
     - title: 'Monitoring applications with the Performance Dashboard'
       url: performance.html
 
-- title: 'Open API Tools for Eclipse Codewind'
+- title: 'Eclipse Codewind OpenAPI Tools'
   children:
-    - title: 'Open API Tools for Eclipse Codewind in VS Code'
+    - title: 'Eclipse Codewind OpenAPI Tools in VS Code'
       url: open-api-tools-for-vscode.html
-    - title: 'Open API Tools for Eclipse Codewind in Eclipse'
+    - title: 'Eclipse Codewind OpenAPI Tools in Eclipse'
       url: open-api-tools-for-eclipse.html
 
 - title: 'Configuring Codewind for Tekton pipelines'
