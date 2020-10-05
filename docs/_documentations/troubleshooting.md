@@ -28,7 +28,7 @@ The following sections contain workarounds for issues that you might encounter w
 * [OpenShift Do (odo) with Codewind](#openshift-do-(odo)-with-codewind)
 * [OKD and OpenShift](#okd-and-openshift)
 * [Codewind and Tekton pipelines](#codewind-and-tekton-pipelines)
-* [OpenAPI Tools for Eclipse Codewind](#openapi-tools)
+* [Eclipse Codewind OpenAPI Tools](#openapi-tools)
 * [Setting Codewind server log levels](#setting-codewind-server-log-levels)
 * [Collecting log files and environment data](#collecting-log-files-and-environment-data)
 * [Restoring lost debug connections](#restoring-lost-debug-connections)
@@ -757,10 +757,10 @@ These steps reproduce the issue:
 4. Now, access the Tekton dashboard URL from the Codewind palette.
 
 ***
-# OpenAPI Tools for Eclipse Codewind
+# Eclipse Codewind OpenAPI Tools
 
 <!--
-Action/Topic: OpenAPI Tools for Eclipse Codewind
+Action/Topic: Eclipse Codewind OpenAPI Tools
 Issue type: bug/info
 Issue link: https://github.com/eclipse/codewind/issues/275
 Version: 2019-06 (4.12.0)
@@ -785,7 +785,7 @@ For post-client or post-server stub generation, use a separate output folder for
 For Eclipse, for Java-based code generators, the OpenAPI wizards provide additional support to configure the project. It is recommended that the project's root folder is selected as the output folder of the generator so that `.java` files will be generated into the existing `src/main/java` and `src/test/java` folders. The wizard's default value of the output folder is the project's root folder. The wizard also performs some automatic configuration, including `pom.xml` file merging, and necessary updates to the project's classpath.
 
 <!--
-Action/Topic: Plugin execution validation error in the pom.xml file for OpenAPI Tools for Eclipse Codewind
+Action/Topic: Plugin execution validation error in the pom.xml file for Eclipse Codewind OpenAPI Tools
 Issue type: bug
 Issue link: https://github.com/eclipse/codewind/issues/650
 0.5.0: New issue
