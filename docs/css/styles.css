@@ -317,6 +317,14 @@ code {
     left: 17px;
     margin-left: calc(50% - 700px);
 }
+
+#sup {
+    position: relative;
+    font-size: 40%;
+    line-height: 0;
+    vertical-align: baseline;
+    top: -1.2em;
+}
 /* end hero */
 
 /* getting started */
