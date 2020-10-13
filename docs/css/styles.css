@@ -318,7 +318,7 @@ code {
     margin-left: calc(50% - 700px);
 }
 
-#sup {
+sup {
     position: relative;
     font-size: 40%;
     line-height: 0;
